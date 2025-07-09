@@ -12,6 +12,7 @@ library(ggplot2)
 # Connect to corelogic DB
 hard_path <- "/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db"
 con <- dbConnect(duckdb::duckdb(), hard_path, read_only = TRUE)
+dbExecute(con, "set temp_directory = '../temp/'")
 
 ######----- General coverage of CL tax data ----#####
 
@@ -214,6 +215,8 @@ q <- 'select fips_code // 1000 as state, sum(case when tax_area_code is not null
 dbGetQuery(con, q)
 q <- 'select sum(case when tax_area_code is not null then 1 else 0 end) / count(1) as pct_tax_area_code from tax where tax_year between 2013 and 2023'
 dbGetQuery(con, q) # abt 90% of properties are covered
+q <- 'select sum(case when tax_area_code is not null then 1 else 0 end) / count(1) as pct_tax_area_code from tax where tax_year between 2013 and 2023 and property_indicator_code = 10;'
+dbGetQuery(con, q) # abt 90% of residential properties are covered
 
 #######----- Where do we have location data? ----#####
 
@@ -227,11 +230,146 @@ q <- "select
     from tax
     where tax_year between 2013 and 2023 and fips_code is not null
     group by state;"
-dbGetQuery(con, q)
+dbGetQuery(con, q) # varies but is pretty good
 
+q <- "select 
+        sum(case when block_level_latitude is not null then 1 else 0 end) / count(1) as pct_block_level_latitude,
+        sum(case when block_level_longitude is not null then 1 else 0 end) / count(1) as pct_block_level_longitude,
+        sum(case when parcel_level_latitude is not null then 1 else 0 end) / count(1) as pct_parcel_level_latitude,
+        sum(case when parcel_level_longitude is not null then 1 else 0 end) / count(1) as pct_parcel_level_longitude
+    from tax
+    where tax_year between 2013 and 2023 and fips_code is not null;"
+dbGetQuery(con, q) 
+
+q <- "select 
+        sum(case when block_level_latitude is not null then 1 else 0 end) / count(1) as pct_block_level_latitude,
+        sum(case when block_level_longitude is not null then 1 else 0 end) / count(1) as pct_block_level_longitude,
+        sum(case when parcel_level_latitude is not null then 1 else 0 end) / count(1) as pct_parcel_level_latitude,
+        sum(case when parcel_level_longitude is not null then 1 else 0 end) / count(1) as pct_parcel_level_longitude
+    from tax
+    where tax_year between 2013 and 2023 and fips_code is not null and property_indicator_code = 10;"
+dbGetQuery(con, q) #Abt 95% of residential properties
 
 #######----- What about property types? ----#####
 
 q <- "select fips_code // 1000 as state, sum(case when property_indicator_code is not null then 1 else 0 end) / count(1) as pct_property_indicator_code from tax where tax_year between 2013 and 2023 group by state;"
+dbGetQuery(con, q) # almost perfect coverage
+
+q <- "select sum(case when property_indicator_code is not null then 1 else 0 end) / count(1) as pct_property_type_code from tax where tax_year between 2013 and 2023"
+dbGetQuery(con, q) # abt 99% of properties have property type code
+
+
+
+######----- How many sales transactions can we link to tax data? ----#####
+
+# What is the sale date? sale_derived_date
+q <- "select 
+    sum(case when sale_derived_date is not null then 1 else 0 end) / count(1) as pct_sale_derived_date,
+    sum(case when sale_derived_recording_date is not null then 1 else 0 end) / count(1) as pct_sale_derived_recording_date,
+    from ownertransfer;"
+dbGetQuery(con, q) 
+
+# For which years do we have data?
+q <- "select 
+    year(sale_derived_date) as year,
+    count(1) as n, 
+    from ownertransfer
+    where sale_derived_date is not null
+    group by year
+    order by year;"
+dbGetQuery(con, q) # Roughly late 90s-2024
+
+# Is the CLIP - composite property key link unique?
+q <- "select count(1) from ownertransfer where clip is not null;"
+dbGetQuery(con, q) 
+q <- "select count(1) from ownertransfer where composite_property_linkage_key is not null;"
+dbGetQuery(con, q) 
+
+q <- "select 
+    count(1) as total,
+    count(distinct clip) as unique_clip,
+    count(distinct composite_property_linkage_key) as unique_composite_property_linkage_key,
+    from ownertransfer
+    where clip is not null and composite_property_linkage_key is not null;"
+dbGetQuery(con, q) # Looks onto
+
+# How many sales transactions have a tax record the following year?
+q <- "select
+    count(1) as n,
+    from ownertransfer o
+    join tax t 
+        on t.clip = o.clip and t.tax_year = year(o.sale_derived_date) + 1
+    where 
+        o.sale_derived_date is not null 
+        and o.clip is not null 
+        and year(o.sale_derived_date) between 2012 and 2022 
+        and month(o.sale_derived_date) != 12
+        and t.clip is not null
+        and t.tax_year is not null;"
+dbGetQuery(con, q) #124 million
+
+q <- "select count(1) as n from ownertransfer where 
+    sale_derived_date is not null 
+    and clip is not null 
+    and year(sale_derived_date) between 2012 and 2022 
+    and month(sale_derived_date) != 12;"
+dbGetQuery(con, q) # out of 130 million
+
+
+
+
+######------ How long do we observe parcels for? ----#####
+
+# Overall distribution
+q <- "with counts as (
+    select count(1) as n from tax where tax_year between 2013 and 2023 and clip is not null group by clip
+)
+select n, count(1) total from counts group by n order by n;"
 dbGetQuery(con, q)
+
+# Distribution by state - looks quite good
+q <- "with counts as (
+    select any_value(fips_code // 1000) as state, count(1) as n from tax where tax_year between 2013 and 2023 and clip is not null and fips_code is not null group by clip
+    )
+    select state, n, count(1) total from counts group by state, n order by state, n;
+"
+state_distribution <- dbGetQuery(con, q)
+state_distribution |>
+    filter(state <= 56) |> # Only contiguous US
+    ggplot(aes(x = n, y = total)) +
+    geom_bar(stat = "identity", fill = "steelblue") +
+    labs(
+        title = "Distribution of Number of Years Observed by State",
+        x = "Number of Years Observed",
+        y = "Count of Properties"
+    ) +
+    theme_classic() +
+    xlim(0, 11) +
+    facet_wrap(~ state, scales = "free_y") +
+    expand_limits(y = 0)
+ggsave("../output/coverage/state_observation_years.png", width = 12, height = 8)
+
+# Are there any duplicates within clip by tax_year? - Yes
+q <- "select
+    clip, tax_year, count(1) as n
+    from tax
+    where tax_year between 2013 and 2023 and clip is not null
+    group by clip, tax_year
+    having n > 1
+    order by clip, tax_year;"
+duplicates <- dbGetQuery(con, q)
+
+# Where are these duplicates coming from?
+q <- "select
+    any_value(fips_code) // 1000 as state,
+    count(1) as n       
+    from tax
+    where tax_year between 2013 and 2023 and clip is not null
+    group by clip, tax_year
+    having n > 1
+    order by state;"
+duplicates_by_state <- dbGetQuery(con, q)
+duplicates_by_state |> 
+    reframe(total = sum(n), .by = state) |>
+    arrange(state)
 
