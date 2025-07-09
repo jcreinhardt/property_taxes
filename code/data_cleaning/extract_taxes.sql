@@ -8,4 +8,4 @@ attach "/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db" as cl_raw
 create table tax as 
 select clip, tax_year, any_value(fips_code), min(total_tax_amount), min(calculated_total_value)
 from cl_raw.tax 
-group by clip, tax_year
+group by clip, tax_year;
