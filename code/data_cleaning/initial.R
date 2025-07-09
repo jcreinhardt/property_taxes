@@ -359,7 +359,7 @@ q <- "select
     order by clip, tax_year;"
 duplicates <- dbGetQuery(con, q)
 
-# Where are these duplicates coming from?
+# Where are these duplicates coming from? - Most states
 q <- "select
     any_value(fips_code) // 1000 as state,
     count(1) as n       
@@ -372,4 +372,44 @@ duplicates_by_state <- dbGetQuery(con, q)
 duplicates_by_state |> 
     reframe(total = sum(n), .by = state) |>
     arrange(state)
+
+# Do they perhaps have a record action indicator?
+q <- "select record_action_indicator, count(1) as n
+    from tax
+    where tax_year between 2013 and 2023 and clip is not null
+    group by record_action_indicator
+    order by n desc;"
+dbGetQuery(con, q) 
+
+# APN sequence numbers? There's too few of those parcels
+q <- 'select count(apn_sequence_number) / count(1) from tax where tax_year between 2013 and 2023 and clip is not null;'
+dbGetQuery(con, q)
+q <- 'select count(1) from tax where apn_sequence_number > 1 and tax_year between 2013 and 2023 and clip is not null;'
+dbGetQuery(con, q)
+
+# Let's just look at an example entry
+q <- "SELECT t.*
+FROM tax t
+JOIN (
+    SELECT t.clip, t.tax_year
+    FROM tax t
+    GROUP BY t.clip, t.tax_year
+    HAVING COUNT(*) = 2
+) dupes ON t.clip = dupes.clip AND t.tax_year = dupes.tax_year
+ORDER BY t.clip, t.tax_year
+LIMIT 2;"
+dbGetQuery(con, q)
+
+# Perhaps the have a transaction batch date of 1930? Nope, only some, most are NA
+q <- "SELECT year(t.transaction_batch_date) as year, count(1) as n
+FROM tax t
+JOIN (
+    SELECT t.clip, t.tax_year
+    FROM tax t
+    GROUP BY t.clip, t.tax_year
+    HAVING COUNT(*) = 2
+) dupes ON t.clip = dupes.clip AND t.tax_year = dupes.tax_year
+group by year order by year;"
+dbGetQuery(con, q)
+
 
