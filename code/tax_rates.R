@@ -160,12 +160,23 @@ ggsave("../output/ntr_vs_etr.png")
 
 # -- Step 3: Effective capital gains taxes -- #
 
+# Test 
+q <- "select 
+        clip, 
+        tax_year,
+        sum(total_tax_amount) over (partition by clip order by tax_year)
+        from tax
+        where tax_year between 2013 and 2023 and clip is not null and total_tax_amount is not null
+        order by clip, tax_year
+        limit 15"
+dbGetQuery(con, q)
+
 # Add cumulative taxes paid since 2013 to transactions
 q <- "with cum_taxes as(
     select 
         clip, 
         tax_year,
-        sum(total_tax_amount) as cum_taxes over (partition by clip order by tax_year)
+        sum(total_tax_amount) over (partition by clip order by tax_year) as cum_taxes
         from tax
         where tax_year between 2013 and 2023 and clip is not null and total_tax_amount is not null
     )

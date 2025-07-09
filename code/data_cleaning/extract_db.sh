@@ -1,9 +1,14 @@
 #!/bin/bash
-#SBATCH --job-name=extract_taxes
-#SBATCH --output=extract_taxes_%j.out
-#SBATCH --error=extract_taxes_%j.err
-#SBATCH --time=01:00:00
-#SBATCH --mem=400G
+#
+#
+#SBATCH --account=lapoint # The account name for the job.
+#SBATCH --job-name=owner # The job name.
+#SBATCH --partition=bigmem
+#SBATCH --time=2:00:00 # The time the job will take to run.
+#SBATCH --nodes=1
+#SBATCH --ntasks=1 
+#SBATCH --cpus-per-task=28
+#SBATCH --mem=1500G
 
 # Run the SQL extraction
 duckdb < extract_taxes.sql
