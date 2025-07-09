@@ -1,8 +1,8 @@
 -- Extract relevant variables and insert into new database
 
 -- Attach new database
-attach '../../data/corelogic.db' as cl
-attach '/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db' as cl_raw
+attach '../../data/corelogic.db' as cl 
+attach '/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db' as cl_raw (readonly)
 
 -- Tax --
 create table tax as 
