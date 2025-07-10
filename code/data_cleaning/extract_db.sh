@@ -7,11 +7,11 @@
 #SBATCH --time=2:00:00 # The time the job will take to run.
 #SBATCH --nodes=1
 #SBATCH --ntasks=1 
-#SBATCH --cpus-per-task=28
-#SBATCH --mem=1500G
+#SBATCH --cpus-per-task=20
+#SBATCH --mem=1000G
 
 # Run the extraction
-duckdb < extract_taxes.sql
+#duckdb < extract_taxes.sql
 
 # Do some manipulations too large for interactive jobs
 duckdb ../../data/corelogic.db -s "with county_q99 as (
