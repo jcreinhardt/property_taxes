@@ -11,7 +11,7 @@
 #SBATCH --mem=1000G
 
 # Run the extraction
-#duckdb < extract_taxes.sql
+duckdb < extract_taxes.sql
 
 # Do some manipulations too large for interactive jobs
 duckdb ../../data/corelogic.db -s "with county_q99 as (
@@ -24,18 +24,22 @@ duckdb ../../data/corelogic.db -s "with county_q99 as (
 )
 update tax set windsorized = case when
     total_tax_amount < 0 or
-    total_tax_amount > (select q99_tax from county_q99 where county_q99.fips_code = tax.fips_code)
+    total_tax_amount > (select q99_tax from county_q99 where county_q99.fips_code = tax.fips_code) or 
+    calculated_total_value < 0 or
+    calculated_total_value > (select q99_value from county_q99 where county_q99.fips_code = tax.fips_code)
 then false else true end;"
 
 duckdb ../../data/corelogic.db -s "alter table ownertransfer add column windsorized boolean;
 with county_q99 as (
     select 
         fips_code,
-        quantile(sale_amount, .99) as q99_sale
+        quantile(sale_amount, .99) as q99_sale,
+        quantile(sale_amount, .01) as q01_sale
     from ownertransfer
     group by fips_code 
 )
 update ownertransfer set windsorized = case when
     sale_amount < 0 or
-    sale_amount > (select q99_sale from county_q99 where county_q99.fips_code = ownertransfer.fips_code)
+    sale_amount > (select q99_sale from county_q99 where county_q99.fips_code = ownertransfer.fips_code) or
+    sale_amount < (select q01_sale from county_q99 where county_q99.fips_code = ownertransfer.fips_code)
 then false else true end;"

@@ -1,56 +1,3 @@
--- Extract relevant variables and insert into new database
-
--- Attach old database
-attach '/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db' as cl_raw (readonly);
-
--- Set up
-select current_setting('threads') as threads;
-select current_setting('memory_limit') as memory_limit;
-set memory_limit = '20GB';
-set temp_directory = '../../temp/';
-.large_number_rendering footer
-.maxrow 60
-
-
--- Add Tax  (manually change years if rerunning code)
-create table tax as 
-select clip, tax_year, any_value(fips_code), min(total_tax_amount), min(calculated_total_value)
-from cl_raw.tax 
-where 
-    tax_year = 2024 and 
-    clip is not null and
-    fips_code is not null and 
-    total_tax_amount is not null and 
-    calculated_total_value is not null
-group by clip, tax_year;
-
-insert into tax
-select clip, tax_year, any_value(fips_code), min(total_tax_amount), min(calculated_total_value)
-from cl_raw.tax 
-where 
-    tax_year = 2020 and 
-    clip is not null and
-    fips_code is not null and 
-    total_tax_amount is not null and 
-    calculated_total_value is not null
-group by clip, tax_year;
-
--- Clean up
-alter table tax rename 'any_value(fips_code)' to fips_code;
-alter table tax rename 'min(total_tax_amount)' to total_tax_amount;
-alter table tax rename 'min(calculated_total_value)' to calculated_total_value;
-
--- Add Ownertransfer
-create table ownertransfer as 
-select clip, fips_code, sale_derived_date, sale_amount
-from cl_raw.ownertransfer
-where 
-    year(sale_derived_date) between 2013 and 2023
-    and clip is not null
-    and fips_code is not null
-    and sale_derived_date is not null
-    and sale_amount is not null
-order by fips_code, sale_derived_date;
 
 -- TAX: Check for consistency
 select count(1) from tax;
@@ -88,6 +35,19 @@ update tax set windsorized = case when
     total_tax_amount > (select q99_tax from county_q99 where county_q99.fips_code = tax.fips_code)
 then false else true end; -- windsorize at 99th percentile per county
 
+with counts as (
+    select count(1) as n from tax group by clip 
+) select n, count(1) from counts group by n order by n; 
+with leads as (
+    select 
+        tax_year,
+        lead(tax_year) over (partition by clip order by tax_year) as next_observed_year
+    from tax
+)
+select count(1) from leads 
+where tax_year + 1 != next_observed_year and 
+next_observed_year is not null; -- Check for gaps in tax years
+
 -- OWNERTRANSFER: Check for consistency
 select count(1) from ownertransfer;
 select count(distinct clip) from ownertransfer;
@@ -101,7 +61,17 @@ from ownertransfer; --NAs as expected
 
 with counts as (
     select count(1) as n from ownertransfer group by clip, sale_derived_date
-) select n, count(1) from counts group by n order by n; 
+) select n, count(1) from counts group by n order by n;
+with duplicates as (
+    select clip, sale_derived_date, count(1) as n
+    from ownertransfer
+    group by clip, sale_derived_date
+    having count(1) > 1
+)
+update ownertransfer set windsorized = false
+where 
+    (clip, sale_derived_date) in (select clip, sale_derived_date from duplicates)
+; -- Remove observations where dates do not pin down transactions
 
 select 
     fips_code // 1000 as state,
