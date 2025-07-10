@@ -162,12 +162,13 @@ ggsave("../output/ntr_vs_etr.png")
 
 # Test 
 q <- "select 
-        clip, 
-        tax_year,
-        sum(total_tax_amount) over (partition by clip order by tax_year)
-        from tax
-        where tax_year between 2013 and 2023 and clip is not null and total_tax_amount is not null
-        order by clip, tax_year
+        t.clip, 
+        t.tax_year,
+        t.total_tax_amount,
+        sum(t.total_tax_amount) over (partition by t.clip order by t.tax_year)
+        from (select * from tax order by clip, tax_year limit 1000) as t
+        where t.tax_year between 2013 and 2023 and t.clip is not null and t.total_tax_amount is not null
+        order by t.clip, t.tax_year
         limit 15"
 dbGetQuery(con, q)
 
