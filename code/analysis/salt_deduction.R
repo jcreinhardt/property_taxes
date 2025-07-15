@@ -54,4 +54,16 @@ join bill_groups_2017 bg on oc.clip = bg.clip
 group by bg.bill_group, oc.tax_year
 order by bg.bill_group, oc.tax_year;
 '
-dbGetQuery(con, q)
+df <- dbGetQuery(con, q) |>
+    mutate(bill_group = as.factor(bill_group))
+
+ggplot(df, aes(x = tax_year, y = share_owner_change, color = bill_group, group = bill_group)) +
+    geom_line(size = 1) +
+    geom_point() +
+    labs(
+        title = "Share of Owner Change by Tax Bill Group Over Years",
+        x = "Tax Year",
+        y = "Share of Owner Change (%)",
+        color = "Tax Bill Group"
+    ) +
+    theme_minimal()
