@@ -7,8 +7,8 @@
 #SBATCH --time=00:20:00 # The time the job will take to run.
 #SBATCH --nodes=1
 #SBATCH --ntasks=1 
-#SBATCH --cpus-per-task=40
-#SBATCH --mem=3900G
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=3800G
 
 # Run the extraction
 duckdb < extract_taxes.sql
