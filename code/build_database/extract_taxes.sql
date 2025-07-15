@@ -6,7 +6,6 @@ attach '/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db' as cl_raw (reado
 -- Set up
 select current_setting('threads') as threads;
 select current_setting('memory_limit') as memory_limit;
-set memory_limit = '800GB';
 set temp_directory = '../../temp/';
 .large_number_rendering footer
 
@@ -16,8 +15,9 @@ select
     clip, 
     tax_year, 
     any_value(fips_code) as fips_code, 
-    min(total_tax_amount) as total_tax_amount,
-    min(calculated_total_value) as calculated_total_value
+    any_value(total_tax_amount) as total_tax_amount,
+    any_value(calculated_total_value) as calculated_total_value,
+    any_value(owner_1_full_name) as owner_1_full_name,
 from cl_raw.tax 
 where 
     tax_year between 2013 and 2024 and
@@ -25,7 +25,19 @@ where
     fips_code is not null and 
     total_tax_amount is not null and 
     calculated_total_value is not null
-group by clip, tax_year;
+group by clip, tax_year
+having 
+    count(distinct fips_code) = 1 and 
+    count(distinct total_tax_amount) = 1 and
+    count(distinct calculated_total_value) = 1 and
+    count(distinct owner_1_full_name) = 1
+order by tax_year, fips_code, calculated_total_value;
+
+select 
+    (count(1) from cl_raw.tax) as n_raw,
+    (count(distinct clip) from cl_raw.tax) as n_clips_raw,
+    (count(1) from tax) as n,
+    (count(distinct clip) from tax) as n_clips;
 
 -- Add Ownertransfer
 create table ownertransfer as 

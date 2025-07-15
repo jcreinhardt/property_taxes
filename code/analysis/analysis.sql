@@ -751,4 +751,62 @@ ORDER BY year;
 
 
 
+-------------------------------
+-- Regressivity by valuation --
+-------------------------------
 
+with quantiles as (
+  select 
+    quantile(sale_amount, .1) as q10,
+    quantile(sale_amount, .2) as q20,
+    quantile(sale_amount, .3) as q30,
+    quantile(sale_amount, .4) as q40,
+    quantile(sale_amount, .5) as q50,
+    quantile(sale_amount, .6) as q60,
+    quantile(sale_amount, .7) as q70,
+    quantile(sale_amount, .8) as q80,
+    quantile(sale_amount, .9) as q90
+  from ownertransfer
+  where 
+    primary_category_code = 'A' and
+    windsorized = true and 
+    sale_amount > 25000
+), 
+  tax_after_sale AS (
+  SELECT 
+    o.clip,
+    o.sale_amount,
+    o.sale_derived_date,
+    case when 
+      o.sale_amount <= (select q.q10 from quantiles q) then 'q0'
+      when o.sale_amount <= (select q.q20 from quantiles q) then 'q10'
+      when o.sale_amount <= (select q.q30 from quantiles q) then 'q20'
+      when o.sale_amount <= (select q.q40 from quantiles q) then 'q30'
+      when o.sale_amount <= (select q.q50 from quantiles q) then 'q40'
+      when o.sale_amount <= (select q.q60 from quantiles q) then 'q50'
+      when o.sale_amount <= (select q.q70 from quantiles q) then 'q60'
+      when o.sale_amount <= (select q.q80 from quantiles q) then 'q70'
+      when o.sale_amount <= (select q.q90 from quantiles q) then 'q80'
+      else 'q90'
+    end as qtile,
+    t.tax_year,
+    (t.total_tax_amount / o.sale_amount) * 100 as effective_tax_rate
+  FROM ownertransfer o
+  JOIN tax t ON o.clip = t.clip
+  WHERE t.tax_year = year(o.sale_derived_date) - 1
+    AND t.windsorized = true
+    AND o.primary_category_code = 'A'
+    AND o.windsorized = true
+    AND o.sale_amount > 25000
+)
+
+SELECT 
+  qtile,
+  COUNT(*) as count,
+  ROUND(MEDIAN(effective_tax_rate), 3) as median,
+  ROUND(QUANTILE(effective_tax_rate, .9), 3) as q90,
+  ROUND(QUANTILE(effective_tax_rate, .1), 3) as q10,
+  ROUND(STDDEV(effective_tax_rate), 3) as sigma
+FROM tax_after_sale
+GROUP BY qtile
+ORDER BY qtile;

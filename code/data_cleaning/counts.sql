@@ -1,4 +1,3 @@
-
 -- TAX: Check for consistency
 select count(1) from tax;
 select count(distinct clip) from tax;
@@ -21,32 +20,87 @@ from tax tablesample 10%
 group by state
 order by state; -- Some values are clearly nonsensical
 
-alter table tax add column windsorized boolean;
-with county_q99 as (
-    select 
-        fips_code,
-        quantile(total_tax_amount, .99) as q99_tax,
-        quantile(calculated_total_value, .99) as q99_value
-    from tax
-    group by fips_code 
-)
-update tax set windsorized = case when
-    total_tax_amount < 0 or
-    total_tax_amount > (select q99_tax from county_q99 where county_q99.fips_code = tax.fips_code)
-then false else true end; -- windsorize at 99th percentile per county
-
 with counts as (
     select count(1) as n from tax group by clip 
-) select n, count(1) from counts group by n order by n; 
+) select n, count(1) from counts group by n order by n; --mostly full coverage
+
 with leads as (
     select 
         tax_year,
         lead(tax_year) over (partition by clip order by tax_year) as next_observed_year
     from tax
-)
+) 
 select count(1) from leads 
 where tax_year + 1 != next_observed_year and 
-next_observed_year is not null; -- Check for gaps in tax years
+next_observed_year is not null; -- About 31 million gaps
+
+with leads as (
+    select 
+        clip,
+        fips_code // 1000 as state,
+        tax_year,
+        lead(tax_year) over (partition by clip order by tax_year) as next_observed_year
+    from tax
+), gap_properties as (
+    select 
+        any_value(state) as state,
+        bool_or(tax_year + 1 != next_observed_year and next_observed_year is not null) as gap
+    from leads
+    group by clip
+)
+select 
+    state, 
+    round(100 * count(case when gap then 1 end) / count(1), 3) as share
+from gap_properties
+group by state
+order by state; -- Some states feature quite a lot of gaps
+
+with leads as (
+    select 
+        tax_year,
+        lead(tax_year) over (partition by clip order by tax_year) as next_observed_year
+    from tax
+) 
+select 
+    next_observed_year, 
+    count(1) as n,
+from leads
+where tax_year + 1 != next_observed_year and next_observed_year is not null
+group by next_observed_year
+order by next_observed_year; -- early on + 2020 is missing
+
+with leads as (
+    select 
+        tax_year,
+        lead(tax_year) over (partition by clip order by tax_year) as next_observed_year
+    from tax
+) 
+select 
+    tax_year, 
+    count(1) as n,
+from leads
+where tax_year + 1 != next_observed_year and next_observed_year is not null
+group by tax_year
+order by tax_year;
+
+with duplicates as (
+    select 
+        clip, 
+        tax_year, 
+        min(total_tax_amount) as min_tax,
+        max(total_tax_amount) as max_tax,
+        min(calculated_total_value) as min_value,
+        max(calculated_total_value) as max_value
+    from cl_raw.tax
+    where tax_year = 2013
+    group by clip, tax_year
+    having count(1) > 1
+)
+select 
+    count(case when min_tax != max_tax then 1 end) as n_different_taxes,
+    count(case when min_value != max_value then 1 end) as n_different_values,
+    count(1) as n_duplicates
+from duplicates;
 
 -- OWNERTRANSFER: Check for consistency
 select count(1) from ownertransfer;
@@ -82,23 +136,11 @@ from ownertransfer tablesample 10%
 group by state
 order by state; -- Numbers sometimes make no sense
 
-alter table ownertransfer add column windsorized boolean;
-with county_q99 as (
-    select 
-        fips_code,
-        quantile(sale_amount, .99) as q99_sale
-    from ownertransfer
-    group by fips_code 
-)
-update ownertransfer set windsorized = case when
-    sale_amount < 0 or
-    sale_amount > (select q99_sale from county_q99 where county_q99.fips_code = ownertransfer.fips_code)
-then false else true end; -- windsorize at 99th percentile per county
-
 with counts as (
     select count(1) as n 
     from tax
     group by clip
 )
 select n, count(1) from counts group by n order by n;
+
 
