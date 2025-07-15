@@ -8,7 +8,7 @@ select current_setting('threads') as threads;
 select current_setting('memory_limit') as memory_limit;
 set temp_directory = '../../temp/';
 set memory_limit='3200GB';
-set threads=20;
+set threads=40;
 select current_setting('threads') as threads;
 select current_setting('memory_limit') as memory_limit;
 
