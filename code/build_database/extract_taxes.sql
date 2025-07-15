@@ -60,12 +60,6 @@ having
     count(distinct owner_1_full_name) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select 
-    (select count(1) from cl_raw.tax) as n_raw,
-    (select count(distinct clip) from cl_raw.tax) as n_clips_raw,
-    (select count(1) from tax) as n,
-    (select count(distinct clip) from tax) as n_clips;
-
 select count(1) as n_2022 from tax where tax_year = 2022;
 
 insert into tax 

@@ -11,4 +11,4 @@
 #SBATCH --mem=3800G
 
 # Run the extraction
-duckdb < extract_taxes.sql
+duckdb ../../data/corelogic.db < extract_taxes.sql
