@@ -7,6 +7,8 @@ attach '/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db' as cl_raw (reado
 select current_setting('threads') as threads;
 select current_setting('memory_limit') as memory_limit;
 set temp_directory = '../../temp/';
+set memory_limit='2000GB';
+set threads=20;
 
 -- Add Tax 
 create table tax as 
