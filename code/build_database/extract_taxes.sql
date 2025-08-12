@@ -39,8 +39,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2024 from tax where tax_year = 2024;
-
 insert into tax 
 select 
     clip, 
@@ -65,8 +63,6 @@ having
     count(distinct owner_1_full_name) = 1 and
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
-
-select count(1) as n_2023 from tax where tax_year = 2023;
 
 insert into tax 
 select 
@@ -93,8 +89,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2022 from tax where tax_year = 2022;
-
 insert into tax 
 select 
     clip, 
@@ -119,8 +113,6 @@ having
     count(distinct owner_1_full_name) = 1 and
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
-
-select count(1) as n_2021 from tax where tax_year = 2021;
 
 insert into tax 
 select 
@@ -147,8 +139,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2020 from tax where tax_year = 2020;
-
 insert into tax 
 select 
     clip, 
@@ -173,8 +163,6 @@ having
     count(distinct owner_1_full_name) = 1 and
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
-
-select count(1) as n_2019 from tax where tax_year = 2019;
 
 insert into tax 
 select 
@@ -201,8 +189,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2018 from tax where tax_year = 2018;
-
 insert into tax 
 select 
     clip, 
@@ -227,8 +213,6 @@ having
     count(distinct owner_1_full_name) = 1 and
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
-
-select count(1) as n_2017 from tax where tax_year = 2017;
 
 insert into tax 
 select 
@@ -255,8 +239,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2016 from tax where tax_year = 2016;
-
 insert into tax 
 select 
     clip, 
@@ -281,8 +263,6 @@ having
     count(distinct owner_1_full_name) = 1 and
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
-
-select count(1) as n_2015 from tax where tax_year = 2015;
 
 insert into tax 
 select 
@@ -309,8 +289,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2014 from tax where tax_year = 2014;
-
 insert into tax 
 select 
     clip, 
@@ -336,11 +314,6 @@ having
     count(distinct census_id) = 1
 order by tax_year, fips_code, calculated_total_value;
 
-select count(1) as n_2013 from tax where tax_year = 2013; 
-    (select count(1) from cl_raw.tax) as n_raw,
-    (select count(distinct clip) from cl_raw.tax) as n_clips_raw,
-    (select count(1) from tax) as n,
-    (select count(distinct clip) from tax) as n_clips;
 
 -- Add Ownertransfer
 create table if not exists ownertransfer as 
