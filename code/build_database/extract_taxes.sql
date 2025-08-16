@@ -34,8 +34,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -58,8 +57,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -82,8 +80,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -106,8 +103,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -130,8 +126,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -154,8 +149,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -178,8 +172,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -202,8 +195,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -226,8 +218,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -250,8 +241,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -274,8 +264,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 insert into tax 
@@ -298,8 +287,7 @@ group by clip, tax_year
 having 
     count(distinct fips_code) = 1 and 
     count(distinct total_tax_amount) = 1 and
-    count(distinct calculated_total_value) = 1 and
-    count(distinct owner_1_full_name) = 1 
+    count(distinct calculated_total_value) = 1 
 order by tax_year, fips_code, calculated_total_value;
 
 

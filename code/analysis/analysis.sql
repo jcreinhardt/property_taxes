@@ -1,7 +1,6 @@
 -- Set up
 select current_setting('threads') as threads;
 select current_setting('memory_limit') as memory_limit;
-set memory_limit = '20GB';
 set temp_directory = '../../temp/';
 
 
@@ -810,3 +809,51 @@ SELECT
 FROM tax_after_sale
 GROUP BY qtile
 ORDER BY qtile;
+
+
+
+
+--------------------------------------------------------------------
+--- Did high tax homes get transacted more intensely after 2017? ---
+--------------------------------------------------------------------
+
+with sale_years as (
+  select clip, year(sale_derived_date) as sale_year, sale_amount
+  from ownertransfer 
+), 
+tax_quantiles as (
+  select 
+    quantile(total_tax_amount, .1) as q10,
+    quantile(total_tax_amount, .2) as q20,
+    quantile(total_tax_amount, .3) as q30,
+    quantile(total_tax_amount, .4) as q40,
+    quantile(total_tax_amount, .5) as q50,
+    quantile(total_tax_amount, .6) as q60,
+    quantile(total_tax_amount, .7) as q70,
+    quantile(total_tax_amount, .8) as q80,
+    quantile(total_tax_amount, .9) as q90,
+    quantile(total_tax_amount, .95) as q95,
+    quantile(total_tax_amount, .99) as q99,
+    quantile(total_tax_amount, .995) as q995
+  from tax
+)
+select 
+  case when t.total_tax_amount <= (select q.q10 from tax_quantiles q) then 'q0'
+       when t.total_tax_amount <= (select q.q20 from tax_quantiles q) then 'q10'
+       when t.total_tax_amount <= (select q.q30 from tax_quantiles q) then 'q20'
+       when t.total_tax_amount <= (select q.q40 from tax_quantiles q) then 'q30'
+       when t.total_tax_amount <= (select q.q50 from tax_quantiles q) then 'q40'
+       when t.total_tax_amount <= (select q.q60 from tax_quantiles q) then 'q50'
+       when t.total_tax_amount <= (select q.q70 from tax_quantiles q) then 'q60'
+       when t.total_tax_amount <= (select q.q80 from tax_quantiles q) then 'q70'
+       when t.total_tax_amount <= (select q.q90 from tax_quantiles q) then 'q80'
+       when t.total_tax_amount <= (select q.q95 from tax_quantiles q) then 'q90'
+       when t.total_tax_amount <= (select q.q99 from tax_quantiles q) then 'q95'
+       when t.total_tax_amount <= (select q.q995 from tax_quantiles q) then 'q99'
+       else 'q100' end as tax_quantile,
+  sum(case when s.sale_year is not null then 1 end) / count(1) as share_sold
+from tax t
+left join sale_years s on t.clip = s.clip and s.sale_year = t.tax_year
+where tax_year = 2016 and t.fips_code // 1000 = 6 -- California
+group by tax_quantile
+order by tax_quantile;
