@@ -66,6 +66,69 @@ ggplot(df, aes(x = tax_year, y = share_sold, color = quantile, group = quantile)
 
 ggsave("../../output/share_sold_by_tax_bill_group.png", width = 8, height = 5)
 
+# Re-do this with slightly different bins
+q <- "
+with sale_years as (
+  select clip, year(sale_derived_date) as sale_year
+  from ownertransfer 
+  where fips_code // 1000 = 1
+  group by clip, sale_derived_date
+), 
+tax_quantiles as (
+  select 
+    quantile(total_tax_amount, .1) as q10,
+    quantile(total_tax_amount, .2) as q20,
+    quantile(total_tax_amount, .3) as q30,
+    quantile(total_tax_amount, .4) as q40,
+    quantile(total_tax_amount, .5) as q50,
+    quantile(total_tax_amount, .6) as q60,
+    quantile(total_tax_amount, .7) as q70,
+    quantile(total_tax_amount, .8) as q80,
+    quantile(total_tax_amount, .9) as q90,
+    quantile(total_tax_amount, .95) as q95,
+    quantile(total_tax_amount, .99) as q99,
+    quantile(total_tax_amount, .995) as q995
+  from tax
+  using sample 1 percent
+)
+select 
+  case when t.total_tax_amount <= q.q10 then 'q0'
+       when t.total_tax_amount <= q.q20 then 'q10'
+       when t.total_tax_amount <= q.q30 then 'q20'
+       when t.total_tax_amount <= q.q40 then 'q30'
+       when t.total_tax_amount <= q.q50 then 'q40'
+       when t.total_tax_amount <= q.q60 then 'q50'
+       when t.total_tax_amount <= q.q70 then 'q60'
+       when t.total_tax_amount <= q.q80 then 'q70'
+       when t.total_tax_amount <= q.q90 then 'q80'
+       when t.total_tax_amount <= q.q95 then 'q90'
+       when t.total_tax_amount <= q.q99 then 'q95'
+       when t.total_tax_amount <= q.q995 then 'q99'
+       else 'q995' end as tax_quantile,
+  sum(case when s.sale_year is not null then 1 end) / count(1) as share_sold,
+  tax_year as year
+from tax t
+left join sale_years s on t.clip = s.clip and s.sale_year = t.tax_year
+cross join tax_quantiles q
+where tax_year between 2013 and 2023 and t.fips_code // 1000 = 1
+group by tax_quantile, year
+order by tax_quantile, year;
+"
+
+df <- dbGetQuery(con, q) |>
+    mutate(tax_quantile = as.factor(tax_quantile))
+ggplot(df, aes(x = year, y = share_sold, color = tax_quantile, group = tax_quantile)) +
+    geom_line(size = 1) +
+    geom_point() +
+    labs(
+        title = "Share of Owner Change by Tax Bill Quantile Over Years",
+        x = "Tax Year",
+        y = "Share of Owner Change",
+        color = "Tax Bill Quantile"
+    ) +
+    theme_classic() 
+ggsave("../../output/share_sold_by_tax_bill_quantile.png", width = 8, height = 5)
+
 # Run a DiD of turnover on tax bill with 2017 as the treatment date
 q <- '
 with transacted_years as (

@@ -818,8 +818,10 @@ ORDER BY qtile;
 --------------------------------------------------------------------
 
 with sale_years as (
-  select clip, year(sale_derived_date) as sale_year, sale_amount
+  select clip, year(sale_derived_date) as sale_year
   from ownertransfer 
+  where fips_code // 1000 = 1
+  group by clip, sale_derived_date
 ), 
 tax_quantiles as (
   select 
@@ -836,24 +838,27 @@ tax_quantiles as (
     quantile(total_tax_amount, .99) as q99,
     quantile(total_tax_amount, .995) as q995
   from tax
+  using sample 1 percent
 )
 select 
-  case when t.total_tax_amount <= (select q.q10 from tax_quantiles q) then 'q0'
-       when t.total_tax_amount <= (select q.q20 from tax_quantiles q) then 'q10'
-       when t.total_tax_amount <= (select q.q30 from tax_quantiles q) then 'q20'
-       when t.total_tax_amount <= (select q.q40 from tax_quantiles q) then 'q30'
-       when t.total_tax_amount <= (select q.q50 from tax_quantiles q) then 'q40'
-       when t.total_tax_amount <= (select q.q60 from tax_quantiles q) then 'q50'
-       when t.total_tax_amount <= (select q.q70 from tax_quantiles q) then 'q60'
-       when t.total_tax_amount <= (select q.q80 from tax_quantiles q) then 'q70'
-       when t.total_tax_amount <= (select q.q90 from tax_quantiles q) then 'q80'
-       when t.total_tax_amount <= (select q.q95 from tax_quantiles q) then 'q90'
-       when t.total_tax_amount <= (select q.q99 from tax_quantiles q) then 'q95'
-       when t.total_tax_amount <= (select q.q995 from tax_quantiles q) then 'q99'
-       else 'q100' end as tax_quantile,
-  sum(case when s.sale_year is not null then 1 end) / count(1) as share_sold
+  case when t.total_tax_amount <= q.q10 then 'q0'
+       when t.total_tax_amount <= q.q20 then 'q10'
+       when t.total_tax_amount <= q.q30 then 'q20'
+       when t.total_tax_amount <= q.q40 then 'q30'
+       when t.total_tax_amount <= q.q50 then 'q40'
+       when t.total_tax_amount <= q.q60 then 'q50'
+       when t.total_tax_amount <= q.q70 then 'q60'
+       when t.total_tax_amount <= q.q80 then 'q70'
+       when t.total_tax_amount <= q.q90 then 'q80'
+       when t.total_tax_amount <= q.q95 then 'q90'
+       when t.total_tax_amount <= q.q99 then 'q95'
+       when t.total_tax_amount <= q.q995 then 'q99'
+       else 'q995' end as tax_quantile,
+  sum(case when s.sale_year is not null then 1 end) / count(1) as share_sold,
+  tax_year as year
 from tax t
 left join sale_years s on t.clip = s.clip and s.sale_year = t.tax_year
-where tax_year = 2016 and t.fips_code // 1000 = 6 -- California
-group by tax_quantile
-order by tax_quantile;
+cross join tax_quantiles q
+where tax_year between 2013 and 2023 and t.fips_code // 1000 = 1
+group by tax_quantile, year
+order by tax_quantile, year;
