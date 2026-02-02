@@ -1,0 +1,15 @@
+1. Data
+    - Reach out to state departments of revenue
+        - ideally high income tax, no sales tax -> Oregon
+2. Analysis
+    - Implement spatial RDD
+    - Implement IV-setup, namely decomposition of tax changes
+        - dTax = rate_t1 * base_t1 - rate_t0 & base_t0
+        - dTax = rate_t1 * base_t1 - rate_t0 * base_t1 + rate_t0 * base_t1 - rate_t0 & base_t0
+        - dTax = delta_rate * base_t1 + rate_t0 * delta_base
+        - dTax = rate_t1 * base_t1 - rate_t1 * base_t0 + rate_t1 * base_t0 - rate_t0 & base_t0
+        - dTax = rate_t1 * delta_base + delta_rate * base_t0
+    - Consider reassessment based instrument for tax rates
+3. Research Design
+4. Theory
+5. Literature
