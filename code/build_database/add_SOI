@@ -1,0 +1,152 @@
+# Clean up
+gc()
+rm(list = ls())
+getwd()
+
+# Load libraries
+library(duckdb)
+library(tidycensus)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(purrr)
+library(ggplot2)
+library(fixest)
+library(stringr)
+library(rdrobust)
+library(binsreg)
+library(sf)
+library(tigris)
+
+# Load SOI migration data
+df_list <- list.files("../../data/migration_SOI/", pattern = "^countyout.*\\.csv$", full.names = TRUE) |> 
+    map(fread) 
+
+# Remove some aggregate rows
+add_up_outflows <- function(df) {
+    df |> 
+        filter(y1_countyfips != 0 & y2_countyfips != 0) |>
+        filter(y1_statefips %in% 1:59 & y2_statefips %in% 1:59) |>
+        mutate(fips = y1_statefips * 1000 + y1_countyfips) |>
+        reframe(
+            n1 = sum(n1),
+            n2 = sum(n2),
+            agi = sum(agi),
+            .by = fips
+        ) 
+}
+
+outflows <- df_list |>
+    map(add_up_outflows) 
+
+# Add years back in
+file_ends <- list.files("../../data/migration_SOI/", pattern = "^countyout.*\\.csv$", full.names = FALSE) |>
+    str_extract("\\d{4}") |>
+    as.numeric() 
+years <- file_ends %% 100
+
+add_years <- function(df, year) {
+    df |>
+        mutate(year = year)
+}
+
+outflows <- outflows |>
+    map2(years, add_years) |> 
+    bind_rows()
+
+
+# Repeat for inflows
+add_up_inflows <- function(df) {
+    df |>
+        filter(y1_countyfips != 0 & y2_countyfips != 0) |>
+        filter(y1_statefips %in% 1:59 & y2_statefips %in% 1:59) |>
+        mutate(fips = y2_statefips * 1000 + y2_countyfips) |>
+        reframe(
+            n1 = sum(n1),
+            n2 = sum(n2),
+            agi = sum(agi),
+            .by = fips) 
+}
+
+inflows <- list.files("../../data/migration_SOI/", pattern = "^countyin.*\\.csv$", full.names = TRUE) |>
+    map(fread) |>
+    map(add_up_inflows) 
+
+file_ends <- list.files("../../data/migration_SOI/", pattern = "^countyin.*\\.csv$", full.names = FALSE) |>
+    str_extract("\\d{4}") |>
+    as.numeric() 
+years <- file_ends %% 100
+
+inflows <- inflows |>
+    map2(years, add_years) |>
+    bind_rows()
+
+# Combine and calculate net migration (inflows has non-US territories)
+net_migration <- inflows |>
+    rename(
+        inmigration_filers = n1,
+        inmigration_pop = n2,
+        inmigration_agi = agi
+    ) |>
+    inner_join(outflows, by = c("fips", "year")) |>
+    rename(
+        outmigration_filers = n1,
+        outmigration_pop = n2,
+        outmigration_agi = agi
+    ) |>
+    mutate(
+        net_migration_filers = inmigration_filers - outmigration_filers,
+        net_migration_pop = inmigration_pop - outmigration_pop,
+        net_migration_agi = inmigration_agi - outmigration_agi
+    )
+
+# Write to database
+fwrite(net_migration, "../../data/migration_SOI/net_migration.csv")
+
+# Load SOI zip code level filings
+df_list <- list.files(
+        "../../data/zipcode_SOI/", 
+        pattern = "^(1[1-9]|2[0-2])zpallagi\\.csv$", 
+        full.names = TRUE
+    ) |> 
+    map(fread) 
+
+# Fix some variable naming issues
+# Function to convert all variable names to lower-case for each dataframe in a list
+to_lower_names <- function(df) {
+    names(df) <- tolower(names(df))
+    df
+}
+df_list <- map(df_list, to_lower_names)
+
+
+# Add filing years
+file_ends <- list.files(
+    "../../data/zipcode_SOI/", 
+    pattern = "^(1[1-9]|2[0-2])zpallagi\\.csv$", 
+    full.names = FALSE
+) |>
+    substr(0,2) |>
+    as.numeric() 
+years <- file_ends + 2000  
+
+zipcode_filings <- df_list |>
+    map2(years, add_years) |>
+    bind_rows()
+
+# Drop some aggregate categories
+zipcode_filings <- zipcode_filings |>
+    filter(zipcode != 0 & zipcode != 99999)
+
+# Tabulate some key variables
+unique(zipcode_filings$state)
+sum(zipcode_filings$n1) 
+zipcode_filings |> reframe(n = sum(n1), .by = year)
+zipcode_filings |> filter(year == 2022) |> reframe(n = sum(n18425))
+
+# Share of itemizers over time
+zipcode_filings |> 
+    reframe(share = sum(n04470) / sum(n1), .by = year) |>
+    arrange(year)
+
