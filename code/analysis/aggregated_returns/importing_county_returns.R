@@ -14,7 +14,7 @@ library(duckdb)
 
 
 # Paths
-county_returns_dir <- "../../data/SOI/county_returns"
+county_returns_dir <- "../../../data/SOI/county_returns"
 county_files <- list.files(county_returns_dir, pattern = "\\.csv$", full.names = TRUE)
 
 if (length(county_files) == 0) {
@@ -101,6 +101,11 @@ na_by_year_wide <- county_returns_selected |>
 
 View(na_by_year_wide)
 
+# Drop state totals (countyfips = 0)
+county_returns_selected <- county_returns_selected |>
+    filter(COUNTYFIPS != 0)
+
+# Rename variables to match county_returns and conventions
 county_data <- county_returns_selected |>
     rename( 
         returns = N1,
