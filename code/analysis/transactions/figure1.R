@@ -35,8 +35,8 @@ with transacted_properties as (
     select clip, year(sale_derived_date) as year
     from ownertransfer
     where 
-        (year between 2014 and 2019 or year = 2020 and month(sale_derived_date) <= 3) and
-        fips_code // 1000 = 33 
+        year between 2014 and 2019 and
+        fips_code // 1000 = 33
     group by clip, year
 )
 select 
@@ -49,7 +49,7 @@ from tax t
 left join transacted_properties tp
     on t.clip = tp.clip and t.tax_year = tp.year
 where 
-    ((t.tax_year between 2014 and 2019 or t.tax_year = 2020 and month(t.sale_derived_date) <= 3) and
+    t.tax_year between 2014 and 2019 and
     t.property_indicator_code = 10 and
     t.owner_occupancy_code = 'O' and
     t.total_tax_amount > 0 and
@@ -120,6 +120,7 @@ ggsave("../../output/RDD.png")
 # - Method 2: DiD or two-dimensional binscatter - ##############################################################################################
 ############################################################################################################################
 
+# For just one state
 values <- df |> 
     mutate(
         transacted = 100 * transacted,
@@ -241,7 +242,90 @@ ggsave("../../output/pctiles_pretrend.png", width = 15, height = 10, units = "cm
 
 
 
+# For all states without income tax
+q <- "
+with transacted_properties as (
+    select clip, year(sale_derived_date) as year
+    from ownertransfer
+    where 
+        year between 2014 and 2019 and
+        fips_code // 1000 in (02, 12, 32, 33, 46, 47, 48, 53, 56)
+    group by clip, year
+)
+select 
+    t.clip,
+    t.tax_year,
+    t.fips_code,
+    t.total_tax_amount,
+    case when tp.year is not null then 1 else 0 end as transacted
+from tax t
+left join transacted_properties tp
+    on t.clip = tp.clip and t.tax_year = tp.year
+where 
+    t.tax_year between 2014 and 2019 and
+    t.property_indicator_code = 10 and
+    t.owner_occupancy_code = 'O' and
+    t.total_tax_amount > 0 and
+    t.fips_code // 1000 in (02, 12, 32, 33, 46, 47, 48, 53, 56)
+"
+df <- dbGetQuery(con, q)
 
+# What share of properties are exposed to the reform?
+shares <- df |> 
+    filter(tax_year == 2018) |>
+    mutate(state = fips_code %/% 1000) |>
+    reframe(
+        count = sum(total_tax_amount > 10000),
+        share = count / n(),
+        .by = state
+    )
+print(shares)
+
+# For each state, create three groups of equal size:
+# Properties with a tax bill x > 10000,
+# Properties with a tax bill 10000 - threshold < x < 10000,
+# Properties with a tax bill 10000 - 2*threshold < x < 10000 - threshold
+thresholds <- df |> 
+    filter(tax_year == 2018) |>
+    mutate(state = fips_code %/% 1000) |>
+    group_by(state) |>
+    sample_n(50000) |>
+    ungroup() |>
+    left_join(shares, by = "state") |> 
+    mutate(share = round(share, 6)) |>
+    reframe(
+        treatment_threshold = quantile(total_tax_amount, 1 - share[1]),
+        placebo_threshold = quantile(total_tax_amount, 1 - 2 * share[1]),
+        lower_threshold = quantile(total_tax_amount, 1 - 3 * share[1]),
+        .by = state
+    ) 
+
+# Compare the three groups over time
+sample <- df |> 
+    mutate(state = fips_code %/% 1000) |> 
+    group_by(state, tax_year) |>
+    sample_n(100000) |>
+    ungroup() 
+    
+sample |> 
+    left_join(thresholds, by = "state") |> 
+    mutate(
+        group = case_when(
+            30000 > total_tax_amount & total_tax_amount > treatment_threshold ~ "Treatment",
+            treatment_threshold >= total_tax_amount  & total_tax_amount > placebo_threshold  ~ "Control",
+            placebo_threshold >= total_tax_amount  & total_tax_amount > lower_threshold  ~ "Placebo"
+        )
+    ) |>
+    filter(!is.na(group)) |> 
+    reframe(
+        mean_transactions = mean(transacted),
+        .by = c(tax_year, group)
+    ) |> 
+    ggplot(aes(x = tax_year, y = mean_transactions, color = group)) +
+        geom_line() +
+        geom_point() +
+        theme_classic()
+ggsave("../../output/no_income_tax_states.png")
 
 
 

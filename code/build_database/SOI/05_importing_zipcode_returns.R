@@ -89,7 +89,8 @@ cat("Merged rows:", nrow(zipcode_returns_selected), "\n")
 
 # Drop state totals (zipcode = 00000) and AGI totals (agi_stub = 0)
 zipcode_returns_selected <- zipcode_returns_selected |>
-    filter(ZIPCODE != 0)
+    filter(ZIPCODE != 0) |> 
+    filter(ZIPCODE != 99999)
 
 # Tabulate NAs by year (wide table)
 na_by_year_wide <- zipcode_returns_selected |>
@@ -145,12 +146,28 @@ zipcode_data <- zipcode_returns_selected |>
 
 View(zipcode_data)
 
+# Aggregate to one observation per zipcode-year
+zipcode_data <- zipcode_data |>
+    select(-any_of(c("state", "statefips"))) |>
+    group_by(year, zipcode) |>
+    summarise(
+        across(where(is.numeric) & !matches("^(year|zipcode)$"), ~ sum(.x, na.rm = TRUE)),
+        .groups = "drop"
+    )
+
 # How many returns are there?
 zipcode_data |>
     reframe(total_returns = sum(returns), .by = year)
 
 # That's how much compared to county-level totals?
 dbGetQuery(con, "select year, sum(returns) as total_returns from returns_county group by year order by year")
+
+# Number of zipcodes per year
+zipcode_data |>
+    reframe(n_zipcodes = n_distinct(zipcode), .by = year)
+
+# Compare to number of zipcodes in HUD crosswalk
+dbGetQuery(con, "select count(distinct zipcode) as n_zipcodes from hud_zip_to_county group by year order by year")
 
 # How many individuals?
 zipcode_data |>
@@ -285,11 +302,226 @@ zipcode_data |>
         scale_fill_viridis_d() +
         theme(legend.position = "bottom")
 
+# Compare zipcode aggregates to state aggregates via HUD crosswalk
+hud_crosswalk <- dbGetQuery(con, "select * from hud_zip_to_county") |>
+    mutate(year = year - 1) # Since you file the year after the tax year
+
+numeric_cols <- zipcode_data |>
+    select(where(is.numeric)) |>
+    names()
+
+value_vars <- setdiff(numeric_cols, c("year", "zipcode", "statefips"))
+
+setdiff(zipcode_data$zipcode, hud_crosswalk$zipcode)
+
+zipcode_data |> 
+    filter(zipcode %in% setdiff(zipcode_data$zipcode, hud_crosswalk$zipcode)) |>
+    View() # The other-totals are quite large, about 3m returns
+
+zip_to_county <- zipcode_data |> 
+    left_join(hud_crosswalk, by = c("zipcode", "year")) |> 
+    filter(!is.na(county) & county != 99999) |> # Not sure what the 99999 counties are
+    group_by(county, year) |>
+    summarise(
+        across(all_of(value_vars), ~ sum(.x * res_ratio, na.rm = TRUE)),
+        .groups = "drop"
+    )
+
+zip_to_state <- zip_to_county |>
+    mutate(statefips = county %/% 1000) |>
+    group_by(statefips, year) |>
+    summarise(
+        across(all_of(value_vars), sum, na.rm = TRUE),
+        .groups = "drop"
+    )
+
+state_returns <- dbGetQuery(con, "select * from returns_state") |>
+    group_by(state, year) |>
+    summarise(
+        across(where(is.numeric), sum, na.rm = TRUE),
+        .groups = "drop"
+    ) |>
+    select(-agi_stub)
+
+zip_v_state <- zip_to_state |>
+    rename(state = statefips) |>
+    left_join(state_returns, by = c("state", "year"), suffix = c("_zip", "_state"))
+
+## Total returns
+zip_v_state |>
+    reframe(
+        state_total = sum(returns_state),
+        zip_total = sum(returns_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(returns_zip ~ returns_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = returns_zip, y = returns_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Returns filed across all years",
+         x = "Returns filed at zipcode level",
+         y = "Returns filed at state level")
+
+## Individuals
+zip_v_state |>
+    reframe(
+        state_total = sum(individuals_state),
+        zip_total = sum(individuals_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(individuals_zip ~ individuals_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = individuals_zip, y = individuals_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Individuals filed across all years",
+         x = "Individuals filed at zipcode level",
+         y = "Individuals filed at state level")
+
+## Itemizers (higher since mostly located in larger zipcodes?)
+zip_v_state |>
+    reframe(
+        state_total = sum(returns_w_items_state),
+        zip_total = sum(returns_w_items_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(returns_w_items_zip ~ returns_w_items_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = returns_w_items_zip, y = returns_w_items_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Number of itemizers across all years",
+         x = "Number of itemizers at zipcode level",
+         y = "Number of itemizers at state level")
+
+## Itemized amount
+zip_v_state |>
+    reframe(
+        state_total = sum(itemized_amount_state),
+        zip_total = sum(itemized_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(itemized_amount_zip ~ itemized_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = itemized_amount_zip, y = itemized_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Itemized amount across all years",
+         x = "Itemized amount at zipcode level",
+         y = "Itemized amount at state level")
+
+## SALT deductions (<4% loss)
+zip_v_state |>
+    reframe(
+        state_total = sum(taxes_paid_amount_state),
+        zip_total = sum(taxes_paid_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(taxes_paid_amount_zip ~ taxes_paid_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = taxes_paid_amount_zip, y = taxes_paid_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "SALT deductions across all years",
+         x = "SALT deductions at zipcode level",
+         y = "SALT deductions at state level")
+
+## State income tax (<7% loss)
+zip_v_state |>
+    reframe(
+        state_total = sum(state_and_local_income_taxes_amount_state),
+        zip_total = sum(state_and_local_income_taxes_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(state_and_local_income_taxes_amount_zip ~ state_and_local_income_taxes_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = state_and_local_income_taxes_amount_zip, y = state_and_local_income_taxes_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "State income tax deductions across all years",
+         x = "State income tax deductions at zipcode level",
+         y = "State income tax deductions at state level")
+
+## State sales tax
+zip_v_state |>
+    reframe(
+        state_total = sum(state_and_local_sales_tax_amount_state),
+        zip_total = sum(state_and_local_sales_tax_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(state_and_local_sales_tax_amount_zip ~ state_and_local_sales_tax_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = state_and_local_sales_tax_amount_zip, y = state_and_local_sales_tax_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "State sales tax deductions across all years",
+         x = "State sales tax deductions at zipcode level",
+         y = "State sales tax deductions at state level")
+
+## Property tax deductions (<2.5% loss)
+zip_v_state |>
+    reframe(
+        state_total = sum(property_taxes_amount_state),
+        zip_total = sum(property_taxes_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(property_taxes_amount_zip ~ property_taxes_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = property_taxes_amount_zip, y = property_taxes_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Property tax deductions across all years",
+         x = "Property tax deductions at zipcode level",
+         y = "Property tax deductions at state level")
+
+## Mortgage interest deductions
+zip_v_state |>
+    reframe(
+        state_total = sum(mortgage_interest_amount_state),
+        zip_total = sum(mortgage_interest_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(mortgage_interest_amount_zip ~ mortgage_interest_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = mortgage_interest_amount_zip, y = mortgage_interest_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Mortgage interest deductions across all years",
+         x = "Mortgage interest deductions at zipcode level",
+         y = "Mortgage interest deductions at state level")
+
+## Charitable contributions deductions
+zip_v_state |>
+    reframe(
+        state_total = sum(charitable_contributions_amount_state),
+        zip_total = sum(charitable_contributions_amount_zip),
+        coverage = zip_total / state_total,
+        .by = year
+    )
+lm(charitable_contributions_amount_zip ~ charitable_contributions_amount_state, data = zip_v_state) |> summary()
+ggplot(zip_v_state, aes(x = charitable_contributions_amount_zip, y = charitable_contributions_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Charitable contributions across all years",
+         x = "Charitable contributions at zipcode level",
+         y = "Charitable contributions at state level")
+
 # Export to database
 dbWriteTable(
     con,
     "returns_zipcode",
-    zipcode_data |> select(-state),
+    zipcode_data,
     overwrite = TRUE
 )
 dbDisconnect(con, shutdown = TRUE)

@@ -12,6 +12,9 @@ library(purrr)
 library(ggplot2)
 library(duckdb)
 
+# Connect to the DuckDB database
+con <- dbConnect(duckdb::duckdb(), dbdir = '../../../data/database.db')
+
 
 # Paths
 county_returns_dir <- "../../../data/SOI/county_returns"
@@ -56,6 +59,7 @@ print(diff_table)
 # Check for required variables across all files
 required_vars <- c(
     "STATEFIPS", "STATE", "COUNTYFIPS", "COUNTYNAME", "AGI_STUB",
+    "MARS1", "MARS2", "MARS4",
     "N1", "N2", "N04470", "A04470", "A00101", "N17000", "A17000", "N18425", "A18425",
     "N18450", "A18450", "N18500", "A18500", "N18800", "A18800",
     "N18460", "A18460", "N18300", "A18300", "N19300", "A19300",
@@ -110,6 +114,9 @@ county_data <- county_returns_selected |>
     rename( 
         returns = N1,
         individuals = N2,
+        single_returns = MARS1,
+        joint_returns = MARS2,
+        head_of_household_returns = MARS4,
         returns_w_items = N04470,
         itemized_amount = A04470,
         agi_for_itemizers = A00101,
@@ -145,6 +152,9 @@ county_data <- county_returns_selected |>
     select(-AGI_STUB, -N21020, -A21020, -N20950, -A20950) |> 
     rename_with(tolower)
 
+county_data <- county_data |>
+    mutate(county = 1000 * statefips + countyfips)
+
 View(county_data)
 
 na_by_year_wide <- county_data |>
@@ -158,6 +168,10 @@ na_by_year_wide <- county_data |>
 
 View(na_by_year_wide)
 
+# Number of counties per year
+county_data |>
+    reframe(total_counties = n_distinct(county), .by = year)
+
 # How many returns are there?
 county_data |> 
     reframe(total_returns = sum(returns), .by = year)
@@ -165,6 +179,17 @@ county_data |>
 # How many "individuals"? -> clearly measuring something different.
 county_data |> 
     reframe(total_individuals = sum(individuals), .by = year)
+
+# All returns vs components
+county_data |>
+    reframe(
+        total_returns = sum(returns),
+        single_returns = sum(single_returns),
+        joint_returns = sum(joint_returns),
+        head_of_household_returns = sum(head_of_household_returns),
+        total = single_returns + joint_returns + head_of_household_returns,
+        .by = year
+    )
 
 # Itemization share over time
 county_data |> 
@@ -233,6 +258,216 @@ county_data |>
 # Other deductions conditional on itemizing 
 county_data |> 
     reframe(avg_other_deductions_deduction = sum(other_deductions_amount) / sum(returns_w_items), .by = year)
+
+# Compare county aggregates to state aggregates
+state_returns <- dbGetQuery(con, "select * from returns_state") |> 
+    group_by(state, year) |>
+    summarise(
+        across(where(is.numeric), sum, na.rm = TRUE),
+        .groups = "drop"
+    ) |> 
+    select(-agi_stub)
+
+county_v_state <- county_data |>
+    group_by(statefips, year) |>
+    summarise(
+        across(where(is.numeric), sum, na.rm = TRUE),
+        .groups = "drop"
+    ) |>
+    rename(state = statefips) |>
+    left_join(state_returns, by = c("state", "year"), suffix = c("_county", "_state"))
+
+## Total returns
+county_v_state |> 
+    reframe(
+        state_total = sum(returns_state),
+        county_total = sum(returns_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(returns_county ~ returns_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = returns_county, y = returns_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Returns filed across all years",
+         x = "Returns filed at county level",
+         y = "Returns filed at state level")
+
+## Individuals
+county_v_state |> 
+    reframe(
+        state_total = sum(individuals_state),
+        county_total = sum(individuals_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(individuals_county ~ individuals_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = individuals_county, y = individuals_state)) +   
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Individuals filed across all years",
+         x = "Individuals filed at county level",
+         y = "Individuals filed at state level")
+
+## Number of itemizers
+county_v_state |> 
+    reframe(
+        state_total = sum(returns_w_items_state),
+        county_total = sum(returns_w_items_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(returns_w_items_county ~ returns_w_items_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = returns_w_items_county, y = returns_w_items_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Number of itemizers across all years",
+         x = "Number of itemizers at county level",
+         y = "Number of itemizers at state level")
+
+## Itemized amount
+county_v_state |> 
+    reframe(
+        state_total = sum(itemized_amount_state),
+        county_total = sum(itemized_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(itemized_amount_county ~ itemized_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = itemized_amount_county, y = itemized_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Itemized amount across all years",
+         x = "Itemized amount at county level",
+         y = "Itemized amount at state level")
+
+## SALT deductions
+county_v_state |> 
+    reframe(
+        state_total = sum(taxes_paid_amount_state),
+        county_total = sum(taxes_paid_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(taxes_paid_amount_county ~ taxes_paid_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = taxes_paid_amount_county, y = taxes_paid_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "SALT deductions across all years",
+         x = "SALT deductions at county level",
+         y = "SALT deductions at state level")
+        
+## State income tax
+county_v_state |> 
+    reframe(
+        state_total = sum(state_and_local_income_taxes_amount_state),
+        county_total = sum(state_and_local_income_taxes_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(state_and_local_income_taxes_amount_county ~ state_and_local_income_taxes_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = state_and_local_income_taxes_amount_county, y = state_and_local_income_taxes_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "State income tax deductions across all years",
+         x = "State income tax deductions at county level",
+         y = "State income tax deductions at state level")
+        
+## State sales tax
+county_v_state |> 
+    reframe(
+        state_total = sum(state_and_local_sales_tax_amount_state),
+        county_total = sum(state_and_local_sales_tax_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(state_and_local_sales_tax_amount_county ~ state_and_local_sales_tax_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = state_and_local_sales_tax_amount_county, y = state_and_local_sales_tax_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "State sales tax deductions across all years",
+         x = "State sales tax deductions at county level",
+         y = "State sales tax deductions at state level")
+
+## Property tax deductions
+county_v_state |> 
+    reframe(
+        state_total = sum(property_taxes_amount_state),
+        county_total = sum(property_taxes_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(property_taxes_amount_county ~ property_taxes_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = property_taxes_amount_county, y = property_taxes_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Property tax deductions across all years",
+         x = "Property tax deductions at county level",
+         y = "Property tax deductions at state level")
+
+## Mortgage interest deductions
+county_v_state |> 
+    reframe(
+        state_total = sum(mortgage_interest_amount_state),
+        county_total = sum(mortgage_interest_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(mortgage_interest_amount_county ~ mortgage_interest_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = mortgage_interest_amount_county, y = mortgage_interest_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Mortgage interest deductions across all years",
+         x = "Mortgage interest deductions at county level",
+         y = "Mortgage interest deductions at state level")
+
+## Charitable contributions deductions
+county_v_state |> 
+    reframe(
+        state_total = sum(charitable_contributions_amount_state),
+        county_total = sum(charitable_contributions_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+lm(charitable_contributions_amount_county ~ charitable_contributions_amount_state, data = county_v_state) |> summary()
+ggplot(county_v_state, aes(x = charitable_contributions_amount_county, y = charitable_contributions_amount_state)) +
+    geom_point() +
+    geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(title = "Charitable contributions deductions across all years",
+         x = "Charitable contributions deductions at county level",
+         y = "Charitable contributions deductions at state level")
+
+## Other deductions - no idea why this is higher in counties! Must be some 
+## subcategories are suppressed in counties but not states...
+county_v_state |> 
+    reframe(
+        state_total = sum(itemized_amount_state) - sum(taxes_paid_amount_state) - sum(mortgage_interest_amount_state) - sum(charitable_contributions_amount_state),
+        county_total = sum(itemized_amount_county) - sum(taxes_paid_amount_county) - sum(mortgage_interest_amount_county) - sum(charitable_contributions_amount_county),
+        coverage = county_total / state_total,
+        .by = year
+    ) 
+         
+         
+         
+         
+         
+
+
+
+
+
+
+
 
 # Split up deductions over time, splitting total deductions into 
 # salt taxes, mortgage interest, charitable contributions, and the residual
@@ -308,16 +543,20 @@ county_data |>
 
 # Export to database
 
-# Connect to the DuckDB database
-con <- dbConnect(duckdb::duckdb(), dbdir = '../../../data/database.db')
+# Clean up string names to utf8
+county_data <- county_data |>
+    mutate(countyname = iconv(countyname, "latin1", "UTF-8"))
 
 # Export county_data to the database as a table named 'county_data'
 dbWriteTable(
     con, 
     "returns_county", 
-    county_data |> select(-state, -countyname), 
-    overwrite = TRUE)
+    county_data, 
+    overwrite = TRUE
+)
 
+# Summarize
+dbGetQuery(con, "summarize returns_county") |> View()
 # Disconnect from the database
 dbDisconnect(con, shutdown = TRUE)
 

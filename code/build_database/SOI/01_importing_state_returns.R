@@ -97,6 +97,7 @@ print(diff_table)
 # Check for required variables across all files
 required_vars <- c(
     "STATE", "AGI_STUB",
+    "MARS1", "MARS2", "MARS4",
     "N1", "N2", "N04470", "A04470",
     "N17000", "A17000",
     "N18425", "A18425", "N18450", "A18450",
@@ -151,6 +152,9 @@ state_returns <- state_returns_selected |>
     rename( 
         returns = N1,
         individuals = N2,
+        single_returns = MARS1,
+        joint_returns = MARS2,
+        head_of_household_returns = MARS4,
         returns_w_items = N04470,
         itemized_amount = A04470,
         medical_expenses_returns = N17000,
@@ -187,6 +191,10 @@ state_returns <- state_returns_selected |>
 
 View(state_returns)
 
+# States per year
+state_returns |>
+    reframe(total_states = n_distinct(state), .by = year)
+
 # Filers over time
 state_returns |>
     reframe(total_returns = sum(returns), .by = year)
@@ -194,6 +202,17 @@ state_returns |>
 # Individuals over time
 state_returns |>
     reframe(total_individuals = sum(individuals), .by = year)
+
+# All returns vs components
+state_returns |>
+    reframe(
+        total_returns = sum(returns),
+        single_returns = sum(single_returns),
+        joint_returns = sum(joint_returns),
+        head_of_household_returns = sum(head_of_household_returns),
+        total = single_returns + joint_returns + head_of_household_returns,
+        .by = year
+    )
 
 # Itemization share over time by agi
 state_returns |>
@@ -285,13 +304,25 @@ state_returns |>
         names_to = "deduction_type",
         values_to = "amount_millions"
     ) |>
+    mutate(deduction_type = factor(deduction_type, levels = c("other_deductions", "mortgage_interest", "charitable_contributions", "salt_taxes"))) |>
+    arrange(deduction_type) |>
     ggplot(aes(x = year, y = amount_millions, group = deduction_type, fill = deduction_type)) +
         geom_bar(stat = "identity") +
-        labs(title = "Deductions by Year", x = "Year", y = "Deductions (Millions)") +
+        labs(title = "Deductions by Year", x = "Year", y = "Deductions (Bn)") +
         theme_classic() +
         scale_x_continuous(breaks = unique(state_returns$year)) +
-        scale_fill_viridis_d() +
-        theme(legend.position = "bottom")
+        theme(legend.position = "bottom") +
+        guides(fill = guide_legend(title = "Deductions by type (SOI)")) +
+        scale_fill_manual(
+            values = viridisLite::viridis(4),
+            breaks = c("salt_taxes", "mortgage_interest", "charitable_contributions", "other_deductions"),
+            labels = c(
+                "SALT Taxes",
+                "Mortgage Interest",
+                "Charitable Contributions",
+                "Other Deductions"
+            )
+        )
 
 # Repeat exercise per filer
 state_returns |>
