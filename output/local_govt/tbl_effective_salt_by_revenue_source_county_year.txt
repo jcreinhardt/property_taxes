@@ -1,0 +1,67 @@
+                            source_model_fits$pro.. source_model_fits$f..
+Dependent Var.:             asinh(property_tax_rev) asinh(federal_ig_rev)
+                                                                         
+exposure_1718 x year = 2012        -0.0006 (0.0055)      0.0877. (0.0459)
+exposure_1718 x year = 2013        -0.0030 (0.0050)       0.0014 (0.0443)
+exposure_1718 x year = 2014         0.0028 (0.0049)       0.0293 (0.0418)
+exposure_1718 x year = 2015         0.0059 (0.0045)      0.0725. (0.0376)
+exposure_1718 x year = 2016         0.0010 (0.0048)      0.0532. (0.0321)
+exposure_1718 x year = 2018       -0.0094* (0.0044)      -0.0388 (0.0367)
+exposure_1718 x year = 2019        -0.0072 (0.0052)      -0.0027 (0.0338)
+exposure_1718 x year = 2020       -0.0118* (0.0054)      -0.0275 (0.0383)
+exposure_1718 x year = 2021        -0.0094 (0.0059)    -0.1452** (0.0456)
+exposure_1718 x year = 2022        -0.0054 (0.0068)      -0.0554 (0.0515)
+Fixed-Effects:              ----------------------- ---------------------
+county_fips                                     Yes                   Yes
+year                                            Yes                   Yes
+___________________________ _______________________ _____________________
+S.E.: Clustered                     by: county_fips       by: county_fips
+Observations                                 23,836                23,951
+R2                                          0.97353               0.78002
+Within R2                                   0.00044               0.00128
+
+                            source_model_fits.. source_model_fits...1
+Dependent Var.:             asinh(state_ig_rev)   asinh(local_ig_rev)
+                                                                     
+exposure_1718 x year = 2012     0.0264 (0.0185)      0.1063* (0.0485)
+exposure_1718 x year = 2013     0.0031 (0.0161)       0.0377 (0.0500)
+exposure_1718 x year = 2014    -0.0048 (0.0151)       0.0555 (0.0466)
+exposure_1718 x year = 2015     0.0095 (0.0146)      0.0860. (0.0455)
+exposure_1718 x year = 2016   -0.0250. (0.0148)      0.0656. (0.0394)
+exposure_1718 x year = 2018  -0.0391** (0.0136)      -0.0294 (0.0337)
+exposure_1718 x year = 2019  -0.0516** (0.0159)      -0.0093 (0.0389)
+exposure_1718 x year = 2020   -0.0332. (0.0189)      -0.0595 (0.0433)
+exposure_1718 x year = 2021     0.0136 (0.0231)       0.0417 (0.0461)
+exposure_1718 x year = 2022  -0.0664** (0.0209)       0.0093 (0.0452)
+Fixed-Effects:              -------------------   -------------------
+county_fips                                 Yes                   Yes
+year                                        Yes                   Yes
+___________________________ ___________________   ___________________
+S.E.: Clustered                 by: county_fips       by: county_fips
+Observations                             23,951                23,951
+R2                                      0.84941               0.79014
+Within R2                               0.00123               0.00081
+
+                            source_model_fits$oth..
+Dependent Var.:             asinh(other_own_source)
+                                                   
+exposure_1718 x year = 2012      0.0786*** (0.0223)
+exposure_1718 x year = 2013        0.0478* (0.0217)
+exposure_1718 x year = 2014        0.0490* (0.0214)
+exposure_1718 x year = 2015      0.0738*** (0.0188)
+exposure_1718 x year = 2016        0.0427* (0.0182)
+exposure_1718 x year = 2018         0.0202 (0.0169)
+exposure_1718 x year = 2019       -0.0472* (0.0194)
+exposure_1718 x year = 2020       -0.0515* (0.0210)
+exposure_1718 x year = 2021        -0.0120 (0.0213)
+exposure_1718 x year = 2022       -0.0520* (0.0224)
+Fixed-Effects:              -----------------------
+county_fips                                     Yes
+year                                            Yes
+___________________________ _______________________
+S.E.: Clustered                     by: county_fips
+Observations                                 23,951
+R2                                          0.83356
+Within R2                                   0.00352
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

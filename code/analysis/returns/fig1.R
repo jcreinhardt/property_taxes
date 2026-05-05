@@ -39,9 +39,9 @@ state_returns |>
             "share_property_taxes" = "#eb811b"
         ),
         labels = c(
-            "share_itemizers" = "Itemized",
-            "share_state_income_taxes" = "Income Tax",
-            "share_property_taxes" = "Property Tax"
+            "share_itemizers" = "Any itemized deductions",
+            "share_state_income_taxes" = "Deducting State Income Tax",
+            "share_property_taxes" = "Deducting Property Tax"
         )
     ) +
     labs(

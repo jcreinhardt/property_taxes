@@ -1,0 +1,5 @@
+{
+    "editor.inlineSuggest.enabled": false,
+    "cursorpyright.analysis.autoImportCompletions": false,
+    "accessibility.verbosity.inlineCompletions": false
+}

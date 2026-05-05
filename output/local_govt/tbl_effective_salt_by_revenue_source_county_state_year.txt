@@ -1,0 +1,45 @@
+                            source_model_fits$pro.. source_model_fits$f..
+Dependent Var.:             log1p(property_tax_rev) log1p(federal_ig_rev)
+                                                                         
+exposure_1718 x year = 2012         0.0017 (0.0064)       0.0859 (0.0596)
+exposure_1718 x year = 2013         0.0068 (0.0055)      -0.0069 (0.0539)
+exposure_1718 x year = 2014        0.0121* (0.0056)       0.0806 (0.0506)
+exposure_1718 x year = 2015         0.0069 (0.0054)      0.0778. (0.0460)
+exposure_1718 x year = 2016         0.0028 (0.0043)      0.0930* (0.0394)
+exposure_1718 x year = 2018        -0.0050 (0.0056)      -0.0140 (0.0426)
+exposure_1718 x year = 2019       -0.0103. (0.0055)      -0.0396 (0.0415)
+exposure_1718 x year = 2020      -0.0215** (0.0071)      -0.0688 (0.0469)
+exposure_1718 x year = 2021       -0.0191* (0.0077)     -0.1088. (0.0564)
+exposure_1718 x year = 2022       -0.0168. (0.0088)      -0.1008 (0.0661)
+Fixed-Effects:              ----------------------- ---------------------
+county_fips                                     Yes                   Yes
+state_fips-year                                 Yes                   Yes
+___________________________ _______________________ _____________________
+S.E.: Clustered                     by: county_fips       by: county_fips
+Observations                                 23,836                23,951
+R2                                          0.97527               0.80105
+Within R2                                   0.00109               0.00123
+
+                            source_model_fits..
+Dependent Var.:             log1p(state_ig_rev)
+                                               
+exposure_1718 x year = 2012    0.0398* (0.0199)
+exposure_1718 x year = 2013     0.0217 (0.0202)
+exposure_1718 x year = 2014     0.0047 (0.0198)
+exposure_1718 x year = 2015     0.0105 (0.0184)
+exposure_1718 x year = 2016    -0.0017 (0.0177)
+exposure_1718 x year = 2018     0.0090 (0.0150)
+exposure_1718 x year = 2019    -0.0149 (0.0171)
+exposure_1718 x year = 2020    -0.0082 (0.0256)
+exposure_1718 x year = 2021     0.0190 (0.0295)
+exposure_1718 x year = 2022    -0.0360 (0.0248)
+Fixed-Effects:              -------------------
+county_fips                                 Yes
+state_fips-year                             Yes
+___________________________ ___________________
+S.E.: Clustered                 by: county_fips
+Observations                             23,951
+R2                                      0.87070
+Within R2                               0.00040
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
