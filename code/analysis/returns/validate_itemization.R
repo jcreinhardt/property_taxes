@@ -239,5 +239,8 @@ p_time <- ggplot(time_comp, aes(year, itemize_rate, color = source, linetype = s
   theme(legend.position = "bottom")
 
 print(p_time)
+ggsave("../../output/Cormac/validate_itemize_time.png", p_time, width = 8, height = 5, dpi = 150)
 print(p_state)
+ggsave("../../output/Cormac/validate_itemize_state.png", p_state, width = 7, height = 7, dpi = 150)
 print(p_county)
+ggsave("../../output/Cormac/validate_itemize_county.png", p_county, width = 7, height = 7, dpi = 150)

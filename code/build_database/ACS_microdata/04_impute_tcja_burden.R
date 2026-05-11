@@ -43,14 +43,14 @@ heads <- dbGetQuery(con, "
     imp_stateinctax,
     imp_itemizable_2017,
     imp_itemizable_2018,
-    imp_std_deduction_2017,
-    imp_std_deduction_2018,
+    std_deduction_2017,
+    std_deduction_2018,
     imp_itemizes_2017,
     imp_itemizes_2018
   FROM acs_microdata
   WHERE pernum = 1
     AND gq IN (1, 2, 5)
-    AND year BETWEEN 2013 AND 2023
+    AND year BETWEEN 2011 AND 2023
 ") |> as_tibble()
 
 message(sprintf("Pulled %d household heads", nrow(heads)))
@@ -66,7 +66,7 @@ spouse_wages <- dbGetQuery(con, "
   FROM acs_microdata
   WHERE relate = 2
     AND gq IN (1, 2, 5)
-    AND year BETWEEN 2013 AND 2023
+    AND year BETWEEN 2011 AND 2023
 ") |> as_tibble()
 
 spouse_wages <- spouse_wages |>
@@ -102,8 +102,8 @@ message("Computing deduction changes (Part a)...")
 
 heads <- heads |>
   mutate(
-    imp_deduction_2017  = pmax(coalesce(imp_itemizable_2017, 0), imp_std_deduction_2017),
-    imp_deduction_2018  = pmax(coalesce(imp_itemizable_2018, 0), imp_std_deduction_2018),
+    imp_deduction_2017  = pmax(coalesce(imp_itemizable_2017, 0), std_deduction_2017),
+    imp_deduction_2018  = pmax(coalesce(imp_itemizable_2018, 0), std_deduction_2018),
     imp_delta_deduction = imp_deduction_2018 - imp_deduction_2017,
 
     # Property tax deduction: pre-TCJA full if itemizing; post-TCJA up to headroom
@@ -113,10 +113,11 @@ heads <- heads |>
                                0),
     imp_delta_proptx_ded   = proptx_ded_2018 - proptx_ded_2017,
 
-    # State income tax deduction: symmetric headroom logic
+    # State income tax deduction: sinctax has priority claim on the $10k SALT cap;
+    # proptx gets whatever headroom remains (already computed correctly above).
     sinctax_ded_2017         = if_else(coalesce(imp_itemizes_2017, 0L) == 1L, coalesce(imp_stateinctax, 0), 0),
     sinctax_ded_2018         = if_else(coalesce(imp_itemizes_2018, 0L) == 1L,
-                                 pmin(coalesce(imp_stateinctax, 0), pmax(0, 10000 - coalesce(imp_proptx, 0))),
+                                 pmin(coalesce(imp_stateinctax, 0), 10000),
                                  0),
     imp_delta_stateinctax_ded = sinctax_ded_2018 - sinctax_ded_2017
   ) |>

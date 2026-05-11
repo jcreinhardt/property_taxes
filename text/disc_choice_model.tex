@@ -1,0 +1,81 @@
+\documentclass[fleqn,10pt]{olplainarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% Use option lineno for line numbers 
+
+\title{Example Article Title}
+
+\author[1]{Jakob Reinhardt}
+\affil[1]{Yale University}
+
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+\flushbottom
+\thispagestyle{empty}
+
+\subsection*{Setup}
+\subsubsection*{Households}
+ 
+A metropolitan area is populated by a unit mass of households indexed by $i$, each with income $y_i$ and a vector of observed demographics $z_i$ (presence of school-age children, age of head, household size, etc.). Households are distributed according to a joint distribution $F(y, z)$.\\
+ 
+Each household chooses from a set of $J$ jurisdictions to reside. Following Ruggieri (2025), Busso, Gregory \& Kline (2013), and Gaubert et al. (2025), per-household housing demand is \textbf{inelastic}, $h_i = 1$ for all $i$. Each resident of jurisdiction $j$ rents one unit of housing services at the gross rental rate $p_j$, with the numeraire $x_i$ absorbing residual income.\\
+ 
+The utility of household $i$ from residing in jurisdiction $j$ takes the log-additive form:
+$$U_{ij} \;=\; \alpha_i \, \log g_j \;+\; \gamma_i \, \log x_i \;+\; A_j \;+\; \varepsilon_{ij},$$
+subject to $x_i + p_j = Y_i$, where $g_j$ is per-household local public-good provision in jurisdiction $j$; $\alpha_i = \alpha(z_i)$ and $\gamma_i = \gamma(z_i)$ are taste coefficients shifted by observable demographics; $A_j$ is an unobserved jurisdiction ``amenity'' (climate, distance to coast, crime, etc.); $\varepsilon_{ij}$ is an idiosyncratic taste shock, drawn iid across $(i, j)$ from a Gumbel distribution with scale parameter $\theta$.\\
+ 
+Substituting the budget constraint delivers the indirect utility
+
+$$V_{ij} \;=\; \underbrace{\alpha(z_i) \log g_j \;+\; \gamma(z_i) \log\!\left[Y_i - p_j\right] \;+\; A_j}_{\equiv \, v_{ij}} \;+\; \varepsilon_{ij},$$
+
+and the Gumbel assumption yields a closed-form logit choice probability:
+ 
+$$\Pr(\text{$i$ chooses $j$}) \;=\; \frac{\exp\!\big[(v_{ij} + \xi_j)/\theta\big]}{\sum_{k=1}^{J} \exp\!\big[(v_{ik} + \xi_k)/\theta\big]}.$$
+ 
+
+\subsubsection*{Housing Supply}
+ 
+In each jurisdiction, housing services are supplied competitively by construction firms. Land is a fixed input that combines with elastically supplied non-land factors (labor, materials), generating decreasing returns to scale and an upward-sloping supply curve $H_s^j(p_s^j)$, where $p_s^j$ is the supplier (net-of-tax) price.\\
+ 
+For now we adopt the constant-elasticity functional form of Ruggieri (2025):
+ 
+$$\log H_s^j(p_s^j) \;=\; \lambda \;+\; \eta \log p_s^j \;+\; B_j,$$
+ 
+where $\eta > 0$ is the elasticity of housing supply, $\lambda$ is a constant, and $B_j$ is a jurisdiction-specific productivity shifter capturing geography, regulation, or local construction technology. Absentee landowners receive the supplier price $p_s^j$ per unit and earn positive rents because the equilibrium price exceeds marginal cost on inframarginal units.\\
+ 
+\subsubsection*{Property Taxes and Budget Balance}
+ 
+Each jurisdiction $j$ levies a property tax at an exogenously given rate $t_j \geq 0$ on housing services. Households pay the gross rental rate
+ 
+$$p_j \;=\; (1 + t_j)\, p_s^j,$$
+ 
+while suppliers receive only $p_s^j$. Total revenue collected in jurisdiction $j$ is $\tau_j \cdot N_j$, and under full congestion of the local public good, jurisdictional budget balance pins down per-household provision:
+ 
+$$g_j \;=\; \tau_j \;=\; t_j \, p_s^j \;=\; p_j - p_s^j.$$
+ 
+Per-household public-good provision exactly equals the per-household property-tax payment.
+ 
+\subsection*{Equilibrium}
+ 
+Given a vector of exogenous tax rates $\mathbf{t} = (t_1, \ldots, t_J)$, an equilibrium consists of supplier prices $\{p_s^j\}$, gross prices $\{p_j\}$, public-good levels $\{g_j\}$, jurisdiction populations $\{N_j\}$, and household choice probabilities, such that:
+\begin{enumerate}
+    \item For each $j$, $$p_j \;=\; (1 + t_j)\, p_s^j.$$
+    \item Location choices are optimal, implying $$\Pr(\text{$i$ chooses $j$}) \;=\; \frac{\exp\!\big[(v_{ij} + \xi_j)/\theta\big]}{\sum_{k=1}^{J} \exp\!\big[(v_{ik} + \xi_k)/\theta\big]}.$$
+    \item  Jurisdiction $j$'s aggregate housing demand equals its population, and the supplier price is pinned down by $$H_s^j(p_s^j) \;=\; N_j, \qquad N_j \;=\; \int \Pr(\text{$i$ chooses $j$}) \, dF(Y_i, z_i).$$
+    \item For each $j$, $$g_j \;=\; t_j \, p_s^j.$$
+\end{enumerate}
+ 
+The four conditions jointly determine the equilibrium values $\{p_s^j, p_j, g_j, N_j\}$ as a fixed point: choice probabilities depend on $(p_j, g_j)$ through $v_{ij}$; populations $N_j$ aggregate these probabilities; populations and the housing supply curve pin down $p_s^j$; and budget balance closes the system.
+ 
+\subsection*{Open Questions}
+\begin{enumerate}
+    \item Inelastic housing demand implies property taxes are effectively poll taxes. We don't get the freeriding inefficiency mechanism from the fiscal federalism literature, hence there is no inefficiency that a potential salt deduction can compensate for.
+    \item Inelastic housing demand implies the tax incidence falls fully on land owners - might skew the distributional implications that I'll get from evaluating the policy?
+    \item Instruments? SALT deduction change could work in a dynamic setup if you assume "amenities" are time-invariant.
+    \item Dropping the local political economy channel implies I don't get the revenue adjustment effects that I observe in the data.
+\end{enumerate}
+ 
+
+\end{document}

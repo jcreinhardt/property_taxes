@@ -329,6 +329,7 @@ heads_lasso <- dbGetQuery(con, "
     WHERE pernum = 1 AND gq IN (1, 2, 5) AND migrate1 != 0
       AND imp_salt IS NOT NULL AND hhincome != 9999999
       AND year BETWEEN 2013 AND 2023
+      AND random() < .1
 ") |>
     as_tibble() |>
     mutate(
@@ -824,6 +825,7 @@ item_data <- dbGetQuery(con, "
     SELECT
         year,
         CASE WHEN migrate1 IN (2,3,4) THEN 1 ELSE 0 END AS mover,
+        migrate1,
         imp_itemizes_2017,
         CAST(imp_itemizable_2017 AS DOUBLE)              AS imp_itemizable_2017,
         CAST(imp_itemizable_2018 AS DOUBLE)              AS imp_itemizable_2018,
@@ -833,12 +835,13 @@ item_data <- dbGetQuery(con, "
             WHEN marst != 1 AND nchild > 0 THEN 18000
             ELSE                                12000
         END                                              AS tcja_std_ded,
-        age, sex, marst, race, hispan, educ, metro, statefip, multgen
+        age, sex, marst, nchild, race, hispan, educ, metro, statefip, multgen
     FROM acs_microdata
     WHERE pernum = 1 AND gq IN (1, 2, 5) AND migrate1 != 0
       AND imp_itemizes_2017    IS NOT NULL
       AND imp_itemizable_2018  IS NOT NULL
       AND year BETWEEN 2012 AND 2023
+      AND random() < .1
 ") |>
     as_tibble() |>
     mutate(
@@ -848,6 +851,11 @@ item_data <- dbGetQuery(con, "
             imp_itemizes_2017 == 1L & tcja_itemizes == 0L ~ "Stopped itemizing (TCJA)",
             imp_itemizes_2017 == 0L                        ~ "Never itemized"
         ) |> factor(levels = c("Never itemized", "Stopped itemizing (TCJA)", "Always itemized")),
+        fstatus = case_when(
+            marst == 1L               ~ "MFJ",
+            marst != 1L & nchild > 0L ~ "HoH",
+            TRUE                       ~ "Single"
+        ) |> factor(levels = c("MFJ", "HoH", "Single")),
         across(c(sex, marst, race, hispan, educ, metro, multgen, statefip), factor)
     ) |>
     na.omit()
@@ -871,7 +879,7 @@ print(
 # OOB predictions avoid in-sample overfitting.
 rf_fit <- ranger(
     mover ~ age + sex + marst + race + hispan + educ + metro + multgen,
-    data      = item_data,
+    data      = item_data |> filter(year %in% 2012:2017),
     num.trees = 500,
     seed      = 42
 )
@@ -881,7 +889,7 @@ item_data <- item_data |>
 
 # Step 2: group × year cell means with HC1-robust SEs via a saturated feols.
 cell_fit <- feols(
-    adj_mover ~ 0 + group:factor(year),
+    adj_mover ~ 0 + group:factor(year) | statefip^year,
     data   = item_data,
     vcov   = "HC1"
 )
@@ -935,79 +943,96 @@ ggplot(mover_by_group_year,
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
+ggsave("../../../output/Cormac/10a_moving_rates_by_group.png", last_plot(), width = 8, height = 5, dpi = 150)
 
 ########################################################
-# 10b. Moving rates by proximity to TCJA itemization threshold (MFJ)
+# 10b. Event study: moving rates by itemization group (TWFE)
 ########################################################
 
-# For married filing jointly households (fixed $24k TCJA standard deduction),
-# we stratify by how close their post-TCJA itemizable total is to the
-# new threshold: ratio = imp_itemizable_2018 / 24000.
-# Bands straddle the cutoff at 1.0:
-#   < 1.0 → does not itemize under TCJA
-#   ≥ 1.0 → still itemizes under TCJA
-# Households near but below 1.0 are the marginal stopped-itemizers;
-# those near but above are the marginal survivors.
+# Two separate TWFE event studies vs. "Never itemized" (untreated control):
+#   - "Always itemized"          (treat_always)
+#   - "Stopped itemizing (TCJA)" / compliers (treat_stopped)
+# Reference year = 2017. Controls: age, sex, marst, race, hispan, educ,
+# metro, multgen. FE: year + statefip. Clustered SEs by state.
+# item_data already in memory from Section 10 (10% sample, 2012–2023).
 
-band_levels <- c("< 60%", "60-80%", "80-100%", "100-120%", "120-140%", "140-160%", "> 160%")
+run_group_es <- function(treat_label, fs, data) {
+    # Restrict never-itemizers to the 10% closest to the 2017 itemization
+    # threshold within the same filing status: gap = std_ded_2017 - imp_itemizable_2017.
+    # Computed separately per fstatus so MFJ, HoH, and Single each contribute
+    # a near-threshold control group appropriate to their own standard deduction.
+    std_ded_2017 <- c(MFJ = 12700, HoH = 9350, Single = 6350)
 
-thresh_data <- item_data |>
-    filter(marst == "1") |>
-    mutate(
-        ratio = imp_itemizable_2018 / 24000,
-        band  = case_when(
-            ratio <  0.6 ~ "< 60%",
-            ratio <  0.8 ~ "60-80%",
-            ratio <  1.0 ~ "80-100%",
-            ratio <  1.2 ~ "100-120%",
-            ratio <  1.4 ~ "120-140%",
-            ratio <  1.6 ~ "140-160%",
-            TRUE         ~ "> 160%"
-        ) |> factor(levels = band_levels)
+    never_close <- data |>
+        filter(group == "Never itemized", fstatus == fs) |>
+        mutate(gap_2017 = std_ded_2017[as.character(fstatus)] - imp_itemizable_2017) |>
+        filter(gap_2017 <= quantile(gap_2017, 0.10, na.rm = TRUE))
+
+    dat <- bind_rows(never_close, data |> filter(group == treat_label, fstatus == fs)) |>
+        mutate(treated = as.integer(group == treat_label))
+    feols(
+        mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
+            hispan + educ + metro + multgen | year + statefip,
+        data = dat, vcov = ~statefip
     )
+}
 
-cat("\nMFJ threshold-proximity band sizes:\n")
-print(thresh_data |> count(band) |> mutate(pct = round(100 * n / sum(n), 1)))
+treat_labels <- c("Always itemized", "Stopped itemizing (TCJA)")
+fstatuses    <- c("MFJ", "HoH", "Single")
 
-cell_fit_thresh <- feols(
-    mover ~ 0 + band:factor(year),
-    data = thresh_data,
-    vcov = "HC1"
+es_group_results <- bind_rows(lapply(fstatuses, function(fs) {
+    bind_rows(lapply(treat_labels, function(tl) {
+        fit <- run_group_es(tl, fs, item_data)
+        tidy(fit) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year  = as.integer(str_extract(term, "\\d{4}")),
+                   group = tl, fstatus = fs)
+    }))
+})) |>
+    bind_rows(
+        expand.grid(year = 2017L, estimate = 0, std.error = 0,
+                    group   = treat_labels,
+                    fstatus = fstatuses,
+                    stringsAsFactors = FALSE)
+    ) |>
+    mutate(
+        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        fstatus = factor(fstatus, levels = fstatuses),
+        ci_lo   = estimate - 1.96 * std.error,
+        ci_hi   = estimate + 1.96 * std.error
+    ) |>
+    arrange(fstatus, group, year)
+
+es_group_colors <- c(
+    "Always itemized"          = "#4a7c82",
+    "Stopped itemizing (TCJA)" = "#c06028"
 )
 
-thresh_mover <- tidy(cell_fit_thresh) |>
-    mutate(
-        year = as.integer(str_extract(term, "\\d{4}")),
-        band = str_remove(term, "^band") |>
-                   str_remove(":factor\\(year\\)\\d{4}") |>
-                   factor(levels = band_levels)
-    ) |>
-    select(band, year, share_movers = estimate, se = std.error)
-
-ggplot(thresh_mover, aes(year, share_movers, color = band, fill = band, group = band)) +
-    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey60") +
-    geom_ribbon(aes(ymin = share_movers - 1.96 * se,
-                    ymax = share_movers + 1.96 * se),
-                alpha = 0.12, color = NA) +
+ggplot(es_group_results,
+       aes(year, estimate, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
     geom_line(linewidth = 0.9) +
     geom_point(size = 2) +
-    annotate("text", x = 2017.7, y = Inf, label = "TCJA",
-             vjust = 1.5, hjust = 0, color = "grey40", size = 3.5) +
-    scale_x_continuous(breaks = 2012:2023) +
-    scale_y_continuous(labels = scales::percent_format(1)) +
+    facet_wrap(~ fstatus, ncol = 3) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = es_group_colors, name = NULL) +
+    scale_fill_manual(values  = es_group_colors, name = NULL) +
     labs(
         x        = NULL,
-        y        = "Share of household heads who moved",
-        title    = "Moving rates by proximity to TCJA itemization threshold (MFJ)",
-        subtitle = "Ratio = TCJA itemizable total / $24k standard deduction; bands straddle cutoff at 100%",
-        color    = NULL,
-        fill     = NULL
+        y        = "Additional probability of moving (pp)",
+        title    = "Event study: moving rates by itemization group and filing status",
+        subtitle = "vs. nearest 10% of never-itemizers by filing status; ref = 2017; controls + year + state FE; clustered by state"
     ) +
     theme(
         panel.background  = element_rect(fill = "#fafafa", color = NA),
         plot.background   = element_rect(fill = "#fafafa", color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
         legend.background = element_rect(fill = "#fafafa", color = NA),
@@ -1017,195 +1042,1225 @@ ggplot(thresh_mover, aes(year, share_movers, color = band, fill = band, group = 
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
+ggsave("../../../output/Cormac/10b_event_study.png", last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
-# 10c. Move rate by pre-TCJA itemizable total (MFJ, $3k bins)
+# 10c. Event study by filing status: asymmetric matched controls
+#       - Compliers vs. nearest 10% of never-itemizers (2017 threshold)
+#       - Always-itemizers vs. nearest 10% of compliers (TCJA threshold)
 ########################################################
 
-# For MFJ households, the TCJA raised the standard deduction from $12.7k to
-# $24k. Anyone with imp_itemizable_2017 in [$12.7k, $24k] was a pre-TCJA
-# itemizer who stopped after TCJA (the standard deduction strictly dominates
-# their capped post-TCJA itemizable). We bin by imp_itemizable_2017 in $3k
-# increments to see (a) how move rates vary around the $24k threshold and
-# (b) how itemization groups map to bins (sanity check).
+# run_matched_es: generic version of run_group_es where both the control group
+# label and the gap variable/threshold can vary.
+# gap_col:   column name of the itemizable total used to measure proximity
+# threshold: the filing-status-specific standard deduction to gap against
+run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, data) {
+    control_close <- data |>
+        filter(group == control_label, fstatus == fs) |>
+        mutate(gap = threshold - .data[[gap_col]]) |>
+        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
 
-BIN_W        <- 3000
-MFJ_STD_2017 <- 12700
-MFJ_STD_2018 <- 24000
-BIN_MAX      <- 45000
+    dat <- bind_rows(control_close, data |> filter(group == treat_label, fstatus == fs)) |>
+        mutate(treated = as.integer(group == treat_label))
 
-mfj_data <- item_data |>
-    filter(marst == "1") |>
-    mutate(
-        bin_start = floor(imp_itemizable_2017 / BIN_W) * BIN_W,
-        bin_mid   = bin_start + BIN_W / 2,
-        period    = if_else(year >= 2018, "Post-TCJA (2018–2023)", "Pre-TCJA (2012–2017)") |>
-                    factor(levels = c("Pre-TCJA (2012–2017)", "Post-TCJA (2018–2023)"))
+    feols(
+        mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
+            hispan + educ + metro + multgen | year + statefip,
+        data = dat, vcov = ~statefip
+    )
+}
+
+std_ded_2017_map <- c(MFJ = 12700, HoH = 9350, Single = 6350)
+tcja_std_ded_map <- c(MFJ = 24000, HoH = 18000, Single = 12000)
+
+es_10c_results <- bind_rows(lapply(fstatuses, function(fs) {
+    bind_rows(
+        tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
+                            "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data)) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Stopped itemizing (TCJA)", fstatus = fs),
+        tidy(run_matched_es("Always itemized", "Stopped itemizing (TCJA)",
+                            "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data)) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Always itemized", fstatus = fs)
+    )
+})) |>
+    bind_rows(
+        expand.grid(year = 2017L, estimate = 0, std.error = 0,
+                    group   = treat_labels,
+                    fstatus = fstatuses,
+                    stringsAsFactors = FALSE)
     ) |>
-    filter(bin_start >= 0, bin_start <= BIN_MAX)
+    mutate(
+        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        fstatus = factor(fstatus, levels = fstatuses),
+        ci_lo   = estimate - 1.96 * std.error,
+        ci_hi   = estimate + 1.96 * std.error
+    ) |>
+    arrange(fstatus, group, year)
 
-period_colors_2 <- c(
-    "Pre-TCJA (2012–2017)"  = "#4a7c82",
-    "Post-TCJA (2018–2023)" = "#c06028"
-)
-
-# (a) Move rate by bin × period
-mfj_mover <- mfj_data |>
-    group_by(period, bin_start, bin_mid) |>
-    summarise(
-        share_movers = mean(mover),
-        se           = sqrt(share_movers * (1 - share_movers) / n()),
-        n            = n(),
-        .groups      = "drop"
-    )
-
-ggplot(mfj_mover, aes(bin_mid, share_movers, color = period, fill = period, group = period)) +
-    geom_vline(xintercept = MFJ_STD_2017, linetype = "dotted", color = "grey50") +
-    geom_vline(xintercept = MFJ_STD_2018, linetype = "dashed",  color = "grey40") +
-    annotate("text", x = MFJ_STD_2017 + 300, y = Inf,
-             label = "Old std ded\n($12.7k)", vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
-    annotate("text", x = MFJ_STD_2018 + 300, y = Inf,
-             label = "TCJA std ded\n($24k)",  vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
-    geom_ribbon(aes(ymin = share_movers - 1.96 * se,
-                    ymax = share_movers + 1.96 * se),
-                alpha = 0.12, color = NA) +
+ggplot(es_10c_results,
+       aes(year, estimate, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
     geom_line(linewidth = 0.9) +
-    geom_point(size = 1.8) +
-    scale_x_continuous(
-        labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
-        breaks = seq(0, BIN_MAX, by = 6000)
-    ) +
-    scale_y_continuous(labels = scales::percent_format(1)) +
-    scale_color_manual(values = period_colors_2, name = NULL) +
-    scale_fill_manual(values  = period_colors_2, name = NULL) +
+    geom_point(size = 2) +
+    facet_wrap(~ fstatus, ncol = 3) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = es_group_colors, name = NULL) +
+    scale_fill_manual(values  = es_group_colors, name = NULL) +
     labs(
-        x        = "Pre-TCJA itemizable total (SALT + mortgage interest, $3k bins)",
-        y        = "Share of household heads who moved",
-        title    = "Move rate by pre-TCJA itemizable total (MFJ)",
-        subtitle = "Dotted: old std ded $12.7k  •  Dashed: TCJA std ded $24k"
+        x        = NULL,
+        y        = "Additional probability of moving (pp)",
+        title    = "Event study: asymmetric matched controls, by filing status",
+        subtitle = "Compliers vs. near-2017-threshold never-itemizers; always-itemizers vs. near-TCJA-threshold compliers"
     ) +
     theme(
         panel.background  = element_rect(fill = "#fafafa", color = NA),
         plot.background   = element_rect(fill = "#fafafa", color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
         legend.background = element_rect(fill = "#fafafa", color = NA),
         legend.key        = element_rect(fill = "#fafafa", color = NA),
-        axis.text.x       = element_text(color = "grey20"),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-
-# (b) Sanity check: itemization group composition by bin
-# Expected: [0-12.7k] → 100% Never; [12.7k-24k] → 100% Stopped;
-# [24k+] → mix of Stopped and Always depending on how much SALT got capped.
-mfj_comp <- mfj_data |>
-    group_by(bin_start, bin_mid, group) |>
-    summarise(n = n(), .groups = "drop") |>
-    group_by(bin_start) |>
-    mutate(pct = n / sum(n)) |>
-    ungroup()
-
-ggplot(mfj_comp, aes(bin_mid, pct, fill = group)) +
-    geom_col(width = BIN_W * 0.85, position = "stack") +
-    geom_vline(xintercept = MFJ_STD_2017, linetype = "dotted", color = "white", linewidth = 0.8) +
-    geom_vline(xintercept = MFJ_STD_2018, linetype = "dashed",  color = "white", linewidth = 0.8) +
-    scale_fill_manual(values = group_colors, name = NULL) +
-    scale_x_continuous(
-        labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
-        breaks = seq(0, BIN_MAX, by = 6000)
-    ) +
-    scale_y_continuous(labels = scales::percent_format()) +
-    labs(
-        x        = "Pre-TCJA itemizable total ($3k bins)",
-        y        = "Share in group",
-        title    = "Itemization group composition by bin (MFJ, sanity check)",
-        subtitle = "Dotted: old std ded $12.7k  •  Dashed: TCJA std ded $24k"
-    ) +
-    theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
-        panel.grid.major  = element_line(color = "grey90"),
-        panel.grid.minor  = element_blank(),
-        axis.line.x       = element_line(color = "grey30"),
-        axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
-        axis.text.x       = element_text(color = "grey20"),
-        axis.text.y       = element_text(color = "grey20"),
-        text              = element_text(color = "grey20"),
-        legend.position   = "bottom"
-    )
+ggsave("../../../output/Cormac/10c_matched_controls.png", last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
-# (c) Sanity check: mean additional federal tax from SALT cap by bin
-# Expected: ~$0 for bins below $12.7k (never itemized, no SALT deduction
-# to lose); rising for [$12.7k, $24k] stopped-itemizers; higher still above
-# $24k where always-itemizers have large SALT being capped at $10k.
+# 10d. Heterogeneity by age and metro status (MFJ and Single only)
 ########################################################
 
-salt_burden_mfj <- dbGetQuery(con, "
+# Uses the same asymmetric matched-control design as 10c.
+# Two heterogeneity cuts, each producing a facet_grid(fstatus ~ subgroup) plot:
+#   (a) Age: under 45 vs. 45 and over
+#   (b) Metro status: metropolitan vs. non-metropolitan
+# metro factor codes: 1=non-metro, 2=metro/central city, 3=metro/outside central city,
+# 4=metro/city status unknown, 5=mixed PUMA (straddles metro boundary) — excluded.
+
+fstatuses_2 <- c("MFJ", "Single")
+
+build_het_results <- function(subgroup_filters, fstatuses_arg = fstatuses_2) {
+    sg_names <- names(subgroup_filters)
+    bind_rows(lapply(fstatuses_arg, function(fs) {
+        bind_rows(lapply(sg_names, function(sg) {
+            d <- subgroup_filters[[sg]](item_data)
+            bind_rows(
+                tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
+                                    "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, d)) |>
+                    filter(str_detect(term, "year::")) |>
+                    mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                           group = "Stopped itemizing (TCJA)", fstatus = fs, subgroup = sg),
+                tidy(run_matched_es("Always itemized", "Stopped itemizing (TCJA)",
+                                    "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, d)) |>
+                    filter(str_detect(term, "year::")) |>
+                    mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                           group = "Always itemized", fstatus = fs, subgroup = sg)
+            )
+        }))
+    })) |>
+        bind_rows(expand.grid(year = 2017L, estimate = 0, std.error = 0,
+                              group    = treat_labels,
+                              fstatus  = fstatuses_arg,
+                              subgroup = sg_names,
+                              stringsAsFactors = FALSE)) |>
+        mutate(
+            group    = factor(group,    levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+            fstatus  = factor(fstatus,  levels = fstatuses_arg),
+            subgroup = factor(subgroup, levels = sg_names),
+            ci_lo    = estimate - 1.96 * std.error,
+            ci_hi    = estimate + 1.96 * std.error
+        ) |>
+        arrange(fstatus, subgroup, group, year)
+}
+
+plot_het <- function(results, title, subtitle) {
+    ggplot(results, aes(year, estimate, color = group, fill = group, group = group)) +
+        geom_hline(yintercept = 0, color = "grey70") +
+        geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+        geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+        geom_line(linewidth = 0.9) +
+        geom_point(size = 2) +
+        facet_grid(fstatus ~ subgroup) +
+        scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+        scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+        scale_color_manual(values = es_group_colors, name = NULL) +
+        scale_fill_manual(values  = es_group_colors, name = NULL) +
+        labs(x = NULL, y = "Additional probability of moving (pp)",
+             title = title, subtitle = subtitle) +
+        theme(
+            panel.background  = element_rect(fill = "#fafafa", color = NA),
+            plot.background   = element_rect(fill = "#fafafa", color = NA),
+            panel.grid.major  = element_line(color = "grey90"),
+            panel.grid.minor  = element_blank(),
+            strip.background  = element_rect(fill = "grey92", color = NA),
+            strip.text        = element_text(color = "grey20"),
+            axis.line.x       = element_line(color = "grey30"),
+            axis.line.y       = element_line(color = "grey30"),
+            legend.background = element_rect(fill = "#fafafa", color = NA),
+            legend.key        = element_rect(fill = "#fafafa", color = NA),
+            axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+            axis.text.y       = element_text(color = "grey20"),
+            text              = element_text(color = "grey20"),
+            legend.position   = "bottom"
+        )
+}
+
+# --- (a) Age ---
+plot_het(
+    build_het_results(list(
+        "Under 45"    = function(d) filter(d, age < 45),
+        "45 and over" = function(d) filter(d, age >= 45)
+    )),
+    title    = "Heterogeneity by age: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_age.png", last_plot(), width = 9, height = 6, dpi = 150)
+
+# --- (b) Metro status ---
+plot_het(
+    build_het_results(list(
+        "Metropolitan"     = function(d) filter(d, metro %in% c("2", "3", "4")),
+        "Non-metropolitan" = function(d) filter(d, metro == "1")
+    )),
+    title    = "Heterogeneity by metro status: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_metro.png", last_plot(), width = 9, height = 6, dpi = 150)
+
+# --- (c) Number of children (MFJ only) ---
+# Singles by definition have nchild = 0 (nchild > 0 maps to HoH, which is excluded).
+plot_het(
+    build_het_results(list(
+        "No children"  = function(d) filter(d, nchild == 0),
+        "Any children" = function(d) filter(d, nchild >= 1)
+    ), fstatuses_arg = "MFJ"),
+    title    = "Heterogeneity by number of children: event study (MFJ only)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_children.png", last_plot(), width = 9, height = 5, dpi = 150)
+
+# --- (d) Education ---
+# educ codes: 0-6 = HS or less, 7-8 = some college (no degree), 10-11 = bachelor's+
+# (code 9 absent in data)
+plot_het(
+    build_het_results(list(
+        "HS or less"      = function(d) filter(d, as.integer(as.character(educ)) <= 6),
+        "Some college"    = function(d) filter(d, as.integer(as.character(educ)) %in% c(7, 8)),
+        "Bachelor's+"     = function(d) filter(d, as.integer(as.character(educ)) >= 10)
+    )),
+    title    = "Heterogeneity by education: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_education.png", last_plot(), width = 12, height = 6, dpi = 150)
+
+# --- (e) Sex ---
+plot_het(
+    build_het_results(list(
+        "Male"   = function(d) filter(d, sex == "1"),
+        "Female" = function(d) filter(d, sex == "2")
+    )),
+    title    = "Heterogeneity by sex: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_sex.png", last_plot(), width = 9, height = 6, dpi = 150)
+
+# --- (f) Race / ethnicity ---
+# race and hispan stored as factors; convert to integer for comparison.
+# Groups: NH White (race=1, hispan=0), NH Black (race=2, hispan=0),
+#         Hispanic (hispan>0), Other NH (race>=3, hispan=0).
+plot_het(
+    build_het_results(list(
+        "White NH"  = function(d) filter(d, as.integer(as.character(race)) == 1 &
+                                             as.integer(as.character(hispan)) == 0),
+        "Black NH"  = function(d) filter(d, as.integer(as.character(race)) == 2 &
+                                             as.integer(as.character(hispan)) == 0),
+        "Hispanic"  = function(d) filter(d, as.integer(as.character(hispan)) > 0),
+        "Other NH"  = function(d) filter(d, as.integer(as.character(race)) >= 3 &
+                                             as.integer(as.character(hispan)) == 0)
+    )),
+    title    = "Heterogeneity by race/ethnicity: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_race.png", last_plot(), width = 12, height = 6, dpi = 150)
+
+# --- (g) Multigenerational household ---
+# multgen codes: 0=N/A/GQ, 1=not multigenerational, 2=3 generations, 3=4+ generations
+plot_het(
+    build_het_results(list(
+        "Not multigenerational" = function(d) filter(d, multgen == "1"),
+        "Multigenerational"     = function(d) filter(d, multgen %in% c("2", "3"))
+    )),
+    title    = "Heterogeneity by multigenerational household: event study (MFJ and Single)",
+    subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+)
+ggsave("../../../output/Cormac/10d_het_multigen.png", last_plot(), width = 9, height = 6, dpi = 150)
+
+########################################################
+# 10e. Additional federal tax from SALT cap: treatment vs. matched controls
+########################################################
+
+# For each of the two comparisons in 10c, plot mean imp_additional_fed_tax_salt
+# by year and filing status:
+#   Comparison 1: Stopped itemizing (TCJA) vs. near-2017-threshold never-itemizers
+#   Comparison 2: Always itemized          vs. near-TCJA-threshold compliers
+# Solid lines = treatment groups; dashed = matched control groups.
+# Uses the full sample (no random subsample) for stable means.
+
+exposure_raw <- dbGetQuery(con, "
     SELECT
-        CAST(imp_itemizable_2017 AS DOUBLE) AS imp_itemizable_2017,
-        imp_additional_fed_tax_salt
+        year,
+        CAST(imp_additional_fed_tax_salt AS DOUBLE) AS additional_tax,
+        CAST(imp_salt_ded_curr AS DOUBLE)           AS salt_ded_curr,
+        CAST(imp_marginal_fed_rate AS DOUBLE)       AS marginal_fed_rate,
+        imp_itemizes_2017,
+        CAST(imp_itemizable_2017 AS DOUBLE)         AS imp_itemizable_2017,
+        CAST(imp_itemizable_2018 AS DOUBLE)         AS imp_itemizable_2018,
+        CASE WHEN marst = 1                 THEN 24000
+             WHEN marst != 1 AND nchild > 0 THEN 18000
+             ELSE                                12000
+        END                                         AS tcja_std_ded,
+        CASE WHEN marst = 1                 THEN 'MFJ'
+             WHEN marst != 1 AND nchild > 0 THEN 'HoH'
+             ELSE                                'Single'
+        END                                         AS fstatus
     FROM acs_microdata
     WHERE pernum = 1 AND gq IN (1, 2, 5)
-      AND marst = 1
-      AND imp_itemizable_2017         IS NOT NULL
       AND imp_additional_fed_tax_salt IS NOT NULL
+      AND imp_itemizes_2017           IS NOT NULL
+      AND imp_itemizable_2018         IS NOT NULL
       AND year BETWEEN 2013 AND 2023
 ") |>
     as_tibble() |>
     mutate(
-        bin_start = floor(imp_itemizable_2017 / BIN_W) * BIN_W,
-        bin_mid   = bin_start + BIN_W / 2
-    ) |>
-    filter(bin_start >= 0, bin_start <= BIN_MAX) |>
-    group_by(bin_start, bin_mid) |>
-    summarise(
-        mean_additional_tax = mean(imp_additional_fed_tax_salt),
-        n                   = n(),
-        .groups             = "drop"
+        tcja_itemizes = as.integer(imp_itemizable_2018 > tcja_std_ded),
+        group = case_when(
+            imp_itemizes_2017 == 1L & tcja_itemizes == 1L ~ "Always itemized",
+            imp_itemizes_2017 == 1L & tcja_itemizes == 0L ~ "Stopped itemizing (TCJA)",
+            TRUE                                           ~ "Never itemized"
+        ),
+        fstatus     = factor(fstatus, levels = c("MFJ", "HoH", "Single")),
+        salt_refund = salt_ded_curr * coalesce(marginal_fed_rate, 0)
     )
 
-ggplot(salt_burden_mfj, aes(bin_mid, mean_additional_tax)) +
-    geom_vline(xintercept = MFJ_STD_2017, linetype = "dotted", color = "grey50") +
-    geom_vline(xintercept = MFJ_STD_2018, linetype = "dashed",  color = "grey40") +
-    annotate("text", x = MFJ_STD_2017 + 300, y = Inf,
-             label = "Old std ded\n($12.7k)", vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
-    annotate("text", x = MFJ_STD_2018 + 300, y = Inf,
-             label = "TCJA std ded\n($24k)",  vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
-    geom_col(width = BIN_W * 0.85, fill = "#4a7c82") +
-    scale_x_continuous(
-        labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
-        breaks = seq(0, BIN_MAX, by = 6000)
-    ) +
+# Build the four plot groups, applying the same 10th-percentile gap filter as 10c
+exposure_groups <- bind_rows(
+    exposure_raw |>
+        filter(group == "Stopped itemizing (TCJA)") |>
+        mutate(plot_group = "Stopped itemizing (TCJA)", ltype = "Treatment"),
+    exposure_raw |>
+        filter(group == "Always itemized") |>
+        mutate(plot_group = "Always itemized", ltype = "Treatment"),
+    exposure_raw |>
+        filter(group == "Never itemized") |>
+        group_by(fstatus) |>
+        mutate(
+            std_ded_2017 = c(MFJ = 12700, HoH = 9350, Single = 6350)[as.character(fstatus)],
+            gap          = std_ded_2017 - imp_itemizable_2017
+        ) |>
+        filter(gap <= quantile(gap, 0.10, na.rm = TRUE)) |>
+        ungroup() |>
+        mutate(plot_group = "Near-2017-threshold\nnever-itemizers", ltype = "Control"),
+    exposure_raw |>
+        filter(group == "Stopped itemizing (TCJA)") |>
+        group_by(fstatus) |>
+        mutate(gap = tcja_std_ded - imp_itemizable_2018) |>
+        filter(gap <= quantile(gap, 0.10, na.rm = TRUE)) |>
+        ungroup() |>
+        mutate(plot_group = "Near-TCJA-threshold\ncompliers", ltype = "Control")
+)
+
+exposure_summary <- exposure_groups |>
+    group_by(year, fstatus, plot_group, ltype) |>
+    summarise(mean_tax = mean(additional_tax, na.rm = TRUE), .groups = "drop") |>
+    mutate(
+        plot_group = factor(plot_group, levels = c(
+            "Always itemized", "Near-TCJA-threshold\ncompliers",
+            "Stopped itemizing (TCJA)", "Near-2017-threshold\nnever-itemizers"
+        ))
+    )
+
+exposure_colors <- c(
+    "Always itemized"                    = "#4a7c82",
+    "Near-TCJA-threshold\ncompliers"     = "#4a7c82",
+    "Stopped itemizing (TCJA)"           = "#c06028",
+    "Near-2017-threshold\nnever-itemizers" = "#c06028"
+)
+exposure_ltypes <- c(
+    "Always itemized"                    = "solid",
+    "Near-TCJA-threshold\ncompliers"     = "dashed",
+    "Stopped itemizing (TCJA)"           = "solid",
+    "Near-2017-threshold\nnever-itemizers" = "dashed"
+)
+
+ggplot(exposure_summary,
+       aes(year, mean_tax, color = plot_group, linetype = plot_group, group = plot_group)) +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_wrap(~ fstatus, ncol = 3) +
+    scale_x_continuous(breaks = seq(2013, 2023, by = 2)) +
     scale_y_continuous(labels = scales::dollar_format()) +
+    scale_color_manual(values = exposure_colors, name = NULL) +
+    scale_linetype_manual(values = exposure_ltypes, name = NULL) +
     labs(
-        x        = "Pre-TCJA itemizable total ($3k bins)",
-        y        = "Mean additional federal tax (SALT cap)",
-        title    = "SALT reform burden by pre-TCJA itemizable total (MFJ, sanity check)",
-        subtitle = "Positive = more federal tax paid due to reduced SALT deductibility"
+        x        = NULL,
+        y        = "Mean additional federal tax from SALT cap ($)",
+        title    = "TCJA SALT exposure: treatment and matched control groups",
+        subtitle = "Solid = treatment; dashed = matched control (10th-percentile gap); by filing status"
     ) +
     theme(
         panel.background  = element_rect(fill = "#fafafa", color = NA),
         plot.background   = element_rect(fill = "#fafafa", color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
         legend.background = element_rect(fill = "#fafafa", color = NA),
         legend.key        = element_rect(fill = "#fafafa", color = NA),
-        axis.text.x       = element_text(color = "grey20"),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
-        text              = element_text(color = "grey20")
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10e_exposure.png", last_plot(), width = 11, height = 5, dpi = 150)
+
+salt_ded_summary <- exposure_groups |>
+    group_by(year, fstatus, plot_group, ltype) |>
+    summarise(mean_salt_ded = mean(salt_ded_curr, na.rm = TRUE), .groups = "drop") |>
+    mutate(
+        plot_group = factor(plot_group, levels = levels(exposure_summary$plot_group))
     )
 
+ggplot(salt_ded_summary,
+       aes(year, mean_salt_ded, color = plot_group, linetype = plot_group, group = plot_group)) +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_wrap(~ fstatus, ncol = 3) +
+    scale_x_continuous(breaks = seq(2013, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_color_manual(values = exposure_colors, name = NULL) +
+    scale_linetype_manual(values = exposure_ltypes, name = NULL) +
+    labs(
+        x        = NULL,
+        y        = "Mean deductible SALT under current law ($)",
+        title    = "Currently refunded SALT by group",
+        subtitle = "imp_salt_ded_curr: actual SALT deducted (0 if not itemizing) | dashed line = TCJA"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10e_salt_ded.png", last_plot(), width = 11, height = 5, dpi = 150)
+
 ########################################################
-# 10d. Move rate: itemizers vs. non-itemizers at equal SALT level
+# 10f. Move type event study: within-state vs. between-state (TWFE)
+#       MFJ and Single filers, matched controls as in 10c
+########################################################
+
+# migrate1: 2 = moved within state, 3 = moved between states.
+# Run the same matched TWFE as 10c but swap the outcome from `mover` to
+# `within_state` or `between_state`. Two comparisons × two outcomes × two
+# filing statuses → facet_grid(outcome_type ~ fstatus).
+
+run_matched_es_outcome <- function(treat_label, control_label, gap_col, threshold,
+                                   fs, data, outcome_col) {
+    control_close <- data |>
+        filter(group == control_label, fstatus == fs) |>
+        mutate(gap = threshold - .data[[gap_col]]) |>
+        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
+
+    dat <- bind_rows(control_close, data |> filter(group == treat_label, fstatus == fs)) |>
+        mutate(treated = as.integer(group == treat_label))
+
+    dat[["depvar"]] <- dat[[outcome_col]]
+    feols(depvar ~ treated + i(year, treated, ref = 2017) + age + sex + race +
+              hispan + educ + metro + multgen | year + statefip,
+          data = dat, vcov = ~statefip)
+}
+
+item_data_mig <- item_data |>
+    mutate(
+        within_state  = as.integer(migrate1 == 2L),
+        between_state = as.integer(migrate1 == 3L)
+    )
+
+outcome_specs <- list(
+    "Within-state"  = "within_state",
+    "Between-state" = "between_state"
+)
+
+mig_type_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
+    bind_rows(lapply(names(outcome_specs), function(olabel) {
+        ocol <- outcome_specs[[olabel]]
+        bind_rows(
+            tidy(run_matched_es_outcome("Stopped itemizing (TCJA)", "Never itemized",
+                                        "imp_itemizable_2017", std_ded_2017_map[[fs]],
+                                        fs, item_data_mig, ocol)) |>
+                filter(str_detect(term, "year::")) |>
+                mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                       group = "Stopped itemizing (TCJA)", fstatus = fs, outcome_type = olabel),
+            tidy(run_matched_es_outcome("Always itemized", "Stopped itemizing (TCJA)",
+                                        "imp_itemizable_2018", tcja_std_ded_map[[fs]],
+                                        fs, item_data_mig, ocol)) |>
+                filter(str_detect(term, "year::")) |>
+                mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                       group = "Always itemized", fstatus = fs, outcome_type = olabel)
+        )
+    }))
+})) |>
+    bind_rows(expand.grid(
+        year         = 2017L,
+        estimate     = 0,
+        std.error    = 0,
+        group        = treat_labels,
+        fstatus      = c("MFJ", "Single"),
+        outcome_type = names(outcome_specs),
+        stringsAsFactors = FALSE
+    )) |>
+    mutate(
+        group        = factor(group,        levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        fstatus      = factor(fstatus,      levels = c("MFJ", "Single")),
+        outcome_type = factor(outcome_type, levels = names(outcome_specs)),
+        ci_lo        = estimate - 1.96 * std.error,
+        ci_hi        = estimate + 1.96 * std.error
+    ) |>
+    arrange(fstatus, outcome_type, group, year)
+
+ggplot(mig_type_results,
+       aes(year, estimate, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_grid(outcome_type ~ fstatus) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = es_group_colors, name = NULL) +
+    scale_fill_manual(values  = es_group_colors, name = NULL) +
+    labs(
+        x        = NULL,
+        y        = "Additional probability of moving (pp)",
+        title    = "Event study: within- vs. between-state moves (MFJ and Single)",
+        subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10f_migration_type.png", last_plot(), width = 10, height = 7, dpi = 150)
+
+########################################################
+# 10g. Robustness: alternative control group distance bands
+########################################################
+
+# Concern: unobserved deductions (medical expenses, charitable donations, etc.)
+# may cause true itemizers near the threshold to appear as "Never itemizers",
+# contaminating the closest control band. Robustness check: repeat the 10c
+# regressions using control units drawn from successive 10-pp slices of the
+# gap distribution (gap = threshold - imp_itemizable). If the event study
+# pattern is stable across bands, misclassification near the cutoff is not
+# driving the result.
+
+run_matched_es_band <- function(treat_label, control_label, gap_col, threshold,
+                                fs, data, lo_pct = 0, hi_pct = 10) {
+    control_all <- data |>
+        filter(group == control_label, fstatus == fs) |>
+        mutate(gap = threshold - .data[[gap_col]])
+
+    q_lo <- if (lo_pct == 0) -Inf else quantile(control_all$gap, lo_pct / 100, na.rm = TRUE)
+    q_hi <- quantile(control_all$gap, hi_pct / 100, na.rm = TRUE)
+
+    control_band <- control_all |> filter(gap > q_lo, gap <= q_hi)
+
+    dat <- bind_rows(control_band, data |> filter(group == treat_label, fstatus == fs)) |>
+        mutate(treated = as.integer(group == treat_label))
+
+    feols(
+        mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
+            hispan + educ + metro + multgen | year + statefip,
+        data = dat, vcov = ~statefip
+    )
+}
+
+bands_10g <- list(
+    "0-10% (baseline)" = c(0,  10),
+    "10-20%"           = c(10, 20),
+    "20-30%"           = c(20, 30),
+    "30-40%"           = c(30, 40)
+)
+
+comparisons_10g <- list(
+    "Stopped itemizing (TCJA)" = list(
+        treat   = "Stopped itemizing (TCJA)",
+        control = "Never itemized",
+        gap_col = "imp_itemizable_2017",
+        thresh  = std_ded_2017_map
+    ),
+    "Always itemized" = list(
+        treat   = "Always itemized",
+        control = "Stopped itemizing (TCJA)",
+        gap_col = "imp_itemizable_2018",
+        thresh  = tcja_std_ded_map
+    )
+)
+
+robust_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
+    bind_rows(lapply(names(comparisons_10g), function(comp_name) {
+        comp <- comparisons_10g[[comp_name]]
+        bind_rows(lapply(names(bands_10g), function(band_name) {
+            b <- bands_10g[[band_name]]
+            tidy(run_matched_es_band(
+                treat_label   = comp$treat,
+                control_label = comp$control,
+                gap_col       = comp$gap_col,
+                threshold     = comp$thresh[[fs]],
+                fs            = fs,
+                data          = item_data,
+                lo_pct        = b[1],
+                hi_pct        = b[2]
+            )) |>
+                filter(str_detect(term, "year::")) |>
+                mutate(
+                    year      = as.integer(str_extract(term, "\\d{4}")),
+                    fstatus   = fs,
+                    group     = comp_name,
+                    band      = band_name
+                )
+        }))
+    }))
+})) |>
+    bind_rows(expand.grid(
+        year      = 2017L,
+        estimate  = 0,
+        std.error = 0,
+        fstatus   = c("MFJ", "Single"),
+        group     = names(comparisons_10g),
+        band      = names(bands_10g),
+        stringsAsFactors = FALSE
+    )) |>
+    mutate(
+        fstatus = factor(fstatus, levels = c("MFJ", "Single")),
+        group   = factor(group,   levels = names(comparisons_10g)),
+        band    = factor(band,    levels = names(bands_10g)),
+        ci_lo   = estimate - 1.96 * std.error,
+        ci_hi   = estimate + 1.96 * std.error
+    ) |>
+    arrange(fstatus, group, band, year)
+
+band_colors <- c(
+    "0-10% (baseline)" = "#23373b",
+    "10-20%"           = "#4a7c82",
+    "20-30%"           = "#c06028",
+    "30-40%"           = "#eb811b"
+)
+
+ggplot(robust_results,
+       aes(year, estimate, color = band, fill = band, group = band)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_grid(fstatus ~ group) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = band_colors, name = "Control band") +
+    scale_fill_manual(values  = band_colors, name = "Control band") +
+    labs(
+        x        = NULL,
+        y        = "Additional probability of moving (pp)",
+        title    = "Robustness: event study by control group distance band",
+        subtitle = "Each line = different 10-pp slice of gap distribution; ref = 2017; clustered by state"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10g_robustness_bands.png", last_plot(), width = 10, height = 7, dpi = 150)
+
+########################################################
+# 10h. Robustness: quantile-anchored itemization groups
+########################################################
+
+# Concern: imputed itemization decisions are based on survey data from
+# future/past years, not 2017 itself. Nominal wage and property tax growth
+# over time pushes more households above the fixed standard-deduction
+# threshold in later years, causing spurious drift in group membership.
+#
+# Fix: replace fixed dollar thresholds with year × fstatus quantile thresholds
+# chosen so that the share of "itemizers" in each year (under 2017 and TCJA
+# rules respectively) equals the observed share in the reference year.
+# Group sizes are held constant; only the composition of who falls in each
+# group changes. Then repeat the 10c DiD.
+
+# --- Step 1: Reference itemizer shares ---
+
+ref_p_2017 <- item_data |>
+    filter(year == 2017L) |>
+    group_by(fstatus) |>
+    summarise(p_2017 = mean(imp_itemizes_2017 == 1L, na.rm = TRUE), .groups = "drop")
+
+ref_p_2018 <- item_data |>
+    filter(year == 2018L) |>
+    group_by(fstatus) |>
+    summarise(p_2018 = mean(tcja_itemizes == 1L, na.rm = TRUE), .groups = "drop")
+
+# --- Step 2: Year × fstatus quantile thresholds ---
+
+q_thresholds <- item_data |>
+    left_join(ref_p_2017, by = "fstatus") |>
+    left_join(ref_p_2018, by = "fstatus") |>
+    group_by(year, fstatus) |>
+    summarise(
+        q_thresh_2017 = quantile(imp_itemizable_2017, 1 - first(p_2017), na.rm = TRUE),
+        q_thresh_2018 = quantile(imp_itemizable_2018, 1 - first(p_2018), na.rm = TRUE),
+        .groups = "drop"
+    )
+
+# --- Step 3: Quantile-based groups ---
+
+item_data_q <- item_data |>
+    left_join(q_thresholds, by = c("year", "fstatus")) |>
+    mutate(
+        q_itemizes_2017 = as.integer(!is.na(imp_itemizable_2017) & imp_itemizable_2017 > q_thresh_2017),
+        q_itemizes_2018 = as.integer(!is.na(imp_itemizable_2018) & imp_itemizable_2018 > q_thresh_2018),
+        q_group = case_when(
+            q_itemizes_2017 == 1L & q_itemizes_2018 == 1L ~ "Always itemized",
+            q_itemizes_2017 == 1L & q_itemizes_2018 == 0L ~ "Stopped itemizing (TCJA)",
+            q_itemizes_2017 == 0L & q_itemizes_2018 == 0L ~ "Never itemized",
+            TRUE ~ NA_character_
+        )
+    )
+
+# Sanity check: group shares should be roughly constant across years
+cat("\nQuantile-group shares by year (MFJ and Single):\n")
+item_data_q |>
+    filter(!is.na(q_group), fstatus %in% c("MFJ", "Single")) |>
+    count(year, fstatus, q_group) |>
+    group_by(year, fstatus) |>
+    mutate(share = round(n / sum(n), 3)) |>
+    print(n = 60)
+
+# --- Step 4: Matched TWFE with row-varying threshold column ---
+
+run_matched_es_q <- function(treat_label, control_label, gap_col, thresh_col, fs, data) {
+    control_close <- data |>
+        filter(q_group == control_label, fstatus == fs) |>
+        mutate(gap = .data[[thresh_col]] - .data[[gap_col]]) |>
+        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
+
+    dat <- bind_rows(control_close, data |> filter(q_group == treat_label, fstatus == fs)) |>
+        mutate(treated = as.integer(q_group == treat_label))
+
+    feols(
+        mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
+            hispan + educ + metro + multgen | year + statefip,
+        data = dat, vcov = ~statefip
+    )
+}
+
+# --- Step 5: Run regressions ---
+
+es_10h_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
+    bind_rows(
+        tidy(run_matched_es_q("Stopped itemizing (TCJA)", "Never itemized",
+                              "imp_itemizable_2017", "q_thresh_2017", fs, item_data_q)) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year  = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Stopped itemizing (TCJA)", fstatus = fs),
+        tidy(run_matched_es_q("Always itemized", "Stopped itemizing (TCJA)",
+                              "imp_itemizable_2018", "q_thresh_2018", fs, item_data_q)) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year  = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Always itemized", fstatus = fs)
+    )
+})) |>
+    bind_rows(expand.grid(
+        year      = 2017L,
+        estimate  = 0,
+        std.error = 0,
+        group     = treat_labels,
+        fstatus   = c("MFJ", "Single"),
+        stringsAsFactors = FALSE
+    )) |>
+    mutate(
+        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        fstatus = factor(fstatus, levels = c("MFJ", "Single")),
+        ci_lo   = estimate - 1.96 * std.error,
+        ci_hi   = estimate + 1.96 * std.error
+    ) |>
+    arrange(fstatus, group, year)
+
+# --- Step 6: Plot ---
+
+ggplot(es_10h_results,
+       aes(year, estimate, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_wrap(~ fstatus, ncol = 2) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = es_group_colors, name = NULL) +
+    scale_fill_manual(values  = es_group_colors, name = NULL) +
+    labs(
+        x        = NULL,
+        y        = "Additional probability of moving (pp)",
+        title    = "Robustness: quantile-anchored itemization groups",
+        subtitle = "Year-specific thresholds hold itemizer share constant at 2017/2018 levels; matched controls as in 10c"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10h_quantile_robustness.png", last_plot(), width = 9, height = 5, dpi = 150)
+
+########################################################
+# 10i. First stage: mean SALT deduction by group over time
+########################################################
+
+# Shows that TCJA directly reduced the SALT deduction for treated groups,
+# validating the "first stage." Uses the full-sample exposure_groups data
+# already built in 10e — no additional DB query needed.
+#
+# Layout: facet_grid(comparison ~ fstatus), two rows (one per comparison),
+# three columns (MFJ / HoH / Single). Within each panel, solid = treatment
+# group, dashed = matched control.
+
+fs_data <- exposure_groups |>
+    mutate(
+        comparison = case_when(
+            plot_group %in% c("Stopped itemizing (TCJA)", "Near-2017-threshold\nnever-itemizers") ~
+                "Stopped itemizing (TCJA)\nvs. near-2017-threshold never-itemizers",
+            TRUE ~
+                "Always itemized\nvs. near-TCJA-threshold compliers"
+        ),
+        comparison = factor(comparison, levels = c(
+            "Stopped itemizing (TCJA)\nvs. near-2017-threshold never-itemizers",
+            "Always itemized\nvs. near-TCJA-threshold compliers"
+        ))
+    )
+
+fs_summary <- fs_data |>
+    group_by(year, fstatus, plot_group, ltype, comparison) |>
+    summarise(mean_salt_refund = mean(salt_refund, na.rm = TRUE), .groups = "drop") |>
+    mutate(
+        plot_group = factor(plot_group, levels = c(
+            "Always itemized", "Near-TCJA-threshold\ncompliers",
+            "Stopped itemizing (TCJA)", "Near-2017-threshold\nnever-itemizers"
+        ))
+    )
+
+ggplot(fs_summary,
+       aes(year, mean_salt_refund, color = plot_group, linetype = plot_group, group = plot_group)) +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_grid(comparison ~ fstatus) +
+    scale_x_continuous(breaks = seq(2013, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_color_manual(values = exposure_colors, name = NULL) +
+    scale_linetype_manual(values = exposure_ltypes, name = NULL) +
+    labs(
+        x        = NULL,
+        y        = "Mean SALT refund (deduction × marginal federal rate, $)",
+        title    = "First stage: SALT refund by group over time",
+        subtitle = "Solid = treatment; dashed = matched control (10th-pct gap) | dashed line = TCJA"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10i_first_stage.png", last_plot(), width = 12, height = 7, dpi = 150)
+
+########################################################
+# 10j. SALT refund by regime and itemizable total (MFJ filers)
+########################################################
+
+# Two lines per panel: refund under 2017 rules and under TCJA rules.
+#   refund_2017 = imp_salt_ded_2017 × mtr
+#   refund_2018 = imp_salt_ded_2018 × mtr
+# Panel (a): x = imp_itemizable_2017
+# Panel (b): x = imp_itemizable_2018
+# Both panels restricted to x ∈ [0, 30 000]; stacked vertically.
+
+refund_change_raw <- dbGetQuery(con, "
+    SELECT
+        CAST(imp_salt_ded_2017       AS DOUBLE) AS salt_ded_2017,
+        CAST(imp_salt_ded_2018       AS DOUBLE) AS salt_ded_2018,
+        CAST(imp_itemizable_2017     AS DOUBLE) AS imp_itemizable_2017,
+        CAST(imp_itemizable_2018     AS DOUBLE) AS imp_itemizable_2018,
+        CAST(imp_marginal_fed_rate   AS DOUBLE) AS mtr
+    FROM acs_microdata
+    WHERE pernum = 1 AND gq IN (1, 2, 5)
+      AND marst = 1
+      AND imp_salt_ded_2017      IS NOT NULL
+      AND imp_salt_ded_2018      IS NOT NULL
+      AND imp_marginal_fed_rate  IS NOT NULL
+      AND year BETWEEN 2013 AND 2023
+") |>
+    as_tibble() |>
+    mutate(
+        refund_2017 = salt_ded_2017 * mtr,
+        refund_2018 = salt_ded_2018 * mtr
+    )
+
+bin_size  <- 500L
+cut_2017  <- 12700
+cut_tcja  <- 24000
+
+diff_summary <- refund_change_raw |>
+    filter(imp_itemizable_2017 >= 0, imp_itemizable_2017 <= 30000) |>
+    mutate(
+        refund_diff = refund_2017 - refund_2018,
+        x_bin       = floor(imp_itemizable_2017 / bin_size) * bin_size + bin_size / 2L + 250L
+    ) |>
+    group_by(x_bin) |>
+    summarise(mean_refund_diff = mean(refund_diff, na.rm = TRUE), .groups = "drop")
+
+ggplot(diff_summary, aes(x_bin, mean_refund_diff)) +
+    annotate("rect",
+             xmin = cut_2017 * 0.9, xmax = cut_2017 * 1.1, ymin = -Inf, ymax = Inf,
+             fill = "#4a7c82", alpha = 0.12) +
+    annotate("rect",
+             xmin = cut_tcja * 0.9,  xmax = cut_tcja * 1.1,  ymin = -Inf, ymax = Inf,
+             fill = "#c06028", alpha = 0.12) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = cut_2017, linetype = "dotted", color = "#4a7c82", linewidth = 0.7) +
+    geom_vline(xintercept = cut_tcja,  linetype = "dashed", color = "#c06028", linewidth = 0.7) +
+    geom_line(linewidth = 0.9, color = "#23373b") +
+    geom_point(size = 1.5, color = "#23373b") +
+    annotate("text", x = cut_2017, y = Inf, label = "2017 std ded\n($12.7k)",
+             hjust = -0.07, vjust = 1.3, size = 2.8, color = "#4a7c82") +
+    annotate("text", x = cut_tcja,  y = Inf, label = "TCJA std ded\n($24k)",
+             hjust = -0.07, vjust = 1.3, size = 2.8, color = "#c06028") +
+    scale_x_continuous(
+        labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
+        breaks = seq(0, 30000, by = 5000),
+        limits = c(0, 30000)
+    ) +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    labs(
+        x        = "2017 itemizable total ($)",
+        y        = "Mean SALT refund lost: 2017 − TCJA rules ($)",
+        title    = "SALT refund loss under TCJA by 2017 itemizable total (MFJ filers)",
+        subtitle = "$500 bins | 2013–2023 pooled | shaded bands = ±10% of each std ded cutoff (DiD windows)"
+    ) +
+    theme(
+        panel.background = element_rect(fill = "#fafafa", color = NA),
+        plot.background  = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major = element_line(color = "grey90"),
+        panel.grid.minor = element_blank(),
+        axis.line.x      = element_line(color = "grey30"),
+        axis.line.y      = element_line(color = "grey30"),
+        axis.text.x      = element_text(color = "grey20"),
+        axis.text.y      = element_text(color = "grey20"),
+        text             = element_text(color = "grey20")
+    )
+ggsave("../../../output/Cormac/10j_salt_refund_diff.png", last_plot(), width = 8, height = 5, dpi = 150)
+
+########################################################
+# 10k. Balance table
+########################################################
+
+# Variables: age, household income, children, homeownership, home value,
+#   total SALT, marginal federal tax rate, metro share, pre-TCJA move rate.
+#
+# Columns:
+#   (1) Mean for "Stopped itemizing (TCJA)" — reference group
+#   (2) Δ Never itemized − Stopped, full sample          (comp 1 control)
+#   (3) Δ Always itemized − Stopped, full sample         (comp 2 control)
+#   (4) Δ Never − Stopped, near 2017 threshold (±10%)   (comp 1, near)
+#   (5) Δ Always − Stopped, near TCJA threshold (±10%)  (comp 2, near)
+# t-statistics in parentheses below each difference.
+
+bal_raw <- dbGetQuery(con, "
+    SELECT
+        year,
+        CASE WHEN migrate1 IN (2,3,4) THEN 1 ELSE 0 END        AS mover,
+        imp_itemizes_2017,
+        CAST(imp_itemizable_2017   AS DOUBLE)                   AS imp_itemizable_2017,
+        CAST(imp_itemizable_2018   AS DOUBLE)                   AS imp_itemizable_2018,
+        CAST(imp_salt              AS DOUBLE)                   AS imp_salt,
+        CAST(imp_marginal_fed_rate AS DOUBLE)                   AS mtr,
+        CAST(age                   AS DOUBLE)                   AS age,
+        CASE WHEN hhincome >= 9999999 THEN NULL
+             ELSE CAST(hhincome AS DOUBLE) END                  AS hhincome,
+        CAST(nchild                AS DOUBLE)                   AS nchild,
+        CASE WHEN ownershp = 1 THEN 1.0 ELSE 0.0 END           AS owner,
+        CASE WHEN valueh >= 9999999 OR ownershp != 1 THEN NULL
+             ELSE CAST(valueh AS DOUBLE) END                    AS home_value,
+        CASE WHEN TRY_CAST(metro AS INT) IN (2,3,4) THEN 1.0
+             ELSE 0.0 END                                       AS metropolitan,
+        CASE WHEN marst = 1                 THEN 24000
+             WHEN marst != 1 AND nchild > 0 THEN 18000
+             ELSE                                12000
+        END                                                     AS tcja_std_ded
+    FROM acs_microdata
+    WHERE pernum = 1 AND gq IN (1, 2, 5)
+      AND marst = 1
+      AND migrate1 != 0
+      AND imp_itemizes_2017   IS NOT NULL
+      AND imp_itemizable_2018 IS NOT NULL
+      AND year BETWEEN 2012 AND 2023
+") |>
+    as_tibble() |>
+    mutate(
+        tcja_itemizes = as.integer(imp_itemizable_2018 > tcja_std_ded),
+        group = case_when(
+            imp_itemizes_2017 == 1L & tcja_itemizes == 1L ~ "Always itemized",
+            imp_itemizes_2017 == 1L & tcja_itemizes == 0L ~ "Stopped itemizing",
+            imp_itemizes_2017 == 0L                        ~ "Never itemized"
+        )
+    )
+
+bal_vars <- c("age", "hhincome", "nchild", "owner", "home_value",
+              "imp_salt", "mtr", "metropolitan")
+
+var_labels <- c(
+    age           = "Age",
+    hhincome      = "Household income ($)",
+    nchild        = "Number of children",
+    owner         = "Homeowner (share)",
+    home_value    = "Home value, owners ($)",
+    imp_salt      = "Total SALT ($)",
+    mtr           = "Marginal federal tax rate",
+    metropolitan  = "Metropolitan area (share)"
+)
+
+fmt_digits <- c(age = 1, hhincome = 0, nchild = 2, owner = 3,
+                home_value = 0, imp_salt = 0, mtr = 3, metropolitan = 3)
+
+stopped_full  <- bal_raw |> filter(group == "Stopped itemizing")
+never_full    <- bal_raw |> filter(group == "Never itemized")
+always_full   <- bal_raw |> filter(group == "Always itemized")
+
+stopped_near1 <- bal_raw |> filter(group == "Stopped itemizing",
+                                    imp_itemizable_2017 >= cut_2017,
+                                    imp_itemizable_2017 <= cut_2017 * 1.1)
+never_near    <- bal_raw |> filter(group == "Never itemized",
+                                    imp_itemizable_2017 >= cut_2017 * 0.9)
+stopped_near2 <- bal_raw |> filter(group == "Stopped itemizing",
+                                    imp_itemizable_2018 >= cut_tcja * 0.9,
+                                    imp_itemizable_2018 <  cut_tcja)
+always_near   <- bal_raw |> filter(group == "Always itemized",
+                                    imp_itemizable_2018 >= cut_tcja,
+                                    imp_itemizable_2018 <= cut_tcja * 1.1)
+
+# Regression-based balance: regress each variable on group dummies,
+# reference = "Stopped itemizing". HC1 robust SEs.
+# Returns tidy tibble with estimate, conf.low, conf.high per group level.
+run_bal_reg <- function(data, vars) {
+    nref_levels <- c("Never itemized", "Always itemized")
+    data <- data |>
+        mutate(grp = factor(group, levels = c("Stopped itemizing",
+                                               "Never itemized",
+                                               "Always itemized")))
+    map_dfr(vars, function(v) {
+        dat <- data |> filter(!is.na(.data[[v]])) |> mutate(depvar = .data[[v]])
+        if (length(unique(dat$depvar)) <= 1L) {
+            return(tibble(variable = v, group_label = nref_levels,
+                          estimate = NA_real_, std.error = NA_real_))
+        }
+        mod <- feols(depvar ~ grp, data = dat, vcov = "HC1")
+        tidy(mod) |>
+            filter(term != "(Intercept)") |>
+            mutate(variable    = v,
+                   group_label = str_remove(term, "^grp")) |>
+            select(variable, group_label, estimate, std.error)
+    })
+}
+
+# Full-sample: both Never and Always vs. Stopped
+full_reg <- run_bal_reg(
+    bind_rows(stopped_full, never_full, always_full), bal_vars
+)
+
+# Near-threshold comp 1: Never vs. Stopped (near $12,700)
+near1_reg <- run_bal_reg(bind_rows(stopped_near1, never_near), bal_vars)
+
+# Near-threshold comp 2: Always vs. Stopped (near $24,000)
+near2_reg <- run_bal_reg(bind_rows(stopped_near2, always_near), bal_vars)
+
+# Pre-TCJA move rate (same regression approach, years 2012–2017 only)
+bal_raw_pre <- bal_raw |>
+    filter(year < 2018L) |>
+    mutate(depvar = mover,
+           grp    = factor(group, levels = c("Stopped itemizing",
+                                              "Never itemized",
+                                              "Always itemized")))
+
+move_full_mod  <- feols(depvar ~ grp, data = bal_raw_pre |>
+                            filter(group %in% c("Stopped itemizing", "Never itemized",
+                                                "Always itemized")), vcov = "HC1")
+move_near1_mod <- feols(depvar ~ grp, data = bal_raw_pre |>
+                            filter(group == "Stopped itemizing",
+                                   imp_itemizable_2017 >= cut_2017,
+                                   imp_itemizable_2017 <= cut_2017 * 1.1) |>
+                            bind_rows(bal_raw_pre |>
+                                          filter(group == "Never itemized",
+                                                 imp_itemizable_2017 >= cut_2017 * 0.9)),
+                        vcov = "HC1")
+move_near2_mod <- feols(depvar ~ grp, data = bal_raw_pre |>
+                            filter(group == "Stopped itemizing",
+                                   imp_itemizable_2018 >= cut_tcja * 0.9,
+                                   imp_itemizable_2018 <  cut_tcja) |>
+                            bind_rows(bal_raw_pre |>
+                                          filter(group == "Always itemized",
+                                                 imp_itemizable_2018 >= cut_tcja,
+                                                 imp_itemizable_2018 <= cut_tcja * 1.1)),
+                        vcov = "HC1")
+
+move_full  <- tidy(move_full_mod) |>
+    filter(term != "(Intercept)") |>
+    mutate(variable = "mover", group_label = str_remove(term, "^grp")) |>
+    select(variable, group_label, estimate, std.error)
+move_near1 <- tidy(move_near1_mod) |>
+    filter(term != "(Intercept)") |>
+    mutate(variable = "mover", group_label = str_remove(term, "^grp")) |>
+    select(variable, group_label, estimate, std.error)
+move_near2 <- tidy(move_near2_mod) |>
+    filter(term != "(Intercept)") |>
+    mutate(variable = "mover", group_label = str_remove(term, "^grp")) |>
+    select(variable, group_label, estimate, std.error)
+
+all_vars  <- c(bal_vars, "mover")
+all_labels <- c(var_labels, mover = "Pre-TCJA move rate")
+all_digits <- c(fmt_digits, mover = 3)
+
+full_reg_all  <- bind_rows(full_reg,  move_full)
+near1_reg_all <- bind_rows(near1_reg, move_near1)
+near2_reg_all <- bind_rows(near2_reg, move_near2)
+
+# Stopped-group means
+stopped_means <- bind_rows(stopped_full, bal_raw_pre |> filter(group == "Stopped itemizing")) |>
+    summarise(across(all_of(c(bal_vars, "mover")), ~ mean(.x, na.rm = TRUE))) |>
+    pivot_longer(everything(), names_to = "variable", values_to = "mean_stopped")
+
+# Assemble two-row-per-variable table: estimate row, then SE row in parentheses
+bal_table <- map_dfr(all_vars, function(v) {
+    digs   <- all_digits[[v]]
+    mean_s <- stopped_means |> filter(variable == v) |> pull(mean_stopped)
+    fe  <- function(x) formatC(round(x, digs),     format = "f", digits = digs,     big.mark = ",")
+    fse <- function(x) sprintf("(%s)", formatC(round(x, max(digs, 1)), format = "f",
+                                               digits = max(digs, 1), big.mark = ","))
+
+    get_est <- function(reg, label) {
+        row <- reg |> filter(variable == v, group_label == label)
+        if (nrow(row) == 0) return(NA_character_)
+        fe(row$estimate)
+    }
+    get_se <- function(reg, label) {
+        row <- reg |> filter(variable == v, group_label == label)
+        if (nrow(row) == 0) return(NA_character_)
+        fse(row$std.error)
+    }
+
+    bind_rows(
+        tibble(
+            Variable                                   = all_labels[[v]],
+            `Stopped (mean)`                           = fe(mean_s),
+            `Never itemized − Stopped (full sample)`   = get_est(full_reg_all,  "Never itemized"),
+            `Always itemized − Stopped (full sample)`  = get_est(full_reg_all,  "Always itemized"),
+            `Never itemized − Stopped (near $12.7k)`   = get_est(near1_reg_all, "Never itemized"),
+            `Always itemized − Stopped (near $24k)`    = get_est(near2_reg_all, "Always itemized")
+        ),
+        tibble(
+            Variable                                   = "",
+            `Stopped (mean)`                           = "",
+            `Never itemized − Stopped (full sample)`   = get_se(full_reg_all,  "Never itemized"),
+            `Always itemized − Stopped (full sample)`  = get_se(full_reg_all,  "Always itemized"),
+            `Never itemized − Stopped (near $12.7k)`   = get_se(near1_reg_all, "Never itemized"),
+            `Always itemized − Stopped (near $24k)`    = get_se(near2_reg_all, "Always itemized")
+        )
+    )
+})
+
+cat("\nBalance table — MFJ filers\n")
+cat("Reference group: 'Stopped itemizing (TCJA)' (itemized under 2017 rules, not under TCJA)\n")
+cat("Estimates from OLS(y ~ group dummy); reference = Stopped itemizing; HC1 robust SEs\n")
+cat("Each cell: OLS coefficient, with SE in parentheses on the row below.\n\n")
+print(as.data.frame(bal_table), row.names = FALSE)
+
+########################################################
+# 10l. Move rate: itemizers vs. non-itemizers at equal SALT level
 ########################################################
 
 # At a given SALT level, itemizers face a lower effective SALT cost than
@@ -1279,6 +2334,7 @@ ggplot(item_rate_by_salt, aes(bin_mid, pct_itemize)) +
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
+ggsave("../../../output/Cormac/10l_itemization_rate_by_salt.png", last_plot(), width = 8, height = 5, dpi = 150)
 
 # --- (b) Move rate by year × itemization status, faceted by $2k SALT bin ---
 # $2k bins keep the number of facets manageable (~8-10 panels).
@@ -1342,6 +2398,7 @@ ggplot(mover_salt_year,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
+ggsave("../../../output/Cormac/10l_move_rate_by_salt_bin.png", last_plot(), width = 12, height = 8, dpi = 150)
 
 ########################################################
 # 11. Move rate by additional federal tax from SALT cap, by period
@@ -1423,6 +2480,7 @@ ggplot(mover_by_tax_bin,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
+ggsave("../../../output/Cormac/11_move_rate_by_tax_bin.png", last_plot(), width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 12. Binned DiD event studies: each cost bin vs. <$500 control group
@@ -1514,6 +2572,361 @@ ggplot(es_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
+ggsave("../../../output/Cormac/12_event_study_by_cost_bin.png", last_plot(), width = 9, height = 5, dpi = 150)
+
+########################################################
+# 13. Move rate by itemizable income (2017 rules), by year
+########################################################
+
+ITEM_BIN_W <- 2000
+
+move_by_item_raw <- dbGetQuery(con, "
+    SELECT
+        CAST(imp_itemizable_2017 AS DOUBLE) AS imp_itemizable_2017,
+        CASE WHEN migrate1 IN (2,3,4) THEN 1 ELSE 0 END AS mover,
+        year
+    FROM acs_microdata
+    WHERE pernum = 1 AND gq IN (1, 2, 5) AND migrate1 != 0
+      AND imp_itemizable_2017 IS NOT NULL
+      AND year BETWEEN 2013 AND 2023
+") |>
+    as_tibble() |>
+    mutate(
+        bin_start = floor(imp_itemizable_2017 / ITEM_BIN_W) * ITEM_BIN_W,
+        bin_mid   = bin_start + ITEM_BIN_W / 2
+    )
+
+ITEM_MAX <- round(quantile(move_by_item_raw$imp_itemizable_2017, 0.95, na.rm = TRUE), -3)
+
+move_by_item_yr <- move_by_item_raw |>
+    filter(bin_start >= 0, bin_start <= ITEM_MAX) |>
+    group_by(year, bin_start, bin_mid) |>
+    summarise(
+        share_movers = mean(mover),
+        n            = n(),
+        .groups      = "drop"
+    ) |>
+    filter(n >= 30) |>
+    mutate(year = factor(year))
+
+year_colors_13 <- setNames(
+    colorRampPalette(c("#2166ac", "#74add1", "#abd9e9", "#e0f3f8",
+                       "#ffffbf", "#fee090", "#fdae61", "#f46d43",
+                       "#d73027", "#a50026", "#67001f"))(11),
+    as.character(2013:2023)
+)
+
+ggplot(move_by_item_yr,
+       aes(bin_mid, share_movers, color = year, group = year)) +
+    geom_vline(xintercept = 6350,  linetype = "dotted", color = "grey50", linewidth = 0.5) +
+    geom_vline(xintercept = 12700, linetype = "dashed", color = "grey40", linewidth = 0.6) +
+    geom_line(linewidth = 0.7, alpha = 0.85) +
+    geom_point(size = 1.2) +
+    annotate("text", x = 6350  + 400, y = Inf, label = "Single std ded\n($6,350)",
+             vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
+    annotate("text", x = 12700 + 400, y = Inf, label = "MFJ std ded\n($12,700)",
+             vjust = 1.4, hjust = 0, size = 2.8, color = "grey40") +
+    scale_x_continuous(labels = scales::dollar_format(scale = 1e-3, suffix = "k")) +
+    scale_y_continuous(labels = scales::percent_format(1)) +
+    scale_color_manual(values = year_colors_13, name = "Year") +
+    labs(
+        x        = paste0("Itemizable income, 2017 rules ($",
+                          ITEM_BIN_W / 1000, "k bins)"),
+        y        = "Share of household heads who moved",
+        title    = "Move rate by itemizable income (2017 rules), by year",
+        subtitle = "Dotted = Single std ded ($6,350)  •  Dashed = MFJ std ded ($12,700)"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20"),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "right"
+    )
+ggsave("../../../output/Cormac/13_move_rate_by_itemizable_income.png", last_plot(), width = 10, height = 6, dpi = 150)
+
+########################################################
+# 14. Pre-post TCJA first differences by demographic cell
+########################################################
+
+# In a repeated cross-section, first differences can only be estimated at
+# the group level. Strategy: compute cell × period mean move rates in SQL
+# (averaging 2013-2017 and 2018-2023 separately), first-difference post−pre
+# within each cell, then WLS on demographic characteristics weighted by
+# harmonic mean of pre/post cell sizes. Averaging over 5+ years per period
+# greatly reduces sampling noise vs. year-over-year FDs.
+
+cell_pp_14 <- dbGetQuery(con, "
+    SELECT
+        CASE WHEN year <= 2017 THEN 'pre' ELSE 'post' END AS period,
+        CASE
+            WHEN age BETWEEN 18 AND 29 THEN '18-29'
+            WHEN age BETWEEN 30 AND 39 THEN '30-39'
+            WHEN age BETWEEN 40 AND 49 THEN '40-49'
+            WHEN age BETWEEN 50 AND 64 THEN '50-64'
+            ELSE '65+'
+        END AS age_grp,
+        CASE WHEN sex      = 2       THEN 1 ELSE 0 END AS female,
+        CASE WHEN marst    = 1       THEN 1 ELSE 0 END AS married,
+        CASE WHEN educ     >= 10     THEN 1 ELSE 0 END AS college,
+        CASE WHEN nchild   > 0       THEN 1 ELSE 0 END AS has_child,
+        CASE WHEN ownershp = 1       THEN 1 ELSE 0 END AS owns_home,
+        CASE WHEN metro    IN (1, 2) THEN 1 ELSE 0 END AS in_metro,
+        CASE
+            WHEN race = 1        THEN 'White'
+            WHEN race = 2        THEN 'Black'
+            WHEN race IN (4,5,6) THEN 'Asian'
+            ELSE 'Other'
+        END AS race_grp,
+        CASE
+            WHEN CAST(hhincome AS DOUBLE) <  25000 THEN '<$25k'
+            WHEN CAST(hhincome AS DOUBLE) <  50000 THEN '$25-50k'
+            WHEN CAST(hhincome AS DOUBLE) < 100000 THEN '$50-100k'
+            WHEN CAST(hhincome AS DOUBLE) < 200000 THEN '$100-200k'
+            ELSE '$200k+'
+        END AS inc_grp,
+        AVG(CASE WHEN migrate1 IN (2,3,4) THEN 1.0 ELSE 0.0 END) AS move_rate,
+        COUNT(*) AS n
+    FROM acs_microdata
+    WHERE pernum = 1 AND gq IN (1, 2, 5) AND migrate1 != 0
+      AND hhincome != 9999999
+      AND age BETWEEN 18 AND 100
+      AND year BETWEEN 2013 AND 2023
+    GROUP BY period, age_grp, female, married, college, has_child,
+             owns_home, in_metro, race_grp, inc_grp
+") |> as_tibble()
+
+cell_fd_14 <- cell_pp_14 |>
+    pivot_wider(names_from = period, values_from = c(move_rate, n),
+                names_sep = "_") |>
+    filter(!is.na(move_rate_pre), !is.na(move_rate_post)) |>
+    mutate(
+        delta  = move_rate_post - move_rate_pre,
+        w_harm = 2 * n_pre * n_post / (n_pre + n_post),
+        age_grp  = factor(age_grp, c("18-29","30-39","40-49","50-64","65+")),
+        race_grp = relevel(factor(race_grp), ref = "White"),
+        inc_grp  = factor(inc_grp,
+                          c("<$25k","$25-50k","$50-100k","$100-200k","$200k+"))
+    )
+
+cat(sprintf("\nPre-post FD dataset: %d cells\n", nrow(cell_fd_14)))
+cat(sprintf("  Mean pre move rate:   %.3f\n", weighted.mean(cell_fd_14$move_rate_pre,  cell_fd_14$n_pre)))
+cat(sprintf("  Mean post move rate:  %.3f\n", weighted.mean(cell_fd_14$move_rate_post, cell_fd_14$n_post)))
+cat(sprintf("  Mean delta:           %.4f\n", weighted.mean(cell_fd_14$delta, cell_fd_14$w_harm)))
+
+# WLS: outcome = post - pre move rate, predictors = cell demographics, HC1 SEs
+fit_14 <- feols(
+    delta ~ age_grp + female + married + college + has_child +
+            owns_home + in_metro + race_grp + inc_grp,
+    data    = cell_fd_14,
+    weights = ~w_harm,
+    vcov    = "HC1"
+)
+
+cat("\nSection 14 WLS (pre-post FD ~ demographics):\n")
+print(summary(fit_14))
+
+label_map_14 <- c(
+    "age_grp30-39"    = "Age: 30-39",
+    "age_grp40-49"    = "Age: 40-49",
+    "age_grp50-64"    = "Age: 50-64",
+    "age_grp65+"      = "Age: 65+",
+    "female"          = "Female",
+    "married"         = "Married",
+    "college"         = "College graduate",
+    "has_child"       = "Has children",
+    "owns_home"       = "Owns home",
+    "in_metro"        = "Metro area",
+    "race_grpBlack"   = "Race: Black",
+    "race_grpAsian"   = "Race: Asian",
+    "race_grpOther"   = "Race: Other",
+    "inc_grp$25-50k"  = "Income: $25-50k",
+    "inc_grp$50-100k" = "Income: $50-100k",
+    "inc_grp$100-200k"= "Income: $100-200k",
+    "inc_grp$200k+"   = "Income: $200k+"
+)
+
+coef_df_14 <- tidy(fit_14) |>
+    filter(term != "(Intercept)") |>
+    mutate(
+        conf.low  = estimate - 1.96 * std.error,
+        conf.high = estimate + 1.96 * std.error,
+        label     = coalesce(label_map_14[term], term),
+        sig       = if_else(abs(estimate) > 1.96 * std.error, "p < 0.05", "p ≥ 0.05")
+    )
+
+ggplot(coef_df_14,
+       aes(x = estimate, y = fct_reorder(label, estimate), color = sig)) +
+    geom_vline(xintercept = 0, color = "grey40", linewidth = 0.4) +
+    geom_errorbarh(aes(xmin = conf.low, xmax = conf.high),
+                   height = 0.25, linewidth = 0.6) +
+    geom_point(size = 2.5) +
+    scale_color_manual(
+        values = c("p < 0.05" = "#23373b", "p ≥ 0.05" = "grey65"),
+        name = NULL
+    ) +
+    scale_x_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+    labs(
+        x        = "Post-TCJA minus pre-TCJA move rate (pp)",
+        y        = NULL,
+        title    = "Pre-post TCJA change in move rate by demographic cell",
+        subtitle = paste0(
+            "WLS, weighted by harmonic mean of pre/post cell size | HC1 SEs\n",
+            "Ref: Age 18-29, Male, Not married, No college, No children, ",
+            "Rents, Non-metro, White, Income <$25k"
+        )
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20"),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/14_prepost_fd_demographics.png", last_plot(), width = 9, height = 7, dpi = 150)
+
+########################################################
+# 15. Move rate vs. itemizable income: most vs. least mobile demographic
+########################################################
+
+# For each of several single-variable demographic cuts, compute move rate by
+# $2k itemizable-income bin in one SQL pass (CTE + UNION ALL). Identify the
+# group with the highest and lowest overall move rate across all cuts, then
+# plot those two lines plus the pooled average.
+
+item_by_demo_15 <- dbGetQuery(con, "
+    WITH binned AS (
+        SELECT
+            CASE WHEN migrate1 IN (2,3,4) THEN 1.0 ELSE 0.0 END AS mover,
+            FLOOR(CAST(imp_itemizable_2017 AS DOUBLE) / 2000) * 2000 AS bin_start,
+            age, marst, ownershp, educ, sex, nchild, metro
+        FROM acs_microdata
+        WHERE pernum = 1 AND gq IN (1, 2, 5) AND migrate1 != 0
+          AND imp_itemizable_2017 IS NOT NULL
+          AND CAST(imp_itemizable_2017 AS DOUBLE) >= 0
+          AND year BETWEEN 2013 AND 2023
+    )
+    SELECT grp, bin_start, AVG(mover) AS move_rate, COUNT(*) AS n
+    FROM (
+        SELECT 'Overall' AS grp, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN age BETWEEN 18 AND 29 THEN 'Age: 18-29'
+                    WHEN age BETWEEN 30 AND 39 THEN 'Age: 30-39'
+                    WHEN age BETWEEN 40 AND 49 THEN 'Age: 40-49'
+                    WHEN age BETWEEN 50 AND 64 THEN 'Age: 50-64'
+                    ELSE 'Age: 65+' END,                                      bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN marst    = 1       THEN 'Married'      ELSE 'Not married'  END, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN ownershp = 1       THEN 'Owns home'    ELSE 'Rents'        END, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN educ     >= 10     THEN 'College+'     ELSE 'No college'   END, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN sex      = 2       THEN 'Female'       ELSE 'Male'         END, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN nchild   > 0       THEN 'Has children' ELSE 'No children'  END, bin_start, mover FROM binned
+        UNION ALL
+        SELECT CASE WHEN metro    IN (1, 2) THEN 'Metro'        ELSE 'Non-metro'    END, bin_start, mover FROM binned
+    ) t
+    GROUP BY grp, bin_start
+") |> as_tibble()
+
+# Overall move rate per group — used to rank mobility
+group_ranks_15 <- item_by_demo_15 |>
+    filter(grp != "Overall") |>
+    group_by(grp) |>
+    summarise(overall_rate = weighted.mean(move_rate, n), .groups = "drop") |>
+    arrange(desc(overall_rate))
+
+cat("\nOverall move rates by demographic group (2013-2023):\n")
+print(as.data.frame(group_ranks_15 |> mutate(overall_rate = round(100 * overall_rate, 2))))
+
+most_mobile_15  <- group_ranks_15$grp[1]
+least_mobile_15 <- group_ranks_15$grp[nrow(group_ranks_15)]
+cat(sprintf("\nMost mobile:  %s (%.1f%%)\n", most_mobile_15,
+            100 * group_ranks_15$overall_rate[1]))
+cat(sprintf("Least mobile: %s (%.1f%%)\n\n", least_mobile_15,
+            100 * tail(group_ranks_15$overall_rate, 1)))
+
+# Approximate 95th-percentile of itemizable income from the Overall bin distribution
+ITEM_MAX_15 <- item_by_demo_15 |>
+    filter(grp == "Overall") |>
+    arrange(bin_start) |>
+    mutate(cum_pct = cumsum(n) / sum(n)) |>
+    filter(cum_pct >= 0.95) |>
+    slice_head(n = 1) |>
+    pull(bin_start)
+
+plot_data_15 <- item_by_demo_15 |>
+    filter(grp %in% c(most_mobile_15, "Overall", least_mobile_15),
+           bin_start <= ITEM_MAX_15,
+           n >= 30) |>
+    mutate(
+        bin_mid = bin_start + 1000,
+        group   = factor(grp,
+                         levels = c(most_mobile_15, "Overall", least_mobile_15))
+    )
+
+grp_colors_15 <- setNames(c("#c06028", "grey40", "#2c5f8a"),
+                           c(most_mobile_15, "Overall", least_mobile_15))
+grp_ltypes_15 <- setNames(c("solid", "dashed", "solid"),
+                           c(most_mobile_15, "Overall", least_mobile_15))
+
+ggplot(plot_data_15,
+       aes(bin_mid, move_rate, color = group, linetype = group, group = group)) +
+    geom_vline(xintercept = 6350,  linetype = "dotted", color = "grey55",
+               linewidth = 0.5) +
+    geom_vline(xintercept = 12700, linetype = "dotted", color = "grey55",
+               linewidth = 0.5) +
+    geom_line(linewidth = 0.85) +
+    geom_point(size = 1.8) +
+    annotate("text", x = 6350  + 400, y = Inf, label = "Single\nstd ded",
+             vjust = 1.3, hjust = 0, size = 2.7, color = "grey45") +
+    annotate("text", x = 12700 + 400, y = Inf, label = "MFJ\nstd ded",
+             vjust = 1.3, hjust = 0, size = 2.7, color = "grey45") +
+    scale_x_continuous(labels = scales::dollar_format(scale = 1e-3, suffix = "k")) +
+    scale_y_continuous(labels = scales::percent_format(1)) +
+    scale_color_manual(values = grp_colors_15, name = NULL) +
+    scale_linetype_manual(values = grp_ltypes_15, name = NULL) +
+    labs(
+        x        = "Itemizable income, 2017 rules ($2k bins)",
+        y        = "Share of household heads who moved",
+        title    = "Move rate by itemizable income: most vs. least mobile demographic",
+        subtitle = sprintf(
+            "Most mobile: %s  |  Least mobile: %s  |  Overall avg dashed  |  pooled 2013–2023",
+            most_mobile_15, least_mobile_15
+        )
+    ) +
+    theme(
+        panel.background  = element_rect(fill = "#fafafa", color = NA),
+        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        axis.text.x       = element_text(color = "grey20"),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/15_move_rate_item_income_het.png",
+       last_plot(), width = 9, height = 5, dpi = 150)
 
 dbDisconnect(con, shutdown = TRUE)
 

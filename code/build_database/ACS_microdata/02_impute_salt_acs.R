@@ -300,11 +300,11 @@ heads_with_tax <- heads_with_tax |>
     by = "proptx99"
   ) |>
   mutate(
-    proptx_topcoded = case_when(
-      year < 2018 & is_topcoded_pre2018  ~ TRUE,
-      year >= 2018 & is_topcoded_2018plus ~ TRUE,
-      TRUE ~ FALSE
-    ),
+    # Use the pre-2018 $10k threshold consistently for all years.
+    # Post-2018 the ACS adds bins 70–158 ($11k–$99,999), but treating those
+    # as non-top-coded creates a sample composition break at 2018 that
+    # contaminates counterfactual SALT comparisons.
+    proptx_topcoded = proptx99 >= 69L,
     # Renters and "None" get 0; top-coded and N/A get NA
     proptx_mid = case_when(
       proptx_topcoded          ~ NA_real_,
