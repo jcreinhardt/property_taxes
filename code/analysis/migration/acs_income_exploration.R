@@ -12,12 +12,19 @@ library(fixest)
 library(broom)
 library(stringr)
 library(doParallel)
+library(patchwork)
 
 n_cores <- 10
 options(ranger.num.threads = n_cores)
 registerDoParallel(cores = n_cores)
 
 con <- dbConnect(duckdb::duckdb(), dbdir = "../../../data/database.db", read_only = TRUE)
+
+# ── Plot theme toggle ────────────────────────────────────────────────────────
+# Set PLOT_MODE to "slides" (light-grey background) or "paper" (white background).
+PLOT_MODE <- "paper"
+bg_col    <- if (PLOT_MODE == "paper") "white" else "#fafafa"
+# ─────────────────────────────────────────────────────────────────────────────
 
 period_colors <- c(
     "2012-2014" = "#23373b",
@@ -228,14 +235,14 @@ mover_by_income |>
     scale_x_continuous(breaks = 1:10) +
     labs(x = "Household income decile (year-specific)", y = "Share of household heads who moved") +
     theme(
-        panel.background = element_rect(fill = "#fafafa", color = NA),
-        plot.background  = element_rect(fill = "#fafafa", color = NA),
+        panel.background = element_rect(fill = bg_col, color = NA),
+        plot.background  = element_rect(fill = bg_col, color = NA),
         panel.grid.major = element_line(color = "grey90"),
         panel.grid.minor = element_blank(),
         axis.line.x = element_line(color = "grey30"),
         axis.line.y = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key = element_rect(fill = bg_col, color = NA),
         axis.text.x = element_text(color = "grey20"),
         axis.text.y = element_text(color = "grey20"),
         text = element_text(color = "grey20")
@@ -283,14 +290,14 @@ mover_by_salt |>
     scale_x_continuous(breaks = 1:10) +
     labs(x = "SALT decile (year-specific)", y = "Share of household heads who moved") +
     theme(
-        panel.background = element_rect(fill = "#fafafa", color = NA),
-        plot.background  = element_rect(fill = "#fafafa", color = NA),
+        panel.background = element_rect(fill = bg_col, color = NA),
+        plot.background  = element_rect(fill = bg_col, color = NA),
         panel.grid.major = element_line(color = "grey90"),
         panel.grid.minor = element_blank(),
         axis.line.x = element_line(color = "grey30"),
         axis.line.y = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key = element_rect(fill = bg_col, color = NA),
         axis.text.x = element_text(color = "grey20"),
         axis.text.y = element_text(color = "grey20"),
         text = element_text(color = "grey20")
@@ -456,8 +463,8 @@ predictor_summary |>
     labs(x = "Coefficient range (highest − lowest level)", y = NULL,
          title = "Predictor importance (LASSO, household heads 2013-2023)") +
     theme(
-        panel.background = element_rect(fill = "#fafafa", color = NA),
-        plot.background  = element_rect(fill = "#fafafa", color = NA),
+        panel.background = element_rect(fill = bg_col, color = NA),
+        plot.background  = element_rect(fill = bg_col, color = NA),
         panel.grid.major = element_line(color = "grey90"),
         panel.grid.minor = element_blank(),
         axis.line.x = element_line(color = "grey30"),
@@ -565,8 +572,8 @@ ggplot(pdp_df, aes(imp_salt, move_rate)) +
         subtitle = "E[mover | SALT = x], integrating over marginal distribution of controls"
     ) +
     theme(
-        panel.background = element_rect(fill = "#fafafa", color = NA),
-        plot.background  = element_rect(fill = "#fafafa", color = NA),
+        panel.background = element_rect(fill = bg_col, color = NA),
+        plot.background  = element_rect(fill = bg_col, color = NA),
         panel.grid.major = element_line(color = "grey90"),
         panel.grid.minor = element_blank(),
         axis.line.x      = element_line(color = "grey30"),
@@ -634,15 +641,15 @@ ggplot(resid_by_period, aes(salt_mid, mean_resid, color = period)) +
         subtitle = "Residuals from forest trained on 2012-2017; zero = matches pre-period expectation"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
         axis.text         = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
         legend.position   = "bottom"
     ) + 
     xlim(0, 10000)
@@ -889,7 +896,7 @@ item_data <- item_data |>
 
 # Step 2: group × year cell means with HC1-robust SEs via a saturated feols.
 cell_fit <- feols(
-    adj_mover ~ 0 + group:factor(year) | statefip^year,
+    mover ~ 0 + group:factor(year),
     data   = item_data,
     vcov   = "HC1"
 )
@@ -931,45 +938,264 @@ ggplot(mover_by_group_year,
         title = "Moving rates by itemization group"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
 ggsave("../../../output/Cormac/10a_moving_rates_by_group.png", last_plot(), width = 8, height = 5, dpi = 150)
 
+# 10a-ii. Quantile-anchored group assignment + raw moving rates.
+# item_data_q is also used in section 10h; compute it once here.
+#
+# Concern with fixed-dollar thresholds: nominal wage/property-tax growth over
+# time shifts households across the threshold in every year, causing spurious
+# drift in group sizes. Fix: for each year × fstatus cell, find the threshold
+# that keeps the share of "itemizers" equal to the 2017 (pre-TCJA) or 2018
+# (TCJA) reference-year share.
+
+ref_p_2017 <- item_data |>
+    filter(year == 2017L) |>
+    group_by(fstatus) |>
+    summarise(p_2017 = mean(imp_itemizes_2017 == 1L, na.rm = TRUE), .groups = "drop")
+
+ref_p_2018 <- item_data |>
+    filter(year == 2018L) |>
+    group_by(fstatus) |>
+    summarise(p_2018 = mean(tcja_itemizes == 1L, na.rm = TRUE), .groups = "drop")
+
+q_thresholds <- item_data |>
+    left_join(ref_p_2017, by = "fstatus") |>
+    left_join(ref_p_2018, by = "fstatus") |>
+    group_by(year, fstatus) |>
+    summarise(
+        q_thresh_2017 = quantile(imp_itemizable_2017, 1 - first(p_2017), na.rm = TRUE),
+        q_thresh_2018 = quantile(imp_itemizable_2018, 1 - first(p_2018), na.rm = TRUE),
+        .groups = "drop"
+    )
+
+item_data_q <- item_data |>
+    left_join(q_thresholds, by = c("year", "fstatus")) |>
+    mutate(
+        q_itemizes_2017 = as.integer(!is.na(imp_itemizable_2017) & imp_itemizable_2017 > q_thresh_2017),
+        q_itemizes_2018 = as.integer(!is.na(imp_itemizable_2018) & imp_itemizable_2018 > q_thresh_2018),
+        q_group = case_when(
+            q_itemizes_2017 == 1L & q_itemizes_2018 == 1L ~ "Always itemized",
+            q_itemizes_2017 == 1L & q_itemizes_2018 == 0L ~ "Stopped itemizing (TCJA)",
+            q_itemizes_2017 == 0L & q_itemizes_2018 == 0L ~ "Never itemized",
+            TRUE ~ NA_character_
+        )
+    )
+
+cat("\nQuantile-group shares by year (MFJ and Single) — should be roughly constant:\n")
+item_data_q |>
+    filter(!is.na(q_group), fstatus %in% c("MFJ", "Single")) |>
+    count(year, fstatus, q_group) |>
+    group_by(year, fstatus) |>
+    mutate(share = round(n / sum(n), 3)) |>
+    print(n = 60)
+
+q_cell_fit <- feols(
+    mover ~ 0 + q_group:factor(year),
+    data = item_data_q |> filter(!is.na(q_group)),
+    vcov = "HC1"
+)
+
+mover_by_qgroup_year <- tidy(q_cell_fit) |>
+    mutate(
+        group = case_when(
+            grepl("Always itemized",   term) ~ "Always itemized",
+            grepl("Stopped itemizing", term) ~ "Stopped itemizing (TCJA)",
+            TRUE                             ~ "Never itemized"
+        ) |> factor(levels = c("Never itemized", "Stopped itemizing (TCJA)", "Always itemized")),
+        year = as.integer(regmatches(term, regexpr("\\d{4}", term)))
+    ) |>
+    select(group, year, share_movers = estimate, se = std.error)
+
+ggplot(mover_by_qgroup_year,
+       aes(year, share_movers, color = group, fill = group, group = group)) +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey60") +
+    geom_ribbon(aes(ymin = share_movers - 1.96 * se,
+                    ymax = share_movers + 1.96 * se),
+                alpha = 0.12, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    annotate("text", x = 2017.7, y = Inf, label = "TCJA",
+             vjust = 1.5, hjust = 0, color = "grey40", size = 3.5) +
+    scale_color_manual(name = NULL, values = group_colors) +
+    scale_fill_manual(name  = NULL, values = group_colors) +
+    scale_x_continuous(breaks = 2012:2023) +
+    scale_y_continuous(labels = scales::percent_format(1)) +
+    labs(
+        x        = NULL,
+        y        = "Share of household heads who moved",
+        title    = "Moving rates by itemization group (quantile-anchored assignment)",
+        subtitle = "Thresholds rescaled each year to hold reference-year itemizer shares fixed"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20")
+    )
+ggsave("../../../output/Cormac/10a_moving_rates_qgroup.png", last_plot(), width = 8, height = 5, dpi = 150)
+
+# 10a-iii. Raw moving rates for matched treatment and control groups near each cutoff.
+# Applies the same BW_2017 / BW_TCJA bandwidth as the event studies so the raw
+# means correspond directly to the regression samples.
+
+raw_means_matched <- bind_rows(lapply(fstatuses, function(fs) {
+    thresh1 <- std_ded_2017_map[[fs]]
+    thresh2 <- tcja_std_ded_map[[fs]]
+
+    dat1 <- bind_rows(
+        item_data |>
+            filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
+            mutate(gap = imp_itemizable_2017 - thresh1) |>
+            filter(gap <= BW_2017 * thresh1),
+        item_data |>
+            filter(group == "Never itemized", fstatus == fs) |>
+            mutate(gap = thresh1 - imp_itemizable_2017) |>
+            filter(gap <= BW_2017 * thresh1)
+    )
+
+    dat2 <- bind_rows(
+        item_data |>
+            filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
+            mutate(gap = thresh2 - imp_itemizable_2018) |>
+            filter(gap <= BW_TCJA * thresh2),
+        item_data |>
+            filter(group == "Always itemized", fstatus == fs) |>
+            mutate(gap = imp_itemizable_2018 - thresh2) |>
+            filter(gap <= BW_TCJA * thresh2)
+    )
+
+    bind_rows(
+        dat1 |>
+            group_by(year, group) |>
+            summarise(mean_mover = mean(mover),
+                      se         = sd(mover) / sqrt(n()),
+                      .groups    = "drop") |>
+            mutate(comparison = "Stopped vs. Never", fstatus = fs),
+        dat2 |>
+            group_by(year, group) |>
+            summarise(mean_mover = mean(mover),
+                      se         = sd(mover) / sqrt(n()),
+                      .groups    = "drop") |>
+            mutate(comparison = "Stopped vs. Always", fstatus = fs)
+    )
+})) |>
+    mutate(
+        group      = factor(group, levels = c("Never itemized",
+                                              "Stopped itemizing (TCJA)",
+                                              "Always itemized")),
+        comparison = factor(comparison, levels = c("Stopped vs. Never",
+                                                   "Stopped vs. Always")),
+        fstatus    = factor(fstatus, levels = fstatuses),
+        ci_lo      = mean_mover - 1.96 * se,
+        ci_hi      = mean_mover + 1.96 * se
+    )
+
+ggplot(raw_means_matched,
+       aes(year, mean_mover, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_grid(fstatus ~ comparison) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+    scale_color_manual(values = group_colors, name = NULL) +
+    scale_fill_manual(values  = group_colors, name = NULL) +
+    labs(
+        x        = NULL,
+        y        = "Share of household heads who moved",
+        title    = "Raw moving rates: matched treatment and control groups near each threshold",
+        subtitle = paste0("Bandwidth: ±", scales::percent(BW_2017),
+                          " of 2017 cutoff (left); ±", scales::percent(BW_TCJA),
+                          " of TCJA cutoff (right)")
+    ) +
+    theme(
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10a_moving_rates_matched.png", last_plot(),
+       width = 10, height = 7, dpi = 150)
+
 ########################################################
-# 10b. Event study: moving rates by itemization group (TWFE)
+# 10b. Event study: two threshold comparisons (asymmetric matched controls)
+#
+# Comparison 1 — near the 2017 standard deduction threshold:
+#   Treatment: "Stopped itemizing (TCJA)"  — just ABOVE 2017 threshold
+#              (higher imp_itemizable_2017; were itemizing pre-TCJA, lost deduction)
+#   Control:   "Never itemized"            — just BELOW 2017 threshold
+#
+# Comparison 2 — near the TCJA standard deduction threshold:
+#   Treatment: "Stopped itemizing (TCJA)"  — just BELOW TCJA threshold
+#              (lower imp_itemizable_2018; SIGN FLIP vs. comparison 1)
+#   Control:   "Always itemized"           — just ABOVE TCJA threshold
+#
+# Both comparisons produce a "Stopped itemizing" coefficient, but relative to
+# different counterfactuals. Lines are labeled by their control group.
 ########################################################
 
-# Two separate TWFE event studies vs. "Never itemized" (untreated control):
-#   - "Always itemized"          (treat_always)
-#   - "Stopped itemizing (TCJA)" / compliers (treat_stopped)
-# Reference year = 2017. Controls: age, sex, marst, race, hispan, educ,
-# metro, multgen. FE: year + statefip. Clustered SEs by state.
-# item_data already in memory from Section 10 (10% sample, 2012–2023).
+# gap_col:    column of itemizable total used to measure proximity
+# threshold:  filing-status-specific standard deduction
+# treat_above: TRUE  → treatment is above threshold (higher gap_col); comparison 1
+#              FALSE → treatment is below threshold (lower gap_col);  comparison 2
+# band_pct:   bandwidth as a fraction of threshold (e.g. 0.25 = within 25% of cutoff)
+run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, data,
+                           band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+    } else {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+    }
 
-run_group_es <- function(treat_label, fs, data) {
-    # Restrict never-itemizers to the 10% closest to the 2017 itemization
-    # threshold within the same filing status: gap = std_ded_2017 - imp_itemizable_2017.
-    # Computed separately per fstatus so MFJ, HoH, and Single each contribute
-    # a near-threshold control group appropriate to their own standard deduction.
-    std_ded_2017 <- c(MFJ = 12700, HoH = 9350, Single = 6350)
-
-    never_close <- data |>
-        filter(group == "Never itemized", fstatus == fs) |>
-        mutate(gap_2017 = std_ded_2017[as.character(fstatus)] - imp_itemizable_2017) |>
-        filter(gap_2017 <= quantile(gap_2017, 0.10, na.rm = TRUE))
-
-    dat <- bind_rows(never_close, data |> filter(group == treat_label, fstatus == fs)) |>
+    dat <- bind_rows(control_close, treat_close) |>
         mutate(treated = as.integer(group == treat_label))
+
     feols(
         mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
             hispan + educ + metro + multgen | year + statefip,
@@ -977,17 +1203,37 @@ run_group_es <- function(treat_label, fs, data) {
     )
 }
 
-treat_labels <- c("Always itemized", "Stopped itemizing (TCJA)")
-fstatuses    <- c("MFJ", "HoH", "Single")
+fstatuses        <- c("MFJ", "Single")
+std_ded_2017_map <- c(MFJ = 12700, HoH = 9350, Single = 6350)
+tcja_std_ded_map <- c(MFJ = 24000, HoH = 18000, Single = 12000)
+BW_2017          <- 0.2    # bandwidth for 2017 threshold comparisons: within 25% of cutoff
+BW_TCJA          <- 0.2    # bandwidth for TCJA threshold comparisons:  within 50% of cutoff
 
-es_group_results <- bind_rows(lapply(fstatuses, function(fs) {
-    bind_rows(lapply(treat_labels, function(tl) {
-        fit <- run_group_es(tl, fs, item_data)
-        tidy(fit) |>
+# Legend labels encode the control group so both "Stopped itemizing" lines
+# are distinguishable in the plot.
+treat_labels  <- c("Stopped vs. Never", "Stopped vs. Always")
+es_group_colors <- c(
+    "Stopped vs. Never"  = "#c06028",
+    "Stopped vs. Always" = "#4a7c82"
+)
+
+es_10b_results <- bind_rows(lapply(fstatuses, function(fs) {
+    bind_rows(
+        # Comparison 1: treatment ABOVE 2017 threshold
+        tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
+                            "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data,
+                            band_pct = BW_2017, treat_above = TRUE)) |>
             filter(str_detect(term, "year::")) |>
-            mutate(year  = as.integer(str_extract(term, "\\d{4}")),
-                   group = tl, fstatus = fs)
-    }))
+            mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Stopped vs. Never", fstatus = fs),
+        # Comparison 2: treatment BELOW TCJA threshold (sign flip)
+        tidy(run_matched_es("Stopped itemizing (TCJA)", "Always itemized",
+                            "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data,
+                            band_pct = BW_TCJA, treat_above = FALSE)) |>
+            filter(str_detect(term, "year::")) |>
+            mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                   group = "Stopped vs. Always", fstatus = fs)
+    )
 })) |>
     bind_rows(
         expand.grid(year = 2017L, estimate = 0, std.error = 0,
@@ -996,47 +1242,42 @@ es_group_results <- bind_rows(lapply(fstatuses, function(fs) {
                     stringsAsFactors = FALSE)
     ) |>
     mutate(
-        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        group   = factor(group,   levels = treat_labels),
         fstatus = factor(fstatus, levels = fstatuses),
         ci_lo   = estimate - 1.96 * std.error,
         ci_hi   = estimate + 1.96 * std.error
     ) |>
     arrange(fstatus, group, year)
 
-es_group_colors <- c(
-    "Always itemized"          = "#4a7c82",
-    "Stopped itemizing (TCJA)" = "#c06028"
-)
-
-ggplot(es_group_results,
+ggplot(es_10b_results,
        aes(year, estimate, color = group, fill = group, group = group)) +
     geom_hline(yintercept = 0, color = "grey70") +
     geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
     geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
     geom_line(linewidth = 0.9) +
     geom_point(size = 2) +
-    facet_wrap(~ fstatus, ncol = 3) +
+    facet_wrap(~ fstatus, ncol = 2) +
     scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
-    scale_color_manual(values = es_group_colors, name = NULL) +
-    scale_fill_manual(values  = es_group_colors, name = NULL) +
+    scale_color_manual(values = es_group_colors, name = "Stopped itemizing (TCJA) vs.") +
+    scale_fill_manual(values  = es_group_colors, name = "Stopped itemizing (TCJA) vs.") +
     labs(
         x        = NULL,
         y        = "Additional probability of moving (pp)",
-        title    = "Event study: moving rates by itemization group and filing status",
-        subtitle = "vs. nearest 10% of never-itemizers by filing status; ref = 2017; controls + year + state FE; clustered by state"
+        title    = "Event study: Stopped itemizing (TCJA) — two threshold comparisons",
+        subtitle = "10% band near 2017 threshold, 30% band near TCJA threshold; treatment above 2017 cutoff, below TCJA cutoff; ref = 2017"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1045,97 +1286,142 @@ ggplot(es_group_results,
 ggsave("../../../output/Cormac/10b_event_study.png", last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
-# 10c. Event study by filing status: asymmetric matched controls
-#       - Compliers vs. nearest 10% of never-itemizers (2017 threshold)
-#       - Always-itemizers vs. nearest 10% of compliers (TCJA threshold)
+# 10c. Sensitivity to control specification
 ########################################################
 
-# run_matched_es: generic version of run_group_es where both the control group
-# label and the gap variable/threshold can vary.
-# gap_col:   column name of the itemizable total used to measure proximity
-# threshold: the filing-status-specific standard deduction to gap against
-run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, data) {
-    control_close <- data |>
-        filter(group == control_label, fstatus == fs) |>
-        mutate(gap = threshold - .data[[gap_col]]) |>
-        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
+# Five progressively richer specifications for both comparisons:
+#   1. No controls, no FEs
+#   2. Demographic controls only (no FEs)
+#   3. Year + state FEs only (no demographics)
+#   4. Demographics + year + state FEs  [baseline / same as 10b]
+#   5. Demographics + year + state FEs + log income proxy
+#
+# Income proxy: log(pmax(imp_itemizable_2017, 1)) — pre-treatment itemizable
+# deductions, which track income tightly and serve as the RDD running variable.
+# Controlling for it within the bandwidth absorbs residual income variation
+# without colluding with the treatment indicator.
+#
+# Layout: facet_grid(group ~ fstatus), one line per spec.
 
-    dat <- bind_rows(control_close, data |> filter(group == treat_label, fstatus == fs)) |>
+ctrl_specs <- list(
+    "No controls"         = mover ~ treated + i(year, treated, ref = 2017),
+    "Demographics"        = mover ~ treated + i(year, treated, ref = 2017) +
+                                age + sex + race + hispan + educ + metro + multgen,
+    "FEs only"            = mover ~ treated + i(year, treated, ref = 2017) | year + statefip,
+    "Demo + FEs"          = mover ~ treated + i(year, treated, ref = 2017) +
+                                age + sex + race + hispan + educ + metro + multgen | year + statefip,
+    "Demo + FEs + Income" = mover ~ treated + i(year, treated, ref = 2017) +
+                                age + sex + race + hispan + educ + metro + multgen +
+                                log(pmax(imp_itemizable_2017, 1)) | year + statefip
+)
+spec_labels <- names(ctrl_specs)
+spec_colors <- c(
+    "No controls"         = "#999999",
+    "Demographics"        = "#e69f00",
+    "FEs only"            = "#56b4e9",
+    "Demo + FEs"          = "#c06028",
+    "Demo + FEs + Income" = "#4a7c82"
+)
+
+run_matched_es_ctrl <- function(treat_label, control_label, gap_col, threshold,
+                                fs, data, fml, band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+    } else {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+    }
+    dat <- bind_rows(control_close, treat_close) |>
         mutate(treated = as.integer(group == treat_label))
-
-    feols(
-        mover ~ treated + i(year, treated, ref = 2017) + age + sex + race +
-            hispan + educ + metro + multgen | year + statefip,
-        data = dat, vcov = ~statefip
-    )
+    feols(fml, data = dat, vcov = ~statefip)
 }
 
-std_ded_2017_map <- c(MFJ = 12700, HoH = 9350, Single = 6350)
-tcja_std_ded_map <- c(MFJ = 24000, HoH = 18000, Single = 12000)
-
 es_10c_results <- bind_rows(lapply(fstatuses, function(fs) {
-    bind_rows(
-        tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
-                            "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data)) |>
-            filter(str_detect(term, "year::")) |>
-            mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                   group = "Stopped itemizing (TCJA)", fstatus = fs),
-        tidy(run_matched_es("Always itemized", "Stopped itemizing (TCJA)",
-                            "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data)) |>
-            filter(str_detect(term, "year::")) |>
-            mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                   group = "Always itemized", fstatus = fs)
-    )
+    bind_rows(lapply(spec_labels, function(sp) {
+        fml <- ctrl_specs[[sp]]
+        bind_rows(
+            tidy(run_matched_es_ctrl("Stopped itemizing (TCJA)", "Never itemized",
+                                     "imp_itemizable_2017", std_ded_2017_map[[fs]], fs,
+                                     item_data, fml, band_pct = BW_2017, treat_above = TRUE)) |>
+                filter(str_detect(term, "year::")) |>
+                mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                       group = "Stopped vs. Never", fstatus = fs, spec = sp),
+            tidy(run_matched_es_ctrl("Stopped itemizing (TCJA)", "Always itemized",
+                                     "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs,
+                                     item_data, fml, band_pct = BW_TCJA, treat_above = FALSE)) |>
+                filter(str_detect(term, "year::")) |>
+                mutate(year = as.integer(str_extract(term, "\\d{4}")),
+                       group = "Stopped vs. Always", fstatus = fs, spec = sp)
+        )
+    }))
 })) |>
-    bind_rows(
-        expand.grid(year = 2017L, estimate = 0, std.error = 0,
-                    group   = treat_labels,
-                    fstatus = fstatuses,
-                    stringsAsFactors = FALSE)
-    ) |>
+    bind_rows(expand.grid(
+        year      = 2017L,
+        estimate  = 0,
+        std.error = 0,
+        group     = c("Stopped vs. Never", "Stopped vs. Always"),
+        fstatus   = fstatuses,
+        spec      = spec_labels,
+        stringsAsFactors = FALSE
+    )) |>
     mutate(
-        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        group   = factor(group,   levels = treat_labels),
         fstatus = factor(fstatus, levels = fstatuses),
+        spec    = factor(spec,    levels = spec_labels),
         ci_lo   = estimate - 1.96 * std.error,
         ci_hi   = estimate + 1.96 * std.error
     ) |>
-    arrange(fstatus, group, year)
+    arrange(fstatus, group, spec, year)
 
 ggplot(es_10c_results,
-       aes(year, estimate, color = group, fill = group, group = group)) +
+       aes(year, estimate, color = spec, fill = spec, group = spec)) +
     geom_hline(yintercept = 0, color = "grey70") +
     geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
-    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
-    geom_line(linewidth = 0.9) +
-    geom_point(size = 2) +
-    facet_wrap(~ fstatus, ncol = 3) +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.08, color = NA) +
+    geom_line(linewidth = 0.8) +
+    geom_point(size = 1.6) +
+    facet_grid(group ~ fstatus) +
     scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
-    scale_color_manual(values = es_group_colors, name = NULL) +
-    scale_fill_manual(values  = es_group_colors, name = NULL) +
+    scale_color_manual(values = spec_colors, name = "Specification") +
+    scale_fill_manual(values  = spec_colors, name = "Specification") +
     labs(
         x        = NULL,
         y        = "Additional probability of moving (pp)",
-        title    = "Event study: asymmetric matched controls, by filing status",
-        subtitle = "Compliers vs. near-2017-threshold never-itemizers; always-itemizers vs. near-TCJA-threshold compliers"
+        title    = "Sensitivity to control specification",
+        subtitle = "Rows: comparison pair; columns: filing status; ref = 2017"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10c_matched_controls.png", last_plot(), width = 11, height = 5, dpi = 150)
+ggsave("../../../output/Cormac/10c_control_sensitivity.png", last_plot(),
+       width = 10, height = 7, dpi = 150)
 
 ########################################################
 # 10d. Heterogeneity by age and metro status (MFJ and Single only)
@@ -1157,15 +1443,17 @@ build_het_results <- function(subgroup_filters, fstatuses_arg = fstatuses_2) {
             d <- subgroup_filters[[sg]](item_data)
             bind_rows(
                 tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
-                                    "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, d)) |>
+                                    "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, d,
+                                    band_pct = BW_2017, treat_above = TRUE)) |>
                     filter(str_detect(term, "year::")) |>
                     mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                           group = "Stopped itemizing (TCJA)", fstatus = fs, subgroup = sg),
-                tidy(run_matched_es("Always itemized", "Stopped itemizing (TCJA)",
-                                    "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, d)) |>
+                           group = "Stopped vs. Never", fstatus = fs, subgroup = sg),
+                tidy(run_matched_es("Stopped itemizing (TCJA)", "Always itemized",
+                                    "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, d,
+                                    band_pct = BW_TCJA, treat_above = FALSE)) |>
                     filter(str_detect(term, "year::")) |>
                     mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                           group = "Always itemized", fstatus = fs, subgroup = sg)
+                           group = "Stopped vs. Always", fstatus = fs, subgroup = sg)
             )
         }))
     })) |>
@@ -1175,7 +1463,7 @@ build_het_results <- function(subgroup_filters, fstatuses_arg = fstatuses_2) {
                               subgroup = sg_names,
                               stringsAsFactors = FALSE)) |>
         mutate(
-            group    = factor(group,    levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+            group    = factor(group,    levels = treat_labels),
             fstatus  = factor(fstatus,  levels = fstatuses_arg),
             subgroup = factor(subgroup, levels = sg_names),
             ci_lo    = estimate - 1.96 * std.error,
@@ -1191,7 +1479,7 @@ plot_het <- function(results, title, subtitle) {
         geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
         geom_line(linewidth = 0.9) +
         geom_point(size = 2) +
-        facet_grid(fstatus ~ subgroup) +
+        facet_grid(fstatus ~ subgroup, scales = "free_y") +
         scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
         scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
         scale_color_manual(values = es_group_colors, name = NULL) +
@@ -1199,16 +1487,16 @@ plot_het <- function(results, title, subtitle) {
         labs(x = NULL, y = "Additional probability of moving (pp)",
              title = title, subtitle = subtitle) +
         theme(
-            panel.background  = element_rect(fill = "#fafafa", color = NA),
-            plot.background   = element_rect(fill = "#fafafa", color = NA),
+            panel.background  = element_rect(fill = bg_col, color = NA),
+            plot.background   = element_rect(fill = bg_col, color = NA),
             panel.grid.major  = element_line(color = "grey90"),
             panel.grid.minor  = element_blank(),
             strip.background  = element_rect(fill = "grey92", color = NA),
             strip.text        = element_text(color = "grey20"),
             axis.line.x       = element_line(color = "grey30"),
             axis.line.y       = element_line(color = "grey30"),
-            legend.background = element_rect(fill = "#fafafa", color = NA),
-            legend.key        = element_rect(fill = "#fafafa", color = NA),
+            legend.background = element_rect(fill = bg_col, color = NA),
+            legend.key        = element_rect(fill = bg_col, color = NA),
             axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
             axis.text.y       = element_text(color = "grey20"),
             text              = element_text(color = "grey20"),
@@ -1342,6 +1630,7 @@ exposure_raw <- dbGetQuery(con, "
       AND year BETWEEN 2013 AND 2023
 ") |>
     as_tibble() |>
+    filter(fstatus != "HoH") |>
     mutate(
         tcja_itemizes = as.integer(imp_itemizable_2018 > tcja_std_ded),
         group = case_when(
@@ -1349,7 +1638,7 @@ exposure_raw <- dbGetQuery(con, "
             imp_itemizes_2017 == 1L & tcja_itemizes == 0L ~ "Stopped itemizing (TCJA)",
             TRUE                                           ~ "Never itemized"
         ),
-        fstatus     = factor(fstatus, levels = c("MFJ", "HoH", "Single")),
+        fstatus     = factor(fstatus, levels = c("MFJ", "Single")),
         salt_refund = salt_ded_curr * coalesce(marginal_fed_rate, 0)
     )
 
@@ -1368,14 +1657,14 @@ exposure_groups <- bind_rows(
             std_ded_2017 = c(MFJ = 12700, HoH = 9350, Single = 6350)[as.character(fstatus)],
             gap          = std_ded_2017 - imp_itemizable_2017
         ) |>
-        filter(gap <= quantile(gap, 0.10, na.rm = TRUE)) |>
+        filter(gap <= BW_2017 * std_ded_2017) |>
         ungroup() |>
         mutate(plot_group = "Near-2017-threshold\nnever-itemizers", ltype = "Control"),
     exposure_raw |>
         filter(group == "Stopped itemizing (TCJA)") |>
         group_by(fstatus) |>
         mutate(gap = tcja_std_ded - imp_itemizable_2018) |>
-        filter(gap <= quantile(gap, 0.10, na.rm = TRUE)) |>
+        filter(gap <= BW_TCJA * tcja_std_ded) |>
         ungroup() |>
         mutate(plot_group = "Near-TCJA-threshold\ncompliers", ltype = "Control")
 )
@@ -1408,7 +1697,7 @@ ggplot(exposure_summary,
     geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
     geom_line(linewidth = 0.9) +
     geom_point(size = 2) +
-    facet_wrap(~ fstatus, ncol = 3) +
+    facet_wrap(~ fstatus, ncol = 2) +
     scale_x_continuous(breaks = seq(2013, 2023, by = 2)) +
     scale_y_continuous(labels = scales::dollar_format()) +
     scale_color_manual(values = exposure_colors, name = NULL) +
@@ -1417,19 +1706,19 @@ ggplot(exposure_summary,
         x        = NULL,
         y        = "Mean additional federal tax from SALT cap ($)",
         title    = "TCJA SALT exposure: treatment and matched control groups",
-        subtitle = "Solid = treatment; dashed = matched control (10th-percentile gap); by filing status"
+        subtitle = "Solid = treatment; dashed = matched control (10%/30% band near 2017/TCJA threshold); by filing status"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1449,7 +1738,7 @@ ggplot(salt_ded_summary,
     geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
     geom_line(linewidth = 0.9) +
     geom_point(size = 2) +
-    facet_wrap(~ fstatus, ncol = 3) +
+    facet_wrap(~ fstatus, ncol = 2) +
     scale_x_continuous(breaks = seq(2013, 2023, by = 2)) +
     scale_y_continuous(labels = scales::dollar_format()) +
     scale_color_manual(values = exposure_colors, name = NULL) +
@@ -1461,16 +1750,16 @@ ggplot(salt_ded_summary,
         subtitle = "imp_salt_ded_curr: actual SALT deducted (0 if not itemizing) | dashed line = TCJA"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1489,13 +1778,29 @@ ggsave("../../../output/Cormac/10e_salt_ded.png", last_plot(), width = 11, heigh
 # filing statuses → facet_grid(outcome_type ~ fstatus).
 
 run_matched_es_outcome <- function(treat_label, control_label, gap_col, threshold,
-                                   fs, data, outcome_col) {
-    control_close <- data |>
-        filter(group == control_label, fstatus == fs) |>
-        mutate(gap = threshold - .data[[gap_col]]) |>
-        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
+                                   fs, data, outcome_col, band_pct = 0.25,
+                                   treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+    } else {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+    }
 
-    dat <- bind_rows(control_close, data |> filter(group == treat_label, fstatus == fs)) |>
+    dat <- bind_rows(control_close, treat_close) |>
         mutate(treated = as.integer(group == treat_label))
 
     dat[["depvar"]] <- dat[[outcome_col]]
@@ -1521,16 +1826,18 @@ mig_type_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
         bind_rows(
             tidy(run_matched_es_outcome("Stopped itemizing (TCJA)", "Never itemized",
                                         "imp_itemizable_2017", std_ded_2017_map[[fs]],
-                                        fs, item_data_mig, ocol)) |>
+                                        fs, item_data_mig, ocol,
+                                        band_pct = BW_2017, treat_above = TRUE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                       group = "Stopped itemizing (TCJA)", fstatus = fs, outcome_type = olabel),
-            tidy(run_matched_es_outcome("Always itemized", "Stopped itemizing (TCJA)",
+                       group = "Stopped vs. Never", fstatus = fs, outcome_type = olabel),
+            tidy(run_matched_es_outcome("Stopped itemizing (TCJA)", "Always itemized",
                                         "imp_itemizable_2018", tcja_std_ded_map[[fs]],
-                                        fs, item_data_mig, ocol)) |>
+                                        fs, item_data_mig, ocol,
+                                        band_pct = BW_TCJA, treat_above = FALSE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
-                       group = "Always itemized", fstatus = fs, outcome_type = olabel)
+                       group = "Stopped vs. Always", fstatus = fs, outcome_type = olabel)
         )
     }))
 })) |>
@@ -1544,7 +1851,7 @@ mig_type_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
         stringsAsFactors = FALSE
     )) |>
     mutate(
-        group        = factor(group,        levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        group        = factor(group,        levels = treat_labels),
         fstatus      = factor(fstatus,      levels = c("MFJ", "Single")),
         outcome_type = factor(outcome_type, levels = names(outcome_specs)),
         ci_lo        = estimate - 1.96 * std.error,
@@ -1571,16 +1878,16 @@ ggplot(mig_type_results,
         subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1601,17 +1908,33 @@ ggsave("../../../output/Cormac/10f_migration_type.png", last_plot(), width = 10,
 # driving the result.
 
 run_matched_es_band <- function(treat_label, control_label, gap_col, threshold,
-                                fs, data, lo_pct = 0, hi_pct = 10) {
-    control_all <- data |>
-        filter(group == control_label, fstatus == fs) |>
-        mutate(gap = threshold - .data[[gap_col]])
+                                fs, data, lo_pct = 0, hi_pct = 10,
+                                treat_band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_all <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]])
+        q_lo <- if (lo_pct == 0) -Inf else quantile(control_all$gap, lo_pct / 100, na.rm = TRUE)
+        q_hi <- quantile(control_all$gap, hi_pct / 100, na.rm = TRUE)
+        control_band <- control_all |> filter(gap > q_lo, gap <= q_hi)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= treat_band_pct * threshold)
+    } else {
+        control_all <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold)
+        q_lo <- if (lo_pct == 0) -Inf else quantile(control_all$gap, lo_pct / 100, na.rm = TRUE)
+        q_hi <- quantile(control_all$gap, hi_pct / 100, na.rm = TRUE)
+        control_band <- control_all |> filter(gap > q_lo, gap <= q_hi)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= treat_band_pct * threshold)
+    }
 
-    q_lo <- if (lo_pct == 0) -Inf else quantile(control_all$gap, lo_pct / 100, na.rm = TRUE)
-    q_hi <- quantile(control_all$gap, hi_pct / 100, na.rm = TRUE)
-
-    control_band <- control_all |> filter(gap > q_lo, gap <= q_hi)
-
-    dat <- bind_rows(control_band, data |> filter(group == treat_label, fstatus == fs)) |>
+    dat <- bind_rows(control_band, treat_close) |>
         mutate(treated = as.integer(group == treat_label))
 
     feols(
@@ -1629,17 +1952,21 @@ bands_10g <- list(
 )
 
 comparisons_10g <- list(
-    "Stopped itemizing (TCJA)" = list(
-        treat   = "Stopped itemizing (TCJA)",
-        control = "Never itemized",
-        gap_col = "imp_itemizable_2017",
-        thresh  = std_ded_2017_map
+    "Stopped vs. Never" = list(
+        treat          = "Stopped itemizing (TCJA)",
+        control        = "Never itemized",
+        gap_col        = "imp_itemizable_2017",
+        thresh         = std_ded_2017_map,
+        treat_band_pct = BW_2017,
+        treat_above    = TRUE
     ),
-    "Always itemized" = list(
-        treat   = "Always itemized",
-        control = "Stopped itemizing (TCJA)",
-        gap_col = "imp_itemizable_2018",
-        thresh  = tcja_std_ded_map
+    "Stopped vs. Always" = list(
+        treat          = "Stopped itemizing (TCJA)",
+        control        = "Always itemized",
+        gap_col        = "imp_itemizable_2018",
+        thresh         = tcja_std_ded_map,
+        treat_band_pct = BW_TCJA,
+        treat_above    = FALSE
     )
 )
 
@@ -1656,7 +1983,9 @@ robust_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
                 fs            = fs,
                 data          = item_data,
                 lo_pct        = b[1],
-                hi_pct        = b[2]
+                hi_pct        = b[2],
+                treat_band_pct = comp$treat_band_pct,
+                treat_above   = comp$treat_above
             )) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(
@@ -1712,16 +2041,16 @@ ggplot(robust_results,
         subtitle = "Each line = different 10-pp slice of gap distribution; ref = 2017; clustered by state"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1744,63 +2073,34 @@ ggsave("../../../output/Cormac/10g_robustness_bands.png", last_plot(), width = 1
 # Group sizes are held constant; only the composition of who falls in each
 # group changes. Then repeat the 10c DiD.
 
-# --- Step 1: Reference itemizer shares ---
-
-ref_p_2017 <- item_data |>
-    filter(year == 2017L) |>
-    group_by(fstatus) |>
-    summarise(p_2017 = mean(imp_itemizes_2017 == 1L, na.rm = TRUE), .groups = "drop")
-
-ref_p_2018 <- item_data |>
-    filter(year == 2018L) |>
-    group_by(fstatus) |>
-    summarise(p_2018 = mean(tcja_itemizes == 1L, na.rm = TRUE), .groups = "drop")
-
-# --- Step 2: Year × fstatus quantile thresholds ---
-
-q_thresholds <- item_data |>
-    left_join(ref_p_2017, by = "fstatus") |>
-    left_join(ref_p_2018, by = "fstatus") |>
-    group_by(year, fstatus) |>
-    summarise(
-        q_thresh_2017 = quantile(imp_itemizable_2017, 1 - first(p_2017), na.rm = TRUE),
-        q_thresh_2018 = quantile(imp_itemizable_2018, 1 - first(p_2018), na.rm = TRUE),
-        .groups = "drop"
-    )
-
-# --- Step 3: Quantile-based groups ---
-
-item_data_q <- item_data |>
-    left_join(q_thresholds, by = c("year", "fstatus")) |>
-    mutate(
-        q_itemizes_2017 = as.integer(!is.na(imp_itemizable_2017) & imp_itemizable_2017 > q_thresh_2017),
-        q_itemizes_2018 = as.integer(!is.na(imp_itemizable_2018) & imp_itemizable_2018 > q_thresh_2018),
-        q_group = case_when(
-            q_itemizes_2017 == 1L & q_itemizes_2018 == 1L ~ "Always itemized",
-            q_itemizes_2017 == 1L & q_itemizes_2018 == 0L ~ "Stopped itemizing (TCJA)",
-            q_itemizes_2017 == 0L & q_itemizes_2018 == 0L ~ "Never itemized",
-            TRUE ~ NA_character_
-        )
-    )
-
-# Sanity check: group shares should be roughly constant across years
-cat("\nQuantile-group shares by year (MFJ and Single):\n")
-item_data_q |>
-    filter(!is.na(q_group), fstatus %in% c("MFJ", "Single")) |>
-    count(year, fstatus, q_group) |>
-    group_by(year, fstatus) |>
-    mutate(share = round(n / sum(n), 3)) |>
-    print(n = 60)
+# item_data_q (quantile-anchored groups) and the sanity-check print are
+# computed in section 10a-ii above; reused directly here.
 
 # --- Step 4: Matched TWFE with row-varying threshold column ---
 
-run_matched_es_q <- function(treat_label, control_label, gap_col, thresh_col, fs, data) {
-    control_close <- data |>
-        filter(q_group == control_label, fstatus == fs) |>
-        mutate(gap = .data[[thresh_col]] - .data[[gap_col]]) |>
-        filter(gap <= quantile(gap, 0.10, na.rm = TRUE))
+run_matched_es_q <- function(treat_label, control_label, gap_col, thresh_col, fs, data,
+                             band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(q_group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[thresh_col]] - .data[[gap_col]]) |>
+            filter(gap <= band_pct * .data[[thresh_col]])
+        treat_close <- data |>
+            filter(q_group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - .data[[thresh_col]]) |>
+            filter(gap <= band_pct * .data[[thresh_col]])
+    } else {
+        control_close <- data |>
+            filter(q_group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - .data[[thresh_col]]) |>
+            filter(gap <= band_pct * .data[[thresh_col]])
+        treat_close <- data |>
+            filter(q_group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[thresh_col]] - .data[[gap_col]]) |>
+            filter(gap <= band_pct * .data[[thresh_col]])
+    }
 
-    dat <- bind_rows(control_close, data |> filter(q_group == treat_label, fstatus == fs)) |>
+    dat <- bind_rows(control_close, treat_close) |>
         mutate(treated = as.integer(q_group == treat_label))
 
     feols(
@@ -1815,15 +2115,17 @@ run_matched_es_q <- function(treat_label, control_label, gap_col, thresh_col, fs
 es_10h_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
     bind_rows(
         tidy(run_matched_es_q("Stopped itemizing (TCJA)", "Never itemized",
-                              "imp_itemizable_2017", "q_thresh_2017", fs, item_data_q)) |>
+                              "imp_itemizable_2017", "q_thresh_2017", fs, item_data_q,
+                              band_pct = BW_2017, treat_above = TRUE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year  = as.integer(str_extract(term, "\\d{4}")),
-                   group = "Stopped itemizing (TCJA)", fstatus = fs),
-        tidy(run_matched_es_q("Always itemized", "Stopped itemizing (TCJA)",
-                              "imp_itemizable_2018", "q_thresh_2018", fs, item_data_q)) |>
+                   group = "Stopped vs. Never", fstatus = fs),
+        tidy(run_matched_es_q("Stopped itemizing (TCJA)", "Always itemized",
+                              "imp_itemizable_2018", "q_thresh_2018", fs, item_data_q,
+                              band_pct = BW_TCJA, treat_above = FALSE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year  = as.integer(str_extract(term, "\\d{4}")),
-                   group = "Always itemized", fstatus = fs)
+                   group = "Stopped vs. Always", fstatus = fs)
     )
 })) |>
     bind_rows(expand.grid(
@@ -1835,7 +2137,7 @@ es_10h_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
         stringsAsFactors = FALSE
     )) |>
     mutate(
-        group   = factor(group,   levels = c("Stopped itemizing (TCJA)", "Always itemized")),
+        group   = factor(group,   levels = treat_labels),
         fstatus = factor(fstatus, levels = c("MFJ", "Single")),
         ci_lo   = estimate - 1.96 * std.error,
         ci_hi   = estimate + 1.96 * std.error
@@ -1863,16 +2165,16 @@ ggplot(es_10h_results,
         subtitle = "Year-specific thresholds hold itemizer share constant at 2017/2018 levels; matched controls as in 10c"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1933,16 +2235,16 @@ ggplot(fs_summary,
         subtitle = "Solid = treatment; dashed = matched control (10th-pct gap) | dashed line = TCJA"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20"),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -1951,15 +2253,12 @@ ggplot(fs_summary,
 ggsave("../../../output/Cormac/10i_first_stage.png", last_plot(), width = 12, height = 7, dpi = 150)
 
 ########################################################
-# 10j. SALT refund by regime and itemizable total (MFJ filers)
+# 10j. SALT refund change by itemizable total (MFJ filers) — two stacked panels
 ########################################################
 
-# Two lines per panel: refund under 2017 rules and under TCJA rules.
-#   refund_2017 = imp_salt_ded_2017 × mtr
-#   refund_2018 = imp_salt_ded_2018 × mtr
-# Panel (a): x = imp_itemizable_2017
-# Panel (b): x = imp_itemizable_2018
-# Both panels restricted to x ∈ [0, 30 000]; stacked vertically.
+# Panel (a): x = 2017 itemizable total; shade 2017 std ded cutoff only
+# Panel (b): x = TCJA itemizable total; shade TCJA std ded cutoff only
+# y-axis: mean(refund_2017 - refund_2018) = average SALT tax benefit lost
 
 refund_change_raw <- dbGetQuery(con, "
     SELECT
@@ -1977,64 +2276,80 @@ refund_change_raw <- dbGetQuery(con, "
       AND year BETWEEN 2013 AND 2023
 ") |>
     as_tibble() |>
-    mutate(
-        refund_2017 = salt_ded_2017 * mtr,
-        refund_2018 = salt_ded_2018 * mtr
-    )
+    mutate(refund_diff = (salt_ded_2017 - salt_ded_2018) * mtr)
 
-bin_size  <- 500L
-cut_2017  <- 12700
-cut_tcja  <- 24000
+bin_size <- 500L
+cut_2017 <- 12700
+cut_tcja <- 24000
 
-diff_summary <- refund_change_raw |>
+diff_sum_2017 <- refund_change_raw |>
     filter(imp_itemizable_2017 >= 0, imp_itemizable_2017 <= 30000) |>
-    mutate(
-        refund_diff = refund_2017 - refund_2018,
-        x_bin       = floor(imp_itemizable_2017 / bin_size) * bin_size + bin_size / 2L + 250L
-    ) |>
+    mutate(x_bin = floor(imp_itemizable_2017 / bin_size) * bin_size + bin_size / 2L + 250L) |>
     group_by(x_bin) |>
-    summarise(mean_refund_diff = mean(refund_diff, na.rm = TRUE), .groups = "drop")
+    summarise(mean_diff = mean(refund_diff, na.rm = TRUE), .groups = "drop")
 
-ggplot(diff_summary, aes(x_bin, mean_refund_diff)) +
+diff_sum_2018 <- refund_change_raw |>
+    filter(imp_itemizable_2018 >= 0, imp_itemizable_2018 <= 30000) |>
+    mutate(x_bin = floor(imp_itemizable_2018 / bin_size) * bin_size + bin_size / 2L + 250L) |>
+    group_by(x_bin) |>
+    summarise(mean_diff = mean(refund_diff, na.rm = TRUE), .groups = "drop")
+
+theme_10j <- theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA),
+    panel.border     = element_blank(),
+    panel.grid.major = element_line(color = "grey90"),
+    panel.grid.minor = element_blank(),
+    axis.line.x      = element_line(color = "grey30"),
+    axis.line.y      = element_line(color = "grey30"),
+    axis.text        = element_text(color = "grey20"),
+    text             = element_text(color = "grey20")
+)
+
+x_scale <- scale_x_continuous(
+    labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
+    breaks = seq(0, 30000, by = 5000),
+    limits = c(0, 30000)
+)
+y_scale <- scale_y_continuous(labels = scales::dollar_format())
+
+p10j_a <- ggplot(diff_sum_2017, aes(x_bin, mean_diff)) +
     annotate("rect",
              xmin = cut_2017 * 0.9, xmax = cut_2017 * 1.1, ymin = -Inf, ymax = Inf,
              fill = "#4a7c82", alpha = 0.12) +
-    annotate("rect",
-             xmin = cut_tcja * 0.9,  xmax = cut_tcja * 1.1,  ymin = -Inf, ymax = Inf,
-             fill = "#c06028", alpha = 0.12) +
     geom_hline(yintercept = 0, color = "grey70") +
     geom_vline(xintercept = cut_2017, linetype = "dotted", color = "#4a7c82", linewidth = 0.7) +
-    geom_vline(xintercept = cut_tcja,  linetype = "dashed", color = "#c06028", linewidth = 0.7) +
     geom_line(linewidth = 0.9, color = "#23373b") +
     geom_point(size = 1.5, color = "#23373b") +
-    annotate("text", x = cut_2017, y = Inf, label = "2017 std ded\n($12.7k)",
-             hjust = -0.07, vjust = 1.3, size = 2.8, color = "#4a7c82") +
-    annotate("text", x = cut_tcja,  y = Inf, label = "TCJA std ded\n($24k)",
-             hjust = -0.07, vjust = 1.3, size = 2.8, color = "#c06028") +
-    scale_x_continuous(
-        labels = scales::dollar_format(scale = 1e-3, suffix = "k"),
-        breaks = seq(0, 30000, by = 5000),
-        limits = c(0, 30000)
-    ) +
-    scale_y_continuous(labels = scales::dollar_format()) +
-    labs(
-        x        = "2017 itemizable total ($)",
-        y        = "Mean SALT refund lost: 2017 − TCJA rules ($)",
-        title    = "SALT refund loss under TCJA by 2017 itemizable total (MFJ filers)",
-        subtitle = "$500 bins | 2013–2023 pooled | shaded bands = ±10% of each std ded cutoff (DiD windows)"
-    ) +
-    theme(
-        panel.background = element_rect(fill = "#fafafa", color = NA),
-        plot.background  = element_rect(fill = "#fafafa", color = NA),
-        panel.grid.major = element_line(color = "grey90"),
-        panel.grid.minor = element_blank(),
-        axis.line.x      = element_line(color = "grey30"),
-        axis.line.y      = element_line(color = "grey30"),
-        axis.text.x      = element_text(color = "grey20"),
-        axis.text.y      = element_text(color = "grey20"),
-        text             = element_text(color = "grey20")
+    annotate("text", x = cut_2017, y = Inf, label = "2017 std ded ($12.7k)",
+             hjust = -0.07, vjust = 1.3, size = 3.8, color = "#4a7c82") +
+    x_scale + y_scale +
+    labs(x = "2017 itemizable total ($)", y = "Mean change in SALT benefit ($)") +
+    theme_10j
+
+p10j_b <- ggplot(diff_sum_2018, aes(x_bin, mean_diff)) +
+    annotate("rect",
+             xmin = cut_tcja * 0.9, xmax = cut_tcja * 1.1, ymin = -Inf, ymax = Inf,
+             fill = "#c06028", alpha = 0.12) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = cut_tcja, linetype = "dashed", color = "#c06028", linewidth = 0.7) +
+    geom_line(linewidth = 0.9, color = "#23373b") +
+    geom_point(size = 1.5, color = "#23373b") +
+    annotate("text", x = cut_tcja, y = Inf, label = "TCJA std ded ($24k)",
+             hjust = -0.07, vjust = 1.3, size = 3.8, color = "#c06028") +
+    x_scale + y_scale +
+    labs(x = "TCJA itemizable total ($)", y = "Mean change in SALT benefit ($)") +
+    theme_10j
+
+p10j_a / p10j_b +
+    plot_annotation(
+        title = "Change in SALT tax benefit under TCJA, by itemizable total (MFJ filers)",
+        theme = theme(
+            plot.background = element_rect(fill = "white", color = NA),
+            text = element_text(color = "grey20")
+        )
     )
-ggsave("../../../output/Cormac/10j_salt_refund_diff.png", last_plot(), width = 8, height = 5, dpi = 150)
+ggsave("../../../output/Cormac/10j_salt_refund_diff.png", last_plot(), width = 8, height = 8, dpi = 150)
 
 ########################################################
 # 10k. Balance table
@@ -2259,6 +2574,21 @@ cat("Estimates from OLS(y ~ group dummy); reference = Stopped itemizing; HC1 rob
 cat("Each cell: OLS coefficient, with SE in parentheses on the row below.\n\n")
 print(as.data.frame(bal_table), row.names = FALSE)
 
+write.csv(bal_table,
+          file      = "../../../output/Cormac/10k_balance_table.csv",
+          row.names = FALSE)
+
+writeLines(
+    knitr::kable(
+        bal_table,
+        format  = "latex",
+        booktabs = TRUE,
+        caption  = "Balance table: MFJ filers. Reference group: Stopped itemizing (TCJA). OLS coefficients with HC1-robust SEs in parentheses.",
+        label    = "tab:balance"
+    ),
+    con = "../../../output/Cormac/10k_balance_table.tex"
+)
+
 ########################################################
 # 10l. Move rate: itemizers vs. non-itemizers at equal SALT level
 ########################################################
@@ -2322,14 +2652,14 @@ ggplot(item_rate_by_salt, aes(bin_mid, pct_itemize)) +
         subtitle = "Dashed: 10% threshold  •  Dotted: first bin to cross it"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20"),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
@@ -2383,22 +2713,380 @@ ggplot(mover_salt_year,
         subtitle = "Each facet = $2k SALT bin; dashed = TCJA (2018)"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         strip.background  = element_rect(fill = "grey92", color = NA),
         strip.text        = element_text(color = "grey20", size = 8),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1, size = 7),
         axis.text.y       = element_text(color = "grey20", size = 7),
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
 ggsave("../../../output/Cormac/10l_move_rate_by_salt_bin.png", last_plot(), width = 12, height = 8, dpi = 150)
+
+########################################################
+# 10m. Empirical magnitudes
+########################################################
+
+# Three quantities for interpreting event-study coefficients:
+#   (a) Control group baseline move rate (pre-TCJA, within bandwidth)
+#   (b) Treatment group mean SALT paid (pre-TCJA, within bandwidth)
+#   (c) DiD change in SALT refund: (TCJA refund - 2017 refund) for treatment
+#       minus the same for control — the first-stage numerator.
+#
+# Refund = SALT deducted × marginal federal tax rate, where:
+#   "SALT deducted under 2017 rules" = imp_salt × imp_itemizes_2017
+#   "SALT deducted under TCJA rules" = min(imp_salt, 10000) × tcja_itemizes
+# Bandwidth quantiles from item_data (all years); move rate and mean SALT
+# restricted to pre-2018. Marginal rate fetched via a separate query to avoid
+# contaminating item_data with NULLs (imp_marginal_fed_rate is NULL for some
+# low-income households, which would cause na.omit() to drop control-group rows).
+
+empmag_rates <- dbGetQuery(con, "
+    SELECT
+        year,
+        imp_itemizes_2017,
+        CAST(imp_itemizable_2017   AS DOUBLE) AS imp_itemizable_2017,
+        CAST(imp_itemizable_2018   AS DOUBLE) AS imp_itemizable_2018,
+        CAST(imp_salt              AS DOUBLE) AS imp_salt,
+        CAST(imp_marginal_fed_rate AS DOUBLE) AS marginal_fed_rate,
+        CASE
+            WHEN marst = 1                 THEN 24000
+            WHEN marst != 1 AND nchild > 0 THEN 18000
+            ELSE                                12000
+        END AS tcja_std_ded,
+        CASE
+            WHEN marst = 1                 THEN 'MFJ'
+            WHEN marst != 1 AND nchild > 0 THEN 'HoH'
+            ELSE                                'Single'
+        END AS fstatus
+    FROM acs_microdata
+    WHERE pernum = 1 AND gq IN (1, 2, 5)
+      AND imp_itemizes_2017   IS NOT NULL
+      AND imp_itemizable_2018 IS NOT NULL
+      AND year BETWEEN 2012 AND 2023
+") |>
+    as_tibble() |>
+    filter(fstatus != "HoH") |>
+    mutate(
+        tcja_itemizes = as.integer(imp_itemizable_2018 > tcja_std_ded),
+        group = case_when(
+            imp_itemizes_2017 == 1L & tcja_itemizes == 1L ~ "Always itemized",
+            imp_itemizes_2017 == 1L & tcja_itemizes == 0L ~ "Stopped itemizing (TCJA)",
+            imp_itemizes_2017 == 0L                        ~ "Never itemized"
+        ),
+        fstatus = factor(fstatus, levels = c("MFJ", "Single"))
+    )
+
+# Helper: apply dollar gap cutoff (band_pct * threshold) to empmag_rates
+# so both datasets use the same zone near the threshold.
+refund_delta_at_cutoff <- function(group_label, gap_col, threshold, gap_cutoff, fs) {
+    r <- empmag_rates |>
+        filter(group == group_label, fstatus == fs) |>
+        mutate(gap = abs(.data[[gap_col]] - threshold)) |>
+        filter(gap <= gap_cutoff)
+    mean(coalesce(r$marginal_fed_rate, 0) *
+             (pmin(r$imp_salt, 10000) * r$tcja_itemizes -
+              r$imp_salt * r$imp_itemizes_2017),
+         na.rm = TRUE)
+}
+
+# Average marginal federal income tax rate for the treatment group near each
+# threshold (pre-TCJA only). The SALT cap removes a T' subsidy per dollar of
+# SALT, so T' is the change in the marginal tax rate faced by stopped itemizers.
+avg_T_prime_at_cutoff <- function(gap_col, threshold, gap_cutoff, fs) {
+    empmag_rates |>
+        filter(group == "Stopped itemizing (TCJA)", fstatus == fs,
+               year < 2018, !is.na(marginal_fed_rate)) |>
+        mutate(gap = abs(.data[[gap_col]] - threshold)) |>
+        filter(gap <= gap_cutoff) |>
+        summarise(v = mean(marginal_fed_rate)) |>
+        pull(v)
+}
+
+empmag <- bind_rows(lapply(fstatuses, function(fs) {
+    thresh1  <- std_ded_2017_map[[fs]]
+    cutoff1  <- BW_2017 * thresh1
+    ctrl1 <- item_data |>
+        filter(group == "Never itemized", fstatus == fs) |>
+        mutate(gap = thresh1 - imp_itemizable_2017) |>
+        filter(gap <= cutoff1)
+    trt1 <- item_data |>
+        filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
+        mutate(gap = imp_itemizable_2017 - thresh1) |>
+        filter(gap <= cutoff1)
+
+    thresh2  <- tcja_std_ded_map[[fs]]
+    cutoff2  <- BW_TCJA * thresh2
+    ctrl2 <- item_data |>
+        filter(group == "Always itemized", fstatus == fs) |>
+        mutate(gap = imp_itemizable_2018 - thresh2) |>
+        filter(gap <= cutoff2)
+    trt2 <- item_data |>
+        filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
+        mutate(gap = thresh2 - imp_itemizable_2018) |>
+        filter(gap <= cutoff2)
+
+    bind_rows(
+        tibble(
+            comparison     = "Stopped vs. Never",
+            fstatus        = fs,
+            ctrl_move_rate = mean(ctrl1$mover[ctrl1$year < 2018]),
+            trt_mean_salt  = mean(trt1$imp_salt[trt1$year < 2018], na.rm = TRUE),
+            did_delta_ded  = refund_delta_at_cutoff("Stopped itemizing (TCJA)",
+                                                     "imp_itemizable_2017", thresh1,
+                                                     cutoff1, fs) -
+                             refund_delta_at_cutoff("Never itemized",
+                                                     "imp_itemizable_2017", thresh1,
+                                                     cutoff1, fs),
+            avg_T_prime    = avg_T_prime_at_cutoff("imp_itemizable_2017", thresh1,
+                                                   cutoff1, fs),
+            n_ctrl         = nrow(ctrl1),
+            n_trt          = nrow(trt1)
+        ),
+        tibble(
+            comparison     = "Stopped vs. Always",
+            fstatus        = fs,
+            ctrl_move_rate = mean(ctrl2$mover[ctrl2$year < 2018]),
+            trt_mean_salt  = mean(trt2$imp_salt[trt2$year < 2018], na.rm = TRUE),
+            did_delta_ded  = refund_delta_at_cutoff("Stopped itemizing (TCJA)",
+                                                     "imp_itemizable_2018", thresh2,
+                                                     cutoff2, fs) -
+                             refund_delta_at_cutoff("Always itemized",
+                                                     "imp_itemizable_2018", thresh2,
+                                                     cutoff2, fs),
+            avg_T_prime    = avg_T_prime_at_cutoff("imp_itemizable_2018", thresh2,
+                                                   cutoff2, fs),
+            n_ctrl         = nrow(ctrl2),
+            n_trt          = nrow(trt2)
+        )
+    )
+}))
+
+cat("\n=== Empirical magnitudes: matched bandwidth ===\n")
+cat("Move rate and SALT: pre-TCJA (year < 2018). DiD Δ refund: all years, TCJA minus 2017 rules.\n")
+cat("n from 10% ACS sample; multiply by ~10 for population counts.\n\n")
+empmag |>
+    transmute(
+        comparison,
+        fstatus,
+        `Control move rate`   = scales::percent(ctrl_move_rate, accuracy = 0.1),
+        `Trt mean SALT ($)`   = scales::dollar(trt_mean_salt,   accuracy = 1),
+        `DiD Δ refund ($)`    = scales::dollar(did_delta_ded,   accuracy = 1),
+        n_ctrl,
+        n_trt
+    ) |>
+    as.data.frame() |>
+    print()
+
+# Pooled post-treatment DiD: replace year × treated interactions with a single
+# post × treated term to get one average ATT across all post-2018 years.
+# Baseline spec (demographics + year + state FEs).
+
+run_pooled_did <- function(treat_label, control_label, gap_col, threshold,
+                           fs, data, band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+    } else {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+    }
+    dat <- bind_rows(control_close, treat_close) |>
+        mutate(treated = as.integer(group == treat_label),
+               post    = as.integer(year >= 2018L))
+    feols(mover ~ treated + treated:post + age + sex + race +
+              hispan + educ + metro + multgen | year + statefip,
+          data = dat, vcov = ~statefip)
+}
+
+pooled_results <- bind_rows(lapply(fstatuses, function(fs) {
+    bind_rows(
+        tidy(run_pooled_did("Stopped itemizing (TCJA)", "Never itemized",
+                            "imp_itemizable_2017", std_ded_2017_map[[fs]], fs,
+                            item_data, band_pct = BW_2017, treat_above = TRUE)) |>
+            filter(str_detect(term, "treated:post")) |>
+            mutate(comparison = "Stopped vs. Never", fstatus = fs),
+        tidy(run_pooled_did("Stopped itemizing (TCJA)", "Always itemized",
+                            "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs,
+                            item_data, band_pct = BW_TCJA, treat_above = FALSE)) |>
+            filter(str_detect(term, "treated:post")) |>
+            mutate(comparison = "Stopped vs. Always", fstatus = fs)
+    )
+})) |>
+    mutate(
+        ci_lo = estimate - 1.96 * std.error,
+        ci_hi = estimate + 1.96 * std.error
+    )
+
+cat("\nPooled post-treatment DiD estimates (2018-2023, baseline spec):\n")
+pooled_results |>
+    transmute(
+        comparison,
+        fstatus,
+        `Estimate (pp)` = scales::percent(estimate,   accuracy = 0.01),
+        `SE`            = scales::percent(std.error,   accuracy = 0.01),
+        `95% CI`        = paste0("[", scales::percent(ci_lo, accuracy = 0.01),
+                                 ", ", scales::percent(ci_hi, accuracy = 0.01), "]")
+    ) |>
+    as.data.frame() |>
+    print()
+
+# Elasticity of migration w.r.t. the marginal tax rate on SALT.
+#
+# Stopping itemizing raises the marginal cost per dollar of SALT from (1-T') to 1,
+# so the change in the marginal tax rate faced is T' (the lost federal subsidy).
+# We average T' over the treatment group near each threshold (pre-TCJA).
+#
+# Elasticity = [DiD / ctrl_move_rate] / mean(T')
+
+elasticity_table <- pooled_results |>
+    left_join(empmag |>
+                  mutate(fstatus = as.character(fstatus)) |>
+                  select(comparison, fstatus, ctrl_move_rate, avg_T_prime),
+              by = c("comparison", "fstatus")) |>
+    mutate(
+        relative_mig = estimate / ctrl_move_rate,
+        elasticity   = relative_mig / avg_T_prime,
+        elas_lo      = (ci_lo / ctrl_move_rate) / avg_T_prime,
+        elas_hi      = (ci_hi / ctrl_move_rate) / avg_T_prime
+    )
+
+cat("\nElasticity of migration with respect to marginal tax rate on SALT:\n")
+elasticity_table |>
+    transmute(
+        comparison,
+        fstatus,
+        `Avg T'`             = scales::percent(avg_T_prime,  accuracy = 0.1),
+        `Relative mig resp.` = scales::percent(relative_mig, accuracy = 0.1),
+        `Elasticity`         = round(elasticity, 3),
+        `95% CI`             = paste0("[", round(elas_lo, 3), ", ",
+                                           round(elas_hi, 3), "]")
+    ) |>
+    as.data.frame() |>
+    print()
+
+########################################################
+# 10n. Simple differences (no group FE): year × treatment gap in levels
+#
+# Drops the group-level fixed effect (`treated` main effect) by running a
+# separate cross-sectional regression for each year:
+#   mover ~ treated + controls | statefip
+# Each year's coefficient is the raw treated-control gap in moving rates,
+# conditional on state and demographics — no pre-period normalisation.
+########################################################
+
+run_matched_diff <- function(treat_label, control_label, gap_col, threshold, fs, data,
+                             band_pct = 0.25, treat_above = TRUE) {
+    if (treat_above) {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+    } else {
+        control_close <- data |>
+            filter(group == control_label, fstatus == fs) |>
+            mutate(gap = .data[[gap_col]] - threshold) |>
+            filter(gap <= band_pct * threshold)
+        treat_close <- data |>
+            filter(group == treat_label, fstatus == fs) |>
+            mutate(gap = threshold - .data[[gap_col]]) |>
+            filter(gap <= band_pct * threshold)
+    }
+
+    dat <- bind_rows(control_close, treat_close) |>
+        mutate(treated = as.integer(group == treat_label))
+
+    years <- sort(unique(dat$year))
+    bind_rows(lapply(years, function(yr) {
+        sub <- filter(dat, year == yr)
+        if (sd(sub$mover, na.rm = TRUE) == 0) return(NULL)
+        fit <- tryCatch(feols(
+            mover ~ treated + age + sex + race + hispan + educ + metro + multgen | statefip,
+            data = sub, vcov = ~statefip
+        ), error = function(e) NULL)
+        if (is.null(fit)) return(NULL)
+        tidy(fit) |>
+            filter(term == "treated") |>
+            mutate(year = yr)
+    }))
+}
+
+diff_10n_results <- bind_rows(lapply(fstatuses, function(fs) {
+    bind_rows(
+        run_matched_diff("Stopped itemizing (TCJA)", "Never itemized",
+                         "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data,
+                         band_pct = BW_2017, treat_above = TRUE) |>
+            mutate(group = "Stopped vs. Never", fstatus = fs),
+        run_matched_diff("Stopped itemizing (TCJA)", "Always itemized",
+                         "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data,
+                         band_pct = BW_TCJA, treat_above = FALSE) |>
+            mutate(group = "Stopped vs. Always", fstatus = fs)
+    )
+})) |>
+    mutate(
+        group   = factor(group,   levels = treat_labels),
+        fstatus = factor(fstatus, levels = fstatuses),
+        ci_lo   = estimate - 1.96 * std.error,
+        ci_hi   = estimate + 1.96 * std.error
+    )
+
+ggplot(diff_10n_results,
+       aes(year, estimate, color = group, fill = group, group = group)) +
+    geom_hline(yintercept = 0, color = "grey70") +
+    geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+    geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.10, color = NA) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2) +
+    facet_wrap(~ fstatus, ncol = 2) +
+    scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.01)) +
+    scale_color_manual(values = es_group_colors, name = "Stopped itemizing (TCJA) vs.") +
+    scale_fill_manual(values  = es_group_colors, name = "Stopped itemizing (TCJA) vs.") +
+    labs(
+        x     = NULL,
+        y     = "Treated - control moving rate gap (pp)",
+        title = "Simple differences: treated vs. control moving rate gap by year (no group FE)"
+    ) +
+    theme(
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
+        panel.grid.major  = element_line(color = "grey90"),
+        panel.grid.minor  = element_blank(),
+        strip.background  = element_rect(fill = "grey92", color = NA),
+        strip.text        = element_text(color = "grey20"),
+        axis.line.x       = element_line(color = "grey30"),
+        axis.line.y       = element_line(color = "grey30"),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
+        axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+        axis.text.y       = element_text(color = "grey20"),
+        text              = element_text(color = "grey20"),
+        legend.position   = "bottom"
+    )
+ggsave("../../../output/Cormac/10n_simple_differences.png", last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
 # 11. Move rate by additional federal tax from SALT cap, by period
@@ -2467,14 +3155,14 @@ ggplot(mover_by_tax_bin,
         subtitle = "$2k fixed bins; >$10k grouped together; <$500 = reference (unaffected)"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -2559,14 +3247,14 @@ ggplot(es_results,
         subtitle = "Each bin vs. <$500 control group; ref year = 2017; controls + year + state FE"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -2637,14 +3325,14 @@ ggplot(move_by_item_yr,
         subtitle = "Dotted = Single std ded ($6,350)  •  Dashed = MFJ std ded ($12,700)"
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20"),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -2784,14 +3472,14 @@ ggplot(coef_df_14,
         )
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20"),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),
@@ -2912,14 +3600,14 @@ ggplot(plot_data_15,
         )
     ) +
     theme(
-        panel.background  = element_rect(fill = "#fafafa", color = NA),
-        plot.background   = element_rect(fill = "#fafafa", color = NA),
+        panel.background  = element_rect(fill = bg_col, color = NA),
+        plot.background   = element_rect(fill = bg_col, color = NA),
         panel.grid.major  = element_line(color = "grey90"),
         panel.grid.minor  = element_blank(),
         axis.line.x       = element_line(color = "grey30"),
         axis.line.y       = element_line(color = "grey30"),
-        legend.background = element_rect(fill = "#fafafa", color = NA),
-        legend.key        = element_rect(fill = "#fafafa", color = NA),
+        legend.background = element_rect(fill = bg_col, color = NA),
+        legend.key        = element_rect(fill = bg_col, color = NA),
         axis.text.x       = element_text(color = "grey20"),
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20"),

@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: proposal.aux
+The style file: aer.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: sample.bib
+Warning--empty journal in coven_etal
+Warning--can't use both volume and number fields in Oates1972
+You've used 28 entries,
+            2984 wiz_defined-function locations,
+            844 strings with 9778 characters,
+and the built_in function-call counts, 24473 in all, are:
+= -- 3814
+> -- 1480
+< -- 414
++ -- 488
+- -- 272
+* -- 1617
+:= -- 5523
+add.period$ -- 32
+call.type$ -- 28
+change.case$ -- 197
+chr.to.int$ -- 28
+cite$ -- 30
+duplicate$ -- 300
+empty$ -- 706
+format.name$ -- 726
+if$ -- 6059
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 20
+newline$ -- 94
+num.names$ -- 336
+pop$ -- 403
+preamble$ -- 1
+purify$ -- 224
+quote$ -- 0
+skip$ -- 0
+stack$ -- 0
+substring$ -- 703
+swap$ -- 95
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 110
+warning$ -- 2
+while$ -- 299
+width$ -- 0
+write$ -- 468
+(There were 2 warnings)

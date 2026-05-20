@@ -1,0 +1,167 @@
+\ifx\undefined\bysame
+\newcommand{\bysame}{\leavevmode\hbox to\leftmargin{\hrulefill\,\,}}
+\fi
+\begin{thebibliography}{xx}
+
+\harvarditem[Akcigit et al.]{Akcigit, Baslandze and
+  Stantcheva}{2016}{AkcigitBaslandzeStantcheva2016}
+{\bf Akcigit, Ufuk, Salomé Baslandze, and Stefanie Stantcheva}, ``Taxation and
+  the International Mobility of Inventors,'' {\it American Economic Review},
+  October 2016, {\it 106} (10), 2930–81.
+
+\harvarditem[Albouy]{Albouy}{2012}{Albouy2012}
+{\bf Albouy, David}, ``Evaluating the efficiency and equity of federal fiscal
+  equalization,'' {\it Journal of Public Economics}, 2012, {\it 96} (9),
+  824--839.
+
+\harvarditem[Ambrose and Valentin]{Ambrose and
+  Valentin}{2025}{AmbroseValentin2025}
+{\bf Ambrose, Brent~W. and Maxence Valentin}, ``Federal tax policy and the
+  capitalization of local public goods,'' {\it Regional Science and Urban
+  Economics}, 2025, {\it 114}, 104129.
+
+\harvarditem[Balke et al.]{Balke, Karlman and Kinnerud}{2024}{balke_etal}
+{\bf Balke, Kasper~Kragh, Markus Karlman, and Karin Kinnerud}, ``Winners and
+  Losers from Property Taxation,'' Working Papers 04/2024, Centre for Household
+  Finance and Macroeconomic Research (HOFIMAR), BI Norwegian Business School
+  2024.
+
+\harvarditem[Bayer et al.]{Bayer, Blair and Whaley}{2023}{BayerBlairWhaley2023}
+{\bf Bayer, Patrick, Peter Blair, and Kenneth Whaley}, ``Does the United States
+  Spend Enough on Public Schools and Teachers,'' Technical Report, NBER Working
+  Paper 2023.
+
+\harvarditem[Biasi et al.]{Biasi, Lafortune and
+  Sch\"{o}nholzer}{2025}{BiasiLafortuneSchonholzer2025}
+{\bf Biasi, Barbara, Julien Lafortune, and David Sch\"{o}nholzer}, ``What Works
+  and for Whom? Effectiveness and Efficiency of School Capital Investments
+  Across the U.S.,'' {\it The Quarterly Journal of Economics}, 08 2025, {\it
+  140} (3), 2329--2379.
+
+\harvarditem[Bruce and Kessler]{Bruce and Kessler}{2022}{BruceKessler2022}
+{\bf Bruce, Donald and Lawrence~M. Kessler}, ``A SALT on Real Estate? Housing
+  Market and Migration Responses to the Limit on the State and Local Tax
+  Deduction,'' Working Papers 2022-01, University of Tennessee, Department of
+  Economics Jan 2022.
+
+\harvarditem[Callaway et al.]{Callaway, Goodman-Bacon and
+  Sant'Anna}{2024}{CallawayGoodman-BaconSantanna2024}
+{\bf Callaway, Brantly, Andrew Goodman-Bacon, and Pedro H.~C. Sant'Anna},
+  ``Event Studies with a Continuous Treatment,'' {\it AEA Papers and
+  Proceedings}, May 2024, {\it 114}, 601–05.
+
+\harvarditem[Chodorow-Reich et al.]{Chodorow-Reich, Smith, Zidar and
+  Zwick}{2025}{Chodorow-ReichSmithZidarZwick2025}
+{\bf Chodorow-Reich, Gabriel, Matthew Smith, Owen Zidar, and Eric Zwick}, ``Tax
+  Policy and Investment in a Global Economy,'' 2025.
+\newblock <p><em>R\&amp;R at American Economic Review</em></p>.
+
+\harvarditem[Chodorow-Reich et al.]{Chodorow-Reich, Zidar and
+  Zwick}{2024}{Chodorow-ReichZidarZwick2024}
+{\bf \bysame{}, Owen Zidar, and Eric Zwick}, ``Lessons from the Biggest
+  Business Tax Cut in US History,'' {\it Journal of Economic Perspectives},
+  August 2024, {\it 38} (3), 61–88.
+
+\harvarditem[Coen-Pirani and Sieg]{Coen-Pirani and
+  Sieg}{2019}{Coen-PiraniSieg2019}
+{\bf Coen-Pirani, Daniele and Holger Sieg}, ``The impact of the Tax Cut and
+  Jobs Act on the spatial distribution of high productivity households and
+  economic welfare,'' {\it Journal of Monetary Economics}, 2019, {\it 105},
+  44--71.
+\newblock Carnegie-Rochester-NYU Conference Series on Public Policy “A
+  Conference Honoring the Contributions of Charles Plosser to Economics” Held
+  at the University of Rochester Simon Business School April 20-21, 2018.
+
+\harvarditem[Coven et al.]{Coven, Golder, Gupta and Ndiaye}{2024}{coven_etal}
+{\bf Coven, Joshua, Sebastian Golder, Arpit Gupta, and Abdoulaye Ndiaye},
+  ``Property Taxes and Housing Allocation Under Financial Constraints,'' July
+  2024.
+
+\harvarditem[Drukker]{Drukker}{2025}{drukker}
+{\bf Drukker, Austin~J.}, ``Internal migration and the effective price of state
+  and local taxes,'' {\it International Tax and Public Finance}, February 2025,
+  {\it 32} (1), 163--194.
+
+\harvarditem[Fajgelbaum and Gaubert]{Fajgelbaum and
+  Gaubert}{2020}{FajgelbaumGaubert}
+{\bf Fajgelbaum, Pablo~D and Cecile Gaubert}, ``Optimal Spatial Policies,
+  Geography, and Sorting*,'' {\it The Quarterly Journal of Economics}, 01 2020,
+  {\it 135} (2), 959--1036.
+
+\harvarditem[Gaubert et al.]{Gaubert, Kline, Vergara and
+  Yagan}{2025}{GaubertKlineVergaraYagan2025}
+{\bf Gaubert, Cecile, Patrick Kline, Damian Vergara, and Danny Yagan},
+  ``Place-Based Redistribution,'' {\it American Economic Review}, October 2025,
+  {\it 115} (10), 3415–50.
+
+\harvarditem[Oliver~Giesecke]{Oliver~Giesecke}{2022}{GieseckeMateen2022}
+{\bf Giesecke, Haaris~Mateen~Oliver}, ``Local Governments' Response to Fiscal
+  Shocks: Evidence from Connecticut,'' Technical Report, SSRN 2022.
+
+\harvarditem[Horton]{Horton}{2023}{Horton2023}
+{\bf Horton, Emily}, ``Are tax benefits priced into home values? Evidence from
+  the Tax Cuts and Jobs Act,'' Working Paper, University of Michigan December
+  2023.
+
+\harvarditem[Kennedy et al.]{Kennedy, Dobridge, Landefeld and
+  Mortenson}{2025}{KennedyDobridgeLandefeldMortenson2025}
+{\bf Kennedy, Patrick, Christine Dobridge, Paul Landefeld, and Jacob
+  Mortenson}, ``The Efficiency-Equity Tradeoff of the Corporate Income Tax:
+  Evidence from the Tax Cuts and Jobs Act,'' 2025.
+
+\harvarditem[Kleven et al.]{Kleven, Landais, Muñoz and
+  Stantcheva}{2020}{KlevenLandaisMunozStantcheva}
+{\bf Kleven, Henrik, Camille Landais, Mathilde Muñoz, and Stefanie
+  Stantcheva}, ``Taxation and Migration: Evidence and Policy Implications,''
+  {\it Journal of Economic Perspectives}, May 2020, {\it 34} (2), 119–42.
+
+\harvarditem[Li and Yu]{Li and Yu}{2022}{LiYu2022}
+{\bf Li, Wenli and Edison~G. Yu}, ``Real estate taxes and home value: Evidence
+  from TCJA,'' {\it Review of Economic Dynamics}, 2022, {\it 43}, 125--151.
+
+\harvarditem[Liebig et al.]{Liebig, Puhani and
+  Sousa-Poza}{2007}{LiebigPuhaniSousa-Poza2007}
+{\bf Liebig, Thomas, Patrick~A. Puhani, and Alfonso Sousa-Poza}, ``TAXATION AND
+  INTERNAL MIGRATION—EVIDENCE FROM THE SWISS CENSUS USING COMMUNITY-LEVEL
+  VARIATION IN INCOME TAX RATES,'' {\it Journal of Regional Science}, 2007,
+  {\it 47} (4), 807--836.
+
+\harvarditem[Oates]{Oates}{1972}{Oates1972}
+{\bf Oates, Wallace~E.}, {\it Fiscal Federalism}, none ed., Vol. None of {\em
+  Books}, Edward Elgar Publishing, March 1972.
+
+\harvarditem[Sprung-Keyser et al.]{Sprung-Keyser, Hendren and
+  Porter}{2024}{SprungKeyserHendrenPorter2024}
+{\bf Sprung-Keyser, Ben, Nathaniel Hendren, and Sonya Porter}, ``The Radius of
+  Economic Opportunity: Evidence from Migration and Local Labor Markets,''
+  2024.
+\newblock Working paper.
+
+\harvarditem[Tiebout]{Tiebout}{1956}{Tiebout1956}
+{\bf Tiebout, Charles~M.}, ``A Pure Theory of Local Expenditures,'' {\it
+  Journal of Political Economy}, 1956, {\it 64} (5), 416--424.
+
+\harvarditem[{U.S. Department of the Treasury, Office of Tax Analysis}]{{U.S.
+  Department of the Treasury, Office of Tax
+  Analysis}}{2020}{Treasury2020TaxExpenditures}
+{\bf {U.S. Department of the Treasury, Office of Tax Analysis}}, ``Tax
+  Expenditures,'' Technical Report, U.S. Department of the Treasury 2020.
+\newblock Fiscal Year 2021 estimates.
+
+\harvarditem[Wilson]{Wilson}{1986}{Wilson1986}
+{\bf Wilson, John~D.}, ``A theory of interregional tax competition,'' {\it
+  Journal of Urban Economics}, 1986, {\it 19} (3), 296--315.
+
+\harvarditem[Young and Lurie]{Young and Lurie}{2025}{YoungLurie2025}
+{\bf Young, Cristobal and Ithai Lurie}, ``Taxing the Rich: How Incentives and
+  Embeddedness Shape Millionaire Tax Flight,'' {\it American Journal of
+  Sociology}, 2025, {\it 131} (2), 371--407.
+
+\harvarditem[Young et al.]{Young, Varner, Lurie and
+  Prisinzano}{2016}{YoungVarnerLuriePrisinzano2016}
+{\bf \bysame{}, Charles Varner, Ithai~Z. Lurie, and Richard Prisinzano},
+  ``Millionaire Migration and Taxation of the Elite: Evidence from
+  Administrative Data,'' {\it American Sociological Review}, 2016, {\it 81}
+  (3), 421--446.
+
+\end{thebibliography}
