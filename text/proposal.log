@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.8)  19 MAY 2026 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.8)  21 MAY 2026 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -433,6 +433,9 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count297
 \enitdp@description=\count298
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
@@ -441,24 +444,24 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 (./proposal.aux)
 \openout1 = `proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -529,124 +532,124 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 33.
+Package hyperref Info: Link coloring ON on input line 34.
 
 (./proposal.out) (./proposal.out)
 \@outlinefile=\write3
 \openout3 = `proposal.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 36.
+ 37.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 36.
+ 37.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 36.
+ 37.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 36.
+ 37.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
-6.
+7.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 
+l.54 
       [1
 
 ] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 []|\T1/ptm/m/n/10.95 Migration out-comes,
  []
 
 
-Underfull \hbox (badness 5862) in paragraph at lines 106--107
+Underfull \hbox (badness 5862) in paragraph at lines 107--108
 \T1/ptm/m/n/10.95 house-hold in-come, de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 \T1/ptm/m/n/10.95 mo-graph-ics, im-puted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 \T1/ptm/m/n/10.95 item-iza-tion sta-tus and
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 108--108
+Underfull \hbox (badness 1024) in paragraph at lines 109--109
 []|\T1/ptm/m/n/10.95 IRS SOI county re-turns
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 108--109
+Underfull \hbox (badness 2351) in paragraph at lines 109--110
 []|\T1/ptm/m/n/10.95 County-level SALT and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 \T1/ptm/m/n/10.95 item-iza-tion tab-u-la-tions;
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 108--109
+Underfull \hbox (badness 4429) in paragraph at lines 109--110
 \T1/ptm/m/n/10.95 con-struc-tion of county-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 \T1/ptm/m/n/10.95 level effective-SALT
  []
 
 
-Underfull \hbox (badness 3449) in paragraph at lines 110--111
+Underfull \hbox (badness 3449) in paragraph at lines 111--112
 []|\T1/ptm/m/n/10.95 Total rev-enue, prop-erty
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 110--111
+Underfull \hbox (badness 5847) in paragraph at lines 111--112
 \T1/ptm/m/n/10.95 in-ter-gov-ern-men-tal trans-
  []
 
@@ -655,32 +658,35 @@ Underfull \hbox (badness 5847) in paragraph at lines 110--111
 File: ../output/Cormac/10j_salt_refund_diff.png Graphic file (type png)
 <use ../output/Cormac/10j_salt_refund_diff.png>
 Package pdftex.def Info: ../output/Cormac/10j_salt_refund_diff.png  used on inp
-ut line 146.
+ut line 147.
 (pdftex.def)             Requested size: 366.40834pt x 366.40411pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(../output/Cormac/10k_balance_table.tex)
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 157
-.
+[8] (../output/Cormac/10k_balance_table.tex
+Overfull \hbox (5.69308pt too wide) in paragraph at lines 7--34
+ [][] 
+ []
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+)
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 159
+.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [8] [9]
-[10 <../output/Cormac/10j_salt_refund_diff.png>]
+) [9 <../output/Cormac/10j_salt_refund_diff.png>] [10]
 <../output/Cormac/10b_event_study.png, id=201, 794.97pt x 361.35pt>
 File: ../output/Cormac/10b_event_study.png Graphic file (type png)
 <use ../output/Cormac/10b_event_study.png>
 Package pdftex.def Info: ../output/Cormac/10b_event_study.png  used on input li
-ne 167.
+ne 169.
 (pdftex.def)             Requested size: 469.75502pt x 213.53099pt.
  [11 <../output/Cormac/10b_event_study.png>]
 <../output/Cormac/cond_mig_es_salt_diff.png, id=216, 650.43pt x 361.35pt>
 File: ../output/Cormac/cond_mig_es_salt_diff.png Graphic file (type png)
 <use ../output/Cormac/cond_mig_es_salt_diff.png>
 Package pdftex.def Info: ../output/Cormac/cond_mig_es_salt_diff.png  used on in
-put line 180.
+put line 182.
 (pdftex.def)             Requested size: 469.75502pt x 260.98232pt.
  [12 <../output/Cormac/cond_mig_es_salt_diff.png>] [13]
 <figures/fig_effective_salt_year_interactions_total_tax.png, id=233, 511.9125pt
@@ -689,7 +695,7 @@ File: figures/fig_effective_salt_year_interactions_total_tax.png Graphic file (
 type png)
 <use figures/fig_effective_salt_year_interactions_total_tax.png>
 Package pdftex.def Info: figures/fig_effective_salt_year_interactions_total_tax
-.png  used on input line 208.
+.png  used on input line 210.
 (pdftex.def)             Requested size: 366.40834pt x 244.3276pt.
  [14 <./figures/fig_effective_salt_year_interactions_total_tax.png>]
 <figures/fig_effective_salt_year_interactions_revenue_sources.png, id=241, 511.
@@ -698,11 +704,11 @@ File: figures/fig_effective_salt_year_interactions_revenue_sources.png Graphic
 file (type png)
 <use figures/fig_effective_salt_year_interactions_revenue_sources.png>
 Package pdftex.def Info: figures/fig_effective_salt_year_interactions_revenue_s
-ources.png  used on input line 217.
+ources.png  used on input line 219.
 (pdftex.def)             Requested size: 399.29463pt x 266.26125pt.
  [15 <./figures/fig_effective_salt_year_interactions_revenue_sources.png>] [16]
- [17] [18]
-(./proposal.bbl [19]
+ [17] [18] (./proposal.bbl
+[19]
 Underfull \hbox (badness 1394) in paragraph at lines 108--111
 []\T1/ptm/b/n/12 Kennedy, Patrick, Chris-tine Do-bridge, Paul Lan-de-feld, and 
 Ja-cob Morten-son\T1/ptm/m/n/12 , ``The
@@ -710,7 +716,7 @@ Ja-cob Morten-son\T1/ptm/m/n/12 , ``The
 
 [20])
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-70.
+72.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -718,13 +724,13 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 File: ../output/Cormac/validate_itemize_time.png Graphic file (type png)
 <use ../output/Cormac/validate_itemize_time.png>
 Package pdftex.def Info: ../output/Cormac/validate_itemize_time.png  used on in
-put line 276.
+put line 278.
 (pdftex.def)             Requested size: 225.4804pt x 140.92041pt.
 <../output/Cormac/validate_itemize_state.png, id=275, 505.89pt x 505.89pt>
 File: ../output/Cormac/validate_itemize_state.png Graphic file (type png)
 <use ../output/Cormac/validate_itemize_state.png>
 Package pdftex.def Info: ../output/Cormac/validate_itemize_state.png  used on i
-nput line 278.
+nput line 280.
 (pdftex.def)             Requested size: 225.4804pt x 225.47928pt.
 
 
@@ -736,7 +742,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_age.png Graphic file (type png)
 <use ../output/Cormac/10d_het_age.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_age.png  used on input line 2
-93.
+95.
 (pdftex.def)             Requested size: 328.82707pt x 219.22449pt.
 
 
@@ -746,7 +752,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_education.png Graphic file (type png)
 <use ../output/Cormac/10d_het_education.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_education.png  used on input 
-line 299.
+line 301.
 (pdftex.def)             Requested size: 328.82707pt x 164.4134pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -755,7 +761,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_children.png Graphic file (type png)
 <use ../output/Cormac/10d_het_children.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_children.png  used on input l
-ine 305.
+ine 307.
 (pdftex.def)             Requested size: 328.82707pt x 182.68707pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -764,7 +770,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_metro.png Graphic file (type png)
 <use ../output/Cormac/10d_het_metro.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_metro.png  used on input line
- 311.
+ 313.
 (pdftex.def)             Requested size: 328.82707pt x 219.22449pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -773,7 +779,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_multigen.png Graphic file (type png)
 <use ../output/Cormac/10d_het_multigen.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_multigen.png  used on input l
-ine 317.
+ine 319.
 (pdftex.def)             Requested size: 328.82707pt x 219.22449pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -782,7 +788,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_race.png Graphic file (type png)
 <use ../output/Cormac/10d_het_race.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_race.png  used on input line 
-323.
+325.
 (pdftex.def)             Requested size: 328.82707pt x 164.4134pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -791,7 +797,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ../output/Cormac/10d_het_sex.png Graphic file (type png)
 <use ../output/Cormac/10d_het_sex.png>
 Package pdftex.def Info: ../output/Cormac/10d_het_sex.png  used on input line 3
-29.
+31.
 (pdftex.def)             Requested size: 328.82707pt x 219.22449pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -810,13 +816,13 @@ Package rerunfilecheck Info: File `proposal.out' has not changed.
 (rerunfilecheck)             Checksum: 2CDAC6DB43B06DC0C23A73E75780E7B3;1735.
  ) 
 Here is how much of TeX's memory you used:
- 13342 strings out of 474116
- 213027 string characters out of 5743683
- 1941187 words of memory out of 5000000
- 35380 multiletter control sequences out of 15000+600000
+ 13371 strings out of 474116
+ 213711 string characters out of 5743683
+ 1938187 words of memory out of 5000000
+ 35405 multiletter control sequences out of 15000+600000
  632292 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,2568b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,2568b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/jr2728/Library/texlive/2024/texmf-var/fonts/pk/ljfour/public/bbm/bbm
 12.600pk></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cme
 x10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -828,7 +834,7 @@ al/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/
 2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on proposal.pdf (27 pages, 1862862 bytes).
+Output written on proposal.pdf (27 pages, 1871598 bytes).
 PDF statistics:
  389 PDF objects out of 1000 (max. 8388607)
  321 compressed objects within 4 object streams

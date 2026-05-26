@@ -18,6 +18,7 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
 \usepackage{enumitem}
+\usepackage{placeins}
 
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{1.5em}
@@ -150,6 +151,7 @@ Figure~\ref{fig:salt_refund_diff} makes these changes visible. It plots the mean
 
 The three groups are defined formally by imputed itemization status under the construction of Section~4: the never-itemized group has a 2017 itemizable total below the pre-TCJA standard deduction, the stopped-itemizing group falls between the pre- and post-TCJA standard deductions, and the always-itemized group lies above the post-TCJA standard deduction. Compared as whole populations, the three groups are wildly unbalanced. Table~\ref{tab:tab:balance} shows that, relative to the stopped-itemizing group, never-itemized MFJ households are six years younger and have \$72{,}000 lower income and \$6{,}000 lower SALT bills, while always-itemized households earn \$64{,}000 more, pay \$4{,}600 more in SALT, and live in \$298{,}000 more valuable homes. Within $\pm 10\%$ bands around the two standard-deduction cutoffs, however, these gaps shrink by roughly an order of magnitude: income gaps fall to \$5{,}000--15{,}000, age gaps to a fraction of a year, and SALT gaps to a few hundred to a thousand dollars. Households on either side of a cutoff are thus observably very similar, and the identifying assumption is that they are similar in unobservables as well. This motivates a difference-in-differences comparison restricted to narrow bands around each threshold; the headline specifications accordingly restrict to households whose 2017 itemizable total falls within $\pm 10\%$ of one of the two cutoffs.
 
+\FloatBarrier
 \input{../output/Cormac/10k_balance_table.tex}
 
 The estimating equation is a standard group-specific event study,

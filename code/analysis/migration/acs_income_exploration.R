@@ -848,7 +848,6 @@ item_data <- dbGetQuery(con, "
       AND imp_itemizes_2017    IS NOT NULL
       AND imp_itemizable_2018  IS NOT NULL
       AND year BETWEEN 2012 AND 2023
-      AND random() < .1
 ") |>
     as_tibble() |>
     mutate(
@@ -1066,22 +1065,22 @@ raw_means_matched <- bind_rows(lapply(fstatuses, function(fs) {
         item_data |>
             filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
             mutate(gap = imp_itemizable_2017 - thresh1) |>
-            filter(gap <= BW_2017 * thresh1),
+            filter(gap <= BW_2017[[fs]] * thresh1),
         item_data |>
             filter(group == "Never itemized", fstatus == fs) |>
             mutate(gap = thresh1 - imp_itemizable_2017) |>
-            filter(gap <= BW_2017 * thresh1)
+            filter(gap <= BW_2017[[fs]] * thresh1)
     )
 
     dat2 <- bind_rows(
         item_data |>
             filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
             mutate(gap = thresh2 - imp_itemizable_2018) |>
-            filter(gap <= BW_TCJA * thresh2),
+            filter(gap <= BW_TCJA[[fs]] * thresh2),
         item_data |>
             filter(group == "Always itemized", fstatus == fs) |>
             mutate(gap = imp_itemizable_2018 - thresh2) |>
-            filter(gap <= BW_TCJA * thresh2)
+            filter(gap <= BW_TCJA_CTRL[[fs]] * thresh2)
     )
 
     bind_rows(
@@ -1126,9 +1125,7 @@ ggplot(raw_means_matched,
         x        = NULL,
         y        = "Share of household heads who moved",
         title    = "Raw moving rates: matched treatment and control groups near each threshold",
-        subtitle = paste0("Bandwidth: ±", scales::percent(BW_2017),
-                          " of 2017 cutoff (left); ±", scales::percent(BW_TCJA),
-                          " of TCJA cutoff (right)")
+        subtitle = paste0("Bandwidth: $6k both sides of 2017 cutoff; $7.5k treat / $6k ctrl of TCJA cutoff")
     ) +
     theme(
         panel.background  = element_rect(fill = bg_col, color = NA),
@@ -1172,12 +1169,12 @@ ggsave("../../../output/Cormac/10a_moving_rates_matched.png", last_plot(),
 #              FALSE → treatment is below threshold (lower gap_col);  comparison 2
 # band_pct:   bandwidth as a fraction of threshold (e.g. 0.25 = within 25% of cutoff)
 run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, data,
-                           band_pct = 0.25, treat_above = TRUE) {
+                           band_pct = 0.25, ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
@@ -1186,7 +1183,7 @@ run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, d
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
@@ -1206,8 +1203,9 @@ run_matched_es <- function(treat_label, control_label, gap_col, threshold, fs, d
 fstatuses        <- c("MFJ", "Single")
 std_ded_2017_map <- c(MFJ = 12700, HoH = 9350, Single = 6350)
 tcja_std_ded_map <- c(MFJ = 24000, HoH = 18000, Single = 12000)
-BW_2017          <- 0.2    # bandwidth for 2017 threshold comparisons: within 25% of cutoff
-BW_TCJA          <- 0.2    # bandwidth for TCJA threshold comparisons:  within 50% of cutoff
+BW_2017      <- c(MFJ = 3000 / 12700, Single = 2000 / 12700)      # 2k bandwidth for singles
+BW_TCJA      <- c(MFJ = 3000 / 24000, Single = 2000 / 24000)      # 2k bandwidth for singles
+BW_TCJA_CTRL <- c(MFJ = 3000 / 24000, Single = 2000 / 24000)      # 2k bandwidth for singles
 
 # Legend labels encode the control group so both "Stopped itemizing" lines
 # are distinguishable in the plot.
@@ -1222,14 +1220,14 @@ es_10b_results <- bind_rows(lapply(fstatuses, function(fs) {
         # Comparison 1: treatment ABOVE 2017 threshold
         tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
                             "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data,
-                            band_pct = BW_2017, treat_above = TRUE)) |>
+                            band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year = as.integer(str_extract(term, "\\d{4}")),
                    group = "Stopped vs. Never", fstatus = fs),
         # Comparison 2: treatment BELOW TCJA threshold (sign flip)
         tidy(run_matched_es("Stopped itemizing (TCJA)", "Always itemized",
                             "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data,
-                            band_pct = BW_TCJA, treat_above = FALSE)) |>
+                            band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year = as.integer(str_extract(term, "\\d{4}")),
                    group = "Stopped vs. Always", fstatus = fs)
@@ -1324,12 +1322,12 @@ spec_colors <- c(
 )
 
 run_matched_es_ctrl <- function(treat_label, control_label, gap_col, threshold,
-                                fs, data, fml, band_pct = 0.25, treat_above = TRUE) {
+                                fs, data, fml, band_pct = 0.25, ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
@@ -1338,7 +1336,7 @@ run_matched_es_ctrl <- function(treat_label, control_label, gap_col, threshold,
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
@@ -1355,13 +1353,13 @@ es_10c_results <- bind_rows(lapply(fstatuses, function(fs) {
         bind_rows(
             tidy(run_matched_es_ctrl("Stopped itemizing (TCJA)", "Never itemized",
                                      "imp_itemizable_2017", std_ded_2017_map[[fs]], fs,
-                                     item_data, fml, band_pct = BW_2017, treat_above = TRUE)) |>
+                                     item_data, fml, band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
                        group = "Stopped vs. Never", fstatus = fs, spec = sp),
             tidy(run_matched_es_ctrl("Stopped itemizing (TCJA)", "Always itemized",
                                      "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs,
-                                     item_data, fml, band_pct = BW_TCJA, treat_above = FALSE)) |>
+                                     item_data, fml, band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
                        group = "Stopped vs. Always", fstatus = fs, spec = sp)
@@ -1444,13 +1442,13 @@ build_het_results <- function(subgroup_filters, fstatuses_arg = fstatuses_2) {
             bind_rows(
                 tidy(run_matched_es("Stopped itemizing (TCJA)", "Never itemized",
                                     "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, d,
-                                    band_pct = BW_2017, treat_above = TRUE)) |>
+                                    band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
                     filter(str_detect(term, "year::")) |>
                     mutate(year = as.integer(str_extract(term, "\\d{4}")),
                            group = "Stopped vs. Never", fstatus = fs, subgroup = sg),
                 tidy(run_matched_es("Stopped itemizing (TCJA)", "Always itemized",
                                     "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, d,
-                                    band_pct = BW_TCJA, treat_above = FALSE)) |>
+                                    band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
                     filter(str_detect(term, "year::")) |>
                     mutate(year = as.integer(str_extract(term, "\\d{4}")),
                            group = "Stopped vs. Always", fstatus = fs, subgroup = sg)
@@ -1657,14 +1655,14 @@ exposure_groups <- bind_rows(
             std_ded_2017 = c(MFJ = 12700, HoH = 9350, Single = 6350)[as.character(fstatus)],
             gap          = std_ded_2017 - imp_itemizable_2017
         ) |>
-        filter(gap <= BW_2017 * std_ded_2017) |>
+        filter(gap <= BW_2017[as.character(fstatus)] * std_ded_2017) |>
         ungroup() |>
         mutate(plot_group = "Near-2017-threshold\nnever-itemizers", ltype = "Control"),
     exposure_raw |>
         filter(group == "Stopped itemizing (TCJA)") |>
         group_by(fstatus) |>
         mutate(gap = tcja_std_ded - imp_itemizable_2018) |>
-        filter(gap <= BW_TCJA * tcja_std_ded) |>
+        filter(gap <= BW_TCJA[as.character(fstatus)] * tcja_std_ded) |>
         ungroup() |>
         mutate(plot_group = "Near-TCJA-threshold\ncompliers", ltype = "Control")
 )
@@ -1779,12 +1777,12 @@ ggsave("../../../output/Cormac/10e_salt_ded.png", last_plot(), width = 11, heigh
 
 run_matched_es_outcome <- function(treat_label, control_label, gap_col, threshold,
                                    fs, data, outcome_col, band_pct = 0.25,
-                                   treat_above = TRUE) {
+                                   ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
@@ -1793,7 +1791,7 @@ run_matched_es_outcome <- function(treat_label, control_label, gap_col, threshol
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
@@ -1827,14 +1825,14 @@ mig_type_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
             tidy(run_matched_es_outcome("Stopped itemizing (TCJA)", "Never itemized",
                                         "imp_itemizable_2017", std_ded_2017_map[[fs]],
                                         fs, item_data_mig, ocol,
-                                        band_pct = BW_2017, treat_above = TRUE)) |>
+                                        band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
                        group = "Stopped vs. Never", fstatus = fs, outcome_type = olabel),
             tidy(run_matched_es_outcome("Stopped itemizing (TCJA)", "Always itemized",
                                         "imp_itemizable_2018", tcja_std_ded_map[[fs]],
                                         fs, item_data_mig, ocol,
-                                        band_pct = BW_TCJA, treat_above = FALSE)) |>
+                                        band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
                 filter(str_detect(term, "year::")) |>
                 mutate(year = as.integer(str_extract(term, "\\d{4}")),
                        group = "Stopped vs. Always", fstatus = fs, outcome_type = olabel)
@@ -1984,7 +1982,7 @@ robust_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
                 data          = item_data,
                 lo_pct        = b[1],
                 hi_pct        = b[2],
-                treat_band_pct = comp$treat_band_pct,
+                treat_band_pct = comp$treat_band_pct[[fs]],
                 treat_above   = comp$treat_above
             )) |>
                 filter(str_detect(term, "year::")) |>
@@ -2079,7 +2077,7 @@ ggsave("../../../output/Cormac/10g_robustness_bands.png", last_plot(), width = 1
 # --- Step 4: Matched TWFE with row-varying threshold column ---
 
 run_matched_es_q <- function(treat_label, control_label, gap_col, thresh_col, fs, data,
-                             band_pct = 0.25, treat_above = TRUE) {
+                             band_pct = 0.25, ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(q_group == control_label, fstatus == fs) |>
@@ -2116,13 +2114,13 @@ es_10h_results <- bind_rows(lapply(c("MFJ", "Single"), function(fs) {
     bind_rows(
         tidy(run_matched_es_q("Stopped itemizing (TCJA)", "Never itemized",
                               "imp_itemizable_2017", "q_thresh_2017", fs, item_data_q,
-                              band_pct = BW_2017, treat_above = TRUE)) |>
+                              band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year  = as.integer(str_extract(term, "\\d{4}")),
                    group = "Stopped vs. Never", fstatus = fs),
         tidy(run_matched_es_q("Stopped itemizing (TCJA)", "Always itemized",
                               "imp_itemizable_2018", "q_thresh_2018", fs, item_data_q,
-                              band_pct = BW_TCJA, treat_above = FALSE)) |>
+                              band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
             filter(str_detect(term, "year::")) |>
             mutate(year  = as.integer(str_extract(term, "\\d{4}")),
                    group = "Stopped vs. Always", fstatus = fs)
@@ -2812,7 +2810,7 @@ avg_T_prime_at_cutoff <- function(gap_col, threshold, gap_cutoff, fs) {
 
 empmag <- bind_rows(lapply(fstatuses, function(fs) {
     thresh1  <- std_ded_2017_map[[fs]]
-    cutoff1  <- BW_2017 * thresh1
+    cutoff1  <- BW_2017[[fs]] * thresh1
     ctrl1 <- item_data |>
         filter(group == "Never itemized", fstatus == fs) |>
         mutate(gap = thresh1 - imp_itemizable_2017) |>
@@ -2822,12 +2820,13 @@ empmag <- bind_rows(lapply(fstatuses, function(fs) {
         mutate(gap = imp_itemizable_2017 - thresh1) |>
         filter(gap <= cutoff1)
 
-    thresh2  <- tcja_std_ded_map[[fs]]
-    cutoff2  <- BW_TCJA * thresh2
+    thresh2      <- tcja_std_ded_map[[fs]]
+    cutoff2      <- BW_TCJA[[fs]] * thresh2
+    cutoff2_ctrl <- BW_TCJA_CTRL[[fs]] * thresh2
     ctrl2 <- item_data |>
         filter(group == "Always itemized", fstatus == fs) |>
         mutate(gap = imp_itemizable_2018 - thresh2) |>
-        filter(gap <= cutoff2)
+        filter(gap <= cutoff2_ctrl)
     trt2 <- item_data |>
         filter(group == "Stopped itemizing (TCJA)", fstatus == fs) |>
         mutate(gap = thresh2 - imp_itemizable_2018) |>
@@ -2871,7 +2870,7 @@ empmag <- bind_rows(lapply(fstatuses, function(fs) {
 
 cat("\n=== Empirical magnitudes: matched bandwidth ===\n")
 cat("Move rate and SALT: pre-TCJA (year < 2018). DiD Δ refund: all years, TCJA minus 2017 rules.\n")
-cat("n from 10% ACS sample; multiply by ~10 for population counts.\n\n")
+cat("n from full ACS sample.\n\n")
 empmag |>
     transmute(
         comparison,
@@ -2890,12 +2889,12 @@ empmag |>
 # Baseline spec (demographics + year + state FEs).
 
 run_pooled_did <- function(treat_label, control_label, gap_col, threshold,
-                           fs, data, band_pct = 0.25, treat_above = TRUE) {
+                           fs, data, band_pct = 0.25, ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
@@ -2904,7 +2903,7 @@ run_pooled_did <- function(treat_label, control_label, gap_col, threshold,
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
@@ -2922,12 +2921,12 @@ pooled_results <- bind_rows(lapply(fstatuses, function(fs) {
     bind_rows(
         tidy(run_pooled_did("Stopped itemizing (TCJA)", "Never itemized",
                             "imp_itemizable_2017", std_ded_2017_map[[fs]], fs,
-                            item_data, band_pct = BW_2017, treat_above = TRUE)) |>
+                            item_data, band_pct = BW_2017[[fs]], treat_above = TRUE)) |>
             filter(str_detect(term, "treated:post")) |>
             mutate(comparison = "Stopped vs. Never", fstatus = fs),
         tidy(run_pooled_did("Stopped itemizing (TCJA)", "Always itemized",
                             "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs,
-                            item_data, band_pct = BW_TCJA, treat_above = FALSE)) |>
+                            item_data, band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE)) |>
             filter(str_detect(term, "treated:post")) |>
             mutate(comparison = "Stopped vs. Always", fstatus = fs)
     )
@@ -2995,12 +2994,12 @@ elasticity_table |>
 ########################################################
 
 run_matched_diff <- function(treat_label, control_label, gap_col, threshold, fs, data,
-                             band_pct = 0.25, treat_above = TRUE) {
+                             band_pct = 0.25, ctrl_band_pct = band_pct, treat_above = TRUE) {
     if (treat_above) {
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
@@ -3009,7 +3008,7 @@ run_matched_diff <- function(treat_label, control_label, gap_col, threshold, fs,
         control_close <- data |>
             filter(group == control_label, fstatus == fs) |>
             mutate(gap = .data[[gap_col]] - threshold) |>
-            filter(gap <= band_pct * threshold)
+            filter(gap <= ctrl_band_pct * threshold)
         treat_close <- data |>
             filter(group == treat_label, fstatus == fs) |>
             mutate(gap = threshold - .data[[gap_col]]) |>
@@ -3038,11 +3037,11 @@ diff_10n_results <- bind_rows(lapply(fstatuses, function(fs) {
     bind_rows(
         run_matched_diff("Stopped itemizing (TCJA)", "Never itemized",
                          "imp_itemizable_2017", std_ded_2017_map[[fs]], fs, item_data,
-                         band_pct = BW_2017, treat_above = TRUE) |>
+                         band_pct = BW_2017[[fs]], treat_above = TRUE) |>
             mutate(group = "Stopped vs. Never", fstatus = fs),
         run_matched_diff("Stopped itemizing (TCJA)", "Always itemized",
                          "imp_itemizable_2018", tcja_std_ded_map[[fs]], fs, item_data,
-                         band_pct = BW_TCJA, treat_above = FALSE) |>
+                         band_pct = BW_TCJA[[fs]], ctrl_band_pct = BW_TCJA_CTRL[[fs]], treat_above = FALSE) |>
             mutate(group = "Stopped vs. Always", fstatus = fs)
     )
 })) |>
@@ -3087,6 +3086,108 @@ ggplot(diff_10n_results,
         legend.position   = "bottom"
     )
 ggsave("../../../output/Cormac/10n_simple_differences.png", last_plot(), width = 11, height = 5, dpi = 150)
+
+########################################################
+# 10o. Bandwidth selection: raw moving rates by $1k bin near each threshold (MFJ)
+#
+# Two plots, one per cutoff.  Each plot shows all 10 groups (5 control bins +
+# 5 treatment bins) on the same axes.  Control bins use a teal ramp, treatment
+# bins use an orange ramp; darker shade = closer to the threshold.
+# Bins whose lines are parallel pre-2018 are suitable for the DiD bandwidth.
+########################################################
+
+bw_bin_size <- 1500L
+bw_n_bins   <- 5L
+
+# Build long data: one row per year × signed bin label
+# Bin numbers run 1 (closest) to n (furthest); labels drop units since bin
+# width is 1.5k rather than a round number.
+make_bw_bins <- function(treat_label, control_label, gap_col, threshold,
+                         treat_above, fs, data,
+                         n = bw_n_bins, bw = bw_bin_size) {
+    if (treat_above) {
+        ctrl_dat <- data |> filter(group == control_label, fstatus == fs) |>
+            mutate(dist = threshold - .data[[gap_col]])
+        trt_dat  <- data |> filter(group == treat_label,   fstatus == fs) |>
+            mutate(dist = .data[[gap_col]] - threshold)
+    } else {
+        ctrl_dat <- data |> filter(group == control_label, fstatus == fs) |>
+            mutate(dist = .data[[gap_col]] - threshold)
+        trt_dat  <- data |> filter(group == treat_label,   fstatus == fs) |>
+            mutate(dist = threshold - .data[[gap_col]])
+    }
+    bind_rows(
+        ctrl_dat |> filter(dist > 0, dist <= n * bw) |>
+            mutate(bin_label = paste0("Control -", ceiling(dist / bw))),
+        trt_dat  |> filter(dist > 0, dist <= n * bw) |>
+            mutate(bin_label = paste0("Treated +", ceiling(dist / bw)))
+    ) |>
+        group_by(year, bin_label) |>
+        summarise(mean_mover = mean(mover), .groups = "drop")
+}
+
+# Ordered factor levels: control side far→close, then treatment side close→far
+bw_bin_levels <- c(
+    paste0("Control -", 5:1),
+    paste0("Treated +", 1:5)
+)
+
+# Color ramps: light→dark as distance decreases (closest = darkest)
+ctrl_pal <- colorRampPalette(c("#9ecdd1", "#2a6b73"))(5)  # lightest to darkest teal
+trt_pal  <- colorRampPalette(c("#f0c4a0", "#b04010"))(5)  # lightest to darkest orange
+# ctrl_pal[1] = furthest (-5), ctrl_pal[5] = closest (-1)
+# trt_pal[5]  = furthest (+5), trt_pal[1]  = closest (+1)
+bw_bin_colors <- setNames(
+    c(ctrl_pal, rev(trt_pal)),
+    bw_bin_levels
+)
+
+bw_dat1 <- make_bw_bins(
+    "Stopped itemizing (TCJA)", "Never itemized",
+    "imp_itemizable_2017", std_ded_2017_map[["MFJ"]],
+    treat_above = TRUE, fs = "MFJ", data = item_data
+) |> mutate(bin_label = factor(bin_label, levels = bw_bin_levels))
+
+bw_dat2 <- make_bw_bins(
+    "Stopped itemizing (TCJA)", "Always itemized",
+    "imp_itemizable_2018", tcja_std_ded_map[["MFJ"]],
+    treat_above = FALSE, fs = "MFJ", data = item_data
+) |> mutate(bin_label = factor(bin_label, levels = bw_bin_levels))
+
+plot_bw_bins <- function(dat, title_str) {
+    ggplot(dat, aes(year, mean_mover, color = bin_label, group = bin_label)) +
+        geom_hline(yintercept = 0, color = "grey70") +
+        geom_vline(xintercept = 2017.5, linetype = "dashed", color = "grey50") +
+        geom_line(linewidth = 0.8) +
+        geom_point(size = 1.8) +
+        scale_x_continuous(breaks = seq(2012, 2023, by = 2)) +
+        scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+        scale_color_manual(values = bw_bin_colors, name = NULL) +
+        labs(x = NULL, y = "Share moving", title = title_str) +
+        guides(color = guide_legend(nrow = 2)) +
+        theme(
+            panel.background  = element_rect(fill = bg_col, color = NA),
+            plot.background   = element_rect(fill = bg_col, color = NA),
+            panel.grid.major  = element_line(color = "grey90"),
+            panel.grid.minor  = element_blank(),
+            axis.line.x       = element_line(color = "grey30"),
+            axis.line.y       = element_line(color = "grey30"),
+            legend.background = element_rect(fill = bg_col, color = NA),
+            legend.key        = element_rect(fill = bg_col, color = NA),
+            axis.text.x       = element_text(color = "grey20", angle = 45, hjust = 1),
+            axis.text.y       = element_text(color = "grey20"),
+            text              = element_text(color = "grey20"),
+            legend.position   = "bottom"
+        )
+}
+
+p_bw1 <- plot_bw_bins(bw_dat1,
+    "Cutoff 1 ($12.7k, MFJ): Stopped vs. Never - $1.5k bins near threshold (1 = closest)")
+p_bw2 <- plot_bw_bins(bw_dat2,
+    "Cutoff 2 ($24k, MFJ): Stopped vs. Always - $1.5k bins near threshold (1 = closest)")
+
+ggsave("../../../output/Cormac/10o_bw_cutoff1.png", p_bw1, width = 9, height = 5, dpi = 150)
+ggsave("../../../output/Cormac/10o_bw_cutoff2.png", p_bw2, width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 11. Move rate by additional federal tax from SALT cap, by period
