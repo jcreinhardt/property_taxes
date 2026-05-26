@@ -15,6 +15,10 @@ county_returns <- dbGetQuery(con, "select * from returns_county")
 county_returns_agi <- dbGetQuery(con, "select * from returns_county_agi")
 dbDisconnect(con, shutdown = TRUE)
 
+# Per-script output folder
+OUTPUT_DIR <- "../../../output/analysis/migration/fig2"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
 # Impute marginal tax rates for county AGI stubs
 # Stubs present: 1, 3, 4, 5, 6, 8
 # (stub 2 merged into stub 3; stub 7 merged into stub 8)
@@ -161,7 +165,8 @@ ggplot(plot_all, aes(x = year, y = total_migration, color = group, group = group
         text = element_text(color = "grey20"),
     ) +
     scale_x_continuous(breaks = seq(2012, 2022, by = 2))
-ggsave("../../../output/fig2.png", width = 16, height = 10, units = "cm")
+ggsave(file.path(OUTPUT_DIR, "fig2.png"), width = 16, height = 10,
+       units = "cm")
 
 # Figure 2b: In-migration share by SALT exposure group
 plot_data_share <- migration |>
@@ -230,4 +235,5 @@ ggplot(plot_all_share, aes(x = year, y = migration_share, color = group, group =
         text = element_text(color = "grey20"),
     ) +
     scale_x_continuous(breaks = seq(2012, 2022, by = 2))
-ggsave("../../../output/fig2_share.png", width = 16, height = 10, units = "cm")
+ggsave(file.path(OUTPUT_DIR, "fig2_share.png"), width = 16, height = 10,
+       units = "cm")

@@ -18,7 +18,7 @@ cat("Task", task_id, "starting at", format(Sys.time()), "\n")
 
 # Setup paths
 db_path <- "/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db"
-output_dir <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/border_rd"
+output_dir <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/analysis/transactions/border_rd/border_rd_worker"
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 # Check if this task was already completed

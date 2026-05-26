@@ -5,7 +5,7 @@ rm(list = ls())
 
 DB_PATH_CORELOGIC <- "../../../data/corelogic/corelogic.db"
 DB_PATH_RETURNS   <- "../../../data/database.db"
-OUTPUT_DIR        <- "../../../output/local_govt"
+OUTPUT_DIR        <- "../../../output/analysis/local_govt/county_median_tax_rate"
 
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 

@@ -4,11 +4,9 @@ rm(list = ls())
 
 DB_PATH_RETURNS <- "../../../data/database.db"
 DB_PATH_FINANCE <- "../../../data/census_finances_test.db"
-OUTPUT_DIR <- "../../../output/local_govt"
+OUTPUT_DIR <- "../../../output/analysis/local_govt/county_revenue_salt_exposure"
 
-if (!dir.exists(OUTPUT_DIR)) {
-  dir.create(OUTPUT_DIR, recursive = TRUE)
-}
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 con_returns <- DBI::dbConnect(duckdb::duckdb(),
                               dbdir = DB_PATH_RETURNS,

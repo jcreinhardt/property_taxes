@@ -5,7 +5,7 @@
 library(dplyr)
 library(duckdb)
 
-output_dir <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/border_rd"
+output_dir <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/analysis/transactions/border_rd/border_rd_worker"
 files <- list.files(output_dir, pattern = "result_.*\\.rds", full.names = TRUE)
 
 cat("Found", length(files), "result files\n")
@@ -39,12 +39,12 @@ cat("  Years covered:", paste(sort(unique(results$year)), collapse = ", "), "\n"
 cat("  Unique borders:", length(unique(results$border_idx)), "\n")
 
 # Save as RDS
-rds_file <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/border_rd_results.rds"
+rds_file <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/analysis/transactions/border_rd/combine_border_rd_results/border_rd_results.rds"
 saveRDS(results, rds_file)
 cat("\nResults saved to:", rds_file, "\n")
 
 # Also save to DuckDB for easy querying
-db_file <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/border_rd_results.duckdb"
+db_file <- "/vast/palmer/home.grace/jr2728/projects/property_taxes/output/analysis/transactions/border_rd/combine_border_rd_results/border_rd_results.duckdb"
 con <- dbConnect(duckdb::duckdb(), db_file)
 dbWriteTable(con, "results", results, overwrite = TRUE)
 dbDisconnect(con, shutdown = TRUE)

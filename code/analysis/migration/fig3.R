@@ -14,6 +14,10 @@ migration <- dbGetQuery(con, "select * from migration_state")
 returns   <- dbGetQuery(con, "select * from returns_state")
 dbDisconnect(con, shutdown = TRUE)
 
+# Per-script output folder
+OUTPUT_DIR <- "../../../output/analysis/migration/fig3"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
 # Impute marginal tax rates
 returns <- returns |>
     mutate(
@@ -150,7 +154,8 @@ migration |>
         text = element_text(color = "grey20"),
     ) +
     scale_x_continuous(breaks = seq(2012, 2022, by = 2))
-ggsave("../../../output/fig3.png", width = 16, height = 8, units = "cm")
+ggsave(file.path(OUTPUT_DIR, "fig3.png"), width = 16, height = 8,
+       units = "cm")
 
 # -----------------------------------------------------------------------------
 # Figure 4: Event-study — average AGI per mover × SALT exposure (state level)
@@ -195,4 +200,5 @@ migration |>
         text = element_text(color = "grey20"),
     ) +
     scale_x_continuous(breaks = seq(2012, 2022, by = 2))
-ggsave("../../../output/fig4.png", width = 16, height = 8, units = "cm")
+ggsave(file.path(OUTPUT_DIR, "fig4.png"), width = 16, height = 8,
+       units = "cm")

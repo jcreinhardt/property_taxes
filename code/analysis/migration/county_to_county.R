@@ -693,4 +693,8 @@ ggplot(gravity_plot_data,
         text = element_text(color = "grey20"),
     ) +
     scale_x_continuous(breaks = seq(2012, 2022, by = 2))
-ggsave("../../../output/fig_gravity_event_study.png", width = 12, height = 8, units = "cm")
+OUTPUT_DIR <- "../../../output/analysis/migration/county_to_county"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
+ggsave(file.path(OUTPUT_DIR, "fig_gravity_event_study.png"),
+       width = 12, height = 8, units = "cm")

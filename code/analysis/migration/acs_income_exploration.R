@@ -20,6 +20,10 @@ registerDoParallel(cores = n_cores)
 
 con <- dbConnect(duckdb::duckdb(), dbdir = "../../../data/database.db", read_only = TRUE)
 
+# Per-script output folder (keeps paper/repro artifacts traceable to this file)
+OUTPUT_DIR <- "../../../output/analysis/migration/acs_income_exploration"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
 # ── Plot theme toggle ────────────────────────────────────────────────────────
 # Set PLOT_MODE to "slides" (light-grey background) or "paper" (white background).
 PLOT_MODE <- "paper"
@@ -949,7 +953,7 @@ ggplot(mover_by_group_year,
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
-ggsave("../../../output/Cormac/10a_moving_rates_by_group.png", last_plot(), width = 8, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10a_moving_rates_by_group.png"), last_plot(), width = 8, height = 5, dpi = 150)
 
 # 10a-ii. Quantile-anchored group assignment + raw moving rates.
 # item_data_q is also used in section 10h; compute it once here.
@@ -1051,7 +1055,7 @@ ggplot(mover_by_qgroup_year,
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
-ggsave("../../../output/Cormac/10a_moving_rates_qgroup.png", last_plot(), width = 8, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10a_moving_rates_qgroup.png"), last_plot(), width = 8, height = 5, dpi = 150)
 
 # 10a-iii. Raw moving rates for matched treatment and control groups near each cutoff.
 # Applies the same BW_2017 / BW_TCJA bandwidth as the event studies so the raw
@@ -1143,7 +1147,7 @@ ggplot(raw_means_matched,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10a_moving_rates_matched.png", last_plot(),
+ggsave(file.path(OUTPUT_DIR, "10a_moving_rates_matched.png"), last_plot(),
        width = 10, height = 7, dpi = 150)
 
 ########################################################
@@ -1281,7 +1285,7 @@ ggplot(es_10b_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10b_event_study.png", last_plot(), width = 11, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10b_event_study.png"), last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
 # 10c. Sensitivity to control specification
@@ -1418,7 +1422,7 @@ ggplot(es_10c_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10c_control_sensitivity.png", last_plot(),
+ggsave(file.path(OUTPUT_DIR, "10c_control_sensitivity.png"), last_plot(),
        width = 10, height = 7, dpi = 150)
 
 ########################################################
@@ -1511,7 +1515,7 @@ plot_het(
     title    = "Heterogeneity by age: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_age.png", last_plot(), width = 9, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_age.png"), last_plot(), width = 9, height = 6, dpi = 150)
 
 # --- (b) Metro status ---
 plot_het(
@@ -1522,7 +1526,7 @@ plot_het(
     title    = "Heterogeneity by metro status: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_metro.png", last_plot(), width = 9, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_metro.png"), last_plot(), width = 9, height = 6, dpi = 150)
 
 # --- (c) Number of children (MFJ only) ---
 # Singles by definition have nchild = 0 (nchild > 0 maps to HoH, which is excluded).
@@ -1534,7 +1538,7 @@ plot_het(
     title    = "Heterogeneity by number of children: event study (MFJ only)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_children.png", last_plot(), width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_children.png"), last_plot(), width = 9, height = 5, dpi = 150)
 
 # --- (d) Education ---
 # educ codes: 0-6 = HS or less, 7-8 = some college (no degree), 10-11 = bachelor's+
@@ -1548,7 +1552,7 @@ plot_het(
     title    = "Heterogeneity by education: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_education.png", last_plot(), width = 12, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_education.png"), last_plot(), width = 12, height = 6, dpi = 150)
 
 # --- (e) Sex ---
 plot_het(
@@ -1559,7 +1563,7 @@ plot_het(
     title    = "Heterogeneity by sex: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_sex.png", last_plot(), width = 9, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_sex.png"), last_plot(), width = 9, height = 6, dpi = 150)
 
 # --- (f) Race / ethnicity ---
 # race and hispan stored as factors; convert to integer for comparison.
@@ -1578,7 +1582,7 @@ plot_het(
     title    = "Heterogeneity by race/ethnicity: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_race.png", last_plot(), width = 12, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_race.png"), last_plot(), width = 12, height = 6, dpi = 150)
 
 # --- (g) Multigenerational household ---
 # multgen codes: 0=N/A/GQ, 1=not multigenerational, 2=3 generations, 3=4+ generations
@@ -1590,7 +1594,7 @@ plot_het(
     title    = "Heterogeneity by multigenerational household: event study (MFJ and Single)",
     subtitle = "Matched controls as in 10c; ref = 2017; controls + year + state FE; clustered by state"
 )
-ggsave("../../../output/Cormac/10d_het_multigen.png", last_plot(), width = 9, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10d_het_multigen.png"), last_plot(), width = 9, height = 6, dpi = 150)
 
 ########################################################
 # 10e. Additional federal tax from SALT cap: treatment vs. matched controls
@@ -1722,7 +1726,7 @@ ggplot(exposure_summary,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10e_exposure.png", last_plot(), width = 11, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10e_exposure.png"), last_plot(), width = 11, height = 5, dpi = 150)
 
 salt_ded_summary <- exposure_groups |>
     group_by(year, fstatus, plot_group, ltype) |>
@@ -1763,7 +1767,7 @@ ggplot(salt_ded_summary,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10e_salt_ded.png", last_plot(), width = 11, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10e_salt_ded.png"), last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
 # 10f. Move type event study: within-state vs. between-state (TWFE)
@@ -1891,7 +1895,7 @@ ggplot(mig_type_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10f_migration_type.png", last_plot(), width = 10, height = 7, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10f_migration_type.png"), last_plot(), width = 10, height = 7, dpi = 150)
 
 ########################################################
 # 10g. Robustness: alternative control group distance bands
@@ -2054,7 +2058,7 @@ ggplot(robust_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10g_robustness_bands.png", last_plot(), width = 10, height = 7, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10g_robustness_bands.png"), last_plot(), width = 10, height = 7, dpi = 150)
 
 ########################################################
 # 10h. Robustness: quantile-anchored itemization groups
@@ -2178,7 +2182,7 @@ ggplot(es_10h_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10h_quantile_robustness.png", last_plot(), width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10h_quantile_robustness.png"), last_plot(), width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 10i. First stage: mean SALT deduction by group over time
@@ -2248,7 +2252,7 @@ ggplot(fs_summary,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10i_first_stage.png", last_plot(), width = 12, height = 7, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10i_first_stage.png"), last_plot(), width = 12, height = 7, dpi = 150)
 
 ########################################################
 # 10j. SALT refund change by itemizable total (MFJ filers) — two stacked panels
@@ -2347,7 +2351,7 @@ p10j_a / p10j_b +
             text = element_text(color = "grey20")
         )
     )
-ggsave("../../../output/Cormac/10j_salt_refund_diff.png", last_plot(), width = 8, height = 8, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10j_salt_refund_diff.png"), last_plot(), width = 8, height = 8, dpi = 150)
 
 ########################################################
 # 10k. Balance table
@@ -2573,7 +2577,7 @@ cat("Each cell: OLS coefficient, with SE in parentheses on the row below.\n\n")
 print(as.data.frame(bal_table), row.names = FALSE)
 
 write.csv(bal_table,
-          file      = "../../../output/Cormac/10k_balance_table.csv",
+          file      = file.path(OUTPUT_DIR, "10k_balance_table.csv"),
           row.names = FALSE)
 
 writeLines(
@@ -2584,7 +2588,7 @@ writeLines(
         caption  = "Balance table: MFJ filers. Reference group: Stopped itemizing (TCJA). OLS coefficients with HC1-robust SEs in parentheses.",
         label    = "tab:balance"
     ),
-    con = "../../../output/Cormac/10k_balance_table.tex"
+    con = file.path(OUTPUT_DIR, "10k_balance_table.tex")
 )
 
 ########################################################
@@ -2662,7 +2666,7 @@ ggplot(item_rate_by_salt, aes(bin_mid, pct_itemize)) +
         axis.text.y       = element_text(color = "grey20"),
         text              = element_text(color = "grey20")
     )
-ggsave("../../../output/Cormac/10l_itemization_rate_by_salt.png", last_plot(), width = 8, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10l_itemization_rate_by_salt.png"), last_plot(), width = 8, height = 5, dpi = 150)
 
 # --- (b) Move rate by year × itemization status, faceted by $2k SALT bin ---
 # $2k bins keep the number of facets manageable (~8-10 panels).
@@ -2726,7 +2730,7 @@ ggplot(mover_salt_year,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10l_move_rate_by_salt_bin.png", last_plot(), width = 12, height = 8, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10l_move_rate_by_salt_bin.png"), last_plot(), width = 12, height = 8, dpi = 150)
 
 ########################################################
 # 10m. Empirical magnitudes
@@ -3085,7 +3089,7 @@ ggplot(diff_10n_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/10n_simple_differences.png", last_plot(), width = 11, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10n_simple_differences.png"), last_plot(), width = 11, height = 5, dpi = 150)
 
 ########################################################
 # 10o. Bandwidth selection: raw moving rates by $1k bin near each threshold (MFJ)
@@ -3186,8 +3190,8 @@ p_bw1 <- plot_bw_bins(bw_dat1,
 p_bw2 <- plot_bw_bins(bw_dat2,
     "Cutoff 2 ($24k, MFJ): Stopped vs. Always - $1.5k bins near threshold (1 = closest)")
 
-ggsave("../../../output/Cormac/10o_bw_cutoff1.png", p_bw1, width = 9, height = 5, dpi = 150)
-ggsave("../../../output/Cormac/10o_bw_cutoff2.png", p_bw2, width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10o_bw_cutoff1.png"), p_bw1, width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "10o_bw_cutoff2.png"), p_bw2, width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 11. Move rate by additional federal tax from SALT cap, by period
@@ -3269,7 +3273,7 @@ ggplot(mover_by_tax_bin,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/11_move_rate_by_tax_bin.png", last_plot(), width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "11_move_rate_by_tax_bin.png"), last_plot(), width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 12. Binned DiD event studies: each cost bin vs. <$500 control group
@@ -3361,7 +3365,7 @@ ggplot(es_results,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/12_event_study_by_cost_bin.png", last_plot(), width = 9, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "12_event_study_by_cost_bin.png"), last_plot(), width = 9, height = 5, dpi = 150)
 
 ########################################################
 # 13. Move rate by itemizable income (2017 rules), by year
@@ -3439,7 +3443,7 @@ ggplot(move_by_item_yr,
         text              = element_text(color = "grey20"),
         legend.position   = "right"
     )
-ggsave("../../../output/Cormac/13_move_rate_by_itemizable_income.png", last_plot(), width = 10, height = 6, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "13_move_rate_by_itemizable_income.png"), last_plot(), width = 10, height = 6, dpi = 150)
 
 ########################################################
 # 14. Pre-post TCJA first differences by demographic cell
@@ -3586,7 +3590,7 @@ ggplot(coef_df_14,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/14_prepost_fd_demographics.png", last_plot(), width = 9, height = 7, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "14_prepost_fd_demographics.png"), last_plot(), width = 9, height = 7, dpi = 150)
 
 ########################################################
 # 15. Move rate vs. itemizable income: most vs. least mobile demographic
@@ -3714,7 +3718,7 @@ ggplot(plot_data_15,
         text              = element_text(color = "grey20"),
         legend.position   = "bottom"
     )
-ggsave("../../../output/Cormac/15_move_rate_item_income_het.png",
+ggsave(file.path(OUTPUT_DIR, "15_move_rate_item_income_het.png"),
        last_plot(), width = 9, height = 5, dpi = 150)
 
 dbDisconnect(con, shutdown = TRUE)

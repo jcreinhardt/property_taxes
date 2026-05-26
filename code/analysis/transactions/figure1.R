@@ -24,6 +24,10 @@ db_path <- "/gpfs/gibbs/pi/lapoint/corelogic/database/corelogic.db"
 con <- dbConnect(duckdb::duckdb(), db_path, read_only = TRUE)
 dbExecute(con, "set temp_directory = '../../temp/'")
 
+# Per-script output folder
+OUTPUT_DIR <- "../../output/analysis/transactions/figure1"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
 dbGetQuery(con, "select current_setting('threads') as threads,current_setting('memory_limit') as memory_limit;")
 
 # Query panel of properties with 
@@ -110,7 +114,7 @@ ggplot(estimates, aes(x = year, y = coef)) +
              size = 3, 
              box.colour = "black", 
              box.padding = unit(0.3, "lines"))
-ggsave("../../output/RDD.png")
+ggsave(file.path(OUTPUT_DIR, "RDD.png"))
 
 
 
@@ -181,7 +185,8 @@ pctile_coefs |>
             panel.background = element_rect(fill = "#fafafa", color = NA)
         ) +
         scale_color_manual(values = c("Pre-2018" = "#eb811b", "Post-2018" = "#23373b"))
-ggsave("../../output/pctiles.png", width = 15, height = 10, units = "cm" )
+ggsave(file.path(OUTPUT_DIR, "pctiles.png"), width = 15, height = 10,
+       units = "cm")
 
 
 pctile_coefs <- df |> 
@@ -238,7 +243,8 @@ pctile_coefs |>
             panel.background = element_rect(fill = "#fafafa", color = NA)
         ) +
         scale_color_manual(values = c("Pre-2016" = "#eb811b", "2016-2017" = "#14B03D", "Post-2018" = "#23373b"))
-ggsave("../../output/pctiles_pretrend.png", width = 15, height = 10, units = "cm" )
+ggsave(file.path(OUTPUT_DIR, "pctiles_pretrend.png"), width = 15,
+       height = 10, units = "cm")
 
 
 
@@ -325,7 +331,7 @@ sample |>
         geom_line() +
         geom_point() +
         theme_classic()
-ggsave("../../output/no_income_tax_states.png")
+ggsave(file.path(OUTPUT_DIR, "no_income_tax_states.png"))
 
 
 
@@ -408,7 +414,7 @@ df |>
 # See files in border_rd/ for implementation
 
 # Load results
-rd <- readRDS("../../output/border_rd_results.rds")
+rd <- readRDS("../../output/analysis/transactions/border_rd/combine_border_rd_results/border_rd_results.rds")
 
 # Load income tax rates
 rates <- read.csv("../../data/state_income_tax_rates_2018.csv")
@@ -472,7 +478,7 @@ rd |>
         theme_classic() +
         theme(legend.position = "bottom") +
         scale_color_manual(values = c("Negative tax differential" = "#0C7BDC", "Positive tax differential" = "#FFC20A"))
-ggsave("../../output/border_rd_event_study_groups.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_event_study_groups.png"))
 
 
 
@@ -501,7 +507,7 @@ rd |>
         theme_classic() +
         scale_x_continuous(breaks = seq(-5, 5, by = 1)) +
         xlim(-5, 5) 
-ggsave("../../output/border_rd_scatter_pre.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_scatter_pre.png"))
 
 # Plot post-reform RD estimates vs. state income tax rates
 rd |> 
@@ -518,7 +524,7 @@ rd |>
         theme_classic() +
         scale_x_continuous(breaks = seq(-5, 5, by = 1)) +
         xlim(-5, 5) 
-ggsave("../../output/border_rd_scatter_post.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_scatter_post.png"))
 
 # Plot both with two separate lines
 rd |> 
@@ -553,7 +559,8 @@ rd |>
         ) +
         scale_color_manual(values = c("Pre-2018" = "#eb811b", "Post-2018" = "#23373b"), labels = c("Pre-2018", "Post-2018")) +
         scale_shape_manual(values = c("Pre-2018" = 16, "Post-2018" = 17), labels = c("Pre-2018", "Post-2018"))
-ggsave("../../output/border_rd_scatter_pre.png", width = 15, height = 10, units = "cm" )
+ggsave(file.path(OUTPUT_DIR, "border_rd_scatter_pre.png"), width = 15,
+       height = 10, units = "cm")
 
 rd |> 
     mutate(
@@ -586,7 +593,8 @@ rd |>
         ) +
         scale_color_manual(values = c("Pre-2018" = "#eb811b", "Post-2018" = "#23373b"), labels = c("Pre-2018", "Post-2018")) +
         scale_shape_manual(values = c("Pre-2018" = 16, "Post-2018" = 17), labels = c("Pre-2018", "Post-2018"))
-ggsave("../../output/border_rd_scatter.png", width = 15, height = 10, units = "cm" )
+ggsave(file.path(OUTPUT_DIR, "border_rd_scatter.png"), width = 15,
+       height = 10, units = "cm")
 
 
 rd |> 
@@ -621,7 +629,8 @@ rd |>
         ) +
         scale_color_manual(values = c("Pre-2016" = "#eb811b", "2016-2017" = "#6a9fb5", "Post-2018" = "#23373b"), labels = c("Pre-2016", "2016-2017", "Post-2018")) +
         scale_shape_manual(values = c("Pre-2016" = 16, "2016-2017" = 17, "Post-2018" = 18), labels = c("Pre-2016", "2016-2017", "Post-2018"))
-ggsave("../../output/border_rd_scatter_pretrend.png", width = 15, height = 10, units = "cm" )
+ggsave(file.path(OUTPUT_DIR, "border_rd_scatter_pretrend.png"), width = 15,
+       height = 10, units = "cm")
 
 
 
@@ -657,7 +666,7 @@ rd |>
         theme_classic() +
         scale_color_manual(values = c("Negative tax differential" = "#0C7BDC", "Positive tax differential" = "#FFC20A"), labels = c("Negative tax differential", "Positive tax differential")) +
         scale_fill_manual(values = c("Negative tax differential" = "#0C7BDC", "Positive tax differential" = "#FFC20A"), labels = c("Negative tax differential", "Positive tax differential"))
-ggsave("../../output/border_rd_histogram.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_histogram.png"))
 
 
 rd |> 
@@ -689,7 +698,7 @@ rd |>
         scale_x_continuous(breaks = seq(-10, 10, by = 2)) 
         # scale_y_continuous(breaks = seq(-5, 5, by = 1)) +
         # ylim(-5, 5) +
-ggsave("../../output/border_rd_diff_scatter.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_diff_scatter.png"))
 
 # Group into 1 tax-rate bins
 rd |> 
@@ -714,7 +723,7 @@ rd |>
         scale_y_continuous(breaks = seq(-5, 5, by = 1)) +
         ylim(-5, 5) +
         scale_color_manual(values = c("Pre-2018" = "#0C7BDC", "Post-2018" = "#FFC20A"), labels = c("Pre-2018", "Post-2018"))
-ggsave("../../output/border_rd_binned_scatter.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_binned_scatter.png"))
 
 coefs <- rd |> 
     filter(abs(coef) < 5 & rate1 != 0 & rate2 != 0) |>
@@ -749,7 +758,7 @@ coefs |>
         scale_y_continuous(breaks = seq(-5, 5, by = 1)) +
         ylim(-5, 5) +
         scale_color_manual(values = c("Pre-2018" = "#0C7BDC", "Post-2018" = "#FFC20A"), labels = c("Pre-2018", "Post-2018"))
-ggsave("../../output/border_rd_binned_coefs.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_binned_coefs.png"))
 
 
 # Plot both in a joint binscatter
@@ -768,7 +777,7 @@ rd |>
         plotxrange = c(-5, 5),
         plotyrange = c(-5, 5)
     )
-ggsave("../../output/border_rd_binscatter.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_binscatter.png"))
 
 
 
@@ -849,7 +858,7 @@ rd |>
         theme_classic() +
         ylim(-.3, .3) +
         scale_y_continuous(breaks = seq(-.3, .3, by = .1))
-ggsave("../../output/border_rd_event_study.png")
+ggsave(file.path(OUTPUT_DIR, "border_rd_event_study.png"))
 
 
 

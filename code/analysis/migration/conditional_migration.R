@@ -71,6 +71,10 @@ print(as.data.frame(mover_coverage))
 
 dbDisconnect(con, shutdown = TRUE)
 
+# Per-script output folder
+OUTPUT_DIR <- "../../../output/analysis/migration/conditional_migration"
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
 # ============================================================
 # Section 2: Feature engineering
 # ============================================================
@@ -268,7 +272,8 @@ p_salt_dir <- ggplot(salt_time, aes(x = year, y = share, color = direction, fill
   theme(legend.position = "bottom")
 
 print(p_salt_dir)
-ggsave("../../../output/Cormac/salt_direction.png", p_salt_dir, width = 10, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "salt_direction.png"), p_salt_dir,
+       width = 10, height = 5, dpi = 150)
 
 # Average salt_diff over time by move type
 salt_avg <- salt_dir |>
@@ -326,7 +331,8 @@ p_salt_avg <- ggplot(salt_avg, aes(x = year, y = mean_diff, color = move_type, f
   theme(legend.position = "none")
 
 print(p_salt_avg)
-ggsave("../../../output/Cormac/salt_avg_diff.png", p_salt_avg, width = 10, height = 5, dpi = 150)
+ggsave(file.path(OUTPUT_DIR, "salt_avg_diff.png"), p_salt_avg,
+       width = 10, height = 5, dpi = 150)
 
 # Average total SALT at origin vs destination
 tax_levels <- movers_out |>
@@ -381,7 +387,7 @@ p_tax_levels <- ggplot(tax_levels,
   theme(legend.position = "bottom")
 
 print(p_tax_levels)
-ggsave("../../../output/Cormac/tax_levels_origin_dest.png", p_tax_levels,
+ggsave(file.path(OUTPUT_DIR, "tax_levels_origin_dest.png"), p_tax_levels,
        width = 10, height = 5, dpi = 150)
 
 # ============================================================
@@ -566,7 +572,7 @@ make_es_plot <- function(oc_level, oc_label) {
 for (oc in names(OUTCOMES)) {
   p <- make_es_plot(OUTCOMES[[oc]], OUTCOMES[[oc]])
   print(p)
-  fname <- paste0("../../../output/Cormac/cond_mig_es_", oc, ".png")
+  fname <- file.path(OUTPUT_DIR, paste0("cond_mig_es_", oc, ".png"))
   ggsave(fname, p, width = 9, height = 5, dpi = 150)
 }
 
