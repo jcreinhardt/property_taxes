@@ -1,0 +1,4 @@
+strategy,assumption,test,result,verdict
+S10,At least one full post-year of outcomes exists,2025 arm's-length sales vs 2024 in the sample,"2024: 30421, 2025: 30136",pass
+S10,Responses symmetric (or asymmetry is the object),Compare S10_rate16_pp 2025 coefficient with S3 2018-19 coefficient,see estimates S3_rate vs S10_rate16_pp,untestable
+S10,No other 2025 shock correlated with exposure,none,"untestable (rates, insurance costs rose with value in 2023-25)",untestable

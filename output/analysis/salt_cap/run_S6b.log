@@ -1,0 +1,14 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+   agi_bin      n mean_dprice from_std_deduction    from_cap
+     <int>  <int>       <num>              <num>       <num>
+1:       1 224475  0.01102043        0.009953111 0.001067320
+2:       2 178673  0.04025582        0.039135415 0.001120408
+3:       3 108181  0.06681151        0.062054023 0.004757487
+4:       4  72572  0.08857623        0.074753872 0.013822357
+5:       5 104608  0.18913709        0.099746766 0.089390321
+6:       6  35332  0.12713790       -0.139021657 0.266159558
+sale d_cap -0.06856804 0.005443132 
+sale d_std -0.0458515 0.004313852 
+log_price d_cap 0.01940939 0.02229092 
+log_price d_std 0.008192638 0.02002965 
+S6 decomposition fix done

@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,-0.0674171398974335,0.0659470175247903,S4,log_price,S4_rate,rate16_pp x owner
+2013,0.011948481072638,0.0551561103768994,S4,log_price,S4_rate,rate16_pp x owner
+2014,0.0786217778135505,0.058436360056239,S4,log_price,S4_rate,rate16_pp x owner
+2015,-0.00858590420783567,0.0732880362976194,S4,log_price,S4_rate,rate16_pp x owner
+2016,0,0,S4,log_price,S4_rate,rate16_pp x owner
+2017,0.0579742215671235,0.0249233864877424,S4,log_price,S4_rate,rate16_pp x owner
+2018,-0.0314362591696325,0.0273902886750948,S4,log_price,S4_rate,rate16_pp x owner
+2019,0.00347497707312566,0.0249717614622753,S4,log_price,S4_rate,rate16_pp x owner

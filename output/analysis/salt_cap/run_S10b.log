@@ -1,0 +1,8 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+parcels with bill24 > 40k: 1380 
+sale       2025 effect=-0.01574 (0.008817) p_pre=0.001 N=9157932
+log_price  2025 effect=0.5412 (0.1309) p_pre=0.000 N=298491
+refi       2025 effect=0.001009 (0.008901) p_pre=0.759 N=9157932
+Warning message:
+In es_summary(m, post = years_post) : NAs introduced by coercion
+S10 addendum done

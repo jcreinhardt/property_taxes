@@ -1,0 +1,59 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+There were 50 or more warnings (use warnings() to see the first 50)
+       per           est           se        h     n   outcome      spec_id
+    <char>         <num>        <num>    <num> <int>    <char>       <char>
+ 1:    pre  5.054153e-06 1.945674e-05 2716.462 29676      sale     S7_notax
+ 2:   post  1.927479e-05 2.885842e-05 2141.445 14678      sale     S7_notax
+ 3:    pre  6.074051e-04 2.811052e-04 1646.457  1314 log_price     S7_notax
+ 4:   post  3.038455e-04 4.791065e-04 1990.185   646 log_price     S7_notax
+ 5:    pre  2.083084e-05 2.180517e-05 2995.579 29202 exit_prim     S7_notax
+ 6:   post  1.980334e-05 4.913148e-05 2138.768 12970 exit_prim     S7_notax
+ 7:    pre -4.221467e-06 1.470640e-05 2906.835 32403      refi     S7_notax
+ 8:   post -6.919922e-06 2.523026e-05 2432.882 17198      refi     S7_notax
+ 9:    pre  2.062203e-05 2.820148e-05 2488.097 18507      sale S7_notax_itm
+10:   post  3.375485e-05 3.440904e-05 2003.791  9524      sale S7_notax_itm
+11:    pre  3.889530e-05 2.216064e-04 2283.856  1481 log_price S7_notax_itm
+12:   post  1.344826e-04 4.820985e-04 2176.648   560 log_price S7_notax_itm
+13:    pre -1.992988e-06 3.837885e-05 2401.810 15452 exit_prim S7_notax_itm
+14:   post  2.061384e-05 5.407181e-05 2251.391  9785 exit_prim S7_notax_itm
+15:    pre -1.033085e-05 1.657694e-05 2878.645 21951      refi S7_notax_itm
+16:   post  4.501207e-07 2.047033e-05 2941.025 14976      refi S7_notax_itm
+    sample_def
+        <char>
+ 1:      notax
+ 2:      notax
+ 3:      notax
+ 4:      notax
+ 5:      notax
+ 6:      notax
+ 7:      notax
+ 8:      notax
+ 9:  notax_itm
+10:  notax_itm
+11:  notax_itm
+12:  notax_itm
+13:  notax_itm
+14:  notax_itm
+15:  notax_itm
+16:  notax_itm
+    year      excess
+   <int>       <num>
+1:  2016 -0.03120891
+2:  2019 -0.04119858
+Index: <per>
+      per           est           se        h     n outcome           spec_id
+   <char>         <num>        <num>    <num> <int>  <char>            <char>
+1:    pre  1.084413e-05 1.721283e-05 2666.601 40215    sale S7_notax_salesadj
+2:   post -1.189853e-05 1.311075e-05 3335.387 36340    sale S7_notax_salesadj
+Index: <per>
+      per           est           se        h     n   outcome           spec_id
+   <char>         <num>        <num>    <num> <int>    <char>            <char>
+1:    pre  5.719811e-05 0.0001102971 3231.837  3963 log_price S7_notax_salesadj
+2:   post -8.108166e-05 0.0003481984 2365.362  1153 log_price S7_notax_salesadj
+Warning messages:
+1: In rdrobust(x[[oc]], x$bill16, c = c0, deriv = 1, cluster = x$juris) :
+  Mass points detected in the running variable.
+2: In rdrobust(x[[oc]], x$bill16, c = c0, deriv = 1, cluster = x$juris) :
+  Mass points detected in the running variable.
+S7 done
+EXIT 0

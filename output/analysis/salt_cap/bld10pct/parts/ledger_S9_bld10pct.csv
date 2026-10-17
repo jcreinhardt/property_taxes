@@ -1,0 +1,9 @@
+strategy,assumption,test,result,verdict
+S9a,Revaluation timing exogenous to 2018 (schedules set before 2017),Published NJ lists 2017-22 / CT statutory cycle vs roll-based revaluation years; unscheduled revaluations,"CT: 7 matches, 220 unscheduled (roll only), 208 published-only; NJ: 447 matches, 394 unscheduled (roll only), 157 published-only",inconclusive
+S9a,Parallel trends reval vs other-time towns [sale],Pre-trends 2012-2015,F=0.27 p=0.899,pass
+S9a,Parallel trends reval vs other-time towns [log_price],Pre-trends 2012-2015,F=3.04 p=0.016,fail
+S9a,Parallel trends reval vs other-time towns [exit_prim],Pre-trends 2012-2015,F=0.43 p=0.785,pass
+S9a,Parallel trends reval vs other-time towns [refi],Pre-trends 2012-2015,F=1.02 p=0.395,pass
+S9b,Cohort trends same in CA and control states [sale],Pre-period DDD joint test,F=67.32 p=0.000; post 0.0191 (0.001697),fail
+S9b,Cohort trends same in CA and control states [log_price],Pre-period DDD joint test,F=0.00 p=1.000; post 0.03107 (4344),pass
+S9b,Cohort trends same in CA and control states [refi],Pre-period DDD joint test,F=15.31 p=0.000; post -0.02678 (0.002048),inconclusive

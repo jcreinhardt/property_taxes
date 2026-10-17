@@ -1,0 +1,25 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S8_pooled : parcels 317389  married 298681  unmarried 18708  mid-bill 15176 
+  sale       post=0.02701 (0.02114) pre p=0.294 N=2417392
+  log_price  post=0.2579 (0.1125) pre p=0.741 N=57901
+  exit_prim  post=0.02619 (0.02977) pre p=0.979 N=2134142
+  refi       post=-0.01126 (0.0215) pre p=0.433 N=2417392
+NOTE: 11,131 fixed-effect singletons were removed (11,131 observations).
+NOTE: 11,195 fixed-effect singletons were removed (11,195 observations).
+NOTE: 11,187 fixed-effect singletons were removed (11,187 observations).
+NOTE: 11,195 fixed-effect singletons were removed (11,195 observations).
+Warning message:
+In run_s8(copy(d0), "S8_pooled") : NAs introduced by coercion
+S8_strict : parcels 121939  married 103231  unmarried 18708  mid-bill 7939 
+  sale       post=0.02859 (0.02149) pre p=0.556 N=893736
+  log_price  post=0.2316 (0.1241) pre p=0.462 N=21118
+  exit_prim  post=0.01777 (0.03031) pre p=0.985 N=794014
+  refi       post=-0.004116 (0.02249) pre p=0.623 N=893736
+NOTE: 6,283 fixed-effect singletons were removed (6,283 observations).
+NOTE: 6,647 fixed-effect singletons were removed (6,647 observations).
+NOTE: 6,869 fixed-effect singletons were removed (6,869 observations).
+NOTE: 6,863 fixed-effect singletons were removed (6,863 observations).
+Warning message:
+In run_s8(copy(d0[coowner != "likely_married"]), "S8_strict") :
+  NAs introduced by coercion
+S8 done

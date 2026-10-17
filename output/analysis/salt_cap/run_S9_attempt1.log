@@ -1,0 +1,36 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+Key: <st>
+       st n_town_years emp_and_pub emp_only pub_only
+   <char>        <int>       <int>    <int>    <int>
+1:     CT          634           5      130      121
+2:     NJ         2144         171      151       56
+S9a: towns revalued 2018-20: 99  parcels 5370  crossing 10k: 192  comparison towns: 114 
+  sale       reval  post=-0.002062 (0.004814) p_pre=0.414 N=121891
+  sale       cross  post=0.0006714 (0.01769) p_pre=0.214 N=121891
+  log_price  reval  post=0.04235 (0.03681) p_pre=0.462 N=3914
+  log_price  cross  post=0.2271 (0.1324) p_pre=0.014 N=3914
+  exit_prim  reval  post=-0.007382 (0.005682) p_pre=0.728 N=100390
+  exit_prim  cross  post=-0.006193 (0.0208) p_pre=0.030 N=100390
+  refi       reval  post=0.008817 (0.006803) p_pre=0.224 N=121891
+  refi       cross  post=0.01652 (0.0174) p_pre=0.119 N=121891
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+      ca  cohort    med_rate     n
+   <int>  <fctr>       <num> <int>
+1:     0 pre2001 0.007231714  1108
+2:     0 2001_07 0.007684926 11338
+3:     0 2008_12 0.007269147  8606
+4:     0 2013_16 0.007580045 13133
+5:     1 pre2001 0.008661440  1529
+6:     1 2001_07 0.008605642 11456
+7:     1 2008_12 0.008761873 10045
+8:     1 2013_16 0.008700768 10657
+S9b sale       post=0.02716 (0.006602) pre p=0.002 N=464528
+Error in solve.default(V) : 'a' is 0-diml
+Calls: solve -> solve.default
+In addition: Warning message:
+In as.integer(sub(".*year::(\\d{4}).*", "\\1", nm)) :
+  NAs introduced by coercion
+Execution halted
+EXIT 1

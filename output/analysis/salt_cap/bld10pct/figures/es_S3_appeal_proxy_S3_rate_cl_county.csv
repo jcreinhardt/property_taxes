@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,-0.00168497397680556,0.00114764236881922,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2013,-0.000995379888280952,0.000869681181309457,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2014,-0.00325382819589557,0.00144141924333711,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2015,0.000567625819171553,0.00142449568158082,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2016,0,0,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2017,-0.00048645421866866,0.00103356248724171,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2018,0.000523944050143875,0.00166063311549278,S3,appeal_proxy,S3_rate_cl_county,rate16_pp
+2019,-0.000590394902304601,0.000402782615052622,S3,appeal_proxy,S3_rate_cl_county,rate16_pp

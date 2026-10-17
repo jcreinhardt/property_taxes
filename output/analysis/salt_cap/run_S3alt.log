@@ -1,0 +1,14 @@
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S3 incumbents: 4717264 parcel-years, 589658 parcels
+sale       rate16_pp post=0.003805 (0.0004552) p_pre=0.000 mean|pre|=0.00251 N=4652000
+exit_prim  rate16_pp post=-0.003059 (0.001023) p_pre=0.000 mean|pre|=0.00355 N=4031096
+refi       rate16_pp post=-0.002035 (0.0005244) p_pre=0.000 mean|pre|=0.000754 N=4652000
+to_rental  rate16_pp post=-0.006444 (0.0006711) p_pre=0.001 mean|pre|=0.00164 N=3776178
+sale       above16   post=0.001144 (0.001544) p_pre=0.000 mean|pre|=0.00299 N=4652000
+exit_prim  above16   post=-0.0009932 (0.003112) p_pre=0.757 mean|pre|=0.00154 N=4031096
+refi       above16   post=0.001859 (0.003046) p_pre=0.176 mean|pre|=0.0044 N=4652000
+to_rental  above16   post=-0.0008701 (0.00121) p_pre=0.520 mean|pre|=0.00137 N=3776178
+Warning messages:
+1: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). 
+2: The VCOV matrix is not positive semi-definite and was 'fixed' (see ?vcov). 
+S3 alternative done

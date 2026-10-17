@@ -1,0 +1,182 @@
+=== 01_prepare Fri Oct 16 03:39:30 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpPeJDnA/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpPeJDnA/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpPeJDnA/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+parcels 9456308  panel 151300928  mortgages 23061574 
+states dropped (2016 match < 70%): GU, VI, HI 
+refi events 5896746  cash-out (balance rule) 2223470  cash-out (CoreLogic code) 1297228 
+Warning messages:
+1: In eval(jsub, SDenv, parent.frame()) : NAs introduced by coercion
+2: In eval(jsub, SDenv, parent.frame()) : NAs introduced by coercion
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpPeJDnA/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+imputed AGI:  9429668 parcels; bin shares: 0.358 0.238 0.137 0.09 0.13 0.047 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpPeJDnA/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+[1] 9456308
+[1] 151300928
+written /home/jr2728/ptax_explore/salt/out10/analysis_parcels.parquet /home/jr2728/ptax_explore/salt/out10/analysis_panel.parquet 
+=== exit 0 Fri Oct 16 03:50:14 PM EDT 2026
+=== 02_descriptives Fri Oct 16 03:50:17 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmpa8geSJ/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmpa8geSJ/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+Warning messages:
+1: Removed 52921 rows containing non-finite outside the scale range
+(`stat_bin()`). 
+2: Removed 2 rows containing missing values or values outside the scale range
+(`geom_bar()`). 
+         n bill_p10 bill_p50 bill_p90 bill_p99    rate_p10   rate_p50
+     <int>    <num>    <num>    <num>    <num>       <num>      <num>
+1: 7255164   522.12  2327.67 7260.417 17814.12 0.005798701 0.01179142
+     rate_p90    above16 value_p50  agi_p50 mortint_p50 share_rate_ok
+        <num>      <num>     <num>    <num>       <num>         <num>
+1: 0.02665696 0.04774075  179138.8 44492.87    3101.231     0.9857012
+   share_ratio_adj
+             <num>
+1:       0.5162644
+        st      n bill_p50    rate_p50    above16 value_p50
+    <char>  <int>    <num>       <num>      <num>     <num>
+ 1:     NJ 209270 7775.980 0.025939984 0.28696899  287098.0
+ 2:     NY 295344 5070.700 0.029571414 0.20003792  124183.2
+ 3:     CT  88198 5415.000 0.021483119 0.12545636  242130.6
+ 4:     IL 317340 3884.840 0.023002416 0.09197706  162500.9
+ 5:     CA 717403 3630.960 0.008640724 0.08395142  395745.1
+ 6:     TX 603062 3557.405 0.023281273 0.07693073  150283.0
+ 7:     MA 149774 4417.500 0.014362687 0.07440544  323500.0
+ 8:     NH  36096 5208.000 0.023140776 0.07106051  223179.7
+ 9:     VT  17478 4307.025 0.020847994 0.05927452  201200.0
+10:     RI  23988 4219.000 0.020241692 0.05665333  211300.0
+11:     DC  11816 2949.930 0.007138181 0.05348680  451670.0
+12:     FL 523438 1772.065 0.009042661 0.02782182  193051.3
+          coowner       N      share
+           <char>   <int>      <num>
+1:         single 3675222 0.50656636
+2: likely_married 2002363 0.27599142
+3:        married 1046217 0.14420308
+4:          other  339762 0.04683037
+5:      unmarried  191600 0.02640878
+                                     group       n
+                                    <char>   <int>
+1:                     owner-occupied base 7255164
+2:                          investor-owned 1601844
+3: owner-occupied, all three signals agree 2300791
+4:                two-owner married/likely 3048580
+5:                     two-owner unmarried  191600
+=== exit 0 Fri Oct 16 03:51:32 PM EDT 2026
+=== s1_area_did Fri Oct 16 03:51:34 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpA00ZG3/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpA00ZG3/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/RtmpA00ZG3/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+S1: ZIP-years 176032  ZIPs 22004 
+exit_rate      post=0.001406 (0.002026) p_pre=0.000 | with AGI x year 0.002943
+sale_rate      post=-0.01803 (0.003147) p_pre=0.000 | with AGI x year 0.005789
+med_log_price  post=-0.2494 (0.03871) p_pre=0.000 | with AGI x year 0.04886
+S1 done
+=== exit 0 Fri Oct 16 03:54:46 PM EDT 2026
+=== s2_hh_did Fri Oct 16 03:54:50 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmp0tKNyj/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+S2 sample: 57211392 
+sale         above16  post=0.003207 (0.0006341) p_pre=0.000  with value x year: 0.0008261 (-74%)
+exit         above16  post=0.002662 (0.0004682) p_pre=0.000  with value x year: 0.001231 (-54%)
+exit_prim    above16  post=0.002034 (0.0006964) p_pre=0.000  with value x year: 0.0008736 (-57%)
+log_price    above16  post=0.1687 (0.01126) p_pre=0.000  with value x year: 0.142 (-16%)
+refi         above16  post=-0.01396 (0.0007868) p_pre=0.000  with value x year: -0.005447 (61%)
+cashout      above16  post=-0.004291 (0.0004276) p_pre=0.000  with value x year: -0.001814 (58%)
+to_rental    above16  post=-0.001821 (0.0003817) p_pre=0.607  with value x year: -0.0006238 (66%)
+appeal_proxy above16  post=0.003548 (0.0007001) p_pre=0.000  with value x year: 0.001489 (-58%)
+sale         lbill16  post=0.0004467 (0.0002434) p_pre=0.000  with value x year: 0.001992 (346%)
+exit         lbill16  post=-0.0002718 (0.0002082) p_pre=0.000  with value x year: 0.0003474 (228%)
+exit_prim    lbill16  post=-0.001207 (0.0002583) p_pre=0.000  with value x year: 0.0003605 (130%)
+log_price    lbill16  post=0.07804 (0.006021) p_pre=0.000  with value x year: 0.05224 (-33%)
+refi         lbill16  post=-0.008948 (0.0001672) p_pre=0.000  with value x year: -0.004996 (44%)
+cashout      lbill16  post=-0.001828 (8.052e-05) p_pre=0.000  with value x year: -0.00111 (39%)
+to_rental    lbill16  post=-0.003248 (0.0002093) p_pre=0.029  with value x year: -0.001074 (67%)
+appeal_proxy lbill16  post=0.001671 (0.0001739) p_pre=0.000  with value x year: 0.0009727 (-42%)
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+3: In es_summary(m, post = years_post) : NAs introduced by coercion
+4: In es_summary(m, post = years_post) : NAs introduced by coercion
+5: In es_summary(m, post = years_post) : NAs introduced by coercion
+6: In es_summary(m, post = years_post) : NAs introduced by coercion
+S2 done
+=== exit 0 Fri Oct 16 04:11:36 PM EDT 2026

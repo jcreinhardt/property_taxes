@@ -1,0 +1,4 @@
+strategy,outcome,sample,coef,se,N,clusters,spec_id
+S10,sale,bld1pct,-0.0157411,0.0088167,9157932,46346,S10_above24_40k
+S10,log_price,bld1pct,0.54124,0.130933,298491,31624,S10_above24_40k
+S10,refi,bld1pct,0.00100895,0.00890134,9157932,46346,S10_above24_40k

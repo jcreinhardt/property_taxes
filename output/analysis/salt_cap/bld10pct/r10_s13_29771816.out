@@ -1,0 +1,17 @@
+=== s13_capitalization Fri Oct 16 09:53:20 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+       r full_cap_per_pp beta_rate    se_rate share_capitalised
+   <num>           <num>     <num>      <num>             <num>
+1:  0.04     -0.06000000 0.0296572 0.00368626        -0.4942867
+2:  0.05     -0.04800000 0.0296572 0.00368626        -0.6178583
+3:  0.07     -0.03428571 0.0296572 0.00368626        -0.8650017
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmpy4oRQj/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+S13 done
+=== exit 0 Fri Oct 16 10:13:19 PM EDT 2026

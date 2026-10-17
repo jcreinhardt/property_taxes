@@ -1,0 +1,12 @@
+strategy,outcome,sample,coef,se,N,clusters,spec_id
+S9a,sale,bld10pct,0.00105997,0.00172525,1534720,480,S9a_reval
+S9a,sale,bld10pct,0.00709589,0.00508881,1534720,480,S9a_cross
+S9a,log_price,bld10pct,0.010571,0.0112288,61489,480,S9a_reval
+S9a,log_price,bld10pct,0.199589,0.0685812,61489,480,S9a_cross
+S9a,exit_prim,bld10pct,-9.20814e-05,0.00183965,1261677,480,S9a_reval
+S9a,exit_prim,bld10pct,-0.00090131,0.00714723,1261677,480,S9a_cross
+S9a,refi,bld10pct,0.00149177,0.00269329,1534720,480,S9a_reval
+S9a,refi,bld10pct,-0.0143639,0.00721791,1534720,480,S9a_cross
+S9b,sale,bld10pct,0.019103,0.00169653,5654168,24366,S9b_base
+S9b,log_price,bld10pct,0.0310711,4344.2,441638,19801,S9b_base
+S9b,refi,bld10pct,-0.0267768,0.00204812,5654168,24366,S9b_base

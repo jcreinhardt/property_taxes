@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,0.000368398724903199,0.000629719296890705,S2,to_rental,S2_logbill_cl_county,lbill16
+2013,0.000754574003415116,0.00047463289615005,S2,to_rental,S2_logbill_cl_county,lbill16
+2014,6.23302116695948e-06,0.000406574611703569,S2,to_rental,S2_logbill_cl_county,lbill16
+2015,-0.000440444969690277,0.000438895785278953,S2,to_rental,S2_logbill_cl_county,lbill16
+2016,0,0,S2,to_rental,S2_logbill_cl_county,lbill16
+2017,-0.00388598458404571,0.00042194530437223,S2,to_rental,S2_logbill_cl_county,lbill16
+2018,-0.0030977448017775,0.000389271538671076,S2,to_rental,S2_logbill_cl_county,lbill16
+2019,-0.00314890798498201,0.000416292271136319,S2,to_rental,S2_logbill_cl_county,lbill16

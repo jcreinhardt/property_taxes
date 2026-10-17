@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,0.00435542753783619,0.00371227154945244,S4,to_rental,S4_above_agree,above16 x owner
+2013,0.00193050104635711,0.00368602319898921,S4,to_rental,S4_above_agree,above16 x owner
+2014,-0.00175271134675166,0.00328133537404731,S4,to_rental,S4_above_agree,above16 x owner
+2015,-0.000334315691671146,0.00313801570671945,S4,to_rental,S4_above_agree,above16 x owner
+2016,0,0,S4,to_rental,S4_above_agree,above16 x owner
+2017,0.00698295401172723,0.00247253695592832,S4,to_rental,S4_above_agree,above16 x owner
+2018,0.00797128502752595,0.00264917415849709,S4,to_rental,S4_above_agree,above16 x owner
+2019,0.00145555455346473,0.00261416903021186,S4,to_rental,S4_above_agree,above16 x owner

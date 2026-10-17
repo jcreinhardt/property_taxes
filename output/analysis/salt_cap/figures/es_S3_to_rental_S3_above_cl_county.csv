@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,0.000471183099469064,0.00242249426710862,S3,to_rental,S3_above_cl_county,above16
+2013,0.000449984008453051,0.001700504644778,S3,to_rental,S3_above_cl_county,above16
+2014,0.00423834089472689,0.00208698302062214,S3,to_rental,S3_above_cl_county,above16
+2015,-0.000442814846962108,0.00186697779727942,S3,to_rental,S3_above_cl_county,above16
+2016,0,0,S3,to_rental,S3_above_cl_county,above16
+2017,-0.00107756993074309,0.00152825191596499,S3,to_rental,S3_above_cl_county,above16
+2018,-0.00110767514569982,0.00141925936376233,S3,to_rental,S3_above_cl_county,above16
+2019,-0.0018606412410279,0.00146223318732499,S3,to_rental,S3_above_cl_county,above16

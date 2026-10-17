@@ -1,0 +1,51 @@
+=== s3_core Fri Oct 16 15:05:28 EDT 2026
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S3 sample: 5699304 parcel-years, 712413 parcels
+sale         rate16_pp  S3_rate   post=-0.01581 (0.001108) preF p=0.000 | aug=-0.01025
+exit         rate16_pp  S3_rate   post=-0.003435 (0.0006675) preF p=0.000 | aug=-0.00212
+exit_prim    rate16_pp  S3_rate   post=-0.006749 (0.001032) preF p=0.000 | aug=-0.004883
+log_price    rate16_pp  S3_rate   post=0.05228 (0.00792) preF p=0.001 | aug=0.04858
+refi         rate16_pp  S3_rate   post=-0.001638 (0.0005063) preF p=0.000 | aug=0.001381
+cashout      rate16_pp  S3_rate   post=0.0001552 (0.0003194) preF p=0.258 | aug=0.0007882
+to_rental    rate16_pp  S3_rate   post=-0.008023 (0.0006605) preF p=0.000 | aug=-0.007919
+appeal_proxy rate16_pp  S3_rate   post=0.0004109 (0.0004855) preF p=0.001 | aug=0.000607
+sale         above16    S3_above  post=-0.007607 (0.002569) preF p=0.753 | aug=0.0009728
+exit         above16    S3_above  post=-0.002782 (0.002186) preF p=0.278 | aug=-0.0003411
+exit_prim    above16    S3_above  post=-0.003268 (0.003092) preF p=0.397 | aug=-0.0001531
+log_price    above16    S3_above  post=0.09545 (0.01745) preF p=0.000 | aug=0.08725
+refi         above16    S3_above  post=0.002298 (0.002871) preF p=0.487 | aug=0.0007794
+cashout      above16    S3_above  post=0.0004117 (0.001802) preF p=0.662 | aug=0.001448
+to_rental    above16    S3_above  post=-0.001484 (0.001226) preF p=0.076 | aug=-0.001346
+appeal_proxy above16    S3_above  post=0.000434 (0.001224) preF p=0.014 | aug=0.0004514
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+3: In es_summary(m, post = years_post) : NAs introduced by coercion
+4: In es_summary(m, post = years_post) : NAs introduced by coercion
+5: In es_summary(m, post = years_post) : NAs introduced by coercion
+6: In es_summary(m, post = years_post) : NAs introduced by coercion
+repeat sales rate16_pp -0.02174168 0.03874886 43960 
+repeat sales above16 0.009619928 0.06015141 43960 
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+NOTE: 6,369 fixed-effect singletons were removed (6,369 observations).
+NOTE: 6,438 fixed-effect singletons were removed (6,438 observations).
+NOTE: 7,057 fixed-effect singletons were removed (7,057 observations).
+NOTE: 7,811 fixed-effect singletons were removed (7,811 observations).
+NOTE: 6,900 fixed-effect singletons were removed (6,900 observations).
+NOTE: 8,477 fixed-effect singletons were removed (8,477 observations).
+NOTE: 6,886 fixed-effect singletons were removed (6,886 observations).
+     covariate diff_T3_T1_sd       se_sd      n
+        <char>         <num>       <num>  <int>
+1:  year_built   0.099687960 0.006875817 618966
+2: living_area   0.177448740 0.006941987 637089
+3:    lot_sqft  -0.005787296 0.002815587 678836
+4:       lor16  -0.267312356 0.005351985 633131
+5:     agi_imp   0.139462368 0.007202364 710904
+6:       age16  -0.273730836 0.004927946 571194
+7:   mortint16   0.016152930 0.003299057 712413
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+S3 done

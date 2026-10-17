@@ -1,0 +1,18 @@
+strategy,assumption,test,result,verdict
+S4,"Bill gradient would have changed alike for owners and investors [sale, rate16_pp]",Pre-period DDD event study (2012-2015 joint test),F=119.42 p=0.000; post DDD -0.0217 (0.001157),fail
+S4,"Occupancy misclassification unrelated to bill [sale, rate16_pp]",Owners restricted to parcels where all three occupancy signals agree,DDD -0.003647 (0.0007322) vs base -0.0217 (0.001157),fail
+S4,"Bill gradient would have changed alike for owners and investors [log_price, rate16_pp]",Pre-period DDD event study (2012-2015 joint test),F=6.63 p=0.000; post DDD 0.0423 (0.006757),fail
+S4,"Occupancy misclassification unrelated to bill [log_price, rate16_pp]",Owners restricted to parcels where all three occupancy signals agree,DDD 0.04398 (0.009046) vs base 0.0423 (0.006757),pass
+S4,"Bill gradient would have changed alike for owners and investors [refi, rate16_pp]",Pre-period DDD event study (2012-2015 joint test),F=33.38 p=0.000; post DDD -0.002087 (0.0003083),fail
+S4,"Occupancy misclassification unrelated to bill [refi, rate16_pp]",Owners restricted to parcels where all three occupancy signals agree,DDD -0.00448 (0.0005246) vs base -0.002087 (0.0003083),fail
+S4,"Bill gradient would have changed alike for owners and investors [to_rental, rate16_pp]",Pre-period DDD event study (2012-2015 joint test),F=17.69 p=0.000; post DDD -0.006222 (0.0005445),fail
+S4,"Occupancy misclassification unrelated to bill [to_rental, rate16_pp]",Owners restricted to parcels where all three occupancy signals agree,DDD 0.0004387 (0.0006322) vs base -0.006222 (0.0005445),fail
+S4,"Bill gradient would have changed alike for owners and investors [sale, above16]",Pre-period DDD event study (2012-2015 joint test),F=2.79 p=0.025; post DDD -0.003336 (0.003374),fail
+S4,"Occupancy misclassification unrelated to bill [sale, above16]",Owners restricted to parcels where all three occupancy signals agree,DDD 0.001727 (0.003479) vs base -0.003336 (0.003374),pass
+S4,"Bill gradient would have changed alike for owners and investors [log_price, above16]",Pre-period DDD event study (2012-2015 joint test),F=4.09 p=0.003; post DDD -0.02827 (0.01986),fail
+S4,"Occupancy misclassification unrelated to bill [log_price, above16]",Owners restricted to parcels where all three occupancy signals agree,DDD -0.04263 (0.02468) vs base -0.02827 (0.01986),pass
+S4,"Bill gradient would have changed alike for owners and investors [refi, above16]",Pre-period DDD event study (2012-2015 joint test),F=0.78 p=0.535; post DDD -0.004813 (0.00228),pass
+S4,"Occupancy misclassification unrelated to bill [refi, above16]",Owners restricted to parcels where all three occupancy signals agree,DDD -0.005428 (0.002993) vs base -0.004813 (0.00228),pass
+S4,"Bill gradient would have changed alike for owners and investors [to_rental, above16]",Pre-period DDD event study (2012-2015 joint test),F=1.15 p=0.329; post DDD 0.001977 (0.002367),pass
+S4,"Occupancy misclassification unrelated to bill [to_rental, above16]",Owners restricted to parcels where all three occupancy signals agree,DDD 0.004713 (0.00242) vs base 0.001977 (0.002367),pass
+S4,Classification does not respond to treatment,Occupancy fixed at 2016; to_rental reported as an outcome,see to_rental rows,pass

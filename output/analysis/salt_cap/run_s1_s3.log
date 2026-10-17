@@ -1,0 +1,38 @@
+=== s1_area_did Fri Oct 16 14:22:08 EDT 2026
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S1: ZIP-years 82936  ZIPs 10367 
+exit_rate      post=0.0003736 (0.004453) p_pre=0.001 | with AGI x year 0.009393
+sale_rate      post=-0.01329 (0.005561) p_pre=0.000 | with AGI x year 0.01555
+med_log_price  post=-0.3118 (0.07174) p_pre=0.003 | with AGI x year 0.06241
+S1 done
+=== s2_hh_did Fri Oct 16 14:22:29 EDT 2026
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S2 sample: 5699304 
+sale         above16  post=0.001709 (0.001568) p_pre=0.000  with value x year: 1.404e-05 (-99%)
+exit         above16  post=-0.0001227 (0.001346) p_pre=0.000  with value x year: 4.257e-05 (135%)
+exit_prim    above16  post=0.0001606 (0.001989) p_pre=0.000  with value x year: 0.000149 (-7%)
+log_price    above16  post=0.1398 (0.01898) p_pre=0.000  with value x year: 0.1336 (-4%)
+refi         above16  post=-0.01245 (0.001909) p_pre=0.000  with value x year: -0.004765 (62%)
+cashout      above16  post=-0.004775 (0.001185) p_pre=0.000  with value x year: -0.002115 (56%)
+to_rental    above16  post=-0.002019 (0.0009023) p_pre=0.146  with value x year: -0.000793 (61%)
+appeal_proxy above16  post=0.002467 (0.0009854) p_pre=0.042  with value x year: 0.0009697 (-61%)
+sale         lbill16  post=0.0007003 (0.0004206) p_pre=0.000  with value x year: 0.0022 (214%)
+exit         lbill16  post=-0.001421 (0.0006688) p_pre=0.000  with value x year: -0.0004424 (69%)
+exit_prim    lbill16  post=-0.002282 (0.0007828) p_pre=0.000  with value x year: -0.0003973 (83%)
+log_price    lbill16  post=0.05404 (0.008554) p_pre=0.000  with value x year: 0.04407 (-18%)
+refi         lbill16  post=-0.008551 (0.0003333) p_pre=0.000  with value x year: -0.004831 (44%)
+cashout      lbill16  post=-0.00161 (0.0002031) p_pre=0.000  with value x year: -0.0009856 (39%)
+to_rental    lbill16  post=-0.003123 (0.0002708) p_pre=0.074  with value x year: -0.0008967 (71%)
+appeal_proxy lbill16  post=0.001675 (0.0002334) p_pre=0.000  with value x year: 0.0008981 (-46%)
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+3: In es_summary(m, post = years_post) : NAs introduced by coercion
+4: In es_summary(m, post = years_post) : NAs introduced by coercion
+5: In es_summary(m, post = years_post) : NAs introduced by coercion
+6: In es_summary(m, post = years_post) : NAs introduced by coercion
+S2 done
+=== s3_core Fri Oct 16 14:28:31 EDT 2026
+setup ok: ROOT = /Users/jr2728/PhD/projects/property_taxes  sample = bld1pct 
+S3 sample: 5699304 parcel-years, 712413 parcels
+sh: line 1: 15860 Terminated: 15          Rscript code/analysis/salt_cap/R/$s.R

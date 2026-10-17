@@ -1,0 +1,63 @@
+=== s10_reversal Fri Oct 16 04:57:03 PM EDT 2026
+setup ok: ROOT = /home/jr2728/ptax_explore/salt/repo  sample = bld10pct 
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmpykpxx9/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+       y  sales
+   <int>  <num>
+1:  2023 315772
+2:  2024 312064
+3:  2025 309482
+duckdb keeps downloaded extensions and secrets in a temporary directory:
+ℹ /tmp/Rtmpykpxx9/duckdb
+This is removed when the R session ends.
+• Extensions are re-downloaded each session.
+• Secrets are lost.
+ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
+ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
+ℹ See ?duckdb_storage for details and alternatives.
+sale       rate16_pp  2025 effect=-0.02146 (0.001077) p_pre=0.000 N=100119936
+log_price  rate16_pp  2025 effect=0.04394 (0.003979) p_pre=0.000 N=4190245
+refi       rate16_pp  2025 effect=-0.002627 (0.0002694) p_pre=0.000 N=100119936
+cashout    rate16_pp  2025 effect=0.0002502 (0.0001335) p_pre=0.000 N=100119936
+sale       above16    2025 effect=-0.005652 (0.0009224) p_pre=0.003 N=100119936
+log_price  above16    2025 effect=0.1108 (0.01032) p_pre=0.000 N=4190245
+refi       above16    2025 effect=-0.002084 (0.001103) p_pre=0.989 N=100119936
+cashout    above16    2025 effect=-0.0001018 (0.0005863) p_pre=0.885 N=100119936
+sale       mid24      2025 effect=-0.02565 (0.001452) p_pre=0.000 N=93209690
+log_price  mid24      2025 effect=0.1785 (0.007308) p_pre=0.000 N=3953555
+refi       mid24      2025 effect=0.0006718 (0.0008086) p_pre=0.000 N=93209690
+cashout    mid24      2025 effect=-0.001529 (0.0004418) p_pre=0.000 N=93209690
+Warning messages:
+1: In es_summary(m, post = years_post) : NAs introduced by coercion
+2: In es_summary(m, post = years_post) : NAs introduced by coercion
+3: In es_summary(m, post = years_post) : NAs introduced by coercion
+S10 kink sample at 40k: 22271 parcels
+Index: <per>
+      per           est           se     n
+   <char>         <num>        <num> <int>
+1:    pre  1.604062e-05 1.097881e-05 13356
+2:   post -1.338609e-05 1.203025e-05  5841
+Index: <per>
+      per           est           se     n
+   <char>         <num>        <num> <int>
+1:    pre -9.657001e-05 0.0002140071   483
+2:   post  3.412627e-04 0.0005694373    90
+Warning message:
+In rdrobust(x[[oc]], x$bill24, c = 40000, deriv = 1, cluster = x$juris) :
+  Mass points detected in the running variable.
+    year hi_agi       sale     n
+   <int>  <int>      <num> <int>
+1:  2023      0 0.03265606 53007
+2:  2024      0 0.03120343 53007
+3:  2025      0 0.03141095 53007
+4:  2023      1 0.03226578 54330
+5:  2024      1 0.03094055 54330
+6:  2025      1 0.03211853 54330
+S10 done
+=== exit 0 Fri Oct 16 08:15:30 PM EDT 2026

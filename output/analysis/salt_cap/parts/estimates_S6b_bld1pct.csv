@@ -1,0 +1,5 @@
+strategy,outcome,sample,coef,se,N,clusters,spec_id
+S6,sale,bld1pct,-0.068568,0.00544313,5631544,48728,S6_d_cap
+S6,sale,bld1pct,-0.0458515,0.00431385,5631544,48728,S6_d_std
+S6,log_price,bld1pct,0.0194094,0.0222909,195614,28086,S6_d_cap
+S6,log_price,bld1pct,0.00819264,0.0200296,195614,28086,S6_d_std

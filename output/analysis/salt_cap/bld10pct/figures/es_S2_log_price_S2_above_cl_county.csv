@@ -1,0 +1,9 @@
+year,coef,se,strategy,outcome,spec_id,treat
+2012,0.306315133408495,0.0242226299357383,S2,log_price,S2_above_cl_county,above16
+2013,0.295904638425805,0.0199845579325638,S2,log_price,S2_above_cl_county,above16
+2014,0.319908491497613,0.0194478864318522,S2,log_price,S2_above_cl_county,above16
+2015,0.328106988237123,0.0175855177872975,S2,log_price,S2_above_cl_county,above16
+2016,0,0,S2,log_price,S2_above_cl_county,above16
+2017,0.193800914003848,0.02271176032337,S2,log_price,S2_above_cl_county,above16
+2018,0.181543594856411,0.0209335749479624,S2,log_price,S2_above_cl_county,above16
+2019,0.155847626134816,0.0209709123815433,S2,log_price,S2_above_cl_county,above16
