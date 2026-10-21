@@ -1,0 +1,39 @@
+Data Axle family moves ( fmfull/*.parquet ), interstate, matched to border tracts: 1230361 ; cross-border (opposite sides, both < 20 mi of the same pair): 427738 
+
+Share of cross-border moves going high -> low side, by year and pair SALT contrast (1 = high-tax side's state more exposed):
+Key: <y>
+       y share_hl_0 share_hl_1 moves_0 moves_1
+   <int>      <num>      <num>   <int>   <int>
+1:  2013      0.426      0.563   18391   16999
+2:  2014      0.421      0.586   22250   20944
+3:  2015      0.402      0.588   23094   22222
+4:  2016      0.395      0.600   25541   24697
+5:  2017      0.394      0.600   20518   20612
+6:  2018      0.390      0.594   29361   29455
+7:  2019      0.391      0.586   22179   22439
+8:  2020      0.366      0.590   25332   24490
+9:  2021      0.330      0.590   30524   28690
+
+Pair FE, year effects (ref 2017), weighted by moves:
+      term    est    se
+    <char>  <num> <num>
+1: y::2013  0.004 0.014
+2: y::2014  0.009 0.011
+3: y::2015  0.000 0.007
+4: y::2016  0.002 0.004
+5: y::2018 -0.005 0.004
+6: y::2019 -0.010 0.005
+7: y::2020 -0.018 0.009
+8: y::2021 -0.035 0.015
+
+Difference for pairs where the high side is the more SALT-exposed state (pair + year FE):
+                    term    est    se
+                  <char>  <num> <num>
+1: y::2013:salt_contrast -0.057 0.022
+2: y::2014:salt_contrast -0.035 0.019
+3: y::2015:salt_contrast -0.018 0.013
+4: y::2016:salt_contrast  0.002 0.008
+5: y::2018:salt_contrast  0.003 0.009
+6: y::2019:salt_contrast -0.005 0.009
+7: y::2020:salt_contrast  0.017 0.017
+8: y::2021:salt_contrast  0.046 0.026

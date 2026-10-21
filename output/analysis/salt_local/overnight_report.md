@@ -37,11 +37,15 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
      effective rates (+2 to +3%) rise.
    - **Regressivity:** essentially unchanged.
    - **Nominal rates:** drift down 0.3–0.9% per SD in exposed counties, and 2–3.5% on the high side near borders.
-   - **Border capitalisation:** a cross-border capitalisation pattern appears with ZIP-level exposure: prices fall on the
-     high side and rise on the cheap side near borders in exposed ZIPs. But it is not robust in FHFA tract indices, and
-     with county exposure it fails a low-side placebo.
-5. **Migration.** No move-out response at all (Data Axle full data: 528m address pairs, 68k tracts) in either the border
-   or the exposure design. This matches the earlier sales-turnover result and the household-level SALT study.
+   - **Border capitalisation:** with ZIP-level exposure, prices on the high side near borders in exposed ZIPs drift down by
+     about 1% per SD by 2021–24, while the cheap side is flat. Repeat sales show this in two independent 30% samples (each
+     about −1%, SE 0.75), tract medians and FHFA indices point the same way, but none is significant on its own. With
+     county exposure the pattern fails a low-side placebo.
+5. **Migration.** No response, in Data Axle full data, in either the border or the exposure design:
+   - **Move-outs:** no change (528m address pairs, 68k tracts).
+   - **Direction of cross-border moves:** no shift toward the cheaper side (428k moves).
+
+   This matches the earlier sales-turnover result and the household-level SALT study.
 
 ## 2. Data assembled tonight
 
@@ -137,7 +141,8 @@ from a general post-2017 increase in cross-border competition (remote work, outf
     existed before 2017. (`b5_hpi_zip_exposure.txt`, figure)
   - **Repeat sales** (28.9m sales, parcel FE, 30% of parcels): high-side near-border × ZIP exposure declines gradually,
     0 before 2017 to −1.9/−2.0% per SD in 2023–24 (SE 1.3–1.6). The low-side placebo is flat. Pooled −0.2% (0.8) for 2018+,
-    plus −1.0% (0.7) from 2021. (`b6_repeat_sales.txt`, figure)
+    plus −1.0% (0.7) from 2021. An independent second 30% replicates it: −0.5% (0.8), plus −0.8% (0.8) from 2021.
+    The full sample does not fit in laptop memory. (`b6_repeat_sales.txt`, `b6_repeat_sales_rep2.txt`, figure)
   - **Suggestive, not established**: every version points toward capitalisation of the cross-border option in exposed
     areas, none is significant on its own.
 
@@ -147,10 +152,11 @@ Data Axle address move-outs (primary family changes; annualised by file cut-offs
 address pairs). County exposure: flat (pre −0.08 to −0.11 pp, post −0.04 to −0.11). Border DDD: pre −0.07 to +0.06, post
 −0.07 to −0.01 (SE 0.07–0.12). Interaction with exposure: none. (`d1_moveout_ddd.txt`, `d2_moveout_full.txt`)
 
-**Direction of cross-border moves** (Data Axle 1% families; 4,306 moves between opposite sides within 20 mi of the same
-border pair; `d3_family_moves.txt`). Overall, the share going high → low is flat. Where the high-tax side's state is also
-more SALT-exposed, that share rises from about 0.5 (2013–15) to about 0.63 (2016–21). Relative to other pairs the post-2017
-coefficients are +0.04 to +0.11 (SE 0.04–0.06), but the shift is already there in 2016, so it is not a clean break.
+**Direction of cross-border moves** (Data Axle, full data for families in 8,555 ZIPs near state borders; 427,738 moves
+between opposite sides within 20 mi of the same pair; `d3_family_moves_full.txt`). The share going high → low (0.40, or
+0.59 where the high side is the more exposed state) does not rise after 2017. Pair FE year effects are −0.5 to −3.5 pp
+(fewer moves toward the cheaper side, if anything). The SALT-contrast difference follows a pre-trend that ends in 2016 and
+shows no post-2017 break (+0.3 to +4.6 pp, SE 0.9–2.6). The 1% sample's pattern was that pre-trend plus noise.
 
 ## 8. Map: outside options across school-district lines
 
@@ -176,7 +182,6 @@ own minus the cheapest adjacent district, and, for state-line districts, own min
 - **Next steps:**
   1. Repeat sales on all parcels, not 30% (needs the cluster: the laptop's memory limits it), to tighten the capitalisation test.
   2. Dose-response with the 2018 SOI "limited SALT" amounts (actual binding) by ZIP.
-  3. Scale up the cross-border move-direction test to the full Data Axle (the 1% family sample has ~480 such moves a year).
   4. Synthetic placebo borders (county lines within states) for the district DDD.
   5. Separate the school-district result by state school-finance regime (states that cap levies, e.g. NJ 2% cap, NY tax
      cap, IL PTELL), since levy caps could produce the high-side slowdown independently of SALT.

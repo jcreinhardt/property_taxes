@@ -6,7 +6,8 @@
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(fixest)})
 options(tigris_use_cache = TRUE)
 ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
-con <- dbConnect(duckdb()); mv <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/border_moveout/family_moves_1pct.parquet'", ROOT))); dbDisconnect(con, shutdown = TRUE)
+FM <- Sys.getenv("FM_IN", "family_moves_1pct.parquet"); SFX <- Sys.getenv("FM_SFX", "")
+con <- dbConnect(duckdb()); mv <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM read_parquet('%s/data/local_juris/border_moveout/%s') WHERE ost <> dst  -- cross-border moves change state", ROOT, FM))); dbDisconnect(con, shutdown = TRUE)
 tr <- tracts(cb = TRUE, year = 2019, progress_bar = FALSE)[, "GEOID"]
 loc <- function(lat, lon) { p <- st_transform(st_as_sf(data.table(i = seq_along(lat), lat, lon), coords = c("lon", "lat"), crs = 4326), st_crs(tr))
   j <- st_join(p, tr, join = st_within, left = TRUE); j <- j[!duplicated(j$i), ]; j$GEOID }
@@ -26,11 +27,11 @@ yr <- x[, .(moves = .N, share_hl = mean(hl)), by = .(y, salt_contrast)][order(sa
 py <- x[, .(n = .N, share_hl = mean(hl)), by = .(pair = opair, y, salt_contrast)]
 m1 <- feols(share_hl ~ i(y, ref = 2017) | pair, py, weights = ~n, cluster = ~pair)
 m2 <- feols(share_hl ~ i(y, salt_contrast, ref = 2017) | pair + y, py, weights = ~n, cluster = ~pair)
-sink(file.path(OUT, "d3_family_moves.txt"))
-cat("Data Axle 1% family moves:", nrow(mv), "matched to border tracts; cross-border (opposite sides, both < 20 mi of the same pair):", nrow(x), "\n")
+sink(file.path(OUT, paste0("d3_family_moves", SFX, ".txt")))
+cat("Data Axle family moves (", FM, "), interstate, matched to border tracts:", nrow(mv), "; cross-border (opposite sides, both < 20 mi of the same pair):", nrow(x), "\n")
 cat("\nShare of cross-border moves going high -> low side, by year and pair SALT contrast (1 = high-tax side's state more exposed):\n")
 print(dcast(yr, y ~ salt_contrast, value.var = c("share_hl", "moves"))[, lapply(.SD, \(v) if (is.double(v)) round(v, 3) else v)])
 cat("\nPair FE, year effects (ref 2017), weighted by moves:\n"); print(as.data.table(coeftable(m1), keep.rownames = "term")[, .(term, est = round(Estimate, 3), se = round(`Std. Error`, 3))])
 cat("\nDifference for pairs where the high side is the more SALT-exposed state (pair + year FE):\n")
 print(as.data.table(coeftable(m2), keep.rownames = "term")[, .(term, est = round(Estimate, 3), se = round(`Std. Error`, 3))])
-sink(); cat(readLines(file.path(OUT, "d3_family_moves.txt")), sep = "\n")
+sink(); cat(readLines(file.path(OUT, paste0("d3_family_moves", SFX, ".txt"))), sep = "\n")
