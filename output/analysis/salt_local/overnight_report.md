@@ -15,8 +15,9 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
    that a ≥ 0.5 pp cheaper tract is within 30 minutes' drive across the state line by 33 pp (SE 4), and the outside-option
    gap by 0.35 pp. It does *not* bring better schools within reach, and it is balanced on own-tract achievement, SES,
    income, home values, education, tenure and housing age. Plain distance to the border fails: border areas differ, and
-   they also offer better schools across the line.
-2. **(a) Revenue.** Two findings, which don't line up as one clean SALT story:
+   they also offer better schools across the line. Applied to revenue, prices and migration, the instrument finds no
+   SALT-specific response (below).
+2. **(a) Revenue.** Little robust evidence of a SALT-cap effect on local revenue:
    - **Exposure designs:** in large, SALT-exposed jurisdictions, property-tax growth that had outpaced the rest of the
      state flattens after the cap, by about 0.3–0.7% a year per SD of exposure (Census of Governments and F-33 district
      finance, weighted; robust to an IRS-based or a property-tax-based exposure measure). Unweighted, across small
