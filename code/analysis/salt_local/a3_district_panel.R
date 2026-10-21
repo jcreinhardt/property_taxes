@@ -103,3 +103,14 @@ cat("\n== District border DDD x pair SALT contrast (own state minus other state 
 print(as.data.frame(as.data.table(coeftable(mp), keep.rownames = "term")[, .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))]), row.names = FALSE)
 cat("mean dex_z among near-high districts:", round(dd2[nh == 1, mean(dex_z)], 3), "| share of near-high districts whose state is more exposed:", round(dd2[nh == 1, mean(dex > 0)], 3), "\n")
 sink()
+# Pooled DiD version and leave-one-pair-out: lpt ~ nh x post (FY2018+) | district + pair^high^y + pair^dbin^y
+dd[, post := as.integer(y >= 2018)]
+m0 <- feols(lpt ~ nh:post | leaid + pair^high^y + pair^dbin^y, dd, cluster = ~conum)
+nhp <- dd[nh == 1, .N, by = pair][order(-N)]
+loo <- rbindlist(lapply(nhp$pair, \(pp) { m <- feols(lpt ~ nh:post | leaid + pair^high^y + pair^dbin^y, dd[pair != pp], cluster = ~conum)
+  data.table(drop = pp, est = coef(m)[1], se = se(m)[1]) }))
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== Pooled near x high x post (FY2018+):", round(coef(m0)[1], 4), "(", round(se(m0)[1], 4), ")\n")
+cat("near-high district-years by pair (top 10):\n"); print(head(nhp, 10))
+cat("leave-one-pair-out range:", round(range(loo$est), 4), "| most influential:\n"); print(loo[order(est)][c(1:3, (.N - 2):.N)])
+sink()

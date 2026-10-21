@@ -185,3 +185,27 @@ SE:
  y::2022:I(nh * dex_z)  0.0099 0.0075
  y::2023:I(nh * dex_z)  0.0082 0.0074
 mean dex_z among near-high districts: 0.442 | share of near-high districts whose state is more exposed: 0.613 
+
+== Pooled near x high x post (FY2018+): -0.0221 ( 0.0102 )
+near-high district-years by pair (top 10):
+      pair     N
+    <char> <int>
+ 1:  NJ-PA  1173
+ 2:  NJ-NY  1044
+ 3:  IL-IN   540
+ 4:  KY-OH   444
+ 5:  NY-PA   360
+ 6:  CT-NY   324
+ 7:  IL-WI   312
+ 8:  MA-NH   276
+ 9:  OH-WV   252
+10:  IL-MO   240
+leave-one-pair-out range: -0.026 -0.0173 | most influential:
+     drop         est         se
+   <char>       <num>      <num>
+1:  NJ-PA -0.02598291 0.01094218
+2:  IA-IL -0.02522747 0.01041278
+3:  IL-IN -0.02459010 0.01017677
+4:  OR-WA -0.01977026 0.01024401
+5:  AR-OK -0.01883717 0.01045072
+6:  OK-TX -0.01732591 0.01017871

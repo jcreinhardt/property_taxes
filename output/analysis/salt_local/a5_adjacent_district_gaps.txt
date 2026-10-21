@@ -1,0 +1,47 @@
+Adjacent district pairs (balanced, >= 100 pupils): cross-state 1566 | same-state 27593 
+Mean |gap| in log property tax per pupil by year:
+Key: <y>
+        y     0     1
+    <int> <num> <num>
+ 1:  2012 0.432 0.732
+ 2:  2013 0.434 0.739
+ 3:  2014 0.438 0.757
+ 4:  2015 0.437 0.760
+ 5:  2016 0.433 0.753
+ 6:  2017 0.430 0.728
+ 7:  2018 0.437 0.736
+ 8:  2019 0.439 0.733
+ 9:  2020 0.447 0.744
+10:  2021 0.441 0.745
+11:  2022 0.440 0.765
+12:  2023 0.445 0.772
+
+== Cross-state x year (ref 2017), pair + year FE
+             term     est     se
+           <char>   <num>  <num>
+ 1: y::2012:cross  0.0005 0.0242
+ 2: y::2013:cross  0.0059 0.0235
+ 3: y::2014:cross  0.0198 0.0246
+ 4: y::2015:cross  0.0243 0.0135
+ 5: y::2016:cross  0.0212 0.0074
+ 6: y::2018:cross  0.0005 0.0078
+ 7: y::2019:cross -0.0043 0.0104
+ 8: y::2020:cross -0.0016 0.0154
+ 9: y::2021:cross  0.0056 0.0207
+10: y::2022:cross  0.0262 0.0271
+11: y::2023:cross  0.0279 0.0294
+
+== Adding cross x SALT contrast of the two states (SD units)
+                        term     est     se
+                      <char>   <num>  <num>
+ 1: y::2012:I(cross * dex_z)  0.0181 0.0142
+ 2: y::2013:I(cross * dex_z)  0.0132 0.0134
+ 3: y::2014:I(cross * dex_z)  0.0179 0.0149
+ 4: y::2015:I(cross * dex_z)  0.0006 0.0077
+ 5: y::2016:I(cross * dex_z)  0.0036 0.0051
+ 6: y::2018:I(cross * dex_z)  0.0013 0.0034
+ 7: y::2019:I(cross * dex_z)  0.0068 0.0064
+ 8: y::2020:I(cross * dex_z)  0.0037 0.0074
+ 9: y::2021:I(cross * dex_z) -0.0005 0.0097
+10: y::2022:I(cross * dex_z)  0.0216 0.0289
+11: y::2023:I(cross * dex_z)  0.0213 0.0301
