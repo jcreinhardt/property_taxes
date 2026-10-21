@@ -87,3 +87,19 @@ cat("\n== Robustness: district border DDD on log property tax by near cutoff and
 print(as.data.frame(dcast(rob, cutoff + sample + n_nh ~ y, value.var = "coef")[, lapply(.SD, \(x) if (is.numeric(x)) round(x, 3) else x)]), row.names = FALSE)
 cat("SE:\n"); print(as.data.frame(dcast(rob, cutoff + sample ~ y, value.var = "se")[, lapply(.SD, \(x) if (is.numeric(x)) round(x, 3) else x)]), row.names = FALSE)
 sink()
+# Pair-level SALT contrast: return-weighted state exposure (2016 excess SALT per return) of the district's state minus that
+# of the other state of the pair; interaction near x high x (state exposure difference, SD units across pairs).
+exs <- ex[, .(ex_st = weighted.mean(excess_pp, returns)), by = .(st = substr(conum, 1, 2))]
+fipsab <- unique(as.data.table(tigris::fips_codes)[, .(st = state_code, ab = state)])
+exs <- merge(exs, fipsab, by = "st")
+pp <- unique(dd[, .(pair)])[, c("a", "b") := tstrsplit(pair, "-")]
+pp <- merge(merge(pp, exs[, .(a = ab, ex_a = ex_st)], by = "a"), exs[, .(b = ab, ex_b = ex_st)], by = "b")
+dd2 <- merge(dd, pp[, .(pair, ex_a, ex_b, a)], by = "pair")
+dd2 <- merge(dd2, fipsab[, .(st, own = ab)], by = "st")
+dd2[, dex := ifelse(own == a, ex_a - ex_b, ex_b - ex_a)][, dex_z := dex / sd(unique(abs(pp$ex_a - pp$ex_b)))]
+mp <- feols(lpt ~ i(y, nh, ref = 2017) + i(y, I(nh * dex_z), ref = 2017) | leaid + pair^high^y + pair^dbin^y, dd2, cluster = ~conum)
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== District border DDD x pair SALT contrast (own state minus other state exposure, SD units across pairs)\n")
+print(as.data.frame(as.data.table(coeftable(mp), keep.rownames = "term")[, .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))]), row.names = FALSE)
+cat("mean dex_z among near-high districts:", round(dd2[nh == 1, mean(dex_z)], 3), "| share of near-high districts whose state is more exposed:", round(dd2[nh == 1, mean(dex > 0)], 3), "\n")
+sink()

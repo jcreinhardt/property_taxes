@@ -159,3 +159,29 @@ SE:
  0.011 0.013 0.014 0.014
  0.012 0.013 0.015 0.015
  0.019 0.022 0.024 0.025
+
+== District border DDD x pair SALT contrast (own state minus other state exposure, SD units across pairs)
+                  term     est     se
+            y::2012:nh  0.0014 0.0180
+            y::2013:nh  0.0064 0.0168
+            y::2014:nh  0.0087 0.0149
+            y::2015:nh -0.0141 0.0139
+            y::2016:nh -0.0065 0.0127
+            y::2018:nh -0.0186 0.0124
+            y::2019:nh -0.0191 0.0129
+            y::2020:nh -0.0358 0.0140
+            y::2021:nh -0.0351 0.0149
+            y::2022:nh -0.0325 0.0151
+            y::2023:nh -0.0389 0.0155
+ y::2012:I(nh * dex_z) -0.0110 0.0074
+ y::2013:I(nh * dex_z) -0.0122 0.0065
+ y::2014:I(nh * dex_z) -0.0122 0.0062
+ y::2015:I(nh * dex_z) -0.0014 0.0055
+ y::2016:I(nh * dex_z)  0.0004 0.0049
+ y::2018:I(nh * dex_z)  0.0037 0.0046
+ y::2019:I(nh * dex_z)  0.0031 0.0049
+ y::2020:I(nh * dex_z)  0.0078 0.0054
+ y::2021:I(nh * dex_z)  0.0086 0.0059
+ y::2022:I(nh * dex_z)  0.0099 0.0075
+ y::2023:I(nh * dex_z)  0.0082 0.0074
+mean dex_z among near-high districts: 0.442 | share of near-high districts whose state is more exposed: 0.613 
