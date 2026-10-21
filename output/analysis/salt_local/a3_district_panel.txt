@@ -238,4 +238,23 @@ leave-one-pair-out range: -0.026 -0.0173 | most influential:
          y::2021:ses_z  0.0143 0.0045
          y::2022:ses_z  0.0152 0.0041
          y::2023:ses_z  0.0243 0.0049
-pooled: nh x post -0.0192 ( 0.004 ) ; nh x ses x post -0.0187 ( 0.0034 )
+
+== District DDD x district ZIP-based exposure (SD units): nhx = near x high x exposure, nlx = near x low x exposure
+   w    2012   2013   2014    2015   2016   2018   2019   2020   2021   2022
+ nhx  0.0039 0.0024 -7e-04 -0.0003 0.0013 0.0028 0.0022 0.0053 0.0108 0.0105
+ nlx -0.0007 0.0006 -3e-03 -0.0029 0.0018 0.0045 0.0071 0.0145 0.0173 0.0206
+   2023
+ 0.0094
+ 0.0200
+   w   2012  2013   2014   2015   2016   2018   2019   2020   2021   2022
+ nhx 0.0051 0.004 0.0049 0.0039 0.0020 0.0029 0.0043 0.0069 0.0064 0.0054
+ nlx 0.0066 0.005 0.0058 0.0049 0.0026 0.0030 0.0058 0.0103 0.0081 0.0084
+   2023
+ 0.0056
+ 0.0082
+pooled post (nx = near x exposure both sides; nhx = extra on the high side):
+       term     est     se
+     <char>   <num>  <num>
+1:  nh:post -0.0215 0.0102
+2:  post:nx  0.0147 0.0072
+3: post:nhx -0.0090 0.0062

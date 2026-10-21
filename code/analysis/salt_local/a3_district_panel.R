@@ -136,3 +136,19 @@ sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
 cat("\n== Heterogeneity by district SES (SD units; SES x year slopes control common SES trends)\n")
 print(as.data.frame(as.data.table(coeftable(mh), keep.rownames = "term")[grepl("ses", term), .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))]), row.names = FALSE)
 sink()
+# Dose-response with district-level SALT exposure built from ZIP exposure (a8): mean of the district's tracts' exz_z
+# (winsorised ZIP excess SALT per return). near x high x exposure and near x low x exposure in one model.
+tz <- fread(file.path(ROOT, "data/local_juris/salt_exposure_tract_zip2016.csv"), colClasses = c(tract = "character"))
+dz <- merge(unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, leaid)]), tz[, .(tract, exz_w)], by = "tract")[!is.na(leaid),
+  .(exd = mean(exz_w)), by = leaid][, exd_z := (exd - mean(exd)) / sd(exd)]
+dd5 <- merge(dd, dz, by = "leaid")[, `:=`(nhx = nh * exd_z, nlx = near * (1 - high) * exd_z)]
+m5 <- feols(lpt ~ i(y, nh, ref = 2017) + i(y, nhx, ref = 2017) + i(y, nlx, ref = 2017) + i(y, exd_z, ref = 2017) | leaid + pair^high^y + pair^dbin^y, dd5, cluster = ~conum)
+dd5[, nx := near * exd_z]
+m5p <- feols(lpt ~ nh:post + nx:post + nhx:post + i(y, exd_z, ref = 2017) | leaid + pair^high^y + pair^dbin^y, dd5, cluster = ~conum)  # nhx:post = high-minus-low side difference in the exposure gradient
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== District DDD x district ZIP-based exposure (SD units): nhx = near x high x exposure, nlx = near x low x exposure\n")
+x5 <- as.data.table(coeftable(m5), keep.rownames = "term")[grepl(":nhx|:nlx", term)][, `:=`(y = sub("y::(\\d+):.*", "\\1", term), w = sub("y::\\d+:", "", term))]
+print(as.data.frame(dcast(x5, w ~ y, value.var = "Estimate")[, lapply(.SD, \(v) if (is.numeric(v)) round(v, 4) else v)]), row.names = FALSE)
+print(as.data.frame(dcast(x5, w ~ y, value.var = "Std. Error")[, lapply(.SD, \(v) if (is.numeric(v)) round(v, 4) else v)]), row.names = FALSE)
+cat("pooled post (nx = near x exposure both sides; nhx = extra on the high side):\n"); print(as.data.table(coeftable(m5p), keep.rownames = "term")[grepl("post", term), .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))])
+sink()
