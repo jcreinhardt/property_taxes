@@ -2232,3 +2232,12 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **No-income-tax states (FL NV SD TX WA WY + NH TN; 315 counties), weighted:** 2015–16 ≈ 0; 2018 −0.24; 2019 −0.95 [1.05]; 2020–21 ≈ −0.97 [1.07]; 2024 −0.95. Unweighted: noisy (2019 −0.62, n.s. later). Income-tax states: 2019 −0.23, 2021 −0.59.
   - **State level (48 states), weighted, state + year FE:** 2019 −0.48 [0.64], 2021 −0.76, 2022 −1.14; with division × year, a pre-trend (2016 +0.32*) and 2019 −0.72 … 2022 −1.89. Cross-state, the real-estate part loads early (2018 −0.59*, 2019 −1.05*).
   - **ZIP (11,253 ZIPs; 7,875 uncensored), owner-weighted:** a steady downward trend over the whole period (2013 +0.73 → 2016 +0.22 → 2019 −0.43 → 2021 −0.83), the same with county × year FE. No clean break: tract-median prices are composition-sensitive, unlike the b8 repeat-sales design, which has a flat pre-period.
+- **ZIP pre-trend diagnostics** (`salt_local/c28_zip_pretrend_diagnostics.R`, figure `c28_zip_pretrend_diagnostics.png`; per $100/yr per owner, weighted, state × year FE).
+  - Not sample selection. The county design on counties in the ZIP sample matches the full county design. The ZIP price measure with *county* exposure has a flat pre-period (−0.14 to +0.05) and the county-sized post effect (2019 −0.31, 2021 −0.67).
+  - The ZIP pre-trend comes from the ZIP-level exposure variation, which correlates 0.62 with the ZIP's 2012 price level within its state; county exposure correlates 0.61 with the county's 2012 price.
+  - **Controlling for the 2012 price level × year (2012 is outside the estimation window) removes the effect at both levels:**
+    - ZIP: pre 0.10, 0.07, −0.29, 0.01; post −0.16, −0.05, −0.02, −0.05, 0.01 … (all n.s.).
+    - ZIP with county × year FE: post ≈ 0.
+    - County: pre ≈ 0; post 2018 −0.01, 2019 0.00, 2020 +0.10, 2021 +0.47.
+  - **Reading:** among places with the same 2012 price, more exposed ones did not fall more. The exposure "capitalisation" is the price-tier gradient: expensive places appreciated more slowly. Within states that gradient was already present in 2013–17 across ZIPs (post-crisis catch-up of cheaper neighbourhoods); across counties it only opened after 2017.
+  - Caveat: exposure is partly a function of the price level (bigger bills on pricier homes), so the control also absorbs part of the treatment. The residual variation is exposure at a given price: tax rates, income-tax share, itemizer composition.
