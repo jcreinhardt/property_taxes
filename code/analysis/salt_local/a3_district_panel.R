@@ -172,3 +172,14 @@ sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
 cat("\n== Placebo split by pair SALT level (state return-weighted exposure; low-SALT = both states <= median of pair maxima)\n"); print(spl[, .(group, pairs, nh_districts, est = round(est, 4), se = round(se, 4))]); cat(spl$es, sep = "\n")
 cat("low-SALT pairs:", paste(lowp, collapse = " "), "\n")
 sink()
+# Q3 follow-up: difference between pairs involving a higher-SALT state and low-SALT pairs, year by year, and with a linear
+# pre-trend in that difference (2012-2017) extrapolated
+dd[, hip := as.integer(!pair %in% lowp)]
+mq <- feols(lpt ~ i(y, nh, ref = 2017) + i(y, I(nh * hip), ref = 2017) | leaid + pair^high^y + pair^dbin^y, dd, cluster = ~conum)
+qq <- as.data.table(coeftable(mq), keep.rownames = "term")[grepl("hip", term), .(y = as.integer(sub("y::(\\d+):.*", "\\1", term)), est = Estimate, se = `Std. Error`)]
+mt <- feols(lpt ~ nh:tt + I(nh * hip):tt + nh:post + I(nh * hip):post + nh:post:tt + I(nh * hip):post:tt | leaid + pair^high^y + pair^dbin^y,
+            dd[, tt := y - 2017], cluster = ~conum)
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== Q3: high-SALT pairs minus low-SALT pairs, near x high x year (ref 2017)\n"); print(qq[, .(y, est = round(est, 4), se = round(se, 4))])
+cat("trend-break version (difference terms):\n"); print(as.data.table(coeftable(mt), keep.rownames = "term")[grepl("hip", term), .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))])
+sink()

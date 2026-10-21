@@ -279,3 +279,24 @@ pooled post (nx = near x exposure both sides; nhx = extra on the high side):
 2012:0.002 2013:-0.004 2014:0.001 2015:-0.025 2016:-0.027 2018:-0.034 2019:-0.039 2020:-0.061 2021:-0.048 2022:-0.059 2023:-0.068
 2012:-0.010 2013:0.003 2014:0.002 2015:-0.007 2016:0.011 2018:-0.002 2019:0.000 2020:-0.008 2021:-0.016 2022:-0.001 2023:-0.007
 low-SALT pairs: AL-FL AL-GA AL-MS AL-TN AR-MO AR-OK DE-PA FL-GA GA-SC GA-TN ID-WA IN-KY IN-MI IN-OH IA-NE KS-MO KY-OH KY-TN LA-MS LA-TX ME-NH MI-OH AR-MS MS-TN AZ-NV NM-TX OH-PA OH-WV OK-TX PA-WV NC-SC IA-SD 
+
+== Q3: high-SALT pairs minus low-SALT pairs, near x high x year (ref 2017)
+        y     est     se
+    <int>   <num>  <num>
+ 1:  2012 -0.0118 0.0331
+ 2:  2013  0.0066 0.0303
+ 3:  2014  0.0013 0.0269
+ 4:  2015  0.0185 0.0254
+ 5:  2016  0.0374 0.0230
+ 6:  2018  0.0315 0.0229
+ 7:  2019  0.0392 0.0238
+ 8:  2020  0.0529 0.0257
+ 9:  2021  0.0322 0.0277
+10:  2022  0.0575 0.0279
+11:  2023  0.0605 0.0287
+trend-break version (difference terms):
+                  term    est     se
+                <char>  <num>  <num>
+1:      tt:I(nh * hip) 0.0048 0.0060
+2:    I(nh * hip):post 0.0070 0.0170
+3: tt:I(nh * hip):post 0.0003 0.0066

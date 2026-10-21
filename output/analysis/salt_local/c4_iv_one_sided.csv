@@ -1,0 +1,37 @@
+var,side,est,se
+x_cheap,high side: near vs far,1.53098978303138,0.121086303345078
+x_cheap,low side: near vs far,0.534100967776932,0.0913587930955145
+tax_gap,high side: near vs far,0.565265016912749,0.0939427778679218
+tax_gap,low side: near vs far,-0.0931842956308973,0.0861134981442796
+med,high side: near vs far,0.16218075965586,0.0708190127502166
+med,low side: near vs far,-0.151690638873874,0.0931038465269154
+ach,high side: near vs far,-0.241913564046394,0.0773308659560125
+ach,low side: near vs far,-0.264727696960448,0.1065343653783
+ses,high side: near vs far,-0.282331742137389,0.0819888077214952
+ses,low side: near vs far,-0.320416775347626,0.117576440254408
+linc,high side: near vs far,-0.228774632623446,0.0814087454350807
+linc,low side: near vs far,-0.196860371447001,0.0723631679863811
+lhval,high side: near vs far,-0.141435790493713,0.0707227932756648
+lhval,low side: near vs far,-0.0600605445323391,0.0638689683376204
+sh_ba,high side: near vs far,-0.106112610477539,0.0826019628455653
+sh_ba,low side: near vs far,-0.13316356297427,0.0723385937713506
+sh_white,high side: near vs far,-0.315815826316884,0.11930740235862
+sh_white,low side: near vs far,-0.0736444655871818,0.121069672500096
+sh_own,high side: near vs far,-0.203623790128488,0.0524392132767026
+sh_own,low side: near vs far,-0.186229249239256,0.0897658441897599
+yrbuilt,high side: near vs far,-0.293826015314679,0.0468175241325131
+yrbuilt,low side: near vs far,-0.179297894546289,0.069910417119715
+lpop,high side: near vs far,-0.212809018762746,0.0436201584604749
+lpop,low side: near vs far,-0.0920160273119947,0.0553451468807144
+x_cheap,difference (= directional instrument),0.996888815254445,0.151684943002413
+tax_gap,difference (= directional instrument),0.658449312543646,0.127439319192259
+med,difference (= directional instrument),0.313871398529734,0.116977172153471
+ach,difference (= directional instrument),0.0228141329140541,0.131642067121661
+ses,difference (= directional instrument),0.0380850332102369,0.143340098697087
+linc,difference (= directional instrument),-0.0319142611764448,0.108921127033918
+lhval,difference (= directional instrument),-0.0813752459613741,0.0952940638509261
+sh_ba,difference (= directional instrument),0.0270509524967308,0.10979961937437
+sh_white,difference (= directional instrument),-0.242171360729702,0.169976827411392
+sh_own,difference (= directional instrument),-0.0173945408892311,0.103960463024073
+yrbuilt,difference (= directional instrument),-0.11452812076839,0.0841388553983889
+lpop,difference (= directional instrument),-0.120792991450751,0.0704684575350191
