@@ -2152,3 +2152,12 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - Tax rate jump: +0.75 / +0.77 pp (≈ 0.9 SD), p < 0.001.
   - No covariate is significant at 5%. Smallest robust p: test scores 0.09–0.12, SES 0.10–0.14, FRL 0.10–0.12, owner share 0.10–0.13, population 0.10–0.15. Holm-adjusted p = 1 for all 11.
   - Point estimates are close to the c13 side means (SES +0.3 SD, FRL −0.33 SD, test scores +0.3 SD), but robust CIs span about ±0.35 SD. So the RD can rule out school-district jumps above ~0.6 SD, not ~0.3 SD.
+- **Border RD by year 2013–2024** (`salt_local/c16_border_rd_by_year.R`, figure `c16_border_rd_by_year.png`). rdrobust, fixed h = 15 mi, pair-demeaned within year, robust CIs, SE by county; sides fixed. The c15 covariate RD was a cross-section mixing years: tract rates from 2017–19 sales, SEDA pooled 2009–19, ACS 2013–17, F-33 FY2016.
+  - **Effective rate gap** falls steadily from 0.92 pp (2013) and 0.79 (2017) to 0.70 (2018), 0.60 (2020) and 0.43 pp (2024). Every year is significant. There is no break at 2018; the decline speeds up from 2020.
+  - **Log nominal rate gap:** flat at about 0.3 from 2015.
+  - **Log bill per parcel gap:** about 0.1, flat and n.s.
+  - **Log price gap:** −0.27 (2015–16) to −0.14 (2024), narrowing but n.s.
+  - **Log assessment-ratio gap:** 0.26 (2015) to 0.08 (2024), n.s.
+  - **Sales per parcel, F-33 spending, property tax per pupil and aid share:** flat and n.s.
+  - So the cross-border effective-rate convergence comes from the denominator (prices and assessment ratios converging), not from bills or nominal rates.
+  - ACS and SEDA covariates are not yet in yearly form.
