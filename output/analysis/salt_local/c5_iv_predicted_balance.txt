@@ -1,0 +1,65 @@
+Predicted-endogenous balance test. Step 1 within-R2 of the endogenous variable on controls (pair FE):
+     endog                  controls within_r2     n
+    <char>                    <char>     <num> <int>
+1: x_cheap                  controls     0.014 54917
+2: x_cheap controls + log home value     0.021 54498
+3: tax_gap                  controls     0.053 54917
+4: tax_gap controls + log home value     0.076 54498
+
+Step 2: coefficients (SE), level and SD units of the endogenous variable; SE by county
+      endog                  controls                                   spec
+     <char>                    <char>                                 <char>
+ 1: x_cheap                  controls   predicted: near x high (directional)
+ 2: x_cheap                  controls      actual: near x high (directional)
+ 3: x_cheap                  controls predicted: near vs far, high side only
+ 4: x_cheap                  controls    actual: near vs far, high side only
+ 5: x_cheap                  controls  predicted: near vs far, low side only
+ 6: x_cheap                  controls     actual: near vs far, low side only
+ 7: x_cheap controls + log home value   predicted: near x high (directional)
+ 8: x_cheap controls + log home value      actual: near x high (directional)
+ 9: x_cheap controls + log home value predicted: near vs far, high side only
+10: x_cheap controls + log home value    actual: near vs far, high side only
+11: x_cheap controls + log home value  predicted: near vs far, low side only
+12: x_cheap controls + log home value     actual: near vs far, low side only
+13: tax_gap                  controls   predicted: near x high (directional)
+14: tax_gap                  controls      actual: near x high (directional)
+15: tax_gap                  controls predicted: near vs far, high side only
+16: tax_gap                  controls    actual: near vs far, high side only
+17: tax_gap                  controls  predicted: near vs far, low side only
+18: tax_gap                  controls     actual: near vs far, low side only
+19: tax_gap controls + log home value   predicted: near x high (directional)
+20: tax_gap controls + log home value      actual: near x high (directional)
+21: tax_gap controls + log home value predicted: near vs far, high side only
+22: tax_gap controls + log home value    actual: near vs far, high side only
+23: tax_gap controls + log home value  predicted: near vs far, low side only
+24: tax_gap controls + log home value     actual: near vs far, low side only
+      endog                  controls                                   spec
+     <char>                    <char>                                 <char>
+        est     se est_sd se_sd
+      <num>  <num>  <num> <num>
+ 1:  0.0022 0.0030  0.008 0.011
+ 2:  0.2735 0.0310  1.005 0.114
+ 3:  0.0113 0.0025  0.041 0.009
+ 4:  0.4160 0.0329  1.528 0.121
+ 5:  0.0065 0.0035  0.024 0.013
+ 6:  0.1444 0.0248  0.530 0.091
+ 7:  0.0067 0.0029  0.024 0.011
+ 8:  0.2734 0.0310  1.005 0.114
+ 9:  0.0122 0.0030  0.045 0.011
+10:  0.4155 0.0327  1.528 0.120
+11:  0.0033 0.0036  0.012 0.013
+12:  0.1441 0.0248  0.530 0.091
+13:  0.0084 0.0120  0.016 0.023
+14:  0.3601 0.0653  0.691 0.125
+15:  0.0398 0.0102  0.076 0.019
+16:  0.2979 0.0496  0.571 0.095
+17:  0.0201 0.0146  0.039 0.028
+18: -0.0492 0.0457 -0.094 0.088
+19:  0.0232 0.0109  0.045 0.021
+20:  0.3608 0.0651  0.694 0.125
+21:  0.0430 0.0121  0.083 0.023
+22:  0.2975 0.0493  0.573 0.095
+23:  0.0096 0.0145  0.018 0.028
+24: -0.0491 0.0456 -0.095 0.088
+        est     se est_sd se_sd
+      <num>  <num>  <num> <num>
