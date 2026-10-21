@@ -1,0 +1,46 @@
+% of tracts with a non-missing value
+                                       variable all tracts (n=55936)
+                                         <char>                <num>
+ 1:                    school district assigned                100.0
+ 2:              test scores (SEDA achievement)                 99.3
+ 3:                         district SES (SEDA)                 99.1
+ 4:                 % free/reduced lunch (SEDA)                 99.3
+ 5:           current spending per pupil (F-33)                 99.6
+ 6: district property tax per pupil (F-33, > 0)                 79.1
+ 7:                      median HH income (ACS)                 99.8
+ 8:                     median home value (ACS)                 99.1
+ 9:                             share BA+ (ACS)                 99.9
+10:                           share white (ACS)                 99.9
+11:                           owner share (ACS)                 99.9
+12:                     median year built (ACS)                 99.1
+13:       median effective tax rate (CoreLogic)                100.0
+    high side, 10-50 mi (n=12101) high side, < 10 mi (n=5651)
+                            <num>                       <num>
+ 1:                         100.0                       100.0
+ 2:                          99.7                       100.0
+ 3:                          99.5                        99.9
+ 4:                          99.8                       100.0
+ 5:                          99.7                        99.9
+ 6:                          78.1                        67.6
+ 7:                          99.8                        99.9
+ 8:                          99.4                        99.2
+ 9:                         100.0                        99.9
+10:                         100.0                        99.9
+11:                          99.9                        99.9
+12:                          99.2                        99.4
+13:                         100.0                       100.0
+    low side, 10-50 mi (n=9259) low side, < 10 mi (n=6181)
+                          <num>                      <num>
+ 1:                       100.0                      100.0
+ 2:                        97.7                       99.5
+ 3:                        97.5                       99.5
+ 4:                        97.7                       99.5
+ 5:                        99.3                       99.4
+ 6:                        64.2                       55.3
+ 7:                        99.8                       99.8
+ 8:                        99.2                       98.6
+ 9:                       100.0                       99.9
+10:                       100.0                       99.9
+11:                        99.9                       99.9
+12:                        99.5                       99.7
+13:                       100.0                      100.0

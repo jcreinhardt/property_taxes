@@ -2130,3 +2130,7 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - US totals: CoreLogic bills $515bn; CoG all local governments $490bn; F-33 school T06 $195bn (T06 + T02 $253bn).
     - CoG / CoreLogic is mostly 0.8–1.25. It is about 2 in WV and WY, and 1.4–1.6 in SC and MS: personal, mineral and vehicle property is taxed but not on the parcel roll. It is 0.28 in VT, where the statewide education tax counts as a state tax.
     - School share (T06 / CoreLogic) ranges from 0.2 (KS, MT, NY) to 0.8 (DE, OK, SC). It is about 0 for dependent systems: CT, MA, MD, NC, VA, DC, TN, RI, VT.
+- **School share of property tax.** CoG FY2017: school-district property tax $212bn of $508bn for all local governments (42%), before counting dependent systems' share of parent-government levies (F-33 T02 $57bn, part of it property tax). Roughly 45–50% of US property tax funds schools, so F-33 is not undercounting.
+- **Covariate coverage in the instrument's tracts** (`salt_local/c12_border_covariate_coverage.R`).
+  - ≥ 97.5% of tracts in every side × distance cell have: SEDA achievement, SES and % FRL; F-33 spending per pupil; ACS income, home value, education, race, tenure and year built; CoreLogic rate.
+  - The exception is district property tax per pupil (> 0): 79% overall, and 55% on the low side < 10 mi, because dependent systems (VA, NC, MD, TN, MA, CT, RI) are disproportionately on low-tax sides.
