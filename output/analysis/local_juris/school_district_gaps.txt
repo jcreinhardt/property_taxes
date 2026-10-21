@@ -1,0 +1,6 @@
+Districts with >= 20 sales: 9760 | with a priced neighbour: 9723 | on a state line: 1495 
+own - cheapest adjacent district (pp): p50 0.22 p90 0.82 | share > 0.5 pp: 0.227 
+state-line districts, own - cheapest district across the line: p50 0.12 p90 1.15 | share > 0.5 pp: 0.266 
+Achievement (SD) of the cheapest adjacent district minus own, mean: 0.018 | when gap > 0.5: 0.073 
+Cross-state cheapest minus own achievement, mean: 0.001 | when gap_x > 0.5: 0.052 
+corr(gap_min, ach_diff_cheapest): 0.093 
