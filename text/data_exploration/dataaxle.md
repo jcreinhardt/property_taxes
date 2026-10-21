@@ -2161,3 +2161,11 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **Sales per parcel, F-33 spending, property tax per pupil and aid share:** flat and n.s.
   - So the cross-border effective-rate convergence comes from the denominator (prices and assessment ratios converging), not from bills or nominal rates.
   - ACS and SEDA covariates are not yet in yearly form.
+- **Pupils per district as a migration outcome.**
+  - **Event studies** (`salt_local/c19_enrolment.R`; F-33 V33, balanced FY2012–23, 12,936 districts).
+    - County SALT exposure, unweighted: a pre-trend (−0.49 in 2012 → 0 in 2017, ×100 log points per SD); post +0.05 to +0.17 (n.s.).
+    - Enrolment-weighted: flat to 2021, then −0.36 and −0.43 in 2022–23. That is post-COVID losses in large exposed districts, not SALT timing.
+    - Border DDD near × high: pre +1.0 to +1.3 (2012–14), i.e. near-high districts were shrinking relatively before 2017; post −0.2 to +0.3 (n.s.). With × exposure: same pattern.
+  - **District-level border RD by year** (`salt_local/c20_enrolment_rd.R`). Running variable: median signed distance of the district's tracts to its majority pair's border. 6,734 districts within 100 mi; h = 19.4 mi (MSE-optimal FY2017), pair-demeaned, SE by county.
+    - Levels: high-side districts are about 45 log points smaller every year (robust p ≈ 0.01), which reflects how each state organises its districts (county-wide districts on many low-tax sides).
+    - Difference in discontinuities vs FY2017: pre +0.6 to +1.3, post −0.2 to −0.6, all n.s. Robust CIs about ±3.5 log points. **No enrolment response at the border.**

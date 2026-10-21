@@ -1,0 +1,58 @@
+Border RD on log district enrolment, high-tax minus low-tax side. Districts within 100 mi: 6734 | high side: 4126 | bandwidth (MSE-optimal, FY2017): 19.4 mi | pairs: 70 
+Coefficients x 100 (log points); conventional SE; robust bias-corrected 95% CI and p
+                                                                   spec     y
+                                                                 <char> <int>
+ 1: difference in discontinuities: change in log enrolment since FY2017  2012
+ 2: difference in discontinuities: change in log enrolment since FY2017  2013
+ 3: difference in discontinuities: change in log enrolment since FY2017  2014
+ 4: difference in discontinuities: change in log enrolment since FY2017  2015
+ 5: difference in discontinuities: change in log enrolment since FY2017  2016
+ 6: difference in discontinuities: change in log enrolment since FY2017  2017
+ 7: difference in discontinuities: change in log enrolment since FY2017  2018
+ 8: difference in discontinuities: change in log enrolment since FY2017  2019
+ 9: difference in discontinuities: change in log enrolment since FY2017  2020
+10: difference in discontinuities: change in log enrolment since FY2017  2021
+11: difference in discontinuities: change in log enrolment since FY2017  2022
+12: difference in discontinuities: change in log enrolment since FY2017  2023
+13:                                               levels: log enrolment  2012
+14:                                               levels: log enrolment  2013
+15:                                               levels: log enrolment  2014
+16:                                               levels: log enrolment  2015
+17:                                               levels: log enrolment  2016
+18:                                               levels: log enrolment  2017
+19:                                               levels: log enrolment  2018
+20:                                               levels: log enrolment  2019
+21:                                               levels: log enrolment  2020
+22:                                               levels: log enrolment  2021
+23:                                               levels: log enrolment  2022
+24:                                               levels: log enrolment  2023
+                                                                   spec     y
+                                                                 <char> <int>
+       est    se               ci     p n_eff
+     <num> <num>           <char> <num> <int>
+ 1:   0.55  1.04    [-2.89, 2.59] 0.915  2698
+ 2:   1.17  0.85    [-1.61, 2.88] 0.581  2698
+ 3:   0.61  0.69    [-1.64, 2.12] 0.801  2698
+ 4:   0.58  0.56    [-1.42, 1.90] 0.778  2698
+ 5:   1.29  0.51    [-0.25, 2.86] 0.099  2698
+ 6:   0.00  0.00     [0.00, 0.00]    NA    NA
+ 7:  -0.20  0.51    [-0.96, 2.34] 0.410  2698
+ 8:  -0.02  0.69    [-1.54, 2.85] 0.559  2698
+ 9:  -0.01  0.79    [-1.36, 3.65] 0.371  2698
+10:  -0.53  1.05    [-3.71, 3.27] 0.900  2698
+11:  -0.37  1.05    [-3.68, 3.36] 0.929  2698
+12:  -0.56  1.15    [-4.19, 3.45] 0.849  2698
+13: -45.59 11.36 [-71.62, -11.92] 0.006  2698
+14: -44.96 11.38 [-70.96, -11.02] 0.007  2698
+15: -45.53 11.41 [-71.42, -11.34] 0.007  2698
+16: -45.55 11.44 [-71.34, -11.42] 0.007  2698
+17: -44.85 11.42 [-70.34, -10.28] 0.009  2698
+18: -46.13 11.57 [-71.95, -11.29] 0.007  2698
+19: -46.33 11.67 [-71.57, -10.29] 0.009  2698
+20: -46.15 11.70 [-71.66, -10.27] 0.009  2698
+21: -46.14 11.75  [-71.27, -9.69] 0.010  2698
+22: -46.66 11.74 [-72.71, -10.98] 0.008  2698
+23: -46.50 11.72 [-72.58, -10.98] 0.008  2698
+24: -46.69 11.76 [-72.83, -11.15] 0.008  2698
+       est    se               ci     p n_eff
+     <num> <num>           <char> <num> <int>
