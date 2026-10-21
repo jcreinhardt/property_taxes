@@ -2255,3 +2255,7 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - ZIP: a downward pre-trend (+1.24 → +0.49), then −0.91 to −1.49.
     - **ZIP + 2012 price × year: pre flat (0.37, 0.50, −0.30, 0.13); 2018 −0.56, 2019 −0.63*, 2020 −0.63*, 2021 −0.48, 2022 −0.59, 2023–24 −0.2/−0.3.** At the owner-weighted mean ZIP price ($301k), −0.6% per $100 ≈ $18 per $1/yr, i.e. a capitalisation factor ≈ 0.9 at 5% (permanent).
   - **Reading:** once price-tier trends are controlled, the only component with a post-2017 price response is the property-tax part, the one theory says should capitalise. It is only significant in 2019–20 at the ZIP level.
+- **Three components, return-weighted only** (user preference from here on; c29 rerun with 2016-return weights everywhere, ZIP included; no-income-tax states with and without the price control).
+  - ZIP + 2012 price × year, property part: pre 0.58, 0.76*, −0.15, 0.14; 2018 −0.63, 2019 −0.69*, 2020 −0.68*, 2021 −0.36, 2022 −0.35, 2023–24 ≈ 0. Income part ≈ 0 to −0.4 (n.s.). Mortgage interest +0.5 to +0.9.
+  - No-income-tax states + price control: property part 2019 −0.95, 2020 −0.75 (n.s.), then ≈ 0; pre-trend (2013 −4.0 → 0).
+  - County + price control: property part 2019 −0.37, then ≈ 0 (n.s.).

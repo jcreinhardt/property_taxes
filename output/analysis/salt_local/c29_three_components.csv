@@ -1,253 +1,253 @@
 y,comp,b,se,spec,n
-2013,"(a) property tax (SALT, real-estate part)",0.00335485246808573,0.00942164376231336,"1. County, unweighted",15732
-2014,"(a) property tax (SALT, real-estate part)",-0.0123242821212537,0.00584308052157747,"1. County, unweighted",15732
-2015,"(a) property tax (SALT, real-estate part)",-0.00451543149159963,0.00524926394882087,"1. County, unweighted",15732
-2016,"(a) property tax (SALT, real-estate part)",-0.00897353314394504,0.00425485412203118,"1. County, unweighted",15732
-2018,"(a) property tax (SALT, real-estate part)",-0.00226680449704602,0.00490667113700213,"1. County, unweighted",15732
-2019,"(a) property tax (SALT, real-estate part)",-0.0091080015877727,0.00441328947821294,"1. County, unweighted",15732
-2020,"(a) property tax (SALT, real-estate part)",-0.00107840928216931,0.00461112151204131,"1. County, unweighted",15732
-2021,"(a) property tax (SALT, real-estate part)",-0.0039578553204723,0.00532587740137893,"1. County, unweighted",15732
-2022,"(a) property tax (SALT, real-estate part)",-0.00365751836245509,0.00583788491224621,"1. County, unweighted",15732
-2023,"(a) property tax (SALT, real-estate part)",-0.0059251267223146,0.0062772995572522,"1. County, unweighted",15732
-2024,"(a) property tax (SALT, real-estate part)",-0.00350249068110992,0.00639773404461599,"1. County, unweighted",15732
-2013,"(b) state/local income or sales tax (SALT, rest)",0.0060476549085683,0.00641952779538876,"1. County, unweighted",15732
-2014,"(b) state/local income or sales tax (SALT, rest)",0.00847730164173995,0.00333617560813786,"1. County, unweighted",15732
-2015,"(b) state/local income or sales tax (SALT, rest)",0.00275309705285036,0.00306278270543368,"1. County, unweighted",15732
-2016,"(b) state/local income or sales tax (SALT, rest)",0.00247318721649861,0.00263576060043366,"1. County, unweighted",15732
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.00324127111145897,0.00388599251619591,"1. County, unweighted",15732
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.00559197372070313,0.00280482499020395,"1. County, unweighted",15732
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.0107944377701047,0.00284088926055796,"1. County, unweighted",15732
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.0153646283448156,0.00332594913694806,"1. County, unweighted",15732
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.0153929324471413,0.00394555597592306,"1. County, unweighted",15732
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.0159065081969391,0.00425412236472779,"1. County, unweighted",15732
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.0159577060742316,0.00453951998108846,"1. County, unweighted",15732
-2013,(c) mortgage interest,-0.0183105900076644,0.00762265890517853,"1. County, unweighted",15732
-2014,(c) mortgage interest,-0.00685132889687482,0.00507554683649339,"1. County, unweighted",15732
-2015,(c) mortgage interest,-0.00672509487153956,0.00465387857116659,"1. County, unweighted",15732
-2016,(c) mortgage interest,0.0030525956897204,0.00434443542276389,"1. County, unweighted",15732
-2018,(c) mortgage interest,0.00899446821670147,0.0043868272040671,"1. County, unweighted",15732
-2019,(c) mortgage interest,0.0122355420083758,0.00454290602543248,"1. County, unweighted",15732
-2020,(c) mortgage interest,0.00938677389193181,0.00462821385708155,"1. County, unweighted",15732
-2021,(c) mortgage interest,0.015110026352853,0.00500502924164117,"1. County, unweighted",15732
-2022,(c) mortgage interest,0.0214881733908442,0.00571202335978238,"1. County, unweighted",15732
-2023,(c) mortgage interest,0.0239612594551329,0.00600146523289201,"1. County, unweighted",15732
-2024,(c) mortgage interest,0.0149604123307608,0.00569027437783364,"1. County, unweighted",15732
-2017,"(a) property tax (SALT, real-estate part)",0,0,"1. County, unweighted",15732
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"1. County, unweighted",15732
-2017,(c) mortgage interest,0,0,"1. County, unweighted",15732
-2013,"(a) property tax (SALT, real-estate part)",-0.00943935274607636,0.00811076067129858,"2. County, return-weighted",15732
-2014,"(a) property tax (SALT, real-estate part)",-0.00666350261116414,0.00707229006686447,"2. County, return-weighted",15732
-2015,"(a) property tax (SALT, real-estate part)",-0.003807833196503,0.00528218176502988,"2. County, return-weighted",15732
-2016,"(a) property tax (SALT, real-estate part)",-0.0041877910810867,0.00366458424173333,"2. County, return-weighted",15732
-2018,"(a) property tax (SALT, real-estate part)",0.00342293906686106,0.00401508177444011,"2. County, return-weighted",15732
-2019,"(a) property tax (SALT, real-estate part)",-0.00635728548947972,0.00306819778807119,"2. County, return-weighted",15732
-2020,"(a) property tax (SALT, real-estate part)",-0.00662477671811467,0.00350782233874575,"2. County, return-weighted",15732
-2021,"(a) property tax (SALT, real-estate part)",-0.0100846932807591,0.0044919204174674,"2. County, return-weighted",15732
-2022,"(a) property tax (SALT, real-estate part)",-0.00752715312337527,0.00486892787264709,"2. County, return-weighted",15732
-2023,"(a) property tax (SALT, real-estate part)",-0.00883490156128797,0.00588433211057727,"2. County, return-weighted",15732
-2024,"(a) property tax (SALT, real-estate part)",-0.00712473017246485,0.00696455179578494,"2. County, return-weighted",15732
-2013,"(b) state/local income or sales tax (SALT, rest)",0.00961088372117593,0.00456779636946865,"2. County, return-weighted",15732
-2014,"(b) state/local income or sales tax (SALT, rest)",0.00588110447160623,0.00367808254703217,"2. County, return-weighted",15732
-2015,"(b) state/local income or sales tax (SALT, rest)",0.00487698928809983,0.00267692723542275,"2. County, return-weighted",15732
-2016,"(b) state/local income or sales tax (SALT, rest)",0.00102779894147801,0.00176544244849395,"2. County, return-weighted",15732
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.00241669627588268,0.00139334360191878,"2. County, return-weighted",15732
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.00400449734851302,0.00152980090913342,"2. County, return-weighted",15732
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.00743991446412852,0.00211708501170896,"2. County, return-weighted",15732
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.0116225601518387,0.00295040016005926,"2. County, return-weighted",15732
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.0157859826511589,0.00292968049236523,"2. County, return-weighted",15732
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.0161114507681754,0.0036907080668889,"2. County, return-weighted",15732
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.0145037827998584,0.00454577384846477,"2. County, return-weighted",15732
-2013,(c) mortgage interest,-0.00117148061103583,0.00552549998441118,"2. County, return-weighted",15732
-2014,(c) mortgage interest,-0.00132004304590401,0.00446118098367203,"2. County, return-weighted",15732
-2015,(c) mortgage interest,-0.00566532790894958,0.00328628161965888,"2. County, return-weighted",15732
-2016,(c) mortgage interest,0.000221167977693442,0.00221105428540768,"2. County, return-weighted",15732
-2018,(c) mortgage interest,-0.000887537907456522,0.00337627684568098,"2. County, return-weighted",15732
-2019,(c) mortgage interest,0.00450003136740221,0.00235188828217925,"2. County, return-weighted",15732
-2020,(c) mortgage interest,0.00673836445955939,0.0026504115685565,"2. County, return-weighted",15732
-2021,(c) mortgage interest,0.0185076925116296,0.00365952317002719,"2. County, return-weighted",15732
-2022,(c) mortgage interest,0.0279790021627296,0.00476330324139749,"2. County, return-weighted",15732
-2023,(c) mortgage interest,0.030706306894624,0.0056931585688731,"2. County, return-weighted",15732
-2024,(c) mortgage interest,0.022716027337488,0.00678850024599269,"2. County, return-weighted",15732
-2017,"(a) property tax (SALT, real-estate part)",0,0,"2. County, return-weighted",15732
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"2. County, return-weighted",15732
-2017,(c) mortgage interest,0,0,"2. County, return-weighted",15732
-2013,"(a) property tax (SALT, real-estate part)",-0.0148628317659404,0.0092668018138745,"3. County, return-weighted, + 2012 price level x year",15732
-2014,"(a) property tax (SALT, real-estate part)",-0.0079305572201998,0.00747264534894872,"3. County, return-weighted, + 2012 price level x year",15732
-2015,"(a) property tax (SALT, real-estate part)",-0.00424319935221318,0.0057010653692819,"3. County, return-weighted, + 2012 price level x year",15732
-2016,"(a) property tax (SALT, real-estate part)",-0.00268967651164434,0.00362982026738602,"3. County, return-weighted, + 2012 price level x year",15732
-2018,"(a) property tax (SALT, real-estate part)",0.00312271675558694,0.00346416226741837,"3. County, return-weighted, + 2012 price level x year",15732
-2019,"(a) property tax (SALT, real-estate part)",-0.00370949215540316,0.00309925618735675,"3. County, return-weighted, + 2012 price level x year",15732
-2020,"(a) property tax (SALT, real-estate part)",-0.00162025580254945,0.00351889130306526,"3. County, return-weighted, + 2012 price level x year",15732
-2021,"(a) property tax (SALT, real-estate part)",-0.00110470705542715,0.00442817866117375,"3. County, return-weighted, + 2012 price level x year",15732
-2022,"(a) property tax (SALT, real-estate part)",0.000872987962455871,0.00471191679405391,"3. County, return-weighted, + 2012 price level x year",15732
-2023,"(a) property tax (SALT, real-estate part)",-0.00125008925012689,0.00583231050475469,"3. County, return-weighted, + 2012 price level x year",15732
-2024,"(a) property tax (SALT, real-estate part)",6.93726637950119e-06,0.00717123108986047,"3. County, return-weighted, + 2012 price level x year",15732
-2013,"(b) state/local income or sales tax (SALT, rest)",0.00225971586166943,0.00518615495310675,"3. County, return-weighted, + 2012 price level x year",15732
-2014,"(b) state/local income or sales tax (SALT, rest)",0.00416369557518817,0.0041302715346712,"3. County, return-weighted, + 2012 price level x year",15732
-2015,"(b) state/local income or sales tax (SALT, rest)",0.00428687919837079,0.00283434294972347,"3. County, return-weighted, + 2012 price level x year",15732
-2016,"(b) state/local income or sales tax (SALT, rest)",0.00305839436413816,0.00173664973597747,"3. County, return-weighted, + 2012 price level x year",15732
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.00282362780403024,0.0021553675423227,"3. County, return-weighted, + 2012 price level x year",15732
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.000415588239681571,0.00202181876954518,"3. County, return-weighted, + 2012 price level x year",15732
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.000656616663617772,0.00247575874162102,"3. County, return-weighted, + 2012 price level x year",15732
-2021,"(b) state/local income or sales tax (SALT, rest)",0.000549218493649596,0.00326062892201586,"3. County, return-weighted, + 2012 price level x year",15732
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.00440014582223655,0.00382241951606784,"3. County, return-weighted, + 2012 price level x year",15732
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.00583073828127041,0.00436081389950656,"3. County, return-weighted, + 2012 price level x year",15732
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.00483727827962335,0.00528292035860688,"3. County, return-weighted, + 2012 price level x year",15732
-2013,(c) mortgage interest,0.000403111312501613,0.00575359415816907,"3. County, return-weighted, + 2012 price level x year",15732
-2014,(c) mortgage interest,-0.000952180655960041,0.00448311157702188,"3. County, return-weighted, + 2012 price level x year",15732
-2015,(c) mortgage interest,-0.00553892859403756,0.00328226062232101,"3. County, return-weighted, + 2012 price level x year",15732
-2016,(c) mortgage interest,-0.000213777763399114,0.00205711149304797,"3. County, return-weighted, + 2012 price level x year",15732
-2018,(c) mortgage interest,-0.000800374736942907,0.00317049277970634,"3. County, return-weighted, + 2012 price level x year",15732
-2019,(c) mortgage interest,0.00373130081939369,0.00243645540860471,"3. County, return-weighted, + 2012 price level x year",15732
-2020,(c) mortgage interest,0.00528540812175719,0.00252407931074758,"3. County, return-weighted, + 2012 price level x year",15732
-2021,(c) mortgage interest,0.0159005442711493,0.00307646074858807,"3. County, return-weighted, + 2012 price level x year",15732
-2022,(c) mortgage interest,0.0255401996409693,0.00417686446625287,"3. County, return-weighted, + 2012 price level x year",15732
-2023,(c) mortgage interest,0.0285042177627234,0.00485050351230716,"3. County, return-weighted, + 2012 price level x year",15732
-2024,(c) mortgage interest,0.0206454991931988,0.00583809786831009,"3. County, return-weighted, + 2012 price level x year",15732
-2017,"(a) property tax (SALT, real-estate part)",0,0,"3. County, return-weighted, + 2012 price level x year",15732
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"3. County, return-weighted, + 2012 price level x year",15732
-2017,(c) mortgage interest,0,0,"3. County, return-weighted, + 2012 price level x year",15732
-2013,"(a) property tax (SALT, real-estate part)",-0.0293742924227057,0.0177084955131117,"4. County, no-income-tax states, return-weighted",3672
-2014,"(a) property tax (SALT, real-estate part)",-0.0136171719103629,0.014539103630878,"4. County, no-income-tax states, return-weighted",3672
-2015,"(a) property tax (SALT, real-estate part)",-0.0139425377625041,0.0106968894340525,"4. County, no-income-tax states, return-weighted",3672
-2016,"(a) property tax (SALT, real-estate part)",-0.00923792179030745,0.00612674104548022,"4. County, no-income-tax states, return-weighted",3672
-2018,"(a) property tax (SALT, real-estate part)",0.000654219494011267,0.00379188399707027,"4. County, no-income-tax states, return-weighted",3672
-2019,"(a) property tax (SALT, real-estate part)",-0.0131066109253632,0.00479796529221197,"4. County, no-income-tax states, return-weighted",3672
-2020,"(a) property tax (SALT, real-estate part)",-0.0145233029738512,0.00646205264683683,"4. County, no-income-tax states, return-weighted",3672
-2021,"(a) property tax (SALT, real-estate part)",-0.0135794112178676,0.00868961495331013,"4. County, no-income-tax states, return-weighted",3672
-2022,"(a) property tax (SALT, real-estate part)",-0.00565095999708821,0.0119269306871621,"4. County, no-income-tax states, return-weighted",3672
-2023,"(a) property tax (SALT, real-estate part)",-0.0145635653363113,0.013446947811103,"4. County, no-income-tax states, return-weighted",3672
-2024,"(a) property tax (SALT, real-estate part)",-0.0248723481669955,0.0133591046690399,"4. County, no-income-tax states, return-weighted",3672
-2013,"(b) state/local income or sales tax (SALT, rest)",0.0192218486002732,0.0216421340468313,"4. County, no-income-tax states, return-weighted",3672
-2014,"(b) state/local income or sales tax (SALT, rest)",0.00998223664656898,0.0153491019043143,"4. County, no-income-tax states, return-weighted",3672
-2015,"(b) state/local income or sales tax (SALT, rest)",0.0164618167240695,0.0114419923442578,"4. County, no-income-tax states, return-weighted",3672
-2016,"(b) state/local income or sales tax (SALT, rest)",0.00912435314205854,0.00590605121022765,"4. County, no-income-tax states, return-weighted",3672
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.00990866318728821,0.00399583034882876,"4. County, no-income-tax states, return-weighted",3672
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.0101510794289132,0.00590790388193168,"4. County, no-income-tax states, return-weighted",3672
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.00926923183084214,0.00663939687626736,"4. County, no-income-tax states, return-weighted",3672
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.0141300104325516,0.00769377346171867,"4. County, no-income-tax states, return-weighted",3672
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.0157115896021121,0.011250778365883,"4. County, no-income-tax states, return-weighted",3672
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.00525455796399012,0.0130808166089688,"4. County, no-income-tax states, return-weighted",3672
-2024,"(b) state/local income or sales tax (SALT, rest)",0.0121646026560812,0.0141269976199258,"4. County, no-income-tax states, return-weighted",3672
-2013,(c) mortgage interest,-0.000722102729447562,0.0111421812478942,"4. County, no-income-tax states, return-weighted",3672
-2014,(c) mortgage interest,-0.00762229319322898,0.00885027965489666,"4. County, no-income-tax states, return-weighted",3672
-2015,(c) mortgage interest,-0.0013870555190782,0.00773848315582974,"4. County, no-income-tax states, return-weighted",3672
-2016,(c) mortgage interest,0.00277064910828447,0.00519559528361734,"4. County, no-income-tax states, return-weighted",3672
-2018,(c) mortgage interest,0.00621698402717264,0.00281844672018339,"4. County, no-income-tax states, return-weighted",3672
-2019,(c) mortgage interest,0.0101983926276877,0.00403096643840073,"4. County, no-income-tax states, return-weighted",3672
-2020,(c) mortgage interest,0.00965559815635259,0.0058167983690102,"4. County, no-income-tax states, return-weighted",3672
-2021,(c) mortgage interest,0.0133843099942421,0.00851448172276337,"4. County, no-income-tax states, return-weighted",3672
-2022,(c) mortgage interest,0.015431546154236,0.0108301060190433,"4. County, no-income-tax states, return-weighted",3672
-2023,(c) mortgage interest,0.00453516339662684,0.0116152047698052,"4. County, no-income-tax states, return-weighted",3672
-2024,(c) mortgage interest,-0.00352257414099836,0.0112892757459394,"4. County, no-income-tax states, return-weighted",3672
-2017,"(a) property tax (SALT, real-estate part)",0,0,"4. County, no-income-tax states, return-weighted",3672
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"4. County, no-income-tax states, return-weighted",3672
-2017,(c) mortgage interest,0,0,"4. County, no-income-tax states, return-weighted",3672
-2013,"(a) property tax (SALT, real-estate part)",0.00813300626427719,0.0179845925508607,"5. State, state + year FE, return-weighted",540
-2014,"(a) property tax (SALT, real-estate part)",0.0102720673878209,0.0129566394384177,"5. State, state + year FE, return-weighted",540
-2015,"(a) property tax (SALT, real-estate part)",0.00842060869200031,0.00893704983427665,"5. State, state + year FE, return-weighted",540
-2016,"(a) property tax (SALT, real-estate part)",0.00561183390571149,0.00394080416288618,"5. State, state + year FE, return-weighted",540
-2018,"(a) property tax (SALT, real-estate part)",-0.00705702219330606,0.00239052908731334,"5. State, state + year FE, return-weighted",540
-2019,"(a) property tax (SALT, real-estate part)",-0.0149610956604683,0.00462509765979709,"5. State, state + year FE, return-weighted",540
-2020,"(a) property tax (SALT, real-estate part)",-0.020313610070141,0.00967223988238887,"5. State, state + year FE, return-weighted",540
-2021,"(a) property tax (SALT, real-estate part)",-0.0279280530068989,0.0132366314534444,"5. State, state + year FE, return-weighted",540
-2022,"(a) property tax (SALT, real-estate part)",-0.0271156455914654,0.0166744331934905,"5. State, state + year FE, return-weighted",540
-2023,"(a) property tax (SALT, real-estate part)",-0.0210027177852445,0.0184680163383334,"5. State, state + year FE, return-weighted",540
-2024,"(a) property tax (SALT, real-estate part)",-0.0249031896128616,0.021357841530499,"5. State, state + year FE, return-weighted",540
-2013,"(b) state/local income or sales tax (SALT, rest)",-0.013755970910726,0.0100513737465293,"5. State, state + year FE, return-weighted",540
-2014,"(b) state/local income or sales tax (SALT, rest)",-0.00521861471935275,0.00652433557988494,"5. State, state + year FE, return-weighted",540
-2015,"(b) state/local income or sales tax (SALT, rest)",0.000503358544783504,0.00450541120054612,"5. State, state + year FE, return-weighted",540
-2016,"(b) state/local income or sales tax (SALT, rest)",0.000204333433134519,0.00273919249900698,"5. State, state + year FE, return-weighted",540
-2018,"(b) state/local income or sales tax (SALT, rest)",0.000470278013775605,0.00146485915604592,"5. State, state + year FE, return-weighted",540
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.00450428704658004,0.00201544287007178,"5. State, state + year FE, return-weighted",540
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.00892043654759688,0.00415047049388045,"5. State, state + year FE, return-weighted",540
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.0087506395222682,0.00841809420317033,"5. State, state + year FE, return-weighted",540
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.0146449266545547,0.00952936186203746,"5. State, state + year FE, return-weighted",540
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.0184482033210875,0.00964840344346086,"5. State, state + year FE, return-weighted",540
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.0189335506991944,0.0106656759119495,"5. State, state + year FE, return-weighted",540
-2013,(c) mortgage interest,0.0383593148182769,0.0379074511383934,"5. State, state + year FE, return-weighted",540
-2014,(c) mortgage interest,0.0181367930855301,0.0291111717573004,"5. State, state + year FE, return-weighted",540
-2015,(c) mortgage interest,-0.00195961617380248,0.0175491797058208,"5. State, state + year FE, return-weighted",540
-2016,(c) mortgage interest,-0.00398173853836425,0.0085722058402989,"5. State, state + year FE, return-weighted",540
-2018,(c) mortgage interest,0.00474734654401853,0.00572698816279375,"5. State, state + year FE, return-weighted",540
-2019,(c) mortgage interest,0.0232967504491069,0.00841189738052754,"5. State, state + year FE, return-weighted",540
-2020,(c) mortgage interest,0.0402778709403563,0.0149203809125902,"5. State, state + year FE, return-weighted",540
-2021,(c) mortgage interest,0.0495516387881494,0.0263268463321373,"5. State, state + year FE, return-weighted",540
-2022,(c) mortgage interest,0.0439265550421598,0.0330124569890833,"5. State, state + year FE, return-weighted",540
-2023,(c) mortgage interest,0.0472541417221406,0.0350354848116297,"5. State, state + year FE, return-weighted",540
-2024,(c) mortgage interest,0.0714849370852859,0.0370537266910313,"5. State, state + year FE, return-weighted",540
-2017,"(a) property tax (SALT, real-estate part)",0,0,"5. State, state + year FE, return-weighted",540
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"5. State, state + year FE, return-weighted",540
-2017,(c) mortgage interest,0,0,"5. State, state + year FE, return-weighted",540
-2013,"(a) property tax (SALT, real-estate part)",0.0124275210572789,0.00405981425004618,"6. ZIP (uncensored), owner-weighted",91068
-2014,"(a) property tax (SALT, real-estate part)",0.0121243260093248,0.0034360625228717,"6. ZIP (uncensored), owner-weighted",91068
-2015,"(a) property tax (SALT, real-estate part)",0.00445720571020693,0.0027738109664755,"6. ZIP (uncensored), owner-weighted",91068
-2016,"(a) property tax (SALT, real-estate part)",0.00485307403571355,0.00195357789941481,"6. ZIP (uncensored), owner-weighted",91068
-2018,"(a) property tax (SALT, real-estate part)",-0.00322951590308607,0.0018047867891175,"6. ZIP (uncensored), owner-weighted",91068
-2019,"(a) property tax (SALT, real-estate part)",-0.00912251546218732,0.00231129993148244,"6. ZIP (uncensored), owner-weighted",91068
-2020,"(a) property tax (SALT, real-estate part)",-0.0125560541427018,0.00310109861781034,"6. ZIP (uncensored), owner-weighted",91068
-2021,"(a) property tax (SALT, real-estate part)",-0.0131249777946251,0.00373563408734323,"6. ZIP (uncensored), owner-weighted",91068
-2022,"(a) property tax (SALT, real-estate part)",-0.0149316300793251,0.00462193842014635,"6. ZIP (uncensored), owner-weighted",91068
-2023,"(a) property tax (SALT, real-estate part)",-0.012509630973855,0.00416689269364654,"6. ZIP (uncensored), owner-weighted",91068
-2024,"(a) property tax (SALT, real-estate part)",-0.0110844443697501,0.00437394859900951,"6. ZIP (uncensored), owner-weighted",91068
-2013,"(b) state/local income or sales tax (SALT, rest)",0.0036766400518666,0.00188014551974936,"6. ZIP (uncensored), owner-weighted",91068
-2014,"(b) state/local income or sales tax (SALT, rest)",0.000998633363198682,0.00170179489930527,"6. ZIP (uncensored), owner-weighted",91068
-2015,"(b) state/local income or sales tax (SALT, rest)",0.00169248943605092,0.00127873955068207,"6. ZIP (uncensored), owner-weighted",91068
-2016,"(b) state/local income or sales tax (SALT, rest)",2.32581385130127e-05,0.000866076296180535,"6. ZIP (uncensored), owner-weighted",91068
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.000979532097051724,0.00094920951916762,"6. ZIP (uncensored), owner-weighted",91068
-2019,"(b) state/local income or sales tax (SALT, rest)",-0.00129687315420538,0.000958487802685179,"6. ZIP (uncensored), owner-weighted",91068
-2020,"(b) state/local income or sales tax (SALT, rest)",-0.0021726449637694,0.00128053856598483,"6. ZIP (uncensored), owner-weighted",91068
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.00543364760142371,0.00161371759959465,"6. ZIP (uncensored), owner-weighted",91068
-2022,"(b) state/local income or sales tax (SALT, rest)",-0.00479322083970068,0.00219379143540068,"6. ZIP (uncensored), owner-weighted",91068
-2023,"(b) state/local income or sales tax (SALT, rest)",-0.00599276974533264,0.00220911865233238,"6. ZIP (uncensored), owner-weighted",91068
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.00627475601476319,0.00239860025495134,"6. ZIP (uncensored), owner-weighted",91068
-2013,(c) mortgage interest,0.00235266989965115,0.0032791609827794,"6. ZIP (uncensored), owner-weighted",91068
-2014,(c) mortgage interest,0.00390356996300163,0.00365270795669656,"6. ZIP (uncensored), owner-weighted",91068
-2015,(c) mortgage interest,0.00462363756255936,0.00250793934415405,"6. ZIP (uncensored), owner-weighted",91068
-2016,(c) mortgage interest,0.000833295018042544,0.00193409709005687,"6. ZIP (uncensored), owner-weighted",91068
-2018,(c) mortgage interest,0.000446280717787301,0.00184398717276388,"6. ZIP (uncensored), owner-weighted",91068
-2019,(c) mortgage interest,0.000234566442747091,0.00226877208309517,"6. ZIP (uncensored), owner-weighted",91068
-2020,(c) mortgage interest,-0.00131289709257891,0.00276647211499122,"6. ZIP (uncensored), owner-weighted",91068
-2021,(c) mortgage interest,0.00355655559502749,0.00307247692952964,"6. ZIP (uncensored), owner-weighted",91068
-2022,(c) mortgage interest,0.00629860165448341,0.00353804076949414,"6. ZIP (uncensored), owner-weighted",91068
-2023,(c) mortgage interest,0.00655716522613247,0.00315199790550118,"6. ZIP (uncensored), owner-weighted",91068
-2024,(c) mortgage interest,0.0038884082740985,0.00317687374832046,"6. ZIP (uncensored), owner-weighted",91068
-2017,"(a) property tax (SALT, real-estate part)",0,0,"6. ZIP (uncensored), owner-weighted",91068
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"6. ZIP (uncensored), owner-weighted",91068
-2017,(c) mortgage interest,0,0,"6. ZIP (uncensored), owner-weighted",91068
-2013,"(a) property tax (SALT, real-estate part)",0.00368957211837029,0.00420299038721263,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2014,"(a) property tax (SALT, real-estate part)",0.00497971154810083,0.00342277899662139,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2015,"(a) property tax (SALT, real-estate part)",-0.0029865455870681,0.0036129524812399,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2016,"(a) property tax (SALT, real-estate part)",0.00129533215240389,0.00245429764820254,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2018,"(a) property tax (SALT, real-estate part)",-0.00563950825602744,0.0036872237140689,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2019,"(a) property tax (SALT, real-estate part)",-0.00629524329143482,0.00274205958882713,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2020,"(a) property tax (SALT, real-estate part)",-0.00634685857218485,0.00298765144019174,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2021,"(a) property tax (SALT, real-estate part)",-0.00479722132957482,0.00366153456598557,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2022,"(a) property tax (SALT, real-estate part)",-0.00590792134826521,0.00460485875084274,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2023,"(a) property tax (SALT, real-estate part)",-0.00182580472888045,0.00416515317278601,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2024,"(a) property tax (SALT, real-estate part)",-0.00276716470020841,0.00471718006875792,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2013,"(b) state/local income or sales tax (SALT, rest)",-0.00144991047452881,0.00189405495135884,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2014,"(b) state/local income or sales tax (SALT, rest)",-0.00319310857568903,0.00183672321981391,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2015,"(b) state/local income or sales tax (SALT, rest)",-0.00267475594363773,0.00148267382266128,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2016,"(b) state/local income or sales tax (SALT, rest)",-0.00206406734853049,0.00130699607319898,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2018,"(b) state/local income or sales tax (SALT, rest)",-0.00239347347528252,0.00208953646278439,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2019,"(b) state/local income or sales tax (SALT, rest)",0.000361886096569851,0.00140802306598772,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2020,"(b) state/local income or sales tax (SALT, rest)",0.00147028715257211,0.00145037852211697,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2021,"(b) state/local income or sales tax (SALT, rest)",-0.000547756806220467,0.00179063148269791,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2022,"(b) state/local income or sales tax (SALT, rest)",0.000500984822137894,0.00223343020080231,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2023,"(b) state/local income or sales tax (SALT, rest)",0.000275426079911267,0.00210289151376853,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2024,"(b) state/local income or sales tax (SALT, rest)",-0.00139501195054968,0.00229065923717138,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2013,(c) mortgage interest,0.000709571569736244,0.00332003274782188,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2014,(c) mortgage interest,0.00256008487614683,0.00368833364404279,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2015,(c) mortgage interest,0.00322390229168904,0.00236770088766063,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2016,(c) mortgage interest,0.000164291366544488,0.00205015620865684,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2018,(c) mortgage interest,-6.89821904437636e-06,0.0019144148478344,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2019,(c) mortgage interest,0.000766211364737347,0.00231172475349799,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2020,(c) mortgage interest,-0.00014530971671253,0.00259317481720341,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2021,(c) mortgage interest,0.0051225206556307,0.00277094773382934,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2022,(c) mortgage interest,0.00799543472701669,0.00332562600079485,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2023,(c) mortgage interest,0.00856616953400335,0.00280562254813828,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2024,(c) mortgage interest,0.00545240326079499,0.00287392935585193,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2017,"(a) property tax (SALT, real-estate part)",0,0,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
-2017,(c) mortgage interest,0,0,"7. ZIP (uncensored), owner-weighted, + 2012 price level x year",91068
+2013,"(a) property tax (SALT, real-estate part)",-0.00943935274607636,0.00811076067129858,1. County,15732
+2014,"(a) property tax (SALT, real-estate part)",-0.00666350261116414,0.00707229006686447,1. County,15732
+2015,"(a) property tax (SALT, real-estate part)",-0.003807833196503,0.00528218176502988,1. County,15732
+2016,"(a) property tax (SALT, real-estate part)",-0.0041877910810867,0.00366458424173333,1. County,15732
+2018,"(a) property tax (SALT, real-estate part)",0.00342293906686106,0.00401508177444011,1. County,15732
+2019,"(a) property tax (SALT, real-estate part)",-0.00635728548947972,0.00306819778807119,1. County,15732
+2020,"(a) property tax (SALT, real-estate part)",-0.00662477671811467,0.00350782233874575,1. County,15732
+2021,"(a) property tax (SALT, real-estate part)",-0.0100846932807591,0.0044919204174674,1. County,15732
+2022,"(a) property tax (SALT, real-estate part)",-0.00752715312337527,0.00486892787264709,1. County,15732
+2023,"(a) property tax (SALT, real-estate part)",-0.00883490156128797,0.00588433211057727,1. County,15732
+2024,"(a) property tax (SALT, real-estate part)",-0.00712473017246485,0.00696455179578494,1. County,15732
+2013,"(b) state/local income or sales tax (SALT, rest)",0.00961088372117593,0.00456779636946865,1. County,15732
+2014,"(b) state/local income or sales tax (SALT, rest)",0.00588110447160623,0.00367808254703217,1. County,15732
+2015,"(b) state/local income or sales tax (SALT, rest)",0.00487698928809983,0.00267692723542275,1. County,15732
+2016,"(b) state/local income or sales tax (SALT, rest)",0.00102779894147801,0.00176544244849395,1. County,15732
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.00241669627588268,0.00139334360191878,1. County,15732
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.00400449734851302,0.00152980090913342,1. County,15732
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.00743991446412852,0.00211708501170896,1. County,15732
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.0116225601518387,0.00295040016005926,1. County,15732
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.0157859826511589,0.00292968049236523,1. County,15732
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.0161114507681754,0.0036907080668889,1. County,15732
+2024,"(b) state/local income or sales tax (SALT, rest)",-0.0145037827998584,0.00454577384846477,1. County,15732
+2013,(c) mortgage interest,-0.00117148061103583,0.00552549998441118,1. County,15732
+2014,(c) mortgage interest,-0.00132004304590401,0.00446118098367203,1. County,15732
+2015,(c) mortgage interest,-0.00566532790894958,0.00328628161965888,1. County,15732
+2016,(c) mortgage interest,0.000221167977693442,0.00221105428540768,1. County,15732
+2018,(c) mortgage interest,-0.000887537907456522,0.00337627684568098,1. County,15732
+2019,(c) mortgage interest,0.00450003136740221,0.00235188828217925,1. County,15732
+2020,(c) mortgage interest,0.00673836445955939,0.0026504115685565,1. County,15732
+2021,(c) mortgage interest,0.0185076925116296,0.00365952317002719,1. County,15732
+2022,(c) mortgage interest,0.0279790021627296,0.00476330324139749,1. County,15732
+2023,(c) mortgage interest,0.030706306894624,0.0056931585688731,1. County,15732
+2024,(c) mortgage interest,0.022716027337488,0.00678850024599269,1. County,15732
+2017,"(a) property tax (SALT, real-estate part)",0,0,1. County,15732
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,1. County,15732
+2017,(c) mortgage interest,0,0,1. County,15732
+2013,"(a) property tax (SALT, real-estate part)",-0.0148628317659404,0.0092668018138745,"2. County, + 2012 price level x year",15732
+2014,"(a) property tax (SALT, real-estate part)",-0.0079305572201998,0.00747264534894872,"2. County, + 2012 price level x year",15732
+2015,"(a) property tax (SALT, real-estate part)",-0.00424319935221318,0.0057010653692819,"2. County, + 2012 price level x year",15732
+2016,"(a) property tax (SALT, real-estate part)",-0.00268967651164434,0.00362982026738602,"2. County, + 2012 price level x year",15732
+2018,"(a) property tax (SALT, real-estate part)",0.00312271675558694,0.00346416226741837,"2. County, + 2012 price level x year",15732
+2019,"(a) property tax (SALT, real-estate part)",-0.00370949215540316,0.00309925618735675,"2. County, + 2012 price level x year",15732
+2020,"(a) property tax (SALT, real-estate part)",-0.00162025580254945,0.00351889130306526,"2. County, + 2012 price level x year",15732
+2021,"(a) property tax (SALT, real-estate part)",-0.00110470705542715,0.00442817866117375,"2. County, + 2012 price level x year",15732
+2022,"(a) property tax (SALT, real-estate part)",0.000872987962455871,0.00471191679405391,"2. County, + 2012 price level x year",15732
+2023,"(a) property tax (SALT, real-estate part)",-0.00125008925012689,0.00583231050475469,"2. County, + 2012 price level x year",15732
+2024,"(a) property tax (SALT, real-estate part)",6.93726637950119e-06,0.00717123108986047,"2. County, + 2012 price level x year",15732
+2013,"(b) state/local income or sales tax (SALT, rest)",0.00225971586166943,0.00518615495310675,"2. County, + 2012 price level x year",15732
+2014,"(b) state/local income or sales tax (SALT, rest)",0.00416369557518817,0.0041302715346712,"2. County, + 2012 price level x year",15732
+2015,"(b) state/local income or sales tax (SALT, rest)",0.00428687919837079,0.00283434294972347,"2. County, + 2012 price level x year",15732
+2016,"(b) state/local income or sales tax (SALT, rest)",0.00305839436413816,0.00173664973597747,"2. County, + 2012 price level x year",15732
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.00282362780403024,0.0021553675423227,"2. County, + 2012 price level x year",15732
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.000415588239681571,0.00202181876954518,"2. County, + 2012 price level x year",15732
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.000656616663617772,0.00247575874162102,"2. County, + 2012 price level x year",15732
+2021,"(b) state/local income or sales tax (SALT, rest)",0.000549218493649596,0.00326062892201586,"2. County, + 2012 price level x year",15732
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.00440014582223655,0.00382241951606784,"2. County, + 2012 price level x year",15732
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.00583073828127041,0.00436081389950656,"2. County, + 2012 price level x year",15732
+2024,"(b) state/local income or sales tax (SALT, rest)",-0.00483727827962335,0.00528292035860688,"2. County, + 2012 price level x year",15732
+2013,(c) mortgage interest,0.000403111312501613,0.00575359415816907,"2. County, + 2012 price level x year",15732
+2014,(c) mortgage interest,-0.000952180655960041,0.00448311157702188,"2. County, + 2012 price level x year",15732
+2015,(c) mortgage interest,-0.00553892859403756,0.00328226062232101,"2. County, + 2012 price level x year",15732
+2016,(c) mortgage interest,-0.000213777763399114,0.00205711149304797,"2. County, + 2012 price level x year",15732
+2018,(c) mortgage interest,-0.000800374736942907,0.00317049277970634,"2. County, + 2012 price level x year",15732
+2019,(c) mortgage interest,0.00373130081939369,0.00243645540860471,"2. County, + 2012 price level x year",15732
+2020,(c) mortgage interest,0.00528540812175719,0.00252407931074758,"2. County, + 2012 price level x year",15732
+2021,(c) mortgage interest,0.0159005442711493,0.00307646074858807,"2. County, + 2012 price level x year",15732
+2022,(c) mortgage interest,0.0255401996409693,0.00417686446625287,"2. County, + 2012 price level x year",15732
+2023,(c) mortgage interest,0.0285042177627234,0.00485050351230716,"2. County, + 2012 price level x year",15732
+2024,(c) mortgage interest,0.0206454991931988,0.00583809786831009,"2. County, + 2012 price level x year",15732
+2017,"(a) property tax (SALT, real-estate part)",0,0,"2. County, + 2012 price level x year",15732
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"2. County, + 2012 price level x year",15732
+2017,(c) mortgage interest,0,0,"2. County, + 2012 price level x year",15732
+2013,"(a) property tax (SALT, real-estate part)",-0.0293742924227057,0.0177084955131117,"3. County, no-income-tax states",3672
+2014,"(a) property tax (SALT, real-estate part)",-0.0136171719103629,0.014539103630878,"3. County, no-income-tax states",3672
+2015,"(a) property tax (SALT, real-estate part)",-0.0139425377625041,0.0106968894340525,"3. County, no-income-tax states",3672
+2016,"(a) property tax (SALT, real-estate part)",-0.00923792179030745,0.00612674104548022,"3. County, no-income-tax states",3672
+2018,"(a) property tax (SALT, real-estate part)",0.000654219494011267,0.00379188399707027,"3. County, no-income-tax states",3672
+2019,"(a) property tax (SALT, real-estate part)",-0.0131066109253632,0.00479796529221197,"3. County, no-income-tax states",3672
+2020,"(a) property tax (SALT, real-estate part)",-0.0145233029738512,0.00646205264683683,"3. County, no-income-tax states",3672
+2021,"(a) property tax (SALT, real-estate part)",-0.0135794112178676,0.00868961495331013,"3. County, no-income-tax states",3672
+2022,"(a) property tax (SALT, real-estate part)",-0.00565095999708821,0.0119269306871621,"3. County, no-income-tax states",3672
+2023,"(a) property tax (SALT, real-estate part)",-0.0145635653363113,0.013446947811103,"3. County, no-income-tax states",3672
+2024,"(a) property tax (SALT, real-estate part)",-0.0248723481669955,0.0133591046690399,"3. County, no-income-tax states",3672
+2013,"(b) state/local income or sales tax (SALT, rest)",0.0192218486002732,0.0216421340468313,"3. County, no-income-tax states",3672
+2014,"(b) state/local income or sales tax (SALT, rest)",0.00998223664656898,0.0153491019043143,"3. County, no-income-tax states",3672
+2015,"(b) state/local income or sales tax (SALT, rest)",0.0164618167240695,0.0114419923442578,"3. County, no-income-tax states",3672
+2016,"(b) state/local income or sales tax (SALT, rest)",0.00912435314205854,0.00590605121022765,"3. County, no-income-tax states",3672
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.00990866318728821,0.00399583034882876,"3. County, no-income-tax states",3672
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.0101510794289132,0.00590790388193168,"3. County, no-income-tax states",3672
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.00926923183084214,0.00663939687626736,"3. County, no-income-tax states",3672
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.0141300104325516,0.00769377346171867,"3. County, no-income-tax states",3672
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.0157115896021121,0.011250778365883,"3. County, no-income-tax states",3672
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.00525455796399012,0.0130808166089688,"3. County, no-income-tax states",3672
+2024,"(b) state/local income or sales tax (SALT, rest)",0.0121646026560812,0.0141269976199258,"3. County, no-income-tax states",3672
+2013,(c) mortgage interest,-0.000722102729447562,0.0111421812478942,"3. County, no-income-tax states",3672
+2014,(c) mortgage interest,-0.00762229319322898,0.00885027965489666,"3. County, no-income-tax states",3672
+2015,(c) mortgage interest,-0.0013870555190782,0.00773848315582974,"3. County, no-income-tax states",3672
+2016,(c) mortgage interest,0.00277064910828447,0.00519559528361734,"3. County, no-income-tax states",3672
+2018,(c) mortgage interest,0.00621698402717264,0.00281844672018339,"3. County, no-income-tax states",3672
+2019,(c) mortgage interest,0.0101983926276877,0.00403096643840073,"3. County, no-income-tax states",3672
+2020,(c) mortgage interest,0.00965559815635259,0.0058167983690102,"3. County, no-income-tax states",3672
+2021,(c) mortgage interest,0.0133843099942421,0.00851448172276337,"3. County, no-income-tax states",3672
+2022,(c) mortgage interest,0.015431546154236,0.0108301060190433,"3. County, no-income-tax states",3672
+2023,(c) mortgage interest,0.00453516339662684,0.0116152047698052,"3. County, no-income-tax states",3672
+2024,(c) mortgage interest,-0.00352257414099836,0.0112892757459394,"3. County, no-income-tax states",3672
+2017,"(a) property tax (SALT, real-estate part)",0,0,"3. County, no-income-tax states",3672
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"3. County, no-income-tax states",3672
+2017,(c) mortgage interest,0,0,"3. County, no-income-tax states",3672
+2013,"(a) property tax (SALT, real-estate part)",-0.0399700014724901,0.0164938412025097,"4. County, no-income-tax states, + 2012 price level x year",3672
+2014,"(a) property tax (SALT, real-estate part)",-0.0209507328513582,0.0140063084350989,"4. County, no-income-tax states, + 2012 price level x year",3672
+2015,"(a) property tax (SALT, real-estate part)",-0.0178196805983197,0.0103942994881994,"4. County, no-income-tax states, + 2012 price level x year",3672
+2016,"(a) property tax (SALT, real-estate part)",-0.00797415837425148,0.00594766844049148,"4. County, no-income-tax states, + 2012 price level x year",3672
+2018,"(a) property tax (SALT, real-estate part)",0.00135757403675842,0.00427061598188266,"4. County, no-income-tax states, + 2012 price level x year",3672
+2019,"(a) property tax (SALT, real-estate part)",-0.00953541517213523,0.00568245880976454,"4. County, no-income-tax states, + 2012 price level x year",3672
+2020,"(a) property tax (SALT, real-estate part)",-0.00751137992921921,0.00681252403400826,"4. County, no-income-tax states, + 2012 price level x year",3672
+2021,"(a) property tax (SALT, real-estate part)",-0.000721529585689759,0.00905961895627365,"4. County, no-income-tax states, + 2012 price level x year",3672
+2022,"(a) property tax (SALT, real-estate part)",0.0106300919554909,0.0122717669374044,"4. County, no-income-tax states, + 2012 price level x year",3672
+2023,"(a) property tax (SALT, real-estate part)",0.000449513238226569,0.0138396386145386,"4. County, no-income-tax states, + 2012 price level x year",3672
+2024,"(a) property tax (SALT, real-estate part)",-0.0127150237344881,0.0149014325708795,"4. County, no-income-tax states, + 2012 price level x year",3672
+2013,"(b) state/local income or sales tax (SALT, rest)",0.00901528126534219,0.0206409756938247,"4. County, no-income-tax states, + 2012 price level x year",3672
+2014,"(b) state/local income or sales tax (SALT, rest)",0.00291801062852395,0.0166696872113782,"4. County, no-income-tax states, + 2012 price level x year",3672
+2015,"(b) state/local income or sales tax (SALT, rest)",0.0127270671914959,0.0118754376512597,"4. County, no-income-tax states, + 2012 price level x year",3672
+2016,"(b) state/local income or sales tax (SALT, rest)",0.0103417031410692,0.00667988699503492,"4. County, no-income-tax states, + 2012 price level x year",3672
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.00923114028938418,0.00400468299530382,"4. County, no-income-tax states, + 2012 price level x year",3672
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.00671104065943303,0.00662229454714587,"4. County, no-income-tax states, + 2012 price level x year",3672
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.0025148311233538,0.00805928273090815,"4. County, no-income-tax states, + 2012 price level x year",3672
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.0017443518563736,0.0119767429428917,"4. County, no-income-tax states, + 2012 price level x year",3672
+2022,"(b) state/local income or sales tax (SALT, rest)",-2.84812554736426e-05,0.0157075014531869,"4. County, no-income-tax states, + 2012 price level x year",3672
+2023,"(b) state/local income or sales tax (SALT, rest)",0.00920714503817756,0.0170007047822035,"4. County, no-income-tax states, + 2012 price level x year",3672
+2024,"(b) state/local income or sales tax (SALT, rest)",0.0238754329412215,0.0179810017876882,"4. County, no-income-tax states, + 2012 price level x year",3672
+2013,(c) mortgage interest,-0.00741703554085596,0.0131574491038982,"4. County, no-income-tax states, + 2012 price level x year",3672
+2014,(c) mortgage interest,-0.0122560272394987,0.0113850612437352,"4. County, no-income-tax states, + 2012 price level x year",3672
+2015,(c) mortgage interest,-0.00383684067872181,0.00997987323495637,"4. County, no-income-tax states, + 2012 price level x year",3672
+2016,(c) mortgage interest,0.00356916208369539,0.00589423309644255,"4. County, no-income-tax states, + 2012 price level x year",3672
+2018,(c) mortgage interest,0.00666140085516316,0.0029104808088395,"4. County, no-income-tax states, + 2012 price level x year",3672
+2019,(c) mortgage interest,0.0124548641400534,0.00398933972652428,"4. County, no-income-tax states, + 2012 price level x year",3672
+2020,(c) mortgage interest,0.0140861042642393,0.00535677230405851,"4. County, no-income-tax states, + 2012 price level x year",3672
+2021,(c) mortgage interest,0.0215086038210974,0.00727442226356023,"4. County, no-income-tax states, + 2012 price level x year",3672
+2022,(c) mortgage interest,0.0257187811480666,0.00925268106339642,"4. County, no-income-tax states, + 2012 price level x year",3672
+2023,(c) mortgage interest,0.0140212253370311,0.0106087149988322,"4. County, no-income-tax states, + 2012 price level x year",3672
+2024,(c) mortgage interest,0.00415907036807173,0.0111360147287094,"4. County, no-income-tax states, + 2012 price level x year",3672
+2017,"(a) property tax (SALT, real-estate part)",0,0,"4. County, no-income-tax states, + 2012 price level x year",3672
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"4. County, no-income-tax states, + 2012 price level x year",3672
+2017,(c) mortgage interest,0,0,"4. County, no-income-tax states, + 2012 price level x year",3672
+2013,"(a) property tax (SALT, real-estate part)",0.00813300626427719,0.0179845925508607,"5. State, state + year FE",540
+2014,"(a) property tax (SALT, real-estate part)",0.0102720673878209,0.0129566394384177,"5. State, state + year FE",540
+2015,"(a) property tax (SALT, real-estate part)",0.00842060869200031,0.00893704983427665,"5. State, state + year FE",540
+2016,"(a) property tax (SALT, real-estate part)",0.00561183390571149,0.00394080416288618,"5. State, state + year FE",540
+2018,"(a) property tax (SALT, real-estate part)",-0.00705702219330606,0.00239052908731334,"5. State, state + year FE",540
+2019,"(a) property tax (SALT, real-estate part)",-0.0149610956604683,0.00462509765979709,"5. State, state + year FE",540
+2020,"(a) property tax (SALT, real-estate part)",-0.020313610070141,0.00967223988238887,"5. State, state + year FE",540
+2021,"(a) property tax (SALT, real-estate part)",-0.0279280530068989,0.0132366314534444,"5. State, state + year FE",540
+2022,"(a) property tax (SALT, real-estate part)",-0.0271156455914654,0.0166744331934905,"5. State, state + year FE",540
+2023,"(a) property tax (SALT, real-estate part)",-0.0210027177852445,0.0184680163383334,"5. State, state + year FE",540
+2024,"(a) property tax (SALT, real-estate part)",-0.0249031896128616,0.021357841530499,"5. State, state + year FE",540
+2013,"(b) state/local income or sales tax (SALT, rest)",-0.013755970910726,0.0100513737465293,"5. State, state + year FE",540
+2014,"(b) state/local income or sales tax (SALT, rest)",-0.00521861471935275,0.00652433557988494,"5. State, state + year FE",540
+2015,"(b) state/local income or sales tax (SALT, rest)",0.000503358544783504,0.00450541120054612,"5. State, state + year FE",540
+2016,"(b) state/local income or sales tax (SALT, rest)",0.000204333433134519,0.00273919249900698,"5. State, state + year FE",540
+2018,"(b) state/local income or sales tax (SALT, rest)",0.000470278013775605,0.00146485915604592,"5. State, state + year FE",540
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.00450428704658004,0.00201544287007178,"5. State, state + year FE",540
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.00892043654759688,0.00415047049388045,"5. State, state + year FE",540
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.0087506395222682,0.00841809420317033,"5. State, state + year FE",540
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.0146449266545547,0.00952936186203746,"5. State, state + year FE",540
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.0184482033210875,0.00964840344346086,"5. State, state + year FE",540
+2024,"(b) state/local income or sales tax (SALT, rest)",-0.0189335506991944,0.0106656759119495,"5. State, state + year FE",540
+2013,(c) mortgage interest,0.0383593148182769,0.0379074511383934,"5. State, state + year FE",540
+2014,(c) mortgage interest,0.0181367930855301,0.0291111717573004,"5. State, state + year FE",540
+2015,(c) mortgage interest,-0.00195961617380248,0.0175491797058208,"5. State, state + year FE",540
+2016,(c) mortgage interest,-0.00398173853836425,0.0085722058402989,"5. State, state + year FE",540
+2018,(c) mortgage interest,0.00474734654401853,0.00572698816279375,"5. State, state + year FE",540
+2019,(c) mortgage interest,0.0232967504491069,0.00841189738052754,"5. State, state + year FE",540
+2020,(c) mortgage interest,0.0402778709403563,0.0149203809125902,"5. State, state + year FE",540
+2021,(c) mortgage interest,0.0495516387881494,0.0263268463321373,"5. State, state + year FE",540
+2022,(c) mortgage interest,0.0439265550421598,0.0330124569890833,"5. State, state + year FE",540
+2023,(c) mortgage interest,0.0472541417221406,0.0350354848116297,"5. State, state + year FE",540
+2024,(c) mortgage interest,0.0714849370852859,0.0370537266910313,"5. State, state + year FE",540
+2017,"(a) property tax (SALT, real-estate part)",0,0,"5. State, state + year FE",540
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"5. State, state + year FE",540
+2017,(c) mortgage interest,0,0,"5. State, state + year FE",540
+2013,"(a) property tax (SALT, real-estate part)",0.0133148371917369,0.0044691095807203,6. ZIP (uncensored),91068
+2014,"(a) property tax (SALT, real-estate part)",0.0133554591063124,0.00355140583191436,6. ZIP (uncensored),91068
+2015,"(a) property tax (SALT, real-estate part)",0.00468217954292056,0.00301416057140694,6. ZIP (uncensored),91068
+2016,"(a) property tax (SALT, real-estate part)",0.00469733792346458,0.00212954286991516,6. ZIP (uncensored),91068
+2018,"(a) property tax (SALT, real-estate part)",-0.00389390529891116,0.00190143252912064,6. ZIP (uncensored),91068
+2019,"(a) property tax (SALT, real-estate part)",-0.00921321789397686,0.00266416335441962,6. ZIP (uncensored),91068
+2020,"(a) property tax (SALT, real-estate part)",-0.0126541211608757,0.00337065954726769,6. ZIP (uncensored),91068
+2021,"(a) property tax (SALT, real-estate part)",-0.0113976962111438,0.00444690167304577,6. ZIP (uncensored),91068
+2022,"(a) property tax (SALT, real-estate part)",-0.0125748416321996,0.0053632836201838,6. ZIP (uncensored),91068
+2023,"(a) property tax (SALT, real-estate part)",-0.00990686962183264,0.00502839198353434,6. ZIP (uncensored),91068
+2024,"(a) property tax (SALT, real-estate part)",-0.00832720344939247,0.00524530688695153,6. ZIP (uncensored),91068
+2013,"(b) state/local income or sales tax (SALT, rest)",0.00427232545096013,0.0023887598789536,6. ZIP (uncensored),91068
+2014,"(b) state/local income or sales tax (SALT, rest)",0.000955240138589938,0.00180769002825907,6. ZIP (uncensored),91068
+2015,"(b) state/local income or sales tax (SALT, rest)",0.00186830830070823,0.00166859732005369,6. ZIP (uncensored),91068
+2016,"(b) state/local income or sales tax (SALT, rest)",0.000852739887231843,0.00104512686308786,6. ZIP (uncensored),91068
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.000837568177981942,0.00101148197370722,6. ZIP (uncensored),91068
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.00169020617623193,0.00123137072836577,6. ZIP (uncensored),91068
+2020,"(b) state/local income or sales tax (SALT, rest)",-0.00302466973067378,0.00146783195219658,6. ZIP (uncensored),91068
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.00763932406734876,0.0018706605125417,6. ZIP (uncensored),91068
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.00788692746559844,0.00269617743312533,6. ZIP (uncensored),91068
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.00905193432890596,0.00271650361071528,6. ZIP (uncensored),91068
+2024,"(b) state/local income or sales tax (SALT, rest)",-0.00962245830314243,0.00293278586189538,6. ZIP (uncensored),91068
+2013,(c) mortgage interest,0.00430580636049264,0.00334941169606006,6. ZIP (uncensored),91068
+2014,(c) mortgage interest,0.00563618179921055,0.00414389412146028,6. ZIP (uncensored),91068
+2015,(c) mortgage interest,0.0058791324179333,0.00279451123887806,6. ZIP (uncensored),91068
+2016,(c) mortgage interest,0.00111955191393948,0.00219812477029896,6. ZIP (uncensored),91068
+2018,(c) mortgage interest,-0.000135789472554689,0.0019473900164987,6. ZIP (uncensored),91068
+2019,(c) mortgage interest,-0.000926345105268051,0.0024701475382882,6. ZIP (uncensored),91068
+2020,(c) mortgage interest,-0.000931316696079651,0.00285525817668164,6. ZIP (uncensored),91068
+2021,(c) mortgage interest,0.00379352018146717,0.0032659802283133,6. ZIP (uncensored),91068
+2022,(c) mortgage interest,0.00660217599248412,0.00364531629702563,6. ZIP (uncensored),91068
+2023,(c) mortgage interest,0.00741767484406612,0.00329610104263068,6. ZIP (uncensored),91068
+2024,(c) mortgage interest,0.00451281520094181,0.00340247342327818,6. ZIP (uncensored),91068
+2017,"(a) property tax (SALT, real-estate part)",0,0,6. ZIP (uncensored),91068
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,6. ZIP (uncensored),91068
+2017,(c) mortgage interest,0,0,6. ZIP (uncensored),91068
+2013,"(a) property tax (SALT, real-estate part)",0.00584393743908945,0.00466231003842339,"7. ZIP (uncensored), + 2012 price level x year",91068
+2014,"(a) property tax (SALT, real-estate part)",0.00763192317779431,0.00356564765303445,"7. ZIP (uncensored), + 2012 price level x year",91068
+2015,"(a) property tax (SALT, real-estate part)",-0.00149409982708378,0.00385844801102327,"7. ZIP (uncensored), + 2012 price level x year",91068
+2016,"(a) property tax (SALT, real-estate part)",0.00138287095323828,0.00264258597369989,"7. ZIP (uncensored), + 2012 price level x year",91068
+2018,"(a) property tax (SALT, real-estate part)",-0.00629844869460347,0.00364835036594642,"7. ZIP (uncensored), + 2012 price level x year",91068
+2019,"(a) property tax (SALT, real-estate part)",-0.00690179577419772,0.00320369195384944,"7. ZIP (uncensored), + 2012 price level x year",91068
+2020,"(a) property tax (SALT, real-estate part)",-0.00679412783759803,0.00312943526676014,"7. ZIP (uncensored), + 2012 price level x year",91068
+2021,"(a) property tax (SALT, real-estate part)",-0.0035631341985161,0.00433971421424487,"7. ZIP (uncensored), + 2012 price level x year",91068
+2022,"(a) property tax (SALT, real-estate part)",-0.0035033975511904,0.00525304692805277,"7. ZIP (uncensored), + 2012 price level x year",91068
+2023,"(a) property tax (SALT, real-estate part)",0.000311313241406652,0.00508473789683038,"7. ZIP (uncensored), + 2012 price level x year",91068
+2024,"(a) property tax (SALT, real-estate part)",0.000283663621709607,0.00562615277424787,"7. ZIP (uncensored), + 2012 price level x year",91068
+2013,"(b) state/local income or sales tax (SALT, rest)",-0.00036625147087958,0.00233185489010489,"7. ZIP (uncensored), + 2012 price level x year",91068
+2014,"(b) state/local income or sales tax (SALT, rest)",-0.00259842308114954,0.00192241437295574,"7. ZIP (uncensored), + 2012 price level x year",91068
+2015,"(b) state/local income or sales tax (SALT, rest)",-0.00196645697483763,0.00169710732034597,"7. ZIP (uncensored), + 2012 price level x year",91068
+2016,"(b) state/local income or sales tax (SALT, rest)",-0.00120516618905343,0.00171559912067416,"7. ZIP (uncensored), + 2012 price level x year",91068
+2018,"(b) state/local income or sales tax (SALT, rest)",-0.002330515463062,0.00220358635890918,"7. ZIP (uncensored), + 2012 price level x year",91068
+2019,"(b) state/local income or sales tax (SALT, rest)",-0.000255076585898705,0.00178800746011055,"7. ZIP (uncensored), + 2012 price level x year",91068
+2020,"(b) state/local income or sales tax (SALT, rest)",0.000613717972475063,0.00166947886384914,"7. ZIP (uncensored), + 2012 price level x year",91068
+2021,"(b) state/local income or sales tax (SALT, rest)",-0.00277495434647029,0.00203140579712389,"7. ZIP (uncensored), + 2012 price level x year",91068
+2022,"(b) state/local income or sales tax (SALT, rest)",-0.00225459500831752,0.00277321071732104,"7. ZIP (uncensored), + 2012 price level x year",91068
+2023,"(b) state/local income or sales tax (SALT, rest)",-0.00270760783787478,0.00268266228832003,"7. ZIP (uncensored), + 2012 price level x year",91068
+2024,"(b) state/local income or sales tax (SALT, rest)",-0.00427609165448155,0.00279817976605957,"7. ZIP (uncensored), + 2012 price level x year",91068
+2013,(c) mortgage interest,0.00327757970331881,0.00338266861882849,"7. ZIP (uncensored), + 2012 price level x year",91068
+2014,(c) mortgage interest,0.00484844639787406,0.00419288822375496,"7. ZIP (uncensored), + 2012 price level x year",91068
+2015,(c) mortgage interest,0.00502908552925136,0.00267797791106195,"7. ZIP (uncensored), + 2012 price level x year",91068
+2016,(c) mortgage interest,0.000663378841625663,0.00236143460903042,"7. ZIP (uncensored), + 2012 price level x year",91068
+2018,(c) mortgage interest,-0.000466728944324712,0.00194743158788542,"7. ZIP (uncensored), + 2012 price level x year",91068
+2019,(c) mortgage interest,-0.000608221998518503,0.00252145474990549,"7. ZIP (uncensored), + 2012 price level x year",91068
+2020,(c) mortgage interest,-0.000124800540685671,0.00269837794690321,"7. ZIP (uncensored), + 2012 price level x year",91068
+2021,(c) mortgage interest,0.00487179800279552,0.00300830326477624,"7. ZIP (uncensored), + 2012 price level x year",91068
+2022,(c) mortgage interest,0.00785068700614492,0.00341406106480105,"7. ZIP (uncensored), + 2012 price level x year",91068
+2023,(c) mortgage interest,0.00882401254845248,0.00300317458631569,"7. ZIP (uncensored), + 2012 price level x year",91068
+2024,(c) mortgage interest,0.00569793658618475,0.00308526352510115,"7. ZIP (uncensored), + 2012 price level x year",91068
+2017,"(a) property tax (SALT, real-estate part)",0,0,"7. ZIP (uncensored), + 2012 price level x year",91068
+2017,"(b) state/local income or sales tax (SALT, rest)",0,0,"7. ZIP (uncensored), + 2012 price level x year",91068
+2017,(c) mortgage interest,0,0,"7. ZIP (uncensored), + 2012 price level x year",91068
