@@ -25,3 +25,16 @@ g <- ggplot(r, aes(y, coef, colour = spec)) + geom_hline(yintercept = 0, colour 
   labs(x = NULL, y = "log price per SD ZIP SALT exposure (vs 2017)", colour = NULL, title = "(c) Repeat-sales house prices and SALT exposure (ZIP, IRS SOI 2016)",
        subtitle = "parcel FE; 95% CI by county; exposure = SALT deduction above $10k per return, winsorised at p99") + theme_minimal(base_size = 9) + theme(legend.position = "bottom")
 ggsave(file.path(OUT, "figures/b8_repeat_sales_exposure.png"), g, width = 9, height = 4.8, dpi = 150)
+# Income control: ZIP share of 2016 returns with AGI >= $200k (SOI stub 6) and share $100-200k (stub 5), each x year
+con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+zi <- as.data.table(dbGetQuery(con, "SELECT lpad(zipcode::INT::VARCHAR, 5, '0') zip, sum(returns) FILTER (WHERE agi_stub = 6) / sum(returns) sh200,
+  sum(returns) FILTER (WHERE agi_stub = 5) / sum(returns) sh100 FROM returns_zipcode_agi WHERE year = 2016 GROUP BY 1")); dbDisconnect(con, shutdown = TRUE)
+tzi <- merge(fread(file.path(ROOT, "data/local_juris/salt_exposure_tract_zip2016.csv"), colClasses = c(tract = "character", zip = "character"))[, .(tract, zip)], zi, by = "zip")
+d <- merge(d, tzi[, .(tract, sh200, sh100)], by = "tract")
+d[, `:=`(i200 = (sh200 - mean(sh200)) / sd(sh200), i100 = (sh100 - mean(sh100)) / sd(sh100))]
+cat("corr(exposure, share AGI 200k+):", round(cor(unique(d[, .(tract, exz_z, sh200)])$exz_z, unique(d[, .(tract, exz_z, sh200)])$sh200), 3), "\n")
+m3 <- feols(lp ~ i(y, exz_z, ref = 2017) + i(y, i200, ref = 2017) + i(y, i100, ref = 2017) | clip + st^y, d, cluster = ~cty, lean = TRUE)
+r3 <- as.data.table(coeftable(m3), keep.rownames = "term")[, .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))]
+sink(file.path(OUT, "b8_repeat_sales_exposure.txt"), append = TRUE)
+cat("\n== State x year FE + income-share x year controls (share AGI >= 200k, share 100-200k, SD units)\n"); print(r3)
+sink()

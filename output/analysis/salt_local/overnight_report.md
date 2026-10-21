@@ -33,8 +33,10 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
 4. **(c) Values and assessment.**
    - **Prices:** in repeat sales (parcel fixed effects), prices in high-SALT ZIPs fall behind the rest of their state from
      2018: per SD of exposure −1.3% (2018), −2.2% (2019), −4.4% (2021), −5.6% (2024), after a flat 2012–16. The 2018–19
-     decline predates the pandemic. Comparing ZIPs within the same county, about half of the decline is a pre-existing
-     trend. County medians show −0.6 to −1.8% per SD from 2019.
+     decline predates the pandemic, but exposure is highly correlated with income (0.85). Controlling for ZIP income
+     shares × year, the SALT-specific part is ≈ 0 in 2018, −0.5% in 2019, −1.2% in 2020, and −2.5 to −2.8% in 2022–24
+     (SE 0.5–1.2). That is a decline that builds from 2020 rather than at the cap. Comparing ZIPs within the same county,
+     about half of the unconditional decline is a pre-existing trend.
    - **Assessment ratios:** assessments don't follow those relative declines, so assessment ratios (+1 to +4%) and
      effective rates (+2 to +3%) rise.
    - **Regressivity:** essentially unchanged.
@@ -132,7 +134,9 @@ from a general post-2017 increase in cross-border competition (remote work, outf
   parcels, parcel FE, ZIP exposure). With state × year FE: 2012–16 +0.9 to +1.4% (flat); 2018–24 −1.3, −2.2, −3.2, −4.4,
   −4.8, −4.9, −5.6% per SD (SE 0.2–0.7). With county × year FE (within-county ZIP variation): a downward pre-trend
   (+3.3% in 2012 → +1.1% in 2016), then −1.7 to −3.7%. That is about 1 pp below trend in 2018–21 and back on trend by
-  2023–24.
+  2023–24. **With ZIP income shares × year as controls** (corr 0.85 with exposure): 2014–16 ≈ 0, 2018 0.0, 2019 −0.5,
+  2020 −1.2, 2021 −1.7, 2022 −2.6, 2023 −2.8, 2024 −2.5% per SD (SE 0.5–1.2). The SALT-specific decline survives but emerges
+  only from 2020; the immediate 2018–19 drop is mostly an income gradient.
 - **Prices, county medians** (CoreLogic full sales): −0.6 to −1.8% per SD from 2019, pre flat.
 - **Assessment ratios** (log median AV/price): +0.4 to +4.0% per SD (weighted +0.3 to +1.9%).
 - **Effective rates:** about +2.8% of the mean by 2024.
