@@ -2148,3 +2148,7 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - Tract income: high −0.11 vs 0.07; low −0.23 vs −0.02.
   - So the school-district gap at the border comes from a dip on the low-tax side near the line, not from an advantage on the high-tax side. The high side near the border looks like its own interior.
   - Other tract characteristics are flat within the wide CIs.
+- **Border RD on covariates** (`salt_local/c15_border_rd.R`, figure `c15_border_rd.png`). rdrobust: local linear, triangular kernel, MSE-optimal h (10–20 mi), robust bias-corrected CIs, SE by county; tracts within 100 mi (44,524). Pair heterogeneity handled by demeaning by pair (A) or by pair dummies as covariates (B).
+  - Tax rate jump: +0.75 / +0.77 pp (≈ 0.9 SD), p < 0.001.
+  - No covariate is significant at 5%. Smallest robust p: test scores 0.09–0.12, SES 0.10–0.14, FRL 0.10–0.12, owner share 0.10–0.13, population 0.10–0.15. Holm-adjusted p = 1 for all 11.
+  - Point estimates are close to the c13 side means (SES +0.3 SD, FRL −0.33 SD, test scores +0.3 SD), but robust CIs span about ±0.35 SD. So the RD can rule out school-district jumps above ~0.6 SD, not ~0.3 SD.

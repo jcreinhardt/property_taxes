@@ -1,0 +1,63 @@
+Border RD at signed distance 0 (high-tax minus low-tax side). rdrobust local linear, triangular, MSE-optimal h,
+ robust bias-corrected 95% CI and p, SE clustered by county. Tracts within 100 mi: 44524 
+
+== A: pair-demeaned 
+                             variable    est   robust 95% CI     p p_holm
+                               <char>  <num>          <char> <num>  <num>
+ 1:            effective tax rate (%)  0.747  [0.456, 0.994] 0.000     NA
+ 2:   district test scores (SEDA, SD)  0.112 [-0.029, 0.264] 0.116      1
+ 3:               district SES (SEDA)  0.286 [-0.093, 0.648] 0.142      1
+ 4: district share free/reduced lunch -0.078 [-0.165, 0.020] 0.123      1
+ 5:   district log spending per pupil -0.017 [-0.099, 0.062] 0.654      1
+ 6:        tract log median HH income  0.050 [-0.117, 0.214] 0.567      1
+ 7:       tract log median home value -0.126 [-0.345, 0.072] 0.199      1
+ 8:                   tract share BA+ -0.017 [-0.106, 0.053] 0.515      1
+ 9:                 tract share white -0.005 [-0.095, 0.089] 0.950      1
+10:                 tract owner share  0.052 [-0.015, 0.122] 0.127      1
+11:           tract median year built  1.428 [-3.569, 6.615] 0.558      1
+12:              tract log population -0.087 [-0.247, 0.039] 0.154      1
+    est_SD  h_mi n_eff
+     <num> <num> <int>
+ 1:   0.90  16.8 17108
+ 2:   0.32  13.9 14907
+ 3:   0.31  13.5 14560
+ 4:  -0.34  12.9 14177
+ 5:  -0.05  15.5 16034
+ 6:   0.10  16.4 16769
+ 7:  -0.19  17.5 17426
+ 8:  -0.09  18.2 18081
+ 9:  -0.02  20.4 19573
+10:   0.23  13.2 14373
+11:   0.08  12.3 13654
+12:  -0.17  12.0 13551
+
+== B: pair dummies as covariates 
+                             variable    est   robust 95% CI     p p_holm
+                               <char>  <num>          <char> <num>  <num>
+ 1:            effective tax rate (%)  0.771  [0.475, 1.022] 0.000     NA
+ 2:   district test scores (SEDA, SD)  0.106 [-0.017, 0.225] 0.093      1
+ 3:               district SES (SEDA)  0.280 [-0.052, 0.586] 0.101      1
+ 4: district share free/reduced lunch -0.073 [-0.147, 0.013] 0.102      1
+ 5:   district log spending per pupil -0.028 [-0.107, 0.050] 0.482      1
+ 6:        tract log median HH income  0.053 [-0.113, 0.208] 0.564      1
+ 7:       tract log median home value -0.120 [-0.320, 0.050] 0.153      1
+ 8:                   tract share BA+ -0.028 [-0.122, 0.043] 0.345      1
+ 9:                 tract share white -0.005 [-0.082, 0.077] 0.954      1
+10:                 tract owner share  0.043 [-0.008, 0.100] 0.098      1
+11:           tract median year built  1.552 [-2.807, 5.780] 0.497      1
+12:              tract log population -0.087 [-0.229, 0.018] 0.095      1
+    est_SD  h_mi n_eff
+     <num> <num> <int>
+ 1:   0.93  14.5 15364
+ 2:   0.31  12.0 13493
+ 3:   0.30  11.3 12915
+ 4:  -0.32  11.4 12995
+ 5:  -0.08  10.9 12573
+ 6:   0.11  15.0 15726
+ 7:  -0.18  14.2 15009
+ 8:  -0.14  12.8 14086
+ 9:  -0.02  15.2 15887
+10:   0.19  11.3 12943
+11:   0.08  10.5 12198
+12:  -0.17   9.8 11693
+
