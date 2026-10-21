@@ -94,7 +94,10 @@ $5k or $10k); county or district + state × year FE.
   777 near-high):
   - Pre 2012–16: −0.5, −0.1, +0.2, −1.5, −0.6%.
   - Post 2018–23: −1.6, −1.7, −3.2, −3.1, −2.7, −3.4% (SE 1.1–1.4).
-  - Pooled −2.2% (1.0); RI p = 0.04; leave-one-pair-out −1.7 to −2.6%; similar at < 20 mi, weaker at < 5 mi.
+  - Pooled −2.2% (1.0); RI p = 0.04; leave-one-pair-out −1.7 to −2.6%; leave-one-state-out −1.4 to −2.9% (not driven
+    by the levy-cap states NJ/NY/IL); similar at < 20 mi, weaker at < 5 mi.
+  - A county-line placebo within states is uninformative: county lines are dense, so estimates are imprecise
+    (SE 3–4%) and pre-trends are large.
   - 2SLS −6.3% per pp of gap (3.8).
 - **CoreLogic 1% constant parcels:** bills −2.8% (2018) to −4.4% (2025), via nominal rates (−1.9 to −3.5%), not AV
   (`c2_parcel_panel.txt`). The full-roll tract version points the same way but is noisy (`b3_tract_iv_ddd.txt`).
@@ -132,13 +135,22 @@ from a general post-2017 increase in cross-border competition (remote work, outf
     (noisy pre-period). (`b3_tract_iv_ddd_zipexposure.csv`)
   - FHFA with ZIP exposure: within 5 mi the low-minus-high gap opens from ≈ 0 to +1.2% by 2024, but at 10/20 mi it already
     existed before 2017. (`b5_hpi_zip_exposure.txt`, figure)
-  - **Suggestive, not established.**
+  - **Repeat sales** (28.9m sales, parcel FE, 30% of parcels): high-side near-border × ZIP exposure declines gradually,
+    0 before 2017 to −1.9/−2.0% per SD in 2023–24 (SE 1.3–1.6). The low-side placebo is flat. Pooled −0.2% (0.8) for 2018+,
+    plus −1.0% (0.7) from 2021. (`b6_repeat_sales.txt`, figure)
+  - **Suggestive, not established**: every version points toward capitalisation of the cross-border option in exposed
+    areas, none is significant on its own.
 
 ## 7. Migration
 
 Data Axle address move-outs (primary family changes; annualised by file cut-offs). 1% sample, then the full data (528m
 address pairs). County exposure: flat (pre −0.08 to −0.11 pp, post −0.04 to −0.11). Border DDD: pre −0.07 to +0.06, post
 −0.07 to −0.01 (SE 0.07–0.12). Interaction with exposure: none. (`d1_moveout_ddd.txt`, `d2_moveout_full.txt`)
+
+**Direction of cross-border moves** (Data Axle 1% families; 4,306 moves between opposite sides within 20 mi of the same
+border pair; `d3_family_moves.txt`). Overall, the share going high → low is flat. Where the high-tax side's state is also
+more SALT-exposed, that share rises from about 0.5 (2013–15) to about 0.63 (2016–21). Relative to other pairs the post-2017
+coefficients are +0.04 to +0.11 (SE 0.04–0.06), but the shift is already there in 2016, so it is not a clean break.
 
 ## 8. Map: outside options across school-district lines
 
@@ -162,11 +174,9 @@ own minus the cheapest adjacent district, and, for state-line districts, own min
   November. The extract and both Data Axle jobs ran on Bouchet instead (about 30 min), and the SOM jobs were cancelled.
   Rule saved: CPU-only jobs on SOM GPU partitions must be cancellable.
 - **Next steps:**
-  1. Repeat-sales or hedonic price tests near borders, so composition can't drive the capitalisation result: re-extract
-     sales with parcel IDs.
+  1. Repeat sales on all parcels, not 30% (needs the cluster: the laptop's memory limits it), to tighten the capitalisation test.
   2. Dose-response with the 2018 SOI "limited SALT" amounts (actual binding) by ZIP.
-  3. Data Axle in-migration by origin (did movers into low-side border tracts come from the high side?) using the
-     family-level sample.
+  3. Scale up the cross-border move-direction test to the full Data Axle (the 1% family sample has ~480 such moves a year).
   4. Synthetic placebo borders (county lines within states) for the district DDD.
   5. Separate the school-district result by state school-finance regime (states that cap levies, e.g. NJ 2% cap, NY tax
      cap, IL PTELL), since levy caps could produce the high-side slowdown independently of SALT.

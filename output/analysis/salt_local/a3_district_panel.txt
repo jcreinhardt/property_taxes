@@ -258,3 +258,15 @@ pooled post (nx = near x exposure both sides; nhx = extra on the high side):
 1:  nh:post -0.0215 0.0102
 2:  post:nx  0.0147 0.0072
 3: post:nhx -0.0090 0.0062
+
+== Leave-one-state-out (pooled near x high x post): range -0.0286 -0.0138 
+   drop_state         est         se
+       <char>       <num>      <num>
+1:         PA -0.02856015 0.01218000
+2:         NJ -0.02819525 0.01165233
+3:         IN -0.02711497 0.01071103
+4:         IL -0.02595708 0.01104796
+5:         WA -0.01933110 0.01023834
+6:         LA -0.01911958 0.01032035
+7:         TX -0.01585679 0.01022967
+8:         OK -0.01381142 0.01040262

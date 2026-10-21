@@ -1,0 +1,39 @@
+Data Axle 1% family moves: 378331 matched to border tracts; cross-border (opposite sides, both < 20 mi of the same pair): 4306 
+
+Share of cross-border moves going high -> low side, by year and pair SALT contrast (1 = high-tax side's state more exposed):
+Key: <y>
+       y share_hl_0 share_hl_1 moves_0 moves_1
+   <int>      <num>      <num>   <int>   <int>
+1:  2013      0.443      0.545     185     165
+2:  2014      0.461      0.542     204     227
+3:  2015      0.424      0.479     217     219
+4:  2016      0.381      0.638     260     276
+5:  2017      0.393      0.622     214     217
+6:  2018      0.345      0.630     307     300
+7:  2019      0.356      0.625     194     216
+8:  2020      0.394      0.643     259     230
+9:  2021      0.320      0.648     309     307
+
+Pair FE, year effects (ref 2017), weighted by moves:
+      term    est    se
+    <char>  <num> <num>
+1: y::2013 -0.001 0.036
+2: y::2014 -0.003 0.027
+3: y::2015 -0.046 0.025
+4: y::2016  0.007 0.027
+5: y::2018 -0.009 0.023
+6: y::2019 -0.024 0.028
+7: y::2020  0.011 0.030
+8: y::2021 -0.017 0.028
+
+Difference for pairs where the high side is the more SALT-exposed state (pair + year FE):
+                    term    est    se
+                  <char>  <num> <num>
+1: y::2013:salt_contrast -0.090 0.073
+2: y::2014:salt_contrast -0.140 0.045
+3: y::2015:salt_contrast -0.137 0.051
+4: y::2016:salt_contrast  0.039 0.054
+5: y::2018:salt_contrast  0.078 0.046
+6: y::2019:salt_contrast  0.070 0.051
+7: y::2020:salt_contrast  0.039 0.057
+8: y::2021:salt_contrast  0.108 0.044

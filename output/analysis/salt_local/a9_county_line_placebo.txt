@@ -1,0 +1,14 @@
+County-line placebo (within-state county pairs; tracts >= 20 mi from a state border). Districts: 2679 | near-high: 1391 | county pairs: 579 
+       term     est     se
+ y::2012:nh  0.0297 0.0445
+ y::2013:nh  0.0315 0.0433
+ y::2014:nh  0.0508 0.0437
+ y::2015:nh  0.0270 0.0495
+ y::2016:nh  0.0132 0.0317
+ y::2018:nh  0.0083 0.0198
+ y::2019:nh  0.0177 0.0319
+ y::2020:nh -0.0092 0.0273
+ y::2021:nh -0.0111 0.0292
+ y::2022:nh -0.0054 0.0383
+ y::2023:nh -0.0315 0.0356
+pooled near x high x post: -0.0305 ( 0.0361 )

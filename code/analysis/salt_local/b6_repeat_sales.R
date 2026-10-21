@@ -31,3 +31,10 @@ g <- ggplot(r, aes(y, coef, colour = which)) + geom_hline(yintercept = 0, colour
   title = "Repeat-sales prices near state borders", subtitle = "parcel + pair x side x year + pair x distance x year FE; exposure terms per SD of ZIP SALT exposure; 95% CI by county") +
   theme_minimal(base_size = 9) + theme(legend.position = "bottom")
 ggsave(file.path(OUT, "figures/b6_repeat_sales.png"), g, width = 9, height = 4.8, dpi = 150)
+# Pooled: post (2018+) and late (2021+) interactions
+d[, `:=`(post = as.integer(y >= 2018), late = as.integer(y >= 2021))]
+mp <- feols(lp ~ nh:post + nhx:post + nlx:post + nhx:late + nlx:late + i(y, exz_z, ref = 2017) | clip + pair^high^y + pair^dbin^y, d, cluster = ~cty)
+sink(file.path(OUT, "b6_repeat_sales.txt"), append = TRUE)
+cat("\nPooled (post = 2018+, late = additional 2021+):\n")
+print(as.data.table(coeftable(mp), keep.rownames = "term")[grepl("post|late", term), .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))])
+sink()
