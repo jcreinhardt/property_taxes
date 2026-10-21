@@ -20,7 +20,9 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
    - **Exposure designs:** in large, SALT-exposed jurisdictions, property-tax growth that had outpaced the rest of the
      state flattens after the cap, by about 0.3–0.7% a year per SD of exposure (Census of Governments and F-33 district
      finance, weighted; robust to an IRS-based or a property-tax-based exposure measure). Unweighted, across small
-     jurisdictions, there is no clear break.
+     jurisdictions, there is no clear break. **But exposure is strongly correlated with income (0.75).** Controlling for
+     the county's high-income share, the school-district slowdown loads on income rather than SALT exposure. Only the
+     county-government slowdown stays exposure-specific (−0.76%/yr per SD, SE 0.40).
    - **Border design:** school districts with a cheaper district across a nearby state line lost **2.2% (SE 1.0)** of
      property-tax revenue relative after 2017, rising to about 3% by 2020–23. Pre-trends are flat, the
      randomisation-inference p is 0.04, and dropping any single border pair leaves it between −1.7% and −2.6%. The margin

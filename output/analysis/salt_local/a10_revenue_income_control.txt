@@ -1,0 +1,20 @@
+Trend break (FY2019+), weighted by returns; exposure and income share in SD units
+      sample income_control         term     est     se
+      school          FALSE      ex_z:tt  0.0013 0.0004
+      school          FALSE    ex_z:post  0.0051 0.0046
+      school          FALSE ex_z:tt:post -0.0030 0.0010
+      school           TRUE      ex_z:tt -0.0033 0.0008
+      school           TRUE    ex_z:post -0.0078 0.0075
+      school           TRUE       tt:i_z  0.0067 0.0010
+      school           TRUE     post:i_z  0.0189 0.0070
+      school           TRUE ex_z:tt:post  0.0010 0.0020
+      school           TRUE  tt:post:i_z -0.0058 0.0024
+ county_govt          FALSE      ex_z:tt  0.0016 0.0009
+ county_govt          FALSE    ex_z:post  0.0224 0.0091
+ county_govt          FALSE ex_z:tt:post -0.0067 0.0027
+ county_govt           TRUE      ex_z:tt -0.0013 0.0018
+ county_govt           TRUE    ex_z:post  0.0319 0.0137
+ county_govt           TRUE       tt:i_z  0.0042 0.0021
+ county_govt           TRUE     post:i_z -0.0134 0.0099
+ county_govt           TRUE ex_z:tt:post -0.0076 0.0040
+ county_govt           TRUE  tt:post:i_z  0.0013 0.0031
