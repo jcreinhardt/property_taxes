@@ -1,0 +1,161 @@
+School-district finance panel (Census F-33 district files FY2012-2023); balanced districts: 11713 
+
+== (a) log property tax, district, unweighted | obs: 140324 
+   2012    2013    2014   2015   2016 2017  2018  2019   2020   2021  2022
+ -0.005 -0.0042 -0.0048 -0.004 -0.002    0 6e-04 4e-04 -3e-04 -2e-04 8e-04
+  2023
+ 6e-04
+   2012   2013   2014   2015   2016 2017  2018   2019   2020  2021  2022   2023
+ 0.0024 0.0019 0.0022 0.0018 0.0011    0 8e-04 0.0029 0.0034 0.003 0.003 0.0037
+
+== (a) log property tax per pupil | obs: 140324 
+  2012  2013    2014    2015   2016 2017   2018  2019   2020   2021   2022
+ 4e-04 3e-04 -0.0025 -0.0023 -6e-04    0 0.0017 2e-04 -0.001 -8e-04 0.0011
+   2023
+ 0.0011
+  2012   2013   2014   2015   2016 2017   2018   2019   2020   2021   2022
+ 0.003 0.0024 0.0024 0.0021 0.0014    0 0.0013 0.0031 0.0036 0.0028 0.0028
+   2023
+ 0.0034
+
+== log current spending per pupil | obs: 140323 
+   2012  2013   2014 2015   2016 2017   2018  2019 2020   2021   2022    2023
+ -8e-04 7e-04 -3e-04    0 0.0012    0 0.0017 8e-04    0 -2e-04 -5e-04 -0.0017
+  2012   2013   2014   2015  2016 2017   2018  2019   2020   2021   2022   2023
+ 0.002 0.0017 0.0014 0.0012 0.001    0 0.0013 9e-04 0.0012 0.0012 0.0013 0.0014
+
+== log state revenue per pupil | obs: 140324 
+   2012    2013    2014   2015   2016 2017   2018   2019    2020    2021   2022
+ -0.014 -0.0048 -0.0064 -0.004 0.0034    0 -8e-04 0.0044 -0.0042 -0.0017 -1e-04
+   2023
+ 0.0012
+   2012   2013   2014   2015   2016 2017   2018   2019   2020   2021   2022
+ 0.0049 0.0034 0.0031 0.0023 0.0021    0 0.0015 0.0027 0.0023 0.0034 0.0044
+   2023
+ 0.0042
+
+== (a) log property tax, district, enrollment-weighted | obs: 140324 
+    2012    2013    2014    2015    2016 2017    2018  2019   2020    2021
+ -0.0111 -0.0079 -0.0093 -0.0074 -0.0041    0 -0.0015 2e-04 -4e-04 -0.0025
+   2022    2023
+ -0.005 -0.0032
+  2012   2013   2014   2015   2016 2017  2018   2019   2020   2021   2022
+ 0.003 0.0026 0.0028 0.0024 0.0012    0 0.002 0.0035 0.0051 0.0047 0.0046
+   2023
+ 0.0047
+
+== (b) within-county SD of log property tax per pupil | obs: 16260 
+   2012   2013  2014   2015   2016 2017    2018   2019   2020   2021   2022
+ 0.0034 0.0013 4e-04 0.0017 -5e-04    0 -0.0022 0.0043 0.0052 0.0065 0.0021
+   2023
+ 0.0024
+   2012   2013   2014   2015   2016 2017   2018  2019   2020   2021   2022
+ 0.0027 0.0024 0.0024 0.0025 0.0023    0 0.0018 0.004 0.0051 0.0051 0.0046
+   2023
+ 0.0057
+
+== Within-state dispersion of log property tax per pupil across districts, national mean of state SDs by year
+        y mean_sd mean_p90p10
+    <int>   <num>       <num>
+ 1:  2012   0.612       1.393
+ 2:  2013   0.608       1.396
+ 3:  2014   0.606       1.400
+ 4:  2015   0.611       1.397
+ 5:  2016   0.613       1.394
+ 6:  2017   0.600       1.390
+ 7:  2018   0.616       1.409
+ 8:  2019   0.628       1.419
+ 9:  2020   0.628       1.432
+10:  2021   0.645       1.440
+11:  2022   0.648       1.454
+12:  2023   0.649       1.460
+
+== District border DDD (districts: 6813 | near-high: 779 )
+                              spec                 term     est     se
+              DDD near x high: lpt           y::2012:nh -0.0047 0.0162
+              DDD near x high: lpt           y::2013:nh -0.0004 0.0145
+              DDD near x high: lpt           y::2014:nh  0.0019 0.0128
+              DDD near x high: lpt           y::2015:nh -0.0148 0.0119
+              DDD near x high: lpt           y::2016:nh -0.0062 0.0108
+              DDD near x high: lpt           y::2018:nh -0.0165 0.0105
+              DDD near x high: lpt           y::2019:nh -0.0174 0.0113
+              DDD near x high: lpt           y::2020:nh -0.0315 0.0122
+              DDD near x high: lpt           y::2021:nh -0.0303 0.0131
+              DDD near x high: lpt           y::2022:nh -0.0270 0.0132
+              DDD near x high: lpt           y::2023:nh -0.0343 0.0137
+   DDD near x high x exposure: lpt y::2012:I(nh * ex_z)  0.0026 0.0032
+   DDD near x high x exposure: lpt y::2013:I(nh * ex_z)  0.0014 0.0030
+   DDD near x high x exposure: lpt y::2014:I(nh * ex_z)  0.0009 0.0022
+   DDD near x high x exposure: lpt y::2015:I(nh * ex_z)  0.0025 0.0020
+   DDD near x high x exposure: lpt y::2016:I(nh * ex_z)  0.0024 0.0018
+   DDD near x high x exposure: lpt y::2018:I(nh * ex_z)  0.0027 0.0016
+   DDD near x high x exposure: lpt y::2019:I(nh * ex_z)  0.0033 0.0020
+   DDD near x high x exposure: lpt y::2020:I(nh * ex_z)  0.0032 0.0021
+   DDD near x high x exposure: lpt y::2021:I(nh * ex_z)  0.0052 0.0023
+   DDD near x high x exposure: lpt y::2022:I(nh * ex_z)  0.0055 0.0026
+   DDD near x high x exposure: lpt y::2023:I(nh * ex_z)  0.0045 0.0026
+            DDD near x high: lptpp           y::2012:nh -0.0165 0.0164
+            DDD near x high: lptpp           y::2013:nh -0.0133 0.0147
+            DDD near x high: lptpp           y::2014:nh -0.0093 0.0133
+            DDD near x high: lptpp           y::2015:nh -0.0211 0.0126
+            DDD near x high: lptpp           y::2016:nh -0.0142 0.0115
+            DDD near x high: lptpp           y::2018:nh -0.0125 0.0110
+            DDD near x high: lptpp           y::2019:nh -0.0148 0.0118
+            DDD near x high: lptpp           y::2020:nh -0.0290 0.0130
+            DDD near x high: lptpp           y::2021:nh -0.0228 0.0139
+            DDD near x high: lptpp           y::2022:nh -0.0205 0.0144
+            DDD near x high: lptpp           y::2023:nh -0.0288 0.0150
+ DDD near x high x exposure: lptpp y::2012:I(nh * ex_z)  0.0067 0.0039
+ DDD near x high x exposure: lptpp y::2013:I(nh * ex_z)  0.0061 0.0031
+ DDD near x high x exposure: lptpp y::2014:I(nh * ex_z)  0.0054 0.0027
+ DDD near x high x exposure: lptpp y::2015:I(nh * ex_z)  0.0059 0.0024
+ DDD near x high x exposure: lptpp y::2016:I(nh * ex_z)  0.0033 0.0022
+ DDD near x high x exposure: lptpp y::2018:I(nh * ex_z)  0.0024 0.0021
+ DDD near x high x exposure: lptpp y::2019:I(nh * ex_z)  0.0029 0.0023
+ DDD near x high x exposure: lptpp y::2020:I(nh * ex_z)  0.0031 0.0023
+ DDD near x high x exposure: lptpp y::2021:I(nh * ex_z)  0.0044 0.0024
+ DDD near x high x exposure: lptpp y::2022:I(nh * ex_z)  0.0043 0.0025
+ DDD near x high x exposure: lptpp y::2023:I(nh * ex_z)  0.0034 0.0026
+
+== Robustness: district border DDD on log property tax by near cutoff and exposure split
+       cutoff        sample n_nh   2012   2013   2014   2015   2016 2017   2018
+ near < 10 mi           all  777 -0.005 -0.001  0.002 -0.015 -0.006    0 -0.016
+ near < 10 mi high exposure  458 -0.009 -0.012  0.008 -0.012  0.000    0 -0.004
+ near < 10 mi  low exposure  322 -0.008  0.005 -0.002 -0.022 -0.018    0 -0.030
+ near < 20 mi           all 1418  0.007  0.011  0.013 -0.010  0.001    0 -0.003
+ near < 20 mi high exposure  822  0.012  0.011  0.027 -0.011  0.003    0  0.000
+ near < 20 mi  low exposure  602  0.000  0.014  0.007 -0.010  0.000    0  0.000
+  near < 5 mi           all  404  0.017  0.011  0.017 -0.003  0.002    0  0.006
+  near < 5 mi high exposure  242 -0.010 -0.020 -0.006 -0.018 -0.007    0  0.002
+  near < 5 mi  low exposure  164  0.053  0.049  0.050  0.017  0.012    0  0.012
+   2019   2020   2021   2022   2023
+ -0.017 -0.032 -0.031 -0.027 -0.034
+ -0.015 -0.023 -0.017 -0.009 -0.021
+ -0.018 -0.039 -0.030 -0.040 -0.043
+ -0.015 -0.022 -0.032 -0.023 -0.021
+ -0.021 -0.028 -0.038 -0.024 -0.033
+ -0.010 -0.025 -0.032 -0.023 -0.013
+ -0.005 -0.007 -0.013 -0.011 -0.022
+ -0.005 -0.012  0.001 -0.002 -0.007
+  0.009  0.014  0.005  0.000 -0.015
+SE:
+       cutoff        sample  2012  2013  2014  2015  2016 2017  2018  2019
+ near < 10 mi           all 0.016 0.015 0.013 0.012 0.011    0 0.011 0.011
+ near < 10 mi high exposure 0.016 0.015 0.013 0.009 0.007    0 0.007 0.009
+ near < 10 mi  low exposure 0.028 0.026 0.024 0.023 0.021    0 0.021 0.022
+ near < 20 mi           all 0.013 0.010 0.010 0.008 0.006    0 0.006 0.009
+ near < 20 mi high exposure 0.017 0.016 0.016 0.010 0.007    0 0.007 0.011
+ near < 20 mi  low exposure 0.019 0.016 0.014 0.012 0.010    0 0.010 0.013
+  near < 5 mi           all 0.013 0.014 0.010 0.009 0.007    0 0.007 0.009
+  near < 5 mi high exposure 0.014 0.012 0.010 0.009 0.007    0 0.010 0.010
+  near < 5 mi  low exposure 0.026 0.027 0.020 0.016 0.011    0 0.011 0.013
+  2020  2021  2022  2023
+ 0.012 0.013 0.013 0.014
+ 0.011 0.012 0.014 0.014
+ 0.023 0.024 0.024 0.025
+ 0.010 0.012 0.011 0.013
+ 0.011 0.013 0.015 0.016
+ 0.016 0.019 0.016 0.018
+ 0.011 0.013 0.014 0.014
+ 0.012 0.013 0.015 0.015
+ 0.019 0.022 0.024 0.025

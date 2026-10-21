@@ -1,0 +1,132 @@
+County outside-option indicator: > 25% of population in near-border high-side tracts. Counties: 2715 | flagged: 267 
+corr(ex_z, nh_share): 0.075 
+      sample weighted                                   spec
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE event study: ex_z x border-high county
+      school    FALSE                  trend break (FY2019+)
+      school    FALSE                  trend break (FY2019+)
+      school    FALSE                  trend break (FY2019+)
+      school    FALSE                  trend break (FY2019+)
+      school    FALSE                  trend break (FY2019+)
+      school    FALSE                  trend break (FY2019+)
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE event study: ex_z x border-high county
+      school     TRUE                  trend break (FY2019+)
+      school     TRUE                  trend break (FY2019+)
+      school     TRUE                  trend break (FY2019+)
+      school     TRUE                  trend break (FY2019+)
+      school     TRUE                  trend break (FY2019+)
+      school     TRUE                  trend break (FY2019+)
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE event study: ex_z x border-high county
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt    FALSE                  trend break (FY2019+)
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE event study: ex_z x border-high county
+ county_govt     TRUE                  trend break (FY2019+)
+ county_govt     TRUE                  trend break (FY2019+)
+ county_govt     TRUE                  trend break (FY2019+)
+ county_govt     TRUE                  trend break (FY2019+)
+ county_govt     TRUE                  trend break (FY2019+)
+ county_govt     TRUE                  trend break (FY2019+)
+                     term     est     se n_counties n_nh
+ y::2012:I(ex_z * nh_any)  0.0047 0.0058       2345  206
+ y::2013:I(ex_z * nh_any)  0.0074 0.0052       2345  206
+ y::2014:I(ex_z * nh_any)  0.0058 0.0045       2345  206
+ y::2015:I(ex_z * nh_any)  0.0062 0.0036       2345  206
+ y::2016:I(ex_z * nh_any)  0.0030 0.0024       2345  206
+ y::2018:I(ex_z * nh_any)  0.0015 0.0040       2345  206
+ y::2019:I(ex_z * nh_any) -0.0018 0.0052       2345  206
+ y::2020:I(ex_z * nh_any) -0.0018 0.0062       2345  206
+ y::2021:I(ex_z * nh_any) -0.0013 0.0062       2345  206
+ y::2022:I(ex_z * nh_any)  0.0009 0.0064       2345  206
+                  ex_z:tt  0.0028 0.0008       2345  206
+                tt:nh_any -0.0026 0.0023       2345  206
+           ex_z:tt:nh_any -0.0011 0.0011       2345  206
+             ex_z:tt:post  0.0001 0.0010       2345  206
+           tt:nh_any:post  0.0000 0.0026       2345  206
+      ex_z:tt:nh_any:post  0.0005 0.0012       2345  206
+ y::2012:I(ex_z * nh_any)  0.0042 0.0046       2345  206
+ y::2013:I(ex_z * nh_any)  0.0035 0.0040       2345  206
+ y::2014:I(ex_z * nh_any)  0.0039 0.0036       2345  206
+ y::2015:I(ex_z * nh_any)  0.0034 0.0029       2345  206
+ y::2016:I(ex_z * nh_any)  0.0028 0.0013       2345  206
+ y::2018:I(ex_z * nh_any)  0.0063 0.0057       2345  206
+ y::2019:I(ex_z * nh_any)  0.0055 0.0064       2345  206
+ y::2020:I(ex_z * nh_any)  0.0054 0.0054       2345  206
+ y::2021:I(ex_z * nh_any)  0.0099 0.0070       2345  206
+ y::2022:I(ex_z * nh_any)  0.0108 0.0063       2345  206
+                  ex_z:tt  0.0014 0.0006       2345  206
+                tt:nh_any -0.0027 0.0031       2345  206
+           ex_z:tt:nh_any -0.0001 0.0008       2345  206
+             ex_z:tt:post -0.0023 0.0010       2345  206
+           tt:nh_any:post -0.0025 0.0038       2345  206
+      ex_z:tt:nh_any:post  0.0016 0.0011       2345  206
+ y::2012:I(ex_z * nh_any) -0.0033 0.0080       1073  113
+ y::2013:I(ex_z * nh_any) -0.0078 0.0081       1073  113
+ y::2014:I(ex_z * nh_any) -0.0068 0.0070       1073  113
+ y::2015:I(ex_z * nh_any) -0.0031 0.0063       1073  113
+ y::2016:I(ex_z * nh_any) -0.0062 0.0060       1073  113
+ y::2018:I(ex_z * nh_any) -0.0045 0.0051       1073  113
+ y::2019:I(ex_z * nh_any) -0.0180 0.0063       1073  113
+ y::2020:I(ex_z * nh_any) -0.0098 0.0116       1073  113
+ y::2021:I(ex_z * nh_any) -0.0173 0.0099       1073  113
+ y::2022:I(ex_z * nh_any) -0.0186 0.0106       1073  113
+                  ex_z:tt  0.0017 0.0011       1073  113
+                tt:nh_any -0.0051 0.0035       1073  113
+           ex_z:tt:nh_any  0.0002 0.0015       1073  113
+             ex_z:tt:post  0.0022 0.0018       1073  113
+           tt:nh_any:post  0.0079 0.0060       1073  113
+      ex_z:tt:nh_any:post -0.0033 0.0021       1073  113
+ y::2012:I(ex_z * nh_any)  0.0004 0.0080       1073  113
+ y::2013:I(ex_z * nh_any) -0.0022 0.0078       1073  113
+ y::2014:I(ex_z * nh_any) -0.0043 0.0066       1073  113
+ y::2015:I(ex_z * nh_any) -0.0013 0.0060       1073  113
+ y::2016:I(ex_z * nh_any) -0.0075 0.0057       1073  113
+ y::2018:I(ex_z * nh_any) -0.0043 0.0043       1073  113
+ y::2019:I(ex_z * nh_any) -0.0128 0.0050       1073  113
+ y::2020:I(ex_z * nh_any) -0.0086 0.0066       1073  113
+ y::2021:I(ex_z * nh_any) -0.0090 0.0047       1073  113
+ y::2022:I(ex_z * nh_any) -0.0071 0.0079       1073  113
+                  ex_z:tt  0.0025 0.0010       1073  113
+                tt:nh_any -0.0059 0.0051       1073  113
+           ex_z:tt:nh_any -0.0007 0.0016       1073  113
+             ex_z:tt:post -0.0020 0.0016       1073  113
+           tt:nh_any:post  0.0088 0.0053       1073  113
+      ex_z:tt:nh_any:post -0.0003 0.0018       1073  113
