@@ -1,0 +1,78 @@
+var,label,y,b,se
+l_in,"log AGI per return, in-movers",2012,-0.0156465181207169,0.0042820361269096
+l_in,"log AGI per return, in-movers",2013,0.0101529947797162,0.00492851814320957
+l_in,"log AGI per return, in-movers",2014,-0.00485151062651788,0.00358881455231144
+l_in,"log AGI per return, in-movers",2015,0.0112699652593726,0.00376227958386844
+l_in,"log AGI per return, in-movers",2016,0.0130956520863906,0.00316564593571721
+l_in,"log AGI per return, in-movers",2017,0,0
+l_in,"log AGI per return, in-movers",2018,0.00389845416129183,0.0031437448571827
+l_in,"log AGI per return, in-movers",2019,0.00977568440671316,0.00428244893080997
+l_in,"log AGI per return, in-movers",2020,0.0147522783905401,0.00715079777673498
+l_in,"log AGI per return, in-movers",2021,0.0224937170860521,0.00828342773045717
+l_in,"log AGI per return, in-movers",2022,0.0329801828062665,0.00715821519929614
+l_out,"log AGI per return, out-movers",2012,-0.0177458816533811,0.00447794782644394
+l_out,"log AGI per return, out-movers",2013,-0.000116328548994387,0.00318063537373184
+l_out,"log AGI per return, out-movers",2014,-0.00486189386665941,0.00293435893989979
+l_out,"log AGI per return, out-movers",2015,0.00284166902932501,0.0026862866766566
+l_out,"log AGI per return, out-movers",2016,0.00536921121671688,0.00272075732294314
+l_out,"log AGI per return, out-movers",2017,0,0
+l_out,"log AGI per return, out-movers",2018,0.00671690608741573,0.00198973384767548
+l_out,"log AGI per return, out-movers",2019,0.00791501411370648,0.00291330687860499
+l_out,"log AGI per return, out-movers",2020,0.0146573596913178,0.00306958105325852
+l_out,"log AGI per return, out-movers",2021,0.031338144232791,0.00408107866843065
+l_out,"log AGI per return, out-movers",2022,0.0422063829038151,0.00754792476099223
+l_st,"log AGI per return, stayers",2012,-0.0191842254045792,0.00403804450972241
+l_st,"log AGI per return, stayers",2013,-0.00429109852087614,0.00291736145432728
+l_st,"log AGI per return, stayers",2014,-0.0123816078905094,0.00351157954883465
+l_st,"log AGI per return, stayers",2015,-0.00537647360034912,0.00276271395383303
+l_st,"log AGI per return, stayers",2016,-0.00175836314215185,0.00156720924101787
+l_st,"log AGI per return, stayers",2017,0,0
+l_st,"log AGI per return, stayers",2018,0.00599484519160062,0.000807420024772643
+l_st,"log AGI per return, stayers",2019,0.00668451228436575,0.00140073251733913
+l_st,"log AGI per return, stayers",2020,0.00546830975896778,0.00173354182014538
+l_st,"log AGI per return, stayers",2021,0.00978530690048671,0.00345578502152038
+l_st,"log AGI per return, stayers",2022,0.0317678248004047,0.00654512348606073
+net_agi,net AGI flow (% of stayers' AGI),2012,0.101612784626597,0.0446257148574944
+net_agi,net AGI flow (% of stayers' AGI),2013,0.204506438046272,0.0821015989321405
+net_agi,net AGI flow (% of stayers' AGI),2014,0.0992571397435341,0.0333415053768364
+net_agi,net AGI flow (% of stayers' AGI),2015,0.138270358767505,0.0433283695992512
+net_agi,net AGI flow (% of stayers' AGI),2016,0.119178708783097,0.0397514800469011
+net_agi,net AGI flow (% of stayers' AGI),2017,0,0
+net_agi,net AGI flow (% of stayers' AGI),2018,0.0341115550506467,0.0418114487711129
+net_agi,net AGI flow (% of stayers' AGI),2019,0.0801692000546294,0.043048035407541
+net_agi,net AGI flow (% of stayers' AGI),2020,0.0028653111385006,0.114729993720974
+net_agi,net AGI flow (% of stayers' AGI),2021,-0.195072515932785,0.0873502224048565
+net_agi,net AGI flow (% of stayers' AGI),2022,-0.101387536648788,0.0511842202351534
+net_ret,"net migration, returns (% of stayers)",2012,0.133583267952808,0.0363533210478968
+net_ret,"net migration, returns (% of stayers)",2013,0.163360676756471,0.0344459528101986
+net_ret,"net migration, returns (% of stayers)",2014,0.168037611015047,0.0333178494269517
+net_ret,"net migration, returns (% of stayers)",2015,0.167695232403787,0.0324976933123677
+net_ret,"net migration, returns (% of stayers)",2016,0.0970876264782375,0.0265030069410582
+net_ret,"net migration, returns (% of stayers)",2017,0,0
+net_ret,"net migration, returns (% of stayers)",2018,0.0525559202370587,0.0225884336114581
+net_ret,"net migration, returns (% of stayers)",2019,0.0797052604098763,0.0219072150653613
+net_ret,"net migration, returns (% of stayers)",2020,-0.107984005310883,0.0389724968883453
+net_ret,"net migration, returns (% of stayers)",2021,-0.188412826653709,0.0336218626126597
+net_ret,"net migration, returns (% of stayers)",2022,-0.0364247398027836,0.0473383758775269
+rel_in,in-movers relative to stayers (log),2012,0.00357794309064716,0.00290084574326902
+rel_in,in-movers relative to stayers (log),2013,0.0144553044489936,0.0058564379118751
+rel_in,in-movers relative to stayers (log),2014,0.00765110680315982,0.00437463613952998
+rel_in,in-movers relative to stayers (log),2015,0.0164513799208279,0.0054609333033888
+rel_in,in-movers relative to stayers (log),2016,0.0148248765902354,0.0040869544117407
+rel_in,in-movers relative to stayers (log),2017,0,0
+rel_in,in-movers relative to stayers (log),2018,-0.00205193133485127,0.00329221379642043
+rel_in,in-movers relative to stayers (log),2019,0.00308929557987099,0.00358957361563812
+rel_in,in-movers relative to stayers (log),2020,0.00928209208909571,0.00599615625678697
+rel_in,in-movers relative to stayers (log),2021,0.012706533643089,0.00582903990042885
+rel_in,in-movers relative to stayers (log),2022,0.0012104814633856,0.00283854603076541
+rel_out,out-movers relative to stayers (log),2012,0.00132354088996397,0.00294571171389362
+rel_out,out-movers relative to stayers (log),2013,0.00420571232445813,0.0039499106177445
+rel_out,out-movers relative to stayers (log),2014,0.00758808837637775,0.00371980447157575
+rel_out,out-movers relative to stayers (log),2015,0.00820116459853345,0.00309203343143821
+rel_out,out-movers relative to stayers (log),2016,0.00711002882892809,0.00341836391485513
+rel_out,out-movers relative to stayers (log),2017,0,0
+rel_out,out-movers relative to stayers (log),2018,0.000730454642255071,0.00228977007121552
+rel_out,out-movers relative to stayers (log),2019,0.00123050182933966,0.00262968433356055
+rel_out,out-movers relative to stayers (log),2020,0.00918904993234891,0.00337818465847877
+rel_out,out-movers relative to stayers (log),2021,0.0215528373323031,0.00340836681677867
+rel_out,out-movers relative to stayers (log),2022,0.0104385581034098,0.00335379674581246

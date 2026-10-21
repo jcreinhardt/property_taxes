@@ -2195,3 +2195,9 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **Enrolment growth** (tract-weighted): +1.6 to +3.6% post. The district-unweighted RD (c20) shows nothing, so this is sensitive to weighting.
   - **ACS covariates** (income, home value, BA, owner share, population): smooth linear trends through 2017 that continue, with no break (5-year windows smooth everything). White share falls from 2020 (n.s.).
   - SEDA test scores, SES and FRL: pre-trends, too short post (2018 only).
+- **Movers' vs stayers' AGI by county exposure** (`salt_local/c23_soi_agi_in_out.R`; 3,054 counties; per SD, ref 2017).
+  - Stayers' AGI per return also rises post: +0.6% (2018), +0.7%, +0.5%, +1.0%, +3.2% (2022). In-movers: +0.4 to +3.3%. Out-movers: +0.7 to +4.2%.
+  - Relative to stayers: out-movers ≈ 0 in 2018–19 (+0.1%), then +0.9%, +2.2%, +1.0% (2020–22). In-movers relative to stayers: no post change; pre +1.5%.
+  - **So the "richer leavers" result is mostly income growth in exposed counties; selective exit appears only in 2020–21.**
+  - Net migration (returns, % of stayers): pre +0.10 to +0.17, 2018–19 +0.05/+0.08, 2020 −0.11, 2021 −0.19, 2022 −0.04. Relative to 2015–16, the post-cap change is ≈ −0.05 pp/yr in 2018–19 and −0.25 to −0.35 in 2020–21. Net AGI flow: 2021 −0.20% of stayers' AGI.
+  - A cumulative net loss of ≈ 0.3–0.5% of returns per SD by 2021 is smaller than the −1.0% (2020) dip in ZIP return counts, so most of that dip is filing composition, not migration.
