@@ -1,0 +1,145 @@
+Coverage (% of parcels in the 1% sample):
+ parcels coords state county place unsd all4 has_rate rate_and_all4
+  949383   94.5  94.5   94.5  55.3 87.2 50.9     32.7            19
+ rate_and_3_uninc
+             28.6
+
+Rate sources (cells):
+                   dropped implausible
+source              FALSE  TRUE
+  non-homestead fit  2307   584
+  pooled fit          597   166
+  <NA>              50784     0
+
+Cell rates kept (%):
+   1%   10%   50%   90%   99% 
+ 0.58  1.03  2.09 10.18 29.41 
+  1%  10%  50%  90%  99% 
+0.39 0.69 1.25 2.64 4.21 
+
+By state (all4 = in a county, an incorporated place and a unified district; rate = cell rate available; both):
+ st     n all4 has_rate both
+ CA 89273 57.5     32.6 24.1
+ TX 75578 67.4      8.3  7.0
+ FL 73790 48.4     16.4  7.5
+ PA 41227 38.7     46.7 15.1
+ IL 39972 48.4     42.4 27.0
+ OH 37708 61.5     36.1 26.1
+ NY 37348 35.5      4.2  3.2
+ NC 35460 50.1     47.9 33.4
+ GA 32595 39.1     33.8 18.5
+ MI 30242 46.6      0.6  0.6
+ VA 26807 32.4     63.6 23.3
+ NJ 25466 31.0     78.8 23.7
+ WA 22838 56.2     45.4 29.7
+ AZ 22771 54.5      9.7  5.4
+ TN 22363 51.0     57.8 35.9
+ IN 21643 62.4      4.5  4.1
+ MO 19281 61.1     33.7 28.8
+ MD 18727 23.3     37.3  8.7
+ MA 18635 32.8     84.9 31.1
+ SC 17962 34.7     22.3 10.6
+ CO 17950 67.3     49.0 43.0
+ MN 17880 75.3     27.4 26.8
+ WI 15801 68.8     39.5 35.5
+ LA 15368 29.6     33.1 13.4
+ AL 13301 59.3     41.9 28.6
+ KY 13094 50.8     32.2 23.9
+ OR 12609 64.5     45.0 36.5
+ OK 12148 76.2     39.8 39.1
+ IA 11008 75.6      9.9  9.1
+ AR 10322 52.3     18.3 16.9
+ CT 10256 20.5     81.9 16.4
+ NV  8901 59.6      0.0  0.0
+ MS  8238 45.5      6.8  5.2
+ UT  7935 86.9     60.2 56.4
+ KS  7618 86.9     30.7 30.0
+ HI  6150  0.0     96.4  0.0
+ NM  5922 69.6     39.7 36.7
+ NE  5819 69.5     45.1 38.9
+ ID  5621 63.1     15.9 15.2
+ NH  4856  9.7     50.8  7.7
+ WV  4630 46.3     12.3  4.3
+ ME  3661 21.4     34.6  8.7
+ MT  3387  3.8      5.9  0.0
+ DE  3169 25.4     31.3 11.8
+ RI  3100 38.5     81.5 37.1
+ VT  2508 13.5     12.1  5.2
+ SD  1958 55.5      0.0  0.0
+ WY  1863 64.3     23.6 20.8
+ ND  1651 62.4      0.0  0.0
+ AK  1631  0.0     36.8  0.0
+ DC  1342 99.0     99.3 98.3
+
+Variance decomposition (rate in % of AV; rate_mv in % of market value). nested = state, then county, then place, then
+ district; shapley = order-free average contribution. Residual = variation across tax areas within place x district.
+
+-- + unincorporated as county-level place | rate | N = 271632 | sd = 4.356 
+                              layer nested_pct nested_district_first_pct
+                              state       76.7                      76.7
+                             county       20.8                      20.8
+                              place        1.6                       0.3
+                    school district        0.8                       2.0
+ residual (within place x district)        0.1                       0.1
+ shapley_pct
+        19.2
+        26.4
+        27.1
+        27.2
+         0.1
+
+-- + unincorporated as county-level place | rate_mv | N = 271632 | sd = 0.757 
+                              layer nested_pct nested_district_first_pct
+                              state       67.1                      67.1
+                             county       21.0                      21.0
+                              place        6.9                       0.7
+                    school district        4.7                      10.9
+ residual (within place x district)        0.3                       0.3
+ shapley_pct
+        16.8
+        23.8
+        27.6
+        31.5
+         0.3
+
+-- all four layers | rate | N = 180228 | sd = 4.699 
+                              layer nested_pct nested_district_first_pct
+                              state       84.6                      84.6
+                             county       13.5                      13.5
+                              place        1.7                       0.3
+                    school district        0.1                       1.5
+ residual (within place x district)        0.1                       0.1
+ shapley_pct
+        21.2
+        26.0
+        26.7
+        26.1
+         0.1
+
+-- all four layers | rate_mv | N = 180228 | sd = 0.733 
+                              layer nested_pct nested_district_first_pct
+                              state       68.9                      68.9
+                             county       23.1                      23.1
+                              place        7.6                       0.4
+                    school district        0.1                       7.3
+ residual (within place x district)        0.3                       0.3
+ shapley_pct
+        17.2
+        25.0
+        28.9
+        28.6
+         0.3
+
+-- all four, state-demeaned (within-state only) | rate_mv | N = 180228 | sd = 0.408 
+                              layer nested_pct nested_district_first_pct
+                              state        0.0                       0.0
+                             county       74.3                      74.3
+                              place       24.4                       1.3
+                    school district        0.3                      23.3
+ residual (within place x district)        1.0                       1.0
+ shapley_pct
+         0.0
+        24.8
+        37.6
+        36.5
+         1.0

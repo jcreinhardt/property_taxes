@@ -1,0 +1,26 @@
+"sample","outcome","N","sd","layer","nested_pct","nested_district_first_pct","shapley_pct"
+"all four layers","rate",180228,4.699,"state",84.6,84.6,21.2
+"all four layers","rate",180228,4.699,"county",13.5,13.5,26
+"all four layers","rate",180228,4.699,"place",1.7,0.3,26.7
+"all four layers","rate",180228,4.699,"school district",0.1,1.5,26.1
+"all four layers","rate",180228,4.699,"residual (within place x district)",0.1,0.1,0.1
+"all four layers","rate_mv",180228,0.733,"state",68.9,68.9,17.2
+"all four layers","rate_mv",180228,0.733,"county",23.1,23.1,25
+"all four layers","rate_mv",180228,0.733,"place",7.6,0.4,28.9
+"all four layers","rate_mv",180228,0.733,"school district",0.1,7.3,28.6
+"all four layers","rate_mv",180228,0.733,"residual (within place x district)",0.3,0.3,0.3
+"+ unincorporated as county-level place","rate",271632,4.356,"state",76.7,76.7,19.2
+"+ unincorporated as county-level place","rate",271632,4.356,"county",20.8,20.8,26.4
+"+ unincorporated as county-level place","rate",271632,4.356,"place",1.6,0.3,27.1
+"+ unincorporated as county-level place","rate",271632,4.356,"school district",0.8,2,27.2
+"+ unincorporated as county-level place","rate",271632,4.356,"residual (within place x district)",0.1,0.1,0.1
+"+ unincorporated as county-level place","rate_mv",271632,0.757,"state",67.1,67.1,16.8
+"+ unincorporated as county-level place","rate_mv",271632,0.757,"county",21,21,23.8
+"+ unincorporated as county-level place","rate_mv",271632,0.757,"place",6.9,0.7,27.6
+"+ unincorporated as county-level place","rate_mv",271632,0.757,"school district",4.7,10.9,31.5
+"+ unincorporated as county-level place","rate_mv",271632,0.757,"residual (within place x district)",0.3,0.3,0.3
+"all four, state-demeaned (within-state only)","rate_mv",180228,0.408,"state",0,0,0
+"all four, state-demeaned (within-state only)","rate_mv",180228,0.408,"county",74.3,74.3,24.8
+"all four, state-demeaned (within-state only)","rate_mv",180228,0.408,"place",24.4,1.3,37.6
+"all four, state-demeaned (within-state only)","rate_mv",180228,0.408,"school district",0.3,23.3,36.5
+"all four, state-demeaned (within-state only)","rate_mv",180228,0.408,"residual (within place x district)",1,1,1

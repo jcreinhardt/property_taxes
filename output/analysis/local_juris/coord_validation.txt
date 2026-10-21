@@ -1,0 +1,195 @@
+Points with coordinates: 897710 
+
+== County (point vs roll fips) ==
+                                 res      n   pct
+1                       other county   9598  1.07
+2 outside any county (water/off-map)    106  0.01
+3                        same county 888006 98.92
+   st  fips GEOID    n
+1  FL 12025 12086 9138
+2  VA 51153 51683   94
+3  VA 51059 51600   60
+4  VA 51199 51735   42
+5  VA 51059 51610   16
+6  VA 51515 51019   16
+7  MD 24005 24510    4
+8  TX 48157 48201    4
+9  TX 48201 48157    4
+10 TX 48439 48121    4
+11 GA 13135 13139    3
+12 LA 22045 22055    3
+
+== Incorporated place vs roll municipality_name ==
+                                        res      n  pct
+1                    in place; name differs  86039 11.5
+2                    in place; name matches 353379 47.2
+3 outside places; roll names a municipality 176934 23.6
+4      outside places; roll says county/twp 132281 17.7
+ st     n match_pct
+ DC  1329       0.0
+ IN 13504      24.7
+ IL 32521      37.5
+ VA  4875      40.4
+ KS  5230      51.1
+ KY  5660      56.0
+ CO  8044      58.1
+ DE   805      64.6
+ TN  8506      71.2
+ NY 10740      72.1
+ GA 12699      73.4
+ ND  1026      74.7
+ FL 34421      74.8
+ IA  6879      76.6
+ SC  5957      78.4
+ LA  4535      78.8
+ ID  1110      80.4
+ MS  2441      81.0
+ OR  3325      84.1
+ AL  7688      84.6
+ CA 22123      85.4
+ WA 12754      85.9
+ OK  9267      86.5
+ MT  1772      87.0
+ MO 11238      87.3
+ NM  3536      87.8
+ NE  2077      88.1
+ NC 17506      88.4
+ OH 22918      88.6
+ MN 13424      91.4
+ AR  5396      93.0
+ UT  6791      93.8
+ AZ 15151      94.1
+ WI 11023      94.6
+ WY   951      95.0
+ WV  2146      95.2
+ VT   360      95.8
+ NV  5300      97.2
+ MI 14081      97.4
+ NJ  9715      97.9
+ MD  2472      98.1
+ PA 15758      98.1
+ SD   798      98.5
+ TX 50938      98.7
+ CT  2104      99.4
+ ME   784      99.7
+ RI  1193      99.9
+ MA  6076     100.0
+ NH   471     100.0
+
+largest name mismatches:
+ st                         muni                       pname    n
+ CA                      TURLOCK                     Modesto  280
+ CA                      FONTANA            Rancho Cucamonga  254
+ CA                  VICTORVILLE                Apple Valley  222
+ DC                OLD CITY NO 2                  Washington  168
+ DC                OLD CITY NO 1                  Washington  167
+ DC                     PETWORTH                  Washington   69
+ DE            BALTIMORE HUNDRED                  Ocean View   24
+ DE          CEDAR CREEK HUNDRED                     Milford   23
+ DE DEWEY TO LEWES EAST OF CANAL                 Dewey Beach   22
+ IL                    LAKE VIEW                     Chicago 2248
+ IL                         LAKE                     Chicago 1200
+ IL                    JEFFERSON                     Chicago 1061
+ IN           INDIANPOLIS,CENTER Indianapolis city (balance)  463
+ IN                  CALUMET TWP                        Gary  314
+ IN                         CLAY                      Carmel  273
+ NY                   ST. ALBANS                    New York  108
+ NY        BELLEROSE-FLORAL PARK                    New York  101
+ NY             SOUTH OZONE PARK                    New York   84
+ OH                    MANS/MANS                   Mansfield  155
+ OH                       SCIOTO                 Chillicothe   96
+ OH                 FT MEIGS TWP                  Perrysburg   77
+
+== Unified school district vs roll school_district_name (points inside a UNSD with a roll name) ==
+overall match %: 87.3  n = 556560 
+ st     n match_pct
+ TX 70240      99.2
+ FL 63383     100.0
+ NY 35584      81.5
+ PA 34847      96.2
+ OH 31207      67.2
+ NC 28673      97.8
+ VA 23242      98.4
+ NJ 17608      94.3
+ MD 17229      85.7
+ WA 16638      79.1
+ GA 16627      99.4
+ MN 16614      92.2
+ MO 15522      77.3
+ CO 15382      97.0
+ AZ 12489      96.4
+ WI 12481      76.7
+ TN 11595      81.4
+ OK 11214      96.2
+ SC 10244      71.9
+ LA 10200       2.5
+ NV  8844     100.0
+ AR  8790      82.1
+ IA  7609      91.0
+ IL  7300      35.3
+ IN  6069      57.3
+ OR  6066      68.1
+ KS  5863      67.5
+ KY  5302      86.3
+ AL  5038      69.7
+ WV  4554      99.8
+ MS  3232      92.8
+ DE  3121      79.5
+ ID  2346      48.5
+ UT  2344      99.8
+ NM  1752      68.5
+ NE  1652      89.6
+ VT  1528      26.8
+ DC  1330      99.9
+ SD   941      99.9
+ ND   753      78.0
+ CA   497      99.8
+ WY   485      99.2
+ ME   107      35.5
+ MI    18     100.0
+
+largest name mismatches:
+ st                             sd
+ IL                   DISTRICT 203
+ IL  VALLEY VIEW COMM UNIT SD 365U
+ IN EVANSVILLE-VANDERBURGH SCH COR
+ IN          GARY COMM SCHOOL CORP
+ MO        SPRINGFIELD SCHOOL DIST
+ MO                     FT ZUMWALT
+ NY                 NYC DEPT OF ED
+ NY                  RONK-HOLBROOK
+ OH               SOUTHWESTERN CSD
+ OH                  NORTHWEST LSD
+ OR SALEM/KEIZER SD /SALEM TRANSIT
+ OR                   SCH NO CLACK
+ VT                     BENNINGTON
+ VT                        SWANTON
+ WA                       KIRKLAND
+ WA                   STATE SCHOOL
+                                           uname    n
+          Naperville Community Unit District 203  281
+ Valley View Community Unit School District 365U  242
+       Evansville-Vanderburgh School Corporation  562
+               Gary Community School Corporation  276
+               Springfield R-XII School District  653
+               Fort Zumwalt R-II School District  363
+           New York City Department Of Education 5151
+                  Sachem Central School District  234
+              South-Western City School District  395
+                 Northwest Local School District  284
+                Salem-Keizer School District 24J  487
+              North Clackamas School District 12  297
+             Southwest Vermont Supervisory Union   40
+            Franklin Northwest Supervisory Union   30
+                 Lake Washington School District  222
+                          Sequim School District  149
+
+== Distance to nearest incorporated-place boundary (50k random points) ==
+# A tibble: 5 × 2
+  within_m   pct
+     <dbl> <dbl>
+1       10  0.29
+2       25  1.2 
+3       50  3.03
+4      100  6.49
+5      250 16.5 

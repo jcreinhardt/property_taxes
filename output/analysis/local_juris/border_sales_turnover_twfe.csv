@@ -1,0 +1,73 @@
+y,coef,se,spec,panel
+2017,0,0,lower minus higher side (pair x year FE),full
+2013,0.0440643590953354,0.108207129967472,lower minus higher side (pair x year FE),full
+2014,0.096087070085738,0.0959850550107362,lower minus higher side (pair x year FE),full
+2015,0.0690280231835498,0.0928552585528189,lower minus higher side (pair x year FE),full
+2016,0.0411697104999228,0.069483631117383,lower minus higher side (pair x year FE),full
+2018,-0.00790386279136782,0.0943067642492343,lower minus higher side (pair x year FE),full
+2019,0.218912680899018,0.115139981458478,lower minus higher side (pair x year FE),full
+2020,0.150915496415725,0.139078672533052,lower minus higher side (pair x year FE),full
+2021,0.17813009215503,0.118352257747984,lower minus higher side (pair x year FE),full
+2022,0.200585925251123,0.11447692193204,lower minus higher side (pair x year FE),full
+2023,0.272434868609488,0.126074379828854,lower minus higher side (pair x year FE),full
+2024,0.29653240418578,0.156437187691435,lower minus higher side (pair x year FE),full
+2017,0,0,lower-tax side (side FE),full
+2013,-0.687793960041542,0.0895743617064487,lower-tax side (side FE),full
+2014,-0.542057391927651,0.0806865264274552,lower-tax side (side FE),full
+2015,-0.182998210338221,0.0698598178124587,lower-tax side (side FE),full
+2016,-0.114821966049814,0.0474333040821123,lower-tax side (side FE),full
+2018,0.052462335117347,0.0578969189180023,lower-tax side (side FE),full
+2019,0.348398565396221,0.09891798448408,lower-tax side (side FE),full
+2020,0.547554688081308,0.114572923291185,lower-tax side (side FE),full
+2021,0.928019696266328,0.105329045438073,lower-tax side (side FE),full
+2022,0.190164635134839,0.113464806249801,lower-tax side (side FE),full
+2023,-0.550326206031575,0.128977854093701,lower-tax side (side FE),full
+2024,-0.712679450279854,0.148822473561032,lower-tax side (side FE),full
+2017,0,0,higher-tax side (side FE),full
+2013,-0.731858319136899,0.0854978567708213,higher-tax side (side FE),full
+2014,-0.63814446201341,0.0716616373828798,higher-tax side (side FE),full
+2015,-0.252026233521793,0.067802970346987,higher-tax side (side FE),full
+2016,-0.155991676549759,0.0512302371356467,higher-tax side (side FE),full
+2018,0.0603661979086938,0.0671434478867234,higher-tax side (side FE),full
+2019,0.129485884497178,0.0725955043055677,higher-tax side (side FE),full
+2020,0.396639191665559,0.0783068818475622,higher-tax side (side FE),full
+2021,0.749889604111272,0.0797569009466914,higher-tax side (side FE),full
+2022,-0.0104212901163093,0.0911263632437499,higher-tax side (side FE),full
+2023,-0.822761074641091,0.102615615748841,higher-tax side (side FE),full
+2024,-1.00921185446565,0.105693060465887,higher-tax side (side FE),full
+2017,0,0,lower minus higher side (pair x year FE),balanced
+2013,-0.0143619134583451,0.139344077032593,lower minus higher side (pair x year FE),balanced
+2014,0.062778748930234,0.131645900136271,lower minus higher side (pair x year FE),balanced
+2015,0.0751742042648937,0.126174253539785,lower minus higher side (pair x year FE),balanced
+2016,0.0910291166144522,0.101215443164099,lower minus higher side (pair x year FE),balanced
+2018,0.0314391228186611,0.11760867653053,lower minus higher side (pair x year FE),balanced
+2019,0.204938671262265,0.160196076155216,lower minus higher side (pair x year FE),balanced
+2020,0.132928871351576,0.208288983509982,lower minus higher side (pair x year FE),balanced
+2021,-0.0420816359733678,0.157985057540133,lower minus higher side (pair x year FE),balanced
+2022,0.0823089936471605,0.153800335360949,lower minus higher side (pair x year FE),balanced
+2023,0.0706822943250012,0.169912086091056,lower minus higher side (pair x year FE),balanced
+2024,0.148893249598157,0.190522025199716,lower minus higher side (pair x year FE),balanced
+2017,0,0,lower-tax side (side FE),balanced
+2013,-0.82960348781211,0.114720112976349,lower-tax side (side FE),balanced
+2014,-0.665205587138765,0.0996231943533356,lower-tax side (side FE),balanced
+2015,-0.233476761100636,0.087181068514926,lower-tax side (side FE),balanced
+2016,-0.12526996287372,0.0665047200282133,lower-tax side (side FE),balanced
+2018,0.0833320401340497,0.0748562830137699,lower-tax side (side FE),balanced
+2019,0.323187891237228,0.143963447549705,lower-tax side (side FE),balanced
+2020,0.492434577603635,0.171199789797586,lower-tax side (side FE),balanced
+2021,0.794175482706136,0.142148563069551,lower-tax side (side FE),balanced
+2022,0.0910484818021852,0.155403201302556,lower-tax side (side FE),balanced
+2023,-0.763356439599328,0.184658788788911,lower-tax side (side FE),balanced
+2024,-0.858628194747736,0.183157628365845,lower-tax side (side FE),balanced
+2017,0,0,higher-tax side (side FE),balanced
+2013,-0.815241574353758,0.105144546435011,higher-tax side (side FE),balanced
+2014,-0.727984336068993,0.0952876505984893,higher-tax side (side FE),balanced
+2015,-0.308650965365523,0.0984794788038205,higher-tax side (side FE),balanced
+2016,-0.216299079488166,0.0703286929937362,higher-tax side (side FE),balanced
+2018,0.0518929173153944,0.08926858834947,higher-tax side (side FE),balanced
+2019,0.11824921997497,0.0931305202543237,higher-tax side (side FE),balanced
+2020,0.359505706252065,0.111724170869565,higher-tax side (side FE),balanced
+2021,0.836257118679509,0.107569226119985,higher-tax side (side FE),balanced
+2022,0.00873948815503042,0.130717901945924,higher-tax side (side FE),balanced
+2023,-0.834038733924323,0.143397174177572,higher-tax side (side FE),balanced
+2024,-1.00752144434589,0.134755487478251,higher-tax side (side FE),balanced

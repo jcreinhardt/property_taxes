@@ -1,0 +1,163 @@
+y,coef,se,spec,outcome,panel,n_pairs
+2017,0,0,lower minus higher side (pair x year FE),log revenue,full,60
+2013,0.0149286082870933,0.0241266765411756,lower minus higher side (pair x year FE),log revenue,full,60
+2014,0.00595615633049342,0.018191827911538,lower minus higher side (pair x year FE),log revenue,full,60
+2015,-0.00156733604477522,0.02266439630327,lower minus higher side (pair x year FE),log revenue,full,60
+2016,0.0146836941689304,0.0127607420833841,lower minus higher side (pair x year FE),log revenue,full,60
+2018,0.0163021483399915,0.0130317132465279,lower minus higher side (pair x year FE),log revenue,full,60
+2019,0.0140134906287002,0.0296600549816404,lower minus higher side (pair x year FE),log revenue,full,60
+2020,0.0234064553822137,0.0140119263274205,lower minus higher side (pair x year FE),log revenue,full,60
+2021,0.0288800156196253,0.0164256539425768,lower minus higher side (pair x year FE),log revenue,full,60
+2017,0,0,lower-tax side (side FE),log revenue,full,60
+2013,-0.110103376993123,0.0193720330087598,lower-tax side (side FE),log revenue,full,60
+2014,-0.0950721485656537,0.0152323634277371,lower-tax side (side FE),log revenue,full,60
+2015,-0.0680604029632808,0.0209423459818967,lower-tax side (side FE),log revenue,full,60
+2016,-0.0146497512690492,0.0111988439103451,lower-tax side (side FE),log revenue,full,60
+2018,0.0554370520023296,0.0113017770053275,lower-tax side (side FE),log revenue,full,60
+2019,0.0958778048962023,0.022194209430087,lower-tax side (side FE),log revenue,full,60
+2020,0.108401791166653,0.0110280554817759,lower-tax side (side FE),log revenue,full,60
+2021,0.15010741758707,0.0132946098981944,lower-tax side (side FE),log revenue,full,60
+2017,0,0,higher-tax side (side FE),log revenue,full,60
+2013,-0.125031985280213,0.0132877567762362,higher-tax side (side FE),log revenue,full,60
+2014,-0.101028304896143,0.00961888033964468,higher-tax side (side FE),log revenue,full,60
+2015,-0.066493066918502,0.00723828799251882,higher-tax side (side FE),log revenue,full,60
+2016,-0.0293334454379753,0.00569582133068041,higher-tax side (side FE),log revenue,full,60
+2018,0.0391349036623418,0.00663371195154686,higher-tax side (side FE),log revenue,full,60
+2019,0.0818643142675061,0.019642455446838,higher-tax side (side FE),log revenue,full,60
+2020,0.0849953357844432,0.0103636863015831,higher-tax side (side FE),log revenue,full,60
+2021,0.121227401967449,0.0118823952824717,higher-tax side (side FE),log revenue,full,60
+2017,0,0,lower minus higher side (pair x year FE),log mean bill,full,60
+2013,0.0140472417915984,0.0230110852763926,lower minus higher side (pair x year FE),log mean bill,full,60
+2014,0.00649189986079185,0.0175296529648918,lower minus higher side (pair x year FE),log mean bill,full,60
+2015,-0.00285115533742538,0.0218653940759551,lower minus higher side (pair x year FE),log mean bill,full,60
+2016,0.0123097655214605,0.0124307236765282,lower minus higher side (pair x year FE),log mean bill,full,60
+2018,0.0162698723745212,0.0126351756625528,lower minus higher side (pair x year FE),log mean bill,full,60
+2019,0.0146782782743742,0.0293874351374045,lower minus higher side (pair x year FE),log mean bill,full,60
+2020,0.0214250342912935,0.0135904579882077,lower minus higher side (pair x year FE),log mean bill,full,60
+2021,0.0270304581130357,0.015910972013625,lower minus higher side (pair x year FE),log mean bill,full,60
+2017,0,0,lower-tax side (side FE),log mean bill,full,60
+2013,-0.0930869108081075,0.0186346025461316,lower-tax side (side FE),log mean bill,full,60
+2014,-0.0854532013820992,0.0147727929578824,lower-tax side (side FE),log mean bill,full,60
+2015,-0.0670460647264126,0.0207451813878971,lower-tax side (side FE),log mean bill,full,60
+2016,-0.0181418622366459,0.0109969102935076,lower-tax side (side FE),log mean bill,full,60
+2018,0.0562272345145101,0.0111476808953372,lower-tax side (side FE),log mean bill,full,60
+2019,0.0988141313719939,0.022049744815354,lower-tax side (side FE),log mean bill,full,60
+2020,0.111696493394333,0.0107409108555565,lower-tax side (side FE),log mean bill,full,60
+2021,0.157334691400657,0.0129900353444133,lower-tax side (side FE),log mean bill,full,60
+2017,0,0,higher-tax side (side FE),log mean bill,full,60
+2013,-0.107134152599702,0.0126537322553986,higher-tax side (side FE),log mean bill,full,60
+2014,-0.0919451012428867,0.00927245646432711,higher-tax side (side FE),log mean bill,full,60
+2015,-0.0641949093889832,0.00735590899607523,higher-tax side (side FE),log mean bill,full,60
+2016,-0.0304516277581022,0.00575705436009442,higher-tax side (side FE),log mean bill,full,60
+2018,0.0399573621399932,0.00648592409113015,higher-tax side (side FE),log mean bill,full,60
+2019,0.084135853097624,0.0195696410450355,higher-tax side (side FE),log mean bill,full,60
+2020,0.0902714591030441,0.00988093450254866,higher-tax side (side FE),log mean bill,full,60
+2021,0.130304233287626,0.0114561255990585,higher-tax side (side FE),log mean bill,full,60
+2017,0,0,lower minus higher side (pair x year FE),log parcels,full,60
+2013,0.000881366495494597,0.00343695376624191,lower minus higher side (pair x year FE),log parcels,full,60
+2014,-0.000535743530298953,0.00272282935395913,lower minus higher side (pair x year FE),log parcels,full,60
+2015,0.00128381929265028,0.00214461800757065,lower minus higher side (pair x year FE),log parcels,full,60
+2016,0.00237392864746962,0.00145340383411703,lower minus higher side (pair x year FE),log parcels,full,60
+2018,3.22759654704559e-05,0.00118088911405755,lower minus higher side (pair x year FE),log parcels,full,60
+2019,-0.000664787645674397,0.00140832295615332,lower minus higher side (pair x year FE),log parcels,full,60
+2020,0.00198142109092045,0.00209040689284826,lower minus higher side (pair x year FE),log parcels,full,60
+2021,0.00184955750658844,0.00324264610943208,lower minus higher side (pair x year FE),log parcels,full,60
+2017,0,0,lower-tax side (side FE),log parcels,full,60
+2013,-0.0170164661850162,0.00254864992494287,lower-tax side (side FE),log parcels,full,60
+2014,-0.00961894718355511,0.00199524155779075,lower-tax side (side FE),log parcels,full,60
+2015,-0.00101433823686819,0.00163998366603066,lower-tax side (side FE),log parcels,full,60
+2016,0.00349211096759682,0.00127285722194789,lower-tax side (side FE),log parcels,full,60
+2018,-0.00079018251218021,0.000742493356797169,lower-tax side (side FE),log parcels,full,60
+2019,-0.00293632647579188,0.00118691933040984,lower-tax side (side FE),log parcels,full,60
+2020,-0.00329470222768041,0.00188513903557421,lower-tax side (side FE),log parcels,full,60
+2021,-0.00722727381358828,0.00259701192938685,lower-tax side (side FE),log parcels,full,60
+2017,0,0,higher-tax side (side FE),log parcels,full,60
+2013,-0.0178978326805106,0.00263501707654775,higher-tax side (side FE),log parcels,full,60
+2014,-0.00908320365325611,0.001958871375534,higher-tax side (side FE),log parcels,full,60
+2015,-0.0022981575295184,0.00149741121147439,higher-tax side (side FE),log parcels,full,60
+2016,0.00111818232012733,0.000973035844396371,higher-tax side (side FE),log parcels,full,60
+2018,-0.000822458477650824,0.00101270861822445,higher-tax side (side FE),log parcels,full,60
+2019,-0.00227153883011734,0.00122584307586419,higher-tax side (side FE),log parcels,full,60
+2020,-0.00527612331860067,0.00141947419816412,higher-tax side (side FE),log parcels,full,60
+2021,-0.00907683132017668,0.00233896381995652,higher-tax side (side FE),log parcels,full,60
+2017,0,0,lower minus higher side (pair x year FE),log revenue,balanced,60
+2013,0.0149286082870933,0.0241266765411756,lower minus higher side (pair x year FE),log revenue,balanced,60
+2014,0.00595615633049342,0.018191827911538,lower minus higher side (pair x year FE),log revenue,balanced,60
+2015,-0.00156733604477522,0.02266439630327,lower minus higher side (pair x year FE),log revenue,balanced,60
+2016,0.0146836941689304,0.0127607420833841,lower minus higher side (pair x year FE),log revenue,balanced,60
+2018,0.0163021483399915,0.0130317132465279,lower minus higher side (pair x year FE),log revenue,balanced,60
+2019,0.0140134906287002,0.0296600549816404,lower minus higher side (pair x year FE),log revenue,balanced,60
+2020,0.0234064553822137,0.0140119263274205,lower minus higher side (pair x year FE),log revenue,balanced,60
+2021,0.0288800156196253,0.0164256539425768,lower minus higher side (pair x year FE),log revenue,balanced,60
+2017,0,0,lower-tax side (side FE),log revenue,balanced,60
+2013,-0.110103376993123,0.0193720330087598,lower-tax side (side FE),log revenue,balanced,60
+2014,-0.0950721485656537,0.0152323634277371,lower-tax side (side FE),log revenue,balanced,60
+2015,-0.0680604029632808,0.0209423459818967,lower-tax side (side FE),log revenue,balanced,60
+2016,-0.0146497512690492,0.0111988439103451,lower-tax side (side FE),log revenue,balanced,60
+2018,0.0554370520023296,0.0113017770053275,lower-tax side (side FE),log revenue,balanced,60
+2019,0.0958778048962023,0.022194209430087,lower-tax side (side FE),log revenue,balanced,60
+2020,0.108401791166653,0.0110280554817759,lower-tax side (side FE),log revenue,balanced,60
+2021,0.15010741758707,0.0132946098981944,lower-tax side (side FE),log revenue,balanced,60
+2017,0,0,higher-tax side (side FE),log revenue,balanced,60
+2013,-0.125031985280213,0.0132877567762362,higher-tax side (side FE),log revenue,balanced,60
+2014,-0.101028304896143,0.00961888033964468,higher-tax side (side FE),log revenue,balanced,60
+2015,-0.066493066918502,0.00723828799251882,higher-tax side (side FE),log revenue,balanced,60
+2016,-0.0293334454379753,0.00569582133068041,higher-tax side (side FE),log revenue,balanced,60
+2018,0.0391349036623418,0.00663371195154686,higher-tax side (side FE),log revenue,balanced,60
+2019,0.0818643142675061,0.019642455446838,higher-tax side (side FE),log revenue,balanced,60
+2020,0.0849953357844432,0.0103636863015831,higher-tax side (side FE),log revenue,balanced,60
+2021,0.121227401967449,0.0118823952824717,higher-tax side (side FE),log revenue,balanced,60
+2017,0,0,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2013,0.0140472417915984,0.0230110852763926,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2014,0.00649189986079185,0.0175296529648918,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2015,-0.00285115533742538,0.0218653940759551,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2016,0.0123097655214605,0.0124307236765282,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2018,0.0162698723745212,0.0126351756625528,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2019,0.0146782782743742,0.0293874351374045,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2020,0.0214250342912935,0.0135904579882077,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2021,0.0270304581130357,0.015910972013625,lower minus higher side (pair x year FE),log mean bill,balanced,60
+2017,0,0,lower-tax side (side FE),log mean bill,balanced,60
+2013,-0.0930869108081075,0.0186346025461316,lower-tax side (side FE),log mean bill,balanced,60
+2014,-0.0854532013820992,0.0147727929578824,lower-tax side (side FE),log mean bill,balanced,60
+2015,-0.0670460647264126,0.0207451813878971,lower-tax side (side FE),log mean bill,balanced,60
+2016,-0.0181418622366459,0.0109969102935076,lower-tax side (side FE),log mean bill,balanced,60
+2018,0.0562272345145101,0.0111476808953372,lower-tax side (side FE),log mean bill,balanced,60
+2019,0.0988141313719939,0.022049744815354,lower-tax side (side FE),log mean bill,balanced,60
+2020,0.111696493394333,0.0107409108555565,lower-tax side (side FE),log mean bill,balanced,60
+2021,0.157334691400657,0.0129900353444133,lower-tax side (side FE),log mean bill,balanced,60
+2017,0,0,higher-tax side (side FE),log mean bill,balanced,60
+2013,-0.107134152599702,0.0126537322553986,higher-tax side (side FE),log mean bill,balanced,60
+2014,-0.0919451012428867,0.00927245646432711,higher-tax side (side FE),log mean bill,balanced,60
+2015,-0.0641949093889832,0.00735590899607523,higher-tax side (side FE),log mean bill,balanced,60
+2016,-0.0304516277581022,0.00575705436009442,higher-tax side (side FE),log mean bill,balanced,60
+2018,0.0399573621399932,0.00648592409113015,higher-tax side (side FE),log mean bill,balanced,60
+2019,0.084135853097624,0.0195696410450355,higher-tax side (side FE),log mean bill,balanced,60
+2020,0.0902714591030441,0.00988093450254866,higher-tax side (side FE),log mean bill,balanced,60
+2021,0.130304233287626,0.0114561255990585,higher-tax side (side FE),log mean bill,balanced,60
+2017,0,0,lower minus higher side (pair x year FE),log parcels,balanced,60
+2013,0.000881366495494597,0.00343695376624191,lower minus higher side (pair x year FE),log parcels,balanced,60
+2014,-0.000535743530298953,0.00272282935395913,lower minus higher side (pair x year FE),log parcels,balanced,60
+2015,0.00128381929265028,0.00214461800757065,lower minus higher side (pair x year FE),log parcels,balanced,60
+2016,0.00237392864746962,0.00145340383411703,lower minus higher side (pair x year FE),log parcels,balanced,60
+2018,3.22759654704559e-05,0.00118088911405755,lower minus higher side (pair x year FE),log parcels,balanced,60
+2019,-0.000664787645674397,0.00140832295615332,lower minus higher side (pair x year FE),log parcels,balanced,60
+2020,0.00198142109092045,0.00209040689284826,lower minus higher side (pair x year FE),log parcels,balanced,60
+2021,0.00184955750658844,0.00324264610943208,lower minus higher side (pair x year FE),log parcels,balanced,60
+2017,0,0,lower-tax side (side FE),log parcels,balanced,60
+2013,-0.0170164661850162,0.00254864992494287,lower-tax side (side FE),log parcels,balanced,60
+2014,-0.00961894718355511,0.00199524155779075,lower-tax side (side FE),log parcels,balanced,60
+2015,-0.00101433823686819,0.00163998366603066,lower-tax side (side FE),log parcels,balanced,60
+2016,0.00349211096759682,0.00127285722194789,lower-tax side (side FE),log parcels,balanced,60
+2018,-0.00079018251218021,0.000742493356797169,lower-tax side (side FE),log parcels,balanced,60
+2019,-0.00293632647579188,0.00118691933040984,lower-tax side (side FE),log parcels,balanced,60
+2020,-0.00329470222768041,0.00188513903557421,lower-tax side (side FE),log parcels,balanced,60
+2021,-0.00722727381358828,0.00259701192938685,lower-tax side (side FE),log parcels,balanced,60
+2017,0,0,higher-tax side (side FE),log parcels,balanced,60
+2013,-0.0178978326805106,0.00263501707654775,higher-tax side (side FE),log parcels,balanced,60
+2014,-0.00908320365325611,0.001958871375534,higher-tax side (side FE),log parcels,balanced,60
+2015,-0.0022981575295184,0.00149741121147439,higher-tax side (side FE),log parcels,balanced,60
+2016,0.00111818232012733,0.000973035844396371,higher-tax side (side FE),log parcels,balanced,60
+2018,-0.000822458477650824,0.00101270861822445,higher-tax side (side FE),log parcels,balanced,60
+2019,-0.00227153883011734,0.00122584307586419,higher-tax side (side FE),log parcels,balanced,60
+2020,-0.00527612331860067,0.00141947419816412,higher-tax side (side FE),log parcels,balanced,60
+2021,-0.00907683132017668,0.00233896381995652,higher-tax side (side FE),log parcels,balanced,60

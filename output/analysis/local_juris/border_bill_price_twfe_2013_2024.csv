@@ -1,0 +1,145 @@
+y,coef,se,spec,outcome,panel,n_pairs
+2017,0,0,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2013,0.00421622192695859,0.0224650816092974,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2014,-0.00268646444077257,0.0165128181104525,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2015,-0.00796684842411215,0.0170685036506684,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2016,0.00765424473884056,0.0132389186471324,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2018,0.01093036225534,0.0135690810202696,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2019,0.00641815575013005,0.0167173148363822,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2020,-0.015561048386877,0.0173381645668506,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2021,-0.00965074033706425,0.0159761064428468,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2022,0.00655284417933672,0.0197467749497033,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2023,0.0225832193226819,0.0236548321712452,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2024,0.0336033887430456,0.02567110058521,"cross-border gap (abs. log difference), pair FE",effective rate,full,88
+2017,0,0,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2013,0.00125121960221157,0.0204565636609248,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2014,0.00109321003262473,0.0203572558369806,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2015,-0.0041121093372115,0.0172468778164116,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2016,0.0182286425808918,0.0133188465856622,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2018,0.0322559029671771,0.016785635151996,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2019,-0.0154830511629256,0.0150818891288549,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2020,0.00494480373943413,0.0158711053776029,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2021,0.0043294870894116,0.0162046954171005,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2022,0.00883965432211935,0.0173947425589056,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2023,0.0174304656795981,0.0205598710113771,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2024,0.0696032717383601,0.0258525176610837,"cross-border gap (abs. log difference), pair FE",tax bill,full,88
+2017,0,0,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2013,0.0340347379122584,0.0202370463029778,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2014,0.00902917939679829,0.0143023438276273,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2015,-0.0120843680704061,0.012982376214843,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2016,-0.0106931889452075,0.0120272324091032,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2018,-0.0129513224365672,0.0130411986911279,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2019,-0.00167322097544786,0.0150024055856914,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2020,0.00923757881266946,0.0134053972015859,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2021,-0.0156995941643236,0.0126385838142156,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2022,-0.0257632910194175,0.013700295989614,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2023,-0.028509753780969,0.0157097923820634,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2024,-0.0201048338980715,0.0171320495968026,"cross-border gap (abs. log difference), pair FE",sale price,full,88
+2017,0,0,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2013,0.0242367501737935,0.0295334643102599,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2014,0.025838643859688,0.0236247082215621,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2015,0.022191503961961,0.022233176665123,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2016,0.0192252848048231,0.015044019074517,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2018,0.0281519405074789,0.0178719912626725,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2019,0.0279433903140176,0.0186520941902911,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2020,-0.0109615733369785,0.020955954768405,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2021,0.00253180849653582,0.0195573202239585,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2022,0.0219520817831017,0.0244457943606009,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2023,0.0407485516281223,0.0304008368074737,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2024,0.0661874341382164,0.0348319823426315,"cross-border gap (abs. log difference), pair FE",effective rate,balanced,41
+2017,0,0,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2013,0.0257439089482102,0.023482417991099,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2014,0.0154370391595748,0.0286228758259311,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2015,0.0146458793682124,0.0224098288543515,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2016,0.0243831298372299,0.018546326608709,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2018,0.00702071708366279,0.0184305800288178,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2019,-0.00292912050383564,0.0186587738710367,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2020,0.0183553834654973,0.0204823145403343,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2021,0.030844268679985,0.0210825758506793,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2022,0.0426867279247823,0.0236046618891628,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2023,0.0817981817729665,0.026983640951633,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2024,0.107068079643412,0.0340094404491965,"cross-border gap (abs. log difference), pair FE",tax bill,balanced,41
+2017,0,0,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2013,0.0558755940867696,0.0263811753676041,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2014,0.0305035802091505,0.0169471915232116,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2015,-0.00185089978421652,0.0145702240459658,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2016,-0.00551977777399134,0.0167637485677453,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2018,-0.0114002417823165,0.013159391907541,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2019,0.00114917214922339,0.0197522695948208,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2020,0.00961226098274075,0.0161563479708301,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2021,-0.0161809312406222,0.0174811872158676,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2022,-0.0180691081880677,0.0161872364823738,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2023,-0.00667372893344882,0.0187419817994765,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2024,-0.0186363422273015,0.0199926039047917,"cross-border gap (abs. log difference), pair FE",sale price,balanced,41
+2017,0,0,"side level (mean log), side FE",effective rate,full,88
+2013,0.0385162631693318,0.0127879022265803,"side level (mean log), side FE",effective rate,full,88
+2014,0.0168034136050164,0.009477857676724,"side level (mean log), side FE",effective rate,full,88
+2015,0.00218672157239857,0.00909770136823443,"side level (mean log), side FE",effective rate,full,88
+2016,0.0100177002756858,0.00624459657516832,"side level (mean log), side FE",effective rate,full,88
+2018,-0.0311880133617506,0.00735798436968801,"side level (mean log), side FE",effective rate,full,88
+2019,-0.0459649195519681,0.00872090774473924,"side level (mean log), side FE",effective rate,full,88
+2020,-0.0976325653142492,0.00906823898166615,"side level (mean log), side FE",effective rate,full,88
+2021,-0.226286351790048,0.0113652885320378,"side level (mean log), side FE",effective rate,full,88
+2022,-0.290001613768292,0.0130222406492954,"side level (mean log), side FE",effective rate,full,88
+2023,-0.290044258928486,0.0152808111043544,"side level (mean log), side FE",effective rate,full,88
+2024,-0.309267794090594,0.0164944555060463,"side level (mean log), side FE",effective rate,full,88
+2017,0,0,"side level (mean log), side FE",tax bill,full,88
+2013,-0.147766130031961,0.0113130327795884,"side level (mean log), side FE",tax bill,full,88
+2014,-0.121879890409581,0.0104913767434623,"side level (mean log), side FE",tax bill,full,88
+2015,-0.0857992124413928,0.00940214946838953,"side level (mean log), side FE",tax bill,full,88
+2016,-0.0277945759391397,0.00844532322225417,"side level (mean log), side FE",tax bill,full,88
+2018,0.0166467647790009,0.00855693864516074,"side level (mean log), side FE",tax bill,full,88
+2019,0.0433229802074288,0.00820049521547276,"side level (mean log), side FE",tax bill,full,88
+2020,0.0995769822767677,0.00898447176327752,"side level (mean log), side FE",tax bill,full,88
+2021,0.104561308732533,0.0105503354333696,"side level (mean log), side FE",tax bill,full,88
+2022,0.111093250637616,0.012366100022426,"side level (mean log), side FE",tax bill,full,88
+2023,0.121977848441341,0.0156393527069441,"side level (mean log), side FE",tax bill,full,88
+2024,0.17791379172653,0.0178618594789525,"side level (mean log), side FE",tax bill,full,88
+2017,0,0,"side level (mean log), side FE",sale price,full,88
+2013,-0.186282393201288,0.0146216279212248,"side level (mean log), side FE",sale price,full,88
+2014,-0.138683304014592,0.0107188388451231,"side level (mean log), side FE",sale price,full,88
+2015,-0.087985934013786,0.00837983096202371,"side level (mean log), side FE",sale price,full,88
+2016,-0.0378122762148202,0.00671754370585321,"side level (mean log), side FE",sale price,full,88
+2018,0.0478347781407566,0.00733376637964769,"side level (mean log), side FE",sale price,full,88
+2019,0.0892878997594016,0.0075664249120665,"side level (mean log), side FE",sale price,full,88
+2020,0.197209547591022,0.00855373844290435,"side level (mean log), side FE",sale price,full,88
+2021,0.330847660522587,0.0116234252444895,"side level (mean log), side FE",sale price,full,88
+2022,0.401094864405914,0.0125840832835075,"side level (mean log), side FE",sale price,full,88
+2023,0.412022107369832,0.0141016314371911,"side level (mean log), side FE",sale price,full,88
+2024,0.48718158581713,0.0144427473256545,"side level (mean log), side FE",sale price,full,88
+2017,0,0,"side level (mean log), side FE",effective rate,balanced,41
+2013,0.0302470274333316,0.0164401257730205,"side level (mean log), side FE",effective rate,balanced,41
+2014,0.0143000704740106,0.0134200339084778,"side level (mean log), side FE",effective rate,balanced,41
+2015,0.00350792343594194,0.0116193730031474,"side level (mean log), side FE",effective rate,balanced,41
+2016,0.00402500146959216,0.00885848311236007,"side level (mean log), side FE",effective rate,balanced,41
+2018,-0.0315179802775872,0.0120669541695602,"side level (mean log), side FE",effective rate,balanced,41
+2019,-0.057599939506427,0.0138216583442061,"side level (mean log), side FE",effective rate,balanced,41
+2020,-0.108106329705943,0.0153045252180803,"side level (mean log), side FE",effective rate,balanced,41
+2021,-0.23683523620474,0.0199932863984174,"side level (mean log), side FE",effective rate,balanced,41
+2022,-0.304551416255028,0.0238067782125624,"side level (mean log), side FE",effective rate,balanced,41
+2023,-0.307641566919752,0.0256178888845667,"side level (mean log), side FE",effective rate,balanced,41
+2024,-0.310647348615436,0.0253649552327964,"side level (mean log), side FE",effective rate,balanced,41
+2017,0,0,"side level (mean log), side FE",tax bill,balanced,41
+2013,-0.175541664901498,0.0126544899991646,"side level (mean log), side FE",tax bill,balanced,41
+2014,-0.13588015008627,0.0130142022841745,"side level (mean log), side FE",tax bill,balanced,41
+2015,-0.0931440821828897,0.0121726812498284,"side level (mean log), side FE",tax bill,balanced,41
+2016,-0.0341132344636293,0.0142227213316746,"side level (mean log), side FE",tax bill,balanced,41
+2018,0.0097603211358102,0.0129037086792861,"side level (mean log), side FE",tax bill,balanced,41
+2019,0.0372178433533702,0.0116876756291499,"side level (mean log), side FE",tax bill,balanced,41
+2020,0.102322410065138,0.0147031412076793,"side level (mean log), side FE",tax bill,balanced,41
+2021,0.110519753573675,0.0161586375270791,"side level (mean log), side FE",tax bill,balanced,41
+2022,0.102191835307847,0.0192650266688503,"side level (mean log), side FE",tax bill,balanced,41
+2023,0.11836676618626,0.0221086050007722,"side level (mean log), side FE",tax bill,balanced,41
+2024,0.174138922648809,0.0247470314458659,"side level (mean log), side FE",tax bill,balanced,41
+2017,0,0,"side level (mean log), side FE",sale price,balanced,41
+2013,-0.205788692334827,0.0197436421535489,"side level (mean log), side FE",sale price,balanced,41
+2014,-0.150180220560279,0.0145831641740603,"side level (mean log), side FE",sale price,balanced,41
+2015,-0.0966520056188295,0.012691205782147,"side level (mean log), side FE",sale price,balanced,41
+2016,-0.0381382359332198,0.0102416446385267,"side level (mean log), side FE",sale price,balanced,41
+2018,0.041278301413399,0.00952496282056299,"side level (mean log), side FE",sale price,balanced,41
+2019,0.094817782859799,0.0105876350309643,"side level (mean log), side FE",sale price,balanced,41
+2020,0.210428739771084,0.0124281358849704,"side level (mean log), side FE",sale price,balanced,41
+2021,0.347354989778418,0.0179759016127123,"side level (mean log), side FE",sale price,balanced,41
+2022,0.406743251562877,0.0204276373395153,"side level (mean log), side FE",sale price,balanced,41
+2023,0.426008333106015,0.0222833581210389,"side level (mean log), side FE",sale price,balanced,41
+2024,0.484786271264247,0.021162991520682,"side level (mean log), side FE",sale price,balanced,41

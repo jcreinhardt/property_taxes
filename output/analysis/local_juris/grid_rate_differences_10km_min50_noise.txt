@@ -1,0 +1,25 @@
+10 km cells, >= 50 sales (2017-19), median effective rate in %; |differences| in pp
+cells: 17562 | median SE of a cell median: 0.043 pp | cell medians p10/p50/p90: -0.07 0 0.06 
+
+ radius cells nb_median max_p10 max_p50 max_p90 mean_p50 mean_p90
+     10 16828         6    0.03    0.08    0.21     0.04     0.12
+     25 17456        27    0.06    0.14    0.31     0.05     0.12
+     50 17541        90    0.10    0.20    0.42     0.05     0.11
+
+By state, radius 25 mi: median of cell max_diff (pp), top 15
+ st cells max_diff mean_diff
+ NY   642     0.36      0.12
+ NJ   198     0.32      0.09
+ IL   547     0.31      0.11
+ VT   147     0.28      0.09
+ PA   715     0.23      0.07
+ SC   378     0.22      0.07
+ IA   396     0.21      0.08
+ TX  1042     0.20      0.07
+ MI   662     0.20      0.06
+ NE   164     0.18      0.07
+ WI   665     0.18      0.06
+ FL   853     0.18      0.06
+ OH   809     0.18      0.05
+ CT   135     0.18      0.05
+ MS   112     0.17      0.07

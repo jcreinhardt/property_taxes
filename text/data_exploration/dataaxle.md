@@ -1658,3 +1658,292 @@ owner-occupied single-family parcels (`output/analysis/salt_cap/table_exit_valid
   re-keying/record churn.
 - Condo units match Data Axle at unit level for only 52% of parcels (SFR 82% at building level); 35–44% of condo address-years have no
   exit value.
+
+### 4.9 Local tax jurisdictions in the CoreLogic tax roll (2026-10-20)
+Candidate fields in `cl.tax`: `tax_area_code` (tac), `tax_rate_area_code`, `municipality_code`, `municipality_name`,
+`tax_district_municipality_name`, `township`, `school_district_name`, `total_property_tax_rate_percent`. All are
+county-specific codes or names, so a unit is (fips, value). 1% building sample, 2016 base year (949k residential parcels,
+`data/salt_cap/panel/parcels.parquet`):
+
+| field | fill % | distinct (fips, value) | states | counties |
+|---|---:|---:|---:|---:|
+| tax_area_code (∪ tax_rate_area_code) | 90.3 | 51,941 | 51 | 2,737 |
+| municipality_name | 83.6 | 30,583 | 53 | 2,615 |
+| municipality_code | 45.3 | 20,723 | 49 | 1,254 |
+| school_district_name | 64.2 | 10,039 | 46 | 2,103 |
+| township | 35.4 | 8,446 | 35 | 1,614 |
+| tax_district_municipality_name | 7.2 | 1,628 | 23 | 316 |
+
+- The tax area code is a *rate area* (a unique overlap of districts), not a government: CA alone has 12.4k codes in the 1%
+  sample, TX only 344 (TX codes are coarse; there `school_district_name` gives 1,153 districts at 99% fill). Not filled at
+  all in MA, RI, MI (also noted in the `corelogic` skill); there `municipality_name` (≈100% fill) is the town/township.
+- `municipality_name` is the closest thing to a general-purpose government; it is ≥ 95% filled in most states but only
+  15% in MD, 33% in CA, 26% in ID, 44% in OR. Names are not cleaned (spelling variants inflate counts).
+- The published rate (`total_property_tax_rate_percent`) is a usable panel only in NJ (2008+), CT, MA, NH, RI (2014+, ≈95%
+  of parcels), ME (≈65%), DC (2009–16 only) and IL (≈40%, patchy). MO 15–20%, WA/PA/FL ≤ 6%, others ~0 (1% system sample
+  of the full SOM roll, all years). [An earlier version of this line said "18 states": that counted fill among non-null
+  values only.] Elsewhere rates must be computed from bills and values (§4.11–4.12).
+- Benchmark (2017 Census of Governments): 3,031 counties, 19.5k municipalities, 16.3k townships, 12.8k school districts.
+- [full] Full roll (SOM job 3690559, `code/analysis/local_juris/sql/juris_counts.sql` → `data/local_juris/juris_cells.parquet`,
+  county × year × field cells with parcel counts and bill/value sums). Distinct (fips, value), 2016 / ≥ 50 parcels in 2016:
+  tax_area_code 138,085 / 73,444; tax_rate_area_code 105,178 / 48,022; municipality_code 48,143 / 27,444; municipality_name
+  46,831 / 40,106; township 21,165 / 11,042; school_district_name 13,282 / 11,811; tax_district_municipality_name 2,056 /
+  1,897; counties 2,906. `tax_year` has junk values (1991–15500): filter years before use.
+
+### 4.10 Parcel coordinates for assigning parcels to jurisdictions (2026-10-20)
+`parcel_level_latitude/longitude` in `cl.tax` (parcel centroid). 1% building sample, 2016
+(`code/analysis/local_juris/R/01_coord_validation.R` → `output/analysis/local_juris/coord_validation.txt`):
+- **Fill 94.5%**, ≥ 5 decimals (≈ 1 m) in 99%. 94.6% of points unique; 4.7% shared only by condo units of the same building;
+  0.7% shared across 2+ buildings (likely street/ZIP centroids). Missing is concentrated where towns tax: NH 41%, VT 36%,
+  LA 34%, SD 29%, ME 28%, ND 25%, CT 21%, RI 20%, AR 15%, MA 14%, KY/MS 12%, MI 9%; ≤ 5% in most other states.
+  (Other roll years or Data Axle P-geocodes, which agree with these to a median 1 m (§4.7), could fill some gaps.)
+- **County point-in-polygon (cb 2019 500k) vs roll fips: 98.9% same.** Nearly all of the rest are roll codes, not
+  coordinates: Miami-Dade under its pre-1997 FIPS 12025 (= 12086; 9.1k of 9.6k) and VA independent cities coded to the
+  surrounding county (Manassas, Fairfax City, Falls Church, Poquoson, Bedford). Genuine misplacements ≈ 0.03%.
+- **Incorporated places (cb 2017, LSAD ≠ 57) vs `municipality_name`**: 47% inside a place with matching name, 11.5% inside
+  a place with a different name, 41% outside any place. Mismatches are mostly what the roll stores, not location errors:
+  Chicago's townships (Lake View, Jefferson), NYC neighbourhoods, DC assessment neighbourhoods, DE hundreds, IN townships
+  inside Indianapolis/Carmel, postal city names in CA. Name match ≥ 95% in MA, NH, RI, ME, CT, TX, PA, NJ, MD, MI, NV, WI.
+- **Unified school districts vs `school_district_name`**: 87% name match overall (≥ 96% TX, FL, PA, NC, VA, GA, CO, AZ, OK,
+  WV, UT, NV); remaining failures are abbreviations (NYC DEPT OF ED, Springfield R-XII) and VT/ME supervisory unions.
+  LA 2.5% (roll field holds something else).
+- **Boundary proximity** (50k points, 1:500k place boundaries): 0.3% within 10 m, 1.2% within 25 m, 3.0% within 50 m,
+  6.5% within 100 m. The 1:500k generalisation error is of the order of tens of metres, so use full-resolution TIGER/Line
+  for assignment; points within ~25 m of a boundary (≈ 1%) remain ambiguous.
+
+### 4.11 Recovering nominal rates: median regression bill ~ a + r·AV within tax-area cells (2026-10-20)
+Test on the 1% sample (2016 residential, cells = fips × tac with ≥ 30 parcels: 5,438 cells, 669k parcels), slope vs the
+published `total_property_tax_rate_percent` (units: percent in NC, NJ, IN, IL, MO, DC; mills elsewhere; VA field unusable)
+(`code/analysis/local_juris/R/02_nominal_rate_test.R` → `output/analysis/local_juris/nominal_rate_test.txt`):
+- **Recovers the published rate exactly** (median slope/published = 1.000; 87–100% of cells within 5%) in NJ, CT, NH, ME,
+  NC, DC, MO, WA. Intercepts are negative in about half the cells (lump-sum exemptions) and positive elsewhere (fixed charges).
+- **Cook County: slope/published = 2.803 = the 2016 state equaliser** (CoreLogic AV is pre-equalisation; the statutory
+  rate applies to EAV). Other IL counties 0.93–1.00. So the slope is the rate per dollar of *CoreLogic AV*, which is what we
+  want for bills, but it is not the statutory rate where an equaliser/fractional step sits between AV and the taxable base.
+- **Proportional relief biases the slope down**: OH 0.883 ≈ 1 − 0.125 (10% + 2.5% owner-occupied rollbacks); IN 0.46
+  (60% homestead deduction plus 1% circuit-breaker caps).
+- **Mixtures**: FL pooled 0.83, but non-homestead cells 1.00 and homestead cells 0.91 — the homestead share rises with AV,
+  so a single intercept does not absorb the exemption. Estimate within exemption status (or add the flag as an intercept
+  shift) where the homestead flag or a bill discount identifies it.
+- **Cells that are not rate areas fail**: MA, RI (no tac → cell = county; published town rate varies within the cell in
+  86–100% of cells), PA (published rate varies in 50% of cells).
+- Most states have few qualifying cells at 1%; the full roll gives enough parcels per tac.
+
+### 4.12 Which states give a clean flat-rate fit, without a published rate (2026-10-20)
+Same median regression, cells = fips × tax area code (fips × `municipality_name` where there is no code: MA, RI, MI).
+Test: share of parcels whose bill is within 1% of the cell's fitted line. In the states validated against the published
+rate (NJ, CT, NH, ME) this is 91–99%. 1% sample, 2016, cells ≥ 30 parcels
+(`code/analysis/local_juris/R/03_rate_fit_all_states.R` → `output/analysis/local_juris/rate_fit_all_states.txt`).
+- **≥ 80% on the line (flat rate recovered):** ME 99, NH 99, RI 98, MA 96 (town cells), VA 93, NJ 92, CT 91, WY 88,
+  TN 83, CO 82, UT 80.
+- **60–79% (mostly works; coarse cells or an exemption mixture):** VT, NC, WA, NE, KS, OR, PA, MO, KY.
+- **< 50% (no single line):** CA 49 (84% within 5%: parcel-specific direct assessments on the bill), WI, LA, OH (proportional
+  rollbacks), HI, IL (classification, exemptions), MN (class rates), AL, DE, NM, AK, MT, IA, MD, OK, SC (4%/6% ratios), SD,
+  MS, TX 25 (percentage homestead exemptions, coarse codes), NY 23 (classes, STAR), AR, ND, GA, AZ, ID, IN (deductions,
+  caps), FL 14 (homestead exemption and SOH mixture), MI 14 (taxable value ≠ SEV, PRE exemption), NV 9 (abatement caps).
+- A low share does not mean the slope is wrong for every parcel (e.g. FL non-homesteads are on the line); it means one
+  line does not describe the cell. Next step: split cells by exemption/homestead status or the bill discount.
+- **Split by exemption status** (`04_rate_fit_split.R` → `rate_fit_split.txt`; cell × homestead flag, × occupancy code O,
+  or both): large gains in OK 33→81, PA 71→83, IL 45→70, CA 49→67, OH 46→66, MS 27→67, AL 43→70, WV 51→79, VT 74→97,
+  NM 40→62, GA 20→44, FL 14→32. Still < 50%: TX, NY, AZ, IN, MI, NV, ND, FL, MD, DE, MT, SD, ID, AR. Within-cell slope
+  homestead / non-homestead (proportional relief): HI 0.52, IN 0.61, MI 0.75, ID 0.88, MD 0.91, FL 0.98; = 1 elsewhere.
+
+### 4.13 Where does nominal-rate variation sit? State / county / place / unified district (2026-10-20)
+1% sample, 2016 (`code/analysis/local_juris/R/05_rate_variance_decomp.R` → `output/analysis/local_juris/rate_variance_decomp.{txt,csv}`;
+parcel layers in `data/local_juris/parcel_layers_1pct.parquet`).
+- **Rate:** per tax-area cell, median-regression slope on non-homesteads (≥ 30 parcels, ≥ 50% of bills within 1% of the line),
+  else the pooled slope if it passes. Market-value rate = rate on AV × median(AV/MV) × sales ratio `ratio_c` (CoreLogic MV
+  = AV in IL, LA, NY, MI, so MV alone is not market value). 750 of 3,654 fitted cells dropped (market-value rate outside
+  0.05–6% or no sales ratio). Kept: median 1.25% of market value (p10 0.69, p90 2.64).
+- **Coverage (% of parcels):** coordinates 94.5; inside an incorporated place 55.3 (the binding layer); inside a unified
+  district 87.2; all four layers 50.9; cell rate 32.7; **rate and all four 19.0** (180k parcels); 28.6 if unincorporated land
+  counts as a county-level "place". By state, rate and all four: MA 31, IL 27, MN 27, OH 26, CA 24, NJ 24, CT 16, PA 15,
+  FL 7.5, TX 7, NY 3, MI 0.6, HI/AK 0 (no place/unsd maps).
+- **Decomposition of the market-value rate (parcel-weighted, nested R² increments):** state 69%, county 23%, below county
+  7.6%, residual within place × district 0.3%. Within states only: county 74%, below county 25%.
+- **Place vs school district is not separately identified here:** whichever enters first takes almost all of the
+  below-county share (place first 7.6 / 0.1; district first 0.4 / 7.3). Shapley shares are ≈ 25% for every layer because
+  the layers nest (a place dummy alone also absorbs its county and state), so they are not informative.
+- Caveats: (i) the rate is the *total* rate of a tax-area cell, so the decomposition says where total-rate variation sits
+  geographically, not which government levies it; (ii) only big tax areas pass the ≥ 30-parcel rule at 1%, which
+  understates fine-grained (special-district) variation, so the residual is small partly by construction; (iii) the sample
+  leans to states where the flat-rate fit works (TX, FL, NY, MI barely enter). Full roll needed for (ii)–(iii).
+
+### 4.14 Parcels near a state border (2026-10-20)
+Distance from parcel points to the nearest boundary shared with another state (lower 48 + DC; coastlines and international
+borders excluded; cb 2020 1:500k, EPSG:5070). 1% building sample, 890k parcels with coordinates
+(`code/analysis/local_juris/R/07_state_border_distance.R` → `output/analysis/local_juris/state_border_distance.txt`).
+Within 5 mi 8.7%, 10 mi 16.0%, 20 mi 28.6%, **30 mi 38.8%**, 50 mi 53.9%, 100 mi 76.6%. Within 30 mi by state: DC, DE, RI
+100%, NH 96, MD 96, VT 94, MA 89, NV 87, CT 85, NJ 83, WV 78, MO 74 … NY 58, PA 66, IL 68 … FL 10, TX 8, CO 8, AZ 6, MI 6,
+CA 1. Border parcels are concentrated in the Northeast corridor and metros on state lines (NYC–NJ, Philadelphia, DC,
+St. Louis, Kansas City, Chicago–NW Indiana, Cincinnati, Louisville, Memphis, Portland–Vancouver; NV's 87% is Reno and
+Henderson/Las Vegas, which lie within ~30 mi of the CA and AZ lines).
+
+### 4.15 Border rate gaps with CoreLogic-provided rates, 2013–2021 (2026-10-20)
+Parcels within 20 mi of a shared state border (1% building sample, 257k parcels; side polygons per state pair from
+`R/08_border_pair_buffers.R`, assignment `R/09_border_parcels_1pct.R`); yearly rows from SOM job 3692148
+(`cluster/e_border_1pct.sql`, 80 s). `R/10a_border_cl_gaps.R` → `output/analysis/local_juris/border_rate_gaps_cl.txt`,
+`border_pair_gaps_cl.csv`, `figures/border_rate_gaps_cl_box.png`.
+- Unit of `total_property_tax_rate_percent` differs by state: **fraction in VA** (0.010 = 1%), percent in NJ, IL, MO, DC,
+  mills elsewhere; chosen per state-year as the unit closest to the median bill/AV. VA's value is 1.000% for every parcel
+  that has it (≈ 1.7k sample parcels, all years) — likely a placeholder; treat with caution.
+- **Coverage: 16.5% of border parcel-years in 2013, 20–23% in 2014–21.** Usable states: CT, MA, RI (2014+), NH, NJ, DC
+  (2013–16), ME ≈ 80%, IL ≈ 65%, MO ≈ 38%, OH 7%, WA 2%, PA 1.4%, VA (above).
+- **Only 4–6 state pairs per year** have ≥ 30 sample parcels with a CL rate on both sides: CT–MA, MA–RI, MA–NH, CT–RI,
+  ME–NH, DC–VA. 2016 gaps: CT–MA 1.77 pp (3.53 vs 1.76%), MA–RI 0.70, MA–NH 0.69, CT–RI 0.67, ME–NH 0.59, DC–VA 0.11; median
+  across pairs 0.6–0.75 pp in every year. These are nominal rates per dollar of assessed value (all six states assess near
+  full value, so comparable here). Too few pairs for a national picture; the imputed rates are needed for that.
+
+### 4.16 Border gaps in effective rates (bill / sale price), 2013–2021 (2026-10-20)
+Border parcels (≤ 20 mi, 1% sample) that sell arm's-length in the year (SALT panel; new construction dropped), effective
+rate = bill of the sale year / price, kept if 0.05–10% (`R/11_border_effective_gaps.R` →
+`output/analysis/local_juris/border_rate_gaps_effective.txt`, `border_pair_gaps_effective.csv`,
+`figures/border_rate_gaps_effective_box.png`).
+- Coverage: 3.4% (2013) – 5.0% (2021) of border parcels per year; 75–104 of 212 pair sides have ≥ 30 sample sales.
+- **21–41 state pairs per year** (vs 4–6 with CL rates). Median |gap| of side means 0.69 pp (2013), 0.41 (2016), 0.36
+  (2021); p75 0.95 → 0.52; max 1.2–1.65. 2016 largest: NY–PA 1.39 (NY 4.0 vs PA 2.7%), NJ–PA 1.34, NJ–NY 1.12, CT–MA 1.00,
+  IN–OH 0.99, IL–MO 0.94, MD–PA 0.87, DE–PA 0.85, IL–IN 0.81.
+- The decline is partly entry of new pairs and partly levels: in the 16 pairs present every year the median gap goes
+  0.74 → 0.40 pp while the mean effective rate falls 1.72 → 1.25% (prices outpace bills); the gap relative to the level is
+  0.41 → 0.28 (≈ 0.31–0.39 in 2014–20). Side means rest on 30–500 sample sales, so year-to-year noise is large.
+- Bill/price is a sale-based measure: sellers' bills reflect their (often stale) assessment, so in states with assessment
+  caps or rare revaluations the effective rate of sold homes is below that of the stock.
+- Why only 21–41 pairs (2016 diagnosis): 106 pairs, 101 with sample parcels on both sides; the thinner side of the median
+  pair has 497 sample parcels but only 13 usable sales (p25: 1). ≥ 30 sales on both sides: 35 pairs; ≥ 10: 58; ≥ 5: 67.
+  Stock-based measures (≥ 30 parcels per side) would reach 92 pairs. Two causes: 1% × ~4% annual turnover, and price
+  non-disclosure states (border parcels selling with a usable price in 2016: SD 0%, NM 0.5%, WV 1.4%, MI 1.6%, MS 1.9%,
+  TX 2.4%, LA 2.7% vs 3.5–5% elsewhere). Full data / the 10% sample or pooling years fixes the first, not the second.
+
+### 4.17 Border-gap year effects with pair FE, centred on 2017 (2026-10-20)
+gap_pt = a_p + b_t, **2017 = 0** (last pre-SALT-cap year), SE clustered by pair (`R/12_border_gap_twfe.R` →
+`output/analysis/local_juris/border_gap_twfe.{txt,csv}`, `figures/border_gap_twfe.png`).
+- **Effective rate (bill / price), gap in pp; full panel (45 pairs, 300 pair-years, 2017 mean 0.58) / balanced (16 pairs,
+  2017 mean 0.61):** 2013 +0.07 / +0.06, 2014 +0.05 / −0.04, 2015 0.00 / −0.01, 2016 −0.02 / −0.10 (SE 0.05), 2018 −0.08
+  (SE 0.03) / −0.05, 2019 −0.01 / +0.05, 2020 −0.06 (0.03) / −0.09 (0.04), 2021 −0.11 (0.04) / −0.17 (0.06).
+  Pre-2017 coefficients are small and mixed in sign; after 2017 the gap is 0.05–0.17 pp narrower, growing by 2021.
+- **Relative gap (gap / mean effective rate, 2017 mean 0.36):** pre −0.06 to +0.04, post −0.03 to +0.07, none significant
+  except balanced 2019 (+0.07, SE 0.04, borderline). The pp narrowing after 2017 is the fall in effective-rate levels, not
+  relative convergence.
+- CoreLogic-reported rates: 7 pairs (2 balanced) — uninformative.
+- Few clusters (16–45): cluster-robust SEs approximate.
+
+### 4.18 Border effective-rate gaps from a per-side sample of the full roll (2026-10-20)
+On each of 208 pair sides: max(5,000, 1% of the 2016 residential parcels within 20 mi) parcels of the full roll (31.6m
+border parcels → 1.01m sampled; SOM job 3692460, `cluster/f_border_sample.sql`, ~3 min). Effective rate as in §4.16.
+`R/13_border_sample_twfe.R` → `output/analysis/local_juris/border_sample_twfe.{txt,csv}`, `border_sample_gaps_effective.csv`,
+`figures/border_sample_gaps_box.png`, `figures/border_sample_twfe.png`.
+- Usable sales per side-year: median 178 (p10 12); 87% of side-years have ≥ 30. **69–87 pairs per year, 88 in total, 54
+  in all 9 years** (vs 21–41 / 16 from the 1% sample).
+- Median |gap| 0.28–0.40 pp each year (p75 0.56–0.85).
+- **TWFE, gap in pp, 2017 = 0 (full 88 pairs / balanced 54; 2017 mean 0.53):** 2013–16 between −0.002 and +0.023 (SE
+  0.02–0.04); 2018 −0.002 / +0.020; 2019 −0.004 / +0.006; 2020 −0.051 (0.026) / −0.067 (0.023); 2021 −0.106 (0.023) /
+  −0.097 (0.025). Flat pre-period; no change in 2018–19; narrowing only in 2020–21.
+- **Relative gap (2017 mean 0.35):** all years within ±0.03, none significant (2018 +0.017 / +0.027, SE 0.013–0.015).
+  The 2020–21 narrowing in pp is the pandemic price surge lowering all effective rates (bills lag prices), not relative
+  convergence. No sign that border gaps in effective rates moved with the 2018 SALT cap.
+- Imputed stock-based rates (§4.12 method, 1% sample, `R/10_border_rate_gaps.R` → `border_rate_gaps.txt`): coverage
+  ≈ 69% of border parcels (NY 14%, MI 4%, AZ 3%, SD 1% low); 65–79 pairs per year. Gaps in % of AV are not comparable
+  across states (median 1.6–2.0 pp, driven by assessment ratios); in % of market value median 0.34–0.45 pp.
+- **Population-weighted mean gap by year** (`R/14_border_gap_weighted.R` → `border_gap_weighted_means.csv`,
+  `figures/border_gap_weighted_means.png`; weight = pair's residential parcels within 20 mi in the 1% sample, 2016, fixed;
+  largest NJ–PA 6.6%, NJ–NY 6.3%, IL–IN 4.5%, MD–VA 4.4%, NC–SC 3.5%, IL–MO 3.1%, CT–NY 2.9%). Weighted mean gap (all pairs)
+  0.59–0.66 pp in 2013–19 (2017: 0.63), 0.54 in 2020, 0.48 in 2021; unweighted 0.51–0.54 → 0.41. Populous pairs have larger
+  gaps (+0.1 pp). Relative to the level: weighted 0.36–0.40 in 2013–19, 0.34–0.35 in 2020–21; no break at 2018. Balanced
+  panel (54 pairs) is nearly identical.
+
+### 4.19 Coverage by year and the border gaps extended to 2024 (2026-10-20)
+- **Tax-roll coverage by year** (full SOM roll, `juris_cells.parquet`, residential parcels as % of 2016; counties with ≥ 80%
+  of their 2016 count): 2008 22% / 635; 2009 82% / 1,461; 2010 71% / 1,259; 2011 60% / 1,054; 2012 72% / 1,401; **2013 92% /
+  2,462**; 2014–2023 96–109% / 2,620–2,906; **2024 88% / 2,130 (≈ 700 counties not yet delivered in the SOM copy)**; 2025 ≈ 1%.
+  2010–12 gaps are whole counties. Near-full coverage starts in 2013 (fully from 2014). The 1% SALT panel (Bouchet copy)
+  shows 2024–25 more complete (863k / 799k parcels vs 931k in 2016), so the Bouchet copy may hold a later delivery.
+  Arm's-length sales in the 1% panel: 39–48k/yr 2013–21, 40k 2022, 31k 2023–25 (market slowdown + recording lag).
+- **Border sample 2013–2024** (same per-side sample; SOM job 3692593 pulled 2010–24 → `data/local_juris/bsample1024/`;
+  `BORDER_IN=bsample1024 BORDER_Y0=2013 BORDER_Y1=2024 BORDER_SFX=_2013_2024` for `R/13`, `R/14`; outputs `*_2013_2024.*`):
+  69–87 pairs/yr, 59 in 2024 (missing counties); 88 pairs, 41 balanced over all 12 years.
+  TWFE gap in pp, 2017 = 0 (full / balanced): 2013–16 0.00–0.01 / 0.01–0.03; 2018–19 ≈ 0 / +0.01–0.02; 2020 −0.05 / −0.07;
+  2021 −0.11 / −0.09; 2022 −0.10 / −0.11; 2023 −0.10 / −0.12; 2024 −0.12 (0.04) / −0.11 (0.05). Gap narrows ~0.1 pp in 2020–21
+  and stays there. Relative gap: pre ≤ +0.03, 2018–19 +0.01–0.04, 2020–21 ≈ 0, 2022–24 +0.02–0.06 (none significant at 5%).
+  Weighted mean gap: 0.59–0.66 pp 2013–19 → 0.54 (2020), 0.48 (2021), 0.46 (2022), 0.48 (2023), 0.39 (2024); mean effective
+  rate 1.58% (2017) → 1.13% (2024). The pp narrowing tracks the fall in effective rates; relative gaps stay ≈ 0.33–0.40.
+- **Bill vs price** (`R/15_border_bill_price_twfe.R` → `border_bill_price_twfe_2013_2024.{txt,csv}`, figure same name; same
+  sales, logs so log eff = log bill − log price exactly; 2017 = 0, SE by pair):
+  *Side levels (side FE; full 88 pairs):* log price −0.19 (2013) → +0.20 (2020), +0.33 (2021), +0.40 (2022), +0.49 (2024);
+  log bill −0.15 (2013) → +0.10 (2020), +0.11 (2021–22), +0.18 (2024); log effective rate +0.04 (2013), ≈ 0 to 2016,
+  −0.03 (2018), −0.10 (2020), −0.23 (2021), −0.29 (2022–23), −0.31 (2024). Before 2018 bills and prices grew together
+  (≈ 4%/yr); from 2020 prices jumped while bills kept growing ≈ 2–3%/yr, so the fall in effective rates is a price effect.
+  Balanced (41 pairs) the same.
+  *Cross-border gaps (abs. log difference, pair FE):* effective rate ≈ 0 throughout (−0.02 to +0.03; balanced +0.07 in 2024,
+  SE 0.035); price gap ≈ 0 to −0.03 (n.s.); bill gap ≈ 0 to 2021, then +0.02 / +0.07 (2023 / 2024, full; SE 0.02–0.03) and
+  +0.04 / +0.08 / +0.11 (2022–24, balanced). Bills diverge slightly across borders after 2021 (2024 partial); no change around 2018.
+
+### 4.20 Revenue on the lower- vs higher-tax side of state borders (2013–2021)
+Script `code/analysis/local_juris/R/16_border_revenue_low_high.R`; output `output/analysis/local_juris/border_revenue_low_high.{txt,csv}`, figure `figures/border_revenue_low_high.png`.
+- Revenue = 100 × sum of tax bills per side-year in the 1% random parcel panel within 20 mi (`border1/border_panel_1pct`, 2013–2021 only). To keep roll gaps out of totals, only counties whose parcel count is ≥ 90% of their max in every year (642 of 1,229 counties, 65% of parcel-years).
+- Sides ordered once, by the 2013–17 median effective rate (bill / price, per-side sales sample, ≥ 100 sales per side). 60 pairs with revenue on both sides in all years.
+- Higher-tax sides collect ~2.3× more: mean $713m vs $316m per side in 2017. They also have more parcels (173k vs 106k) and higher mean bills ($2,710 vs $1,930).
+- Growth (2017 = 100): both sides grew in step before 2017 (~3.5–4%/yr). After 2017 the lower-tax side grew faster: 117 vs 112 in 2021. The mean per-pair log(higher / lower revenue) falls from 0.000 (2017) to −0.023 (2020, SE 0.014) and −0.029 (2021, SE 0.016): borderline, not significant at 5%. Parcel counts are flat, so this is bills, not more parcels.
+- TWFE (`R/17_border_revenue_twfe.R`, output `border_revenue_twfe.{txt,csv}`, figure `figures/border_revenue_twfe.png`; 2017 = 0, SE by pair). Log revenue = log mean bill + log parcels. All 60 pairs are balanced, so full = balanced.
+  - Each side alone (side FE): revenue up 12% (higher-tax) and 15% (lower-tax) by 2021 vs 2017. About −11 to −13% in 2013. All of it is mean bill; log parcels moves < 2%.
+  - Lower minus higher (side FE + pair × year FE): pre-period +0.015/+0.006/−0.002/+0.015 (2013–16), post +0.016/+0.014/+0.023/+0.029 (2018–21), SE 0.013–0.030. Nothing significant. The post-2017 drift of ~2–3 log points toward the lower-tax side is about the size of the pre-period noise.
+
+### 4.21 Out-migration near state borders: sales turnover as the proxy (2013–2024)
+Bouchet compute was under emergency maintenance on 2026-10-20, so the Data Axle measure couldn't run. Ready but not yet run: `code/analysis/local_juris/bouchet/g_moveout_bkey_1pct.sql` (primary family_id change at 1% building-sample addresses, with coordinates) and `R/18_border_moveout.R` (assign sides, annualise by file cut-offs, same TWFE). Sales stand in for now.
+Script `R/19_border_sales_turnover.R`; output `border_sales_turnover{,_twfe}.{txt,csv}`, figure `figures/border_sales_turnover.png`.
+- Turnover = arm's-length sales (price > 10k, no new construction, first sale per parcel-year) / sampled parcels in the year's roll, per side (bsample1024; 2016 residential universe). Sides ordered as in §4.20. 84 pairs (full); 49 present in every year (balanced).
+- Levels: the higher-tax side turns over more. 2017: 4.04% vs 3.69%. Both sides follow the same cycle: 3.1–3.4% (2013) → 4.6–4.8% (2021) → ~3.0% (2024; partly recording lag).
+- TWFE, lower minus higher (pp, 2017 = 0, SE by pair), full panel: pre 2013–16 +0.04/+0.10/+0.07/+0.04 (SE 0.07–0.11); post 2018–24 −0.01, +0.22, +0.15, +0.18, +0.20, +0.27, +0.30 (SE 0.09–0.16). Pooled post − pre: +0.13 (SE 0.08); 2018–22 only +0.10 (0.08). Balanced: +0.05 (0.12).
+- So the pre-2018 gap (higher-tax side turns over ~0.3 pp more) narrows by ~0.1–0.2 pp after 2017. That is the opposite sign from extra out-migration on the higher-tax side after SALT. Not significant, and not robust to the balanced panel.
+- Caveat: sales measure owner turnover, including in-state moves and investor purchases, not out-migration. Data Axle move-outs (§4.5c) also capture renters and non-sale moves.
+
+### 4.22 Map: local variation in effective tax rates (grid, sales 2017–2019)
+SOM extract `code/analysis/local_juris/cluster/h_grid_eff.sql` (42 s on gpunormal). Arm's-length sales of SFR/condos (pic 10/11), price > 10k, no new construction; effective rate = sale-year bill / price, kept 0.05–10%; tax-roll coordinates in EPSG:5070, binned into 5 km cells. 12.3m sales, 128k cells; up to 50 sales kept per cell (hash). Local script `R/20_grid_rate_differences.R` (env GRID_AGG = merge AGG×AGG blocks, GRID_MIN = min sales, GRID_NOISE = pure-noise benchmark). Output `grid_rate_differences_{5km_min20,10km_min50}[_noise].{txt,csv}`, figures `figures/grid_rate_differences_*.png`, `figures/grid_max_diff_{10,25,50}mi_*.png`.
+- Cell value = median effective rate. For each cell and radius (10/25/50 mi, centre-to-centre): max and mean |median_i − median_j| over neighbours.
+- Precision: robust SE of a cell median (1.2533·IQR/1.349/√n) is 0.06 pp for 5 km cells (≥ 20 sales, 46.7k cells) and 0.04 pp for 10 km (≥ 50 sales, 17.6k cells). The normal-theory SE (sd-based, 0.11) overstates it because of heavy tails.
+- Median over cells of the max difference (pp), real vs pure noise (all cells same rate, medians ~ N(0, SE)):
+
+| radius | 5 km real | 5 km noise | 10 km real | 10 km noise |
+|---|---|---|---|---|
+| 10 mi | 0.47 | 0.19 | 0.26 | 0.08 |
+| 25 mi | 0.77 | 0.30 | 0.52 | 0.14 |
+| 50 mi | 1.08 | 0.40 | 0.77 | 0.20 |
+
+  Mean differences: 0.17/0.22/0.27 (5 km) and 0.13/0.19/0.23 (10 km) vs noise 0.07–0.08 / 0.04–0.05. Noise is about a quarter of the 10 km max, so use the 10 km map.
+- Where: largest local differences in NJ, NY, NH, CT, DE, VT, PA (25 mi median max 1.0–1.5 pp at 10 km), then IL (Chicago vs NW Indiana), TX metros, WI, OH. Smallest across the South-East and Mountain West (cell max < 0.5 pp). Cell medians p10/p50/p90 = 0.52/1.0/2.1%.
+- Caveat: the cap of 50 sales per 5 km cell means 10 km medians weight dense and sparse sub-cells equally.
+
+### 4.23 USPS vacancy on the lower- vs higher-tax side of state borders (2013–2024)
+SOM `cluster/i_border_vacancy.sql` (same per-side sample as bsample1024); local `R/21_border_vacancy.R`; output `border_vacancy{,_twfe}.{txt,csv}`, figure `figures/border_vacancy.png`.
+- Flag: CoreLogic tax `situs_delivery_point_validation_vacant_indicator` (boolean). National 0.01% check: filled 44% (2012) → 70–86% (2014–23), 1.3–3.1% TRUE among all records. In the border sample: filled 4% (2010), 11% (2011), 51% (2012), 82–88% from 2013. Vacancy = TRUE / filled, per side-year; side-years need ≥ 1000 filled and ≥ 50% fill. 82 pairs (full), 41 balanced.
+- Levels: vacancy falls everywhere, from 2.4–2.9% (2013) to 1.3–1.5% (2024), mostly from 2019 on (tight housing market). The higher-tax side is ~0.4 pp more vacant before 2018 (2017: 2.52 vs 2.10%).
+- TWFE, lower minus higher (pp, 2017 = 0), full: pre −0.05 to +0.11; post +0.02, +0.04, +0.21, +0.14, +0.15, +0.40, +0.40 (SE 0.05–0.27); pooled post +0.15 (0.11). Balanced: post +0.09, +0.25, +0.43, +0.51, +0.56, +0.69, +0.58 (SE 0.07–0.37); pooled +0.38 (0.16). Side levels (balanced): higher-tax side −1.14 pp by 2024 vs lower-tax −0.56.
+- So vacancy fell more on the higher-tax side; the gap closes after 2019. Like sales turnover (§4.21), this is the opposite of a post-SALT exodus from the higher-tax side. Possible confounds: catch-up from the higher starting level (in proportional terms −40% vs −28%, balanced), and the 2020–22 housing-demand shock, which may differ between the more urban higher-tax sides and the rest. Not specific to 2018: the gap starts closing in 2019–20.
+
+### 4.24 Map v2: census tracts and drive-time neighbours (sales 2017–2019)
+- Drive times: UChicago CSDS tract-to-tract driving matrix (OpenTripPlanner; tracts within 100 km; minutes), from the PySAL `access` docs (https://access.readthedocs.io/en/stable/resources.html), Box link `prapz7ac7vwuz44nnab3dhe10vbg55cz.bz2` (420 MB bz2). Stored in `data/external/csds_ttm/`: raw bz2 + `tract_drive_le90.parquet` (pairs ≤ 90 min: 72.9m pairs, 67,777 origin tracts = 2010 tract vintage). Non-numeric minutes (nulls) dropped.
+- Tracts: `cl.tax.census_id` = 6-digit tract + 4-digit block within county (10 chars, filled 93–99% in 2016–2023; national 0.01% check `cluster/j_census_id_check.sql`). Tract GEOID = county FIPS ‖ left(census_id, 6); 2010 vintage in 2017–19, matching the matrix. SOM extract `cluster/j_tract_eff.sql` (1 min on gpunormal): same sales as §4.22, 12.7m sales, 99.8% with a tract, 70.1k tracts, 63.3k with ≥ 30 sales. Local `R/22_tract_drive_differences.R` (env TRACT_MIN, TRACT_NOISE); output `tract_drive_differences_min30[_noise].{txt,csv}`, figures `figures/tract_drive_{max,p90}_diff_min30.png`, `figures/tract_drive_metro_zoom_min30.png` (NY, Chicago).
+- Robust SE of a tract median: 0.035 pp (≥ 30 sales). Tract medians p10/p50/p90 = 0.58/1.13/2.38%.
+- Median over tracts, real vs noise benchmark (pp):
+
+| drive time | neighbours (median) | max diff | max (noise) | p90 diff | p90 (noise) | mean diff | mean (noise) |
+|---|---|---|---|---|---|---|---|
+| 15 min | 12 | 0.31 | 0.10 | 0.23 | 0.07 | 0.13 | 0.04 |
+| 30 min | 63 | 0.62 | 0.18 | 0.36 | 0.09 | 0.19 | 0.05 |
+| 60 min | 301 | 0.98 | 0.30 | 0.49 | 0.10 | 0.25 | 0.05 |
+
+  The 90th-percentile difference is the cleanest measure (noise about a quarter of the real value, flat in T); the max still grows with neighbour count.
+- By state (30 min, median max / p90): NJ 2.76 / 1.70, NY 2.14 / 1.29, CT 1.89 / 1.04, PA 1.65 / 0.98, DC 1.45, IL 1.45 / 0.75, DE, MI, OH ≈ 1.1–1.25. Lowest: UT 0.19, MT, AR, WA, NM, TN, CO ≈ 0.2–0.3.
+- Zooms: northern NJ / Westchester / Long Island show the largest within-30-min spread. In Chicago the hot spot is south Cook County against NW Indiana (rates ≥ 3% vs ~1%). NYC itself is mostly missing (few SFR/condo sales per tract; co-ops are not in the data).
+- **v2b: all tracts, zero-filled** (`TRACT_MIN=1`; outputs `_min1[_noise]`). Every tract with ≥ 1 sale (70.1k) is kept. Tracts in the matrix with no other tract with sales within T minutes get 0 (15/30/60 min: 10,350 / 2,007 / 228 tracts). For n < 10 the IQR in the SE uses the national median IQR. 5,184 tracts (≈ 5% of sales, all states, most in FL) are absent from the CSDS matrix: tract ID not among its 67,777 routable 2010 tracts. They stay missing (not 0), since we can't tell whether they're isolated.
+  - Median over 64.9k tracts (pp), real / noise: p90 diff 0.21/0.07 (15 min), 0.39/0.10 (30), 0.53/0.12 (60); max diff 0.29/0.09, 0.71/0.26, 1.22/0.54; mean 0.12/0.04, 0.20/0.05, 0.28/0.06. With tiny tracts the max is noise-heavy (noise p90 of the max 0.6–1.5 pp). The p90 difference stays clean: use it.
+  - Remaining grey: tracts with no sales, mainly price non-disclosure states (MT, WY, ID, UT, NM, ND and parts of KS, MO) plus the unmatched IDs.
+- **v2c: relative (signed) gap** (same script/outputs; figures `figures/tract_drive_gap_{min,p10}_min1.png`, `figures/tract_drive_gap_metro_zoom_min1.png`). gap_min = own median − lowest neighbour median within T (what moving to the cheapest reachable tract saves; < 0 means own tract is the cheapest); gap_p10 = own − 10th percentile of neighbour medians. 0 if no neighbour. Diverging map, ±2 pp.
+  - Median over tracts (pp), real / noise: gap_min 0.14/0.05 (15 min), 0.42/0.18 (30), 0.70/0.42 (60); gap_p10 0.08/0.03, 0.19/0.05, 0.26/0.06. p90 over tracts of gap_p10: 0.54 / 0.81 / 1.05 (noise 0.18–0.19). The minimum is noise-heavy (it picks the luckiest small tract); gap_p10 is clean, so use it.
+  - Share of tracts with gap > 0.5 pp: gap_min 21/44/65% (noise 9/23/42%); gap_p10 11/20/27% (noise 1%). Own tract is the cheapest reachable: 10/6/2%.
+  - Zooms: Westchester/Rockland, northern NJ, Long Island and Philadelphia are 1–2 pp above the cheap end of their 30-min commute shed. South Cook County is ≥ 2 pp above (NW Indiana within reach).
+
+### 4.25 Local differentials by distance to the nearest state border
+Script `R/23_tract_diff_by_border_distance.R`; output `tract_diff_by_border_distance.{txt,csv}`, figure `figures/tract_diff_by_border_distance.png`. Tracts with any sales 2017–19 (as §4.24, v2b), located at the mean coordinates of their sales; distance to the nearest boundary shared with another state (as R/07). Per tract: mean |own − neighbour median| over tracts within 15/30/60 drive minutes (all, same-state, other-state), then means across tracts by 5-mile bins. 64.0k tracts.
+- 30 min, all neighbours: 0.49 pp (0–5 mi) → 0.43 (5–10) → 0.37 (10–15) → ~0.33 (20–50) → 0.29 (80–100) → 0.16–0.19 (100+ mi). 60 min: 0.62 → 0.64 → 0.55 → 0.45–0.49 (15–30) → ~0.38–0.40 (30–80) → 0.20 (100+). Noise benchmark flat at 0.07–0.11 throughout.
+- The near-border rise is the cross-border pairs. Other-state neighbours differ by ~0.9–1.2 pp (30 min) vs 0.37–0.39 for same-state neighbours of the same tracts. At 0–5 mi, 24% (30 min) / 41% (60 min) of reachable tracts are across a state line. The same-state differential is ~0.05 pp higher near borders than at 20–50 mi.
+- The low level beyond 100 mi is composition (interiors of large, uniform-rate states like TX, CA, FL, AZ, and the West), not distance as such.

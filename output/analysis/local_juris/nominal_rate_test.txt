@@ -1,0 +1,43 @@
+Cells (fips x tac, >= 30 parcels): 5438  parcels: 669087 of 919770 
+slope_med = median slope/published (%); *_5/_10 = % of cells within 5/10% of published; pub_varies_in_cell = share of cells where the published rate itself varies > 2% (MAD/median)
+
+ st cells parcels pub_rate pub_varies_in_cell slope_med slope_5 slope_10
+ NJ   255   21074    2.836               0.00     100.0      87       88
+ MA    14   18635    1.482               0.86      90.1      43       50
+ IL   121   12820   10.282               0.02     280.3      10       12
+ CT    82    9398    3.020               0.07     100.0      96       98
+ FL    27    4018    2.124               0.00      83.0      11       22
+ RI     5    3100    1.845               1.00      78.8      40       40
+ MO    46    3020    8.416               0.17     100.0      50       67
+ NH    42    2726    2.244               0.00     100.0     100      100
+ ME    34    1815    1.761               0.00     100.0     100      100
+ DC     1    1332    0.850               0.00     100.0     100      100
+ PA    12     701    1.008               0.50   43316.6      50       50
+ WA     9     518    1.228               0.00     101.7      78       78
+ NC     6     338    0.865               0.00     100.0     100      100
+ OH     4     199    5.357               0.00      88.3       0       25
+ IN     1     123    2.502               0.00      45.6       0        0
+ ratio_5 p90_5 neg_intercept
+      88    87            49
+      93     7             7
+       0    12            82
+     100    91            54
+      15    19            85
+     100     0            20
+      96    48             9
+     100   100            52
+     100   100            62
+       0   100           100
+      50    50            17
+      78    56            11
+     100   100            67
+       0     0             0
+       0     0           100
+
+IL by county (slope / published rate; Cook's 2016 state equaliser is 2.8032):
+  fips cells slope_over_pub
+ 17031   105          2.803
+ 17111     6          1.000
+ 17143     5          0.934
+ 17091     3          1.000
+ 17201     2          1.000

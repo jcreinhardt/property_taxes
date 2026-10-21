@@ -1,0 +1,70 @@
+Tracts (2010) with >= 1 sales 2017-19; median effective rate (%); |differences| to tracts within T drive minutes (pp)
+tracts with no neighbour within T (set to 0), 15/30/60 min: 10350 2007 228 | absent from matrix (missing): 5184 
+tracts: 70099 | median SE of a tract median: 0.039 pp | tract medians p10/p50/p90: 0.57 1.12 2.38 
+
+ minutes tracts nb_median max_p50 max_p90 p90diff_p50 mean_p50 mean_p90
+      15  64915        10    0.29    1.53        0.21     0.12     0.48
+      30  64915        68    0.71    2.87        0.39     0.20     0.68
+      60  64915       331    1.22    4.21        0.53     0.28     0.88
+
+Relative gap: own median - neighbours' min (gap_min) or 10th pct (gap_p10), pp; share of tracts with gap > 0.5 pp
+ minutes tracts gmin_p10 gmin_p50 gmin_p90 gp10_p10 gp10_p50 gp10_p90
+      15  64915     0.00     0.14     0.89    -0.03     0.08     0.54
+      30  64915     0.01     0.42     1.53    -0.03     0.19     0.81
+      60  64915     0.15     0.70     1.96    -0.01     0.26     1.05
+ sh_gmin_gt05 sh_gp10_gt05 sh_cheapest
+         0.21         0.11        0.10
+         0.44         0.20        0.06
+         0.65         0.27        0.02
+
+By state, 30 min: median over tracts (pp), states with >= 100 tracts, by max_diff
+ st tracts max_diff p90_diff mean_diff
+ NY   4360     2.92     1.07      0.54
+ NJ   1954     2.86     1.79      0.86
+ CT    799     2.47     1.20      0.61
+ PA   3050     1.87     1.05      0.53
+ IL   2912     1.80     0.86      0.42
+ DC    175     1.45     0.82      0.35
+ MI   2355     1.39     0.78      0.39
+ OH   2741     1.39     0.68      0.32
+ DE    195     1.37     0.44      0.26
+ TX   4768     1.00     0.56      0.28
+ MD   1349     0.94     0.60      0.28
+ RI    235     0.94     0.69      0.36
+ WI   1244     0.82     0.57      0.30
+ HI    268     0.81     0.05      0.05
+ MS    348     0.76     0.59      0.38
+ MO   1201     0.76     0.38      0.19
+ NH    269     0.71     0.59      0.26
+ KS    473     0.69     0.33      0.15
+ CA   7685     0.66     0.28      0.14
+ LA    998     0.65     0.34      0.17
+ IN   1384     0.64     0.37      0.20
+ SC    979     0.64     0.40      0.21
+ MA   1429     0.60     0.37      0.18
+ FL   3453     0.55     0.29      0.15
+ IA    700     0.54     0.42      0.23
+ OK    966     0.51     0.27      0.13
+ NE    467     0.50     0.34      0.17
+ GA   1759     0.49     0.30      0.15
+ VA   1748     0.49     0.26      0.11
+ NV    633     0.46     0.23      0.12
+ VT    154     0.46     0.38      0.24
+ ME    270     0.43     0.37      0.22
+ OR    748     0.41     0.28      0.15
+ KY    823     0.40     0.24      0.15
+ MN   1185     0.40     0.24      0.12
+ AL    951     0.39     0.31      0.16
+ NC   2000     0.38     0.27      0.14
+ AZ   1382     0.36     0.22      0.11
+ WV    394     0.36     0.23      0.13
+ ID    252     0.35     0.24      0.12
+ CO   1137     0.32     0.14      0.07
+ NM    355     0.31     0.19      0.09
+ TN   1338     0.31     0.26      0.15
+ ND    152     0.26     0.14      0.08
+ WA   1345     0.26     0.16      0.08
+ AR    576     0.24     0.18      0.11
+ AK    101     0.22     0.16      0.09
+ UT    529     0.21     0.12      0.06
+ MT    149     0.20     0.15      0.07
