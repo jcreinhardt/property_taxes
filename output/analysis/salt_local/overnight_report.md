@@ -23,12 +23,11 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
      jurisdictions, there is no clear break. **But exposure is strongly correlated with income (0.75).** Controlling for
      the county's high-income share, the school-district slowdown loads on income rather than SALT exposure. Only the
      county-government slowdown stays exposure-specific (−0.76%/yr per SD, SE 0.40).
-   - **Border design:** school districts with a cheaper district across a nearby state line lost **2.2% (SE 1.0)** of
-     property-tax revenue relative after 2017, rising to about 3% by 2020–23. Pre-trends are flat, the
-     randomisation-inference p is 0.04, and dropping any single border pair leaves it between −1.7% and −2.6%. The margin
-     is nominal rates, not assessed values (CoreLogic parcels). 2SLS: about −6% revenue per pp of outside-option gap.
-     But the effect has **no clear SALT dose-response**: it is not larger with county, state, ZIP or SES-based exposure.
-     The finest (ZIP) test points the right way, −0.9% per SD on the high side (SE 0.6), but is not significant.
+   - **Border design:** school districts with a cheaper district across a nearby state line lost 2.2% (SE 1.0) of
+     property-tax revenue relative after 2017 (RI p = 0.04; robust to dropping any pair or state; via nominal rates).
+     **But a placebo split shows it is not a SALT effect.** At borders where both states have low SALT exposure (OK-TX,
+     KY-OH, IN-OH, AL-GA …) the decline is −4.2% (1.6) and already starts in 2015–16. At borders involving a high-SALT
+     state it is −0.5% (1.4), essentially zero. No exposure measure (county, state, ZIP, SES) gives a dose-response either.
 3. **(b) Dispersion.** No compression of tax levels: within metros, within counties, across tax areas, across tracts, or
    between adjacent districts on either side of state lines. If anything, dispersion across school districts widens
    slightly in exposed metros (+2% of the mean SD).
@@ -120,9 +119,13 @@ $5k or $10k); county or district + state × year FE.
 - **County-government version:** exposure × border-high county 2019 −1.8% (0.6), 2021–22 −1.7 to −1.9% (≈ 1.0)
   (`a2_revenue_outside_option.txt`).
 
-**Reading.** After 2017, jurisdictions with a cheaper option across a nearby state line cut rates and fell behind in
-levies. The timing fits a higher after-tax cost of high local taxes, but the weak dose-response means I can't separate SALT
-from a general post-2017 increase in cross-border competition (remote work, outflows from high-tax states).
+- **Placebo by pair SALT level (decisive):** pairs where both states are low-SALT (32 pairs, 287 near-high districts):
+  −4.2% (1.6), with 2015–16 already −2.5/−2.7% and 2018–23 −3.4 to −6.8%. Pairs involving a higher-SALT state (29 pairs,
+  492 districts): −0.5% (1.4), all years within ±1.6%.
+
+**Reading.** High-side districts at state borders did lose levy share, but at low-SALT borders, starting before 2017, and
+not at the borders where the cap bit. The border design therefore finds **no SALT-cap effect on revenue**. The
+instrument itself stays useful: strong first stage, no school confound, balanced.
 
 ## 5. (b) Dispersion of tax levels
 
@@ -189,8 +192,9 @@ own minus the cheapest adjacent district, and, for state-line districts, own min
 
 ## 9. Caveats, process notes, next steps
 
-- **Identification.** Exposure designs rely on few large counties and overlap COVID. The border design is clean on
-  observables, but its revenue effect has no significant SALT dose-response.
+- **Identification.** Exposure designs rely on few large counties, are confounded by income, and overlap COVID. The
+  border design is clean on observables, and its revenue effect turns out to come from low-SALT borders with a
+  pre-2017 start.
 - **Measurement.** Tract-level CoreLogic levies are noisy because roll composition changes (filtered to tracts with
   stable parcel counts). The SOI exposure is a stub-average approximation.
 - **Compute.** SOM gave us only lowest priority all night, and its estimates for the full-roll extract slipped to
@@ -201,7 +205,7 @@ own minus the cheapest adjacent district, and, for state-line districts, own min
      not sample size, limits precision), ideally with an income-adjusted exposure measured at the parcel level.
   2. Separate SALT from income: compare ZIPs with similar income but different state and local tax burdens, e.g. via the
      2018 SOI "limited SALT" amounts (the actually binding deduction) or state income-tax rates × income.
-  3. Separate the border revenue result by state school-finance regime (levy caps such as the NJ 2% cap, NY tax cap,
-     IL PTELL). Leave-one-state-out already shows it is not driven by any single state.
-  4. A better placebo than within-state county lines (too dense to be informative): e.g. state borders between two
-     low-SALT states, or the same design for 2008–2013 with older Census of Governments files.
+  3. Understand the low-SALT-border decline (oil-state and Midwestern pairs; starts 2015): e.g. the 2015–16 oil bust and
+     school-finance reforms.
+  4. Use the border instrument where it has power for SALT: interact it with household itemisation (Data Axle income /
+     CoreLogic bills) rather than area exposure.

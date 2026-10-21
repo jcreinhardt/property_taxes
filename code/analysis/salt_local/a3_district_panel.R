@@ -159,3 +159,16 @@ loso <- rbindlist(lapply(sts, \(s0) { x <- dd[!grepl(s0, pair)]; if (uniqueN(x[n
 sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
 cat("\n== Leave-one-state-out (pooled near x high x post): range", round(range(loso$est), 4), "\n"); print(loso[order(est)][c(1:4, (.N - 3):.N)])
 sink()
+# Placebo by pair SALT level: pairs where both states have below-median state exposure ("low-SALT pairs") vs the rest
+pp2 <- unique(dd2[, .(pair, ex_a, ex_b)])[, mx := pmax(ex_a, ex_b)]
+medmx <- median(pp2$mx); lowp <- pp2[mx <= medmx, pair]
+spl <- rbindlist(lapply(c("low-SALT pairs (both states below median)", "other pairs"), \(g) {
+  x <- if (grepl("^low", g)) dd[pair %in% lowp] else dd[!pair %in% lowp]
+  m <- feols(lpt ~ nh:post | leaid + pair^high^y + pair^dbin^y, x, cluster = ~conum)
+  me <- feols(lpt ~ i(y, nh, ref = 2017) | leaid + pair^high^y + pair^dbin^y, x, cluster = ~conum)
+  data.table(group = g, pairs = uniqueN(x$pair), nh_districts = uniqueN(x[nh == 1, leaid]), est = coef(m)[1], se = se(m)[1],
+             es = paste(sprintf("%s:%.3f", sub("y::(\\d+):nh", "\\1", names(coef(me))), coef(me)), collapse = " ")) }))
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== Placebo split by pair SALT level (state return-weighted exposure; low-SALT = both states <= median of pair maxima)\n"); print(spl[, .(group, pairs, nh_districts, est = round(est, 4), se = round(se, 4))]); cat(spl$es, sep = "\n")
+cat("low-SALT pairs:", paste(lowp, collapse = " "), "\n")
+sink()

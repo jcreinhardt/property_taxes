@@ -270,3 +270,12 @@ pooled post (nx = near x exposure both sides; nhx = extra on the high side):
 6:         LA -0.01911958 0.01032035
 7:         TX -0.01585679 0.01022967
 8:         OK -0.01381142 0.01040262
+
+== Placebo split by pair SALT level (state return-weighted exposure; low-SALT = both states <= median of pair maxima)
+                                       group pairs nh_districts     est     se
+                                      <char> <int>        <int>   <num>  <num>
+1: low-SALT pairs (both states below median)    32          287 -0.0424 0.0155
+2:                               other pairs    29          492 -0.0054 0.0137
+2012:0.002 2013:-0.004 2014:0.001 2015:-0.025 2016:-0.027 2018:-0.034 2019:-0.039 2020:-0.061 2021:-0.048 2022:-0.059 2023:-0.068
+2012:-0.010 2013:0.003 2014:0.002 2015:-0.007 2016:0.011 2018:-0.002 2019:0.000 2020:-0.008 2021:-0.016 2022:-0.001 2023:-0.007
+low-SALT pairs: AL-FL AL-GA AL-MS AL-TN AR-MO AR-OK DE-PA FL-GA GA-SC GA-TN ID-WA IN-KY IN-MI IN-OH IA-NE KS-MO KY-OH KY-TN LA-MS LA-TX ME-NH MI-OH AR-MS MS-TN AZ-NV NM-TX OH-PA OH-WV OK-TX PA-WV NC-SC IA-SD 
