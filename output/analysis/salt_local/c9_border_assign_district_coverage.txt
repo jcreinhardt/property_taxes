@@ -1,0 +1,66 @@
+== A. Border-pair assignment (tracts with sales, drive data and controls: 63978 )
+Current rule: nearest line of any pair involves another pair of states: 93 | own pair, but a side has < 20 tracts within 20 mi: 6535 | kept: 57350 
+  of the 'other pair' tracts, within 10 mi of a border: 0 | median distance (mi): 90.3 
+  pairs with a side < 20 tracts: AR-LA AR-TX AZ-NM AZ-UT CO-KS CO-NE CO-NM CO-UT CO-WY GA-NC IA-MO IA-WI ID-MT ID-NV ID-OR ID-UT ID-WY KS-NE KS-OK KY-MO KY-WV MN-SD MO-NE MO-OK MO-TN MT-ND MT-WY ND-SD NE-SD NE-WY NV-UT SD-WY UT-WY 
+Own-state nearest line, rank with >= 5 tracts per side within 20 mi: kept 60982 tracts, 90 pairs | no internal border (none): 0 | side < 5 tracts: 2996 
+  pairs still unranked: AZ-NM AZ-UT CO-KS CO-UT ID-NV KS-OK MO-NE MT-ND MT-WY ND-SD NV-UT SD-WY UT-WY 
+  tracts that change pair vs current rule (among those kept by both): 0 
+  kept within 50 mi: 35082 (current rule: 33192 )
+
+== B. School districts per parcel (1% residential sample, lower 48 + DC)
+parcels: 941602 | with coordinates: 890095 (94.5%) 
+   unified elementary secondary elem+sec (dual system) any polygon
+     <num>      <num>     <num>                  <num>       <num>
+1:   93.08       6.91      6.67                   6.67       99.99
+   any real district (not 'not defined') CoreLogic school_dist field
+                                   <num>                       <num>
+1:                                 99.94                       64.17
+States with < 99% of parcels in a real district polygon:
+       st     n pct_real pct_poly
+   <char> <int>    <num>    <num>
+1:     AZ 22676     98.1      100
+
+Parcels matched to an instrument-sample tract (via CoreLogic tract id): 593345 
+   in a real district tract has assigned leaid parcel district == tract's leaid
+                <num>                    <num>                            <num>
+1:              99.94                    99.97                            94.98
+Tracts (with >= 1 sampled parcel) whose sampled parcels fall in > 1 district: 13.1 %
+
+== C. Shapefile universe
+TIGER cb 2019 polygons: unified 10885 | elementary 1946 | secondary 482 | of which 'not defined' pseudo-districts: 18 
+F-33 FY2016 districts with enrolment (lower 48 + DC): 13412 | with a TIGER polygon: 12962 (96.6% of districts, 99.3% of enrolment, 99.7% of property-tax revenue) 
+F-33 districts without a polygon, by school level code (schlev) — largest groups:
+   schlev     n    enr   ptax
+   <char> <int>  <num>  <num>
+1:     05   125 154453  71166
+2:     03    96 121623 454465
+3:     01   192  45732   9531
+4:     02    37  16752   1444
+      leaid                                                   name   enr   ptax
+     <char>                                                 <char> <num>  <num>
+ 1: 0601330                           MODESTO CITY SCHOOL DISTRICT 30372  63866
+ 2: 0601329                                SANTA ROSA CITY SCHOOLS 16717 104229
+ 3: 0691035                SANTA CLARA CO SPL SCHS OPER BY CO SUPT 10795      0
+ 4: 4700147                            ACHIEVEMENT SCHOOL DISTRICT 10322      0
+ 5: 0691026                  RIVERSIDE CO SPL SCHS OPER BY CO SUPT  8368      0
+ 6: 0601328                                  PETALUMA CITY SCHOOLS  7789  39844
+ 7: 0691078                        LOS ANGELES CO OFF OF EDUCATION  7687      0
+ 8: 0601327                        SANTA CRUZ CITY SCHOOL DISTRICT  6937  47179
+ 9: 3621000                  NORTH COLONIE CENTRAL SCHOOL DISTRICT  5513  72988
+10: 0691024                  ORANGE COUNTY DEPARTMENT OF EDUCATION  5037      0
+11: 1001280 NEW CASTLE COUNTY VOCATIONAL-TECHNICAL SCHOOL DISTRICT  4698  29453
+12: 2200125                      CENTRAL COMMUNITY SCHOOL DISTRICT  4671   8109
+    schlev
+    <char>
+ 1:     03
+ 2:     03
+ 3:     05
+ 4:     03
+ 5:     05
+ 6:     03
+ 7:     05
+ 8:     03
+ 9:     03
+10:     05
+11:     05
+12:     03

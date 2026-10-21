@@ -2093,3 +2093,21 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - In 76% of pairs the high-rate side has the lower state-aid share. In 69% it raises more property tax per pupil.
   - The size of the gap is unrelated to the aid-share difference (R² 0.001, slope −0.001 pp per pp of aid share). Property tax per pupil explains 12%.
   - So school finance goes in the right direction but does not account for the size of the rate gaps.
+- **Coverage checks** (`salt_local/c9_border_assign_district_coverage.R`).
+  - **Border-pair step.** The current rule (R/26) loses 6,628 of 63,978 tracts.
+    - 93 tracts: the nearest boundary line belongs to another pair of states. All are ≥ 10 mi out, median 90 mi.
+    - 6,535 tracts: a side has < 20 tracts within 20 mi, which rules out 33 mostly western/Plains pairs.
+  - **Alternative rule:** nearest line among the own state's pairs, and rank sides with ≥ 5 tracts within 20 mi.
+    - Keeps 60,982 tracts in 90 pairs. 13 sparse western pairs stay unranked (2,996 tracts).
+    - No tract kept by both rules changes pair.
+    - Within 50 mi: 35,082 vs 33,192.
+    - Saved to `data/local_juris/iv_tract_side_ownstate.rds`.
+  - **School districts per parcel** (1% residential sample, lower 48 + DC).
+    - 94.5% of parcels have coordinates. 99.94% of those fall in a real TIGER cb 2019 district polygon (AZ 98.1%).
+    - Unified 93.1%; elementary 6.9%; secondary 6.7%. Elementary + secondary ("dual" systems) cover 6.7%, and the tract-level `leaid` keeps only the elementary layer.
+    - CoreLogic's own `school_dist` field covers 64%.
+    - In instrument-sample tracts: the parcel's district equals the tract's assigned `leaid` for 95.0% of parcels. 13.1% of tracts have sampled parcels in > 1 district.
+  - **Shapefile universe.**
+    - TIGER cb 2019 has 10,885 unified, 1,946 elementary and 482 secondary polygons (18 "not defined").
+    - Of F-33 FY2016 districts with enrolment (lower 48 + DC), 96.6% have a polygon, covering 99.3% of enrolment and 99.7% of property-tax revenue.
+    - Missing ones are mostly non-geographic agencies (county offices, vocational, state-run) plus a few CA city districts whose TIGER geography is coded under a different LEAID (Modesto, Santa Rosa, Petaluma, Santa Cruz city schools: separate elementary/high LEAIDs in F-33).
