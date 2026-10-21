@@ -1,0 +1,170 @@
+y,coef,se,outcome,design
+2013,-0.0156116170668696,0.00694166232182591,log bill,county exposure
+2014,-0.00751580304279181,0.00224220459092937,log bill,county exposure
+2015,-0.00430928357960611,0.00234181578377764,log bill,county exposure
+2016,-0.0016031658634271,0.00124203687817662,log bill,county exposure
+2018,0.0019776553436627,0.00119787287174727,log bill,county exposure
+2019,0.00253081189713312,0.00193566861248657,log bill,county exposure
+2020,0.00444943822966041,0.00182100567942114,log bill,county exposure
+2021,0.0023610547669742,0.0021818781829864,log bill,county exposure
+2022,0.00242049626026693,0.00238356883027108,log bill,county exposure
+2023,0.00428444342693972,0.00241049564283327,log bill,county exposure
+2024,0.00356074532359146,0.00253728088861309,log bill,county exposure
+2025,0.00227522925413065,0.00318518380391399,log bill,county exposure
+2013,-0.00491529579589555,0.002570579423683,log AV,county exposure
+2014,-0.00704118643976459,0.00293890282413994,log AV,county exposure
+2015,-0.00502138093477936,0.00121405358679951,log AV,county exposure
+2016,-0.00233086205187241,0.000830048509764742,log AV,county exposure
+2018,0.00320515793741494,0.000849660832650383,log AV,county exposure
+2019,0.00471908508761474,0.00224374321936192,log AV,county exposure
+2020,0.0083656444215642,0.00266748217898454,log AV,county exposure
+2021,0.0075349165574272,0.00307878112696908,log AV,county exposure
+2022,0.00713038008729711,0.00311544140934963,log AV,county exposure
+2023,0.00725847541287435,0.0028173027441367,log AV,county exposure
+2024,0.0053303361756887,0.00276904280792125,log AV,county exposure
+2025,0.00290334643800525,0.00271765074833574,log AV,county exposure
+2013,-0.010696321270958,0.00664031058758624,log nominal rate,county exposure
+2014,-0.000474616603028198,0.00273771258166421,log nominal rate,county exposure
+2015,0.000712097355176802,0.00194123960751894,log nominal rate,county exposure
+2016,0.000727696188442054,0.00107228284239052,log nominal rate,county exposure
+2018,-0.00122750259375121,0.000962716666119447,log nominal rate,county exposure
+2019,-0.00218827319047731,0.00156302880214757,log nominal rate,county exposure
+2020,-0.00391620619190579,0.00235030189148332,log nominal rate,county exposure
+2021,-0.00517386179045559,0.00257154472257318,log nominal rate,county exposure
+2022,-0.00470988382702722,0.00267428161015187,log nominal rate,county exposure
+2023,-0.00297403198592595,0.00213100297133663,log nominal rate,county exposure
+2024,-0.00176959085209198,0.0022568876412803,log nominal rate,county exposure
+2025,-0.00062811718387031,0.00268115688099274,log nominal rate,county exposure
+2013,-0.00221491857345727,0.00380577816078773,log sale price,county exposure
+2014,-0.00165052828393609,0.00494902832419714,log sale price,county exposure
+2015,0.000635184499220959,0.0030047653872514,log sale price,county exposure
+2016,0.000485491942168958,0.00406431882714916,log sale price,county exposure
+2018,-0.00579434091466149,0.00298888046999523,log sale price,county exposure
+2019,-0.000403422009388568,0.00228124531524782,log sale price,county exposure
+2020,-0.00700577557311528,0.00218559326104901,log sale price,county exposure
+2021,-0.0163995802239103,0.00315540472389682,log sale price,county exposure
+2022,-0.0133869743887898,0.00272010275859667,log sale price,county exposure
+2023,-0.0202498835425676,0.0029429037954586,log sale price,county exposure
+2024,-0.0207534091048952,0.00406564868275204,log sale price,county exposure
+2025,-0.0198338081731411,0.00310291502243149,log sale price,county exposure
+2013,-0.0079416956550438,0.00471992759650136,log effective rate (| log price),county exposure
+2014,0.00130761103633585,0.00367116209012101,log effective rate (| log price),county exposure
+2015,-0.00710018706276686,0.00319729096220234,log effective rate (| log price),county exposure
+2016,-0.001612233391229,0.00298604006150796,log effective rate (| log price),county exposure
+2018,0.00318978463844718,0.00258763858849209,log effective rate (| log price),county exposure
+2019,-0.000522005370515843,0.00261563551982749,log effective rate (| log price),county exposure
+2020,0.0111318256711056,0.00273649617254497,log effective rate (| log price),county exposure
+2021,0.0186067993815738,0.00245568142784265,log effective rate (| log price),county exposure
+2022,0.0142004061542521,0.0031755742444366,log effective rate (| log price),county exposure
+2023,0.0208649873237897,0.00458446201031288,log effective rate (| log price),county exposure
+2024,0.0227613314491696,0.00331858439490475,log effective rate (| log price),county exposure
+2025,0.0169222012722189,0.00449809282095563,log effective rate (| log price),county exposure
+2013,1.94020874601207e-05,0.0049672080797773,log assessment ratio (| log price),county exposure
+2014,0.000243246637348794,0.00586291969104445,log assessment ratio (| log price),county exposure
+2015,-0.0091344323436419,0.00363919011663959,log assessment ratio (| log price),county exposure
+2016,-0.00772160111411473,0.00486854532746145,log assessment ratio (| log price),county exposure
+2018,0.000253337552958092,0.00232738759610131,log assessment ratio (| log price),county exposure
+2019,0.00213389548501157,0.00382838899065477,log assessment ratio (| log price),county exposure
+2020,0.0142910517477161,0.00458218136209609,log assessment ratio (| log price),county exposure
+2021,0.0231071322182953,0.00448656587509835,log assessment ratio (| log price),county exposure
+2022,0.0164118299170152,0.00577130937766645,log assessment ratio (| log price),county exposure
+2023,0.0199083708000015,0.00531603302767749,log assessment ratio (| log price),county exposure
+2024,0.0210438804222046,0.0045989710214881,log assessment ratio (| log price),county exposure
+2025,0.014997821598181,0.00552604823863164,log assessment ratio (| log price),county exposure
+2013,0.00112744404425958,0.000310401301337933,regressivity: d slope of log ratio on log price,county exposure
+2014,0.00113462273432457,0.000337623533171449,regressivity: d slope of log ratio on log price,county exposure
+2015,0.000451233080140516,0.000279238634016537,regressivity: d slope of log ratio on log price,county exposure
+2016,0.000635002573391655,0.000350650691722553,regressivity: d slope of log ratio on log price,county exposure
+2018,0.00102171201003367,0.000197826325686805,regressivity: d slope of log ratio on log price,county exposure
+2019,0.00103881399252884,0.000319272121382904,regressivity: d slope of log ratio on log price,county exposure
+2020,0.00164758921326411,0.000324026004942654,regressivity: d slope of log ratio on log price,county exposure
+2021,0.00267021957668599,0.000390250032322952,regressivity: d slope of log ratio on log price,county exposure
+2022,0.00218807492474171,0.000493777415610436,regressivity: d slope of log ratio on log price,county exposure
+2023,0.00249775433817764,0.000411686273368514,regressivity: d slope of log ratio on log price,county exposure
+2024,0.00269001341141012,0.000382144019358526,regressivity: d slope of log ratio on log price,county exposure
+2025,0.00221180468863219,0.000484142548442861,regressivity: d slope of log ratio on log price,county exposure
+2013,0.0419942338207042,0.018524575051026,log bill,border DDD (near x high)
+2014,0.0110573976682869,0.012956805456814,log bill,border DDD (near x high)
+2015,0.0102710400947982,0.00941262308282218,log bill,border DDD (near x high)
+2016,0.00436556929891568,0.00883896784565693,log bill,border DDD (near x high)
+2018,-0.0276160088060524,0.0106374634693471,log bill,border DDD (near x high)
+2019,-0.0196181105813319,0.0116910082452299,log bill,border DDD (near x high)
+2020,-0.00722052533468449,0.00808043466469158,log bill,border DDD (near x high)
+2021,-0.0156997008840324,0.0114787064383788,log bill,border DDD (near x high)
+2022,-0.0185627352296432,0.0104924660634462,log bill,border DDD (near x high)
+2023,-0.026224761934816,0.0151020332992885,log bill,border DDD (near x high)
+2024,-0.0320207075779925,0.0166985740483891,log bill,border DDD (near x high)
+2025,-0.044369025662933,0.022495567067241,log bill,border DDD (near x high)
+2013,0.157584965425507,0.0885269303173554,log AV,border DDD (near x high)
+2014,-0.0399930767214929,0.0399248598636365,log AV,border DDD (near x high)
+2015,-0.0495486341214572,0.0324906818888207,log AV,border DDD (near x high)
+2016,-0.00156392765782505,0.00453093029375458,log AV,border DDD (near x high)
+2018,-0.00883884451789803,0.00399038022229653,log AV,border DDD (near x high)
+2019,0.0152916489088477,0.01406576550336,log AV,border DDD (near x high)
+2020,0.0232365766999512,0.0242525051189277,log AV,border DDD (near x high)
+2021,0.00785563048940986,0.0233053131488457,log AV,border DDD (near x high)
+2022,0.00301064325256167,0.0268519869504266,log AV,border DDD (near x high)
+2023,-0.031741677822273,0.0228158668621507,log AV,border DDD (near x high)
+2024,-0.015065268086516,0.0259146049657181,log AV,border DDD (near x high)
+2025,-0.0326494358669708,0.0347511362417595,log AV,border DDD (near x high)
+2013,-0.115590731604887,0.0803860329419261,log nominal rate,border DDD (near x high)
+2014,0.051050474389719,0.0422730638587309,log nominal rate,border DDD (near x high)
+2015,0.0598196742161842,0.0343095383698126,log nominal rate,border DDD (near x high)
+2016,0.0059294969566871,0.00949666811677713,log nominal rate,border DDD (near x high)
+2018,-0.0187771642882165,0.0109164931920745,log nominal rate,border DDD (near x high)
+2019,-0.0349097594902374,0.0177659801576515,log nominal rate,border DDD (near x high)
+2020,-0.0304571020346908,0.0245128729956846,log nominal rate,border DDD (near x high)
+2021,-0.023555331373504,0.0238576035033822,log nominal rate,border DDD (near x high)
+2022,-0.0215733784822621,0.0281451094327624,log nominal rate,border DDD (near x high)
+2023,0.00551691588735373,0.0212082230987052,log nominal rate,border DDD (near x high)
+2024,-0.0169554394915493,0.0247053271803336,log nominal rate,border DDD (near x high)
+2025,-0.0117195897960238,0.027308441950648,log nominal rate,border DDD (near x high)
+2013,-0.0833875202357587,0.0406900897535477,log sale price,border DDD (near x high)
+2014,0.0175889295498303,0.0360432954353026,log sale price,border DDD (near x high)
+2015,0.0264983415919799,0.033394713529535,log sale price,border DDD (near x high)
+2016,-0.00993026132791078,0.0320263612693034,log sale price,border DDD (near x high)
+2018,-0.0225848884366658,0.0305892747635619,log sale price,border DDD (near x high)
+2019,0.0299060240605475,0.0343479654753182,log sale price,border DDD (near x high)
+2020,-0.00542830713165461,0.0316204591045363,log sale price,border DDD (near x high)
+2021,-0.0128077855485847,0.031419975585054,log sale price,border DDD (near x high)
+2022,-0.00309628120176428,0.0309049644503807,log sale price,border DDD (near x high)
+2023,-0.0529831759591966,0.0379435736221311,log sale price,border DDD (near x high)
+2024,-0.00121228460850426,0.0341893478530638,log sale price,border DDD (near x high)
+2025,-0.0229952463695758,0.0405731776970984,log sale price,border DDD (near x high)
+2013,0.076551365942778,0.0333252363881666,log effective rate (| log price),border DDD (near x high)
+2014,-0.0160964208889493,0.0302992784051426,log effective rate (| log price),border DDD (near x high)
+2015,0.044419972666454,0.0281476409018909,log effective rate (| log price),border DDD (near x high)
+2016,0.0195610281448102,0.0289805258608669,log effective rate (| log price),border DDD (near x high)
+2018,-0.0146660858185881,0.0296067948619233,log effective rate (| log price),border DDD (near x high)
+2019,0.00493608747690851,0.030818347188974,log effective rate (| log price),border DDD (near x high)
+2020,0.00962616605414591,0.0253098361373554,log effective rate (| log price),border DDD (near x high)
+2021,0.0176831547060199,0.0289284278642049,log effective rate (| log price),border DDD (near x high)
+2022,-0.0061523203145785,0.0275190830125478,log effective rate (| log price),border DDD (near x high)
+2023,-0.0157900458385377,0.0346469041944443,log effective rate (| log price),border DDD (near x high)
+2024,-0.00335061417539858,0.0322043658143115,log effective rate (| log price),border DDD (near x high)
+2025,0.033794997761702,0.0468772310580801,log effective rate (| log price),border DDD (near x high)
+2013,0.204052023716696,0.0974266645125322,log assessment ratio (| log price),border DDD (near x high)
+2014,-0.0328077097859752,0.0611417845978886,log assessment ratio (| log price),border DDD (near x high)
+2015,-0.0351468124407456,0.0510075970395906,log assessment ratio (| log price),border DDD (near x high)
+2016,0.0355839259313275,0.0254332983090585,log assessment ratio (| log price),border DDD (near x high)
+2018,-0.00570004843510186,0.0248198391291287,log assessment ratio (| log price),border DDD (near x high)
+2019,0.0376464640203351,0.0321434194900856,log assessment ratio (| log price),border DDD (near x high)
+2020,0.0783266864861168,0.0402596909188656,log assessment ratio (| log price),border DDD (near x high)
+2021,0.0459001882816248,0.038415003936042,log assessment ratio (| log price),border DDD (near x high)
+2022,0.0516533490810593,0.0476358250732412,log assessment ratio (| log price),border DDD (near x high)
+2023,0.0437723796130698,0.039672876982767,log assessment ratio (| log price),border DDD (near x high)
+2024,-0.0133785228834827,0.0414737254152825,log assessment ratio (| log price),border DDD (near x high)
+2025,-0.00630789586104786,0.0522747508212252,log assessment ratio (| log price),border DDD (near x high)
+2017,0,0,log bill,county exposure
+2017,0,0,log AV,county exposure
+2017,0,0,log nominal rate,county exposure
+2017,0,0,log sale price,county exposure
+2017,0,0,log effective rate (| log price),county exposure
+2017,0,0,log assessment ratio (| log price),county exposure
+2017,0,0,regressivity: d slope of log ratio on log price,county exposure
+2017,0,0,log bill,border DDD (near x high)
+2017,0,0,log AV,border DDD (near x high)
+2017,0,0,log nominal rate,border DDD (near x high)
+2017,0,0,log sale price,border DDD (near x high)
+2017,0,0,log effective rate (| log price),border DDD (near x high)
+2017,0,0,log assessment ratio (| log price),border DDD (near x high)

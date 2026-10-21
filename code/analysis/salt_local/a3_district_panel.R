@@ -114,3 +114,25 @@ cat("\n== Pooled near x high x post (FY2018+):", round(coef(m0)[1], 4), "(", rou
 cat("near-high district-years by pair (top 10):\n"); print(head(nhp, 10))
 cat("leave-one-pair-out range:", round(range(loo$est), 4), "| most influential:\n"); print(loo[order(est)][c(1:3, (.N - 2):.N)])
 sink()
+# 2SLS: post x (district outside-option gap, mean tract tax_gap at 30 min, pp) instrumented by post x near x high
+ivg <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30 & !is.na(leaid), .(gap30 = weighted.mean(tax_gap, pop, na.rm = TRUE),
+  xch30 = weighted.mean(x_cheap, pop, na.rm = TRUE)), by = leaid]
+dd3 <- merge(dd, ivg, by = "leaid")
+fsd <- feols(gap30 ~ nh | pair^high + pair^dbin, unique(dd3[, .(leaid, gap30, nh, pair, high, dbin, conum)]), cluster = ~conum)
+iv1 <- feols(lpt ~ 1 | leaid + pair^high^y + pair^dbin^y | I(post * gap30) ~ I(post * nh), dd3, cluster = ~conum)
+iv2 <- feols(lpt ~ 1 | leaid + pair^high^y + pair^dbin^y | I(post * xch30) ~ I(post * nh), dd3, cluster = ~conum)
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== District first stage: outside-option gap (pp, 30 min) on near x high:", round(coef(fsd)[1], 3), "(", round(se(fsd)[1], 3), ") F =", round(fitstat(fsd, "wald")[[1]]$stat, 1), "\n")
+cat("2SLS log property tax on post x gap30 (per pp of gap):", round(coef(iv1)[1], 4), "(", round(se(iv1)[1], 4), ")\n")
+cat("2SLS log property tax on post x share of population with a cheaper cross-border tract:", round(coef(iv2)[1], 4), "(", round(se(iv2)[1], 4), ")\n")
+sink()
+# Heterogeneity by district SES (SEDA 4.1 pooled SES; higher SES ~ more itemizers above the cap)
+cov <- fread(file.path(ROOT, "data/external/seda41/seda_cov_geodist_pool_4.1.csv"), colClasses = c(sedalea = "character"))
+sescol <- intersect(c("sesall", "sesavgall", "ses_all"), names(cov))[1]
+cov <- cov[, .(leaid = sprintf("%07d", as.integer(sedalea)), ses = get(sescol))]
+dd4 <- merge(dd, cov, by = "leaid")[, ses_z := (ses - mean(ses, na.rm = TRUE)) / sd(ses, na.rm = TRUE)]
+mh <- feols(lpt ~ i(y, nh, ref = 2017) + i(y, I(nh * ses_z), ref = 2017) + i(y, ses_z, ref = 2017) | leaid + pair^high^y + pair^dbin^y, dd4, cluster = ~conum)
+sink(file.path(OUT, "a3_district_panel.txt"), append = TRUE)
+cat("\n== Heterogeneity by district SES (SD units; SES x year slopes control common SES trends)\n")
+print(as.data.frame(as.data.table(coeftable(mh), keep.rownames = "term")[grepl("ses", term), .(term, est = round(Estimate, 4), se = round(`Std. Error`, 4))]), row.names = FALSE)
+sink()

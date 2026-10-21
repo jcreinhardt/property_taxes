@@ -1984,3 +1984,19 @@ Data `R/24_iv_tract_data.R` → `data/local_juris/iv_tract.parquet` (69.2k tract
 - So no compression in exposed metros. If anything, enrollment-weighted dispersion widens slightly (+0.7 log points per SD ≈ 2% of the mean by 2021–23). National average within-CBSA dispersion is flat 2012–23.
 - District border DDD, pooled: near × high × post (FY2018+) −2.2% (SE 1.0). Leave-one-pair-out range −1.7 to −2.6%; largest pairs NJ-PA, NJ-NY, IL-IN, KY-OH, NY-PA, CT-NY.
 - `a5_adjacent_district_gaps.R`: |log property tax per pupil| gaps between adjacent districts, cross-state (1,566 pairs) vs same-state (27,593), pair + year FE. Cross-state gaps are 0.73–0.77 vs 0.43–0.45 within state. Cross × year vs 2017: 2015–16 +0.02 (SE 0.01), 2018–21 −0.004 to +0.006, 2022–23 +0.03 (0.03). **No post-2017 narrowing of cross-border gaps.** Interaction with the two states' SALT contrast: ≈ 0.
+- District 2SLS: first stage, district mean tract gap (30 min) on near × high, +0.31 pp (0.08), F = 14.5. Log property tax on post × gap instrumented by post × near × high: **−6.3% per pp of outside-option gap (SE 3.8)**. Per share of population with a cheaper cross-border tract: −8.2% (4.7).
+- Heterogeneity by district SES (SEDA, SD units; SES × year slopes as controls): near × high × SES pre 2012–16 +0.2 to +1.3%, post 2018–23 −0.1 to +0.8% (SE 0.5–0.9). The revenue decline is no larger in high-SES (more itemizing) districts.
+
+### 4.31 (a)/(c) on the CoreLogic 1% parcel panel (SOM queue unavailable overnight)
+`code/analysis/salt_local/c2_parcel_panel.R`; `data/salt_cap/panel` (931k parcels with bill and AV, 2013–2025; 455k arm's-length sales). Parcel tract = county FIPS ‖ 6-digit tract. Output `output/analysis/salt_local/c2_parcel_panel.{txt,csv}`, figure `figures/c2_parcel_panel.png`. SOM extract (`cluster/k_panel*`) is queued for the full roll; jobs pushed to early November by fair-share, since several other jobs of the user's were queued the same evening.
+- **County exposure (per SD, parcel FE + state × year, SE by county):**
+  - log bill 2013–16 −1.6, −0.8, −0.4, −0.2%; 2018–25 +0.2 to +0.4% (SE 0.1–0.3). Faster growth in exposed counties stops after 2017 (≈ 0.4%/yr → ≈ 0), as in the CoG weighted results.
+  - log AV: pre +0.5%/yr, post +0.3 to +0.8% to 2020, then fading.
+  - log nominal rate (bill/AV): 2019–22 −0.2 to −0.5% (SE 0.2–0.3).
+  - log sale price (county FE): pre flat (±0.2%); 2020 −0.7, 2021 −1.6, 2022 −1.3, 2023–25 −2.0% (SE 0.3). Falls behind mostly from 2020 (likely the pandemic re-sorting away from expensive metros, which are the most exposed).
+  - log effective rate given price: +1.1 to +2.3% from 2020. Log assessment ratio given price: +1.4 to +2.3% from 2020: assessments don't follow the relative price decline.
+  - Regressivity (exposure × log price slope of log AV/P): +0.001 to +0.003 after 2017 vs +0.0005 to +0.001 before. Tiny (slightly less regressive).
+- **Border DDD (near × high, constant parcels; 1% sample, so noisy):**
+  - log bill 2014–16 +1.1, +1.0, +0.4%; **2018–25 −2.8, −2.0, −0.7, −1.6, −1.9, −2.6, −3.2, −4.4% (SE 1.1–2.2)**. Matches the district revenue DDD (§4.28).
+  - log nominal rate 2018–22 −1.9, −3.5, −3.1, −2.4, −2.2% (SE 1.1–2.8); log AV ≈ 0 to +2% until 2022. So the bill decline is mainly rates, not assessments.
+  - Sale prices, effective rates and assessment ratios in this design: noisy (SE 3–5%), no pattern.
