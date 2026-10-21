@@ -2215,3 +2215,9 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - Because of the AMT, d_salt is far smaller than cap_bite in the richest counties (Manhattan 2,101 vs 5,054).
     - 70 of 315 top-decile d_salt counties are not top-decile on the old measure.
     - 91% of national d_salt is the cap bite on 2018 itemizers.
+- **County prices with the alternative exposures** (`salt_local/c25_county_prices_new_exposure.R`, figure `c25_county_prices_new_exposure.png`; b2 spec, per SD, ×100 log points).
+  - cap_bite reproduces the old measure almost exactly. Unweighted: 2019 −0.62, 2021 −1.55, 2024 −1.91; weighted: −0.40, −1.25, −1.80.
+  - **d_salt:** unweighted it has a pre-trend (2014 −1.23 → 0); post 2019 −0.38, 2021 −1.89, 2024 −2.17. Weighted: flat pre (−0.08 to +0.24); post 2018 −0.05, 2019 −0.69, 2020 −1.50, 2021 −1.91, 2024 −2.52.
+  - **d_mid:** weighted post is positive (+0.95 in 2021, +2.3 in 2023), i.e. prices rose where the mortgage-interest subsidy fell more. Implausible as a causal effect; mortgage-heavy suburbs boomed in 2020–23.
+  - Jointly (weighted): d_salt 2019 −0.83, 2021 −2.46, 2024 −3.48; d_mid +0.62, +2.16, +3.78.
+  - **Implied capitalisation** (price change ÷ PV of the lost subsidy at 5%), d_salt: 2019 0.18 unweighted / 0.57 weighted; 2021 0.88 / 1.59; 2024 1.01 / 2.10. Above 1 by 2021–24 is more than full capitalisation, so the post-2020 part is likely confounded by the pandemic-era repricing of rich counties. The pre-COVID 2019 factor is 0.2–0.6.
