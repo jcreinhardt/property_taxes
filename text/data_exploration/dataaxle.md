@@ -2110,4 +2110,4 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **Shapefile universe.**
     - TIGER cb 2019 has 10,885 unified, 1,946 elementary and 482 secondary polygons (18 "not defined").
     - Of F-33 FY2016 districts with enrolment (lower 48 + DC), 96.6% have a polygon, covering 99.3% of enrolment and 99.7% of property-tax revenue.
-    - Missing ones are mostly non-geographic agencies (county offices, vocational, state-run) plus a few CA city districts whose TIGER geography is coded under a different LEAID (Modesto, Santa Rosa, Petaluma, Santa Cruz city schools: separate elementary/high LEAIDs in F-33).
+    - Missing ones are mostly non-geographic agencies (county offices, vocational, state-run) plus a few CA city districts (Modesto, Santa Rosa, Petaluma, Santa Cruz city schools). These are probably coded under different elementary/high LEAIDs in TIGER (not verified).
