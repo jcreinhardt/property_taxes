@@ -2221,3 +2221,14 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **d_mid:** weighted post is positive (+0.95 in 2021, +2.3 in 2023), i.e. prices rose where the mortgage-interest subsidy fell more. Implausible as a causal effect; mortgage-heavy suburbs boomed in 2020–23.
   - Jointly (weighted): d_salt 2019 −0.83, 2021 −2.46, 2024 −3.48; d_mid +0.62, +2.16, +3.78.
   - **Implied capitalisation** (price change ÷ PV of the lost subsidy at 5%), d_salt: 2019 0.18 unweighted / 0.57 weighted; 2021 0.88 / 1.59; 2024 1.01 / 2.10. Above 1 by 2021–24 is more than full capitalisation, so the post-2020 part is likely confounded by the pandemic-era repricing of rich counties. The pre-COVID 2019 factor is 0.2–0.6.
+- **Exposure components and per-owner re-basing** (`salt_local/c26_exposure_components.R`; saved `exposure_components_{county,state,zip}.csv`).
+  - Lost value is split into a real-estate-tax part (the deducted amount allocated pro rata) and an income/sales part. It is attributed to owners by the stub's share of itemizers claiming real estate tax, then divided by ACS 2013–17 owner households.
+  - National: property part 37% of the lost value; owner-attributed 88%.
+  - County per owner: mean $347, SD 313, return-weighted $748. State per owner: CT 1,566, NJ 1,385, NY 1,307 … SD 235.
+  - SOI ZIP files zero counts < 20 (minimum positive count = 20). "Clean" ZIPs (all brackets populated, top two brackets with itemizers in both years): 12,579 of 27,523 ZIPs, 86% of returns.
+- **Prices by level with per-owner components** (`salt_local/c27_prices_levels_components.R`, figures `c27_prices_levels.png`, `c27_prices_components.png`). Per $100/yr lost subsidy per owner, % (factor = price change ÷ PV at 5%).
+  - **County, return-weighted (1,496 balanced counties):** pre 0.11, 0.04, −0.07; 2018 0.02; 2019 −0.32 [0.45]; 2020 −0.50 [0.71]; 2021 −0.64 [0.90]; 2024 −0.65 [0.92].
+    - Jointly, the decline loads on the income/sales part (2019 −0.28, 2021 −1.12, 2024 −1.43). The real-estate part has a falling pre-trend and is ≈ 0 or positive after.
+  - **No-income-tax states (FL NV SD TX WA WY + NH TN; 315 counties), weighted:** 2015–16 ≈ 0; 2018 −0.24; 2019 −0.95 [1.05]; 2020–21 ≈ −0.97 [1.07]; 2024 −0.95. Unweighted: noisy (2019 −0.62, n.s. later). Income-tax states: 2019 −0.23, 2021 −0.59.
+  - **State level (48 states), weighted, state + year FE:** 2019 −0.48 [0.64], 2021 −0.76, 2022 −1.14; with division × year, a pre-trend (2016 +0.32*) and 2019 −0.72 … 2022 −1.89. Cross-state, the real-estate part loads early (2018 −0.59*, 2019 −1.05*).
+  - **ZIP (11,253 ZIPs; 7,875 uncensored), owner-weighted:** a steady downward trend over the whole period (2013 +0.73 → 2016 +0.22 → 2019 −0.43 → 2021 −0.83), the same with county × year FE. No clean break: tract-median prices are composition-sensitive, unlike the b8 repeat-sales design, which has a flat pre-period.
