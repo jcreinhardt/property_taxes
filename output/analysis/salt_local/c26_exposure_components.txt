@@ -4,40 +4,59 @@ Lost federal value of SALT deductions, TY2016 -> TY2018, $ per 2016 return or pe
  1:      county        d_salt  3141   227   164   185   429   401
  2:      county        d_prop  3141    75    70    53   158   149
  3:      county     d_nonprop  3141   153   110   133   280   252
- 4:      county    d_salt_own  3108   347   313   253   721   748
- 5:      county    d_prop_own  3108   115   127    73   263   272
- 6:      county d_nonprop_own  3108   231   211   179   472   476
- 7:       state        d_salt    51   363   162   339   544   401
- 8:       state        d_prop    51   130    79   103   244   149
- 9:       state     d_nonprop    51   233   109   232   382   252
-10:       state    d_salt_own    49   638   321   560  1127   719
-11:       state    d_prop_own    49   229   152   189   460   270
-12:       state d_nonprop_own    49   408   210   388   719   450
-13:   zip (all)        d_salt 27523   329   484   220   687   402
-14:   zip (all)        d_prop 27523   120   156    70   287   150
-15:   zip (all)     d_nonprop 27523   209   369   145   408   251
-16:   zip (all)    d_salt_own 27442   563  3466   319  1140   708
-17:   zip (all)    d_prop_own 27442   200   504   104   477   257
-18:   zip (all) d_nonprop_own 27442   362  3115   203   666   450
-19: zip (clean)        d_salt 12579   482   637   346   889   438
-20: zip (clean)        d_prop 12579   183   186   123   406   165
-21: zip (clean)     d_nonprop 12579   299   506   214   512   273
-22: zip (clean)    d_salt_own 12570   874  4928   584  1476   774
-23: zip (clean)    d_prop_own 12570   307   571   209   662   281
-24: zip (clean) d_nonprop_own 12570   567  4496   355   856   493
+ 4:      county         d_mid  3141   118    66   102   208   159
+ 5:      county    d_salt_own  3108   347   313   253   721   748
+ 6:      county    d_prop_own  3108   115   127    73   263   272
+ 7:      county d_nonprop_own  3108   231   211   179   472   476
+ 8:      county     d_mid_own  3108   196   124   160   379   318
+ 9:       state        d_salt    51   363   162   339   544   401
+10:       state        d_prop    51   130    79   103   244   149
+11:       state     d_nonprop    51   233   109   232   382   252
+12:       state         d_mid    51   168    41   166   215   159
+13:       state    d_salt_own    49   638   321   560  1127   719
+14:       state    d_prop_own    49   229   152   189   460   270
+15:       state d_nonprop_own    49   408   210   388   719   450
+16:       state     d_mid_own    49   312    85   298   439   315
+17:   zip (all)        d_salt 27523   329   484   220   687   402
+18:   zip (all)        d_prop 27523   120   156    70   287   150
+19:   zip (all)     d_nonprop 27523   209   369   145   408   251
+20:   zip (all)         d_mid 27523   139   104   120   285   164
+21:   zip (all)    d_salt_own 27442   563  3466   319  1140   708
+22:   zip (all)    d_prop_own 27442   200   504   104   477   257
+23:   zip (all) d_nonprop_own 27442   362  3115   203   666   450
+24:   zip (all)     d_mid_own 27442   256   693   201   494   323
+25: zip (clean)        d_salt 12579   482   637   346   889   438
+26: zip (clean)        d_prop 12579   183   186   123   406   165
+27: zip (clean)     d_nonprop 12579   299   506   214   512   273
+28: zip (clean)         d_mid 12579   186   103   171   328   175
+29: zip (clean)    d_salt_own 12570   874  4928   584  1476   774
+30: zip (clean)    d_prop_own 12570   307   571   209   662   281
+31: zip (clean) d_nonprop_own 12570   567  4496   355   856   493
+32: zip (clean)     d_mid_own 12570   334   409   320   566   339
           level       measure     n  mean    sd   p50   p90   wtd
          <char>        <char> <int> <num> <num> <num> <num> <num>
 
 National: property-tax share of the lost value 0.372 | owner-attributed share 0.875 
 ZIPs: 27523 | clean: 12579 (86.4% of 2016 returns) | with ACS owners: 27442 
 County correlations:
-              d_salt d_prop d_nonprop d_salt_own d_prop_own d_nonprop_own
-d_salt          1.00   0.86      0.94       0.97       0.85          0.93
-d_prop          0.86   1.00      0.64       0.85       0.98          0.66
-d_nonprop       0.94   0.64      1.00       0.91       0.64          0.96
-d_salt_own      0.97   0.85      0.91       1.00       0.87          0.96
-d_prop_own      0.85   0.98      0.64       0.87       1.00          0.70
-d_nonprop_own   0.93   0.66      0.96       0.96       0.70          1.00
+              d_salt d_prop d_nonprop d_mid d_salt_own d_prop_own d_nonprop_own
+d_salt          1.00   0.86      0.94  0.74       0.97       0.85          0.93
+d_prop          0.86   1.00      0.64  0.70       0.85       0.98          0.66
+d_nonprop       0.94   0.64      1.00  0.66       0.91       0.64          0.96
+d_mid           0.74   0.70      0.66  1.00       0.70       0.68          0.63
+d_salt_own      0.97   0.85      0.91  0.70       1.00       0.87          0.96
+d_prop_own      0.85   0.98      0.64  0.68       0.87       1.00          0.70
+d_nonprop_own   0.93   0.66      0.96  0.63       0.96       0.70          1.00
+d_mid_own       0.77   0.74      0.68  0.96       0.78       0.75          0.70
+              d_mid_own
+d_salt             0.77
+d_prop             0.74
+d_nonprop          0.68
+d_mid              0.96
+d_salt_own         0.78
+d_prop_own         0.75
+d_nonprop_own      0.70
+d_mid_own          1.00
 
 States, sorted by d_salt_own:
         st d_salt d_prop d_nonprop d_salt_own d_prop_own

@@ -2241,3 +2241,17 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - County: pre ≈ 0; post 2018 −0.01, 2019 0.00, 2020 +0.10, 2021 +0.47.
   - **Reading:** among places with the same 2012 price, more exposed ones did not fall more. The exposure "capitalisation" is the price-tier gradient: expensive places appreciated more slowly. Within states that gradient was already present in 2013–17 across ZIPs (post-crisis catch-up of cheaper neighbourhoods); across counties it only opened after 2017.
   - Caveat: exposure is partly a function of the price level (bigger bills on pricier homes), so the control also absorbs part of the treatment. The residual variation is exposure at a given price: tax rates, income-tax share, itemizer composition.
+- **Three components jointly** (`salt_local/c29_three_components.R`, figure `c29_three_components.png`; c26 now also builds d_mid_own = lost mortgage-interest value per owner, mean $196, corr with d_prop_own 0.75). Per $100/yr per owner, %, ref 2017.
+  - **Mortgage interest:** positive almost everywhere post (county weighted 2019 +0.45 → 2023 +3.07; state up to +7; ZIP +0.4 to +0.9). The wrong sign for capitalisation: mortgage-heavy (younger, suburban) areas boomed after 2020.
+  - **Income/sales part:**
+    - County weighted: 2019 −0.40, 2021 −1.16, 2024 −1.45, but a pre-trend (2013 +0.96 → 0).
+    - With 2012 price × year: ≈ 0 to −0.6, n.s.
+    - ZIP with price control: ≈ 0.
+    - State: −0.45 (2019) → −1.9.
+  - **Property-tax part:**
+    - County weighted: 2019 −0.64, 2021 −1.01, with an upward pre-trend (2013 −0.94 → 0); with the price control, 2019 −0.37, later ≈ 0 (n.s.).
+    - No-income-tax states: 2019 −1.31, 2020 −1.45 (pre-trend 2013 −2.9 → −0.9).
+    - State: 2018 −0.71*, 2019 −1.50*, 2021 −2.79 (pre +0.8 to +0.56).
+    - ZIP: a downward pre-trend (+1.24 → +0.49), then −0.91 to −1.49.
+    - **ZIP + 2012 price × year: pre flat (0.37, 0.50, −0.30, 0.13); 2018 −0.56, 2019 −0.63*, 2020 −0.63*, 2021 −0.48, 2022 −0.59, 2023–24 −0.2/−0.3.** At the owner-weighted mean ZIP price ($301k), −0.6% per $100 ≈ $18 per $1/yr, i.e. a capitalisation factor ≈ 0.9 at 5% (permanent).
+  - **Reading:** once price-tier trends are controlled, the only component with a post-2017 price response is the property-tax part, the one theory says should capitalise. It is only significant in 2019–20 at the ZIP level.

@@ -10,6 +10,8 @@
 #   owner attribution: the stub's lost value x (N18500 / N04470, TY2016), i.e. the share of itemizers claiming real estate tax.
 # Measures: per 2016 return (d_salt, d_prop, d_nonprop) and per owner-occupied household (ACS 2013-17: d_salt_own, d_prop_own,
 # d_nonprop_own = owner-attributed lost value / owner households).
+# Mortgage interest (A19300; deductible under the AMT): mid loss = tau16 MID16 - tau18 MID18, attributed fully to owners
+# (d_mid per return, d_mid_own per owner household).
 # ZIP censoring: SOI sets counts < 20 to 0. A ZIP is "clean" if every stub has N1 > 0 in both years and the $100-200k and
 # $200k+ stubs have itemizers > 0 in both years.
 suppressPackageStartupMessages({library(data.table); library(tidycensus)})
@@ -19,7 +21,7 @@ taus <- list(county = data.table(agi_stub = 1:8, t16 = c(0, 0, .10, .15, .15, .1
 rd <- function(level, yy) {
   f <- if (level == "county") file.path(SO, sprintf("county_returns_w_agi/%02dincyallagi.csv", yy)) else file.path(SO, sprintf("zipcode_returns_w_agi/%02dzpallagi.csv", yy))
   x <- fread(f, colClasses = "character", encoding = "Latin-1"); setnames(x, toupper(names(x)))
-  num <- intersect(c("N1", "N04470", "N18500", "A18425", "A18450", "A18500", "A18800", "A18460", "N09600"), names(x))
+  num <- intersect(c("N1", "N04470", "N18500", "A18425", "A18450", "A18500", "A18800", "A18460", "N09600", "A19300"), names(x))
   for (v in num) set(x, j = v, value = as.numeric(x[[v]]))
   if (level == "county") { x <- x[as.integer(COUNTYFIPS) != 0][, geo := sprintf("%02d%03d", as.integer(STATEFIPS), as.integer(COUNTYFIPS))] }
   else { x <- x[!ZIPCODE %in% c("0", "00000", "99999")][, geo := sprintf("%05d", as.integer(ZIPCODE))] }
@@ -27,20 +29,20 @@ rd <- function(level, yy) {
   x[, S := rowSums(.SD, na.rm = TRUE), .SDcols = c("A18425", "A18450", "A18500", "A18800")]
   x[, amt := pmin(1, fifelse(N04470 > 0, N09600 / N04470, 0))]
   x[, own := pmin(1, fifelse(N04470 > 0, N18500 / N04470, 0))]
-  x[, c("geo", "st", "agi_stub", "N1", "N04470", "S", "A18500", intersect("A18460", names(x)), "amt", "own"), with = FALSE] }
+  x[, c("geo", "st", "agi_stub", "N1", "N04470", "S", "A18500", intersect("A18460", names(x)), "amt", "own", "A19300"), with = FALSE] }
 build <- function(level) {
   a <- rd(level, 16); b <- rd(level, 18)
-  m <- merge(a[, .(geo, st, agi_stub, N1_16 = N1, it16 = N04470, S16 = S, P16 = A18500, amt16 = amt, own16 = own)],
-             b[, .(geo, agi_stub, N1_18 = N1, it18 = N04470, S18 = S, P18 = A18500, L18 = A18460, amt18 = amt)], by = c("geo", "agi_stub"))
+  m <- merge(a[, .(geo, st, agi_stub, N1_16 = N1, it16 = N04470, S16 = S, P16 = A18500, amt16 = amt, own16 = own, M16 = A19300)],
+             b[, .(geo, agi_stub, N1_18 = N1, it18 = N04470, S18 = S, P18 = A18500, L18 = A18460, amt18 = amt, M18 = A19300)], by = c("geo", "agi_stub"))
   m <- merge(m, taus[[level]], by = "agi_stub")
   m[, `:=`(v16 = t16 * (1 - amt16) * S16, v18 = t18 * (1 - amt18) * L18,
            p16 = t16 * (1 - amt16) * P16, p18 = t18 * (1 - amt18) * L18 * fifelse(S18 > 0, P18 / S18, 0))]
-  m[, `:=`(loss = v16 - v18, ploss = p16 - p18)]
+  m[, `:=`(loss = v16 - v18, ploss = p16 - p18, mloss = t16 * M16 - t18 * M18)]
   nst <- max(m$agi_stub)
-  g <- m[, .(st = st[1], returns16 = sum(N1_16), loss = sum(loss), ploss = sum(ploss), loss_own = sum(loss * own16), ploss_own = sum(ploss * own16),
+  g <- m[, .(st = st[1], returns16 = sum(N1_16), loss = sum(loss), ploss = sum(ploss), loss_own = sum(loss * own16), ploss_own = sum(ploss * own16), mloss = sum(mloss),
              clean = all(N1_16 > 0 & N1_18 > 0) & all(it16[agi_stub >= nst - 1] > 0 & it18[agi_stub >= nst - 1] > 0),
              share_ret_top = sum(N1_16[agi_stub == nst]) / sum(N1_16)), by = geo]
-  g[, `:=`(d_salt = 1000 * loss / returns16, d_prop = 1000 * ploss / returns16, d_nonprop = 1000 * (loss - ploss) / returns16)]
+  g[, `:=`(d_salt = 1000 * loss / returns16, d_prop = 1000 * ploss / returns16, d_nonprop = 1000 * (loss - ploss) / returns16, d_mid = 1000 * mloss / returns16)]
   g[] }
 cty <- build("county"); zip <- build("zip")
 # owner-occupied households, ACS 2013-17
@@ -51,17 +53,18 @@ if (!file.exists(zf)) fwrite(as.data.table(get_acs("zcta", variables = c(own = "
 own_z <- fread(zf, colClasses = c(GEOID = "character"))[, .(geo = substr(GEOID, nchar(GEOID) - 4, nchar(GEOID)), owners = ownE, hh = tenE)]
 cty <- merge(cty, own_c, by = "geo", all.x = TRUE); zip <- merge(zip, own_z, by = "geo", all.x = TRUE)
 per_own <- \(g) g[owners > 0, `:=`(d_salt_own = 1000 * loss_own / owners, d_prop_own = 1000 * ploss_own / owners,
-                                   d_nonprop_own = 1000 * (loss_own - ploss_own) / owners)][]
+                                   d_nonprop_own = 1000 * (loss_own - ploss_own) / owners, d_mid_own = 1000 * mloss / owners)][]
 cty <- per_own(cty); zip <- per_own(zip)
-stt <- cty[, .(returns16 = sum(returns16), loss = sum(loss), ploss = sum(ploss), loss_own = sum(loss_own), ploss_own = sum(ploss_own),
+stt <- cty[, .(returns16 = sum(returns16), loss = sum(loss), ploss = sum(ploss), loss_own = sum(loss_own), ploss_own = sum(ploss_own), mloss = sum(mloss),
                owners = sum(owners, na.rm = TRUE)), by = .(geo = st)]
 stt[, `:=`(d_salt = 1000 * loss / returns16, d_prop = 1000 * ploss / returns16, d_nonprop = 1000 * (loss - ploss) / returns16,
-           d_salt_own = 1000 * loss_own / owners, d_prop_own = 1000 * ploss_own / owners, d_nonprop_own = 1000 * (loss_own - ploss_own) / owners)]
-keep <- c("geo", "returns16", "owners", "d_salt", "d_prop", "d_nonprop", "d_salt_own", "d_prop_own", "d_nonprop_own")
+           d_salt_own = 1000 * loss_own / owners, d_prop_own = 1000 * ploss_own / owners, d_nonprop_own = 1000 * (loss_own - ploss_own) / owners,
+           d_mid = 1000 * mloss / returns16, d_mid_own = 1000 * mloss / owners)]
+keep <- c("geo", "returns16", "owners", "d_salt", "d_prop", "d_nonprop", "d_mid", "d_salt_own", "d_prop_own", "d_nonprop_own", "d_mid_own")
 fwrite(cty[, ..keep], file.path(ROOT, "data/local_juris/exposure_components_county.csv"))
 fwrite(stt[, ..keep], file.path(ROOT, "data/local_juris/exposure_components_state.csv"))
 fwrite(zip[, c(keep, "clean", "st"), with = FALSE], file.path(ROOT, "data/local_juris/exposure_components_zip.csv"))
-ms <- c("d_salt", "d_prop", "d_nonprop", "d_salt_own", "d_prop_own", "d_nonprop_own")
+ms <- c("d_salt", "d_prop", "d_nonprop", "d_mid", "d_salt_own", "d_prop_own", "d_nonprop_own", "d_mid_own")
 sm <- \(g, lab) rbindlist(lapply(ms, \(k) g[is.finite(get(k)), .(level = lab, measure = k, n = .N, mean = round(mean(get(k))), sd = round(sd(get(k))),
   p50 = round(median(get(k))), p90 = round(quantile(get(k), .9)), wtd = round(weighted.mean(get(k), returns16)))]))
 sink(file.path(OUT, "c26_exposure_components.txt"), split = TRUE)
