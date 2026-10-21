@@ -1,0 +1,1 @@
+District border DDD pooled near x high x post: actual -0.0221 | RI p-value (200 side flips): 0.04 | placebo sd: 0.0099 | placebo quantiles 2.5/50/97.5: -0.0237 -0.0034 0.0144 

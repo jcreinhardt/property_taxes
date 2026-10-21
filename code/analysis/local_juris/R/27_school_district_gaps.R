@@ -12,7 +12,7 @@ dm <- t[!is.na(leaid), .(n = sum(n), med = { o <- order(med); m <- med[o]; w <- 
                           ach = ach[1], tracts = .N), by = leaid][n >= 20]
 sd <- rbind(school_districts(cb = TRUE, year = 2019, type = "unified", progress_bar = FALSE)[, c("GEOID", "STATEFP")],
             school_districts(cb = TRUE, year = 2019, type = "elementary", progress_bar = FALSE)[, c("GEOID", "STATEFP")])
-sd <- st_make_valid(st_transform(sd[!sd$STATEFP %in% c("02", "15", "72"), ], 5070)); sd <- sd[!duplicated(sd$GEOID), ]
+sd <- st_make_valid(st_transform(sd[as.integer(sd$STATEFP) <= 56 & !sd$STATEFP %in% c("02", "15"), ], 5070)); sd <- sd[!duplicated(sd$GEOID), ]
 sd <- merge(sd, dm, by.x = "GEOID", by.y = "leaid", all.x = TRUE)
 nbl <- st_intersects(st_buffer(sd, 50), sd)
 e <- rbindlist(lapply(seq_along(nbl), \(i) if (length(nbl[[i]]) > 1) data.table(i = i, j = setdiff(nbl[[i]], i))))
@@ -58,8 +58,8 @@ mm <- function(v, title, bb = NULL) { x <- sd; x$val <- pmin(x$med, 3)
 ggsave(file.path(OUT, "figures/school_district_gaps_us.png"),
        wrap_plots(mm("med", "Median effective tax rate by school district (sales 2017-19)"),
                   mp("gap_min", "own - cheapest\nadjacent (pp)", "Own rate minus cheapest adjacent district"),
-                  mp("gap_x", "own - cheapest\nacross state\nline (pp)", "Own rate minus cheapest adjacent district across a state line"), ncol = 1),
-       width = 9, height = 15, dpi = 200)
+                  mp("gap_x", "own - cheapest\nacross state\nline (pp)", "State-line districts: own rate minus cheapest adjacent district in the other state"), ncol = 2),
+       width = 16, height = 10, dpi = 200)
 zz <- list(NY = c(-75.4, 40.4, -72.9, 41.7), Chicago = c(-88.5, 41.1, -86.8, 42.5), Philly = c(-76.2, 39.5, -74.3, 40.6),
            `Kansas City` = c(-95.2, 38.6, -94.1, 39.5), Cincinnati = c(-85.2, 38.8, -84.0, 39.5), Portland = c(-123.3, 45.2, -122.2, 45.9))
 z <- wrap_plots(unlist(lapply(names(zz), \(k) list(mm("med", paste(k, ": median rate"), zz[[k]]), mp("gap_min", "own -\ncheapest\nadjacent", paste(k, ": own - cheapest adjacent"), zz[[k]]))), recursive = FALSE), ncol = 4)

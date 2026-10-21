@@ -2000,3 +2000,17 @@ Data `R/24_iv_tract_data.R` → `data/local_juris/iv_tract.parquet` (69.2k tract
   - log bill 2014–16 +1.1, +1.0, +0.4%; **2018–25 −2.8, −2.0, −0.7, −1.6, −1.9, −2.6, −3.2, −4.4% (SE 1.1–2.2)**. Matches the district revenue DDD (§4.28).
   - log nominal rate 2018–22 −1.9, −3.5, −3.1, −2.4, −2.2% (SE 1.1–2.8); log AV ≈ 0 to +2% until 2022. So the bill decline is mainly rates, not assessments.
   - Sale prices, effective rates and assessment ratios in this design: noisy (SE 3–5%), no pattern.
+
+### 4.32 (a) robustness: property-tax-based exposure
+`code/analysis/salt_local/a6_alt_exposure.R`. County share of 1% panel parcels with a 2016 bill > $10k (mean 4.5%) or > $5k (18%); corr with the SOI exposure 0.73. District log property tax (F-33 balanced), district + state × year FE.
+- Unweighted: pre-slope +0.05 (sh10) / +0.23 (sh5) %/yr per SD; slope change after FY2019 −0.07 (0.04) / −0.15 (0.08).
+- **Enrollment-weighted: pre-slope +0.21 / +0.56%/yr per SD; level +0.7 / +1.5% at FY2019; slope change −0.39 (0.14) / −0.71 (0.15) %/yr.** Event study (sh5, weighted): 2012 −3.0, 2014 −2.5, 2016 −0.9, 2017 0, 2019 +0.7, 2020 +0.8, 2021 +0.6, 2022 0.0, 2023 +0.3%.
+- Same picture as with the SOI measure: in large, exposed (high-bill) jurisdictions, levy growth that had outpaced the state flattens after the cap. Unweighted, i.e. across small districts, the break is weak.
+
+### 4.33 Out-migration in the border and exposure designs (Data Axle 1% building sample, Bouchet)
+Bouchet `local_juris/bouchet/g_moveout_bkey_1pct.sql` (1 min; the tax 1% sample has no `census_id`, so addresses are placed in 2010 tracts locally with TIGER cb 2019). Local `code/analysis/salt_local/d1_moveout_ddd.R`; output `d1_moveout_ddd.{txt,csv}`. Clean address pairs (one primary family, both files), annualised by file cut-offs; 5.9m address-years, 814k addresses, mean 11.4%/yr; border sample 671k addresses, 62k near-high.
+- County exposure (per SD, tract + state × year FE): pre 2013–16 −0.05 to −0.12 pp; post 2018–21 −0.01, +0.01, −0.11, −0.06 (SE 0.03–0.04). Owner-occupied SFR similar. **No change.**
+- Border DDD near × high: pre −0.31, +0.04, −0.38, −0.27; post −0.24, −0.33, −0.11, −0.24 (SE 0.3–0.38). **No change.**
+- Near × high × exposure: pre −0.02 → −0.16, post −0.15, −0.30, −0.09, −0.12 (SE 0.09–0.10): continues a mild pre-trend, no break.
+- So Data Axle shows no extra move-outs from high-side border tracts or exposed counties after the cap (to 2021). This matches the sales-turnover (§4.21) and SALT-study results.
+- Randomisation inference (`a7_district_ri.R`): flipping which side of each pair is "high" at random (200 draws). Placebo pooled coefficients have median −0.3%, sd 1.0%, 95% range −2.4 to +1.4%. Actual −2.2%: **RI p = 0.04**.
