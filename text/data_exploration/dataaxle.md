@@ -2169,3 +2169,29 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **District-level border RD by year** (`salt_local/c20_enrolment_rd.R`). Running variable: median signed distance of the district's tracts to its majority pair's border. 6,734 districts within 100 mi; h = 19.4 mi (MSE-optimal FY2017), pair-demeaned, SE by county.
     - Levels: high-side districts are about 45 log points smaller every year (robust p ≈ 0.01), which reflects how each state organises its districts (county-wide districts on many low-tax sides).
     - Difference in discontinuities vs FY2017: pre +0.6 to +1.3, post −0.2 to −0.6, all n.s. Robust CIs about ±3.5 log points. **No enrolment response at the border.**
+- **ZIP nesting** (`salt_local/c21_zip_nesting.R`; 1% parcel sample, 890k parcels; shares parcel-weighted).
+  - ZIP → school district: 89.5% of parcels lie in their ZIP's modal district; 48% are in ZIPs wholly inside one district, 69% in ZIPs with ≥ 90% in one district.
+  - ZIP → tract: ZIPs span a median of 3 sampled tracts; only 36.5% of parcels are in the ZIP's modal tract.
+  - Tract → ZIP: 89% in the modal ZIP. Tract → district: 95%.
+  - These are 1% samples, so "wholly in one unit" is overstated for small units.
+  - Public crosswalks: HUD-USPS ZIP–tract/county (quarterly, address-weighted), Census ZCTA relationship files (ZCTA–tract/county/place), MCDC Geocorr (ZCTA ↔ school district, population-weighted), NCES EDGE geographic relationship files (LEA ↔ county etc.).
+- **IRS SOI migration** (`salt_local/c22_soi_migration.R`, figure `c22_soi_migration.png`). SOI flows are county-to-county at finest (ZIP files have return counts, no flows). Flow year y = address change between TY y−1 and TY y; ref 2017; 2012–2022.
+  - **(1) Cross-border county dyads** (478 county pairs in 53 border pairs, both directions unsuppressed every year; directed-dyad FE + undirected dyad × year FE).
+    - High→low relative to low→high: flat 2012–19 (−0.013 to +0.021); then −0.040 (2020), −0.080 (2021), −0.042 (2022). Cross-border moves from the high side fell relative to the reverse after COVID, the opposite of a SALT exit.
+    - × origin exposure: pre +0.02 to +0.04 trending to 0; post +0.009, +0.007, then −0.024 to −0.009.
+  - **(2) County out-migration rates** (3,128 counties; mean 6.7% of returns, 2.25% out of state) on SALT exposure.
+    - Both rates trend up in exposed counties through 2017, and 2017 itself is a spike. Post-2017 values sit between the 2016 and 2017 levels; no break.
+    - Log AGI per out-migrant return: flat pre (except 2012); post +0.7%, +0.8% (2018–19), +1.5%, +3.1%, +4.2% (2020–22) per SD. Out-movers from exposed counties became richer, mostly after 2020.
+    - Border near × high, out-of-state rate: nothing.
+  - **(3) ZIP log returns** (27,354 ZIPs with returns every year).
+    - Near × high border DDD: a steady linear decline throughout (+0.008 in 2013 to −0.009 in 2022), no break.
+    - × ZIP exposure: flat pre; −0.4% (2019), −1.0% (2020), −0.4%, −0.2% per SD. The 2020 dip likely reflects stimulus-driven new filers concentrated in low-exposure ZIPs.
+- **Yearly covariate panels** (`salt_local/c17_acs_download.R`, `c18_acs_seda_panels.R`).
+  - ACS 5-year tract data 2013–23: releases up to 2019 are on 2010 tracts; 2020–23 are mapped from 2020 tracts by land-area shares of the Census relationship file (corr of log income 2019 vs 2020 = 0.97). 2022–23 cover 98.6% of the instrument's tracts (CT's tract IDs changed).
+  - Traps: median year built codes "1939 or earlier" as 0 from the 2018 release, so recode to 1939. SEDA 4.1 long files end in 2018.
+- **Difference in discontinuities by year** (`c16_border_rd_by_year.R`, figure `c16_border_diff_in_disc.png`): RD (h = 15 mi) of the within-tract change since 2017.
+  - **Effective rate:** pre flat (+0.04 in 2015–16), then −0.07, −0.09, −0.16, −0.27, −0.30, −0.33, −0.34 pp (2018–24), significant from 2020. Nominal rate and bills ≈ 0; assessment ratio drifts to −0.13 log; price +0.07 (n.s.). The narrowing works through the denominator.
+  - **District property tax per pupil:** −2% (2018) → −11% (2023), significant from 2021, but with a pre-trend (+4% in 2013 → 0). Spending per pupil: −2 to −4%, partly significant. State-aid share: upward pre-trend.
+  - **Enrolment growth** (tract-weighted): +1.6 to +3.6% post. The district-unweighted RD (c20) shows nothing, so this is sensitive to weighting.
+  - **ACS covariates** (income, home value, BA, owner share, population): smooth linear trends through 2017 that continue, with no break (5-year windows smooth everything). White share falls from 2020 (n.s.).
+  - SEDA test scores, SES and FRL: pre-trends, too short post (2018 only).

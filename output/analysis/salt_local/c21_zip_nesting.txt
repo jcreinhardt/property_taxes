@@ -1,0 +1,22 @@
+Parcels with ZIP and coordinates: 890095 | with CoreLogic tract: 715612 | in a district: 890004 
+                    mapping units parcels parcel share in modal partner
+                     <char> <int>   <int>                         <num>
+1:             ZIP -> tract 23547  715612                         0.365
+2:             tract -> ZIP 66026  715612                         0.894
+3:   ZIP -> school district 25619  890004                         0.895
+4:   school district -> ZIP 11228  890004                         0.453
+5: tract -> school district 66025  715556                         0.954
+   units wholly in one partner (parcel-wtd)
+                                      <num>
+1:                                    0.045
+2:                                    0.636
+3:                                    0.484
+4:                                    0.074
+5:                                    0.819
+   units with >= 90% in modal (parcel-wtd) median partners per unit
+                                     <num>                    <num>
+1:                                   0.057                        3
+2:                                   0.699                        1
+3:                                   0.686                        1
+4:                                   0.139                        3
+5:                                   0.863                        1

@@ -1,0 +1,89 @@
+spec,y,b,se
+(1) cross-border dyads: high->low x origin exposure,2012,0.0205691163559912,0.0160961332570331
+(1) cross-border dyads: high->low x origin exposure,2013,0.0191880079530985,0.0119736954288608
+(1) cross-border dyads: high->low x origin exposure,2014,0.0176927242325682,0.0114113801127563
+(1) cross-border dyads: high->low x origin exposure,2015,0.0376561371010857,0.0131958596039056
+(1) cross-border dyads: high->low x origin exposure,2016,0.0190340415287256,0.00847273515297247
+(1) cross-border dyads: high->low x origin exposure,2017,0,0
+(1) cross-border dyads: high->low x origin exposure,2018,0.00903712066406053,0.00696337141240181
+(1) cross-border dyads: high->low x origin exposure,2019,0.00700045302201457,0.00790376155403394
+(1) cross-border dyads: high->low x origin exposure,2020,-0.0237484825214896,0.0089190220798555
+(1) cross-border dyads: high->low x origin exposure,2021,-0.0245360239389962,0.0107798153243261
+(1) cross-border dyads: high->low x origin exposure,2022,-0.00897776135141377,0.00859307785496308
+"(1) cross-border dyads: log returns, high->low vs low->high",2012,0.0148956453814125,0.0253645356530032
+"(1) cross-border dyads: log returns, high->low vs low->high",2013,-0.00438975797217183,0.0209789717213334
+"(1) cross-border dyads: log returns, high->low vs low->high",2014,0.0208763159715326,0.0204315839986127
+"(1) cross-border dyads: log returns, high->low vs low->high",2015,0.0111608208854099,0.0255630266607608
+"(1) cross-border dyads: log returns, high->low vs low->high",2016,-0.0126147710317115,0.0163398817772294
+"(1) cross-border dyads: log returns, high->low vs low->high",2017,0,0
+"(1) cross-border dyads: log returns, high->low vs low->high",2018,-0.00621780581318225,0.0132009214986939
+"(1) cross-border dyads: log returns, high->low vs low->high",2019,0.00209136069467707,0.0131905530077261
+"(1) cross-border dyads: log returns, high->low vs low->high",2020,-0.0400084882473455,0.0157163344013755
+"(1) cross-border dyads: log returns, high->low vs low->high",2021,-0.0800996906847541,0.0181577245738571
+"(1) cross-border dyads: log returns, high->low vs low->high",2022,-0.0423060492652365,0.0166898536757138
+"(2) county out-migration rate (%), x exposure",2012,-0.3497679463612,0.0728145368112791
+"(2) county out-migration rate (%), x exposure",2013,-0.278318413654092,0.0587167582759999
+"(2) county out-migration rate (%), x exposure",2014,-0.22511136401228,0.0473789241323898
+"(2) county out-migration rate (%), x exposure",2015,-0.328450170917558,0.0665246576136982
+"(2) county out-migration rate (%), x exposure",2016,-0.171632759306581,0.0343590003559471
+"(2) county out-migration rate (%), x exposure",2017,0,0
+"(2) county out-migration rate (%), x exposure",2018,-0.161382001192818,0.0326643818402234
+"(2) county out-migration rate (%), x exposure",2019,-0.170949964952491,0.0356857069943091
+"(2) county out-migration rate (%), x exposure",2020,-0.066035012915627,0.0424779432324201
+"(2) county out-migration rate (%), x exposure",2021,-0.0265519052026411,0.0354821067765421
+"(2) county out-migration rate (%), x exposure",2022,-0.117060059911403,0.0296479436276329
+"(2) county out-of-state rate (%), border near x high",2012,-0.054410018684358,0.0764775721133088
+"(2) county out-of-state rate (%), border near x high",2013,-0.031275180004449,0.071369792165647
+"(2) county out-of-state rate (%), border near x high",2014,-0.0393910798856752,0.0645150808699075
+"(2) county out-of-state rate (%), border near x high",2015,-0.0470201827679378,0.102548396262261
+"(2) county out-of-state rate (%), border near x high",2016,0.00459406003942253,0.0637132754372575
+"(2) county out-of-state rate (%), border near x high",2017,0,0
+"(2) county out-of-state rate (%), border near x high",2018,-0.0420511783248251,0.0670531920269229
+"(2) county out-of-state rate (%), border near x high",2019,-0.0239330459814202,0.0737053501978379
+"(2) county out-of-state rate (%), border near x high",2020,-0.0194123379385596,0.0690844960436791
+"(2) county out-of-state rate (%), border near x high",2021,0.00731545801473775,0.0742246197364105
+"(2) county out-of-state rate (%), border near x high",2022,0.0327347287352065,0.0757181492215986
+"(2) county out-of-state rate (%), x exposure",2012,-0.163304973850257,0.0338997541712679
+"(2) county out-of-state rate (%), x exposure",2013,-0.146636963128527,0.0304459950125236
+"(2) county out-of-state rate (%), x exposure",2014,-0.141032090531495,0.0273142817522624
+"(2) county out-of-state rate (%), x exposure",2015,-0.194428353514982,0.0378503146580565
+"(2) county out-of-state rate (%), x exposure",2016,-0.098082030560134,0.0188586188058324
+"(2) county out-of-state rate (%), x exposure",2017,0,0
+"(2) county out-of-state rate (%), x exposure",2018,-0.0892930591903881,0.0182085569629682
+"(2) county out-of-state rate (%), x exposure",2019,-0.0822901315657311,0.0165472264762541
+"(2) county out-of-state rate (%), x exposure",2020,-0.0289324133155153,0.0258106435899498
+"(2) county out-of-state rate (%), x exposure",2021,-0.00618194755125682,0.0220978904405151
+"(2) county out-of-state rate (%), x exposure",2022,-0.0296626736107004,0.0121156005767487
+"(2) log AGI per out-migrant return, x exposure",2012,-0.0178649798704415,0.00452454175276516
+"(2) log AGI per out-migrant return, x exposure",2013,-0.000788776846626659,0.00333140233024378
+"(2) log AGI per out-migrant return, x exposure",2014,-0.00511982270530586,0.00297120457426214
+"(2) log AGI per out-migrant return, x exposure",2015,0.00265739640375839,0.00268259061842558
+"(2) log AGI per out-migrant return, x exposure",2016,0.00519248076957853,0.0027782650521112
+"(2) log AGI per out-migrant return, x exposure",2017,0,0
+"(2) log AGI per out-migrant return, x exposure",2018,0.00684414489766408,0.00201493393752704
+"(2) log AGI per out-migrant return, x exposure",2019,0.00818851141328452,0.0029455790037128
+"(2) log AGI per out-migrant return, x exposure",2020,0.0145254153124687,0.00307939618633992
+"(2) log AGI per out-migrant return, x exposure",2021,0.0311843973892833,0.00406108682944316
+"(2) log AGI per out-migrant return, x exposure",2022,0.0424441320103867,0.00760522584025831
+"(3) ZIP log returns, border near x high",2012,0.00641216794272446,0.00367645652601547
+"(3) ZIP log returns, border near x high",2013,0.00764864174341316,0.00291922798007918
+"(3) ZIP log returns, border near x high",2014,0.00633562813602781,0.00247736819160644
+"(3) ZIP log returns, border near x high",2015,0.00560305473014433,0.00186333766850793
+"(3) ZIP log returns, border near x high",2016,0.00274806286809886,0.00112242537295228
+"(3) ZIP log returns, border near x high",2017,0,0
+"(3) ZIP log returns, border near x high",2018,-0.00250471699582569,0.00108973611250569
+"(3) ZIP log returns, border near x high",2019,-0.00510487894480166,0.00180342306630065
+"(3) ZIP log returns, border near x high",2020,-0.00588437340992474,0.00265459898300351
+"(3) ZIP log returns, border near x high",2021,-0.00754998787583396,0.00286856420861093
+"(3) ZIP log returns, border near x high",2022,-0.00910194560924271,0.00339754914463269
+"(3) ZIP log returns, x ZIP exposure",2012,-0.000925012000947879,0.00110469978868556
+"(3) ZIP log returns, x ZIP exposure",2013,-0.000947895734845931,0.000864609902357529
+"(3) ZIP log returns, x ZIP exposure",2014,-0.000873780771062119,0.000694139522512009
+"(3) ZIP log returns, x ZIP exposure",2015,-0.000816438777034739,0.000478219007975579
+"(3) ZIP log returns, x ZIP exposure",2016,-0.000684920102957968,0.000373844670832267
+"(3) ZIP log returns, x ZIP exposure",2017,0,0
+"(3) ZIP log returns, x ZIP exposure",2018,0.000444984761632568,0.000308432414222086
+"(3) ZIP log returns, x ZIP exposure",2019,-0.00411770746133379,0.0005652977716341
+"(3) ZIP log returns, x ZIP exposure",2020,-0.0101456410744055,0.000879691765290951
+"(3) ZIP log returns, x ZIP exposure",2021,-0.00371846570788623,0.000859138475313092
+"(3) ZIP log returns, x ZIP exposure",2022,-0.00204644716381685,0.000795968143388344
