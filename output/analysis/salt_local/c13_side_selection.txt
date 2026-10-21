@@ -1,0 +1,31 @@
+High-tax side minus low-side, within border pair; SE by county. Columns: raw (SE) | SD units
+                       label < 10 mi, local linear (jump at 0)
+                      <char>                            <char>
+ 1:   effective tax rate (%)           0.796 (0.133) | 1.01 SD
+ 2:   test scores (SEDA, SD)           0.108 (0.062) | 0.31 SD
+ 3:      district SES (SEDA)           0.312 (0.168) | 0.35 SD
+ 4: share free/reduced lunch         -0.082 (0.043) | -0.37 SD
+ 5:   log spending per pupil         -0.022 (0.031) | -0.07 SD
+ 6:     log median HH income           0.060 (0.080) | 0.12 SD
+ 7:    log median home value         -0.117 (0.090) | -0.16 SD
+ 8:                share BA+         -0.020 (0.037) | -0.10 SD
+ 9:              share white           0.010 (0.037) | 0.04 SD
+10:              owner share           0.054 (0.031) | 0.24 SD
+11:        median year built           1.410 (1.886) | 0.08 SD
+12:               median age           0.902 (0.805) | 0.12 SD
+13:           log population         -0.078 (0.051) | -0.15 SD
+          < 10 mi, side means        < 5 mi, side means
+                       <char>                    <char>
+ 1:   0.814 (0.094) | 1.03 SD   0.750 (0.098) | 0.95 SD
+ 2:   0.070 (0.045) | 0.20 SD   0.087 (0.048) | 0.25 SD
+ 3:   0.248 (0.128) | 0.27 SD   0.291 (0.122) | 0.32 SD
+ 4: -0.068 (0.034) | -0.31 SD -0.075 (0.035) | -0.34 SD
+ 5: -0.018 (0.029) | -0.05 SD -0.018 (0.032) | -0.06 SD
+ 6:   0.059 (0.044) | 0.12 SD   0.062 (0.045) | 0.13 SD
+ 7: -0.071 (0.051) | -0.10 SD -0.087 (0.053) | -0.12 SD
+ 8:   0.011 (0.016) | 0.05 SD -0.002 (0.017) | -0.01 SD
+ 9:   0.004 (0.025) | 0.02 SD   0.005 (0.025) | 0.02 SD
+10:   0.012 (0.021) | 0.05 SD   0.027 (0.023) | 0.12 SD
+11:   1.574 (1.316) | 0.09 SD   1.370 (1.351) | 0.08 SD
+12:   0.445 (0.433) | 0.06 SD   0.504 (0.514) | 0.07 SD
+13: -0.001 (0.029) | -0.00 SD -0.013 (0.026) | -0.02 SD

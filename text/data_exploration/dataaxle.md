@@ -2134,3 +2134,8 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
 - **Covariate coverage in the instrument's tracts** (`salt_local/c12_border_covariate_coverage.R`).
   - ≥ 97.5% of tracts in every side × distance cell have: SEDA achievement, SES and % FRL; F-33 spending per pupil; ACS income, home value, education, race, tenure and year built; CoreLogic rate.
   - The exception is district property tax per pupil (> 0): 79% overall, and 55% on the low side < 10 mi, because dependent systems (VA, NC, MD, TN, MA, CT, RI) are disproportionately on low-tax sides.
+- **Side selection in levels** (`salt_local/c13_side_selection.R`, figure `c13_side_selection.png`). High minus low side within pair, tracts < 5 / < 10 mi, and a local-linear jump at 0 within 10 mi; SE by county.
+  - Effective rate: +0.75 to +0.81 pp (≈ 1 SD).
+  - Tract demographics and housing (ACS income, home value, BA share, white share, owner share, year built, age, population): all |Δ| ≤ 0.13 SD at < 5/10 mi, none significant. Home value is −0.10 SD (n.s.), in the direction of capitalisation.
+  - School district: SES +0.27 to +0.35 SD (p ≈ 0.02–0.05); FRL −0.31 to −0.37 SD; test scores +0.20 to +0.31 SD (p ≈ 0.1); spending per pupil −0.05 SD (n.s.).
+  - So the high-tax side has somewhat more advantaged school districts, but not more advantaged tracts. FRL is partly a state-policy artefact (eligibility and community-eligibility take-up).
