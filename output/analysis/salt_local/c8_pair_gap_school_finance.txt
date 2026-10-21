@@ -1,0 +1,36 @@
+Pairs: 59 | mean rate gap high - low (pp): 0.808 
+Share of pairs where the high-rate side has the lower state-aid share: 0.76 
+Share where the high-rate side raises more property tax per pupil: 0.69 
+
+                               aid               ptax               both
+Dependent Var.:                gap                gap                gap
+                                                                        
+Constant        0.8034*** (0.1841) 0.6670*** (0.1480) 0.7934*** (0.1632)
+d_aid             -0.0012 (0.0041)                      -0.0048 (0.0082)
+d_ptax                              0.0740** (0.0269)                   
+d_spend                                                 -0.0373 (0.0703)
+_______________ __________________ __________________ __________________
+S.E. type       Heteroskedas.-rob. Heteroskedas.-rob. Heteroskedas.-rob.
+Observations                    59                 59                 59
+R2                         0.00110            0.11940            0.03809
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Unweighted R2, gap ~ d_aid: 0.013 
+      pair    low   high   gap d_aid d_ptax
+    <char> <char> <char> <num> <num>  <num>
+ 1:  NM-TX     35     48  1.99 -37.4   3.85
+ 2:  NJ-NY     36     34  1.76  -1.9   2.81
+ 3:  NJ-PA     42     34  1.72   2.4   1.56
+ 4:  NY-PA     42     36  1.37   4.3  -1.26
+ 5:  OK-TX     40     48  1.20 -11.6   2.68
+ 6:  PA-WV     54     42  1.09 -22.6   4.47
+ 7:  MD-PA     24     42  1.05  -7.7   8.39
+ 8:  IL-WI     55     17  1.01 -15.1   3.46
+ 9:  ME-NH     23     33  0.97  -6.9   3.99
+10:  IL-MO     29     17  0.94  -6.4   3.75
+11:  LA-TX     22     48  0.89  -5.0   3.05
+12:  CT-MA     25     09  0.88  -0.9   0.00
+13:  MI-OH     26     39  0.86 -21.3   2.86
+14:  MA-NH     25     33  0.79  -6.8   8.35
+15:  IL-IN     18     17  0.79 -26.7   5.55

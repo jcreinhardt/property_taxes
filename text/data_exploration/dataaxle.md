@@ -2085,3 +2085,11 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - Most important forest features: district achievement (within pair), year built, SES, white share.
 - Forest-predicted tax_gap on the directional instrument: +0.036 (0.033) vs actual +0.360, i.e. 10%, n.s.; with home value +0.046 (0.027), 13%, p ≈ 0.09. Predicted x_cheap +0.003 (0.016), 1%. High side only: forest-predicted tax_gap +0.051 (0.016), 17% of actual, significant; with home value 18%. Linear and GAM predictions stay at ≤ 5% (directional).
 - In the binned plot, the forest prediction of tax_gap steps up at the border on the high side (+0.04 to +0.055 pp at 0–10 mi) and dips on the low side (−0.05 at 5–15 mi). **So flexible prediction recovers up to ~10–13% of the directional first stage from observables (n.s.) and ~17% of the one-sided one (significant).** Observables can account for a modest share of the rate-gap first stage but none of the cheaper-option indicator.
+- **Rate-difference range by signed distance** (`salt_local/c7_gap_range_signed_distance.R`, figure `c7_gap_range_signed_distance.png`). Per tract: own median − neighbour medians over tracts within 30 min drive (min / p10 / mean / p90 / max), averaged in 2.5-mi bins, split by all, same-state and cross-state neighbours.
+  - Same-state neighbours: the mean is ≈ 0 everywhere and the p10–p90 band is flat across the border. So border proximity does not change within-state options.
+  - Cross-state neighbours: the mean jumps from −0.87 pp (low side, < 10 mi) to +0.77 pp (high side). All reachable: the mean steps from −0.11 to +0.14 at the border; the max (own − cheapest) rises from 0.62 to 1.06.
+  - The low side's own − most-expensive (min) dips to −2 to −2.7 pp at 0–5 mi, in the same-state panel too. These are extremes of any-sales medians and likely noisy.
+- **Pair rate gaps vs state school finance** (`salt_local/c8_pair_gap_school_finance.R`; F-33 FY2016 state aggregates; 59 pairs).
+  - In 76% of pairs the high-rate side has the lower state-aid share. In 69% it raises more property tax per pupil.
+  - The size of the gap is unrelated to the aid-share difference (R² 0.001, slope −0.001 pp per pp of aid share). Property tax per pupil explains 12%.
+  - So school finance goes in the right direction but does not account for the size of the rate gaps.
