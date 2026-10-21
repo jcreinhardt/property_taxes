@@ -3,7 +3,7 @@
 Questions: **(a)** did the 2018 SALT cap change local property-tax revenue; **(b)** did it change dispersion of tax
 levels across jurisdictions; **(c)** did it change property values, assessment ratios, assessment regressivity and nominal
 rates. Priority (your note): the border-distance instrument. Everything is exploratory and not pre-registered. Full numbers
-and file pointers: `text/data_exploration/dataaxle.md` §4.25–4.34. Code: `code/analysis/salt_local/` (new; `a*` revenue
+and file pointers: `text/data_exploration/dataaxle.md` §4.25–4.37. Code: `code/analysis/salt_local/` (new; `a*` revenue
 and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `bouchet/` SQL) and
 `code/analysis/local_juris/R/24–27` (instrument, school districts). Outputs: `output/analysis/salt_local/`. Key figure:
 `figures/c3_key_results.png`.
@@ -96,6 +96,10 @@ $5k or $10k); county or district + state × year FE.
   - Unweighted, faster growth in exposed counties continues (+1.7% per SD by 2024 vs 2017).
   - Weighted, a mild slowdown after 2020.
   - Nominal rates fall 0.3–0.9% per SD in 2021–23 (unweighted). (`b2_county_event_studies.txt`)
+- **Income control** (`a10_revenue_income_control.txt`; county share of AGI ≥ $200k, corr 0.75 with exposure): the
+  school-district slope change moves to income (−0.58%/yr, SE 0.24), with exposure +0.10 (0.20). County governments keep an
+  exposure-specific slope change of −0.76%/yr (0.40), borderline. So for school districts the slowdown can't be separated
+  from a general high-income-county slowdown.
 - **Caveats:** the identifying variation is a few dozen large exposed counties within their states, and the post period
   overlaps COVID aid and the 2020–22 housing cycle.
 
@@ -193,8 +197,11 @@ own minus the cheapest adjacent district, and, for state-line districts, own min
   November. The extract and both Data Axle jobs ran on Bouchet instead (about 30 min), and the SOM jobs were cancelled.
   Rule saved: CPU-only jobs on SOM GPU partitions must be cancellable.
 - **Next steps:**
-  1. Repeat sales on all parcels, not 30% (needs the cluster: the laptop's memory limits it), to tighten the capitalisation test.
-  2. Dose-response with the 2018 SOI "limited SALT" amounts (actual binding) by ZIP.
-  4. Synthetic placebo borders (county lines within states) for the district DDD.
-  5. Separate the school-district result by state school-finance regime (states that cap levies, e.g. NJ 2% cap, NY tax
-     cap, IL PTELL), since levy caps could produce the high-side slowdown independently of SALT.
+  1. Repeat sales on all parcels (laptop memory caps the event study at 30% and the pooled model at 60%; county clustering,
+     not sample size, limits precision), ideally with an income-adjusted exposure measured at the parcel level.
+  2. Separate SALT from income: compare ZIPs with similar income but different state and local tax burdens, e.g. via the
+     2018 SOI "limited SALT" amounts (the actually binding deduction) or state income-tax rates × income.
+  3. Separate the border revenue result by state school-finance regime (levy caps such as the NJ 2% cap, NY tax cap,
+     IL PTELL). Leave-one-state-out already shows it is not driven by any single state.
+  4. A better placebo than within-state county lines (too dense to be informative): e.g. state borders between two
+     low-SALT states, or the same design for 2008–2013 with older Census of Governments files.
