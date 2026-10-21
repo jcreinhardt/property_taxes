@@ -1,0 +1,100 @@
+== National totals by AGI stub (1 <$1, 2 $1-10k, 3 10-25k, 4 25-50k, 5 50-75k, 6 75-100k, 7 100-200k, 8 200k+)
+        y agi_stub returns_m itemizers_m salt_bn limited_bn mid_bn
+    <num>    <num>     <num>       <num>   <num>      <num>  <num>
+ 1:  2016        1      2.02        0.00    0.00       0.00   0.00
+ 2:  2017        1      1.99        0.00    0.00       0.00   0.00
+ 3:  2018        1      1.94        0.00    0.00       0.00   0.00
+ 4:  2016        2     20.82        0.79    2.81       0.00   2.60
+ 5:  2017        2     20.31        0.75    2.74       0.00   2.54
+ 6:  2018        2     18.93        0.23    1.00       0.76   1.17
+ 7:  2016        3     32.16        2.44    8.18       0.00   7.46
+ 8:  2017        3     31.75        2.40    8.12       0.00   7.26
+ 9:  2018        3     30.89        0.66    2.82       2.26   3.04
+10:  2016        4     35.45        6.78   26.79       0.00  24.40
+11:  2017        4     35.95        6.75   27.06       0.00  23.63
+12:  2018        4     36.37        1.77    9.00       7.45   9.43
+13:  2016        5     20.16        7.75   42.53       0.00  35.60
+14:  2017        5     20.77        7.84   43.57       0.00  35.19
+15:  2018        5     21.27        2.45   16.16      13.72  15.99
+16:  2016        6     12.99        6.98   50.69       0.00  38.90
+17:  2017        6     13.42        7.07   52.04       0.00  38.48
+18:  2018        6     13.78        2.35   19.50      16.19  17.96
+19:  2016        7     18.63       14.21  158.23       0.00 100.95
+20:  2017        7     19.83       15.02  169.86       0.00 104.60
+21:  2018        7     21.02        5.61   68.17      47.12  57.49
+22:  2016        8      6.85        6.44  269.89       0.00  68.19
+23:  2017        8      7.67        7.19  313.19       0.00  74.85
+24:  2018        8      8.45        4.50  202.71      42.33  67.10
+        y agi_stub returns_m itemizers_m salt_bn limited_bn mid_bn
+    <num>    <num>     <num>       <num>   <num>      <num>  <num>
+    amt_share_itemizers
+                  <num>
+ 1:             3870.00
+ 2:             4420.00
+ 3:             3570.00
+ 4:                0.00
+ 5:                0.00
+ 6:                0.00
+ 7:                0.00
+ 8:                0.00
+ 9:                0.00
+10:                0.00
+11:                0.00
+12:                0.00
+13:                0.00
+14:                0.00
+15:                0.00
+16:                0.01
+17:                0.01
+18:                0.00
+19:                0.04
+20:                0.05
+21:                0.01
+22:                0.59
+23:                0.59
+24:                0.04
+    amt_share_itemizers
+                  <num>
+
+== County measures ($ per 2016 return)
+     measure  mean    sd   p10   p50   p90   p99 wtd_mean
+      <char> <num> <num> <num> <num> <num> <num>    <num>
+1: excess_pp   435   942     0   192   920  4276     1570
+2:    d_salt   227   164    75   185   429   792      401
+3:  d_salt17   250   183    84   201   476   871      453
+4:  cap_bite    95   220     5    40   204   926      366
+5:     d_mid   118    66    52   102   208   323      159
+6:    d_both   345   217   138   289   630  1078      560
+
+Correlations across counties (unweighted):
+          excess_pp d_salt d_salt17 cap_bite d_mid d_both
+excess_pp      1.00   0.81     0.82     0.98  0.37   0.73
+d_salt         0.81   1.00     0.99     0.76  0.74   0.98
+d_salt17       0.82   0.99     1.00     0.78  0.74   0.97
+cap_bite       0.98   0.76     0.78     1.00  0.34   0.68
+d_mid          0.37   0.74     0.74     0.34  1.00   0.86
+d_both         0.73   0.98     0.97     0.68  0.86   1.00
+
+Share of the national d_salt that is the cap bite on 2018 itemizers: 0.912 
+National: SALT claimed 2016 559.1 bn | 2018 claimed (pre-limit) 319.4 bn | 2018 deducted 129.8 bn
+
+Top 15 counties by d_salt:
+                        name d_salt cap_bite d_mid old_excess
+                      <char>  <num>    <num> <num>      <num>
+ 1:      New York County, NY   2101     5054    61      21536
+ 2:         Marin County, CA   1350     3884   148      14682
+ 3:     Fairfield County, CT   1347     2353   221      10592
+ 4:   Westchester County, NY   1262     2583   166      11350
+ 5:     San Mateo County, CA   1250     3488   115      12860
+ 6:         Teton County, WY   1194     1420   101       6333
+ 7: San Francisco County, CA   1139     2547    55      10284
+ 8:        Morris County, NJ   1093     1550   276       7416
+ 9:     Hunterdon County, NJ   1077     1106   360       6382
+10:        Nassau County, NY   1064     1442   180       7590
+11:   Santa Clara County, CA   1046     2680   108      11054
+12:      Somerset County, NJ   1006     1379   283       7055
+13:        Bergen County, NJ    998     1348   192       7145
+14:        Putnam County, NY    989      704   340       4312
+15:     Goochland County, VA    958     1216   291       4547
+
+Rank changes: counties in the top decile of d_salt that are not in the top decile of the old measure: 70 of 315 

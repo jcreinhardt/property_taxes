@@ -2201,3 +2201,17 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - **So the "richer leavers" result is mostly income growth in exposed counties; selective exit appears only in 2020–21.**
   - Net migration (returns, % of stayers): pre +0.10 to +0.17, 2018–19 +0.05/+0.08, 2020 −0.11, 2021 −0.19, 2022 −0.04. Relative to 2015–16, the post-cap change is ≈ −0.05 pp/yr in 2018–19 and −0.25 to −0.35 in 2020–21. Net AGI flow: 2021 −0.20% of stayers' AGI.
   - A cumulative net loss of ≈ 0.3–0.5% of returns per SD by 2021 is smaller than the −1.0% (2020) dip in ZIP return counts, so most of that dip is filing composition, not migration.
+- **Alternative exposure: observed change in the federal value of deductions, TY2016 → TY2018** (`salt_local/c24_exposure_delta.R`; saved `data/local_juris/salt_exposure_county_delta.csv`). SOI county × stub raw files.
+  - SALT claimed = income/sales + real estate + personal property taxes. From TY2018 this is the pre-limit amount, and A18460 is the amount deducted after the limit.
+  - AMT share = N09600/N04470. Assumed MFJ marginal rates by stub (2016/2018): 10/10, 15/12, 15/12, 15/12, 25/22, 33/32.
+  - Trap: state-total rows have COUNTYFIPS "0" in 2016 and "000" later.
+  - National: SALT claimed $559bn (2016) → $319bn claimed / $130bn deducted (2018); itemizers 45m → 17.6m. AMT hit 59% of $200k+ itemizers in 2016 and 4% in 2018. So much of the top bracket's SALT was already worth nothing before the cap.
+  - **Measures ($ per 2016 return):**
+    - d_salt (lost value of SALT deductions): mean 227, SD 164, return-weighted 401.
+    - cap_bite (value of SALT disallowed among 2018 itemizers): mean 95, SD 220.
+    - d_mid (lost value of mortgage interest): mean 118, SD 66.
+    - d_both: mean 345.
+  - **Correlations with the old measure:** d_salt 0.81, cap_bite 0.98, d_mid 0.37.
+    - Because of the AMT, d_salt is far smaller than cap_bite in the richest counties (Manhattan 2,101 vs 5,054).
+    - 70 of 315 top-decile d_salt counties are not top-decile on the old measure.
+    - 91% of national d_salt is the cap bite on 2018 itemizers.
