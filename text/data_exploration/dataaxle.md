@@ -2118,3 +2118,15 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - Property tax is zero for dependent school systems funded by their parent government (F-33 item T02): CT, MD, MA, NC, VA, DC (100% of districts), TN 90%, RI 89%, VT 98%, ME 63%. Only 84% of parcels lie in a district with a positive F-33 property tax.
   - **SEDA 4.1:** achievement covers 99.4% of parcels, SES 99.2%. Geographic districts only, so there is nothing for the secondary layer. Gaps: VT (31% of parcels), MI (11%).
   - **CoreLogic 1% sample:** has parcels in 89% of unified and 83% of elementary districts. The misses are small districts, which the full roll would cover.
+- **F-33 fill rates and property tax vs CoreLogic** (`salt_local/c11_f33_fill_and_ptax_compare.R`).
+  - **Trap:** the elsec `STATE` column is the Census state code (alphabetical; 15 = IN, 09 = DC), not FIPS. Use `CONUM` / `NCESID` for FIPS. Earlier scripts used `NCESID`, so they are unaffected.
+  - **Fill rates.** 130 fields are present every year 2012–23, with no missing values (0 = zero or not applicable). 46 fields were added from FY2020 (ESSER/COVID relief AR*/AE*, new C/B items).
+    - Non-zero in > 95% of records every year: total revenue and expenditure, federal, state and local revenue, current spending, instruction, total salaries (Z32), benefits (Z34), capital outlay.
+    - Enrolment (V33): 93.7%; zeros are non-operating or agency records.
+    - Property tax (T06): 84.4–85.5% every year; zeros are dependent systems. Parent-government contributions (T02): 7.6%.
+    - Long-term debt: about 77%. From cities and counties (D23): about 50%.
+    - Full table in `c11_f33_field_fill.csv`.
+  - **Property tax 2017 by state, same counties** (CT state-wide, because the CoG 2017 uses planning regions).
+    - US totals: CoreLogic bills $515bn; CoG all local governments $490bn; F-33 school T06 $195bn (T06 + T02 $253bn).
+    - CoG / CoreLogic is mostly 0.8–1.25. It is about 2 in WV and WY, and 1.4–1.6 in SC and MS: personal, mineral and vehicle property is taxed but not on the parcel roll. It is 0.28 in VT, where the statewide education tax counts as a state tax.
+    - School share (T06 / CoreLogic) ranges from 0.2 (KS, MT, NY) to 0.8 (DE, OK, SC). It is about 0 for dependent systems: CT, MA, MD, NC, VA, DC, TN, RI, VT.
