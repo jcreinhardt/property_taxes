@@ -31,8 +31,10 @@ and dispersion, `b*` CoreLogic panel and prices, `c*` figures, `d*` migration, `
    between adjacent districts on either side of state lines. If anything, dispersion across school districts widens
    slightly in exposed metros (+2% of the mean SD).
 4. **(c) Values and assessment.**
-   - **Prices:** sale prices in exposed counties fall 0.6–1.8% per SD behind after 2019, most likely pandemic-era
-     re-sorting away from expensive metros.
+   - **Prices:** in repeat sales (parcel fixed effects), prices in high-SALT ZIPs fall behind the rest of their state from
+     2018: per SD of exposure −1.3% (2018), −2.2% (2019), −4.4% (2021), −5.6% (2024), after a flat 2012–16. The 2018–19
+     decline predates the pandemic. Comparing ZIPs within the same county, about half of the decline is a pre-existing
+     trend. County medians show −0.6 to −1.8% per SD from 2019.
    - **Assessment ratios:** assessments don't follow those relative declines, so assessment ratios (+1 to +4%) and
      effective rates (+2 to +3%) rise.
    - **Regressivity:** essentially unchanged.
@@ -126,7 +128,12 @@ from a general post-2017 increase in cross-border competition (remote work, outf
 
 ## 6. (c) Values, assessment, regressivity, nominal rates
 
-- **Prices** (county exposure, CoreLogic full sales): −0.6 to −1.8% per SD from 2019, pre flat.
+- **Prices, repeat sales** (`b8_repeat_sales_exposure.txt`, figure `b8_repeat_sales_exposure.png`; 7.8m sales of 3.5m
+  parcels, parcel FE, ZIP exposure). With state × year FE: 2012–16 +0.9 to +1.4% (flat); 2018–24 −1.3, −2.2, −3.2, −4.4,
+  −4.8, −4.9, −5.6% per SD (SE 0.2–0.7). With county × year FE (within-county ZIP variation): a downward pre-trend
+  (+3.3% in 2012 → +1.1% in 2016), then −1.7 to −3.7%. That is about 1 pp below trend in 2018–21 and back on trend by
+  2023–24.
+- **Prices, county medians** (CoreLogic full sales): −0.6 to −1.8% per SD from 2019, pre flat.
 - **Assessment ratios** (log median AV/price): +0.4 to +4.0% per SD (weighted +0.3 to +1.9%).
 - **Effective rates:** about +2.8% of the mean by 2024.
 - **Regressivity:** the slope of log(AV/P) on log P (mean −0.28) moves by at most ±0.008, essentially flat; PRD flat.

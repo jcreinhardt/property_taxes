@@ -2047,3 +2047,10 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - Pair FE year effects: pre +0.0 to +0.9 pp, post −0.5, −1.0, −1.8, −3.5 pp (SE 0.4–1.5): if anything, *fewer* moves toward the cheaper side.
   - SALT-contrast difference: pre −5.7, −3.5, −1.8, +0.2 pp (a pre-trend that ends in 2016), post +0.3, −0.5, +1.7, +4.6 (SE 0.9–2.6).
   - **No post-2017 shift toward the low-tax side.** The 1% sample's pattern was the pre-trend plus noise.
+- Pooled repeat sales on 60% of parcels (`b7_repeat_sales_pooled.R`, lean model): near × high × exposure, post −0.4% (0.8), late −0.9% (0.7); low side 0. SEs barely shrink (county clustering dominates). Exposure alone (within pair × side × year): post −3.5% (0.4), late a further −2.1% (0.35) per SD.
+
+### 4.36 (c) Repeat-sales prices and ZIP SALT exposure (all residential parcels)
+`code/analysis/salt_local/b8_repeat_sales_exposure.R`; 30% of parcels with ≥ 2 arm's-length sales 2012–24 (7.8m sales, 3.5m parcels), parcel FE, SE by county; exposure = 2016 SOI ZIP SALT above $10k per return, winsorised at p99, SD units. Figure `figures/b8_repeat_sales_exposure.png`.
+- **State × year FE: 2012–16 +1.3, +1.2, +1.4, +1.1, +0.9% (flat); 2018 −1.3, 2019 −2.2, 2020 −3.2, 2021 −4.4, 2022 −4.8, 2023 −4.9, 2024 −5.6% (SE 0.2–0.7).** A clear break at the cap, already visible in 2018–19 before the pandemic.
+- County × year FE (within-county ZIP variation): 2012–16 +3.3, +2.4, +2.3, +1.6, +1.1% (a downward pre-trend of ≈ −0.55%/yr); 2018–24 −1.7, −1.9, −2.7, −3.5, −3.7, −3.2, −3.7%. Relative to the extrapolated pre-trend, about −1.1% in 2018, −0.8% in 2019, −0.6 to −1.3% in 2020–21, ≈ 0 by 2023–24.
+- Reading: high-SALT ZIPs' repeat-sales prices fell ≈ 2–2.5% per SD relative to the rest of their state in 2018–19, growing to ≈ 5–6% by 2021–24, from a flat pre-period. This is consistent with capitalisation of the cap, about 1 pp of which is clearly pre-COVID. Within counties, half or more of it is a continuing pre-trend, so the cross-county/within-state comparison drives the result.

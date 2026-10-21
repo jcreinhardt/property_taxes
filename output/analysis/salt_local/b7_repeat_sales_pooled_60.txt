@@ -1,0 +1,10 @@
+Pooled repeat-sales border test, share of parcels 0.6 | sales 12679009 | parcels 5674657 
+         term     est     se
+       <char>   <num>  <num>
+1:    nh:post  0.0206 0.0151
+2:   post:nhx -0.0036 0.0078
+3:   post:nlx -0.0051 0.0080
+4:   nhx:late -0.0090 0.0073
+5:   nlx:late  0.0001 0.0076
+6: post:exz_z -0.0352 0.0041
+7: late:exz_z -0.0205 0.0035
