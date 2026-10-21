@@ -1,0 +1,52 @@
+Universe: TIGER cb 2019 polygons, lower 48 + DC, excl. 'not defined': 10808 unified, 1946 elementary, 482 secondary | parcels with coordinates: 890095 (in a district: 99.94 %)
+Cells: % of districts (by type) or % of parcels whose district is in the source
+                                                      source unified elementary
+                                                      <char>   <num>      <num>
+1:                            F-33 in all 12 years (2012-23)    96.9       96.1
+2:                                               F-33 FY2016    98.6       98.8
+3:                             F-33 FY2016, property tax > 0    89.9       91.3
+4:                                               F-33 FY2023    97.8       97.4
+5:                                      SEDA 4.1 achievement    98.4       94.4
+6:                                              SEDA 4.1 SES    96.9       86.8
+7:                          CoreLogic 1% sample: >= 1 parcel    88.9       83.0
+8: CoreLogic 1% sample: >= 1 parcel with 2016 bill and value    88.9       83.0
+   secondary parcels parcels (secondary layer, where present)
+       <num>   <num>                                    <num>
+1:      78.6    98.6                                     92.8
+2:      79.3    99.6                                     92.9
+3:      73.2    84.2                                     90.3
+4:      78.8    99.1                                     92.9
+5:       0.0    99.4                                      0.0
+6:       0.0    99.2                                      0.0
+7:       0.0   100.0                                      0.0
+8:       0.0   100.0                                      0.0
+
+F-33 coverage by year (% of unified + elementary polygons; % of parcels):
+        y districts parcels
+    <int>     <num>   <num>
+ 1:  2012      97.9   99.13
+ 2:  2013      98.3   99.17
+ 3:  2014      98.4   99.43
+ 4:  2015      98.6   99.54
+ 5:  2016      98.6   99.59
+ 6:  2017      98.7   99.28
+ 7:  2018      98.4   99.28
+ 8:  2019      98.3   99.28
+ 9:  2020      98.1   99.21
+10:  2021      98.0   99.20
+11:  2022      97.9   99.16
+12:  2023      97.7   99.13
+
+Parcel share of districts missing SEDA achievement, by state (top 10):
+        st     n pct_no_seda
+    <char> <int>       <num>
+ 1:     VT  1614        30.7
+ 2:     MI 27546        11.3
+ 3:     MT  3242         2.3
+ 4:     ME  2641         1.7
+ 5:     VA 25890         1.4
+ 6:     LA 10202         1.2
+ 7:     NH  2873         0.7
+ 8:     NJ 23974         0.5
+ 9:     ND  1238         0.5
+10:     NY 36225         0.4

@@ -2111,3 +2111,10 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
     - TIGER cb 2019 has 10,885 unified, 1,946 elementary and 482 secondary polygons (18 "not defined").
     - Of F-33 FY2016 districts with enrolment (lower 48 + DC), 96.6% have a polygon, covering 99.3% of enrolment and 99.7% of property-tax revenue.
     - Missing ones are mostly non-geographic agencies (county offices, vocational, state-run) plus a few CA city districts (Modesto, Santa Rosa, Petaluma, Santa Cruz city schools). These are probably coded under different elementary/high LEAIDs in TIGER (not verified).
+- **District-level data coverage** (`salt_local/c10_district_data_coverage.R`).
+  - Universe: TIGER cb 2019 polygons in the lower 48 + DC: 10,808 unified, 1,946 elementary and 482 secondary.
+  - **F-33 finance:**
+    - Each year 2012–23 covers 98–99% of unified/elementary districts and 99.1–99.6% of parcels. A balanced 12-year panel covers 98.6% of parcels; secondary districts only 79%.
+    - Property tax is zero for dependent school systems funded by their parent government (F-33 item T02): CT, MD, MA, NC, VA, DC (100% of districts), TN 90%, RI 89%, VT 98%, ME 63%. Only 84% of parcels lie in a district with a positive F-33 property tax.
+  - **SEDA 4.1:** achievement covers 99.4% of parcels, SES 99.2%. Geographic districts only, so there is nothing for the secondary layer. Gaps: VT (31% of parcels), MI (11%).
+  - **CoreLogic 1% sample:** has parcels in 89% of unified and 83% of elementary districts. The misses are small districts, which the full roll would cover.
