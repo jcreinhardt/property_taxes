@@ -1,0 +1,13 @@
+endog,controls,model,oos_r2,n
+x_cheap,controls,linear,-0.033993654989749,54917
+x_cheap,controls,gam,-0.0603532535159974,54917
+x_cheap,controls,forest,-0.0307871959228214,54917
+tax_gap,controls,linear,0.0188697870481814,54917
+tax_gap,controls,gam,0.00524421506148531,54917
+tax_gap,controls,forest,0.0836773315520373,54917
+x_cheap,controls + log home value,linear,-0.0227885181539311,54498
+x_cheap,controls + log home value,gam,-0.0399143498649575,54498
+x_cheap,controls + log home value,forest,-0.00161696142551326,54498
+tax_gap,controls + log home value,linear,0.0531496020642199,54498
+tax_gap,controls + log home value,gam,0.0689397667182807,54498
+tax_gap,controls + log home value,forest,0.146589518954259,54498

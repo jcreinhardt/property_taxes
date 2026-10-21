@@ -1,0 +1,98 @@
+Out-of-sample R2 (5-fold, folds by county) of the within-pair endogenous variable on controls:
+Key: <endog, controls>
+     endog                  controls forest    gam linear
+    <char>                    <char>  <num>  <num>  <num>
+1: tax_gap                  controls  0.084  0.005  0.019
+2: tax_gap controls + log home value  0.147  0.069  0.053
+3: x_cheap                  controls -0.031 -0.060 -0.034
+4: x_cheap controls + log home value -0.002 -0.040 -0.023
+
+Step 2: predicted endogenous on the instrument (SE by county); actual first stage and predicted/actual ratio
+      endog                  controls  model                        spec
+     <char>                    <char> <char>                      <char>
+ 1: x_cheap                  controls linear   near x high (directional)
+ 2: x_cheap                  controls linear near vs far, high side only
+ 3: x_cheap                  controls linear  near vs far, low side only
+ 4: x_cheap                  controls    gam   near x high (directional)
+ 5: x_cheap                  controls    gam near vs far, high side only
+ 6: x_cheap                  controls    gam  near vs far, low side only
+ 7: x_cheap                  controls forest   near x high (directional)
+ 8: x_cheap                  controls forest near vs far, high side only
+ 9: x_cheap                  controls forest  near vs far, low side only
+10: tax_gap                  controls linear   near x high (directional)
+11: tax_gap                  controls linear near vs far, high side only
+12: tax_gap                  controls linear  near vs far, low side only
+13: tax_gap                  controls    gam   near x high (directional)
+14: tax_gap                  controls    gam near vs far, high side only
+15: tax_gap                  controls    gam  near vs far, low side only
+16: tax_gap                  controls forest   near x high (directional)
+17: tax_gap                  controls forest near vs far, high side only
+18: tax_gap                  controls forest  near vs far, low side only
+19: x_cheap controls + log home value linear   near x high (directional)
+20: x_cheap controls + log home value linear near vs far, high side only
+21: x_cheap controls + log home value linear  near vs far, low side only
+22: x_cheap controls + log home value    gam   near x high (directional)
+23: x_cheap controls + log home value    gam near vs far, high side only
+24: x_cheap controls + log home value    gam  near vs far, low side only
+25: x_cheap controls + log home value forest   near x high (directional)
+26: x_cheap controls + log home value forest near vs far, high side only
+27: x_cheap controls + log home value forest  near vs far, low side only
+28: tax_gap controls + log home value linear   near x high (directional)
+29: tax_gap controls + log home value linear near vs far, high side only
+30: tax_gap controls + log home value linear  near vs far, low side only
+31: tax_gap controls + log home value    gam   near x high (directional)
+32: tax_gap controls + log home value    gam near vs far, high side only
+33: tax_gap controls + log home value    gam  near vs far, low side only
+34: tax_gap controls + log home value forest   near x high (directional)
+35: tax_gap controls + log home value forest near vs far, high side only
+36: tax_gap controls + log home value forest  near vs far, low side only
+      endog                  controls  model                        spec
+     <char>                    <char> <char>                      <char>
+        est     se actual  share
+      <num>  <num>  <num>  <num>
+ 1: -0.0058 0.0050  0.274 -0.021
+ 2:  0.0020 0.0031  0.416  0.005
+ 3:  0.0075 0.0052  0.144  0.052
+ 4: -0.0117 0.0075  0.274 -0.043
+ 5:  0.0032 0.0044  0.416  0.008
+ 6:  0.0099 0.0085  0.144  0.068
+ 7:  0.0032 0.0156  0.274  0.012
+ 8:  0.0121 0.0046  0.416  0.029
+ 9:  0.0057 0.0163  0.144  0.040
+10: -0.0054 0.0148  0.360 -0.015
+11:  0.0301 0.0095  0.298  0.101
+12:  0.0235 0.0175 -0.049 -0.479
+13: -0.0193 0.0195  0.360 -0.054
+14:  0.0233 0.0132  0.298  0.078
+15:  0.0308 0.0286 -0.049 -0.627
+16:  0.0361 0.0328  0.360  0.100
+17:  0.0509 0.0164  0.298  0.171
+18: -0.0017 0.0340 -0.049  0.035
+19:  0.0056 0.0034  0.273  0.020
+20:  0.0038 0.0027  0.416  0.009
+21: -0.0010 0.0049  0.144 -0.007
+22:  0.0116 0.0076  0.273  0.043
+23:  0.0103 0.0044  0.416  0.025
+24: -0.0017 0.0093  0.144 -0.011
+25:  0.0082 0.0139  0.273  0.030
+26:  0.0163 0.0046  0.416  0.039
+27:  0.0074 0.0137  0.144  0.051
+28:  0.0145 0.0139  0.361  0.040
+29:  0.0352 0.0115  0.298  0.118
+30:  0.0136 0.0176 -0.049 -0.276
+31:  0.0126 0.0210  0.361  0.035
+32:  0.0354 0.0179  0.298  0.119
+33:  0.0219 0.0321 -0.049 -0.445
+34:  0.0455 0.0271  0.361  0.126
+35:  0.0539 0.0168  0.298  0.181
+36:  0.0042 0.0310 -0.049 -0.087
+        est     se actual  share
+      <num>  <num>  <num>  <num>
+
+Random-forest permutation importance (tax_gap, controls):
+     ach_w    yrbuilt        ses      ses_w        ach  yrbuilt_w   sh_white 
+   0.10450    0.09896    0.09778    0.09343    0.08038    0.07513    0.06275 
+sh_white_w     sh_own   sh_own_w       linc      sh_ba     linc_w    sh_ba_w 
+   0.05840    0.05150    0.04601    0.03688    0.03389    0.02981    0.02763 
+    lpop_w       lpop 
+   0.01084    0.01065 
