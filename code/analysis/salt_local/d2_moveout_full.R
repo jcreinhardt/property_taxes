@@ -3,7 +3,7 @@
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
 ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb()); m <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/border_moveout/moveout_tract_full.parquet'", ROOT))); dbDisconnect(con, shutdown = TRUE)
-m[, y := y + 1L]   # destination file
+# y is already the destination file in the extract
 cut <- c(`2012` = 3, `2013` = 15, `2014` = 27, `2015` = 40, `2016` = 54, `2017` = 65, `2018` = 79, `2019` = 90, `2020` = 102, `2021` = 114)
 m <- merge(m, data.table(y = 2013:2021, months = diff(cut)), by = "y")[, mv := 100 * moves / n * 12 / months][n >= 20]
 iv <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, pair, high, dbin, near)])

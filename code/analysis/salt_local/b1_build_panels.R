@@ -18,7 +18,7 @@ tract_year <- merge(roll_t, sal_t, by = c("tract", "y"), all.x = TRUE)
 roll_c <- q(sprintf("SELECT fips, y, sum(n) FILTER (WHERE res) n_res, sum(bill) FILTER (WHERE res) bill_res, sum(av) FILTER (WHERE res) av_res,
   sum(n) n_all, sum(bill) bill_all FROM read_parquet('%s/roll_tract_*.parquet') GROUP BY ALL", K))
 nom_c <- q(sprintf("SELECT fips, y, sum(med_nom * n) / sum(n) nom_w, median(med_nom) nom_area_med, median(med_rate_pct) rate_pct_med,
-  sqrt(sum(n * pow(ln(med_nom), 2)) / sum(n) - pow(sum(n * ln(med_nom)) / sum(n), 2)) sd_log_nom_area, count(*) n_areas
+  sqrt(greatest(sum(n * pow(ln(med_nom), 2)) / sum(n) - pow(sum(n * ln(med_nom)) / sum(n), 2), 0)) sd_log_nom_area, count(*) n_areas
   FROM read_parquet('%s/roll_area_*.parquet') WHERE med_nom > 0 AND med_nom < 1 GROUP BY ALL", K))
 sal_c <- q("SELECT fips, y, count(*) n_sales, median(price) p50, median(eff) FILTER (WHERE eff BETWEEN 0.0005 AND 0.1) eff50,
   median(ratio) FILTER (WHERE ratio BETWEEN 0.01 AND 5) ratio50,
