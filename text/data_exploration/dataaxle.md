@@ -2139,3 +2139,12 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - Tract demographics and housing (ACS income, home value, BA share, white share, owner share, year built, age, population): all |Δ| ≤ 0.13 SD at < 5/10 mi, none significant. Home value is −0.10 SD (n.s.), in the direction of capitalisation.
   - School district: SES +0.27 to +0.35 SD (p ≈ 0.02–0.05); FRL −0.31 to −0.37 SD; test scores +0.20 to +0.31 SD (p ≈ 0.1); spending per pupil −0.05 SD (n.s.).
   - So the high-tax side has somewhat more advantaged school districts, but not more advantaged tracts. FRL is partly a state-policy artefact (eligibility and community-eligibility take-up).
+- **Side profiles out to 100 mi** (`salt_local/c14_side_profiles.R`, figure `c14_side_profiles.png`; 5-mi bins, pair FE, SD units).
+  - Near (< 10 mi) vs inland (50–100 mi):
+    - Tax rate: high side 0.43 vs 0.28; low side −0.61 vs −0.30. The rates diverge towards the line.
+    - District SES: high −0.10 vs 0.04; low −0.37 vs 0.00.
+    - FRL: high 0.07 vs 0.03; low 0.39 vs −0.10.
+    - Test scores: high −0.08 vs −0.03; low −0.28 vs −0.01.
+    - Tract income: high −0.11 vs 0.07; low −0.23 vs −0.02.
+  - So the school-district gap at the border comes from a dip on the low-tax side near the line, not from an advantage on the high-tax side. The high side near the border looks like its own interior.
+  - Other tract characteristics are flat within the wide CIs.

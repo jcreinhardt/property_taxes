@@ -1,0 +1,469 @@
+x,b,se,N,var,label,side
+-92.5,-0.265354258376913,0.128568736493985,197,med,effective tax rate (%),low-tax side
+-87.5,-0.241929638220574,0.146833781071671,207,med,effective tax rate (%),low-tax side
+-82.5,-0.263594330313105,0.167619487180953,267,med,effective tax rate (%),low-tax side
+-77.5,-0.250120998103032,0.17990658468229,336,med,effective tax rate (%),low-tax side
+-72.5,-0.370425431049377,0.165212588064343,418,med,effective tax rate (%),low-tax side
+-67.5,-0.344939916360629,0.158357802082869,562,med,effective tax rate (%),low-tax side
+-62.5,-0.366330227890832,0.157184569396164,542,med,effective tax rate (%),low-tax side
+-57.5,-0.211442295684988,0.162256795879168,700,med,effective tax rate (%),low-tax side
+-52.5,-0.0501936398731932,0.183230969516465,823,med,effective tax rate (%),low-tax side
+-47.5,-0.195727096831142,0.157887456801181,742,med,effective tax rate (%),low-tax side
+-42.5,-0.127241907437297,0.173040396155285,834,med,effective tax rate (%),low-tax side
+-37.5,-0.165017967365576,0.163497372538538,892,med,effective tax rate (%),low-tax side
+-32.5,-0.186150159320038,0.16049125858017,995,med,effective tax rate (%),low-tax side
+-27.5,-0.241812299957673,0.170442742509795,1192,med,effective tax rate (%),low-tax side
+-22.5,-0.312130430968727,0.162498382667517,1325,med,effective tax rate (%),low-tax side
+-17.5,-0.290484896786603,0.161260931458372,1489,med,effective tax rate (%),low-tax side
+-12.5,-0.350888419733174,0.170534183429388,1790,med,effective tax rate (%),low-tax side
+-7.5,-0.526055396315395,0.176552886406299,2764,med,effective tax rate (%),low-tax side
+-2.5,-0.492016962375362,0.175453862346309,3417,med,effective tax rate (%),low-tax side
+2.5,0.313974198887433,0.163226256113398,3080,med,effective tax rate (%),high-tax side
+7.5,0.408488382601806,0.164604018481698,2571,med,effective tax rate (%),high-tax side
+12.5,0.337175056365072,0.169088062862775,2122,med,effective tax rate (%),high-tax side
+17.5,0.23442074012348,0.160444807986204,2101,med,effective tax rate (%),high-tax side
+22.5,0.196618087270231,0.159622660096897,1997,med,effective tax rate (%),high-tax side
+27.5,0.16582134542102,0.161170548373217,1619,med,effective tax rate (%),high-tax side
+32.5,0.220661413771679,0.162902923605907,1477,med,effective tax rate (%),high-tax side
+37.5,0.267155248192494,0.16006432039246,1134,med,effective tax rate (%),high-tax side
+42.5,0.22557839172947,0.15678505280861,894,med,effective tax rate (%),high-tax side
+47.5,0.154614100939072,0.155527984425845,757,med,effective tax rate (%),high-tax side
+52.5,0.163763456226218,0.160842343319467,790,med,effective tax rate (%),high-tax side
+57.5,0.192437448182034,0.177277179137276,719,med,effective tax rate (%),high-tax side
+62.5,0.187340795897335,0.177954654358759,805,med,effective tax rate (%),high-tax side
+67.5,0.240452793012126,0.156680098110485,999,med,effective tax rate (%),high-tax side
+72.5,0.215379132733187,0.155368945937009,921,med,effective tax rate (%),high-tax side
+77.5,0.2895779766438,0.1654939851372,757,med,effective tax rate (%),high-tax side
+82.5,0.165058379298635,0.162850239034218,720,med,effective tax rate (%),high-tax side
+87.5,0.322337929373205,0.166139909892978,549,med,effective tax rate (%),high-tax side
+92.5,0.383826407482747,0.165600219084098,366,med,effective tax rate (%),high-tax side
+97.5,0.310411735629949,0.169127615482221,413,med,effective tax rate (%),high-tax side
+-92.5,-0.190428088802355,0.0657372020488607,197,ach,"district test scores (SEDA, SD)",low-tax side
+-87.5,-0.0376942336300455,0.101167215132719,207,ach,"district test scores (SEDA, SD)",low-tax side
+-82.5,0.0478030490468501,0.0908858716050267,267,ach,"district test scores (SEDA, SD)",low-tax side
+-77.5,-0.0102878339205053,0.0994401951901911,335,ach,"district test scores (SEDA, SD)",low-tax side
+-72.5,0.0456686218255053,0.105947318658494,418,ach,"district test scores (SEDA, SD)",low-tax side
+-67.5,0.04296801279069,0.101089963188173,562,ach,"district test scores (SEDA, SD)",low-tax side
+-62.5,-0.00454096530378503,0.0979296340314045,542,ach,"district test scores (SEDA, SD)",low-tax side
+-57.5,-0.0233552994781585,0.124223364736421,695,ach,"district test scores (SEDA, SD)",low-tax side
+-52.5,-0.00901199402914754,0.102889259151402,721,ach,"district test scores (SEDA, SD)",low-tax side
+-47.5,0.119118084096745,0.0969750826529238,585,ach,"district test scores (SEDA, SD)",low-tax side
+-42.5,-0.0032260821813751,0.102847668846979,804,ach,"district test scores (SEDA, SD)",low-tax side
+-37.5,-0.0694207656200215,0.104943524431269,891,ach,"district test scores (SEDA, SD)",low-tax side
+-32.5,-0.0158343268720365,0.0926991698216914,995,ach,"district test scores (SEDA, SD)",low-tax side
+-27.5,-0.0957484370687988,0.103505254324676,1190,ach,"district test scores (SEDA, SD)",low-tax side
+-22.5,0.00810587040153529,0.0970757479514718,1322,ach,"district test scores (SEDA, SD)",low-tax side
+-17.5,0.0482734649111749,0.0919545432221404,1485,ach,"district test scores (SEDA, SD)",low-tax side
+-12.5,0.040878872820462,0.0932296093719843,1772,ach,"district test scores (SEDA, SD)",low-tax side
+-7.5,-0.0306204214770575,0.0921342806254594,2751,ach,"district test scores (SEDA, SD)",low-tax side
+-2.5,-0.150507595034841,0.0970540897096713,3400,ach,"district test scores (SEDA, SD)",low-tax side
+2.5,-0.0555982314926681,0.0926343835041655,3080,ach,"district test scores (SEDA, SD)",high-tax side
+7.5,0.00345418550895688,0.0914091766099746,2570,ach,"district test scores (SEDA, SD)",high-tax side
+12.5,0.0567703822974741,0.0897637675489907,2120,ach,"district test scores (SEDA, SD)",high-tax side
+17.5,0.0753079835522299,0.0917918640693485,2099,ach,"district test scores (SEDA, SD)",high-tax side
+22.5,0.0987689246954686,0.0928497866526435,1986,ach,"district test scores (SEDA, SD)",high-tax side
+27.5,0.0726834630675934,0.10060452670409,1616,ach,"district test scores (SEDA, SD)",high-tax side
+32.5,0.0439985019176859,0.0964327766129703,1472,ach,"district test scores (SEDA, SD)",high-tax side
+37.5,0.0189976358512743,0.0931158301619982,1132,ach,"district test scores (SEDA, SD)",high-tax side
+42.5,0.0674880079446862,0.0968541602857048,894,ach,"district test scores (SEDA, SD)",high-tax side
+47.5,0.110939773917798,0.10145927342797,751,ach,"district test scores (SEDA, SD)",high-tax side
+52.5,0.0806095928970854,0.0950201945917251,787,ach,"district test scores (SEDA, SD)",high-tax side
+57.5,0.0720268584904154,0.088860193215022,715,ach,"district test scores (SEDA, SD)",high-tax side
+62.5,0.000913177189776709,0.099399694185835,805,ach,"district test scores (SEDA, SD)",high-tax side
+67.5,-0.022092292394591,0.0987311959656599,999,ach,"district test scores (SEDA, SD)",high-tax side
+72.5,-0.05174700853232,0.0994467077665021,921,ach,"district test scores (SEDA, SD)",high-tax side
+77.5,-0.0293929007745346,0.0943503016763175,757,ach,"district test scores (SEDA, SD)",high-tax side
+82.5,-0.142390760903022,0.0969606822524248,720,ach,"district test scores (SEDA, SD)",high-tax side
+87.5,-0.0360258189545111,0.0918901754263706,549,ach,"district test scores (SEDA, SD)",high-tax side
+92.5,0.0240590633947595,0.102292308220286,366,ach,"district test scores (SEDA, SD)",high-tax side
+97.5,0.0332766682183078,0.102850030896675,413,ach,"district test scores (SEDA, SD)",high-tax side
+-92.5,-0.548835838217628,0.298319917055177,195,ses,district SES (SEDA),low-tax side
+-87.5,-0.181447328304685,0.305285356435001,207,ses,district SES (SEDA),low-tax side
+-82.5,0.217138405242985,0.252388225273541,267,ses,district SES (SEDA),low-tax side
+-77.5,0.0283333691839982,0.261412636004141,335,ses,district SES (SEDA),low-tax side
+-72.5,0.113562721232736,0.293273850438027,418,ses,district SES (SEDA),low-tax side
+-67.5,0.0553288880806369,0.278136873895316,562,ses,district SES (SEDA),low-tax side
+-62.5,0.00766370974109076,0.269574879484354,541,ses,district SES (SEDA),low-tax side
+-57.5,-0.0542090276406424,0.347595490483644,694,ses,district SES (SEDA),low-tax side
+-52.5,0.0487196041865212,0.26604036439926,721,ses,district SES (SEDA),low-tax side
+-47.5,0.342441869882264,0.261212263096231,585,ses,district SES (SEDA),low-tax side
+-42.5,-0.0155586686526576,0.267617129817018,804,ses,district SES (SEDA),low-tax side
+-37.5,-0.141379876665432,0.270241958684222,891,ses,district SES (SEDA),low-tax side
+-32.5,-0.076688846410846,0.243684548399156,992,ses,district SES (SEDA),low-tax side
+-27.5,-0.206476494412344,0.271919556684354,1188,ses,district SES (SEDA),low-tax side
+-22.5,0.0719983542371903,0.250462403065927,1320,ses,district SES (SEDA),low-tax side
+-17.5,0.130215718711807,0.246490814307272,1482,ses,district SES (SEDA),low-tax side
+-12.5,-0.0212532680303892,0.252523685707166,1769,ses,district SES (SEDA),low-tax side
+-7.5,-0.207891834088043,0.250561092509217,2749,ses,district SES (SEDA),low-tax side
+-2.5,-0.447030133586664,0.257091422822583,3400,ses,district SES (SEDA),low-tax side
+2.5,-0.148409595672407,0.246766171060943,3077,ses,district SES (SEDA),high-tax side
+7.5,-0.0233474382010548,0.250299252789495,2570,ses,district SES (SEDA),high-tax side
+12.5,0.155030977192915,0.239012076534128,2118,ses,district SES (SEDA),high-tax side
+17.5,0.187014432705216,0.24481163416664,2098,ses,district SES (SEDA),high-tax side
+22.5,0.282514461985142,0.245634970650589,1985,ses,district SES (SEDA),high-tax side
+27.5,0.226728355715123,0.266124032629834,1600,ses,district SES (SEDA),high-tax side
+32.5,0.138753441930813,0.254429789238607,1471,ses,district SES (SEDA),high-tax side
+37.5,0.0930599888910042,0.254298323164031,1130,ses,district SES (SEDA),high-tax side
+42.5,0.199878532481377,0.252698912541617,893,ses,district SES (SEDA),high-tax side
+47.5,0.263904177302803,0.270588626805633,750,ses,district SES (SEDA),high-tax side
+52.5,0.159475148062375,0.255315443098319,785,ses,district SES (SEDA),high-tax side
+57.5,0.206404921369688,0.236113441015927,715,ses,district SES (SEDA),high-tax side
+62.5,0.0755835928309794,0.258678014375944,804,ses,district SES (SEDA),high-tax side
+67.5,-0.0323803081864675,0.25306114404733,999,ses,district SES (SEDA),high-tax side
+72.5,-0.0640714735641892,0.249695662768315,921,ses,district SES (SEDA),high-tax side
+77.5,0.00580859500943909,0.240623542839479,757,ses,district SES (SEDA),high-tax side
+82.5,-0.190500405265191,0.244682761811677,719,ses,district SES (SEDA),high-tax side
+87.5,0.058321205133153,0.251329783617967,549,ses,district SES (SEDA),high-tax side
+92.5,0.213098561799478,0.276747050183348,366,ses,district SES (SEDA),high-tax side
+97.5,0.156134514218235,0.274732200763503,413,ses,district SES (SEDA),high-tax side
+-92.5,0.0941190293334424,0.0430380052940987,197,perfrl,district share free/reduced lunch,low-tax side
+-87.5,0.00980552705428986,0.0652620663081064,207,perfrl,district share free/reduced lunch,low-tax side
+-82.5,-0.0803991405253093,0.0587430944698919,267,perfrl,district share free/reduced lunch,low-tax side
+-77.5,-0.043551225204824,0.0590101527086314,335,perfrl,district share free/reduced lunch,low-tax side
+-72.5,-0.0460272503187622,0.0653058463490762,418,perfrl,district share free/reduced lunch,low-tax side
+-67.5,-0.0382236616759456,0.0667437018789738,562,perfrl,district share free/reduced lunch,low-tax side
+-62.5,-0.0230319354750463,0.0595715302706589,542,perfrl,district share free/reduced lunch,low-tax side
+-57.5,-0.0215659971995847,0.0711584886894979,695,perfrl,district share free/reduced lunch,low-tax side
+-52.5,-0.00817739698954942,0.0653687464897868,721,perfrl,district share free/reduced lunch,low-tax side
+-47.5,-0.0869747163452521,0.0602620614604727,585,perfrl,district share free/reduced lunch,low-tax side
+-42.5,0.00355080862031734,0.0634489645586266,804,perfrl,district share free/reduced lunch,low-tax side
+-37.5,0.0383650049235554,0.0629445571381184,891,perfrl,district share free/reduced lunch,low-tax side
+-32.5,0.0170787588722135,0.0572858520173768,995,perfrl,district share free/reduced lunch,low-tax side
+-27.5,0.0718411040873041,0.0676301058838845,1190,perfrl,district share free/reduced lunch,low-tax side
+-22.5,0.00283941812144997,0.0620193490075473,1322,perfrl,district share free/reduced lunch,low-tax side
+-17.5,-0.0255851583610529,0.0591919545019651,1485,perfrl,district share free/reduced lunch,low-tax side
+-12.5,0.000269142835280706,0.0616850390330916,1776,perfrl,district share free/reduced lunch,low-tax side
+-7.5,0.0574031126308664,0.0607406027782428,2751,perfrl,district share free/reduced lunch,low-tax side
+-2.5,0.113537312089745,0.0623412413392606,3400,perfrl,district share free/reduced lunch,low-tax side
+2.5,0.0316554120105931,0.0584982146264514,3080,perfrl,district share free/reduced lunch,high-tax side
+7.5,-0.000581243352617084,0.0589320683021091,2570,perfrl,district share free/reduced lunch,high-tax side
+12.5,-0.0398366758906671,0.0572555090011367,2120,perfrl,district share free/reduced lunch,high-tax side
+17.5,-0.0487058176383219,0.0592893594583221,2100,perfrl,district share free/reduced lunch,high-tax side
+22.5,-0.0778374921356946,0.0595322837357742,1995,perfrl,district share free/reduced lunch,high-tax side
+27.5,-0.0621181581217542,0.0633792447123481,1616,perfrl,district share free/reduced lunch,high-tax side
+32.5,-0.0498896047477755,0.0614272433837797,1472,perfrl,district share free/reduced lunch,high-tax side
+37.5,-0.032829668986315,0.0599145945210266,1133,perfrl,district share free/reduced lunch,high-tax side
+42.5,-0.0524145910020194,0.0622051142381104,894,perfrl,district share free/reduced lunch,high-tax side
+47.5,-0.076964685083898,0.0658917616322102,751,perfrl,district share free/reduced lunch,high-tax side
+52.5,-0.0402416106971552,0.060505231462361,787,perfrl,district share free/reduced lunch,high-tax side
+57.5,-0.0327101911260615,0.0604121983742075,715,perfrl,district share free/reduced lunch,high-tax side
+62.5,-0.00623267939995711,0.0665313620388343,805,perfrl,district share free/reduced lunch,high-tax side
+67.5,0.0265849967151721,0.0659286295843944,999,perfrl,district share free/reduced lunch,high-tax side
+72.5,0.0213752360041002,0.0620608188491285,921,perfrl,district share free/reduced lunch,high-tax side
+77.5,0.00779253066985544,0.0595372232798983,757,perfrl,district share free/reduced lunch,high-tax side
+82.5,0.0756223829943536,0.0583188583680006,720,perfrl,district share free/reduced lunch,high-tax side
+87.5,0.0298930354448675,0.0609952148441504,549,perfrl,district share free/reduced lunch,high-tax side
+92.5,-0.0144527123684514,0.0686385768873837,366,perfrl,district share free/reduced lunch,high-tax side
+97.5,-0.0125785475211835,0.0634993040137663,413,perfrl,district share free/reduced lunch,high-tax side
+-92.5,-0.0478229204355216,0.0226076575383132,197,lspend,district log spending per pupil,low-tax side
+-87.5,-0.106963340945782,0.0231791527103346,207,lspend,district log spending per pupil,low-tax side
+-82.5,-0.036643997253507,0.0411762300202791,267,lspend,district log spending per pupil,low-tax side
+-77.5,-0.0577595598243717,0.0435302921660725,335,lspend,district log spending per pupil,low-tax side
+-72.5,-0.0695366070636574,0.0420880824243451,418,lspend,district log spending per pupil,low-tax side
+-67.5,-0.0971096725038062,0.0394514294985614,562,lspend,district log spending per pupil,low-tax side
+-62.5,-0.0645800347364262,0.0453689196462313,542,lspend,district log spending per pupil,low-tax side
+-57.5,0.0124762787965462,0.0501083585918917,699,lspend,district log spending per pupil,low-tax side
+-52.5,0.0139720331441549,0.0458066331451532,816,lspend,district log spending per pupil,low-tax side
+-47.5,-0.025558822587108,0.0592544499474792,739,lspend,district log spending per pupil,low-tax side
+-42.5,-0.074547038719778,0.0363605022451324,832,lspend,district log spending per pupil,low-tax side
+-37.5,-0.067946400435919,0.0348425387228196,892,lspend,district log spending per pupil,low-tax side
+-32.5,-0.0618548664262916,0.0335685664674199,987,lspend,district log spending per pupil,low-tax side
+-27.5,0.0123711448721896,0.047989953118506,1183,lspend,district log spending per pupil,low-tax side
+-22.5,0.019724271141787,0.0409511148414046,1313,lspend,district log spending per pupil,low-tax side
+-17.5,-0.0322538053605257,0.0361706179102144,1477,lspend,district log spending per pupil,low-tax side
+-12.5,-0.0128353127073064,0.0401242411280973,1769,lspend,district log spending per pupil,low-tax side
+-7.5,0.0212971736296797,0.0385438799341722,2750,lspend,district log spending per pupil,low-tax side
+-2.5,0.0314415141303533,0.0382621201132945,3397,lspend,district log spending per pupil,low-tax side
+2.5,0.0194894010427293,0.0362362654775023,3078,lspend,district log spending per pupil,high-tax side
+7.5,-0.00157528897198712,0.035032010162609,2570,lspend,district log spending per pupil,high-tax side
+12.5,-0.0139189463615552,0.0346060302322557,2120,lspend,district log spending per pupil,high-tax side
+17.5,0.00802040702552061,0.0357758898124627,2099,lspend,district log spending per pupil,high-tax side
+22.5,-0.0093362167879652,0.0371332899199138,1984,lspend,district log spending per pupil,high-tax side
+27.5,0.0217118195742123,0.0381672590676537,1613,lspend,district log spending per pupil,high-tax side
+32.5,0.0366659075679494,0.036950917854131,1472,lspend,district log spending per pupil,high-tax side
+37.5,-0.00152141672314753,0.0336637191431466,1132,lspend,district log spending per pupil,high-tax side
+42.5,-0.0336525295691989,0.0326601838911494,894,lspend,district log spending per pupil,high-tax side
+47.5,-0.0218060806504863,0.0317905360089728,751,lspend,district log spending per pupil,high-tax side
+52.5,0.0268951721714059,0.038670445784306,787,lspend,district log spending per pupil,high-tax side
+57.5,0.0102546111439304,0.0360625674500735,715,lspend,district log spending per pupil,high-tax side
+62.5,-0.000170159915750527,0.0377745258107707,805,lspend,district log spending per pupil,high-tax side
+67.5,0.0173165456121755,0.0358977578892008,999,lspend,district log spending per pupil,high-tax side
+72.5,0.00975936776116714,0.0365586306322469,921,lspend,district log spending per pupil,high-tax side
+77.5,0.0112067850762455,0.0370027236938166,757,lspend,district log spending per pupil,high-tax side
+82.5,0.0851907085476015,0.0442840550393033,720,lspend,district log spending per pupil,high-tax side
+87.5,0.0673287282312497,0.0434106408550871,549,lspend,district log spending per pupil,high-tax side
+92.5,0.00826105010139657,0.0372231703976262,366,lspend,district log spending per pupil,high-tax side
+97.5,-0.00916294405386518,0.0358291605021287,413,lspend,district log spending per pupil,high-tax side
+-92.5,-0.142511423912046,0.084475565498798,196,linc,tract log median HH income,low-tax side
+-87.5,-0.0776563350136813,0.119943408733386,206,linc,tract log median HH income,low-tax side
+-82.5,0.0787326208391914,0.117103336883528,266,linc,tract log median HH income,low-tax side
+-77.5,0.00351700997899304,0.117150625211726,336,linc,tract log median HH income,low-tax side
+-72.5,0.0289360520169013,0.126804765900578,417,linc,tract log median HH income,low-tax side
+-67.5,0.0286541868857073,0.128193634585219,562,linc,tract log median HH income,low-tax side
+-62.5,0.0204277951219903,0.11669210664179,542,linc,tract log median HH income,low-tax side
+-57.5,-0.0139877767678664,0.147924077172683,697,linc,tract log median HH income,low-tax side
+-52.5,-0.0672268311185349,0.131981156267825,821,linc,tract log median HH income,low-tax side
+-47.5,-0.0718722411986627,0.158580907776378,740,linc,tract log median HH income,low-tax side
+-42.5,-0.0370339483540748,0.118927660549852,833,linc,tract log median HH income,low-tax side
+-37.5,-0.0551533726272437,0.120348510661318,891,linc,tract log median HH income,low-tax side
+-32.5,-0.0506846814817187,0.111157801623756,994,linc,tract log median HH income,low-tax side
+-27.5,-0.064958443616747,0.117053636185984,1189,linc,tract log median HH income,low-tax side
+-22.5,0.0341778185703591,0.115442090892769,1324,linc,tract log median HH income,low-tax side
+-17.5,0.0172215426804591,0.112961763483718,1487,linc,tract log median HH income,low-tax side
+-12.5,0.0150090691799315,0.111541466333157,1783,linc,tract log median HH income,low-tax side
+-7.5,-0.0759030256586717,0.115606083222884,2757,linc,tract log median HH income,low-tax side
+-2.5,-0.140680048704353,0.118374153185988,3413,linc,tract log median HH income,low-tax side
+2.5,-0.0773596995692528,0.111910634553531,3077,linc,tract log median HH income,high-tax side
+7.5,-0.0237489831858528,0.116299456316723,2567,linc,tract log median HH income,high-tax side
+12.5,0.068600449754408,0.110177531465989,2118,linc,tract log median HH income,high-tax side
+17.5,0.106046363219927,0.112545465856976,2099,linc,tract log median HH income,high-tax side
+22.5,0.110903593052501,0.112785523421127,1994,linc,tract log median HH income,high-tax side
+27.5,0.0820537055216469,0.119516092640991,1611,linc,tract log median HH income,high-tax side
+32.5,0.0575047791296786,0.11495097842199,1473,linc,tract log median HH income,high-tax side
+37.5,0.0375419243006331,0.115664010901863,1131,linc,tract log median HH income,high-tax side
+42.5,0.0576335871590955,0.117989242387452,892,linc,tract log median HH income,high-tax side
+47.5,0.0649781935692083,0.124444981219728,757,linc,tract log median HH income,high-tax side
+52.5,0.0556369139627877,0.119706826183954,789,linc,tract log median HH income,high-tax side
+57.5,0.155158372607059,0.114846166493875,718,linc,tract log median HH income,high-tax side
+62.5,0.0710002668164685,0.114613536236587,803,linc,tract log median HH income,high-tax side
+67.5,-0.0131731444856248,0.115642685016768,997,linc,tract log median HH income,high-tax side
+72.5,-0.00373397952876067,0.11439654514935,914,linc,tract log median HH income,high-tax side
+77.5,0.0178452829166279,0.110818770202174,751,linc,tract log median HH income,high-tax side
+82.5,-0.123681453974473,0.114880871686358,716,linc,tract log median HH income,high-tax side
+87.5,0.0986422515402642,0.113579109127251,548,linc,tract log median HH income,high-tax side
+92.5,0.181502629139501,0.116559983790171,366,linc,tract log median HH income,high-tax side
+97.5,0.0217992221741358,0.11873946080404,413,linc,tract log median HH income,high-tax side
+-92.5,-0.340100367979457,0.142579287242689,195,lhval,tract log median home value,low-tax side
+-87.5,-0.182501285006882,0.14931647110279,205,lhval,tract log median home value,low-tax side
+-82.5,0.149571501035653,0.151372008199533,262,lhval,tract log median home value,low-tax side
+-77.5,0.0569449266701295,0.1686958667931,332,lhval,tract log median home value,low-tax side
+-72.5,0.037119566594631,0.1566737107935,413,lhval,tract log median home value,low-tax side
+-67.5,0.0150882143395336,0.163059663452951,562,lhval,tract log median home value,low-tax side
+-62.5,-0.0220047411423951,0.148440510447319,542,lhval,tract log median home value,low-tax side
+-57.5,-0.0363300728224694,0.18186647909468,689,lhval,tract log median home value,low-tax side
+-52.5,-0.155037251309722,0.183357439885777,811,lhval,tract log median home value,low-tax side
+-47.5,-0.119511247858778,0.19855328790583,726,lhval,tract log median home value,low-tax side
+-42.5,-0.067379831503262,0.157797761536493,828,lhval,tract log median home value,low-tax side
+-37.5,-0.0437886280550735,0.155374262664561,879,lhval,tract log median home value,low-tax side
+-32.5,-0.0430047704620309,0.142382072997212,990,lhval,tract log median home value,low-tax side
+-27.5,-0.00568944613856176,0.149781840080789,1183,lhval,tract log median home value,low-tax side
+-22.5,0.0955426890331369,0.147519239808544,1317,lhval,tract log median home value,low-tax side
+-17.5,0.000760967336654789,0.143979717835526,1484,lhval,tract log median home value,low-tax side
+-12.5,-0.00849052917668958,0.14380383814988,1779,lhval,tract log median home value,low-tax side
+-7.5,0.028152985126052,0.145565400676296,2748,lhval,tract log median home value,low-tax side
+-2.5,-0.0154390274917256,0.150536844164874,3347,lhval,tract log median home value,low-tax side
+2.5,-0.103959603575678,0.144309344449153,3056,lhval,tract log median home value,high-tax side
+7.5,-0.073398178474261,0.148242426200359,2549,lhval,tract log median home value,high-tax side
+12.5,0.0213934184721012,0.143096423027908,2113,lhval,tract log median home value,high-tax side
+17.5,0.0978499581590039,0.153226276514674,2091,lhval,tract log median home value,high-tax side
+22.5,0.089980856843369,0.14629739799229,1988,lhval,tract log median home value,high-tax side
+27.5,0.0706533922116752,0.153558953529208,1603,lhval,tract log median home value,high-tax side
+32.5,0.0637669302661169,0.144592192736135,1468,lhval,tract log median home value,high-tax side
+37.5,-0.0109506630022478,0.147842697966237,1120,lhval,tract log median home value,high-tax side
+42.5,0.014397891993419,0.149755919977674,887,lhval,tract log median home value,high-tax side
+47.5,0.0301401208487048,0.15679994357912,753,lhval,tract log median home value,high-tax side
+52.5,0.0713743957443391,0.152249181775552,781,lhval,tract log median home value,high-tax side
+57.5,0.181928013223041,0.153098520126201,714,lhval,tract log median home value,high-tax side
+62.5,0.0672206974509178,0.148220744814869,799,lhval,tract log median home value,high-tax side
+67.5,-0.0578725242846045,0.138383855140605,989,lhval,tract log median home value,high-tax side
+72.5,-0.0768085637188265,0.140543737896548,906,lhval,tract log median home value,high-tax side
+77.5,-0.0918475098154283,0.138951815675056,750,lhval,tract log median home value,high-tax side
+82.5,-0.161262357395275,0.145425518428338,708,lhval,tract log median home value,high-tax side
+87.5,0.113965924708943,0.14707766444735,543,lhval,tract log median home value,high-tax side
+92.5,0.263868847751198,0.169423492177043,361,lhval,tract log median home value,high-tax side
+97.5,0.0900893476927089,0.163227838924288,408,lhval,tract log median home value,high-tax side
+-92.5,-0.103341071938165,0.022272677052336,196,sh_ba,tract share BA+,low-tax side
+-87.5,-0.0595337162437307,0.0283672601110919,207,sh_ba,tract share BA+,low-tax side
+-82.5,0.0497683713903951,0.0392614982217354,267,sh_ba,tract share BA+,low-tax side
+-77.5,-0.0202708621167043,0.0331858118421402,336,sh_ba,tract share BA+,low-tax side
+-72.5,0.00195587037952219,0.0337292461947796,418,sh_ba,tract share BA+,low-tax side
+-67.5,0.0120282316788452,0.0321723578404231,562,sh_ba,tract share BA+,low-tax side
+-62.5,-0.0109210994754995,0.0306727379934983,542,sh_ba,tract share BA+,low-tax side
+-57.5,0.0192753533068156,0.0444579887372067,699,sh_ba,tract share BA+,low-tax side
+-52.5,0.0141704532691094,0.0385465451722764,823,sh_ba,tract share BA+,low-tax side
+-47.5,0.00699779676923237,0.035850198765845,742,sh_ba,tract share BA+,low-tax side
+-42.5,0.0168699968314403,0.0325162276359303,834,sh_ba,tract share BA+,low-tax side
+-37.5,0.0180201754124635,0.0360390915640898,892,sh_ba,tract share BA+,low-tax side
+-32.5,0.00470157850427563,0.0280591236391925,995,sh_ba,tract share BA+,low-tax side
+-27.5,0.000700160412168943,0.0290425205075832,1192,sh_ba,tract share BA+,low-tax side
+-22.5,0.0309429100705267,0.0302890853836674,1325,sh_ba,tract share BA+,low-tax side
+-17.5,0.0025997504432535,0.0272166782980686,1489,sh_ba,tract share BA+,low-tax side
+-12.5,-0.0301770025422486,0.0285489554604741,1789,sh_ba,tract share BA+,low-tax side
+-7.5,-0.0365586654580835,0.0286978238449724,2761,sh_ba,tract share BA+,low-tax side
+-2.5,-0.0130078766946353,0.032023266142412,3413,sh_ba,tract share BA+,low-tax side
+2.5,-0.0156487493386166,0.028155526983662,3079,sh_ba,tract share BA+,high-tax side
+7.5,-0.0120985336784736,0.0305625784158176,2569,sh_ba,tract share BA+,high-tax side
+12.5,0.000291146247478225,0.0265160174827539,2121,sh_ba,tract share BA+,high-tax side
+17.5,0.0246366884791115,0.0309479799945692,2101,sh_ba,tract share BA+,high-tax side
+22.5,0.0227482868972067,0.0273958608902375,1997,sh_ba,tract share BA+,high-tax side
+27.5,0.00403370664296071,0.0334600726165448,1616,sh_ba,tract share BA+,high-tax side
+32.5,0.00741697841915287,0.0281171570213679,1477,sh_ba,tract share BA+,high-tax side
+37.5,-0.00423015850199723,0.0290062923474816,1133,sh_ba,tract share BA+,high-tax side
+42.5,-0.00615269337536395,0.0320759653472128,894,sh_ba,tract share BA+,high-tax side
+47.5,0.00724676549148148,0.0377810231441612,757,sh_ba,tract share BA+,high-tax side
+52.5,0.0197542757796544,0.0331137235755363,789,sh_ba,tract share BA+,high-tax side
+57.5,0.0462129857702954,0.0345426299602457,719,sh_ba,tract share BA+,high-tax side
+62.5,0.0135595839892793,0.0265074213145216,805,sh_ba,tract share BA+,high-tax side
+67.5,-0.00625328307249004,0.0263694598436397,999,sh_ba,tract share BA+,high-tax side
+72.5,-0.00453984493502299,0.0274007471760401,915,sh_ba,tract share BA+,high-tax side
+77.5,-0.0188529659833861,0.0264698508607318,754,sh_ba,tract share BA+,high-tax side
+82.5,-0.0362282295769695,0.0308491773815913,718,sh_ba,tract share BA+,high-tax side
+87.5,0.0588621406544471,0.038807826933716,548,sh_ba,tract share BA+,high-tax side
+92.5,0.0723041811242875,0.0443460513847492,366,sh_ba,tract share BA+,high-tax side
+97.5,0.0336052989968751,0.0400717556725825,413,sh_ba,tract share BA+,high-tax side
+-92.5,-0.0401965811170433,0.0575119227309295,196,sh_white,tract share white,low-tax side
+-87.5,0.0340953086104375,0.0345452004373507,207,sh_white,tract share white,low-tax side
+-82.5,0.0578263123529495,0.0470592910230713,267,sh_white,tract share white,low-tax side
+-77.5,0.00435460995351587,0.0687375885936901,336,sh_white,tract share white,low-tax side
+-72.5,0.0298264274875451,0.062946122016987,418,sh_white,tract share white,low-tax side
+-67.5,0.0499030629080509,0.0641410813515681,562,sh_white,tract share white,low-tax side
+-62.5,0.0540055357137038,0.0517118071398393,542,sh_white,tract share white,low-tax side
+-57.5,-0.0213638514123381,0.078771633176221,699,sh_white,tract share white,low-tax side
+-52.5,-0.123697466250115,0.0838864060685675,823,sh_white,tract share white,low-tax side
+-47.5,-0.0699659239298764,0.111810150096729,742,sh_white,tract share white,low-tax side
+-42.5,0.0179744312286471,0.0621906801903152,834,sh_white,tract share white,low-tax side
+-37.5,0.0181260402045697,0.0538889054411175,892,sh_white,tract share white,low-tax side
+-32.5,0.0276925197604278,0.0500829486221478,995,sh_white,tract share white,low-tax side
+-27.5,-0.0695848721716264,0.065225976586803,1192,sh_white,tract share white,low-tax side
+-22.5,0.00227818849588994,0.0532487803590018,1325,sh_white,tract share white,low-tax side
+-17.5,0.00899552953990864,0.0505484309690864,1489,sh_white,tract share white,low-tax side
+-12.5,-0.000125391428616714,0.0638643841048455,1789,sh_white,tract share white,low-tax side
+-7.5,-0.0228999714690604,0.0537818421993844,2761,sh_white,tract share white,low-tax side
+-2.5,-0.0403774970023637,0.0562329583658916,3413,sh_white,tract share white,low-tax side
+2.5,-0.0363791920478866,0.0513248219679929,3079,sh_white,tract share white,high-tax side
+7.5,-0.0303574529026629,0.0601104735391777,2569,sh_white,tract share white,high-tax side
+12.5,0.0200121423446647,0.0497139141996215,2121,sh_white,tract share white,high-tax side
+17.5,0.0320953427557419,0.0511579351927787,2101,sh_white,tract share white,high-tax side
+22.5,0.051332168120798,0.0518414775112609,1997,sh_white,tract share white,high-tax side
+27.5,0.0619683208822505,0.0518205776858228,1616,sh_white,tract share white,high-tax side
+32.5,0.0325127509313617,0.0528135648080121,1477,sh_white,tract share white,high-tax side
+37.5,0.0575655487816284,0.0501997973983781,1133,sh_white,tract share white,high-tax side
+42.5,0.066916100228467,0.0483514894228992,894,sh_white,tract share white,high-tax side
+47.5,0.0302970241837855,0.049899180870717,757,sh_white,tract share white,high-tax side
+52.5,0.0204711951750504,0.0543160690422714,789,sh_white,tract share white,high-tax side
+57.5,0.0593514332091087,0.0557699449888373,719,sh_white,tract share white,high-tax side
+62.5,0.00990367823501499,0.0535643685652041,805,sh_white,tract share white,high-tax side
+67.5,-0.00533932639088257,0.0483204071889959,999,sh_white,tract share white,high-tax side
+72.5,-0.00862532032494266,0.053413924196867,915,sh_white,tract share white,high-tax side
+77.5,-0.0116202633522389,0.0589348047790817,754,sh_white,tract share white,high-tax side
+82.5,-0.0776710657281844,0.0577983890657341,718,sh_white,tract share white,high-tax side
+87.5,-0.0256558676226467,0.0565270892664995,548,sh_white,tract share white,high-tax side
+92.5,0.0172707241003341,0.0559526668149778,366,sh_white,tract share white,high-tax side
+97.5,-0.0192990901504151,0.0623340907728111,413,sh_white,tract share white,high-tax side
+-92.5,0.0153587794492017,0.0293244885942819,196,sh_own,tract owner share,low-tax side
+-87.5,0.016267032190343,0.0439507325290007,207,sh_own,tract owner share,low-tax side
+-82.5,0.0174483360562328,0.0449980023530573,267,sh_own,tract owner share,low-tax side
+-77.5,0.0264771122468086,0.0411015704739769,336,sh_own,tract owner share,low-tax side
+-72.5,0.0231279241881088,0.0464096750769338,418,sh_own,tract owner share,low-tax side
+-67.5,0.00616443176007156,0.0441012097408172,562,sh_own,tract owner share,low-tax side
+-62.5,0.0236408437381463,0.0423397883087627,542,sh_own,tract owner share,low-tax side
+-57.5,-0.000550858585993908,0.0444593812759941,699,sh_own,tract owner share,low-tax side
+-52.5,-0.0271432819737008,0.0386288573167076,823,sh_own,tract owner share,low-tax side
+-47.5,-0.0126549158338038,0.0520709887249047,741,sh_own,tract owner share,low-tax side
+-42.5,-0.00568262700805408,0.0389604671070935,834,sh_own,tract owner share,low-tax side
+-37.5,-0.029011689668367,0.0463496965287947,892,sh_own,tract owner share,low-tax side
+-32.5,-0.0171629114795614,0.037209446234337,994,sh_own,tract owner share,low-tax side
+-27.5,-0.0324582833612576,0.0467023863222438,1191,sh_own,tract owner share,low-tax side
+-22.5,-0.00275830637434121,0.0408159368704344,1325,sh_own,tract owner share,low-tax side
+-17.5,0.0353289319008447,0.0391154747472259,1489,sh_own,tract owner share,low-tax side
+-12.5,0.0553221786694887,0.0385897156425864,1788,sh_own,tract owner share,low-tax side
+-7.5,-0.000672965636159234,0.0384272648467942,2760,sh_own,tract owner share,low-tax side
+-2.5,-0.0771931719918173,0.0392584689140969,3413,sh_own,tract owner share,low-tax side
+2.5,-0.0374713209513164,0.0371855919594379,3079,sh_own,tract owner share,high-tax side
+7.5,-0.00200425110173424,0.0373670389371077,2569,sh_own,tract owner share,high-tax side
+12.5,0.0316635280697641,0.0362149965325799,2119,sh_own,tract owner share,high-tax side
+17.5,0.0293576387973418,0.0402189355280094,2101,sh_own,tract owner share,high-tax side
+22.5,0.0384199516070794,0.0385959006863918,1997,sh_own,tract owner share,high-tax side
+27.5,0.0460392660546947,0.0395011929696668,1615,sh_own,tract owner share,high-tax side
+32.5,0.0241379910598972,0.0395967144423398,1477,sh_own,tract owner share,high-tax side
+37.5,0.0186427609487707,0.0376527200604076,1133,sh_own,tract owner share,high-tax side
+42.5,0.0362398646939425,0.0378695646551979,893,sh_own,tract owner share,high-tax side
+47.5,0.0214613340972088,0.0363749141206859,757,sh_own,tract owner share,high-tax side
+52.5,-0.00316174061383709,0.0398581907923938,789,sh_own,tract owner share,high-tax side
+57.5,0.0257839543872481,0.0416733614066836,719,sh_own,tract owner share,high-tax side
+62.5,-0.00229139027851732,0.0418647045015212,804,sh_own,tract owner share,high-tax side
+67.5,-0.023493905675602,0.0411784433870034,999,sh_own,tract owner share,high-tax side
+72.5,-0.00358855861155408,0.0386505891919988,914,sh_own,tract owner share,high-tax side
+77.5,0.00443996029415866,0.0384003270946371,753,sh_own,tract owner share,high-tax side
+82.5,-0.0604467676961652,0.0409020474186451,717,sh_own,tract owner share,high-tax side
+87.5,-0.0132127676579852,0.0438668566199793,548,sh_own,tract owner share,high-tax side
+92.5,0.0015013291639997,0.0432826295236841,366,sh_own,tract owner share,high-tax side
+97.5,-0.037446946039182,0.0426006714561214,413,sh_own,tract owner share,high-tax side
+-92.5,0.741375460584077,2.74279496206053,195,yrbuilt,tract median year built,low-tax side
+-87.5,2.77290216624634,5.3029010714849,206,yrbuilt,tract median year built,low-tax side
+-82.5,0.709090292831945,5.44847211909482,265,yrbuilt,tract median year built,low-tax side
+-77.5,0.727795595022094,5.48849488078926,336,yrbuilt,tract median year built,low-tax side
+-72.5,3.48909824463901,5.61647615863708,418,yrbuilt,tract median year built,low-tax side
+-67.5,6.62382334200986,5.1257206488025,561,yrbuilt,tract median year built,low-tax side
+-62.5,5.4354913379663,5.44192292300209,542,yrbuilt,tract median year built,low-tax side
+-57.5,0.512823969632407,5.28827154622168,697,yrbuilt,tract median year built,low-tax side
+-52.5,-1.5783768941179,5.45856477143519,820,yrbuilt,tract median year built,low-tax side
+-47.5,0.745678661878735,6.1524310685942,739,yrbuilt,tract median year built,low-tax side
+-42.5,0.996096499371445,5.31022937741138,826,yrbuilt,tract median year built,low-tax side
+-37.5,-1.48953885008806,5.47167164283219,889,yrbuilt,tract median year built,low-tax side
+-32.5,0.295474687555274,5.09700961082564,991,yrbuilt,tract median year built,low-tax side
+-27.5,-1.9941008206336,5.37019405975796,1182,yrbuilt,tract median year built,low-tax side
+-22.5,-1.69183499883847,5.33128230845181,1319,yrbuilt,tract median year built,low-tax side
+-17.5,0.828261220079321,5.07298729174588,1487,yrbuilt,tract median year built,low-tax side
+-12.5,2.03806524618924,5.13454393274004,1777,yrbuilt,tract median year built,low-tax side
+-7.5,-1.89144034529338,5.13426938710308,2752,yrbuilt,tract median year built,low-tax side
+-2.5,-5.77845483342749,5.10429607725576,3408,yrbuilt,tract median year built,low-tax side
+2.5,-4.87234640878633,5.06794167222604,3062,yrbuilt,tract median year built,high-tax side
+7.5,-0.279609218944811,5.05107235162341,2553,yrbuilt,tract median year built,high-tax side
+12.5,3.20856833056408,4.96212684685117,2110,yrbuilt,tract median year built,high-tax side
+17.5,1.14298004559731,5.23797571119959,2087,yrbuilt,tract median year built,high-tax side
+22.5,2.0445137226052,5.10840410473521,1983,yrbuilt,tract median year built,high-tax side
+27.5,2.45329194905317,5.04529475005697,1602,yrbuilt,tract median year built,high-tax side
+32.5,1.94504850965807,5.27526436108734,1457,yrbuilt,tract median year built,high-tax side
+37.5,3.11389221407364,5.23431475536778,1128,yrbuilt,tract median year built,high-tax side
+42.5,2.86005885357887,5.19241273753814,881,yrbuilt,tract median year built,high-tax side
+47.5,2.984804513261,5.24319609043963,751,yrbuilt,tract median year built,high-tax side
+52.5,2.61423255473222,5.08318993605425,787,yrbuilt,tract median year built,high-tax side
+57.5,1.02231373717653,5.12173788368818,717,yrbuilt,tract median year built,high-tax side
+62.5,-0.33820225892655,5.23830500813881,802,yrbuilt,tract median year built,high-tax side
+67.5,-2.34738435470522,5.22460049472762,991,yrbuilt,tract median year built,high-tax side
+72.5,-0.0596569197770442,5.2135371347977,909,yrbuilt,tract median year built,high-tax side
+77.5,2.76912581213302,5.10952995056747,748,yrbuilt,tract median year built,high-tax side
+82.5,-3.29144357121751,5.1794809751446,715,yrbuilt,tract median year built,high-tax side
+87.5,1.53457074007005,5.19752779585335,545,yrbuilt,tract median year built,high-tax side
+92.5,4.21057924354271,5.23467347237738,362,yrbuilt,tract median year built,high-tax side
+97.5,2.77680087254798,5.27621378274784,406,yrbuilt,tract median year built,high-tax side
+-92.5,-0.151608341071942,0.116373526024898,197,lpop,tract log population,low-tax side
+-87.5,0.00913136521934943,0.188273886456772,207,lpop,tract log population,low-tax side
+-82.5,-0.013821906488058,0.189065797971825,267,lpop,tract log population,low-tax side
+-77.5,-0.0237940823835336,0.193318126787,336,lpop,tract log population,low-tax side
+-72.5,0.0402200084260002,0.194774816150722,418,lpop,tract log population,low-tax side
+-67.5,0.102525893978994,0.190968891054724,562,lpop,tract log population,low-tax side
+-62.5,0.110652104654131,0.189526762868083,542,lpop,tract log population,low-tax side
+-57.5,-0.0956572476680404,0.20281728401656,700,lpop,tract log population,low-tax side
+-52.5,-0.0574226671706234,0.191043793379469,823,lpop,tract log population,low-tax side
+-47.5,-0.063462105381911,0.214080094925978,742,lpop,tract log population,low-tax side
+-42.5,0.0157721383994756,0.190993868053446,834,lpop,tract log population,low-tax side
+-37.5,-0.0210031585938564,0.194509820409598,892,lpop,tract log population,low-tax side
+-32.5,-0.00348407966058728,0.189942431705344,995,lpop,tract log population,low-tax side
+-27.5,-0.035521488907641,0.192096312960764,1192,lpop,tract log population,low-tax side
+-22.5,0.00797077524605416,0.190064412756277,1325,lpop,tract log population,low-tax side
+-17.5,-0.00991661583932946,0.190114286740187,1489,lpop,tract log population,low-tax side
+-12.5,-0.012194436920926,0.193213500261962,1790,lpop,tract log population,low-tax side
+-7.5,-0.0569181189913967,0.190909449573695,2764,lpop,tract log population,low-tax side
+-2.5,-0.065309154469039,0.189922124320221,3417,lpop,tract log population,low-tax side
+2.5,-0.104442277961351,0.189273438852569,3080,lpop,tract log population,high-tax side
+7.5,-0.0212658360338124,0.190363591797798,2571,lpop,tract log population,high-tax side
+12.5,0.046763459169127,0.188915729002783,2122,lpop,tract log population,high-tax side
+17.5,0.022122990294989,0.189346894298706,2101,lpop,tract log population,high-tax side
+22.5,0.057731403566903,0.190015623319073,1997,lpop,tract log population,high-tax side
+27.5,0.0390541449647779,0.19078643869072,1619,lpop,tract log population,high-tax side
+32.5,-0.0183055326981078,0.193461280411279,1477,lpop,tract log population,high-tax side
+37.5,0.051181983871231,0.191887234275406,1134,lpop,tract log population,high-tax side
+42.5,0.0874661560173378,0.192591650905562,894,lpop,tract log population,high-tax side
+47.5,0.0782324547664419,0.191924518505651,757,lpop,tract log population,high-tax side
+52.5,-0.00272349553551743,0.195917027708567,790,lpop,tract log population,high-tax side
+57.5,0.0689214566889671,0.195178537338239,719,lpop,tract log population,high-tax side
+62.5,0.0360709877158897,0.19597999021881,805,lpop,tract log population,high-tax side
+67.5,0.00952538870239283,0.194090891465279,999,lpop,tract log population,high-tax side
+72.5,0.0689261211028311,0.193404539655919,915,lpop,tract log population,high-tax side
+77.5,0.10488460294923,0.193858250326851,754,lpop,tract log population,high-tax side
+82.5,0.0211994917814722,0.192713085443715,719,lpop,tract log population,high-tax side
+87.5,0.11807223113321,0.193223019280251,549,lpop,tract log population,high-tax side
+92.5,0.124735260133958,0.192999971705298,366,lpop,tract log population,high-tax side
+97.5,0.131603232055432,0.192569503908268,413,lpop,tract log population,high-tax side

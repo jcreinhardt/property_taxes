@@ -1,0 +1,29 @@
+Bin means net of pair means, in SD units: near (< 10 mi) and inland (50-100 mi), by side
+         var near_high-tax side near_low-tax side inland_high-tax side
+      <char>              <num>             <num>                <num>
+ 1:      med               0.43             -0.61                 0.28
+ 2:      ach              -0.08             -0.28                -0.03
+ 3:      ses              -0.10             -0.37                 0.04
+ 4:   perfrl               0.07              0.39                 0.03
+ 5:   lspend               0.03              0.08                 0.07
+ 6:     linc              -0.11             -0.23                 0.07
+ 7:    lhval              -0.13              0.01                 0.03
+ 8:    sh_ba              -0.07             -0.12                 0.06
+ 9: sh_white              -0.13             -0.12                -0.01
+10:   sh_own              -0.09             -0.19                -0.05
+11:  yrbuilt              -0.15             -0.22                 0.03
+12:     lpop              -0.13             -0.12                 0.11
+    inland_low-tax side
+                  <num>
+ 1:               -0.30
+ 2:               -0.01
+ 3:                0.00
+ 4:               -0.10
+ 5:               -0.12
+ 6:               -0.02
+ 7:               -0.07
+ 8:                0.00
+ 9:               -0.03
+10:                0.03
+11:                0.11
+12:               -0.01
