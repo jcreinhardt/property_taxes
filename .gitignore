@@ -9,4 +9,7 @@ Rplots.pdf
 output/**/parts/
 output/**/bld10pct/
 output/**/*.parquet
-code/data_prep/dataaxle_quarterly/sql/
+code/build/dataaxle/sql/
+output/build/geo/tract_drive_differences_*.csv
+output/validation/corelogic/grid_rate_differences_*.csv
+output/**/*_log.txt

@@ -1,6 +1,6 @@
 # Proposal: restructuring `code/` around data building and research designs
 
-Date: 2026-10-27. Status: phase 1 (cleanup, archive) committed as 196099c; phase 2 (code/R helpers, paths) committed; phases 3-4 pending. Revised the same day: no estimation wrapper in `code/R/`;
+Date: 2026-10-27. Status: phases 1 (cleanup, archive: 196099c), 2 (code/R helpers, paths: 396ded4) and 3 (file moves, data/built, output mirror) committed; phase 4 (docs) pending.
 migration and repeat sales are outcomes of existing designs, not designs; the household SALT-cap study is archived.
 This file becomes `code/README.md` once the moves are done. (`text/` is for paper drafts, proposals and slides only.)
 
@@ -98,46 +98,42 @@ Every `build/*` and `designs/*` folder gets a short `README.md`: question, scrip
   (`bld10pct/`) to `.gitignore`. `output/analysis/salt_cap/` (701 tracked files) goes to `output/archive/` with
   the study; keep `report.md`, `decision_log.md` and `estimates.csv`, untrack the parts and logs.
 
-## 3. Mapping (old → new)
+## 3. Mapping (old → new), as applied on 2026-10-27
 
-Build:
+Every renamed R script starts with `# Formerly <old path>`; output files keep their old names (`c15_border_rd.csv`,
+`border_gap_twfe.png`, ...) so `text/data_exploration/dataaxle.md` and the notebook recipes still line up, and sit in
+the folder of the script that writes them (`output/designs/border_rd/c15_border_rd.csv`). The full old→new table used
+for the move is reproduced by `git log --follow`; the structure:
 
 | Old | New |
 |---|---|
 | `data_prep/build_database/SOI/01–08` | `build/soi/01–08` (same names) |
-| `data_prep/build_database/census_gov_finances/*`, `data_cleaning/clean_census_finances.R`, `salt_local/a3_district_panel.R` | `build/census_finances/01_download.sh`, `02_import_cog.R`, `03_clean_cog.R`, `04_f33_district_panel.R` |
-| `salt_local/c11_f33_fill_and_ptax_compare.R` | `validation/coverage/02_f33_fill_vs_corelogic.R` |
-| `data_prep/build_database/ACS_microdata/01–04`, `salt_local/c17`, `c18` | `build/acs/01_microdata_import.R` … `04_tcja_burden.R`, `05_acs5_tract_download.R`, `06_tract_year_panel.R`; `build/seda/01_district_year.R` |
-| `local_juris/cluster/*`, `local_juris/bouchet/*`, `salt_local/bouchet/r_repeat_sales.sql`, `salt_cap/sql/00_extract_10pct.sql`, `01_build_panel*.sql` (the 1% parcel panel `c2` reads) | `build/corelogic/som/`, `build/corelogic/bouchet/` (keep file names, drop `k_panel_2012 2018.sql` duplicates) |
-| `salt_local/b1_build_panels.R`, `c2_parcel_panel.R` (build part), `local_juris/R/06_fit_cells_full.R` | `build/corelogic/10_county_tract_year_panels.R`, `11_parcel_panel_1pct.R`, `12_nominal_rates_by_cell.R` |
-| `data_prep/dataaxle_quarterly/{make_quarter_sql.py, run_quarter*.sbatch, quarters*.txt}`, `local_juris/bouchet/g_moveout_bkey_1pct.sql`, `salt_local/bouchet/{m_,f_}*.sql` | `build/dataaxle/` |
-| `salt_local/c19_enrolment.R` (panel part) | `build/enrolment/01_f33_pupils_district_year.R` |
-| `local_juris/R/07, 08, 09, 22, 24, 26`, `salt_local/c9` | `build/geo/01_border_distance.R`, `02_border_pair_buffers.R`, `03_border_parcels_1pct.R`, `04_tract_drive_neighbours.R`, `05_iv_tract_data.R`, `06_tract_border_side.R`, `07_tract_side_ownstate.R` |
-| `salt_local/a1` (exposure part), `a8`, `a6`, `c24`, `c26` | `build/exposure/01_county_stub_2016.R`, `02_zip_stub_2016.R`, `03_county_proptax_share.R`, `04_delta_deduction_value.R`, `05_components_county_state_zip.R` |
-
-Designs:
-
-| Old | New |
-|---|---|
-| `salt_local/a1, a2, a10` (estimation parts), `a4`, `b2`, `b8`, `c22`, `c23`, `c28`, `c29`, `local_govt/*` | `designs/exposure_did/01_revenue.R`, `02_revenue_income_control.R`, `03_cbsa_dispersion.R`, `04_county_outcomes.R`, `05_prices_by_component.R` (c29, current), `06_zip_pretrend_diagnostics.R`, `07_repeat_sales_zip_exposure.R`, `08_soi_migration_flows.R`, `09_soi_mover_agi.R`; `c25`, `c27`, `b5`, `local_govt` → `archive/` |
-| `salt_local/c7, c13, c14, c15, c16, c20` | `designs/border_rd/01_side_selection_levels.R`, `02_profiles_by_distance.R`, `03_covariate_rd.R`, `04_rd_by_year_and_diff_in_disc.R`, `05_enrolment_rd.R`, `06_gap_range_signed_distance.R` |
-| `local_juris/R/25, 27`, `salt_local/b3, b4, b6, b7, c1, c4, c5, c6, c8, c12, d1, d2, d3` | `designs/border_iv/01_first_stage_balance.R`, `02_school_district_map.R`, `03_tract_ddd.R`, `04_hpi_ddd.R`, `05_repeat_sales_event_study.R`, `06_repeat_sales_pooled.R`, `07_moveout_1pct_ddd.R`, `08_moveout_full.R`, `09_family_move_direction.R`, `10_figure.R`, `11_signed_distance_validity.R`, `12_predicted_balance.R` (+ `_np`), `13_pair_gap_vs_school_finance.R`, `14_covariate_coverage.R` |
-| `local_juris/R/10–19, 21` | `designs/border_twfe/01_rate_gaps.R` … `09_moveout_by_side.R`, `10_vacancy_by_side.R`; `10a` → `archive/` |
+| `data_prep/build_database/census_gov_finances/01, 02`; gen-1 `data_cleaning/clean_census_finances.R`; the panel-building half of `salt_local/a3` | `build/census_finances/01_download.sh`, `02_import_cog.R`, `03_clean_cog.R`, `04_f33_district_panel.R` |
+| `data_prep/build_database/ACS_microdata/01–04`, `salt_local/c17`, `c18` | `build/acs/01_microdata_import.R` … `04_tcja_burden.R`, `05_acs5_tract_download.R`, `06_tract_year_panel.R` (also writes the SEDA panel) |
+| `local_juris/cluster/*`, `local_juris/sql/juris_counts.sql` | `build/corelogic/som/` (same names) |
+| `local_juris/bouchet/k_panel_*.sql`, `salt_local/bouchet/r_repeat_sales.sql`, household study `sql/00_extract_10pct.sql`, `01_build_panel*.sql` | `build/corelogic/bouchet/` (`p_extract_10pct.sql`, `p_parcel_panel_1pct.sql`, `p_parcel_panel_10pct.sql`) |
+| `salt_local/b1_build_panels.R`, `local_juris/R/06_fit_cells_full.R` | `build/corelogic/10_county_tract_year_panels.R`, `12_nominal_rates_by_cell.R` |
+| `data_prep/dataaxle_quarterly/*`, `local_juris/bouchet/g_moveout_bkey_1pct.sql`, `salt_local/bouchet/{m_,f_}*.sql` | `build/dataaxle/` (generated `sql/convert_*.sql` ignored) |
+| `local_juris/R/07, 08, 09, 22, 24`; the assignment half of `R/26`; `salt_local/c9` | `build/geo/01_border_distance.R`, `02_border_pair_buffers.R`, `03_border_parcels_1pct.R`, `04_tract_drive_neighbours.R`, `05_iv_tract_data.R`, `06_tract_border_side.R`, `07_tract_side_ownstate.R` |
+| the exposure half of `salt_local/a1`; `a8`, `c24`, `c26` | `build/exposure/01_county_stub_2016.R`, `02_zip_stub_2016.R`, `04_delta_deduction_value.R`, `05_components_county_state_zip.R` |
+| `salt_local/a1` (estimation), `a10`, `a4`, `b2`, `c29`, `c28`, `b8`, `c22`, `c23`, `c19`, `c2`, `a2` | `designs/exposure_did/01_revenue.R`, `02_revenue_income_control.R`, `03_cbsa_dispersion.R`, `04_county_outcomes.R`, `05_prices_by_component.R`, `06_zip_pretrend_diagnostics.R`, `07_repeat_sales_zip_exposure.R`, `08_soi_migration_flows.R`, `09_soi_mover_agi.R`, `10_enrolment.R`, `11_parcel_panel_outcomes.R`, `12_revenue_outside_option.R` |
+| `salt_local/c13, c14, c15, c16, c20, c7`; `local_juris/R/23` | `designs/border_rd/01_side_selection_levels.R`, `02_profiles_by_distance.R`, `03_covariate_rd.R`, `04_rd_by_year_and_diff_in_disc.R`, `05_enrolment_rd.R`, `06_gap_range_signed_distance.R`, `07_tract_diff_by_distance.R` |
+| `local_juris/R/25`; the estimation half of `R/26`; estimation half of `salt_local/a3`; `R/27`; `b3`, `b4`, `b6`, `b7`, `d1`, `d2`, `d3`, `c1`, `c4`, `c5`, `c6`, `c8`, `c12` | `designs/border_iv/01_first_stage_balance.R` (also writes `iv_tract_nb.rds`), `02_directional_iv.R`, `03_district_finance_ddd.R`, `04_school_district_map.R`, `05_tract_ddd.R`, `06_hpi_ddd.R`, `07_repeat_sales_event_study.R`, `08_repeat_sales_pooled.R`, `09_moveout_1pct_ddd.R`, `10_moveout_full.R`, `11_family_move_direction.R`, `12_figure.R`, `13_signed_distance_validity.R`, `14_predicted_balance.R`, `14_predicted_balance_np.R`, `15_pair_gap_vs_school_finance.R`, `16_covariate_coverage.R` |
+| `local_juris/R/10–19, 21` | `designs/border_twfe/01_rate_gaps.R`, `02_effective_gaps.R`, `03_gap_twfe.R`, `04_sample_twfe.R`, `05_gap_weighted.R`, `06_bill_price_twfe.R`, `07_revenue_low_high.R`, `08_revenue_twfe.R`, `09_sales_turnover.R`, `10_moveout_by_side.R`, `11_vacancy_by_side.R` |
 | `salt_local/a5, a7, a9` | `designs/district_border/01_adjacent_gaps_ddd.R`, `02_randomisation_inference.R`, `03_county_line_placebo.R` |
-| `salt_cap/R/*`, `salt_cap/sql/00_mortgage_bld1pct.sql`, `00_tax_bill_bld1pct_all.sql`, `run_r_10pct.sbatch` | `archive/2026-10-household-salt-cap/` (whole study, with its report and decision log in `output/archive/`); the `salt-cap-pipeline` memory note is retired |
-| `salt_local/c3_key_figure.R` | `paper/key_figure_overnight.R` or `archive/` |
+| `analysis/dataaxle/*` | `validation/dataaxle/*` (same names) |
+| `local_juris/R/01–05`, `salt_local/c21`, `local_juris/R/20` | `validation/corelogic/01_coordinates.R`, `02_nominal_rate_test.R`, `03_rate_fit_all_states.R`, `04_rate_fit_split.R`, `05_rate_variance_decomp.R`, `06_zip_nesting.R`, `07_grid_rate_differences.R` |
+| `salt_local/c10, c11` | `validation/coverage/01_district_data_coverage.R`, `02_f33_fill_vs_corelogic.R` |
+| `paper/fig1.R`, `fig2_acs.R` | `paper/fig1_salt_refund_change.R`, `fig2_mover_rates_acs.R` |
+| `salt_local/c25, c27, b5, a6, c3`; `local_juris/R/10a` | `archive/2026-10-superseded/` |
+| `filings/`, `migration/`, `transactions/`, `local_govt/`, `data_cleaning/`; `salt_cap/` | `archive/2026-10-gen1/`, `archive/2026-10-household-salt-cap/` (phase 1) |
+| `data/local_juris/*`, `data/salt_cap/panel/` | `data/built/{geo,corelogic,dataaxle,exposure,census_finances,acs}/`, `data/built/corelogic/parcel_1pct/`; producers listed in `data/built/MANIFEST.md` |
+| `output/analysis/{salt_local,local_juris,dataaxle}/` | `output/{build,designs,validation}/<folder>/` mirroring the script tree; `output/reports/` holds the overnight report and the synthesis log |
 
-Validation and the rest:
-
-| Old | New |
-|---|---|
-| `analysis/dataaxle/*` | `validation/dataaxle/*` |
-| `local_juris/R/01–05`, `salt_local/c21`, `c10` | `validation/corelogic/01_coordinates.R`, `02_nominal_rate_test.R`, `03_rate_fit_all_states.R`, `04_rate_fit_split.R`, `05_rate_variance_decomp.R`, `06_zip_nesting.R`; `validation/coverage/01_district_data_coverage.R` |
-| `paper/fig1.R`, `fig2_acs.R`; `filings/fig1.R` | `paper/fig1_salt_refund_change.R`, `fig2_mover_rates_acs.R`; `paper/fig2.R` wrapper dropped |
-| `filings/`, `migration/`, `transactions/`, `data_cleaning/` | `archive/2026-10-gen1/` (or delete, see decisions) |
-| `salt_cap/` | `archive/2026-10-household-salt-cap/` |
-| `archive_legacy/2026-05-26/` | deletion committed |
-| root `Rplots.pdf`, `texput.log`, `.DS_Store`, `model/`, `temp/`, `list1_Sep_2018.xls`, `nj_reval_2017_2022.csv` | delete / `data/raw/misc/`; add patterns to `.gitignore` |
+Deviations from the proposal: `c19` (enrolment) and `c2` (parcel panel) build nothing on disk, so they are design
+scripts, not build scripts; `a3`'s estimation went to `border_iv` because most of it is the district-level border DDD;
+`R/25` still writes `iv_tract_nb.rds` on its way to the first stage (noted in the manifest); `build/seda/` was folded
+into `build/acs/06`.
 
 ## 4. How to do it without breaking anything
 
