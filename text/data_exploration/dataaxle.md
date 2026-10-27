@@ -2259,3 +2259,10 @@ Extract `code/analysis/local_juris/bouchet/k_panel_{2012,2019}.sql` (= cluster/k
   - ZIP + 2012 price × year, property part: pre 0.58, 0.76*, −0.15, 0.14; 2018 −0.63, 2019 −0.69*, 2020 −0.68*, 2021 −0.36, 2022 −0.35, 2023–24 ≈ 0. Income part ≈ 0 to −0.4 (n.s.). Mortgage interest +0.5 to +0.9.
   - No-income-tax states + price control: property part 2019 −0.95, 2020 −0.75 (n.s.), then ≈ 0; pre-trend (2013 −4.0 → 0).
   - County + price control: property part 2019 −0.37, then ≈ 0 (n.s.).
+
+### 4.39 Synthesis (2026-10-27)
+Full log: `output/analysis/salt_local/synthesis_log_2026-10-27.md`.
+- **Firm:** no migration response (Data Axle, SOI county flows, pupils per district, turnover), no nominal-rate or dispersion response, no clearly SALT-specific revenue response (county-government slowdown −0.76%/yr per SD is borderline).
+- **Prices:** county return-weighted −0.32% (2019) to −0.65% (2021–24) per $100/yr lost subsidy per owner. Within states this loads on the income/sales-tax part. The effect disappears conditional on 2012 price × year, but that is a bad control (corr ≈ 0.6 with exposure). The ZIP design has price-tier pre-trends. The most theory-consistent signals are property-tax parts across states and in no-income-tax states (≈ −1% from 2018–19). Mortgage-interest loss has the wrong sign (confound marker).
+- **Border design:** RD / difference in discontinuities vary the rate level (≈ 0.8 pp jump; the gap narrowed about a third after 2017 via prices and assessment). The instrument varies the choice set (cheaper cross-state option within 30 min), which after the cap is worth little to most border households, so it is a weak SALT treatment.
+- **Main threat everywhere:** timing. Effects build from 2020; the clean 2018–19 window shows small effects.
