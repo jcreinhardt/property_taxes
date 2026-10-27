@@ -1,5 +1,7 @@
 # Research notebook: index (newest first)
 
+- 2026-10-27 [Simulated SALT-cap instrument from the 2016 ACS](2026-10-27-simulated-instrument/README.md) -- no panel needed; cap burden $332/owner hh, 10% bound; own-location Z1 correlates 0.96 with SOI exposure; national-sample Z2 is a rate instrument (0.30 with SOI, negative within state)
+
 - 2026-10-27 [Why Diop & Green find SALT-cap migration and we do not](2026-10-27-diop-green-reconciliation/README.md) -- their six-state variation is absorbed by our state × year FE; on our files it is a smooth pre-trend through 2019 and a jump from file 1920 (COVID), which their post period includes
 - 2026-10-27 [Who Data Axle tracks across a move](2026-10-27-dataaxle-tracking-bias/README.md) -- 24% of leavers tracked (sellers 53%); tracking favours multi-person, higher-income, owner, prime-age records; lost are thin single-person low-income renter records; no local-move bias
 - 2026-10-27 [Data Axle out-migration by tenure vs ACS](2026-10-27-dataaxle-outmigration-by-tenure/README.md) -- total ≈ ACS (10–14% vs 13–16%); owners 1.5–2× ACS, renters half to two-thirds of ACS; renters only 10–19% of units
