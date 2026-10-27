@@ -1,5 +1,6 @@
 # Research notebook: index (newest first)
 
+- 2026-10-27 [Diop & Green Table 7 on our SOI files, without their controls](2026-10-27-diop-green-table7-replication/README.md) -- their SALT = income-tax deductions / AGI; net out-migration reproduces exactly without controls (2019 +37 vs their +31), gross does not (destination size); half the post-2017 jump is ΔSALT halving when TCJA shrank the itemizer pool; fixed-2017 ΔSALT gives +9 in 2019 vs 2017, significant from file 1920, on a 2010s pre-trend
 - 2026-10-27 [Prices, revenue and migration on the simulated instrument](2026-10-27-simulated-instrument-outcomes/README.md) -- county variation; prices −0.4% (2019) to −1% (2021–22) per $100 cap burden, IV a third larger than OLS; no revenue or migration effect on Z1 at county level (counts, net migration included); state out-of-state rate +0.05 pp from 2020 on a pre-existing trend; rate instrument Z2 has pre-trends, county revenue −1.5 to −2.6% from 2020 (unresolved)
 
 - 2026-10-27 [Simulated SALT-cap instrument from the 2016 ACS](2026-10-27-simulated-instrument/README.md) -- no panel needed; cap burden $332/owner hh, 10% bound; own-location Z1 correlates 0.96 with SOI exposure; national-sample Z2 is a rate instrument (0.30 with SOI, negative within state)
