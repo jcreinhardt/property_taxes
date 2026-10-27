@@ -1,5 +1,7 @@
 # Research notebook: index (newest first)
 
+- 2026-10-27 [Prices, revenue and migration on the simulated instrument](2026-10-27-simulated-instrument-outcomes/README.md) -- county variation; prices −0.4% (2019) to −1% (2021–22) per $100 cap burden, IV a third larger than OLS; no revenue or migration effect on Z1; rate instrument Z2 has pre-trends, county revenue −1.5 to −2.6% from 2020 (unresolved)
+
 - 2026-10-27 [Simulated SALT-cap instrument from the 2016 ACS](2026-10-27-simulated-instrument/README.md) -- no panel needed; cap burden $332/owner hh, 10% bound; own-location Z1 correlates 0.96 with SOI exposure; national-sample Z2 is a rate instrument (0.30 with SOI, negative within state)
 
 - 2026-10-27 [Why Diop & Green find SALT-cap migration and we do not](2026-10-27-diop-green-reconciliation/README.md) -- their six-state variation is absorbed by our state × year FE; on our files it is a smooth pre-trend through 2019 and a jump from file 1920 (COVID), which their post period includes
