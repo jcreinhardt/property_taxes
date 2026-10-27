@@ -2,8 +2,8 @@
 # $10k per return. Mapped to 2010 tracts through the modal situs ZIP of the tract's 2016-2019 sales (CoreLogic panel extract).
 # Output data/local_juris/salt_exposure_tract_zip2016.csv (tract, zip, exz, exz_z).
 suppressPackageStartupMessages({library(data.table); library(duckdb)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"
-con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+source("code/R/paths.R")
+con <- db_open("database.db")
 z <- as.data.table(dbGetQuery(con, "SELECT lpad(zipcode::INT::VARCHAR, 5, '0') zip, agi_stub, returns, taxes_paid_returns n, taxes_paid_amount a
   FROM returns_zipcode_agi WHERE year = 2016 AND zipcode NOT IN (0, 99999)")); dbDisconnect(con, shutdown = TRUE)
 ez <- z[, .(ret = sum(returns), exz = sum(pmax(0, a / pmax(n, 1) - 10) * n) / sum(returns)), by = zip][ret >= 100]

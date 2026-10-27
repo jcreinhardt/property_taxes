@@ -3,7 +3,7 @@
 # the state's K-12 finance (F-33 FY2016, all districts in the state): state-aid share of state+local revenue, property tax per
 # pupil, total spending per pupil. Pair-level OLS, HC1 SE; weights = tracts within 20 mi.
 suppressPackageStartupMessages({library(data.table); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 f <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[y == 2016]
 f[, st := substr(leaid, 1, 2)]
 s <- f[, .(aid_sh = sum(strev, na.rm = TRUE) / sum(strev + loc, na.rm = TRUE), ptax_pp = sum(ptax, na.rm = TRUE) / sum(enr, na.rm = TRUE),

@@ -5,7 +5,7 @@
 # pair's SALT contrast (high-side state more exposed than the low side, return-weighted 2016 county exposure).
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(fixest)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 FM <- Sys.getenv("FM_IN", "family_moves_1pct.parquet"); SFX <- Sys.getenv("FM_SFX", "")
 con <- dbConnect(duckdb()); mv <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM read_parquet('%s/data/local_juris/border_moveout/%s') WHERE ost <> dst  -- cross-border moves change state", ROOT, FM))); dbDisconnect(con, shutdown = TRUE)
 tr <- tracts(cb = TRUE, year = 2019, progress_bar = FALSE)[, "GEOID"]

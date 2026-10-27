@@ -1,7 +1,7 @@
 # 1% building sample: parcels within 20 mi of a shared state border, assigned to state-pair sides (border20_sides.geojson).
 # Writes data/local_juris/border_parcels_1pct.parquet (clip, pair, st_a, st_b) and the sample's clip list for the cluster.
 suppressPackageStartupMessages({library(sf); library(dplyr); library(duckdb)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; sf_use_s2(FALSE)
+source("code/R/paths.R"); sf_use_s2(FALSE)
 sides <- st_read(file.path(ROOT, "data/local_juris/border20_sides.geojson"), quiet = TRUE)
 con <- dbConnect(duckdb())
 p <- dbGetQuery(con, sprintf("SELECT clip, st, lat, lon FROM '%s/data/salt_cap/panel/parcels.parquet'", ROOT))

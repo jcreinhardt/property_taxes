@@ -5,7 +5,7 @@
 # (2) By side: y_spt = a_sp + g_t, separately for lower and higher sides, 2017 = 0.
 # Panels: full (pair-years with both sides) and balanced (both sides in all years).
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 d <- fread(file.path(ROOT, "data/local_juris/border_revenue_side_year.csv"))
 d[, `:=`(lrev = log(rev), lbill = log(mbill), ln = log(n), low = as.integer(side == "lower-tax side"), sid = paste(pair, st_a))]
 d <- d[, if (.N == 2) .SD, by = .(pair, y)]; NY <- uniqueN(d$y)

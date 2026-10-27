@@ -1,5 +1,5 @@
 # s7_kink.R — Strategy 7: difference in kinks at a $10k bill in states without an income tax. Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 library(rdrobust)
 NOTAX <- c("TX", "FL", "WA", "NV", "SD", "WY"); ROB <- c("TN", "NH")
 d <- load_panel(2014:2019, "oo")[rate_ok == TRUE]

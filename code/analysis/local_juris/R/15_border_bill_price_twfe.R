@@ -5,7 +5,7 @@
 # (2) Level regressions: side-year mean log bill / log price / log eff on side FE + year dummies (2017 = 0), SE by pair;
 #     bill and price coefficients add up to the effective-rate coefficient.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
 IN <- file.path(ROOT, "data/local_juris", Sys.getenv("BORDER_IN", "bsample1024"))
 Y0 <- as.integer(Sys.getenv("BORDER_Y0", "2013")); Y1 <- as.integer(Sys.getenv("BORDER_Y1", "2024")); SFX <- Sys.getenv("BORDER_SFX", "_2013_2024")
 con <- dbConnect(duckdb()); s <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/border_sample_sales.parquet'", IN))); dbDisconnect(con, shutdown = TRUE)

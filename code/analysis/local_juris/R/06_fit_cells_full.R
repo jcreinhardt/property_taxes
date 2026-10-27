@@ -1,7 +1,7 @@
 # Full roll, step C (local): median-regression rate per cell x homestead group from the cluster fit sample (<= 2000 parcels
 # per group). Writes cell_fits16.parquet (cell, hs, n_grp, a, slope) for the on-line evaluation on the cluster.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(quantreg)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; DIR <- file.path(ROOT, "data/local_juris/full")
+source("code/R/paths.R"); DIR <- file.path(ROOT, "data/local_juris/full")
 con <- dbConnect(duckdb()); s <- as.data.table(dbGetQuery(con, sprintf("SELECT cell, hs, n_grp, bill, av FROM '%s/fitsample16.parquet'", DIR)))
 f <- function(bill, av) { r <- tryCatch(coef(rq.fit(cbind(1, av), bill, tau = .5, method = "br")), error = function(e) c(NA_real_, NA_real_)); list(a = r[1], slope = r[2]) }
 t0 <- Sys.time()

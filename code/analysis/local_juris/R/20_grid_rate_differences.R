@@ -4,7 +4,7 @@
 # within r; max |median_i - median_j| (the largest rate difference reachable within r) and the mean |difference|.
 # Noise yardstick: SE of a cell median ~ 1.2533 (IQR / 1.349) / sqrt(n) (robust to heavy tails), so the max over many neighbours rises with r mechanically.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(ggplot2); library(patchwork)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- Sys.getenv("GRID_OUT", file.path(ROOT, "output/analysis/local_juris")); D <- Sys.getenv("GRID_DIR", file.path(ROOT, "data/local_juris/grid5k"))
+source("code/R/paths.R"); OUT <- Sys.getenv("GRID_OUT", file.path(ROOT, "output/analysis/local_juris")); D <- Sys.getenv("GRID_DIR", file.path(ROOT, "data/local_juris/grid5k"))
 TIG <- path.expand("~/Library/Caches/tigris"); MIN <- as.integer(Sys.getenv("GRID_MIN", "20")); AGG <- as.integer(Sys.getenv("GRID_AGG", "1")); CELL <- 5000 * AGG; MI <- 1609.344
 NOISE <- Sys.getenv("GRID_NOISE", "0") == "1"  # benchmark: replace each cell median by pure sampling noise N(0, SE)
 SFX <- sprintf("_%dkm_min%d", 5 * AGG, MIN); if (NOISE) SFX <- paste0(SFX, "_noise")  # GRID_AGG merges AGG x AGG blocks of 5 km cells into larger cells

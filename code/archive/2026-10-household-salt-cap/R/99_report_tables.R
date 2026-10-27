@@ -1,5 +1,5 @@
 # 99_report_tables.R — builds the comparison table (strategies x outcomes) and the ledger table as markdown for report.md.
-source("code/analysis/salt_cap/R/00_setup.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R")
 # merge part files written by parallel runs (parts override main rows with the same key)
 merge_parts <- function(main, kind, key) { old <- fread(main); parts <- list.files(file.path(OUT_S, "parts"), pattern = paste0("^", kind, "_"), full.names = TRUE)
   if (length(parts)) { new <- rbindlist(lapply(parts, fread), fill = TRUE); new <- new[!duplicated(new, by = key, fromLast = TRUE)]  # later part files win

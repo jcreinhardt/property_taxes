@@ -1,5 +1,5 @@
 # s10_reversal.R — Strategy 10: 2025 reversal ($40k cap, 30% phase-down above $500k MAGI). Parameters verified in decision_log.md.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 library(rdrobust)
 # full post-year check: deeds coverage in 2025 vs 2024
 cov <- dq(sprintf("SELECT y, sum(sale) sales FROM read_parquet('%s') WHERE y IN (2023, 2024, 2025, 2026) GROUP BY 1 ORDER BY 1", pq("analysis_panel"))); print(cov)

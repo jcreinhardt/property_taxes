@@ -1,7 +1,7 @@
 # Full-data Data Axle move-outs by tract-year (Bouchet m_moveout_tract_full.sql), same designs as d1 at the tract-year level,
 # weighted by the number of address pairs; annualised by file cut-offs.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb()); m <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/border_moveout/moveout_tract_full.parquet'", ROOT))); dbDisconnect(con, shutdown = TRUE)
 # y is already the destination file in the extract
 cut <- c(`2012` = 3, `2013` = 15, `2014` = 27, `2015` = 40, `2016` = 54, `2017` = 65, `2018` = 79, `2019` = 90, `2020` = 102, `2021` = 114)

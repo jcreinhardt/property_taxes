@@ -12,7 +12,7 @@
 #  (6) As (1) with county x year FE (within-county ZIP variation); (7) as (6) plus 2012 price level x year.
 #  (8) County design (4b) plus the county's 2012 price level x year.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
 YRS <- 2013:2024
 wins <- \(x) { q <- quantile(x, c(.01, .99), na.rm = TRUE); pmin(pmax(x, q[1]), q[2]) }
 ec <- fread(file.path(L, "exposure_components_county.csv"), colClasses = c(geo = "character"))[, .(fips = geo, xc = wins(d_salt_own) / 100, returns16)]

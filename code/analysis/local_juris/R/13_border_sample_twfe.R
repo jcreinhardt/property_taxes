@@ -3,7 +3,7 @@
 # arm's-length price (price > 10k, no new construction, 0.05-10%). Side means per year (>= MIN sales), |A - B| per pair-year,
 # boxplot by year, and gap_pt = a_p + b_t with 2017 = 0 (SE clustered by pair), full and balanced panel, in pp and relative.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
 # window: env BORDER_IN (data dir under data/local_juris), BORDER_Y0/Y1, BORDER_SFX (output suffix); defaults = 2013-2021 run
 IN <- file.path(ROOT, "data/local_juris", Sys.getenv("BORDER_IN", "bsample"))
 Y0 <- as.integer(Sys.getenv("BORDER_Y0", "2013")); Y1 <- as.integer(Sys.getenv("BORDER_Y1", "2021")); SFX <- Sys.getenv("BORDER_SFX", "")

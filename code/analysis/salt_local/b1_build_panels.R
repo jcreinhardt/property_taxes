@@ -6,7 +6,7 @@
 #               (SD of tract median effective rates, tracts with >= 10 sales)
 # Effective rate = bill / price kept 0.05-10%; ratio = AV / price kept 0.01-5 (AV is assessed, often fractional, value).
 suppressPackageStartupMessages({library(data.table); library(duckdb)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; K <- file.path(ROOT, "data/local_juris/kpanel")
+source("code/R/paths.R"); K <- file.path(ROOT, "data/local_juris/kpanel")
 con <- dbConnect(duckdb()); q <- function(s) as.data.table(dbGetQuery(con, s))
 dbExecute(con, sprintf("CREATE VIEW s AS SELECT *, bill / price eff, av / price ratio FROM read_parquet('%s/sales_*.parquet')
   WHERE NOT coalesce(newcon, false) AND price > 10000", K))

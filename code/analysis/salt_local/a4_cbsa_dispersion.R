@@ -4,7 +4,7 @@
 # across CBSAs. Event study ~ i(y, exposure, ref 2017) | cbsa + state x year (state of the CBSA's largest district), SE by CBSA.
 # Prediction if the cap pressures high-tax jurisdictions most: compression (negative coefficients) after 2017.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); E <- file.path(ROOT, "data/external/elsec")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); E <- file.path(ROOT, "data/external/elsec")
 p <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))
 cb <- rbindlist(lapply(c(12:21, 23), \(yy) { fn <- file.path(E, sprintf("elsec%02d.txt", yy)); hd <- gsub('"', "", strsplit(readLines(fn, 1), ",")[[1]])
   x <- fread(fn, skip = 1, header = FALSE, colClasses = "character", fill = TRUE); setnames(x, seq_along(hd), hd); x[, .(leaid = NCESID, cbsa = CBSA)] }))

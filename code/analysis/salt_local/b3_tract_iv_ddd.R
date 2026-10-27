@@ -6,7 +6,7 @@
 # where a stronger response in high-exposure areas is the SALT-specific prediction.
 # Outcomes: log tax per parcel, log median price, median effective rate, log assessment ratio, sales turnover.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 ty <- readRDS(file.path(ROOT, "data/local_juris/tract_year.rds"))[y >= 2013 & y <= 2024]
 iv <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, pair, high, dbin, near, cty, dist_mi)])
 ex <- fread(file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))[, cty := sprintf("%05d", county)]

@@ -5,7 +5,7 @@
 # neighbour (SEDA 4.1). Maps: lower 48 and NY / Chicago / Philadelphia-NJ zooms.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(ggplot2); library(patchwork)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 con <- dbConnect(duckdb()); t <- as.data.table(dbGetQuery(con, sprintf("SELECT tract, leaid, n, med, ach FROM '%s/data/local_juris/iv_tract.parquet'", ROOT)))
 dbDisconnect(con, shutdown = TRUE)
 dm <- t[!is.na(leaid), .(n = sum(n), med = { o <- order(med); m <- med[o]; w <- cumsum(n[o]) / sum(n); m[which(w >= .5)[1]] },

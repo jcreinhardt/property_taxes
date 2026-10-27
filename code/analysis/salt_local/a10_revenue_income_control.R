@@ -2,12 +2,12 @@
 # and county governments, CoG; weighted by returns) adding the county share of 2016 returns with AGI >= $200k (SOI stub 8)
 # x trend, x post, x post x trend.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
-con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
+con <- db_open("database.db")
 inc <- as.data.table(dbGetQuery(con, "SELECT county::INT county, sum(returns) FILTER (WHERE agi_stub = 8) / sum(returns) sh200 FROM returns_county_agi WHERE year = 2016 GROUP BY 1")); dbDisconnect(con, shutdown = TRUE)
 inc[, i_z := (sh200 - mean(sh200, na.rm = TRUE)) / sd(sh200, na.rm = TRUE)]
 ex <- fread(file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))
-con <- dbConnect(duckdb(), file.path(ROOT, "data/census_finances_test.db"), read_only = TRUE)
+con <- db_open("census_finances_test.db")
 qf <- function(tb) as.data.table(dbGetQuery(con, sprintf("SELECT county_fips::INT county, state_fips st, year::INT y, property_tax_rev ptax FROM %s", tb)))
 fin <- list(school = qf("govt_finances_sd_by_county"), county_govt = qf("govt_finances_county")); dbDisconnect(con, shutdown = TRUE)
 fin$county_govt <- fin$county_govt[, if (uniqueN(y) == 11) .SD, by = county]

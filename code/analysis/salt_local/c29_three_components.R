@@ -6,7 +6,7 @@
 # and without the 2012 county price level x year; no-income-tax states (county design within FL NV SD TX WA WY NH TN); state
 # (state + year, SE by state); ZIP (uncensored ZIPs, zip + state x year, SE by county) with and without 2012 ZIP price x year.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
 YRS <- 2013:2024; X <- c(prop = "d_prop_own", inc = "d_nonprop_own", mid = "d_mid_own")
 wins <- \(x) { q <- quantile(x, c(.01, .99), na.rm = TRUE); pmin(pmax(x, q[1]), q[2]) / 100 }
 rdx <- \(f) { e <- fread(file.path(L, f), colClasses = c(geo = "character")); for (k in names(X)) e[, (k) := wins(get(X[k]))]; e }

@@ -5,7 +5,7 @@
 #   (B) pair dummies as additive covariates in rdrobust (Calonico, Cattaneo, Farrell & Titiunik 2019).
 # Estimates also in SD units of the variable. Holm adjustment across the 11 non-rate covariates within each spec.
 suppressPackageStartupMessages({library(data.table); library(rdrobust); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); MX <- 100
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); MX <- 100
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 f <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[y == 2016 & enr > 0, .(leaid, lspend = log(spend / enr))]
 d <- merge(d, f, by = "leaid", all.x = TRUE)

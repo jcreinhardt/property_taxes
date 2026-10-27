@@ -2,7 +2,7 @@
 # school-district property tax (CoG by county, weighted), (3) Data Axle move-outs in the border DDD, (4) parcel bills and
 # nominal rates in the border DDD (CoreLogic 1%). All relative to 2017.
 suppressPackageStartupMessages({library(data.table); library(ggplot2); library(patchwork)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; O <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); O <- file.path(ROOT, "output/analysis/salt_local")
 pp <- function(d, title, ylab) ggplot(d, aes(y, coef, colour = lab)) + geom_hline(yintercept = 0, colour = "grey60") +
   geom_vline(xintercept = 2017.5, linetype = 2, colour = "grey60") +
   geom_pointrange(aes(ymin = coef - 1.96 * se, ymax = coef + 1.96 * se), position = position_dodge(.4), size = .15) +

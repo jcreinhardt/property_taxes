@@ -8,7 +8,7 @@
 #     F-33 FY2017: school-district property tax (T06), and T06 + parent-government contributions (T02), districts mapped
 #     to counties by CONUM. Ratios to the CoreLogic total.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); E <- file.path(ROOT, "data/external/elsec")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); E <- file.path(ROOT, "data/external/elsec")
 rd <- function(yy) { if (yy == 22) x <- as.data.table(readxl::read_excel(file.path(E, "elsec22.xlsx"), col_types = "text")) else {
   fn <- file.path(E, sprintf("elsec%02d.txt", yy)); hd <- gsub('"', "", strsplit(readLines(fn, 1), ",")[[1]])
   x <- fread(fn, skip = 1, header = FALSE, colClasses = "character", fill = TRUE); setnames(x, seq_along(hd), hd)
@@ -56,7 +56,7 @@ print(pr, nrows = 200)
 
 # ---- (2) property tax by state, 2017 ----
 cy <- readRDS(file.path(ROOT, "data/local_juris/county_year.rds"))[y == 2017 & bill_all > 0, .(county = as.integer(fips), cl = bill_all / 1e3)]  # $k
-con <- dbConnect(duckdb(), file.path(ROOT, "data/census_finances_test.db"), read_only = TRUE)
+con <- db_open("census_finances_test.db")
 cog <- as.data.table(dbGetQuery(con, "SELECT county_fips::INT county, property_tax_rev cog FROM govt_finances_county_area WHERE year = 2017"))
 dbDisconnect(con, shutdown = TRUE)
 f17 <- F[y == 2017, .(county = as.integer(CONUM), t06 = fcoalesce(T06, 0), t02 = fcoalesce(T02, 0))][, .(t06 = sum(t06), t02 = sum(t02)), by = county]

@@ -5,7 +5,7 @@
 # Regressions on distance-to-border bins (ref: 50+ mi), state FE (and county FE), SE clustered by county.
 # Balance: own-tract characteristics (achievement, SES, income, home value, education, race, tenure, age of stock, own rate).
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 con <- dbConnect(duckdb())
 t <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/iv_tract.parquet'", ROOT)))
 duckdb_register(con, "tt", t[, .(tract, med, ach)])

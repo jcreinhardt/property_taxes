@@ -5,7 +5,7 @@
 # arm's-length sales 2013-2017 in the per-side sample (bsample1024, same filters as R/13), fixed over time; the side with
 # the lower rate is "lower-tax". Pairs need >= 100 such sales per side and revenue on both sides in all years.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris")
 con <- dbConnect(duckdb())
 p <- as.data.table(dbGetQuery(con, sprintf("SELECT clip, y, fips, pair, st_a, max(bill) bill FROM '%s/border1/border_panel_1pct.parquet'
   WHERE bill > 0 GROUP BY ALL", D)))

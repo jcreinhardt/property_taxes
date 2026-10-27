@@ -2,7 +2,7 @@
 # SEs clustered by pair. Full (unbalanced) panel vs balanced panel (pairs observed in all 9 years). Measures: effective rate
 # (bill / sale price, R/11) and CoreLogic-reported rate (R/10a); gap in pp and relative to the pair-year mean level.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 e <- fread(file.path(OUT, "border_pair_gaps_effective.csv"))[, .(pair, y, gap_pp, rel = gap_pp / ((eff_1 + eff_2) / 2), measure = "effective (bill / price)")]
 c <- fread(file.path(OUT, "border_pair_gaps_cl.csv"))[, .(pair, y, gap_pp, rel = gap_pp / ((rate_1 + rate_2) / 2), measure = "CoreLogic-reported rate")]
 d <- rbind(e, c)

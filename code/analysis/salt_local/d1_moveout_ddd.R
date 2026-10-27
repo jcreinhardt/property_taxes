@@ -6,7 +6,7 @@
 # (2) county exposure: move ~ i(y, ex_z, ref 2017) | tract + st^y; (3) near x high x exposure. SE by county.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(fixest); library(ggplot2)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb()); m <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/border_moveout/moveout_bkey_1pct.parquet'", ROOT)))
 dbDisconnect(con, shutdown = TRUE)
 m[, y := y + 1L]

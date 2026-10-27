@@ -4,7 +4,7 @@
 # trees). All predictions cross-fitted: 5 folds by county (a tract is never predicted by a model trained on its own county).
 # Out-of-sample R2 on the demeaned target, then step 2 as in c5 (prediction on near x high etc., SE by county).
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ranger); library(mgcv); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); set.seed(7)
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); set.seed(7)
 d0 <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 d0[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)]
 X0 <- c("ach", "ses", "linc", "sh_ba", "sh_white", "sh_own", "yrbuilt", "lpop")

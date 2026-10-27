@@ -5,7 +5,7 @@
 # separately for all neighbours, same-state neighbours and cross-state neighbours. Tracts with no neighbour of a type are
 # dropped from that panel (not zero-filled), so the cross-state panel thins out away from the border.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); TT <- 30; BW <- 2.5
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); TT <- 30; BW <- 2.5
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))
 d <- unique(d[, .(tract, st, pair, high, dist_mi)])[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)][abs(sd_mi) <= 50]
 con <- dbConnect(duckdb())

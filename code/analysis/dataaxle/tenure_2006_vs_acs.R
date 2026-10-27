@@ -1,7 +1,7 @@
 # Tenure histogram, 2006: Data Axle length_of_residence (primary families, full data) vs ACS 2006 1-year.
 #   (A) ACS PUMS "when moved into this house" (MV, duration bins), occupied units weighted by WGTP
 #   (B) published table B25038 (year householder moved into unit, calendar-year bins)
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -13,7 +13,8 @@ library(duckdb)
 library(jsonlite)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/tenure_2006_vs_acs"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/tenure_2006_vs_acs")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 SOURCES <- c("ACS 2006 1-yr", "Data Axle 2006")
@@ -23,7 +24,7 @@ GROUPS  <- c(all = "All households", own = "Owners", rent = "Renters")
 # Codebook: months since arrival converted to years, 0-17 months = 1, 18-29 = 2, 30-41 = 3, ...
 # so LOR = k covers months [12k - 6, 12k + 6) for k >= 2 and [0, 18) for k = 1.
 # lor_counts.csv = full-data counts by record_year x primary family x owner/renter x LOR (Bouchet batch job)
-da <- read_csv("../../../output/dataaxle_exploration/full5/lor_counts.csv", show_col_types = FALSE) |>
+da <- read_csv(file.path(ROOT, "output/dataaxle_exploration/full5/lor_counts.csv"), show_col_types = FALSE) |>
     filter(record_year == 2006, pf) |>
     select(lor, ten = ors, n)
 unk_share <- sum(da$n[da$ten == "unk"]) / sum(da$n)

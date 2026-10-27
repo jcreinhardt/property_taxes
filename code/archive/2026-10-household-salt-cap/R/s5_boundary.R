@@ -1,5 +1,5 @@
 # s5_boundary.R — Strategy 5: boundary DiD across municipal (place) and unified school-district borders. Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 suppressPackageStartupMessages({ library(sf); library(tigris) }); options(tigris_use_cache = TRUE); sf_use_s2(FALSE)
 P <- dq(sprintf("SELECT clip, st, fips, lat, lon, rate16 FROM read_parquet('%s') WHERE base_oo AND rate_ok AND lat IS NOT NULL AND lon IS NOT NULL AND lat BETWEEN 24 AND 50 AND lon BETWEEN -125 AND -66", pq("analysis_parcels")))
 states <- setdiff(unique(P$st), c("AK", "HI", "GU", "VI", "PR"))

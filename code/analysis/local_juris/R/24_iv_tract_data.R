@@ -6,7 +6,7 @@
 # covariates (tidycensus, cached in data/external/acs17_tract.csv).
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(tidycensus)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); MI <- 1609.344
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); MI <- 1609.344
 TIG <- path.expand("~/Library/Caches/tigris")
 con <- dbConnect(duckdb())
 t <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/tract/tract_eff.parquet'", ROOT)))

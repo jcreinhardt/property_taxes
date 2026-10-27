@@ -2,7 +2,7 @@
 # above ~30%): log price ~ nh x post + nhx x post + nlx x post + nhx x late + nlx x late + exposure x post + exposure x late
 # | parcel + pair^side^year + pair^dbin^year; SE by county. post = 2018+, late = 2021+.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); SH <- as.numeric(Sys.getenv("RS_SHARE", "0.6"))
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); SH <- as.numeric(Sys.getenv("RS_SHARE", "0.6"))
 con <- dbConnect(duckdb())
 s <- as.data.table(dbGetQuery(con, sprintf("SELECT clip, tract, y::SMALLINT y, ln(price)::FLOAT lp FROM '%s/data/local_juris/kpanel/repeat_sales.parquet'
   WHERE NOT newcon AND hash(clip) %% 1000 < %d", ROOT, round(SH * 1000)))); dbDisconnect(con, shutdown = TRUE)

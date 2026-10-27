@@ -1,6 +1,6 @@
 # s6_decomp_fix.R — corrected Strategy 6 decomposition (decision log 2026-10-16): the no-cap 2018 counterfactual keeps TAXSIM's state
 # component (finite difference of siitax) and removes only the federal cap: price18_nocap = 1 + d(siitax18)/100 - mtr_fed18 x 1[itemises with uncapped SALT].
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 P <- dq(sprintf("SELECT clip, st, agi_bin, bill16, mortint16, married FROM read_parquet('%s') WHERE base_oo AND agi_imp IS NOT NULL", pq("analysis_parcels")))[!st %in% c("GU", "VI", "PR")]
 tx <- dq(sprintf("SELECT * FROM read_parquet('%s')", file.path(PANEL_DIR, "taxsim_s6.parquet")))
 stopifnot(nrow(P) == max(tx$taxsimid))

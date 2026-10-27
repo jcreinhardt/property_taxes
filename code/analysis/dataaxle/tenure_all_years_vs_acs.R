@@ -2,7 +2,7 @@
 # 1-year PUMS "when moved into this house" (MV), occupied units weighted by WGTP. Extends tenure_2006_vs_acs.R (method A).
 # ACS tallies: pums_mv_by_year.csv, built by pums_mv.sh from www2.census.gov/programs-surveys/acs/data/pums/YYYY/1-Year/
 # csv_hus.zip (2007-2023; no standard 2020 1-yr file); 2006 from data/ACS_microdata/pums2006. Data Axle 2022 dropped (truncated).
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -13,7 +13,8 @@ library(tidyverse)
 library(duckdb)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/tenure_all_years_vs_acs"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/tenure_all_years_vs_acs")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 BINS <- c("≤1 yr", "1–2 yrs", "2–4 yrs", "5–9 yrs", "10–19 yrs", "20–29 yrs", "30+ yrs")
@@ -33,7 +34,7 @@ acs <- read_csv(file.path(OUTPUT_DIR, "pums_mv_by_year.csv"), show_col_types = F
 
 # Data Axle ---------------------------------------------------------------------------------
 # LOR = k covers months [12k - 6, 12k + 6) for k >= 2 and [0, 18) for k = 1; spread uniformly and split across MV bins.
-da <- read_csv("../../../output/dataaxle_exploration/full5/lor_counts.csv", show_col_types = FALSE) |>
+da <- read_csv(file.path(ROOT, "output/dataaxle_exploration/full5/lor_counts.csv"), show_col_types = FALSE) |>
     filter(pf, record_year != 2022) |>
     transmute(y = record_year, lor, ten = ors, n) |>
     mutate(lo = if_else(lor == 1, 0, 12 * lor - 6), hi = 12 * lor + 6) |>
@@ -57,7 +58,7 @@ wide <- tab |> select(-n) |> pivot_wider(names_from = source, values_from = pct)
 write_csv(wide, file.path(OUTPUT_DIR, "tenure_bins_by_year_wide.csv"))
 
 # Unknown owner/renter share in Data Axle, by year
-unk <- read_csv("../../../output/dataaxle_exploration/full5/lor_counts.csv", show_col_types = FALSE) |>
+unk <- read_csv(file.path(ROOT, "output/dataaxle_exploration/full5/lor_counts.csv"), show_col_types = FALSE) |>
     filter(pf) |> summarise(unk = sum(n[ors == "unk"]) / sum(n), .by = record_year)
 write_csv(unk, file.path(OUTPUT_DIR, "da_unknown_tenure_share.csv"))
 

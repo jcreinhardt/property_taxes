@@ -19,9 +19,10 @@ library(scales)
 #   directory (i.e., `code/paper/`).
 # - Output is written to `output/paper/fig1/`.
 
-DB_PATH <- "../../data/database.db"
+source("code/R/paths.R")
+DB_PATH <- file.path(ROOT, "data/database.db")
 
-OUTPUT_DIR <- "../../output/paper/fig1"
+OUTPUT_DIR <- file.path(ROOT, "output/paper/fig1")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 con <- dbConnect(duckdb::duckdb(), dbdir = DB_PATH, read_only = TRUE)

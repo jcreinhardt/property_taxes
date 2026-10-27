@@ -1,7 +1,7 @@
 # 01_prepare.R — turn the Bouchet exports (parcels, panel, mortgages, da_addr) into the analysis data set.
 # Adds: mortgage stock and 2016 interest (Section 3.4), refi / cash-out outcomes (Section 2), imputed AGI (Section 3.6),
 # CBSA fallback, value bins, cluster ids. Writes data/salt_cap/panel/analysis_parcels.parquet and analysis_panel.parquet.
-source("code/analysis/salt_cap/R/00_setup.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R")
 library(readxl)
 
 parcels <- dq(sprintf("SELECT * FROM read_parquet('%s')", pq("parcels")))

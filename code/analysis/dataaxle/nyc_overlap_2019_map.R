@@ -3,7 +3,7 @@
 # address with (i) same street + number in another ZIP with the same ZIP3, or (ii) same ZIP + number and a street name
 # within 2 edits / Jaro-Winkler >= 0.92, or (iii) same ZIP + street and a house number one character off (typo_2019_full.sql).
 # Geography: 2010 Census ZCTAs (tigris) for the 320 NYC ZIPs on the NYS DOH ZIP-county list.
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -16,7 +16,8 @@ library(tigris)
 options(tigris_use_cache = TRUE)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/nyc_overlap_2019"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/nyc_overlap_2019")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 z <- read_csv(file.path(OUTPUT_DIR, "typo_2019_nyc_zip.csv"), show_col_types = FALSE, col_types = "cdddddd") |>

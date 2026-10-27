@@ -1,6 +1,6 @@
 # s3_alt_incumbents.R — the single labelled alternative to Strategy 3 (decision log 2026-10-16): base spec on incumbents only
 # (no arm's-length purchase recorded 2013–2016). Run with SALT_PART=S3alt.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d <- load_panel(2012:2019, "oo")[rate_ok == TRUE & !is.na(valuebin) & (is.na(buy_year) | buy_year < 2013)]
 cat("S3 incumbents:", nrow(d), "parcel-years,", uniqueN(d$clip), "parcels\n")
 FE_BASE <- "clip + vb^year + county^year"

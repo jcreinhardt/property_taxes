@@ -6,7 +6,7 @@
 # (2) Border DDD (as a3): district near x high = majority of its tracts within 10 mi of the border on the high-tax side.
 #     log enrolment ~ i(y, nh, ref 2017) | district + pair^high^y + pair^dbin^y; and the same with nh x exposure.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 p <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[enr > 0]
 p[, bal := uniqueN(y) == 12, by = leaid]; p <- p[bal == TRUE][, lenr := log(enr)]
 p[, w17 := enr[y == 2017], by = leaid]

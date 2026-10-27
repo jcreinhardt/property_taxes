@@ -5,7 +5,7 @@
 # (as R/07: cb 2020 states, lower 48 + DC, outer US boundary removed). Binned means across tracts (tracts ~ equal population).
 # Noise benchmark: same statistics with medians replaced by N(0, SE) (SE as in R/22).
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 TIG <- path.expand("~/Library/Caches/tigris"); MI <- 1609.344; TS <- c(15, 30, 60)
 con <- dbConnect(duckdb())
 t <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/data/local_juris/tract/tract_eff.parquet'", ROOT)))

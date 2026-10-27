@@ -2,7 +2,7 @@
 # within 20 mi on both sides in the 1% building sample (2016; data/local_juris/border_parcels_1pct.parquet), fixed over years.
 # Gaps from the per-side sample (R/13). All pairs observed in the year, and the balanced panel; unweighted for comparison.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 SFX <- Sys.getenv("BORDER_SFX", "")
 con <- dbConnect(duckdb())
 w <- as.data.table(dbGetQuery(con, sprintf("SELECT pair, count(*) w FROM '%s/data/local_juris/border_parcels_1pct.parquet' GROUP BY pair", ROOT)))

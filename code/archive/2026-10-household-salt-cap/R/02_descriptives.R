@@ -1,5 +1,5 @@
 # 02_descriptives.R — Section 3.7 descriptive tables + the validation tables that go into the report (Section 14.2).
-source("code/analysis/salt_cap/R/00_setup.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R")
 P <- dq(sprintf("SELECT * FROM read_parquet('%s')", pq("analysis_parcels")))
 base <- P[base_oo == TRUE]
 # counts by state and year (parcels in the base sample observed on the roll)

@@ -3,7 +3,7 @@
 # Roll outcomes use counties whose residential parcel count is >= 80% of their max in every year 2013-2024 (roll gaps);
 # sales outcomes need >= 50 sales in the county-year. Years 2013-2024 (2012 roll is thin).
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 cy <- readRDS(file.path(ROOT, "data/local_juris/county_year.rds"))[y >= 2013 & y <= 2024]
 ex <- fread(file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))[, fips := sprintf("%05d", county)]
 cy <- merge(cy, ex[, .(fips, ex_z, returns)], by = "fips")[, st := substr(fips, 1, 2)]

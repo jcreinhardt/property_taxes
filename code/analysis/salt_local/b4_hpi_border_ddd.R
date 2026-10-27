@@ -2,7 +2,7 @@
 # Triple difference: log HPI ~ i(y, near x high, ref 2017) | tract + pair^high^y + pair^dbin^y, SE by county; near < 10 mi.
 # Also near x high x county SALT exposure, and the high- vs low-exposure split.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 h <- fread(file.path(ROOT, "data/external/fhfa/hpi_at_tract.csv"), colClasses = c(tract = "character"))[year >= 2010]
 h[, hpi := suppressWarnings(as.numeric(hpi))]; h <- h[is.finite(hpi) & hpi > 0]
 iv <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, pair, high, dbin, near, cty, dist_mi)])

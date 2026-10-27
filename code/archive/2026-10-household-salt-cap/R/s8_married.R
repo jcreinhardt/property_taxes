@@ -1,5 +1,5 @@
 # s8_married.R — Strategy 8: married vs unmarried co-owners, bills in (10k, 20k] vs <=10k and >20k. Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d0 <- load_panel(2012:2019, "oo")[rate_ok == TRUE & !is.na(valuebin) & coowner %in% c("married", "likely_married", "unmarried")]
 d0[, mid := as.integer(bill16 > 10000 & bill16 <= 20000)]
 run_s8 <- function(d, label) {

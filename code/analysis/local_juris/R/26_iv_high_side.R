@@ -5,7 +5,7 @@
 # Spec: Y ~ i(dbin, high, ref = 50+) | pair^high + pair^dbin, SE clustered by county; plus pooled near (< 10 mi) x high.
 # Y: first stage (x_cheap, tax_gap, sh_x), school access (sch_gap, x_better_sch) and own-tract balance covariates.
 suppressPackageStartupMessages({library(data.table); library(sf); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); MI <- 1609.344
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); MI <- 1609.344
 TIG <- path.expand("~/Library/Caches/tigris")
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_nb.rds"))
 st <- st_read(file.path(TIG, "cb_2020_us_state_500k.shp"), quiet = TRUE)

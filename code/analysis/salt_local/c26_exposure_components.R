@@ -15,7 +15,7 @@
 # ZIP censoring: SOI sets counts < 20 to 0. A ZIP is "clean" if every stub has N1 > 0 in both years and the $100-200k and
 # $200k+ stubs have itemizers > 0 in both years.
 suppressPackageStartupMessages({library(data.table); library(tidycensus)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); SO <- file.path(ROOT, "data/SOI")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); SO <- file.path(ROOT, "data/SOI")
 taus <- list(county = data.table(agi_stub = 1:8, t16 = c(0, 0, .10, .15, .15, .15, .25, .33), t18 = c(0, 0, .10, .12, .12, .12, .22, .32)),
              zip = data.table(agi_stub = 1:6, t16 = c(.10, .15, .15, .15, .25, .33), t18 = c(.10, .12, .12, .12, .22, .32)))
 rd <- function(level, yy) {

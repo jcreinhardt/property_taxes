@@ -4,7 +4,7 @@
 # and a fill rate >= 50%. Sides ordered as in R/16 (2013-17 median effective rate, >= 100 sales per side).
 # TWFE: side-year rate on side FE + pair x year FE + year x lower-side dummies (2017 = 0), SE by pair; and each side alone.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2); library(patchwork)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris/bsample1024")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris/bsample1024")
 Y0 <- 2013L; Y1 <- 2024L; MIN <- 1000
 con <- dbConnect(duckdb())
 r <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/border_sample_vacancy.parquet'", D)))

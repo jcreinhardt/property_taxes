@@ -1,7 +1,7 @@
 # Randomisation inference for the district border DDD (a3): permute which side of each pair is "high" (coin flip per pair),
 # re-estimate lpt ~ nh x post | district + pair^high^y + pair^dbin^y, 200 draws; p-value = share of |placebo| >= |actual|.
 suppressPackageStartupMessages({library(data.table); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 p <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[ptax > 0][, bal := uniqueN(y) == 12, by = leaid][bal == TRUE]
 ivt <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, leaid, pair, high, dbin, near)])
 dv <- ivt[!is.na(leaid), .(near = as.integer(mean(near) > .5), high = as.integer(names(which.max(table(high)))), pair = names(which.max(table(pair))),

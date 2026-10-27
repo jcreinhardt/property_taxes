@@ -11,7 +11,7 @@
 # unified school districts; AK, HI have no place/unsd files here).
 suppressPackageStartupMessages({library(sf); library(dplyr); library(tidyr); library(duckdb); library(quantreg); library(fixest)})
 sf_use_s2(FALSE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 TIG <- path.expand("~/Library/Caches/tigris")
 con <- dbConnect(duckdb())
 d <- dbGetQuery(con, sprintf("SELECT clip, st, lpad(fips::VARCHAR,5,'0') fips, coalesce(nullif(trim(tac),''), 'M:' || upper(trim(muni_name)), '_') cell,

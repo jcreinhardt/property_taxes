@@ -13,7 +13,7 @@
 #     pair / distance from its tracts (tract -> modal ZIP of sales, a8). Border DDD near (< 10 mi) x high | ZIP +
 #     pair^high^y + pair^dbin^y; and ZIP exposure x year | ZIP + state x year. SE by county.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); M <- file.path(ROOT, "data/SOI/migration_county")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); M <- file.path(ROOT, "data/SOI/migration_county")
 yrs <- 12:22
 fl <- rbindlist(lapply(yrs, \(yy) { x <- fread(file.path(M, sprintf("countyoutflow%02d%02d.csv", yy - 1, yy)), colClasses = "character", encoding = "Latin-1")
   x[, .(o = sprintf("%02d%03d", as.integer(y1_statefips), as.integer(y1_countyfips)), ds = as.integer(y2_statefips), dc = as.integer(y2_countyfips),
@@ -50,7 +50,7 @@ cr[, bal := uniqueN(y) == length(yrs), by = o]; cr <- cr[bal == TRUE]
 cr[!is.finite(l_agi_pr), l_agi_pr := NA]
 cb <- cr[!is.na(pair)][, nh := near * high]
 # ---- (3) ZIP returns ----
-con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+con <- db_open("database.db")
 zr <- as.data.table(dbGetQuery(con, "SELECT zipcode, year::INT y, returns FROM returns_zipcode WHERE year BETWEEN 2012 AND 2022 AND zipcode NOT IN (0, 99999)"))
 dbDisconnect(con, shutdown = TRUE)
 zr[, zip := sprintf("%05d", zipcode)][, bal := uniqueN(y) == 11 & all(returns > 0), by = zip]; zr <- zr[bal == TRUE]

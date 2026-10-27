@@ -6,7 +6,7 @@
 # and SES (data/external/seda41), CoreLogic parcels with a 2016 bill and value (the 1% sample).
 suppressPackageStartupMessages({library(data.table); library(sf); library(tigris); library(duckdb)})
 options(tigris_use_cache = TRUE); sf_use_s2(FALSE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 sdp <- function(type) { s <- school_districts(cb = TRUE, year = 2019, type = type, progress_bar = FALSE)
   s <- s[!s$STATEFP %in% c("02", "15", "60", "66", "69", "72", "78") & !substr(s$GEOID, 3, 7) %in% c("99997", "99998", "99999"), "GEOID"]
   s$type <- type; st_transform(s, 5070) }

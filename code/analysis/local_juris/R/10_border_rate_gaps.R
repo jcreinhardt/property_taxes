@@ -6,7 +6,7 @@
 #      Market-value version: r x median(AV/MV) x sales ratio (cell-year, else county-year); kept if 0.05-6%.
 # Coverage shares, state-pair x year side means, |side A - side B|, and boxplots across pairs by year.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(quantreg); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; IN <- file.path(ROOT, "data/local_juris/border1")
+source("code/R/paths.R"); IN <- file.path(ROOT, "data/local_juris/border1")
 OUT <- file.path(ROOT, "output/analysis/local_juris"); dir.create(file.path(OUT, "figures"), showWarnings = FALSE)
 con <- dbConnect(duckdb()); q <- \(s) as.data.table(dbGetQuery(con, s))
 bp <- q(sprintf("SELECT * FROM '%s/border_panel_1pct.parquet'", IN))

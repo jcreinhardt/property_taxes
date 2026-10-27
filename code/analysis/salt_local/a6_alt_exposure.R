@@ -3,7 +3,7 @@
 # tax). Revenue event studies as a1 (school districts by county, county governments) and a3 (district level), exposure in SD
 # units; also near x high x exposure in the district border DDD.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb())
 ce <- as.data.table(dbGetQuery(con, sprintf("SELECT lpad(q.fips::VARCHAR, 5, '0') conum, count(*) n, avg((p.bill > 10000)::INT) sh10, avg((p.bill > 5000)::INT) sh5
   FROM '%s/data/salt_cap/panel/panel.parquet' p JOIN '%s/data/salt_cap/panel/parcels.parquet' q USING (clip) WHERE p.y = 2016 AND p.bill > 0 GROUP BY 1", ROOT, ROOT)))

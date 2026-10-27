@@ -3,7 +3,7 @@
 # school_district_name; share of points near a boundary (where generalised 1:500k maps can mis-assign).
 suppressPackageStartupMessages({library(sf); library(dplyr); library(duckdb); library(stringr)})
 sf_use_s2(FALSE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"
+source("code/R/paths.R")
 TIG  <- path.expand("~/Library/Caches/tigris")
 OUT  <- file.path(ROOT, "output/analysis/local_juris"); dir.create(OUT, showWarnings = FALSE, recursive = TRUE)
 

@@ -2,7 +2,7 @@
 # low-side counterpart near x low x exposure in one model; tract + pair x side x year + pair x distance-bin x year FE, plus
 # exposure x year; SE by county. Near cutoffs 5 / 10 / 20 mi. The outside-option story predicts nhx < 0 and nlx >= 0.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 h <- fread(file.path(ROOT, "data/external/fhfa/hpi_at_tract.csv"), colClasses = c(tract = "character"))[year >= 2012]
 h[, hpi := suppressWarnings(as.numeric(hpi))]; h <- h[is.finite(hpi) & hpi > 0]
 iv <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, pair, high, dbin, dist_mi, cty)])

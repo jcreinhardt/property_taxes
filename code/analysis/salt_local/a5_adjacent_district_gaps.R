@@ -4,7 +4,7 @@
 # year FE, ref 2017, SE clustered by state pair (cross) / state (same). Also by SALT contrast of the two states.
 suppressPackageStartupMessages({library(data.table); library(sf); library(tigris); library(fixest); library(ggplot2)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 sd <- rbind(school_districts(cb = TRUE, year = 2019, type = "unified", progress_bar = FALSE)[, c("GEOID", "STATEFP")],
             school_districts(cb = TRUE, year = 2019, type = "elementary", progress_bar = FALSE)[, c("GEOID", "STATEFP")])
 sd <- st_make_valid(st_transform(sd[!sd$STATEFP %in% c("02", "15", "72"), ], 5070)); sd <- sd[!duplicated(sd$GEOID), ]

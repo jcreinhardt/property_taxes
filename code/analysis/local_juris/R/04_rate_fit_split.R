@@ -2,7 +2,7 @@
 # (c) both. Share of parcels within 1% of their cell-group's median-regression line. 1% sample, 2016, residential;
 # groups need >= 30 parcels; the share is computed over parcels in groups that qualify, and coverage is reported.
 suppressPackageStartupMessages({library(dplyr); library(tidyr); library(duckdb); library(quantreg)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 con <- dbConnect(duckdb())
 d <- dbGetQuery(con, sprintf("SELECT clip, st, fips, coalesce(nullif(trim(tac),''), 'M:' || upper(trim(muni_name)), '_') cell, bill16 bill, av16 av,
   coalesce(hs16, false) hs, coalesce(occ = 'O', false) oo FROM '%s/data/salt_cap/panel/parcels.parquet' WHERE bill16 > 0 AND av16 > 0", ROOT))

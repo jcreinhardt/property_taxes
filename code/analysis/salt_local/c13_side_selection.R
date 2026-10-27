@@ -4,7 +4,7 @@
 # Coefficients also in SD units of Y (SD over all instrument tracts). Sides as in local_juris/R/26 (high = higher median
 # effective rate within 20 mi). Spending and district property tax per pupil from F-33 FY2016 (district of the tract).
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 f <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[y == 2016 & enr > 0, .(leaid, lspend = log(spend / enr))]
 d <- merge(d, f, by = "leaid", all.x = TRUE)

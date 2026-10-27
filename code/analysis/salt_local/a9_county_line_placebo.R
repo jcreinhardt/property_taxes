@@ -6,7 +6,7 @@
 # If the state-border effect reflects SALT / interstate competition, county lines should show nothing.
 suppressPackageStartupMessages({library(data.table); library(sf); library(tigris); library(fixest)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); MI <- 1609.344
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); MI <- 1609.344
 cty <- counties(cb = TRUE, year = 2019, progress_bar = FALSE)
 cty <- st_make_valid(st_transform(cty[as.integer(cty$STATEFP) <= 56 & !cty$STATEFP %in% c("02", "15"), c("GEOID", "STATEFP")], 5070))
 adj <- st_touches(cty)

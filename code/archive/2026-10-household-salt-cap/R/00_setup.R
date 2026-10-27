@@ -2,12 +2,12 @@
 suppressPackageStartupMessages({
   library(data.table); library(fixest); library(ggplot2); library(duckdb); library(DBI)
 })
-ROOT <- normalizePath(file.path(dirname(normalizePath(sys.frame(1)$ofile %||% "code/analysis/salt_cap/R/00_setup.R")), "../../../.."), mustWork = FALSE)
+ROOT <- normalizePath(file.path(dirname(normalizePath(sys.frame(1)$ofile %||% "code/archive/2026-10-household-salt-cap/R/00_setup.R")), "../../../.."), mustWork = FALSE)
 if (!dir.exists(file.path(ROOT, "output"))) ROOT <- getwd()
 if (!dir.exists(file.path(ROOT, "output"))) ROOT <- "/Users/jr2728/PhD/projects/property_taxes"
 if (nzchar(Sys.getenv("SALT_ROOT"))) ROOT <- Sys.getenv("SALT_ROOT")
 DATA <- file.path(ROOT, "data/salt_cap")            # git-ignored: panel.parquet, parcels.parquet, mortgages.parquet, external/
-OUT  <- file.path(ROOT, "output/analysis/salt_cap") # decision_log.md, estimates.csv, assumption_ledger.csv, figures/, report.md
+OUT  <- file.path(ROOT, "output/archive/2026-10-household-salt-cap/salt_cap") # decision_log.md, estimates.csv, assumption_ledger.csv, figures/, report.md
 `%||%` <- function(a, b) if (is.null(a)) b else a
 SAMPLE <- Sys.getenv("SALT_SAMPLE", "bld1pct")      # label written to estimates.csv; non-default samples get their own sub-folders
 PANEL_DIR <- if (SAMPLE == "bld1pct") file.path(DATA, "panel") else file.path(DATA, "panel", SAMPLE)

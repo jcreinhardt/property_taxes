@@ -2,7 +2,7 @@
 # Test on the 1% building sample (2016, residential): compare the slope with the published total_property_tax_rate_percent
 # (18 states). Alternatives: median of bill/AV (no intercept) and the 90th percentile of bill/AV ("full rate").
 suppressPackageStartupMessages({library(dplyr); library(duckdb); library(quantreg); library(tidyr)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"
+source("code/R/paths.R")
 OUT  <- file.path(ROOT, "output/analysis/local_juris")
 con <- dbConnect(duckdb())
 d <- dbGetQuery(con, sprintf("SELECT st, fips, coalesce(nullif(trim(tac),''),'_') tac, bill16 bill, av16 av, rate_pct, hs16, oo16

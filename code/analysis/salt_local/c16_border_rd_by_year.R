@@ -9,7 +9,7 @@
 # cohort scale), SES and FRL share (2009-2019 only); ACS 5-year tract estimates by release year (year y = survey years y-4..y;
 # releases from 2020 mapped from 2020 to 2010 tracts by land-area shares).
 suppressPackageStartupMessages({library(data.table); library(rdrobust); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); H <- 15; MX <- 100; YRS <- 2013:2024
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); H <- 15; MX <- 100; YRS <- 2013:2024
 s <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30, .(tract, leaid, pair, high, dist_mi, cty)])
 s[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)]; s <- s[abs(sd_mi) <= MX]
 ty <- readRDS(file.path(ROOT, "data/local_juris/tract_year.rds"))[y %in% YRS & tract %in% s$tract]

@@ -2,7 +2,7 @@
 # 2013-17 pull in local_juris/R/24 plus housing units (crosswalk weights). One file per release year in data/external/acs/.
 # Releases 2013-2019 are on 2010 tracts; from 2020 on, 2020 tracts (checked against the 2010 IDs in c18).
 suppressPackageStartupMessages({library(data.table); library(tidycensus)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; A <- file.path(ROOT, "data/external/acs"); dir.create(A, showWarnings = FALSE)
+source("code/R/paths.R"); A <- file.path(ROOT, "data/external/acs"); dir.create(A, showWarnings = FALSE)
 v <- c(inc = "B19013_001", hval = "B25077_001", pop = "B01003_001", white = "B02001_002", ed_tot = "B15003_001",
        ba = "B15003_022", ma = "B15003_023", prof = "B15003_024", phd = "B15003_025", ten_tot = "B25003_001", own = "B25003_002",
        yrbuilt = "B25035_001", age = "B01002_001", hu = "B25001_001")

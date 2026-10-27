@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 # ACS Figure 2: mover rates by itemizable-expense quantile bands (MFJ + singles).
-# Run from code/paper/: Rscript fig2_acs.R
+# Run from the repo root: Rscript code/paper/fig2_acs.R
 
 gc()
 rm(list = ls())
@@ -17,8 +17,9 @@ library(fixest)
 library(broom)
 library(cli)
 
-DB_PATH <- "../../data/database.db"
-OUTPUT_DIR <- "../../output/paper/fig2"
+source("code/R/paths.R")
+DB_PATH <- file.path(ROOT, "data/database.db")
+OUTPUT_DIR <- file.path(ROOT, "output/paper/fig2")
 BAND_W <- 0.03
 PRE_YEARS <- 2011:2016
 

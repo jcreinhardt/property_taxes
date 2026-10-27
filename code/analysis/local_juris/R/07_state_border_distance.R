@@ -2,7 +2,7 @@
 # with another US state (coastlines and international borders excluded; DC counts as a state). cb 2020 1:500k states,
 # projected to EPSG:5070. Internal borders = all state boundaries minus the outer US boundary (100 m tolerance).
 suppressPackageStartupMessages({library(sf); library(dplyr); library(duckdb)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 TIG <- path.expand("~/Library/Caches/tigris"); MI <- 1609.344
 st <- st_read(file.path(TIG, "cb_2020_us_state_500k.shp"), quiet = TRUE) |> filter(!STUSPS %in% c("AK", "HI", "PR", "VI", "GU", "MP", "AS")) |>
   st_transform(5070) |> st_make_valid()

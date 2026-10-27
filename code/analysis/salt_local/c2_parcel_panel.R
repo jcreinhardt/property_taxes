@@ -7,7 +7,7 @@
 # controlling log price for ratio and rate); (2) border DDD (tract near x high from R/26): parcel FE + pair x side x year +
 # pair x distance-bin x year FE, SE by county; sales outcomes with tract FE.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb())
 p <- as.data.table(dbGetQuery(con, sprintf("SELECT p.clip, p.y::INT y, p.bill, p.av, p.price, coalesce(p.newcon, false) newcon, lpad(q.fips::VARCHAR, 5, '0') fips, lpad(q.fips::VARCHAR, 5, '0') || lpad(q.tract::VARCHAR, 6, '0') tract
   FROM '%s/data/salt_cap/panel/panel.parquet' p JOIN '%s/data/salt_cap/panel/parcels.parquet' q USING (clip)

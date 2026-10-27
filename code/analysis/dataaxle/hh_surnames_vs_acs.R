@@ -8,7 +8,7 @@
 #   central = 1 - prod(1 - p_rel) over adults, with p_rel = assumed chance that an adult with relationship rel has a
 #             surname different from the householder's (P_DIFF below)
 #   upper  = household has any adult other than householder, spouse and own/adopted child; else 25% if a spouse is present
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -19,7 +19,8 @@ library(tidyverse)
 library(duckdb)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/hh_surnames"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/hh_surnames")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 # Assumed probability that an adult's surname differs from the householder's, by IPUMS RELATED code

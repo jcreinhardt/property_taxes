@@ -5,7 +5,7 @@
 # Capitalisation: per $1 of annual lost federal subsidy per return (raw $ measures), the implied price change in $ at the
 # 2017 mean median price, divided by the PV of $1/yr at 5% (= $20): factor = coef_per_$ x P / 20.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 cy <- readRDS(file.path(ROOT, "data/local_juris/county_year.rds"))[y >= 2013 & y <= 2024 & n_sales >= 50 & p50 > 0]
 cy[, `:=`(l_p50 = log(p50), st = substr(fips, 1, 2))]
 old <- fread(file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))[, .(fips = sprintf("%05d", county), old = 1000 * excess_pp, returns)]

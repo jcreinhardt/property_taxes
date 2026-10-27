@@ -2,7 +2,7 @@
 # parcel FE + state x year FE (and CBSA-free county x year robustness: county x year FE absorb local shocks, leaving
 # within-county ZIP variation); log price ~ i(y, exposure, ref 2017); SE by county. Also the 2016-binned exposure split.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb())
 s <- as.data.table(dbGetQuery(con, sprintf("SELECT clip, tract, y::SMALLINT y, ln(price)::FLOAT lp FROM '%s/data/local_juris/kpanel/repeat_sales.parquet'
   WHERE NOT newcon AND hash(clip) %% 1000 < 300", ROOT))); dbDisconnect(con, shutdown = TRUE)
@@ -26,7 +26,7 @@ g <- ggplot(r, aes(y, coef, colour = spec)) + geom_hline(yintercept = 0, colour 
        subtitle = "parcel FE; 95% CI by county; exposure = SALT deduction above $10k per return, winsorised at p99") + theme_minimal(base_size = 9) + theme(legend.position = "bottom")
 ggsave(file.path(OUT, "figures/b8_repeat_sales_exposure.png"), g, width = 9, height = 4.8, dpi = 150)
 # Income control: ZIP share of 2016 returns with AGI >= $200k (SOI stub 6) and share $100-200k (stub 5), each x year
-con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+con <- db_open("database.db")
 zi <- as.data.table(dbGetQuery(con, "SELECT lpad(zipcode::INT::VARCHAR, 5, '0') zip, sum(returns) FILTER (WHERE agi_stub = 6) / sum(returns) sh200,
   sum(returns) FILTER (WHERE agi_stub = 5) / sum(returns) sh100 FROM returns_zipcode_agi WHERE year = 2016 GROUP BY 1")); dbDisconnect(con, shutdown = TRUE)
 tzi <- merge(fread(file.path(ROOT, "data/local_juris/salt_exposure_tract_zip2016.csv"), colClasses = c(tract = "character", zip = "character"))[, .(tract, zip)], zi, by = "zip")

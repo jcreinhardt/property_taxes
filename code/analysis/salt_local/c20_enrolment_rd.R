@@ -7,7 +7,7 @@
 #   difference in discontinuities: within-district change log enr(y) - log enr(2017), so 2017 = 0.
 # Districts with enrolment > 0 in all 12 years; unweighted (each district one observation).
 suppressPackageStartupMessages({library(data.table); library(rdrobust); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); MX <- 100
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); MX <- 100
 t <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[!is.na(leaid), .(tract, leaid, pair, high, dist_mi, cty)])
 mode1 <- \(x) names(which.max(table(x)))
 dv <- t[, .(pair = mode1(pair), n_tr = .N), by = leaid]

@@ -4,7 +4,7 @@
 # Side mean per state pair x year (>= MIN sales on each side), |A - B|, boxplot across pairs by year. Data: SALT panel
 # (data/salt_cap/panel/panel.parquet: bill, price, sale by parcel-year), border assignment from R/09.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); MIN <- 30
 con <- dbConnect(duckdb())
 b <- as.data.table(dbGetQuery(con, sprintf("
   SELECT b.pair, b.st_a, p.clip, p.y, p.bill, p.price, p.sale = 1 AND p.price > 10000 AND p.bill > 0 AND NOT coalesce(p.newcon, false) usable

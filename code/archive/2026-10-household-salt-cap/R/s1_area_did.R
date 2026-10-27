@@ -1,5 +1,5 @@
 # s1_area_did.R — Strategy 1: ZIP-level exposure DiD (descriptive benchmark). Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 # --- exposure E_z: 2016 share of returns with SALT > 10k, log-normal within AGI bin (mean from SOI, log-SD from ACS imputation)
 soi <- dq(sprintf("SELECT zipcode, agi_stub, returns n1, taxes_paid_returns n_salt, taxes_paid_amount a_salt, agi_for_itemizers FROM read_parquet('%s') WHERE year = 2016", SOI_PQ))
 acs <- dq(sprintf("SELECT inctot, salt FROM read_parquet('%s')", ACS_PQ))

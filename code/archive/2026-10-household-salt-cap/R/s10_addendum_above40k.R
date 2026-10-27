@@ -1,5 +1,5 @@
 # s10_addendum_above40k.R — the above24_40k treatment named in the decision log for Strategy 10 (omitted from the s10 loop). SALT_PART=S10b.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d <- load_panel(2012:2025, "oo")[rate_ok == TRUE & !is.na(valuebin)]
 b24 <- d[year == 2024 & !is.na(bill_t), .(clip, bill24 = bill_t)]
 d <- merge(d, b24, by = "clip"); d[, above24_40k := as.integer(bill24 > 40000)]

@@ -3,7 +3,7 @@
 # + exposure x year | parcel + pair^side^year + pair^distance-bin^year; SE by county. Parcel FE make this a repeat-sales index,
 # so changes in the composition of sold homes cannot drive it. Random 40% of parcels (by clip) to fit in memory.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); SH <- as.numeric(Sys.getenv("RS_SHARE", "0.4")); OFF <- as.numeric(Sys.getenv("RS_OFF", "0")); RSX <- Sys.getenv("RS_SFX", "")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); SH <- as.numeric(Sys.getenv("RS_SHARE", "0.4")); OFF <- as.numeric(Sys.getenv("RS_OFF", "0")); RSX <- Sys.getenv("RS_SFX", "")
 con <- dbConnect(duckdb())
 s <- as.data.table(dbGetQuery(con, sprintf("SELECT clip, tract, y, ln(price) lp FROM '%s/data/local_juris/kpanel/repeat_sales.parquet'
   WHERE NOT newcon AND hash(clip) %% 1000 >= %d AND hash(clip) %% 1000 < %d", ROOT, round(OFF * 1000), round((OFF + SH) * 1000))))

@@ -1,5 +1,5 @@
 # s3_core.R — Strategy 3: bill conditional on home value (core design). Pre-specified in decision_log.md (2026-10-16).
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d <- load_panel(2012:2019, "oo")[rate_ok == TRUE & !is.na(valuebin)]
 cat("S3 sample:", nrow(d), "parcel-years,", uniqueN(d$clip), "parcels\n")
 FE_BASE <- "clip + vb^year + county^year"

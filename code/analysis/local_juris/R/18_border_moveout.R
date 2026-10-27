@@ -7,7 +7,7 @@
 # Sides ordered as in R/16 (2013-17 median effective rate of sales, >= 100 sales per side).
 # TWFE: side-year rate on side FE + pair x year FE + year x lower-side dummies (2017 = 0), SE by pair; and each side alone.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris")
 IN <- Sys.getenv("MOVE_IN", file.path(D, "border_moveout/moveout_bkey_1pct.parquet")); SFX <- Sys.getenv("MOVE_SFX", "_1pct"); MIN <- 50
 con <- dbConnect(duckdb()); m <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s'", IN))); dbDisconnect(con, shutdown = TRUE)
 m[, y := y + 1L]  # label by destination file

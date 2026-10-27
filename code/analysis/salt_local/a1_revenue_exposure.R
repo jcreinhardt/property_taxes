@@ -7,8 +7,8 @@
 # Event study: log(property tax revenue) ~ exposure(SD units) x year (ref 2017) | county + state x year; SE by county.
 # Fiscal-year timing: FY2018 straddles the Dec-2017 enactment; FY2019 is the first fully post budget.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); dir.create(file.path(OUT, "figures"), recursive = TRUE, showWarnings = FALSE)
-con <- dbConnect(duckdb(), file.path(ROOT, "data/database.db"), read_only = TRUE)
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); dir.create(file.path(OUT, "figures"), recursive = TRUE, showWarnings = FALSE)
+con <- db_open("database.db")
 r <- as.data.table(dbGetQuery(con, "SELECT county::INT county, statefips, agi_stub, returns, taxes_paid_returns n_salt, taxes_paid_amount a_salt,
   property_taxes_amount a_ptax, returns_w_items n_item FROM returns_county_agi WHERE year = 2016")); dbDisconnect(con, shutdown = TRUE)
 ex <- r[, .(returns = sum(returns), excess_pp = sum(pmax(0, a_salt / pmax(n_salt, 1) - 10) * n_salt) / sum(returns),
@@ -16,7 +16,7 @@ ex <- r[, .(returns = sum(returns), excess_pp = sum(pmax(0, a_salt / pmax(n_salt
             sh_item = sum(n_item) / sum(returns)), by = county]
 ex[, ex_z := (excess_pp - mean(excess_pp)) / sd(excess_pp)]
 fwrite(ex, file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))
-con <- dbConnect(duckdb(), file.path(ROOT, "data/census_finances_test.db"), read_only = TRUE)
+con <- db_open("census_finances_test.db")
 qfin <- function(tb) as.data.table(dbGetQuery(con, sprintf("SELECT county_fips::INT county, state_fips st, year::INT y, property_tax_rev ptax,
   total_tax_rev ttax, total_expenditure exp FROM %s", tb)))
 fin <- list(school = qfin("govt_finances_sd_by_county"), county_govt = qfin("govt_finances_county"), county_area = qfin("govt_finances_county_area"))

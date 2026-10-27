@@ -4,7 +4,7 @@
 # only, so level differences between sides remain visible). (2) One-sided designs: near (< 10 mi) vs far (>= 10 mi) within
 # the high side only and within the low side only (pair FE, SE by county), and their difference, in SD units.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 d[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)]
 lab <- c(x_cheap = "cheaper cross-state tract within 30 min (first stage)", tax_gap = "own rate - p10 reachable (pp, first stage)",

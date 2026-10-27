@@ -5,7 +5,7 @@
 #   (a) overlap        = matched / (DA + CL - matched)
 #   (b) DA missing in CL = 1 - DA matched / DA
 #   (c) CL missing in DA = 1 - CL matched / CL   (all tax addresses, and residential parcels only: codes 10, 11, 21, 22)
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -18,7 +18,8 @@ library(tigris)
 options(tigris_use_cache = TRUE)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/county_overlap_2019"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/county_overlap_2019")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 da <- read_csv(file.path(OUTPUT_DIR, "county_2019_da.csv"), show_col_types = FALSE)

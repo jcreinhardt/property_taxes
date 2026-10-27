@@ -1,5 +1,5 @@
 # s4_investor_ddd.R — Strategy 4: owner-occupied vs investor-owned triple difference. Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d <- load_panel(2012:2019, "both")[rate_ok == TRUE & !is.na(valuebin)]
 cat("S4 sample:", nrow(d), " owner parcels", uniqueN(d[owner == 1, clip]), " investor parcels", uniqueN(d[owner == 0, clip]), "\n")
 # DDD event study: Y ~ T x year x Owner + T x year + (Owner x year absorbed in FE) | clip + vb^owner^year + county^owner^year

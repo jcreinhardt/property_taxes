@@ -1,5 +1,5 @@
 # s9_assessment.R — Strategy 9a (CT/NJ revaluations) and 9b (California Prop 13 cohorts). Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 norm_muni <- function(x) { x <- toupper(trimws(x)); x <- gsub("\\b(BOROUGH|TOWNSHIP|CITY|TOWN|VILLAGE|BORO|TWP)\\b", "", x); gsub("[^A-Z]", "", x) }
 # ---- published revaluation schedules -------------------------------------------------------------------------------------
 nj <- fread(file.path(DATA, "external/nj_reval/nj_reval_2017_2022.csv")); nj[, st := "NJ"]

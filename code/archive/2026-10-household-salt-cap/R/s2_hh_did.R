@@ -1,5 +1,5 @@
 # s2_hh_did.R — Strategy 2: household DiD on the 2016 bill (county x year FE only). Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 d <- load_panel(2012:2019, "oo")[rate_ok == TRUE]
 cat("S2 sample:", nrow(d), "\n")
 for (tr in c("above16", "lbill16")) for (oc in OUTCOMES_ALL) {

@@ -10,7 +10,7 @@
 # C. Shapefile universe: TIGER district polygons vs F-33 FY2016 districts with enrolment.
 suppressPackageStartupMessages({library(data.table); library(sf); library(tigris); library(duckdb)})
 options(tigris_use_cache = TRUE); sf_use_s2(FALSE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); TIG <- path.expand("~/Library/Caches/tigris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); TIG <- path.expand("~/Library/Caches/tigris")
 sink(file.path(OUT, "c9_border_assign_district_coverage.txt"), split = TRUE)
 
 # ---- A. border assignment ----

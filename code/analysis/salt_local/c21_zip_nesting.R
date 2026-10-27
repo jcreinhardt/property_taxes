@@ -3,7 +3,7 @@
 # elementary). For each ZIP (and each tract / district): share of its parcels in its modal partner unit; parcel-weighted.
 suppressPackageStartupMessages({library(data.table); library(sf); library(tigris); library(duckdb)})
 options(tigris_use_cache = TRUE); sf_use_s2(FALSE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 con <- dbConnect(duckdb())
 p <- as.data.table(dbGetQuery(con, sprintf("SELECT clip, lpad(zip5::VARCHAR, 5, '0') zip, CASE WHEN tract IS NOT NULL THEN lpad(fips::VARCHAR, 5, '0') || lpad(tract::VARCHAR, 6, '0') END tr,
   lat, lon FROM '%s/data/salt_cap/panel/parcels.parquet' WHERE st NOT IN ('AK','HI','PR','GU','VI') AND lat IS NOT NULL AND lat <> 0 AND zip5 IS NOT NULL", ROOT)))

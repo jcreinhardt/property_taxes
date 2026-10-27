@@ -18,7 +18,7 @@
 #   d_both   = d_salt + d_mid.
 # Compared with the original measure (a1: stub-average SALT above $10k per return, TY2016).
 suppressPackageStartupMessages({library(data.table)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); S <- file.path(ROOT, "data/SOI/county_returns_w_agi")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); S <- file.path(ROOT, "data/SOI/county_returns_w_agi")
 tau <- data.table(agi_stub = 1:8, t16 = c(0, 0, .10, .15, .15, .15, .25, .33), t18 = c(0, 0, .10, .12, .12, .12, .22, .32))
 rd <- function(yy) {
   x <- fread(file.path(S, sprintf("%02dincyallagi.csv", yy)), colClasses = "character")

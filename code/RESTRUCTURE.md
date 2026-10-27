@@ -1,6 +1,6 @@
 # Proposal: restructuring `code/` around data building and research designs
 
-Date: 2026-10-27. Status: proposal, nothing moved yet. Revised the same day: no estimation wrapper in `code/R/`;
+Date: 2026-10-27. Status: phase 1 (cleanup, archive) committed as 196099c; phase 2 (code/R helpers, paths) committed; phases 3-4 pending. Revised the same day: no estimation wrapper in `code/R/`;
 migration and repeat sales are outcomes of existing designs, not designs; the household SALT-cap study is archived.
 This file becomes `code/README.md` once the moves are done. (`text/` is for paper drafts, proposals and slides only.)
 

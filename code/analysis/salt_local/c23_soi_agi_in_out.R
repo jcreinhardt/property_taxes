@@ -3,7 +3,7 @@
 # and net AGI flow (in - out) as % of stayers' AGI. Outcomes: log AGI per return of each group, and movers relative to
 # stayers (log ratio). Event study ~ i(y, ex_z, ref 2017) | county + state x year, SE by county.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); M <- file.path(ROOT, "data/SOI/migration_county")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); M <- file.path(ROOT, "data/SOI/migration_county")
 rd <- \(kind, yy) { x <- fread(file.path(M, sprintf("county%s%02d%02d.csv", kind, yy - 1, yy)), colClasses = "character", encoding = "Latin-1")
   setnames(x, tolower(names(x))); x[, y := 2000L + yy][] }
 g <- rbindlist(lapply(12:22, \(yy) {

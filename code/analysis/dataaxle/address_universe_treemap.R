@@ -3,7 +3,7 @@
 # to the tax count), DA-only addresses extend it upwards (heights add up to the DA count). Each box is one cause.
 # Counts (millions, loose key = ZIP5 + street name + house number) come from the "Breakdown with evidence levels"
 # tables in text/data_exploration/dataaxle.md (§4.7): addr_2019_full.sql, resid_2019_full.sql, geo_2019_full.sql,
-# taxonly_sfr_2019_full.sql. Run from code/analysis/dataaxle/.
+# taxonly_sfr_2019_full.sql. Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -13,7 +13,8 @@ rm(list = ls())
 library(tidyverse)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/address_universe_treemap"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/address_universe_treemap")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 MATCHED <- 76.5  # in both; DA 92.1m, tax 98.6m

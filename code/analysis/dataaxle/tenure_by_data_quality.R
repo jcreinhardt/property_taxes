@@ -3,7 +3,7 @@
 #   (1) share of span observed: complete, 80-99%, 50-79%, < 50% (single-year families separate)
 #   (2) number of missing years inside the span: 0, 1, ..., 6+
 # Each group's LOR distribution is compared with the same ACS PUMS MV distribution (tenure_all_years_vs_acs.R).
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -13,7 +13,8 @@ rm(list = ls())
 library(tidyverse)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/tenure_all_years_vs_acs"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/tenure_all_years_vs_acs")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 BINS <- c("≤1 yr", "1–2 yrs", "2–4 yrs", "5–9 yrs", "10–19 yrs", "20–29 yrs", "30+ yrs")

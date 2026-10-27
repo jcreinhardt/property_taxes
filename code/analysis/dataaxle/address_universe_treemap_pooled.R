@@ -3,7 +3,7 @@
 # Tax-only addresses extend it to the right (widths add up to the tax count), DA-only addresses extend it upwards
 # (heights add up to the DA count). Each box is one cause; boxes are ordered by size, largest next to the square.
 # Inputs (Bouchet, tm_pooled.sql / tm_pooled_tax.sql): tm_totals.csv, tm_da_classes.csv, tm_tax_classes.csv.
-# Loose key = ZIP5 + street name + house number. 2019-only version: address_universe_treemap.R. Run from code/analysis/dataaxle/.
+# Loose key = ZIP5 + street name + house number. 2019-only version: address_universe_treemap.R. Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -13,7 +13,8 @@ rm(list = ls())
 library(tidyverse)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/address_universe_treemap"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/address_universe_treemap")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 tot <- read_csv(file.path(OUTPUT_DIR, "tm_totals.csv"), show_col_types = FALSE)

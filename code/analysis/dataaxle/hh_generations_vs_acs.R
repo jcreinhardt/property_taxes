@@ -3,7 +3,7 @@
 # child generation = adult >= 18 years younger than the reference, older generation = >= 18 years older. Only households
 # where every listed person has an age. ACS (IPUMS 2011-2023, households, adults 18+): the same age-gap definitions relative
 # to the householder, plus relationship-based versions. Also: adults per primary family vs adults per ACS household.
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -14,7 +14,8 @@ library(tidyverse)
 library(duckdb)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/hh_surnames"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/hh_surnames")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 BANDS <- c("18-34", "35-49", "50-64", "65+")

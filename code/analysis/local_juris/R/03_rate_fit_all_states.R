@@ -3,7 +3,7 @@
 # Cells = fips x tax area code (fips x municipality_name where no tac: MA, RI, MI). Calibrated against states where the slope
 # matched the published rate (NJ, CT, NH, ME). 1% building sample, 2016, residential.
 suppressPackageStartupMessages({library(dplyr); library(duckdb); library(quantreg)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris")
 con <- dbConnect(duckdb())
 d <- dbGetQuery(con, sprintf("SELECT st, fips, coalesce(nullif(trim(tac),''), 'M:' || upper(trim(muni_name)), '_') cell, bill16 bill, av16 av, hs16
   FROM '%s/data/salt_cap/panel/parcels.parquet' WHERE bill16 > 0 AND av16 > 0", ROOT))

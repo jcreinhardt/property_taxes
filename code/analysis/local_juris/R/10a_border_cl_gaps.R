@@ -2,7 +2,7 @@
 # Unit per state-year (fraction, percent or mills) = the one closer to the median bill/AV; state-years > 5x off bill/AV are unusable.
 # Coverage, state-pair x year side means, |A - B|, boxplot across pairs by year.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; IN <- file.path(ROOT, "data/local_juris/border1")
+source("code/R/paths.R"); IN <- file.path(ROOT, "data/local_juris/border1")
 OUT <- file.path(ROOT, "output/analysis/local_juris"); dir.create(file.path(OUT, "figures"), showWarnings = FALSE)
 con <- dbConnect(duckdb()); b <- as.data.table(dbGetQuery(con, sprintf("SELECT * FROM '%s/border_panel_1pct.parquet'", IN))); dbDisconnect(con, shutdown = TRUE)
 u <- b[rate_pct > 0 & bill > 0 & av > 0, .(m_rate = median(rate_pct), m_ba = median(bill / av), n_cl = .N), by = .(st, y)]

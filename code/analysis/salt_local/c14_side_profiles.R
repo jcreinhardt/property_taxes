@@ -3,7 +3,7 @@
 # level gap between sides stays visible). Bin means are regression coefficients from Y ~ i(bin) | pair (SE by county),
 # re-centred so the tract-weighted mean is 0; lines = separate linear fits per side within 0-100 mi.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); BW <- 5; MX <- 100
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); BW <- 5; MX <- 100
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 f <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[y == 2016 & enr > 0, .(leaid, lspend = log(spend / enr))]
 d <- merge(d, f, by = "leaid", all.x = TRUE)

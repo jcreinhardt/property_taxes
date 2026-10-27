@@ -3,7 +3,7 @@
 # Per street: DA missing in CL = DA-only / DA addresses; CL missing in DA = tax-only / tax addresses.
 # If non-matches are mostly the same properties recorded under different numbers, a street with DA-only
 # addresses should also have tax-only addresses, in similar numbers.
-# Input: streets_2019.parquet (one row per street) from the cluster. Run from code/analysis/dataaxle/.
+# Input: streets_2019.parquet (one row per street) from the cluster. Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -15,7 +15,8 @@ library(duckdb)
 library(patchwork)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/streets_2019_missing_shares"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/streets_2019_missing_shares")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 con <- dbConnect(duckdb())

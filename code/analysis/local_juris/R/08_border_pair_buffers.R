@@ -1,7 +1,7 @@
 # 20-mile buffers around each shared state border (lower 48 + DC), one polygon per (state, neighbour) side:
 # the part of state A within 20 mi of its border with B. Output GeoJSON (EPSG:4326) for DuckDB spatial on the cluster.
 suppressPackageStartupMessages({library(sf); library(dplyr)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; TIG <- path.expand("~/Library/Caches/tigris"); MI <- 1609.344
+source("code/R/paths.R"); TIG <- path.expand("~/Library/Caches/tigris"); MI <- 1609.344
 st <- st_read(file.path(TIG, "cb_2020_us_state_500k.shp"), quiet = TRUE) |>
   filter(!STUSPS %in% c("AK", "HI", "PR", "VI", "GU", "MP", "AS")) |> st_transform(5070) |> st_make_valid() |> select(STUSPS, STATEFP)
 adj <- st_is_within_distance(st, st, 200)

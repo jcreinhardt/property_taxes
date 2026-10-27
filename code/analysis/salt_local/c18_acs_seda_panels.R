@@ -7,7 +7,7 @@
 # (2) SEDA 4.1 yearly district panel 2009-2019 (seda_geodist_long_cs_4.1.csv, cohort scale, subgroup all): mean achievement
 #     averaged over grades 3-8 and subjects per district-year (precision-weighted); SES and FRL from seda_cov_geodist_long_4.1.
 suppressPackageStartupMessages({library(data.table)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; X <- file.path(ROOT, "data/external")
+source("code/R/paths.R"); X <- file.path(ROOT, "data/external")
 t10 <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))$tract)
 rel <- fread(file.path(X, "tract_rel/tab20_tract20_tract10_natl.txt"), sep = "|", colClasses = "character", encoding = "UTF-8")
 setnames(rel, 1, "OID_TRACT_20")

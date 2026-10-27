@@ -6,7 +6,7 @@
 #   pre-direction + street name + suffix + post-direction. Unit = upper(trim(unit_num)), blank = NULL.
 # Records without a usable street address (PO box, rural route, missing house number) count as one household each.
 # Inputs: Data Axle counts from Bouchet batch job (hh_strat_full.sql, full data); ACS B11001_001E from api.census.gov.
-# Run from code/analysis/dataaxle/.
+# Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -16,7 +16,8 @@ rm(list = ls())
 library(tidyverse)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/household_strategies"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/household_strategies")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 acs <- read_csv(file.path(OUTPUT_DIR, "acs_households_2006_2013.csv"), show_col_types = FALSE)

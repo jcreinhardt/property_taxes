@@ -1,7 +1,7 @@
 # Figure: directional border IV (R/26), pooled near (< 10 mi) x high-side coefficients in SD units of each outcome, T = 30 min:
 # first stage (cheaper cross-border option, tax gap), school access, and own-tract balance.
 suppressPackageStartupMessages({library(data.table); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"
+source("code/R/paths.R")
 r <- fread(file.path(ROOT, "output/analysis/local_juris/iv_high_side.csv"))[term == "near" & T == 30]
 lab <- c(x_cheap = "cheaper (>= 0.5 pp) tract across state line within 30 min", tax_gap = "own rate - p10 of reachable tracts",
          sh_x = "share of reachable tracts across state line", sch_gap = "p90 reachable achievement - own", x_better_sch = "better (>= 0.25 SD) district across line",

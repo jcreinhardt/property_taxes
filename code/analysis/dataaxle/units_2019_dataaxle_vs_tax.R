@@ -1,7 +1,7 @@
 # Unit-number histogram, 2019: Data Axle family records vs CoreLogic tax parcel records.
 # Top 10 unit values per source, all other non-null values pooled, NULL/blank as its own category.
 # Unit = upper(trim(unit_num)) (Data Axle, record_year 2019) / upper(trim(situs_unit_number)) (tax, tax_year 2019).
-# Input: full-data counts from Bouchet batch job (units_2019_full.sql). Run from code/analysis/dataaxle/.
+# Input: full-data counts from Bouchet batch job (units_2019_full.sql). Run from the repo root.
 
 # Clean up workspace
 gc()
@@ -11,7 +11,8 @@ rm(list = ls())
 library(tidyverse)
 
 # Per-script output folder
-OUTPUT_DIR <- "../../../output/analysis/dataaxle/units_2019_dataaxle_vs_tax"
+source("code/R/paths.R")
+OUTPUT_DIR <- file.path(ROOT, "output/analysis/dataaxle/units_2019_dataaxle_vs_tax")
 if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
 
 SRC <- c(dataaxle_family_records = "Data Axle 2019 (family records)", tax_parcel_records = "CoreLogic tax 2019 (parcel records)")

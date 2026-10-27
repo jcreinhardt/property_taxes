@@ -2,7 +2,7 @@
 # within 50 mi of the border by side and near/far. Spending per pupil: F-33 FY2016 current spending / enrolment of the
 # tract's assigned district (leaid = unified, else elementary, at the tract's mean sales location).
 suppressPackageStartupMessages({library(data.table)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 f <- readRDS(file.path(ROOT, "data/local_juris/district_finance.rds"))[y == 2016 & enr > 0, .(leaid, spend_pp = spend / enr, ptax_pp = ptax / enr, enr)]
 d <- merge(d, f, by = "leaid", all.x = TRUE)

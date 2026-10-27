@@ -3,7 +3,7 @@
 # exposure x year, outside-option share x year and exposure x share x year; county + state x year FE, SE by county.
 # Prediction if mobility across the border constrains exposed jurisdictions: the triple interaction is negative after 2017.
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(fixest)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 iv <- unique(readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[, .(tract, cty, near, high, pop)])
 all_t <- as.data.table(arrow_free <- NULL)
 con <- dbConnect(duckdb()); tt <- as.data.table(dbGetQuery(con, sprintf("SELECT tract, cty, pop FROM '%s/data/local_juris/iv_tract.parquet'", ROOT))); dbDisconnect(con, shutdown = TRUE)
@@ -12,7 +12,7 @@ cs <- tt[, .(nh_share = sum(pop * nh, na.rm = TRUE) / sum(pop, na.rm = TRUE)), b
 ex <- fread(file.path(ROOT, "data/local_juris/salt_exposure_county2016.csv"))
 cs <- merge(cs, ex[, .(county, ex_z, returns)], by = "county")
 cs[, nh_any := as.integer(nh_share > .25)]
-con <- dbConnect(duckdb(), file.path(ROOT, "data/census_finances_test.db"), read_only = TRUE)
+con <- db_open("census_finances_test.db")
 qf <- function(tb) as.data.table(dbGetQuery(con, sprintf("SELECT county_fips::INT county, state_fips st, year::INT y, property_tax_rev ptax FROM %s", tb)))
 fin <- list(school = qf("govt_finances_sd_by_county"), county_govt = qf("govt_finances_county")); dbDisconnect(con, shutdown = TRUE)
 fin$county_govt <- fin$county_govt[, if (uniqueN(y) == 11) .SD, by = county]

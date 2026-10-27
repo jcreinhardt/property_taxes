@@ -1,5 +1,5 @@
 # s6_taxprice.R — Strategy 6: simulated change in the after-tax price of property tax (TAXSIM 35 via usincometaxes). Pre-specified 2026-10-16.
-source("code/analysis/salt_cap/R/00_setup.R"); source("code/analysis/salt_cap/R/01b_load.R")
+source("code/archive/2026-10-household-salt-cap/R/00_setup.R"); source("code/archive/2026-10-household-salt-cap/R/01b_load.R")
 library(usincometaxes)
 P <- dq(sprintf("SELECT clip, st, zip5, agi_imp, agi_bin, bill16, mortint16, married, coowner, base_oo FROM read_parquet('%s') WHERE base_oo AND agi_imp IS NOT NULL", pq("analysis_parcels")))
 P <- P[!st %in% c("GU", "VI", "PR")]

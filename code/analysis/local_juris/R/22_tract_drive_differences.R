@@ -6,7 +6,7 @@
 # N(0, SE), SE = 1.2533 (IQR / 1.349) / sqrt(n).
 suppressPackageStartupMessages({library(data.table); library(duckdb); library(sf); library(tigris); library(ggplot2); library(patchwork)})
 options(tigris_use_cache = TRUE)
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris/tract")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/local_juris"); D <- file.path(ROOT, "data/local_juris/tract")
 MIN <- as.integer(Sys.getenv("TRACT_MIN", "30")); NOISE <- Sys.getenv("TRACT_NOISE", "0") == "1"; TS <- c(15, 30, 60)
 SFX <- paste0("_min", MIN, if (NOISE) "_noise" else "")
 con <- dbConnect(duckdb())

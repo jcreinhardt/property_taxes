@@ -5,7 +5,7 @@
 # instrument: (a) directional near x high (pair x side + pair x distance-bin FE), (b) high side only and low side only (near vs
 # far, pair FE). Compare with the actual first stage. Step 3: binned plot of predicted and actual vs signed distance.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local")
 d <- readRDS(file.path(ROOT, "data/local_juris/iv_tract_side.rds"))[T == 30]
 d[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)]
 X0 <- c("ach", "ses", "linc", "sh_ba", "sh_white", "sh_own", "yrbuilt", "lpop")

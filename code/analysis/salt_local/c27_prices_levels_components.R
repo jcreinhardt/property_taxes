@@ -12,7 +12,7 @@
 # Models: (1) total; (2) d_prop_own and d_nonprop_own jointly. Unweighted and weighted by 2016 returns (owners at ZIP level).
 # Capitalisation factor = (coef per $1 of annual lost subsidy per owner) x 2017 mean price / 20 (PV at 5%, perpetual).
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
-ROOT <- "/Users/jr2728/PhD/projects/property_taxes"; OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
+source("code/R/paths.R"); OUT <- file.path(ROOT, "output/analysis/salt_local"); L <- file.path(ROOT, "data/local_juris")
 YRS <- 2013:2024
 wins <- \(x) { q <- quantile(x, c(.01, .99), na.rm = TRUE); pmin(pmax(x, q[1]), q[2]) }
 ec <- fread(file.path(L, "exposure_components_county.csv"), colClasses = c(geo = "character"))
