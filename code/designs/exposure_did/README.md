@@ -20,6 +20,7 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `12_revenue_outside_option.R` | county revenue × share of tracts with a cheaper cross-border option |
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
 | `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
+| `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
 `notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-simulated-instrument-outcomes`. Superseded versions

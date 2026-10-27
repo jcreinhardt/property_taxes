@@ -45,6 +45,35 @@ What it means:
 
 ![event studies](c14_simulated_instrument.png)
 
+### Migration counts, in-migration and net migration (`15_simulated_instrument_migration.R`, same day)
+SOI inflow + outflow files 2012–22; counts of returns (n1) and people (exemptions, n2); net = in − out over the base.
+Per $100/yr cap burden per owner household; county specs as above, state specs = counties summed, state + year FE,
+weighted by 2016 returns (population weights), SE by state, 50 states.
+
+| Outcome, Z1 | 2012 | 2016 | 2019 | 2020 | 2021 | 2022 |
+|---|---|---|---|---|---|---|
+| County log out-migrant returns (%, A) | −1.7 (0.3) | −0.3 (0.2) | −0.2 (0.2) | +0.1 (0.2) | +0.1 (0.3) | −0.3 (0.3) |
+| County net migration rate, returns (pp, B) | +0.15 (0.02) | +0.08 (0.02) | +0.08 (0.01) | −0.03 (0.02) | −0.06 (0.02) | +0.03 (0.02) |
+| State out-of-state rate (pp) | −0.04 (0.02) | 0.00 (0.02) | +0.03 (0.02) | **+0.05 (0.01)** | **+0.06 (0.01)** | **+0.05 (0.01)** |
+| State in-from-other-state rate (pp) | +0.06 (0.02) | +0.05 (0.01) | +0.06 (0.01) | +0.03 (0.01) | +0.01 (0.01) | +0.03 (0.02) |
+| State net interstate rate (pp) | +0.09 (0.02) | +0.05 (0.01) | +0.03 (0.02) | −0.03 (0.02) | −0.06 (0.02) | −0.03 (0.02) |
+| State log out-of-state returns (%) | −1.8 (0.5) | −0.4 (0.3) | +0.6 (0.2) | +1.5 (0.3) | +1.9 (0.4) | +1.4 (0.4) |
+
+- **Counties:** counts and net migration add nothing to the rates. Exposed counties were on a steady path of rising
+  out-migration and falling net in-migration from 2012 to 2017 (log out-migrants −1.7% in 2012 → 0; net rate +0.15 pp
+  → 0), and the post-2017 coefficients sit at zero: no break at the cap. People (exemptions) and returns move together.
+  Z2 shows −2% out-migrants in 2020–21 only.
+- **States (population-weighted):** the out-of-state rate of exposed states rises after 2017, +0.05 pp per $100 by
+  2020–22 (mean rate about 2.5%; an SD of state Z1 is roughly $400, so +0.2 pp, 8% of the base), and log out-of-state
+  returns rise +1.5 to +1.9%. But the series is a near-linear trend from 2012 (−1.8%) through 2021 (+1.9%), with the
+  largest step in 2020. In-migration from other states does not change. The state-level result is the same
+  pre-existing drift away from high-SALT states that the Diop & Green reconciliation entry documents, with a COVID
+  acceleration; it is not a break at 2018. The IV and OLS versions agree with Z1 throughout; Z2 agrees at the state level.
+- Check: state out-of-state rate 2021 Z1 +0.064 (0.013); county log out-migrant returns 2012 Z1 (A) −1.7 (0.3) and
+  2021 +0.1 (0.3); balanced counties 2,964.
+
+![migration counts and net migration](c15_simulated_instrument_migration.png)
+
 ## How
 - **Outline:** `build/exposure/06 county + PUMA values -> county exposure (ACS county where identified, else tract-weighted
   mean of its PUMAs) -> y ~ i(year, X/100, ref 2017) | county + state x year, X in {Z1, Z2, SOI}; 2SLS SOI x year on Z1 x year`.
