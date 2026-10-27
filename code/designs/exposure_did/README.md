@@ -18,6 +18,8 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `10_enrolment.R` | pupils per district (also the district border DDD) |
 | `11_parcel_panel_outcomes.R` | parcel-level bills, AV, rates on the 1% panel (also the border DDD) |
 | `12_revenue_outside_option.R` | county revenue × share of tracts with a cheaper cross-border option |
+| `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
 
-Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`. Superseded versions
+Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
+`notebook/2026-10-27-diop-green-reconciliation`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.
