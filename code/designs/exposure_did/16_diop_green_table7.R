@@ -33,7 +33,7 @@ ys <- c(emig = "out-migration (k households)", net = "net out-migration (k)")
 se3 <- function(m) { v <- list(white = "hetero", o = ~o, od = ~o + d)
   r <- lapply(names(v), \(k) as.data.table(coeftable(m, vcov = v[[k]]), keep.rownames = "term")[, .(term, b = Estimate, se = `Std. Error`, vc = k)])
   dcast(rbindlist(r), term + b ~ vc, value.var = "se")[, .(term, b, se_white = white, se_o = o, se_od = od)] }
-t7 <- function(y, x, ref, yrs) { m <- feols(as.formula(sprintf("%s ~ %s + i(y1, %s, ref = %d) | y1 + o", y, x, x, ref)), dy[y1 %in% yrs])
+t7 <- function(y, x, ref, yrs, dat = dy) { m <- feols(as.formula(sprintf("%s ~ %s + i(y1, %s, ref = %d) | y1 + o", y, x, x, ref)), dat[y1 %in% yrs])
   se3(m)[, `:=`(y = y, x = x, ref = ref, sample = paste(range(yrs), collapse = "-"), form = "year x dSALT", year = as.integer(sub(sprintf("y1::(\\d+):%s", x), "\\1", term)))] }
 t6 <- function(y, x, yrs, yfe) { m <- feols(as.formula(sprintf("%s ~ %s + %s post:%s | o %s", y, x, if (yfe) "" else "post +", x, if (yfe) "+ y1" else "")), dy[y1 %in% yrs])
   se3(m)[, `:=`(y = y, x = x, ref = NA_integer_, sample = paste(range(yrs), collapse = "-"), form = if (yfe) "Post x dSALT, year FE" else "Post x dSALT", year = NA_integer_)] }
@@ -77,3 +77,25 @@ g <- ggplot(pl, aes(year, b)) + facet_grid(yl ~ xl, scales = "free_y") +
   scale_x_continuous(breaks = 2011:2021) + labs(x = "year (Diop & Green label = SOI file t/t+1; shaded = beyond their sample)", y = "coefficient on dSALT x year, thousands of households per dyad (ref 2011)",
   title = "Diop & Green Table 7 on SOI files 1112-2122, no controls: 95% CIs White (thin) and clustered by origin state (thick)") + theme_ptax()
 ggsave(file.path(FIG, "c16_diop_green_table7.png"), g, width = 11, height = 7, dpi = 150)
+
+# ---- dyad subsamples: among CA FL NY TX (12 dyads), among the other 46 (2,070), and the 368 mixed pairs ----------------
+big <- c(6L, 12L, 36L, 48L); dy[, grp := fifelse(o %in% big & d %in% big, "among CA FL NY TX", fifelse(!o %in% big & !d %in% big, "among the other 46", "big four <-> other 46"))]
+grps <- c("among CA FL NY TX", "among the other 46", "big four <-> other 46")
+sub <- rbindlist(lapply(grps, \(g) CJ(y = names(ys), x = c("dsalt", "dsalt17"))[, t7(y, x, 2011L, 2011:2021, dy[grp == g]), by = .(y, x)][, -(1:2)][, grp := g]))
+fwrite(sub, file.path(OUT, "c16_diop_green_subsamples.csv"))
+sink(file.path(OUT, "c16_diop_green_subsamples.txt"))
+cat("Same specification (y ~ dSALT + dSALT x year | year + origin FE, ref 2011, 2011-2021, thousands of households per dyad) on dyad subsets.\n")
+cat("dyads per year:"); print(dy[y1 == 2017, .N, by = grp]); cat("SEs: White [clustered by origin; 4 clusters in the first group, so White only there].\n")
+for (g in grps) for (xx in c("dsalt", "dsalt17")) for (yy in names(ys)) { r <- sub[grp == g & x == xx & y == yy]
+  cat(sprintf("\n== %s: %s on %s ==\n  dSALT %s\n", g, ys[yy], xs[xx], fmt(r[is.na(year), b], r[is.na(year), se_white])))
+  r <- r[!is.na(year)]; cat(paste(sprintf("  %d %s%s", r$year, fmt(r$b, r$se_white), if (g == grps[1]) "" else sprintf(" [%5.2f]", r$se_o)), collapse = "\n"), "\n") }
+sink(); cat(readLines(file.path(OUT, "c16_diop_green_subsamples.txt")), sep = "\n")
+ps <- rbind(sub[!is.na(year)], CJ(y = names(ys), x = c("dsalt", "dsalt17"), grp = grps)[, .(term = "", b = 0, se_white = 0, se_o = 0, se_od = 0, y, x, ref = 2011L, sample = "", form = "", year = 2011L, grp)])
+ps[, `:=`(yl = factor(ys[y], ys), xl = factor(xs[x], xs), grp = factor(grp, grps))]
+g2 <- ggplot(ps, aes(year, b, colour = xl)) + facet_wrap(vars(yl, grp), scales = "free_y", nrow = 2) +
+  geom_hline(yintercept = 0, colour = "grey50") + geom_vline(xintercept = 2017.5, linetype = 2, colour = "grey50") +
+  geom_errorbar(aes(ymin = b - 1.96 * se_white, ymax = b + 1.96 * se_white), width = 0.2, position = position_dodge(0.5)) + geom_point(size = 2, position = position_dodge(0.5)) +
+  scale_colour_manual(values = unname(COL_SIDE[1:2]), name = NULL) + scale_x_continuous(breaks = 2011:2021) +
+  labs(x = "year (Diop & Green label = SOI file t/t+1)", y = "coefficient on dSALT x year, thousands of households per dyad (ref 2011), 95% White CI",
+       title = "Diop & Green Table 7, no controls, by dyad subset: CA FL NY TX among themselves, the other 46 among themselves, and the mixed pairs") + theme_ptax() + theme(legend.position = "bottom")
+ggsave(file.path(FIG, "c16_diop_green_subsamples.png"), g2, width = 12, height = 7, dpi = 150)

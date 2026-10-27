@@ -53,6 +53,37 @@ net coefficient is −4.8, so add ≈ 5 to their net column to compare).
 
 ![ΔSALT × year coefficients](c16_diop_green_table7.png)
 
+### By dyad subset: CA FL NY TX among themselves, the other 46 among themselves, the mixed pairs (same day)
+Same specification, ref 2011, 2011–2021, ΔSALT fixed at 2017 (time-varying in the csv); thousands of households per
+dyad per unit ΔSALT, White SE (clustered-by-origin SE in brackets where there are enough clusters).
+
+| Net out-migration | dyads / yr | 2014 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
+|---|---|---|---|---|---|---|---|---|
+| among CA FL NY TX | 12 | 14 (35) | 110 (59) | 67 (46) | 84 (49) | 171 (62) | 270 (84) | 263 (87) |
+| big four ↔ other 46 | 368 | 2.2 (2.7) | 22.8 (5.1) | 14.4 (4.3) | 17.0 (4.3) [5.1] | 31.2 (5.3) [6.7] | 40.4 (5.9) [8.0] | 34.8 (5.5) [7.7] |
+| among the other 46 | 2,070 | 0.28 (0.38) | 1.94 (0.73) | 1.15 (0.53) | 1.49 (0.52) [0.50] | 1.85 (0.62) [0.63] | 2.26 (0.72) [0.85] | 1.94 (0.66) [0.73] |
+| (all 50, from above) | 2,450 | 1.3 | 12.0 | 7.5 | 9.0 | 16.4 | 22.3 | 20.0 |
+
+- **The ΔSALT result is CA/NY versus FL/TX.** Among the other 46 states the net coefficient is a tenth of the
+  full-sample one and does not move after 2017: relative to 2017, 2018 +0.3 (0.7), 2019 +0.7 (0.8), 2020 +1.1 (0.9),
+  2021 +0.8 (0.9); the gross coefficient is zero throughout (0.1 to 1.1, SE 2.5). With the time-varying ΔSALT the
+  other-46 net coefficients double after 2017 (4.9, 6.7, 8.5) exactly as in the full sample, the mechanical halving of
+  the regressor again.
+- The 12 dyads among the big four carry it: net 2019 +171 (62) vs 2017 +67, 2020 +270, with gross out-migration
+  +85 to +135 (SE 90–100). The mixed pairs (each big state with the 46) show the same timing at a fifth of the size:
+  relative to 2017, 2019 +17 (6), 2020 +26 (7), on a pre-trend from +2 (2014) to +23 (2016).
+- Scaled by the flows (2017 mean dyad flow 19.3k among the big four, 4.1k mixed, 0.85k among the other 46; ΔSALT SD
+  0.051, 0.033, 0.019): one SD of ΔSALT raises net out-migration in 2019 relative to 2017 by 27% of the dyad flow among
+  the big four, 13% in the mixed pairs and 1.5% (SE 1.8) among the other 46.
+- So Diop & Green's continuous-ΔSALT regression is their six-state DiD in another form: the identifying variation is
+  the gap between CA/NY and FL/TX, and the post-2017 rise is the acceleration of the CA/NY → FL/TX flow from the 2020
+  moves, which the reconciliation entry already attributes to the pandemic years. For the 46 other states, whose SALT
+  differences span the same range (ΔSALT SD 0.019 vs 0.022 overall), differences in SALT predict net flows weakly and
+  the cap changed nothing.
+- Check: other-46 net fixed-2017 2019 1.85 (0.62); big-four net fixed-2017 2019 170.6 (61.6); mixed net 2019 31.2 (5.3).
+
+![by dyad subset](c16_diop_green_subsamples.png)
+
 ## How
 - **Outline:** `SOI stateoutflow csv -> dyads (build/soi/10) + Historic Table 2 state files -> SALT = A18425 / A00100
   (build/soi/11) -> emig_ijt = n1 / 1000, net = emig_ij - emig_ji, dSALT = SALT_i - SALT_j -> feols(y ~ dSALT +
