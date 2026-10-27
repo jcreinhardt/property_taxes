@@ -1,0 +1,67 @@
+cls,z,s,h,st,occ,absentee,out_of_state,po_box,corp,homestead,dpv,dpv_vacant,yb,no_impr,in_da17,in_da21,one_off,near10,dist_m_nearest_da_p,nearest_da_only
+4_in_da_2017_or_2021,28090,THRASHER,308,NC,A,true,false,false,false,,,,1974,false,false,true,false,false,,false
+1_da_has_it_under_other_number,78834,THOMPSON,514,TX,,true,false,false,false,,N,,,true,false,false,true,false,12.0,false
+4_in_da_2017_or_2021,61485,SOUTH,225,IL,A,true,false,false,false,,Y,false,1896,false,true,true,false,false,26.0,false
+2_no_structure_on_roll,27406,KIMMERIDGE,4330,NC,A,true,false,false,false,,N,,,true,false,false,false,false,59.0,false
+2_no_structure_on_roll,20714,ALABAMA,637,MD,A,true,false,false,false,,N,,,true,false,false,false,false,13.0,false
+5_absentee_or_corporate_owner,04210,LEDGEVIEW,115,ME,A,true,false,false,false,,N,,,false,false,false,false,false,48.0,false
+1_da_has_it_under_other_number,37073,HILLCREST,2035,TN,O,false,false,false,false,,Y,false,1976,false,true,true,true,true,51.0,false
+7_other,29609,ALTAMONT,823,SC,,true,false,true,false,,Y,false,1972,false,false,false,false,false,38.0,false
+7_other,21229,DARTFORD,4732,MD,O,false,false,false,false,,Y,false,1945,false,false,false,false,false,5.0,false
+5_absentee_or_corporate_owner,26559,COOK,703,WV,A,true,true,false,false,,,,1964,false,false,false,false,false,,false
+5_absentee_or_corporate_owner,95228,BAYVIEW,4839,CA,A,true,false,false,false,,Y,false,1975,false,false,false,false,false,22.0,false
+7_other,18210,MOUNTAIN,75,PA,,true,false,true,false,,Y,false,1975,false,false,false,false,false,57.0,false
+4_in_da_2017_or_2021,11590,EVERGREEN,185,NY,A,true,false,false,false,,Y,false,1955,false,true,true,false,false,30.0,false
+3_built_2018_plus,83651,BONELLI,15293,ID,O,false,false,false,false,,Y,false,2019,false,false,true,false,false,,false
+5_absentee_or_corporate_owner,98122,D 16TH,114,WA,A,true,false,false,false,,,,2017,false,false,false,false,false,6.0,false
+1_da_has_it_under_other_number,94607,ALICE,704,CA,A,true,false,false,false,,Y,true,1906,false,false,false,true,false,8.0,false
+1_da_has_it_under_other_number,40402,ALUM CAVE,204,KY,O,false,false,false,false,,Y,false,2016,true,true,true,true,false,,false
+7_other,48026,SHERWOOD,15360,MI,O,false,false,false,false,true,Y,false,1978,false,false,false,false,false,16.0,false
+5_absentee_or_corporate_owner,57276,5TH,308,SD,A,true,false,false,false,,,,1930,false,false,false,false,false,38.0,false
+5_absentee_or_corporate_owner,03741,CANAAN,440,NH,A,true,false,false,false,,N,,,false,false,false,false,false,,false
+5_absentee_or_corporate_owner,59057,BUFFALO JUMP,13255,MT,A,true,false,false,false,,Y,false,,false,false,false,false,false,,false
+5_absentee_or_corporate_owner,22469,WILTON,1738,VA,A,true,false,false,false,,N,,1954,false,false,false,false,false,61.0,false
+4_in_da_2017_or_2021,93630,KENNETH,205,CA,O,false,false,false,false,true,Y,false,,false,true,true,false,false,21.0,false
+4_in_da_2017_or_2021,24251,MIDWAY,3546,VA,O,false,false,false,false,,Y,false,1920,false,false,true,false,false,,false
+5_absentee_or_corporate_owner,76262,SWEETPINE,15525,TX,A,true,false,false,true,,Y,false,2017,false,false,false,false,false,19.0,false
+7_other,92371,CENTER,11898,CA,,false,false,false,false,,,,1952,false,false,false,false,false,45.0,true
+1_da_has_it_under_other_number,28681,GREENHOUSE,135,NC,A,true,false,false,false,,Y,false,1947,false,false,false,true,false,,false
+2_no_structure_on_roll,76377,S,706,TX,,true,false,true,false,,,,,true,false,false,false,false,,false
+5_absentee_or_corporate_owner,32301,MELVIN,1438,FL,A,true,false,false,false,,Y,true,1952,false,false,false,false,false,15.0,false
+5_absentee_or_corporate_owner,98312,MATHEWS,3745,WA,A,true,false,false,false,,Y,true,1927,false,false,false,false,false,63.0,false
+4_in_da_2017_or_2021,63367,NORMANDY,36,MO,A,true,false,false,false,,Y,false,1972,false,true,true,false,false,25.0,false
+4_in_da_2017_or_2021,27306,SCENIC,120,NC,A,true,false,false,false,,Y,false,1971,false,true,false,false,false,26.0,false
+7_other,51023,AVENUE M,1412,IA,O,false,false,false,false,,Y,false,1961,false,false,false,false,false,27.0,false
+2_no_structure_on_roll,21863,FOX HOUND,114,MD,A,true,false,false,true,,,,,true,false,false,false,false,,false
+5_absentee_or_corporate_owner,79843,PLATEAU,400,TX,A,true,false,false,true,,,,1945,false,false,false,false,false,,false
+4_in_da_2017_or_2021,83501,ALDER,1539,ID,O,false,false,false,false,true,Y,false,2017,false,false,true,false,false,19.0,false
+6_usps_vacant_or_not_deliverable,05767,MIDDLE HOLLOW,1050,VT,O,true,false,true,false,true,N,,,false,false,false,false,false,,false
+1_da_has_it_under_other_number,38849,COUNTY ROAD 601,459,MS,A,true,false,false,false,,Y,false,1982,false,false,true,true,true,0.0,false
+1_da_has_it_under_other_number,36695,CROWN POINTE,7066,AL,O,false,false,false,false,true,Y,false,1998,false,true,true,true,true,12.0,false
+7_other,97502,2ND,231,OR,,true,false,true,false,,Y,false,1953,false,false,false,false,false,21.0,false
+4_in_da_2017_or_2021,98584,MIKKELSEN,1000,WA,,true,false,true,false,,Y,false,1993,false,false,true,false,false,,false
+2_no_structure_on_roll,48767,EVELYN,6880,MI,A,true,false,false,false,,N,,,true,false,false,false,false,0.0,false
+4_in_da_2017_or_2021,78223,SOUTHTON,4410,TX,O,false,false,false,false,,Y,false,2011,false,false,true,false,false,,false
+4_in_da_2017_or_2021,34951,JOHNSTON,5605,FL,O,true,true,false,false,,Y,false,2004,false,true,true,false,false,,false
+2_no_structure_on_roll,30094,JOHNSON,1475,GA,A,true,false,false,false,,Y,true,,true,true,false,false,false,49.0,false
+1_da_has_it_under_other_number,27892,SIMMONS,204,NC,A,true,false,false,true,,D,false,1920,false,false,false,true,true,27.0,false
+2_no_structure_on_roll,49031,BROWNSVILLE,21480,MI,O,false,false,false,false,true,Y,false,,true,true,true,false,false,,false
+4_in_da_2017_or_2021,37876,JAMES,2016,TN,O,false,false,false,false,,Y,false,2004,false,true,true,false,false,63.0,false
+4_in_da_2017_or_2021,29920,BB SAMS,422,SC,A,true,true,false,false,,Y,false,1990,false,false,true,false,false,17.0,false
+5_absentee_or_corporate_owner,89120,RUSSELL,2625,NV,A,true,true,false,true,,Y,false,1977,false,false,false,false,false,56.0,false
+2_no_structure_on_roll,05446,RAIL,181,VT,A,true,false,false,false,,N,,1965,true,false,false,false,false,,false
+4_in_da_2017_or_2021,33914,28TH,927,FL,A,true,true,false,false,,Y,false,2008,false,false,true,false,false,24.0,false
+4_in_da_2017_or_2021,95223,CIRCLE,2900,CA,,true,false,true,false,,N,,1979,false,true,false,false,false,,false
+5_absentee_or_corporate_owner,24439,LITTLE CALF PASTURE,5647,VA,A,true,false,false,false,,Y,false,1926,false,false,false,false,false,45.0,false
+4_in_da_2017_or_2021,78028,LOWRY,418,TX,A,true,false,false,false,,Y,false,1951,false,false,true,false,false,29.0,false
+4_in_da_2017_or_2021,08854,MURRAY,78,NJ,O,false,false,false,false,,Y,false,1950,false,true,true,false,false,24.0,false
+4_in_da_2017_or_2021,04572,CASTNER,750,ME,O,false,false,false,false,,Y,false,,false,true,false,false,false,,false
+2_no_structure_on_roll,47715,TEALWOOD,7549,IN,A,true,true,true,true,,Y,false,,true,false,false,false,false,,false
+5_absentee_or_corporate_owner,97412,HIGHWAY 36,19464,OR,A,true,false,false,true,,N,,2007,false,false,false,false,false,,false
+3_built_2018_plus,28104,CANTRELL,1904,NC,O,false,false,false,false,,Y,false,2018,false,false,true,false,false,45.0,false
+2_no_structure_on_roll,29461,MACIO,214,SC,A,true,false,false,false,,Y,false,,true,false,true,false,false,62.0,false
+2_no_structure_on_roll,38572,CHIEF RED CLOUD,8132,TN,A,true,false,false,false,,N,,,true,false,false,false,false,,false
+4_in_da_2017_or_2021,18847,WASHINGTON,19,PA,O,true,false,false,false,true,Y,false,,false,true,false,false,false,36.0,false
+7_other,29440,JOHN WAITES,117,SC,O,false,false,false,false,,Y,false,1985,false,false,false,false,false,34.0,false
+7_other,56644,520TH,17068,MN,O,false,false,false,false,true,Y,false,,false,false,false,false,false,,false
+2_no_structure_on_roll,76541,ADAMS,907,TX,,true,false,true,true,,Y,false,,true,false,false,false,false,30.0,false

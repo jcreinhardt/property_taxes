@@ -1,0 +1,210 @@
+cls,z,h,s,n_fam,dist_m,nearest_parcel_street,nearest_parcel_number,nearest_units,npic,parcel_addr_in_da
+6_street_in_tax_number_missing,38251,94,STOKES,1,16.0,STOKES,100,0,10,false
+6_street_in_tax_number_missing,07032,38,GROVE,2,13.0,GROVE,40,0,10,true
+6_street_in_tax_number_missing,34219,9715,28TH,2,46.0,28TH,9711,0,10,true
+6_street_in_tax_number_missing,02915,79,TURNER,1,22.0,TURNER,83,1,10,true
+6_street_in_tax_number_missing,55414,2818,COMO,1,67.0,COMO,2911,0,50,false
+6_street_in_tax_number_missing,60134,39W084,WEAVER,1,0.0,WEAVER,39,0,10,false
+6_street_in_tax_number_missing,49009,6639,MILL CREEK,2,66.0,MILL CREEK,3080,0,20,true
+6_street_in_tax_number_missing,54555,W7478,COUNTY,2,1.0,COUNTY,,0,10,false
+6_street_in_tax_number_missing,04101,235B,CUMBERLAND,3,11.0,CUMBERLAND,235,8,11,false
+6_street_in_tax_number_missing,36310,5821,COUNTY ROAD 57,2,106.0,COUNTY ROAD 57,,0,70,false
+6_street_in_tax_number_missing,44011,39454,MIRAMAR,1,29.0,MIRAMAR,39363,0,10,true
+6_street_in_tax_number_missing,36535,19120,COUNTY ROAD 20,1,103.0,SENTINEL,917,0,10,true
+6_street_in_tax_number_missing,45648,494,COLDICOTT HILL,3,0.0,COLDICOTT HILL,,0,80,false
+6_street_in_tax_number_missing,61614,1606,TIFFANY,1,27.0,TIFFANY,1608,0,21,true
+6_street_in_tax_number_missing,95961,4194A,MARY,2,4.0,MARY,4194,0,10,true
+6_street_in_tax_number_missing,30080,125,CUMBERLAND GLEN,2,39.0,COBB,2340,505,28,false
+6_street_in_tax_number_missing,84075,1571,2000,1,58.0,2000,1609,0,22,false
+6_street_in_tax_number_missing,79316,2228,FM 213,1,0.0,FM 213,,0,80,false
+6_street_in_tax_number_missing,37919,300,JADE,1,0.0,SUTHERLAND,3523,0,20,false
+6_street_in_tax_number_missing,47714,1358,RIDGEWAY,1,38.0,LODGE,1717,0,22,false
+6_street_in_tax_number_missing,41653,245B,HAYWOOD,1,0.0,HAYWOOD,245,0,10,true
+6_street_in_tax_number_missing,45385,1755,DEER CREEK,17,68.0,PROGRESS,,0,80,false
+6_street_in_tax_number_missing,05401,115,CENTENNIAL,1,30.0,CENTENNIAL,12,0,22,false
+6_street_in_tax_number_missing,34287,7019,PARK,2,23.0,PARK,7011,1,10,true
+6_street_in_tax_number_missing,93003,642,KIRK,1,25.0,KIRK,678,35,22,true
+6_street_in_tax_number_missing,30012,3630,HIGHWAY 20,1,1.0,HIGHWAY 20,3658,0,10,true
+6_street_in_tax_number_missing,37130,123,CITY VIEW,2,76.0,MAIN,2115,1,26,true
+6_street_in_tax_number_missing,29646,623,GREENE,2,30.0,ARNOLD,104,0,20,false
+6_street_in_tax_number_missing,15216,2965,BELROSE,1,1.0,BELROSE,2967,0,21,true
+6_street_in_tax_number_missing,23150,1928,BETNER,1,69.0,BETNER,1950,0,22,false
+6_street_in_tax_number_missing,32164,4A,PONDEROSA,2,1.0,PONDEROSA,4,1,21,true
+6_street_in_tax_number_missing,32703,2425,OVERLAND,1,20.0,OVERLAND,2417,0,22,false
+6_street_in_tax_number_missing,54115,N5130,COUNTY,2,1.0,COUNTY,,0,10,false
+6_street_in_tax_number_missing,08701,1050B,SHETLAND,1,0.0,SHETLAND,1050,0,11,false
+6_street_in_tax_number_missing,26601,356,INDUSTRIAL,1,28.0,INDUSTRIAL,,0,80,false
+6_street_in_tax_number_missing,60085,524,LYNN,1,21.0,LYNN,516,0,10,true
+6_street_in_tax_number_missing,28205,1420,EASTCREST,5,9.0,EASTCREST,1506,120,22,true
+6_street_in_tax_number_missing,30575,3082,OLD STATE,1,10.0,OLD STATE,3313,0,10,true
+6_street_in_tax_number_missing,90304,11047,GREVILLEA,2,1.0,GREVILLEA,11033,1,10,true
+6_street_in_tax_number_missing,32839,1749,GRANDE POINTE,11,99.0,HOLDEN,1464,52,11,true
+6_street_in_tax_number_missing,46808,2134,OAKLAND,1,18.0,OAKLAND,2110,0,22,true
+6_street_in_tax_number_missing,32796,1010,DAWN,1,31.0,DAWN,1020,1,10,true
+6_street_in_tax_number_missing,21401,13,BATES,2,25.0,CLAY,110,0,22,true
+6_street_in_tax_number_missing,91941,4652,4TH,1,19.0,4TH,4654,2,22,true
+6_street_in_tax_number_missing,07102,257,DR MARTIN LUTHER KING JR,1,28.0,DR MARTIN LUTHER KING JR,259,0,22,true
+6_street_in_tax_number_missing,42129,2905,SULPHUR WELL CENTER,1,36.0,SULPHUR WELL CENTER,3511,0,10,true
+6_street_in_tax_number_missing,61244,622,23RD,1,46.0,23RD,701,0,10,true
+6_street_in_tax_number_missing,64029,113B,BROADWAY,1,1.0,BROADWAY,113,0,21,true
+6_street_in_tax_number_missing,39218,293,BLAINE,1,25.0,BLAINE,245,0,10,true
+6_street_in_tax_number_missing,61571,958,SCHOOL,1,29.0,KENNEDY,101,0,10,true
+6_street_in_tax_number_missing,40729,2145,HIGHWAY 1376,1,0.0,HIGHWAY 1376,2189,0,10,false
+6_street_in_tax_number_missing,17111,1115,SUMMERWOOD,1,47.0,TWILIGHT,5589,0,10,true
+6_street_in_tax_number_missing,28203,704,BROOKHILL,2,1.0,BROOKHILL,600,61,22,true
+6_street_in_tax_number_missing,96782,98-559,HOOHULILI,1,2.0,HOOHULILI,98,0,10,false
+6_street_in_tax_number_missing,76627,503,8TH,1,62.0,AVENUE F & E 8TH,,0,90,false
+6_street_in_tax_number_missing,08302,20,MAPLE,1,68.0,SPRUCE,,0,80,false
+6_street_in_tax_number_missing,44111,10807,ALMIRA,2,0.0,ALMIRA,10805,0,21,true
+6_street_in_tax_number_missing,48642,623,HEMLOCK,1,0.0,HEMLOCK,621,0,10,true
+6_street_in_tax_number_missing,54451,N2899,COUNTY ROAD Q,1,1.0,COUNTY ROAD Q,,0,10,false
+6_street_in_tax_number_missing,33322,1436,81ST,1,60.0,14TH,8101,0,22,true
+6_street_in_tax_number_missing,54469,441,6TH,1,26.0,MARKET,610,0,10,true
+6_street_in_tax_number_missing,01821,40,BELLFLOWER,2,5.0,BELLFLOWER,38,1,10,false
+6_street_in_tax_number_missing,78654,1532,KINGSVIEW,2,0.0,KINGSVIEW,,0,10,false
+6_street_in_tax_number_missing,90720,3754,HOWARD,1,30.0,HOWARD,3750,0,22,true
+6_street_in_tax_number_missing,30442,4900,LEWIS CHURCH,1,54.0,LANE,,0,80,false
+6_street_in_tax_number_missing,23234,3902,CHIPPENDALE,1,49.0,LAMPLIGHTER,3900,0,10,true
+6_street_in_tax_number_missing,46304,319,BOO,6,85.0,BOO,,0,80,false
+6_street_in_tax_number_missing,49456,17393,MONTREAL,2,76.0,STATE,14700,0,20,false
+6_street_in_tax_number_missing,70601,1001,LAKE SHORE,1,47.0,LAKE SHORE,1011,0,20,true
+6_street_in_tax_number_missing,35022,1542,AARON,2,26.0,AARON,1518,0,10,false
+6_street_in_tax_number_missing,75972,6521,COUNTY ROAD 3250,1,41.0,3250,,0,10,false
+6_street_in_tax_number_missing,46761,561,MAPLE,2,84.0,DETROIT STATE RD 9,,0,20,false
+6_street_in_tax_number_missing,38562,441,MARTIN RIDGE,1,36.0,MARTIN RIDGE,453,0,10,true
+6_street_in_tax_number_missing,75150,2532,INDEPENDENCE,2,18.0,INDEPENDENCE,2600,0,10,false
+6_street_in_tax_number_missing,94805,625,KEY,3,19.0,KEY,633,0,21,true
+6_street_in_tax_number_missing,33467,113,SPRINGDALE,1,0.0,SPRINGDALE,111,0,22,true
+6_street_in_tax_number_missing,84780,1010,QUAIL RIDGE,2,1.0,1400 W 35,1075,1,10,false
+6_street_in_tax_number_missing,61350,536,FORT,1,0.0,FORT,528,0,10,true
+6_street_in_tax_number_missing,28777,50,MOUNTAIN VIEW,1,0.0,MOUNTAIN VIEW,14,0,10,true
+6_street_in_tax_number_missing,98367,7555,CLOVER VALLEY,1,1.0,CLOVER VALLEY,7381,0,10,true
+6_street_in_tax_number_missing,29115,104,TRADEWINDS,1,40.0,BIG BUCK,108,0,10,false
+6_street_in_tax_number_missing,93030,478,BONITA,4,1.0,BONITA,474,0,21,true
+6_street_in_tax_number_missing,23454,1800,MABLE,1,32.0,MABLE,1808,0,10,true
+6_street_in_tax_number_missing,85212,46991,MOEUR,1,61.0,WILLIAMS FIELD,1601,0,10,true
+6_street_in_tax_number_missing,08210,327,COURT HOUSE SOUTH DENNIS,1,1.0,CH SO DENNIS,327,0,10,false
+6_street_in_tax_number_missing,73127,6848,16TH,8,75.0,GLEASON,1701,4,10,false
+6_street_in_tax_number_missing,55790,6196,HIGHWAY 169,1,53.0,WAHLSTEN,6703,0,90,false
+6_street_in_tax_number_missing,49009,6065,FAIRGROVE,1,4.0,FAIRGROVE,6043,0,10,true
+6_street_in_tax_number_missing,53964,N8484,5TH,1,1.0,5TH,,0,70,false
+6_street_in_tax_number_missing,31558,310,RYAN,1,46.0,RYAN,306,0,20,false
+6_street_in_tax_number_missing,93036,642,COLLINS,1,46.0,COLLINS,644,0,21,true
+6_street_in_tax_number_missing,53066,W350S2155,WATERVILLE,2,7.0,WATERVILLE,,0,10,false
+6_street_in_tax_number_missing,91733,2032,PARKWAY,1,21.0,PARKWAY,2020,1,10,true
+6_street_in_tax_number_missing,30044,702,CLUB LAKES,3,52.0,CLUB LAKES,3400,0,22,true
+6_street_in_tax_number_missing,62234,113,SKYLINE VIEW,3,33.0,SKYLINE VIEW,165,0,21,true
+6_street_in_tax_number_missing,25311,302,PINNACLE WOODS,1,58.0,PINNACLE,29,0,10,true
+6_street_in_tax_number_missing,28634,3024,SANDY SPRINGS,1,1.0,SANDY SPRINGS,,0,10,false
+6_street_in_tax_number_missing,32707,1795,GRAND RUE,1,7.0,GRAND RUE,1793,0,10,true
+6_street_in_tax_number_missing,08093,1416,CHESTNUT,2,76.0,DELSEA,1030,0,50,false
+6_street_in_tax_number_missing,21229,1066,MAIDEN CHOICE,1,14.0,MAIDEN CHOICE,1050,0,25,false
+6_street_in_tax_number_missing,80237,4651,MONACO,9,53.0,MONACO,4545,0,10,true
+6_street_in_tax_number_missing,35748,194,ACUFF,3,30.0,ACUFF,,0,,false
+6_street_in_tax_number_missing,26035,864,HARMON CREEK,1,25.0,HARMON CREEK,408,1,10,false
+6_street_in_tax_number_missing,19083,1335,MARYLAND,1,0.0,MARYLAND,1331,1,10,true
+6_street_in_tax_number_missing,45216,130,66TH,1,1.0,SIXTY-SIXTH,130,0,10,false
+6_street_in_tax_number_missing,84010,1080,250,1,17.0,DAVIS,229,0,10,false
+6_street_in_tax_number_missing,49838,W16893,CORINNE,1,24.0,CORINNE,,0,10,false
+6_street_in_tax_number_missing,37377,100,JAMES,26,65.0,JAMES,198,0,20,true
+6_street_in_tax_number_missing,97304,3019,GEHLAR,11,27.0,VAN BUREN,779,0,10,true
+6_street_in_tax_number_missing,60636,1740,66TH,1,1.0,HERMITAGE,6558,0,22,true
+6_street_in_tax_number_missing,83704,3400,DALTON,1,36.0,DALTON,3275,0,20,false
+6_street_in_tax_number_missing,24012,3386,GLADE CREEK,11,92.0,KING,3402,0,10,true
+6_street_in_tax_number_missing,68127,9947,S,21,0.0,88TH,5222,0,20,true
+6_street_in_tax_number_missing,53213,2275,63RD,2,1.0,63RD,2277,0,21,true
+6_street_in_tax_number_missing,30121,109,SHEFFIELD,1,101.0,SHEFFIELD,11,0,22,true
+6_street_in_tax_number_missing,25071,1022,CEMETERY HILL,1,0.0,PINCH,,0,10,false
+6_street_in_tax_number_missing,96706,91-1115,HANAKAHI,1,2.0,HANAKAHI,91,0,10,false
+6_street_in_tax_number_missing,15342,245,PARKER,1,18.0,PARKER,257,0,22,true
+6_street_in_tax_number_missing,02368,326,HIGHLAND,1,60.0,CHAPIN,3,1,10,true
+6_street_in_tax_number_missing,21014,24,KELLY,1,24.0,KELLY,22,0,10,true
+6_street_in_tax_number_missing,74137,1905,81ST,7,40.0,74TH,1954,0,10,false
+6_street_in_tax_number_missing,97304,790,HILLCREST,1,1.0,HILLCREST,1695,0,21,true
+6_street_in_tax_number_missing,32792,1011,VILLAGE,4,86.0,ALOMA,2400,0,25,false
+6_street_in_tax_number_missing,36116,328,EAGERTON,1,24.0,EAGERTON,324,0,10,true
+6_street_in_tax_number_missing,06902,155,SYLVAN KNOLL,1,0.0,SYLVAN KNOLL,171,5,22,true
+6_street_in_tax_number_missing,17331,835,ALVIN,1,20.0,ALVIN,801,0,22,false
+6_street_in_tax_number_missing,78063,221,BEDROCK,1,54.0,BEDROCK,236,0,10,true
+6_street_in_tax_number_missing,17112,5917A,LINGLESTOWN,1,0.0,LINGLESTOWN,5917,0,22,true
+6_street_in_tax_number_missing,98229,2188,YEW,1,19.0,YEW,2204,0,10,false
+6_street_in_tax_number_missing,02642,595,STATE,2,68.0,STATE,580,0,21,false
+6_street_in_tax_number_missing,35581,3419,BROAD,1,36.0,U S HWY 5 & 13,,0,21,false
+6_street_in_tax_number_missing,23225,6706,CARNATION,13,45.0,VADEN,518,0,10,true
+6_street_in_tax_number_missing,93723,2254,BRYAN,3,36.0,BRYAN,2250,0,10,true
+6_street_in_tax_number_missing,34711,913,SUMMIT GREENS,1,17.0,SUMMIT GREENS,909,0,10,true
+6_street_in_tax_number_missing,02916,136,CAMPBELL,1,55.0,CAMPBELL,124,1,10,true
+6_street_in_tax_number_missing,44646,1840,1ST,7,29.0,ERIE,1838,0,22,false
+6_street_in_tax_number_missing,39345,465,MIDWAY,1,12.0,MIDWAY,735,0,10,true
+6_street_in_tax_number_missing,78757,905A,PAYNE,1,0.0,PAYNE,905,0,10,true
+6_street_in_tax_number_missing,94587,33456,11TH,1,0.0,11TH,33454,2,21,true
+6_street_in_tax_number_missing,74601,1105,12TH,2,16.0,12TH,1117,0,10,false
+6_street_in_tax_number_missing,32456,166,POLARIS,1,11.0,POLARIS,,0,80,false
+6_street_in_tax_number_missing,60004,2727,ELM,2,33.0,ELM,2733,0,10,true
+6_street_in_tax_number_missing,80919,207,ROCKRIMMON,2,22.0,ROCKRIMMON,205,0,25,true
+6_street_in_tax_number_missing,48439,5420,COUNTRY HEARTH,1,14.0,COUNTRY HEARTH,5428,0,11,true
+6_street_in_tax_number_missing,06053,7,ELTON,1,20.0,ELTON,25,2,21,true
+6_street_in_tax_number_missing,29150,27A,HOSPITAL,1,0.0,HOSPITAL,27,0,10,true
+6_street_in_tax_number_missing,76905,8522,AMES,1,1.0,AMES,8510,0,70,true
+6_street_in_tax_number_missing,60190,28W650,ROOSEVELT,3,37.0,ROOSEVELT,28,0,20,false
+6_street_in_tax_number_missing,27526,242,FELMET,3,22.0,FELMET,200,24,22,false
+6_street_in_tax_number_missing,28215,3245,SHAMROCK,11,1.0,SHAMROCK,3233,176,22,true
+6_street_in_tax_number_missing,31024,182,DENNIS STATION,1,71.0,DENNIS STATION,,0,80,false
+6_street_in_tax_number_missing,44074,227,GROVELAND,1,49.0,GROVELAND,197,0,90,true
+6_street_in_tax_number_missing,29720,1192,JOHN EVERALL,1,24.0,HWY 347,,0,10,false
+6_street_in_tax_number_missing,01420,136,CULLEY,3,27.0,PACIFIC,67,1,10,true
+6_street_in_tax_number_missing,92395,7434,SVL BOX,1,47.0,MAKAI,13270,0,80,false
+6_street_in_tax_number_missing,96096,10692,BLUE MOUNTAIN RANCH,3,12.0,BLUE MOUNTAIN RANCH,10801,0,10,true
+6_street_in_tax_number_missing,70119,1351,MOSS,1,17.0,MOSS,1349,0,21,true
+6_street_in_tax_number_missing,97701,2077,HOLLIDAY,1,13.0,YORK,2071,0,22,false
+6_street_in_tax_number_missing,40210,1931,OLIVE,1,12.0,OLIVE,1929,0,80,false
+6_street_in_tax_number_missing,93004,68,BLACKBURN,1,10.0,BLACKBURN,10685,0,10,true
+6_street_in_tax_number_missing,98837,8913,CRAW,1,23.0,CRAW,8929,0,22,true
+6_street_in_tax_number_missing,33547,18411,COUNTY ROAD 672,2,1.0,672ND,18411,0,10,false
+6_street_in_tax_number_missing,47421,197,LIBERTY BELL,1,49.0,TRESLAR,138,0,10,true
+6_street_in_tax_number_missing,89131,6117,SABINE RANCH,2,0.0,GRAND CENTRAL,500,0,10,false
+6_street_in_tax_number_missing,38965,1502B,ECKFORD,2,24.0,ECKFORD,1404,0,10,true
+6_street_in_tax_number_missing,45101,135,ELM,2,78.0,CHESTNUT,123,0,20,false
+6_street_in_tax_number_missing,35211,735,COTTON,1,66.0,MCMILLON,736,0,10,true
+6_street_in_tax_number_missing,64834,10333,COUNTY ROAD 270,1,0.0,COUNTY ROAD 270,10475,0,10,true
+6_street_in_tax_number_missing,35206,6812,DIVISION,1,19.0,DIVISION,6818,0,10,true
+6_street_in_tax_number_missing,60637,6223,DORCHESTER,5,1.0,DORCHESTER,6217,0,22,true
+6_street_in_tax_number_missing,60184,30W571,ARMY TRAIL,1,2.0,ARMY TRAIL,30,0,10,false
+6_street_in_tax_number_missing,37601,591,LAURELS,1,1.0,LAURELS,589,0,70,true
+6_street_in_tax_number_missing,45133,4180,SHARPSVILLE,1,0.0,SHARPSVILLE,4170,0,70,true
+6_street_in_tax_number_missing,80921,16475,ROLLER COASTER,1,0.0,HODGEN,2355,0,10,true
+6_street_in_tax_number_missing,71360,7,BILLY EVANS,2,29.0,MALONE,10,0,10,false
+6_street_in_tax_number_missing,35976,762,SNOW POINT,3,51.0,SNOW POINT,722,0,10,true
+6_street_in_tax_number_missing,78589,210,14TH,2,43.0,14TH,204,0,90,true
+6_street_in_tax_number_missing,16509,1509,BIEBEL,3,22.0,BIEBEL,1503,0,22,true
+6_street_in_tax_number_missing,48185,34011,FOUNTAIN,1,35.0,FOUNTAIN,34850,0,20,false
+6_street_in_tax_number_missing,26241,142,RED OAK,1,22.0,OAK,,1,10,false
+6_street_in_tax_number_missing,60659,2724,GRANVILLE,5,17.0,GRANVILLE,2720,0,22,true
+6_street_in_tax_number_missing,70001,4312,YATES,16,40.0,HOUMA,2220,0,10,true
+6_street_in_tax_number_missing,95467,18246,SHORE,1,1.0,NORTH SHORE,18246,0,10,false
+6_street_in_tax_number_missing,01028,136,THOMPKINS,2,30.0,GATES,5,1,10,false
+6_street_in_tax_number_missing,64117,4019,BELLAIRE,1,89.0,41ST,5816,0,22,true
+6_street_in_tax_number_missing,20743,6602,GREIG,7,46.0,GREIG,6601,0,10,true
+6_street_in_tax_number_missing,60073,327,TIMBER CREEK,1,41.0,MAIN,,0,80,false
+6_street_in_tax_number_missing,62207,6313,WHALEN,2,22.0,WHALEN,6311,0,10,true
+6_street_in_tax_number_missing,90621,7084,MELROSE,4,52.0,VAL VERDE,6765,0,10,true
+6_street_in_tax_number_missing,96706,91-805,APOKE,2,2.0,APOKE,91,0,10,false
+6_street_in_tax_number_missing,35904,299,BELMONT,1,46.0,BELMONT,255,0,10,true
+6_street_in_tax_number_missing,48742,1581,BARLOW,1,82.0,F -41,1315,0,10,false
+6_street_in_tax_number_missing,27576,2195,LITTLE DIVINE,4,1.0,LITTLE DIVINE,2210,0,20,true
+6_street_in_tax_number_missing,29588,108,TERRACINA,2,28.0,TERRACINA,101,0,11,true
+6_street_in_tax_number_missing,77363,11756,HOLLYHILL,1,1.0,HOLLYHILL,,0,10,false
+6_street_in_tax_number_missing,80011,14881,5TH,4,27.0,ELKHART,501,454,22,true
+6_street_in_tax_number_missing,60555,30W050,MULBERRY,1,2.0,MULBERRY,30,0,10,false
+6_street_in_tax_number_missing,40003,4716,BAGDAD,1,33.0,BAGDAD,,0,53,false
+6_street_in_tax_number_missing,45069,8545,BUTLER WARREN,1,1.0,BUTLER WARREN COUNTY LINE,8545,0,10,false
+6_street_in_tax_number_missing,19121,2403,COLLEGE,3,18.0,24TH,1202,0,80,false
+6_street_in_tax_number_missing,53207,2319,VOLLMER,4,1.0,VOLLMER,2247,1,10,true
+6_street_in_tax_number_missing,30213,7455,BODNANT,2,20.0,SPOLETO,7326,0,80,false
+6_street_in_tax_number_missing,98499,8714,63RD,1,1.0,TO 8714 63RD,8712,2,11,false
+6_street_in_tax_number_missing,70401,13183,HIGHWAY 190,3,35.0,HIGHWAY 190,12605,0,22,true
+6_street_in_tax_number_missing,34982,907,KING ORANGE,1,13.0,KING ORANGE,905,2,21,true
+6_street_in_tax_number_missing,29621,203,OLIVARRI,1,55.0,OLIVARRI,127,0,10,true
+6_street_in_tax_number_missing,92395,7836,SVL BOX,1,47.0,COUNTRY CLUB,1320,0,27,false
+6_street_in_tax_number_missing,97211,5837,CLEVELAND,2,16.0,CLEVELAND,5907,0,10,false
+6_street_in_tax_number_missing,65065,1548,MOCKINGBIRD,1,28.0,MOCKINGBIRD,1536,0,10,true

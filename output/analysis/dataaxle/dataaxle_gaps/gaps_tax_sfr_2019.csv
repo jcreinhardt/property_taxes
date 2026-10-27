@@ -1,0 +1,8 @@
+pattern,in_2018_and_2020,addresses
+0_never_in_da,,3527580
+1_in_da_2019,false,6195358
+1_in_da_2019,true,62322065
+2_hole_in_2019_present_before_and_after,false,3553089
+2_hole_in_2019_present_before_and_after,true,1269184
+3_only_before_2019,false,3335921
+4_only_after_2019,false,1197986

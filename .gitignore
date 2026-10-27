@@ -1,2 +1,12 @@
 temp/*
 data/*
+# generated / scratch
+.DS_Store
+Rplots.pdf
+*.log
+*.pid
+*.wait
+output/**/parts/
+output/**/bld10pct/
+output/**/*.parquet
+code/data_prep/dataaxle_quarterly/sql/

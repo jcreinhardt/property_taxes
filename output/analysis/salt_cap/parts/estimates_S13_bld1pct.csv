@@ -1,5 +1,0 @@
-strategy,outcome,sample,coef,se,N,clusters,spec_id
-S13,sale,bld1pct,0.00249016,0.000630278,3209650,33961,S13_incumbent
-S13,sale,bld1pct,-0.0288521,0.0037709,3209650,33961,S13_buyer_diff
-S13,refi,bld1pct,0.00172996,0.0011076,3209650,33961,S13_incumbent
-S13,refi,bld1pct,0.00334274,0.00267304,3209650,33961,S13_buyer_diff

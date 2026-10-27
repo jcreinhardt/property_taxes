@@ -1,9 +1,0 @@
-year,coef,se,strategy,outcome,spec_id,treat
-2012,0.00195413627654223,0.000917547435553238,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2013,0.00119210897827206,0.000595459036865238,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2014,0.000472073555901211,0.000390127103582548,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2015,0.000636859345583408,0.000426630812176095,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2016,0,0,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2017,0.0022714789268125,0.000475599039436065,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2018,0.00203184606588081,0.000528788422054537,S2,appeal_proxy,S2_logbill_cl_county,lbill16
-2019,0.00131049317228652,0.000248040151699537,S2,appeal_proxy,S2_logbill_cl_county,lbill16

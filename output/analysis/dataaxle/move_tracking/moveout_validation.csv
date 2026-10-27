@@ -1,0 +1,5 @@
+sale_timing,pairs,id_change,modal_ln_prim_change,modal_ln_all_change,both_id_and_ln_prim,id_only,ln_prim_only,tax_owner_ln_change,pct_both_observed
+1_sale_in_t+1,217873,34.7,34.6,33.2,33.9,0.8,0.7,35.1,77.0
+2_sale_in_t,211641,66.2,64.6,60.9,63.9,2.4,0.7,9.3,82.1
+3_sale_in_t-1_or_t+2,368780,12.0,11.3,14.6,10.5,1.5,0.8,28.1,89.0
+4_no_sale_within_window,793540,10.5,10.4,12.8,9.7,0.8,0.7,2.6,88.8

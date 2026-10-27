@@ -1,0 +1,15 @@
+label,group,evidence,m,xmin,xmax,ymax,ymin,side
+"Coarse geocode, not testable",Unexplained / not testable,unverified,4.960732,0,95.557125,100.51785699999999,95.557124999999985,da_only
+"Other number on same parcel / street
+(1 char off, multi-number, corner, range)","Same property, recorded differently",candidate,4.095188,0,95.557125,104.613045,100.51785699999999,da_only
+"Parcel or area missing from roll
+(no parcel ≤ 50 m, unnumbered street, ZIP absent)",Tax roll does not cover it,direct,2.329501,0,95.557125,106.942546,104.613045,da_only
+"Parcel nearby, no link found",Unexplained / not testable,ambiguous,1.506408,0,95.557125,108.448954,106.94254600000001,da_only
+County not in tax roll,Tax roll does not cover it,direct,0.904943,0,95.557125,109.353897,108.448954,da_only
+ZIP or street-name near miss,"Same property, recorded differently",candidate,0.425781,0,95.557125,109.779678,109.353897,da_only
+"Non-residential, no structure, absentee / company owner,
+or USPS vacant / undeliverable","Not residential, empty, or not a primary residence",direct / correlate,14.511731,95.557125,110.068856,95.557125,0,tax_only
+DA address 1 char off / DA point ≤ 15 m,"Same property, recorded differently",candidate,1.240824,110.068856,111.30968,95.557125,0,tax_only
+Other single-family,Unexplained / not testable,unexplained,1.193885,111.30968,112.503565,95.557125,0,tax_only
+Built 2020+,New construction,direct,0.208657,112.503565,112.712222,95.557125,0,tax_only
+"Other condo, 2–4 unit, apartment",Unexplained / not testable,unexplained,0.051779,112.712222,112.764001,95.557125,0,tax_only

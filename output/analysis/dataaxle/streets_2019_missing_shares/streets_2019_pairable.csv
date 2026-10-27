@@ -1,0 +1,5 @@
+group,streets,pairable,pairable_res,da_only,tax_only,tax_only_res,pairable_share_of_da_only,pairable_share_of_tax_only,pairable_res_share_of_da_only,pairable_res_share_of_tax_only_res
+Street in both,2442950,3849003,3129949,6690906,17911257,11492613,0.5752588662880632,0.2148929580989207,0.467791506860207,0.27234441810578675
+Street only in tax,37537,0,0,0,948931,460294,NA,0,NA,0
+Street only in Data Axle,101779,0,0,3098098,0,0,0,NA,0,NA
+ZIP not in tax,100057,0,0,3223657,0,0,0,NA,0,NA

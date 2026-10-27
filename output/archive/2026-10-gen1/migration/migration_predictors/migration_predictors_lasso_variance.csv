@@ -1,0 +1,15 @@
+"base_var","var_component","is_factor","coef_range","n_levels_selected","group","pct_var_yhat","pct_var_y"
+"age",0.0062129062478919,FALSE,0.0788219908901667,1,"demographics",80.6,6.6
+"bedrooms",0.000483888698412617,FALSE,0.0219974702728319,1,"housing",6.3,0.5
+"yrsusa2",0.000383716963915729,FALSE,0.0195886947991466,1,"nativity_language",5,0.4
+"nchild",0.00036775232364144,FALSE,0.0191768694950035,1,"household_composition",4.8,0.4
+"yrimmig",0.000340775891607994,FALSE,0.0184601162404535,1,"nativity_language",4.4,0.4
+"nfams",0.000130414024426481,FALSE,0.0114198959898787,1,"household_composition",1.7,0.1
+"rooms",0.000124858315331348,FALSE,0.0111740017598715,1,"housing",1.6,0.1
+"yrmarr",0.000109993692513668,FALSE,0.0104877877797557,1,"demographics",1.4,0.1
+"uhrswork",5.49740352291188e-05,FALSE,0.00741444773594599,1,"labor_occupation",0.7,0.1
+"occ",2.86439165515602e-05,TRUE,0.0423236303392326,15,"labor_occupation",0.4,0
+"marrno",1.47052242738194e-05,FALSE,0.00383473914030591,1,"demographics",0.2,0
+"nchlt5",8.87930211346177e-06,FALSE,0.00297981578521967,1,"household_composition",0.1,0
+"yrnatur",8.6627716728107e-06,FALSE,0.00294325868268093,1,"nativity_language",0.1,0
+"wkswork1",4.02510281800329e-07,FALSE,0.000634436980168935,1,"labor_occupation",0,0

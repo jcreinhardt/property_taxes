@@ -1,0 +1,22 @@
+label,m,group,evidence,xmin,xmax,ymin,ymax,side
+Matched: in both,76.5,NA,NA,0,76.5,0,76.5,NA
+County not in tax roll,5.43,Tax roll does not cover it,direct,0,76.5,76.5,81.93,da
+"Parcel or area missing from roll
+(no parcel ≤ 50 m, unnumbered street, ZIP absent)",1.01,Tax roll does not cover it,direct,0,76.5,81.92999999999999,82.94,da
+"Other number on same parcel / street
+(1 char off, multi-number, corner, range)",3.51,"Same property, recorded differently",candidate,0,76.5,82.94,86.45,da
+ZIP or street-name near miss,0.45,"Same property, recorded differently",candidate,0,76.5,86.45,86.9,da
+"Coarse geocode, not testable",4.21,Unexplained / not testable,unverified,0,76.5,86.9,91.11,da
+"Parcel nearby, no link found",0.99,Unexplained / not testable,ambiguous,0,76.5,91.11,92.1,da
+"SFR, DA address 1 char off / ≤ 15 m",1.76,"Same property, recorded differently",candidate,76.5,78.26,0,76.5,tax
+Vacant land,3.46,Not a residence,direct,78.26,81.72,0,76.5,tax
+Other non-residential,2.47,Not a residence,direct,81.72,84.19,0,76.5,tax
+SFR without structure,1.65,Not a residence,direct,84.19,85.84,0,76.5,tax
+Commercial,1.32,Not a residence,direct,85.84,87.16,0,76.5,tax
+Agricultural,0.88,Not a residence,direct,87.16000000000001,88.04,0,76.5,tax
+"SFR, absentee or company owner",2.86,Not a primary residence / empty,correlate,88.04,90.9,0,76.5,tax
+"SFR, USPS vacant / undeliverable",0.53,Not a primary residence / empty,direct,90.9,91.43,0,76.5,tax
+"SFR, in DA 2017 or 2021 only",4.52,"Data Axle timing (other year, new build)",candidate,91.43,95.95,0,76.5,tax
+SFR built 2018+,0.23,"Data Axle timing (other year, new build)",direct,95.95,96.18,0,76.5,tax
+"SFR, other (42% PO-box mail)",1.33,Unexplained / not testable,unexplained,96.17999999999999,97.50999999999999,0,76.5,tax
+"Condo, 2–4 unit, apartment",1.04,Unexplained / not testable,not characterised,97.50999999999999,98.55,0,76.5,tax

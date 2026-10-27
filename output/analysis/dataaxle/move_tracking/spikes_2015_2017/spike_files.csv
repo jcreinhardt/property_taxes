@@ -1,0 +1,11 @@
+y,n_fam_records,files,pct_recency_same_year,pct_recency_prev_year,median_recency,pct_primary
+2012,1028201,[../../raw_data/dataaxle/US_Consumer_5_File_2012.csv],55.5,37.8,201201.0,79.3
+2013,1159323,[../../raw_data/dataaxle/US_Consumer_5_File_2013.csv],45.0,47.9,201212.0,73.5
+2014,1133101,[../../raw_data/dataaxle/US_Consumer_5_File_2014.csv],44.0,46.7,201311.0,74.4
+2015,1143872,[../../raw_data/dataaxle/US_Consumer_5_File_2015.csv],53.4,39.6,201501.0,73.7
+2016,1196953,[../../raw_data/dataaxle/US_Consumer_5_File_2016.csv],52.0,44.6,201601.0,71.1
+2017,1248028,[../../raw_data/dataaxle/US_Consumer_5_File_2017.csv],66.8,28.5,201704.0,69.4
+2018,1322079,[../../raw_data/dataaxle/US_Consumer_5_File_2018.csv],58.8,37.8,201802.0,67.3
+2019,1411784,[../../raw_data/dataaxle/US_Consumer_5_File_2019.csv],49.7,47.0,201812.0,64.5
+2020,1413926,[../../raw_data/dataaxle/US_Consumer_5_File_2020.csv],48.3,43.0,201912.0,65.0
+2021,1405146,[../../raw_data/dataaxle/US_Consumer_5_File_2021.csv],56.8,35.9,202101.0,65.5

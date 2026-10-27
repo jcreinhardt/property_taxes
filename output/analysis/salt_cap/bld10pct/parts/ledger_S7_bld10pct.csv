@@ -1,5 +1,0 @@
-strategy,assumption,test,result,verdict
-S7,No other kink at $10k,"Pre-period (2014-16) kink in each outcome, no-income-tax states",sale: -0.00162 (0.00876); log_price: 0.0253 (0.0617); exit_prim: -0.0171 (0.0135); refi: 0.00287 (0.00599),pass
-S7,Outcomes otherwise smooth in the bill,"Covariate kinks at $10k (slope change per $1k, SD units)",year_built=-0.017(0.048); living_area=0.004(0.060); value16=0.117(0.132); agi_imp=0.018(0.118); lor16=0.024(0.061),pass
-S7,No manipulation of the bill around $10k,"Excess mass in [$9k,$10k) 2019 vs 2016","excess 2016 -0.0332, 2019 -0.0359",pass
-S7,Sales-tax deduction does not blur the threshold,Threshold shifted by IRS optional sales-tax table amount,see S7_notax_salesadj rows,inconclusive

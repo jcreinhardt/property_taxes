@@ -1,9 +1,0 @@
-year,coef,se,strategy,outcome,spec_id,treat
-2012,0.20924891992665,0.0168250656197087,S2,log_price,S2_logbill_cl_county,lbill16
-2013,0.196345306704873,0.01644789110982,S2,log_price,S2_logbill_cl_county,lbill16
-2014,0.200670137920586,0.0157839349607539,S2,log_price,S2_logbill_cl_county,lbill16
-2015,0.165860686714019,0.0148230508594007,S2,log_price,S2_logbill_cl_county,lbill16
-2016,0,0,S2,log_price,S2_logbill_cl_county,lbill16
-2017,0.0100822904929856,0.0134846673319304,S2,log_price,S2_logbill_cl_county,lbill16
-2018,0.0870402942991926,0.0154952527997208,S2,log_price,S2_logbill_cl_county,lbill16
-2019,0.0690435309092141,0.0152314966925136,S2,log_price,S2_logbill_cl_county,lbill16

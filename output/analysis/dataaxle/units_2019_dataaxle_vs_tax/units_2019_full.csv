@@ -1,0 +1,27 @@
+src,unit,n,rk
+dataaxle_family_records,1,1350731,1
+dataaxle_family_records,2,1311882,2
+dataaxle_family_records,A,940328,3
+dataaxle_family_records,3,871413,4
+dataaxle_family_records,B,859605,5
+dataaxle_family_records,4,626227,6
+dataaxle_family_records,C,492141,7
+dataaxle_family_records,5,410387,8
+dataaxle_family_records,D,400089,9
+dataaxle_family_records,6,364804,10
+dataaxle_family_records,(other non-null),23120625,11
+dataaxle_family_records,(NULL/blank),154701851,12
+dataaxle_family_records,(distinct non-null values),134931,13
+tax_parcel_records,A,278271,1
+tax_parcel_records,1,228894,2
+tax_parcel_records,B,202559,3
+tax_parcel_records,2,190209,4
+tax_parcel_records,3,143379,5
+tax_parcel_records,4,113750,6
+tax_parcel_records,C,108901,7
+tax_parcel_records,D,89606,8
+tax_parcel_records,5,87229,9
+tax_parcel_records,101,76661,10
+tax_parcel_records,(other non-null),6806227,11
+tax_parcel_records,(NULL/blank),126158585,12
+tax_parcel_records,(distinct non-null values),233901,13

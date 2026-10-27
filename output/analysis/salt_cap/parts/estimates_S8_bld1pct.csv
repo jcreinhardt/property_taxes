@@ -1,9 +1,0 @@
-strategy,outcome,sample,coef,se,N,clusters,spec_id
-S8,sale,bld1pct,0.0270053,0.0211444,2417392,37679,S8_pooled
-S8,log_price,bld1pct,0.257854,0.112505,57901,18434,S8_pooled
-S8,exit_prim,bld1pct,0.026193,0.029766,2134142,36785,S8_pooled
-S8,refi,bld1pct,-0.0112552,0.0215025,2417392,37679,S8_pooled
-S8,sale,bld1pct,0.0285901,0.0214885,893736,20225,S8_strict
-S8,log_price,bld1pct,0.231598,0.124122,21118,10538,S8_strict
-S8,exit_prim,bld1pct,0.0177693,0.0303119,794014,19806,S8_strict
-S8,refi,bld1pct,-0.00411607,0.0224932,893736,20225,S8_strict

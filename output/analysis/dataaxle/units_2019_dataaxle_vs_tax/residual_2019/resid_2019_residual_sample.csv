@@ -1,0 +1,24 @@
+z,h,s,cls,n_fam,n_prim,n_units,has_dpbc,geo_level,nostats,vacant_flag,mail_score,recency,lor_prim,ors,in_2017,in_2021
+06776,43,HILL,7b_street_not_in_tax,1,1,0,true,0,false,false,1,201811,3.0,unk,true,true
+47122,1729,KEPLEY,6_street_in_tax_number_missing,1,1,0,true,0,false,false,1,201810,10.0,own,true,true
+42001,2538,NEW HOLT,6_street_in_tax_number_missing,5,4,4,true,0,false,false,1,201905,1.0,rent,true,true
+19320,1218,DOE RUN,6_street_in_tax_number_missing,2,2,0,true,P,false,false,1,201904,12.5,own,true,true
+02895,430,WINTER,7b_street_not_in_tax,3,1,0,true,P,false,false,1,201904,10.0,unk,true,true
+11581,60,FLOWER,6_street_in_tax_number_missing,4,4,0,true,P,false,false,1,201904,4.5,rent,true,true
+29730,4075,LINDA,6_street_in_tax_number_missing,1,1,0,true,P,false,false,1,201904,47.0,own,true,true
+27574,1113,WRENN CRUMPTON,6_street_in_tax_number_missing,1,1,0,true,Z,false,false,4,201904,17.0,own,true,true
+80863,1051,SOUTH,6_street_in_tax_number_missing,1,1,0,true,P,false,false,1,201904,13.0,own,true,true
+87121,2603,ALTOS,7b_street_not_in_tax,1,1,0,true,P,false,false,1,201810,13.0,own,true,true
+48166,2253,FALLING LEAF,7b_street_not_in_tax,1,1,0,true,P,false,false,1,201906,3.0,own,true,true
+66801,917,MECHANIC,6_street_in_tax_number_missing,1,1,0,true,4,true,false,2,201810,2.0,rent,true,true
+74820,1731,SANDY CREEK,6_street_in_tax_number_missing,9,6,6,true,0,true,false,1,201906,4.0,unk,true,true
+03871,47,STRAWS POINT,7b_street_not_in_tax,1,1,0,true,Z,false,false,4,201904,7.0,own,true,true
+78852,755,NAVA,7b_street_not_in_tax,1,1,0,true,P,false,false,1,201807,21.0,own,true,true
+28546,334,HELEN,7b_street_not_in_tax,2,1,0,true,0,false,false,1,201906,7.0,unk,false,true
+28546,307,HELEN,7b_street_not_in_tax,5,1,0,true,P,false,false,1,201812,2.0,unk,true,true
+68776,107,32ND,6_street_in_tax_number_missing,2,1,0,true,0,false,false,1,201902,1.0,unk,true,true
+32806,2332,CHERA,7b_street_not_in_tax,1,1,0,true,P,false,false,1,201805,7.0,unk,true,true
+50701,5805,DALTON,7b_street_not_in_tax,1,1,0,true,0,false,false,1,201904,17.0,own,true,true
+79512,2308,LAKE COUNTY ROAD 252,6_street_in_tax_number_missing,2,1,0,true,0,false,false,1,201902,1.0,unk,false,false
+47102,2701,STATE ROAD 256,6_street_in_tax_number_missing,2,1,0,true,P,false,false,1,201810,15.0,own,true,true
+92324,577,K,6_street_in_tax_number_missing,1,1,0,true,P,false,false,1,201904,3.0,own,true,true

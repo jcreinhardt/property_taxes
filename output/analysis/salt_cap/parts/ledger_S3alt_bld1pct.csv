@@ -1,9 +1,0 @@
-strategy,assumption,test,result,verdict
-S3,"Parallel trends, incumbents-only alternative [sale, rate16_pp]",Joint Wald test of 2012-2015 coefficients,"F=49.98 p=0.000, mean|pre|=0.00251 vs post 0.003805 (SE 0.0004552)",fail
-S3,"Parallel trends, incumbents-only alternative [exit_prim, rate16_pp]",Joint Wald test of 2012-2015 coefficients,"F=15.40 p=0.000, mean|pre|=0.00355 vs post -0.003059 (SE 0.001023)",fail
-S3,"Parallel trends, incumbents-only alternative [refi, rate16_pp]",Joint Wald test of 2012-2015 coefficients,"F=5.14 p=0.000, mean|pre|=0.000754 vs post -0.002035 (SE 0.0005244)",fail
-S3,"Parallel trends, incumbents-only alternative [to_rental, rate16_pp]",Joint Wald test of 2012-2015 coefficients,"F=4.71 p=0.001, mean|pre|=0.00164 vs post -0.006444 (SE 0.0006711)",fail
-S3,"Parallel trends, incumbents-only alternative [sale, above16]",Joint Wald test of 2012-2015 coefficients,"F=5.41 p=0.000, mean|pre|=0.00299 vs post 0.001144 (SE 0.001544)",fail
-S3,"Parallel trends, incumbents-only alternative [exit_prim, above16]",Joint Wald test of 2012-2015 coefficients,"F=0.47 p=0.757, mean|pre|=0.00154 vs post -0.0009932 (SE 0.003112)",pass
-S3,"Parallel trends, incumbents-only alternative [refi, above16]",Joint Wald test of 2012-2015 coefficients,"F=1.58 p=0.176, mean|pre|=0.0044 vs post 0.001859 (SE 0.003046)",pass
-S3,"Parallel trends, incumbents-only alternative [to_rental, above16]",Joint Wald test of 2012-2015 coefficients,"F=0.81 p=0.520, mean|pre|=0.00137 vs post -0.0008701 (SE 0.00121)",pass
