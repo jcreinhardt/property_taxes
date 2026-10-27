@@ -1,6 +1,6 @@
 # Proposal: restructuring `code/` around data building and research designs
 
-Date: 2026-10-27. Status: phases 1 (cleanup, archive: 196099c), 2 (code/R helpers, paths: 396ded4) and 3 (file moves, data/built, output mirror) committed; phase 4 (docs) pending.
+Date: 2026-10-27. Status: phases 1 (cleanup, archive: 196099c), 2 (code/R helpers, paths: 396ded4) and 3 (file moves, data/built, output mirror) committed; phase 4 (READMEs, code/README.md, notebook links, CLAUDE.md, skills) committed.
 migration and repeat sales are outcomes of existing designs, not designs; the household SALT-cap study is archived.
 This file becomes `code/README.md` once the moves are done. (`text/` is for paper drafts, proposals and slides only.)
 

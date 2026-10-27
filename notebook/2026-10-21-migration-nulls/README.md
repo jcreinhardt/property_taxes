@@ -30,13 +30,13 @@ No detectable migration response before COVID, in five independent sources:
   - Flow year = the year of the second tax year (file "1718" = 2018, moves during ≈ 2018); ref 2017.
   - Dyads with < 20 returns are suppressed by SOI; only dyads unsuppressed in both directions in all 11 years are kept.
   - Cross-border spec: log returns ~ i(year, from-high-side) | directed dyad + undirected dyad × year.
-  - County/border sides come from the majority of the county's tracts (local_juris R/26 side ranking).
+  - County/border sides come from the majority of the county's tracts (`code/build/geo/06_tract_border_side.R`, formerly local_juris R/26).
   - Enrolment RD: one observation per district; running variable = median signed distance of its tracts; h = 19.4 mi.
 - **Inputs:**
   - `data/SOI/migration_county/county{in,out}flowYYYY.csv`, `data/database.db` (returns_zipcode).
-  - `data/local_juris/district_finance.rds` (F-33 elsec files), `iv_tract_side.rds`.
+  - `data/built/census_finances/district_finance.rds` (F-33 elsec files), `data/built/geo/iv_tract_side.rds`.
   - All gitignored, local only.
-- **Scripts:** `code/analysis/salt_local/c19_enrolment.R`, `c20_enrolment_rd.R`, `c22_soi_migration.R`, `c23_soi_agi_in_out.R`.
+- **Scripts:** `code/designs/exposure_did/10_enrolment.R` (c19), `code/designs/border_rd/05_enrolment_rd.R` (c20), `code/designs/exposure_did/08_soi_migration_flows.R` (c22), `09_soi_mover_agi.R` (c23); paths after the 2026-10-27 restructuring.
 - **Check:** 3,128 balanced counties; mean out-migration rate 6.69% of returns (2.25% out of state); cross-border dyad
   coefficient 2021 −0.080 (SE 0.018).
 

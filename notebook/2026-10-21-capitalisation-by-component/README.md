@@ -51,12 +51,12 @@ What it means:
 - **Inputs:**
   - `data/SOI/county_returns_w_agi/{16,18}incyallagi.csv` and `data/SOI/zipcode_returns_w_agi/{16,18}zpallagi.csv` (IRS SOI
     downloads).
-  - `data/local_juris/county_year.rds` and `tract_year.rds` (CoreLogic full-roll panel built on SOM/Bouchet, k_panel*.sql).
+  - `data/built/corelogic/county_year.rds` and `tract_year.rds` (CoreLogic full-roll panel built on SOM/Bouchet, k_panel*.sql).
   - `data/external/acs/acs5_tract_2017.csv`, `acs5_zcta_2017.csv` (tidycensus).
-  - `data/local_juris/salt_exposure_tract_zip2016.csv`.
+  - `data/built/exposure/salt_exposure_tract_zip2016.csv`.
   - **All of `data/` is gitignored and lives only on this laptop.**
-- **Scripts:** `code/analysis/salt_local/c24_exposure_delta.R`, `c26_exposure_components.R`, `c27_prices_levels_components.R`,
-  `c28_zip_pretrend_diagnostics.R`, `c29_three_components.R`.
+- **Scripts:** `code/build/exposure/04_delta_deduction_value.R` (c24), `05_components_county_state_zip.R` (c26), `code/archive/2026-10-superseded/c27_prices_levels_components.R`,
+  `code/designs/exposure_did/06_zip_pretrend_diagnostics.R` (c28), `05_prices_by_component.R` (c29); paths after the 2026-10-27 restructuring.
 - **Check:**
   - National SALT claimed $559bn (2016) vs $130bn deducted (2018); 59% of $200k+ itemizers on the AMT in 2016.
   - Owner-attributed share of the lost value 0.875; property-tax share 0.372.

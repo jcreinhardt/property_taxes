@@ -6,8 +6,8 @@ description: Keep the research notebook of this repository (property_taxes) -- a
 # The research notebook
 
 Sessions here answer questions with runs on CoreLogic, Data Axle, SOI and Census data: event studies, border RDs,
-balance checks, diagnostics, and dead ends. Many scripts and outputs are committed under `code/analysis/` and
-`output/analysis/`, and running notes go into `text/data_exploration/dataaxle.md`. Those are long, mixed and hard to
+balance checks, diagnostics, and dead ends. Many scripts and outputs are committed under `code/build/`, `code/designs/`, `code/validation/` and
+`output/`, and running notes go into `text/data_exploration/dataaxle.md`. Those are long, mixed and hard to
 search. The notebook keeps what is worth reading again: the question, the answer with its numbers, and a recipe precise
 enough to rebuild the run. Collaborators who don't use Claude Code read it too, so write in plain words.
 

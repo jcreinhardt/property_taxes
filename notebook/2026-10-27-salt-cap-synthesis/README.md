@@ -35,7 +35,7 @@ no-income-tax states, not across the nearest line.
 
 ## How
 This is a synthesis of the entries linked above plus earlier results in `text/data_exploration/dataaxle.md` §4.20–4.39.
-The longer write-up is `output/analysis/salt_local/synthesis_log_2026-10-27.md`. No new runs.
+The longer write-up is `output/reports/synthesis_log_2026-10-27.md`. No new runs.
 
 ## Open
 - ZIP design on repeat sales, with trend-break / Rambachan–Roth bounds.

@@ -22,7 +22,7 @@ tags: border, RD, difference in discontinuities, balance, instrument
 ![difference in discontinuities](c16_border_diff_in_disc.png)
 
 ## How
-- **Outline:** tracts (2010) with CoreLogic 2017–19 sale medians → nearest ranked state-border pair and side (local_juris
+- **Outline:** tracts (2010) with CoreLogic 2017–19 sale medians → nearest ranked state-border pair and side (`code/build/geo/06_tract_border_side.R`, formerly local_juris
   R/26) → signed distance (low side negative) → rdrobust per covariate and per year.
 - **Choices:**
   - Local linear, triangular kernel, SE clustered by county.
@@ -32,10 +32,10 @@ tags: border, RD, difference in discontinuities, balance, instrument
   - ACS median year built is coded 0 for "1939 or earlier" from the 2018 release; recoded to 1939.
   - SEDA 4.1 long files end in 2018.
 - **Inputs:**
-  - `data/local_juris/iv_tract_side.rds`, `tract_year.rds`, `district_finance.rds`.
+  - `data/built/geo/iv_tract_side.rds`, `data/built/corelogic/tract_year.rds`, `data/built/census_finances/district_finance.rds`.
   - `data/external/acs/acs5_tract_2013..2023.csv`, `data/external/tract_rel/tab20_tract20_tract10_natl.txt`, `data/external/seda41/*long*.csv`.
   - All gitignored, local only.
-- **Scripts:** `code/analysis/salt_local/c13_side_selection.R`, `c14_side_profiles.R`, `c15_border_rd.R`, `c16_border_rd_by_year.R`, `c18_acs_seda_panels.R`.
+- **Scripts:** `code/designs/border_rd/01_side_selection_levels.R` (c13), `02_profiles_by_distance.R` (c14), `03_covariate_rd.R` (c15), `04_rd_by_year_and_diff_in_disc.R` (c16), `code/build/acs/06_tract_year_panel.R` (c18); paths after the 2026-10-27 restructuring.
 - **Check:**
   - 44,524 tracts within 100 mi.
   - Tax-rate RD +0.747 pp (pair-demeaned); effective-rate gap level 0.915 pp (2013) and 0.434 pp (2024).
