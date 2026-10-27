@@ -51,7 +51,7 @@ It contains **no Data Axle table**, so Data Axle work stays on Bouchet. Built wi
 5. Quarterly files (`10b`/`11b`): only **2012–2015** (16 files) were loaded into `raw_quarterly_dataaxle`.
    That table is still all-VARCHAR, 2.26 bn rows. The raw folder holds 51 quarterly files, 2012-03 to 2024-12,
    including **full-size 2022 quarterlies**. Raw sizes: quarterly 608 GiB gzip (11–15 GB per file), annual 207 GiB.
-   **Our own conversion (2026-10-16, `code/data_prep/dataaxle_quarterly/`):** each file is streamed once (all VARCHAR,
+   **Our own conversion (2026-10-16, `code/build/dataaxle/`):** each file is streamed once (all VARCHAR,
    names hashed) to a raw parquet, checked column by column for values that fail to convert, then written typed and
    partitioned by state to `/nfs/roberts/scratch/pi_csl53/jr2728/da_quarterly/fy=YYYY/fm=MM/` (scratch, 30-day purge).
    Test on 2019 June: 183,492,290 rows (annual 2019: 185.5m), all `family_id`s unique, 0 rejected lines, **0 conversion
@@ -78,7 +78,14 @@ It contains **no Data Axle table**, so Data Axle work stays on Bouchet. Built wi
    December drops 6% (2019: 175.2m → 183.5m → 178.9m → 169.3m); 99% of December rows are identical to their June row. So the
    quarterly files cannot date moves within the year or fix the uneven annual cut-offs; the only extra information is the
    in/out pattern of records (vendor deliverability filters), not updated attributes. The converted quarterly parquet on
-   scratch (≈ 500 GB) is therefore of little use beyond this check.
+   scratch (≈ 470 GB) is therefore of little use beyond this check — **except for 2022**: the four 2022 quarterly files are the
+   full 2022 compile that the annual file lost (`q_vs_annual_2022.sql`, 1% families): the truncated annual 2022 (537k sample
+   rows) is a subset of the quarters with identical values (99.9%), the quarters never disagree, their union holds 1,739k
+   families (annual 2021: 1,836k; 2023: 1,614k), 80% of 2021 families are found in the 2022 quarters (25% in the truncated
+   annual) and 80% of 2022-quarter families in annual 2023, with uniform state coverage (June 2022 / 2021 ≥ 0.87 in every
+   state). **Replacement annual 2022** = union of the four quarters, one row per `family_id` (earliest quarter), `record_year`
+   = 2022, cut-off 2022-07: `annual_2022_from_quarters.sql` → `~/ptax_explore/samples/da_annual_2022_from_quarters/state=XX/*.parquet`
+   (home, survives the scratch purge; schema = quarterly typed schema, names hashed).
 
 **Size.** `dataaxle_annual`: 2,661,775,520 rows, 103 columns.
 
@@ -592,7 +599,7 @@ blocks starting at 0, 100e9, …, 900e9):
   re-IDs. Interstate moves and full-data figures **[pending]** (`full4/`).
 
 ### 4.5 Move rates and tenure vs Census
-**Move rates by year, strict definition** — Data Axle from the full table (`moves_strict.sql`, 5 min; `output/analysis/dataaxle/moves_strict/`).
+**Move rates by year, strict definition** — Data Axle from the full table (`moves_strict.sql`, 5 min; `output/validation/dataaxle/moves_strict/`).
 Families present in both years (by `family_id`). **Move (strict) = building (ZIP5 + street + house number) or ZIP changes *and*
 `length_of_residence` resets in t+1** (≤ 1; ≤ 2 for the two-year 2021→23 pair). Interstate (strict) = state changes and LOR resets.
 The loose building/ZIP rate (no LOR condition) is kept for reference. CPS = ASEC Table A-1 (persons aged 1+, period March–March);
@@ -636,7 +643,7 @@ previous 12 months).
 - Superseded loose table (any address field change: 9.95, 9.72, 9.30, 7.13, 5.64, 5.80, 6.23, 6.05, 6.41, 7.30, 4.94, 6.80, 4.92,
   4.96, 5.31, 8.86 for 2006→07 … 2021→23): `output/dataaxle_exploration/full2/`.
 
-**[full] Mover rates on a gap-filled panel** (`moves_filled.sql`, 6 min; `output/analysis/dataaxle/moves_strict/moves_filled.csv`). Each
+**[full] Mover rates on a gap-filled panel** (`moves_filled.sql`, 6 min; `output/validation/dataaxle/moves_strict/moves_filled.csv`). Each
 `family_id` is treated as present every year from its first to its last observed year; missing years (and the truncated 2022 file)
 carry the last observed address forward. A gap followed by the same address counts as staying; a gap followed by a new address
 counts as staying at the old address until the year before the new address is first observed. Strict move = building/ZIP change
@@ -699,14 +706,44 @@ series are not comparable across those years.
   extract, and the Census API now requires a key. **[todo]** Add `MOVEDIN` to the IPUMS extract (and
   `UNITSSTR` is already there for checking single- vs multi-family).
 
+**Out-migration by owner/renter status vs ACS, all years 2006→2023** (`move_tracking/outmig_by_tenure.sql`; outputs
+`outmig_by_tenure.csv`, `outmig_cutoffs.csv`, `outmig_tenure_shares.csv`; 1% building sample plus the 2022 replacement built from the
+quarterly files; **full-data run** `move_tracking/outmig_full/` → `outmig_full_by_tenure.csv`: 2.575bn rows bucketed by `bkey % 10`,
+reproduces the sample within 0.1 pp for all units and owners and within 0.45 pp for renters, tenure shares within 0.2 pp — the
+numbers below stand). Unit = building × unit number with exactly one primary family; missing years carried forward;
+out-move = the primary `family_id` differs in t+1; in-move = the primary in t+1 has LOR ≤ 1; tenure = Data Axle `owner_renter_status`
+in t (owner 7–9, renter 0–3, unknown 4–6); rates annualised by the cut-off months of the two files. ACS = PUMS households that moved into
+the unit within 12 months (`MV` = 1, `pums_mv_by_year.csv`), by tenure of the current unit.
+
+| Pair | Months | All: DA out / DA in / ACS | Owners: DA out / DA in / ACS | Renters: DA out / DA in / ACS |
+|---|---|---|---|---|
+| 2007→08 | 12 | 11.3 / 10.6 / 15.4 | 8.8 / 7.1 / 5.8 | 14.5 / 21.1 / 34.4 |
+| 2010→11 | 11 | 12.4 / 11.5 / 14.6 | 8.4 / 6.1 / 4.5 | 20.1 / 31.5 / 33.0 |
+| 2013→14 | 12 | 12.0 / 10.6 / 14.5 | 8.8 / 6.0 / 5.4 | 17.5 / 26.6 / 30.1 |
+| 2016→17 | 11 | 12.8 / 11.9 / 14.2 | 10.4 / 7.5 / 6.6 | 17.6 / 30.3 / 27.7 |
+| 2017→18 | 14 | 12.3 / 9.0 / 14.2 | 10.0 / 6.2 / 6.5 | 18.2 / 18.5 / 27.7 |
+| 2019→20 | 12 | 12.2 / 9.8 / 13.4 (2021) | 9.9 / 6.1 / 7.1 | 17.4 / 23.8 / 25.2 |
+| 2022→23 | 11 | 11.5 / 9.6 / 12.6 | 10.5 / 6.4 / 5.7 | 13.2 / 22.6 / 25.6 |
+
+- **All units:** Data Axle out-moves run 10.4–13.9% a year (annualised), 1–4 pp below the ACS "moved in within 12 months" rate
+  (12.6–16.0%) and close to the ACS `MIGRATE1` householder rate (11.2–13.4%). Annualising removes the 2015→16 / 2017→18 bumps.
+- **Owners:** out-moves 7.5–10.5% a year (observed-only 6.6–11.3%), i.e. **1.5–2× the ACS owner rate** (4.5–7.1%); the in-move
+  measure (new primary with LOR ≤ 1: 5.4–7.5%) is close to the ACS owners and follows the same rise from 2011 to 2017. The excess
+  out-moves are the no-deed churn documented in §4.5c (3.7%/yr at never-sold homes).
+- **Renters:** out-moves 12.6–20% a year, **about half to two-thirds of the ACS renter rate** (25–35%); the in-move measure
+  (18–31%) is closer but still below, and renters are only 10–19% of Data Axle units (ACS: ≈ 35% of households), rising from 10%
+  in 2006 to 19% in 2020. Data Axle lists the more stable renters and misses the mobile ones.
+- **Unknown tenure (4–6, 15–20% of units):** out-moves 13–23%, between owners and renters.
+- Both tenure series are flat to slightly rising over 2009–2020 and dip in 2021→23, as in the ACS; Data Axle shows no own trend.
+
 ### 4.4 Several addresses for one family (same year)
 - **Never.** One row per family per year **[full, 2017]**. Second homes or dual residences are not visible:
   only one address per year is kept.
 
 ---
 
-**[full] 2006 tenure vs ACS 2006 1-yr** (`code/analysis/dataaxle/tenure_2006_vs_acs.R`, outputs in
-`output/analysis/dataaxle/tenure_2006_vs_acs/`). Primary families vs occupied units, two ways: (A) ACS PUMS `MV`
+**[full] 2006 tenure vs ACS 2006 1-yr** (`code/validation/dataaxle/tenure_2006_vs_acs.R`, outputs in
+`output/validation/dataaxle/tenure_2006_vs_acs/`). Primary families vs occupied units, two ways: (A) ACS PUMS `MV`
 duration bins (Data Axle LOR spread uniformly over its rounded-month interval and split across bins); (B) published
 B25038 calendar-year bins (Data Axle arrival year = 2006 − LOR).
 
@@ -737,9 +774,9 @@ B25038 calendar-year bins (Data Axle arrival year = 2006 − LOR).
 > before then seem to be dated to their first sighting in that source. Treat arrival dates before about 1992 as
 > left-censored. Owners' recent arrivals match ACS (deed or assessor dates likely), while renters' arrivals lag by about a year.
 
-**[full] Tenure vs ACS, all years 2006–2023** (`code/analysis/dataaxle/tenure_all_years_vs_acs.R`; outputs in
-`output/analysis/dataaxle/tenure_all_years_vs_acs/`). Same method A as 2006: ACS 1-yr PUMS `MV` (keyless download of every
-`csv_hus.zip`, tallied by `code/analysis/dataaxle/pums_mv.sh`; no 2020 file) vs Data Axle primary-family LOR spread over months. Data Axle 2022 dropped.
+**[full] Tenure vs ACS, all years 2006–2023** (`code/validation/dataaxle/tenure_all_years_vs_acs.R`; outputs in
+`output/validation/dataaxle/tenure_all_years_vs_acs/`). Same method A as 2006: ACS 1-yr PUMS `MV` (keyless download of every
+`csv_hus.zip`, tallied by `code/validation/dataaxle/pums_mv.sh`; no 2020 file) vs Data Axle primary-family LOR spread over months. Data Axle 2022 dropped.
 
 *Data Axle − ACS, percentage points, all households:*
 
@@ -769,7 +806,7 @@ B25038 calendar-year bins (Data Axle arrival year = 2006 − LOR).
   2019 owner/renter model change (renters 14%→21% of primary families), so the renter series is not comparable across 2019.
 - 5–9 years matches within ±3 pp throughout; 2–4 years is 2–6 pp short, consistent with moves recorded late or missed.
 
-**[full] Tenure gap by family-level data quality** (`dq_tenure.sql`, 3.5 min; `code/analysis/dataaxle/tenure_by_data_quality.R`;
+**[full] Tenure gap by family-level data quality** (`dq_tenure.sql`, 3.5 min; `code/validation/dataaxle/tenure_by_data_quality.R`;
 `tenure_gap_by_share_observed.png`, `tenure_gap_by_missing_years.png`). Span = first to last `record_year` of the `family_id` anywhere
 in Data Axle (2022 excluded); quality = years observed / span, or missing years inside the span. Each group vs the same ACS distribution.
 Primary families 2019: complete span 67%, 80–99% 18%, 50–79% 11%, < 50% 2%, single-year 2% (1 missing year 12.5%, 2: 6.5%, 3: 4%, 4+: 8%).
@@ -793,7 +830,7 @@ Primary families 2019: complete span 67%, 80–99% 18%, 50–79% 11%, < 50% 2%, 
 ### 4.5c Why are Data Axle mover rates low? (1% samples)
 
 **Samples** (`~/ptax_explore/samples/`, built by `samples_1pct.sql`, `tax_bld1pct.sql`, `deeds_bld1pct.sql`, `fampos_bld1pct.sql`; copies in
-`output/analysis/dataaxle/move_tracking/`). Building key `bkey` = hash(ZIP5, street name, house number), identical across sources.
+`output/validation/dataaxle/move_tracking/`). Building key `bkey` = hash(ZIP5, street name, house number), identical across sources.
 `da_fam1pct` (1% of `family_id`s, all years, 2.3 GB); `da_bld1pct` (all DA records at 1% of buildings, 24.6m rows, 5.7m families);
 `da_bld1pct_fampos` (every DA record, any address, of the families and persons ever seen at those buildings); `tax_bld1pct` (tax rows at the
 same buildings, ~50 columns, all tax years); `deeds_bld1pct` (ownertransfer rows by deed situs key, 4.0m). Names hashed throughout.
@@ -1042,10 +1079,46 @@ Accuracy of `owner_occupancy_code` against the bill discount, pooled 2013–2020
 - Practical: treat O as "bill mailed to the property"; where the bill fields exist, use the discount; otherwise combine O with a
   Data Axle primary family at the address and the homestead flag.
 
+**Who gets tracked across a move? (`move_tracking/tracked_bias.sql`; outputs `tracked_bias.csv`, `tracked_bias_composition.csv`;
+1% building sample, primaries at sampled buildings 2006–2020 that are not at the same building in t+1 = "leavers", 2.93m).** Outcome
+in t+1: *tracked* = same `family_id` at another address (24.0%; 18.1% with LOR reset ≤ 1), *re-keyed* = a person id under another
+family id elsewhere (3.8%), *absent-returns* = family id back at the same building in t+2/t+3, i.e. a data gap, not a move (15.4%),
+*lost* (56.8%). Among sellers (owner-occupied SFR with an arm's-length deed in t or t+1, 275k): tracked 53%, re-keyed 9%, absent 3%,
+lost 35%.
+
+| Characteristic in t (all leavers) | Tracked | Lost | | Sellers: tracked | lost |
+|---|---|---|---|---|---|
+| Persons listed 1 / 2 / 3 / 4+ | 19 / 36 / 44 / 52% | 63 / 39 / 32 / 29% | | 37 / 61 / 66 / 69% | 51 / 26 / 23 / 20% |
+| Children yes / no | 44 / 22% | 35 / 59% | | | |
+| Marital: reported married / likely married / likely single | 59 / 32 / 20% | 27 / 45 / 62% | | | |
+| Income (`find`) < 30k / 50–75k / 100–150k / 150k+ | 19 / 26 / 34 / 37% | 64 / 53 / 44 / 42% | | 35 / 49 / 60 / 64% | 51 / 39 / 30 / 27% |
+| Age of person 1: unknown / < 30 / 30s / 50–64 / 75+ | 17 / 30 / 37 / 29 / 25% | 67 / 49 / 43 / 46 / 53% | | 34 / 49 / 62 / 59 / 47% | 57 / 36 / 27 / 28 / 36% |
+| Tenure: owner / renter / unknown | 26 / 21 / 24% | 49 / 64 / 60% | | 53 / 26 / 38% | 35 / 61 / 51% |
+| Home value none / < 100k / 200–350k / 600k+ | 21 / 20 / 29 / 28% | 64 / 59 / 49 / 50% | | 25 / 42 / 55 / 57% | 63 / 45 / 34 / 33% |
+| LOR ≤ 1 / 2–3 / 4–9 / 10–19 / 20+ | 23 / 24 / 25 / 24 / 26% | 65 / 58 / 52 / 49 / 47% | | 30 / 49 / 57 / 58 / 53% | 63 / 41 / 32 / 29 / 31% |
+| Ethnicity code unknown / known | 12 / 23–33% | 80 / 44–53% | | | |
+
+- **The bias runs along record quality and household "weight"**: multi-person, married, with children, prime-age, higher-income,
+  owner households with a known age and a home value are tracked two to three times as often as single-person, low-income, renter,
+  short-tenure records with missing attributes. Composition of the lost vs the base of all primaries: single-person 83% vs 49%,
+  income < 30k 45% vs 27%, renters 36% vs 15%, LOR ≤ 1 35% vs 14%, unknown age 57% vs 28%, no home value 39% vs 18%. Many "lost"
+  thin records are probably not real household moves at all (stale or duplicate listings, deaths, institutional moves), which is
+  why the seller subset — true moves — is tracked twice as well (53% vs 24%).
+- **For the SALT population the bias is favourable:** high-income owner-sellers are tracked 60–64% (+ 7–8% re-keyed) against 35%
+  for sellers with income < 30k.
+- **Distance of tracked moves** (all leavers): 29% same ZIP, 35% same county, 20% same state, 16% another state; sellers 22% another
+  state. The interstate share of tracked moves (16%) is about the ACS share of household moves that cross a state line (≈ 2.1 / 12.5 =
+  17%), and the earlier full-data strict rates captured interstate moves (0.84 / 2.1 ≈ 40%) at least as well as all moves (25–35%), so
+  tracking does not visibly favour local moves. The interstate share rises with income (12% for < 30k, 24% for 150k+) and home value
+  (11% < 100k, 22% 600k+), as in Census patterns for long-distance movers.
+- **Over time** tracking of leavers fell from 29% (2006) to 21–25% (2009–2015), 29% in 2017 (14-month file interval), 21% in 2020;
+  sellers 58% (2006) → 43–47% (2009–2011) → 50–57% (2015–2020). Absent-returns peak in 2016 (21%, data gaps).
+- `wealth_finder_score` bins are not usable here (85% ≥ $1m: the field is mis-scaled in the sample); ignore the wealth rows.
+
 ### 4.5b [full] Household counts under building × unit de-duplication, 2006–2013
 
-(`code/analysis/dataaxle/household_strategies.R`; Bouchet job `hh_strat_full.sql`, 6 min, full data; outputs in
-`output/analysis/dataaxle/household_strategies/`.) Building = street address (`address_type='S'`, house number and street
+(`code/validation/dataaxle/household_strategies.R`; Bouchet job `hh_strat_full.sql`, 6 min, full data; outputs in
+`output/validation/dataaxle/household_strategies/`.) Building = street address (`address_type='S'`, house number and street
 name filled) on zip + house number + pre-direction + name + suffix + post-direction; unit = `upper(trim(unit_num))`,
 blank = NULL. **S1:** each distinct building × unit combination (NULL unit = its own combination) is one household.
 **S2a:** drop the NULL-unit combination if the same building has ≥1 real unit in the same year. **S2b:** drop it only if
@@ -1069,7 +1142,7 @@ the building has ≥2 distinct real units. Records without a usable street addre
 - Primary families track ACS levels best (within ±5m) up to 2012. 2013 jumps in every Data Axle series (vintage break, §1).
 
 **[full] Building × unit combinations holding several primary families, 2006–2013** (`multiprim_full.sql`, 6 min;
-`output/analysis/dataaxle/household_strategies/multiprim_combos_2006_2013.csv`). Primary families with a building key only
+`output/validation/dataaxle/household_strategies/multiprim_combos_2006_2013.csv`). Primary families with a building key only
 (12.6–13.4m primaries per year have none).
 
 | | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 |
@@ -1109,7 +1182,7 @@ generations are ≈ 20–25% vs 24–27% "≥18 y younger". Caveat: the Data Axl
 2013) while ACS nonrelative counts move slowly, so the *level* of secondary families is driven by compilation vintage.
 
 **[full] Pooled households vs ACS: surname mix by number of adults, 2006–2023** (`hh_surnames.sql`, 9.5 min on 16 cores;
-`code/analysis/dataaxle/hh_surnames_vs_acs.R`; outputs in `output/analysis/dataaxle/hh_surnames/`). Household = all family
+`code/validation/dataaxle/hh_surnames_vs_acs.R`; outputs in `output/validation/dataaxle/hh_surnames/`). Household = all family
 records (primary + secondary) at one building × unit in a year with exactly one primary family. *Single-family* = no unit number,
 all families `location_type` S (78–82% of building × unit combinations); *multi-unit* = has a unit number (13–19%). Adults = persons
 1–5 of every family; surnames hashed in-query. ACS (IPUMS 2011–2023, households, adults 18+; single-family = 1-family detached or
@@ -1147,8 +1220,8 @@ Multi-unit: 17% (DA 2012) vs 21% (ACS central, 15–25), rising to 34% in DA 201
   if it moved in with or after the primary family, or require person-level confirmation (e.g. a recent `recency_date`); check
   before using pooled sizes.
 
-**[full] Primary-family size and other generations vs ACS** (`hh_generations.sql`, 3 min; `code/analysis/dataaxle/hh_generations_vs_acs.R`;
-outputs in `output/analysis/dataaxle/hh_surnames/`). Same households as above. ACS sizes count adults 18+ only (children subtracted).
+**[full] Primary-family size and other generations vs ACS** (`hh_generations.sql`, 3 min; `code/validation/dataaxle/hh_generations_vs_acs.R`;
+outputs in `output/validation/dataaxle/hh_surnames/`). Same households as above. ACS sizes count adults 18+ only (children subtracted).
 Generations: reference = Data Axle primary person 1 / ACS householder; *child generation* = an adult ≥ 18 years younger, *older
 generation* = an adult ≥ 18 years older. Data Axle only where every listed person has an age (45–47% of households in 2009–2012,
 63–69% in 2017–2019), so these shares describe a selected subset.
@@ -1193,7 +1266,7 @@ grandchild 2.1%; behind the older generation: parent or parent-in-law 3.4% (2019
 - Same pattern as the surname test: **2012 vintages reproduce ACS household composition; later vintages keep people who have left.**
 
 **[full] Do moving primary families leave a stale secondary family behind?** (`stale_secondary.sql`, 14 min; 5% sample of buildings,
-all families there, 2006–2021; `output/analysis/dataaxle/stale_secondary/`). For each primary family at building A in t: its status in t+1
+all families there, 2006–2021; `output/validation/dataaxle/stale_secondary/`). For each primary family at building A in t: its status in t+1
 (stayed, moved to another street address, moved to a non-street address, vanished from the file) and what is at A in t+1.
 
 | Primary family t→t+1 | n | A has one of their person IDs | A has a *new* family with their surname | …as a secondary | …as a primary | A has any new family |
@@ -1225,8 +1298,8 @@ all families there, 2006–2021; `output/analysis/dataaxle/stale_secondary/`). F
 
 ### 4.7 [full] Address universe vs CoreLogic tax: unit numbers, 2019
 
-(`code/analysis/dataaxle/units_2019_dataaxle_vs_tax.R`; Bouchet job `units_2019_full.sql`, 1:40 min; outputs in
-`output/analysis/dataaxle/units_2019_dataaxle_vs_tax/`.) Unit = `upper(trim(...))`, blank = NULL.
+(`code/validation/dataaxle/units_2019_dataaxle_vs_tax.R`; Bouchet job `units_2019_full.sql`, 1:40 min; outputs in
+`output/validation/dataaxle/units_2019_dataaxle_vs_tax/`.) Unit = `upper(trim(...))`, blank = NULL.
 
 | | Data Axle 2019 family records | CoreLogic `tax` rows, tax_year 2019 |
 |---|---|---|
@@ -1244,7 +1317,7 @@ all families there, 2006–2021; `output/analysis/dataaxle/stale_secondary/`). F
 - Not yet checked: whether `tax` has exactly one row per `clip` per `tax_year`.
 
 **[full] Distinct street addresses, Data Axle 2019 vs tax 2019** (`addr_2019_full.sql`, `decomp_2019_full.sql`; outputs in
-`output/analysis/dataaxle/units_2019_dataaxle_vs_tax/`). Loose key = ZIP5 + street name + house number (hashed); strict
+`output/validation/dataaxle/units_2019_dataaxle_vs_tax/`). Loose key = ZIP5 + street name + house number (hashed); strict
 key adds directions + suffix (Data Axle 2-letter suffix codes mapped to USPS). Data Axle: `address_type='S'`; tax: rows with
 house number, street name and ZIP.
 
@@ -1285,7 +1358,7 @@ parcels** (about 11m addresses, mostly not in DA). Restricted to residential cod
 has *more* addresses (92.1m), and 84% of residential tax addresses are in Data Axle.
 
 **[full] New York: the tax table is missing upstate NY in tax year 2019** (`ny_zip.sql`; outputs in
-`output/analysis/dataaxle/ny_zip_coverage/`). `tax` rows with an NY county FIPS: 61–62 counties in every tax year 2015–2021
+`output/validation/dataaxle/ny_zip_coverage/`). `tax` rows with an NY county FIPS: 61–62 counties in every tax year 2015–2021
 *except 2019*, which has only 6: the five NYC boroughs plus Nassau (36059). Rest-of-NY rows: 4.3–5.3m per year, but 0.41m in
 2019 (Nassau only). So the NY "ZIP not in tax" class above is a 2019 tax-year hole, not a structural gap. Use 2018 or 2020
 for NY outside NYC, or check other tax years for similar holes (Arkansas is the other large gap).
@@ -1305,14 +1378,14 @@ The ZIPs missing from one side are PO-box/unique-building ZIPs with ≤ 52 addre
 (Westchester) ZIPs that the DOH list also assigns to the Bronx, and Westchester is in the 2019 hole. Address = distinct street
 name + house number, so a Manhattan building counts once in both sources.
 
-**[full] Distinct ZIPs, states and counties by year** (`zips_by_year.sql`; `output/analysis/dataaxle/ny_zip_coverage/zips_by_year.csv`).
+**[full] Distinct ZIPs, states and counties by year** (`zips_by_year.sql`; `output/validation/dataaxle/ny_zip_coverage/zips_by_year.csv`).
 Data Axle: 37.8–38.5k ZIPs in every year 2006–2023 (2022 partial file still 38.0k), all 51 states. `tax` by `tax_year`:
 sparse before 2010 (≤ 2,104 ZIPs before 2008); from 2012 on, 32.4–35.7k ZIPs and 2,705–2,984 county FIPS codes. **2019 dips**
 (32.6k ZIPs, 2,826 counties vs 2,945 in 2018 and 2,973 in 2020): the NY hole plus other missing counties. 2025 is partial
 and 2026 only starting (3.8k ZIPs). Tax ZIP counts sit about 3–5k below Data Axle's (PO-box / unique ZIPs, missing counties).
 
-**[full] County maps, 2019** (`code/analysis/dataaxle/county_overlap_2019_map.R`, `county_2019_full.sql`; outputs in
-`output/analysis/dataaxle/county_overlap_2019/`). DA county = `ge_census_state_2010 * 1000 + ge_als_county_code_2010`
+**[full] County maps, 2019** (`code/validation/dataaxle/county_overlap_2019_map.R`, `county_2019_full.sql`; outputs in
+`output/validation/dataaxle/county_overlap_2019/`). DA county = `ge_census_state_2010 * 1000 + ge_als_county_code_2010`
 (both USMALLINT); tax county = `fips_code`. Medians over 3,151 counties: overlap (both / either) 58.5%; share of DA
 addresses missing in tax 14.7%; share of tax addresses missing in DA 29.8% (residential parcels only: 24.1%).
 - **326 counties have Data Axle addresses but no 2019 tax address**: AR 72 of 75, NY 56 of 62, KS 57 of 105,
@@ -1328,7 +1401,7 @@ addresses missing in tax 14.7%; share of tax addresses missing in DA 29.8% (resi
   parcels), consistent with rural route / unaddressed parcels.
 
 **[full] Are unmatched addresses typos? ZIP validity and near misses, 2019** (`typo_2019_full.sql`, 3.5 min on 7 cores;
-outputs in `output/analysis/dataaxle/nyc_overlap_2019/`). ZIP list = HUD–USPS ZIP–county crosswalk, March 2019
+outputs in `output/validation/dataaxle/nyc_overlap_2019/`). ZIP list = HUD–USPS ZIP–county crosswalk, March 2019
 (`data/hud/zip_to_county/ZIP_COUNTY_032019.xlsx`: 39,461 ZIPs with USPS deliveries, 34,897 with residential addresses).
 
 | | Addresses | ZIP not in USPS list | ZIP has no residential deliveries | Other source has same street+no. in another ZIP (same ZIP3) | …same ZIP+no., street ≤ 2 edits | …same ZIP+street, no. 1 char off |
@@ -1351,7 +1424,7 @@ outputs in `output/analysis/dataaxle/nyc_overlap_2019/`). ZIP list = HUD–USPS 
 - CoreLogic CASS-standardises situs addresses: `situs_delivery_point_validation_code` (2021 sample) is Y = USPS-confirmed for 69%
   of rows, NULL 23%, N 5% (county averages 0.79–0.92; AK 0.48).
 
-**NYC by ZIP, 2019** (`code/analysis/dataaxle/nyc_overlap_2019_map.R`; 2010 ZCTAs). 853.7k DA vs 834.3k tax addresses, 749.8k
+**NYC by ZIP, 2019** (`code/validation/dataaxle/nyc_overlap_2019_map.R`; 2010 ZCTAs). 853.7k DA vs 834.3k tax addresses, 749.8k
 in both: 87.8% of DA and 89.9% of tax matched; overlap 79.9%. Staten Island, Queens and Brooklyn ≥ 85–95% overlap; Manhattan
 is lowest. A third (33.5%) of unmatched NYC addresses have a near-miss partner, rising to most of Manhattan, where tax lots
 carry one number of a multi-number building. 10704/10705 (Yonkers) and 11697 (Breezy Point, a cooperative with no
@@ -1366,7 +1439,7 @@ any street name containing AMST): 0–4 family records per year, against 9–17 
 So this is a persistent Data Axle coverage gap for specific buildings, not a 2019 glitch, ZIP assignment or spelling issue.
 
 **[full] What are the Data Axle addresses missing from tax? (2019, `resid_2019_full.sql`, 6.5 min on 11 cores; outputs in
-`output/analysis/dataaxle/units_2019_dataaxle_vs_tax/residual_2019/`).** Per DA address: classification and DA attributes.
+`output/validation/dataaxle/units_2019_dataaxle_vs_tax/residual_2019/`).** Per DA address: classification and DA attributes.
 
 | Class | m | Families/addr | With units | USPS no-stats | Mailability = 1 | Median LOR | Owner / renter | Also in DA 2017 / 2021 |
 |---|---|---|---|---|---|---|---|---|
@@ -1426,7 +1499,7 @@ of the same-structure class), and the Amsterdam Ave walk-ups show persistent DA 
 (Characterised below for single-family.)
 
 **[full] Tax-only single-family addresses (2019, `taxonly_sfr_2019_full.sql`, 4.6 min on 27 cores; outputs in
-`output/analysis/dataaxle/taxonly_sfr_2019/`).** Addresses with a code-10 parcel: 81.4m, 68.5m in DA 2019, **12.9m tax-only**.
+`output/validation/dataaxle/taxonly_sfr_2019/`).** Addresses with a code-10 parcel: 81.4m, 68.5m in DA 2019, **12.9m tax-only**.
 Ordered classification (first rule that applies):
 
 | Class | m | % of tax-only |
@@ -1448,8 +1521,8 @@ Ordered classification (first rule that applies):
   not the street address (DA `address_type` ≠ 'S'), a rural pattern; tax-only shares are highest in AK, WY, VT, MT, WV, MS, NM, ID.
 - `homestead_exempt_indicator` is only ever TRUE or NULL (uninformative as coded).
 
-**[full] Street-level match shares (2019, `streets_2019_full.sql`, 1.7 min; `code/analysis/dataaxle/streets_2019_missing_shares.R`;
-outputs in `output/analysis/dataaxle/streets_2019_missing_shares/`).** Street = ZIP5 + street name. Keeping streets with > 10 addresses
+**[full] Street-level match shares (2019, `streets_2019_full.sql`, 1.7 min; `code/validation/dataaxle/streets_2019_missing_shares.R`;
+outputs in `output/validation/dataaxle/streets_2019_missing_shares/`).** Street = ZIP5 + street name. Keeping streets with > 10 addresses
 (union of both sources) drops 53% of streets (3.07m) but only 11% of addresses (10.5% of DA, 10.5% of tax). Kept: 2.68m streets,
 of which 2.44m in both sources, 0.10m DA-only streets in ZIPs that tax covers (3.1m DA addresses), 0.10m streets in ZIPs absent from
 tax (3.2m), 37k tax-only streets (0.9m).
@@ -1503,8 +1576,8 @@ since a failed DA parcel geocode itself suggests no parcel. "Low-coverage" count
 Direct 10.6m (48%), candidate 6.3m (28%), correlate 2.9m (13%), unexplained/not characterised 2.4m (11%). Note 4.2m tax-only SFR
 parcels have mail at the property and code O (owner-occupied); these fall outside the absentee class by construction.
 
-**[full] Pooled address universes, 2012–2021** (`tm_pooled.sql`, `tm_pooled_tax.sql`, 8 + 19 min; `code/analysis/dataaxle/address_universe_treemap_pooled.R`;
-outputs in `output/analysis/dataaxle/address_universe_treemap/`). Same classification as the 2019 breakdown, on all street addresses seen in any
+**[full] Pooled address universes, 2012–2021** (`tm_pooled.sql`, `tm_pooled_tax.sql`, 8 + 19 min; `code/validation/dataaxle/address_universe_treemap_pooled.R`;
+outputs in `output/validation/dataaxle/address_universe_treemap/`). Same classification as the 2019 breakdown, on all street addresses seen in any
 year 2012–2021; **matched = same loose key in both sources in any year** (attributes from the latest year seen). Data Axle 109.8m, tax 112.8m,
 **matched 95.6m (87% of DA, 85% of tax)**; 94.9m of these also share a year.
 
@@ -1527,7 +1600,7 @@ comparison. Absentee ownership is common among *matched* SFR too (10.2m A-coded 
 DA; 4.2m tax-only SFR parcels have mail at the property and code O.
 
 **[full] Addresses dropping in and out of Data Axle, 2006–2023 (`gaps_full.sql`, 11 min on 7 cores; outputs in
-`output/analysis/dataaxle/dataaxle_gaps/`).** 2022 excluded (truncated file). Address key as above.
+`output/validation/dataaxle/dataaxle_gaps/`).** 2022 excluded (truncated file). Address key as above.
 - Of 120.1m addresses ever in DA, 48.4m (40%) are missing in at least one year between their first and last appearance
   (16.1m one year, 9.7m two, 11.5m five or more). Single-year holes (present year before and after, absent in Y): 1.9–4.2m per
   year, 2–5% of the previous year's addresses; 1.86m in 2019. 2010 has the most holes (4.2m single, 14.5m any).

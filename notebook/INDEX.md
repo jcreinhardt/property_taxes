@@ -1,5 +1,13 @@
 # Research notebook: index (newest first)
 
+- 2026-10-27 [Who Data Axle tracks across a move](2026-10-27-dataaxle-tracking-bias/README.md) -- 24% of leavers tracked (sellers 53%); tracking favours multi-person, higher-income, owner, prime-age records; lost are thin single-person low-income renter records; no local-move bias
+- 2026-10-27 [Data Axle out-migration by tenure vs ACS](2026-10-27-dataaxle-outmigration-by-tenure/README.md) -- total ≈ ACS (10–14% vs 13–16%); owners 1.5–2× ACS, renters half to two-thirds of ACS; renters only 10–19% of units
+- 2026-10-27 [Data Axle quarterly files](2026-10-27-dataaxle-quarterly-files/README.md) -- re-cuts of the annual compile, no within-year updates; but they replace the truncated annual 2022 (173.6m families rebuilt)
+- 2026-10-16 [Data Axle file cut-offs and the 2015/2017 spikes](2026-10-16-dataaxle-file-cutoffs/README.md) -- annual files cut in different months (2016-06, 2018-07 …); spikes vanish when annualised; 2017→18 pair spans 14 months
+- 2026-10-16 [Data Axle move-out detection](2026-10-16-dataaxle-moveout-detection/README.md) -- aggregate 13% matches ACS by offsetting errors (owners 2× too high, renters low); 83% of sales get a new household; 88% of tax owner changes have a deed
+- 2026-10-16 [CoreLogic owner-occupancy code](2026-10-16-owner-occupancy-code/README.md) -- it is the mailing-address rule + homestead flag; recall 91–98% but 38–61% of non-discounted homes coded O; overstates owner-occupancy 5–15 pp
+- 2026-10-16 [Tax roll coverage gaps](2026-10-16-tax-roll-gaps/README.md) -- 85% of gaps are whole county-year deliveries (93% with zero rows); the 44 odd county-years are New England town-year deliveries, no key fix helps
+- 2026-10-16 [Data Axle households vs ACS](2026-10-16-dataaxle-households-vs-acs/README.md) -- pooled families match ACS surname mix in 2012, overshoot from 2017; ≤1-yr tenure 4–8 pp short every year; no stale-secondary effect
 - 2026-10-27 [SALT cap: synthesis and design assessment](2026-10-27-salt-cap-synthesis/README.md) -- no migration, rate or dispersion response; prices fell somewhat, only the property-tax part looks like capitalisation; effects mostly from 2020
 - 2026-10-21 [Capitalisation by lost-subsidy component and level](2026-10-21-capitalisation-by-component/README.md) -- county −0.32% (2019) to −0.65% per $100/yr per owner, loading on the income-tax part; property part significant across states (2019 −1.5%); ZIP design has price-tier pre-trends
 - 2026-10-21 [Migration responses](2026-10-21-migration-nulls/README.md) -- none pre-COVID in SOI flows, Data Axle, enrolment or turnover; high→low cross-border flows fell in 2020–22
