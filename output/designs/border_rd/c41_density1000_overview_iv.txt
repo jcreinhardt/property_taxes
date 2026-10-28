@@ -1,0 +1,225 @@
+Sample: tracts below 1,000 per sq mi within 50 mi of a ranked border; 10478 tracts (4842 low, 5636 high), 68 pairs. Unit FE + pair x year FE (pair x side x year pooled), SE by county.
+
+First stage (cross-section): competition (SD units) on Z, pair FE, with / without log density: b (t)
+            sample                Z         dens          raw     n
+      low-tax side per 10 mi closer 0.189 (10.2) 0.189 (10.1)  4780
+      low-tax side     near < 10 mi  0.455 (9.6)  0.455 (9.6)  4780
+     high-tax side per 10 mi closer  0.137 (9.9)  0.137 (9.9)  5559
+     high-tax side     near < 10 mi  0.287 (8.7)  0.287 (8.6)  5559
+ both sides pooled per 10 mi closer 0.160 (14.1) 0.160 (14.0) 10339
+ both sides pooled     near < 10 mi 0.367 (12.7) 0.367 (12.6) 10339
+
+== near x year | with log density x year 
+  post - pre (mean 2018+ minus 2013-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)
+                              outcome both sides pooled | near < 10 mi
+                log median sale price                    -0.005 (-0.6)
+              log tax bill per parcel                    -0.009 (-1.4)
+                   effective tax rate                    -0.023 (-1.9)
+                sales per 100 parcels                      0.080 (1.4)
+          log median home value (ACS)                    -0.009 (-2.5)
+                 log population (ACS)                    -0.006 (-1.5)
+            move-out rate (Data Axle)                      0.039 (0.7)
+  log district property tax per pupil                    -0.011 (-1.1)
+      log district spending per pupil                      0.002 (0.3)
+               log district enrolment                    -0.008 (-1.7)
+ log county school property tax (CoG)                    -0.036 (-1.7)
+ both sides pooled | per 10 mi closer high-tax side | near < 10 mi
+                        -0.000 (-0.1)                -0.004 (-0.4)
+                        -0.002 (-0.8)                -0.013 (-1.5)
+                        -0.006 (-1.1)                -0.030 (-1.6)
+                          0.022 (1.1)                  0.133 (2.0)
+                        -0.004 (-2.8)                -0.015 (-3.0)
+                        -0.004 (-2.9)                -0.013 (-2.3)
+                          0.013 (0.7)                -0.022 (-0.3)
+                        -0.002 (-0.6)                -0.014 (-1.3)
+                          0.001 (0.4)                -0.001 (-0.2)
+                        -0.003 (-1.9)                -0.012 (-2.1)
+                        -0.006 (-1.1)                -0.051 (-2.7)
+ high-tax side | per 10 mi closer low-tax side | near < 10 mi
+                    -0.001 (-0.2)               -0.006 (-0.5)
+                    -0.003 (-0.7)               -0.003 (-0.4)
+                    -0.006 (-0.6)               -0.015 (-1.0)
+                      0.030 (1.3)                 0.016 (0.2)
+                    -0.005 (-3.2)               -0.002 (-0.4)
+                    -0.006 (-3.1)                 0.002 (0.3)
+                      0.007 (0.3)                 0.106 (1.3)
+                    -0.003 (-0.7)               -0.005 (-0.3)
+                      0.001 (0.5)                 0.006 (0.7)
+                    -0.005 (-2.6)               -0.002 (-0.2)
+                    -0.007 (-1.3)               -0.019 (-0.5)
+ low-tax side | per 10 mi closer
+                     0.000 (0.1)
+                   -0.001 (-0.3)
+                   -0.007 (-1.4)
+                     0.012 (0.4)
+                   -0.001 (-0.7)
+                   -0.002 (-0.8)
+                     0.021 (0.7)
+                   -0.001 (-0.1)
+                   -0.000 (-0.1)
+                   -0.000 (-0.0)
+                   -0.005 (-0.5)
+
+== near x year | without density 
+  post - pre (mean 2018+ minus 2013-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)
+                              outcome both sides pooled | near < 10 mi
+                log median sale price                    -0.005 (-0.6)
+              log tax bill per parcel                    -0.009 (-1.4)
+                   effective tax rate                    -0.023 (-1.9)
+                sales per 100 parcels                      0.079 (1.3)
+          log median home value (ACS)                    -0.009 (-2.5)
+                 log population (ACS)                    -0.006 (-1.4)
+            move-out rate (Data Axle)                      0.039 (0.7)
+  log district property tax per pupil                    -0.012 (-1.2)
+      log district spending per pupil                      0.002 (0.3)
+               log district enrolment                    -0.008 (-1.6)
+ log county school property tax (CoG)                    -0.036 (-1.7)
+ both sides pooled | per 10 mi closer high-tax side | near < 10 mi
+                        -0.000 (-0.1)                -0.004 (-0.4)
+                        -0.002 (-0.7)                -0.013 (-1.5)
+                        -0.006 (-1.1)                -0.030 (-1.6)
+                          0.022 (1.1)                  0.133 (2.0)
+                        -0.004 (-2.8)                -0.015 (-3.0)
+                        -0.004 (-2.8)                -0.013 (-2.2)
+                          0.013 (0.7)                -0.022 (-0.3)
+                        -0.002 (-0.7)                -0.014 (-1.4)
+                          0.001 (0.4)                -0.001 (-0.2)
+                        -0.003 (-2.1)                -0.012 (-2.0)
+                        -0.006 (-1.1)                -0.052 (-2.7)
+ high-tax side | per 10 mi closer low-tax side | near < 10 mi
+                    -0.001 (-0.2)               -0.006 (-0.5)
+                    -0.003 (-0.7)               -0.004 (-0.4)
+                    -0.006 (-0.6)               -0.015 (-1.0)
+                      0.030 (1.3)                 0.015 (0.2)
+                    -0.005 (-3.2)               -0.002 (-0.4)
+                    -0.006 (-3.0)                 0.002 (0.3)
+                      0.007 (0.3)                 0.106 (1.3)
+                    -0.003 (-0.7)               -0.007 (-0.4)
+                      0.001 (0.5)                 0.006 (0.6)
+                    -0.005 (-2.7)               -0.001 (-0.1)
+                    -0.008 (-1.3)               -0.019 (-0.5)
+ low-tax side | per 10 mi closer
+                     0.000 (0.1)
+                   -0.001 (-0.3)
+                   -0.007 (-1.4)
+                     0.012 (0.3)
+                   -0.001 (-0.7)
+                   -0.001 (-0.8)
+                     0.021 (0.7)
+                   -0.001 (-0.2)
+                   -0.000 (-0.0)
+                   -0.000 (-0.0)
+                   -0.005 (-0.5)
+
+== IV: competition x year | with log density x year 
+  post - pre (mean 2018+ minus 2013-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)
+                              outcome both sides pooled | near < 10 mi
+                log median sale price                    -0.016 (-0.7)
+              log tax bill per parcel                    -0.024 (-1.5)
+                   effective tax rate                    -0.062 (-1.9)
+                sales per 100 parcels                      0.226 (1.4)
+          log median home value (ACS)                    -0.024 (-2.5)
+                 log population (ACS)                    -0.018 (-1.6)
+            move-out rate (Data Axle)                      0.097 (0.7)
+  log district property tax per pupil                    -0.024 (-1.1)
+      log district spending per pupil                      0.003 (0.2)
+               log district enrolment                    -0.020 (-1.7)
+ log county school property tax (CoG)                    -0.067 (-1.6)
+ both sides pooled | per 10 mi closer high-tax side | near < 10 mi
+                        -0.004 (-0.2)                -0.020 (-0.6)
+                        -0.015 (-0.8)                -0.047 (-1.5)
+                        -0.039 (-1.0)                -0.098 (-1.5)
+                          0.137 (1.1)                  0.469 (2.0)
+                        -0.024 (-3.0)                -0.050 (-2.9)
+                        -0.026 (-3.0)                -0.050 (-2.4)
+                          0.069 (0.6)                -0.085 (-0.4)
+                        -0.012 (-0.7)                -0.046 (-1.3)
+                          0.001 (0.1)                -0.007 (-0.3)
+                        -0.015 (-1.9)                -0.042 (-2.2)
+                        -0.036 (-1.1)                -0.121 (-2.5)
+ high-tax side | per 10 mi closer low-tax side | near < 10 mi
+                    -0.010 (-0.3)               -0.012 (-0.5)
+                    -0.025 (-0.8)               -0.007 (-0.4)
+                    -0.040 (-0.5)               -0.034 (-1.0)
+                      0.210 (1.2)                 0.039 (0.2)
+                    -0.042 (-3.3)               -0.005 (-0.5)
+                    -0.044 (-3.2)                 0.004 (0.3)
+                      0.040 (0.2)                 0.225 (1.2)
+                    -0.019 (-0.8)               -0.006 (-0.2)
+                      0.001 (0.1)                 0.010 (0.6)
+                    -0.030 (-2.5)               -0.002 (-0.2)
+                    -0.039 (-1.1)               -0.030 (-0.5)
+ low-tax side | per 10 mi closer
+                     0.001 (0.0)
+                   -0.005 (-0.3)
+                   -0.039 (-1.4)
+                     0.067 (0.4)
+                   -0.008 (-0.8)
+                   -0.009 (-0.9)
+                     0.095 (0.6)
+                   -0.005 (-0.2)
+                     0.001 (0.1)
+                   -0.001 (-0.1)
+                   -0.032 (-0.6)
+
+== IV: competition x year | without density 
+  post - pre (mean 2018+ minus 2013-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)
+                              outcome both sides pooled | near < 10 mi
+                log median sale price                    -0.016 (-0.7)
+              log tax bill per parcel                    -0.025 (-1.5)
+                   effective tax rate                    -0.061 (-1.9)
+                sales per 100 parcels                      0.222 (1.4)
+          log median home value (ACS)                    -0.024 (-2.4)
+                 log population (ACS)                    -0.018 (-1.6)
+            move-out rate (Data Axle)                      0.097 (0.7)
+  log district property tax per pupil                    -0.027 (-1.2)
+      log district spending per pupil                      0.002 (0.2)
+               log district enrolment                    -0.019 (-1.6)
+ log county school property tax (CoG)                    -0.068 (-1.6)
+ both sides pooled | per 10 mi closer high-tax side | near < 10 mi
+                        -0.005 (-0.2)                -0.020 (-0.6)
+                        -0.015 (-0.9)                -0.047 (-1.5)
+                        -0.038 (-1.0)                -0.097 (-1.5)
+                          0.134 (1.1)                  0.466 (2.0)
+                        -0.024 (-3.0)                -0.050 (-2.9)
+                        -0.026 (-3.1)                -0.050 (-2.4)
+                          0.068 (0.6)                -0.086 (-0.4)
+                        -0.012 (-0.7)                -0.048 (-1.4)
+                          0.002 (0.2)                -0.007 (-0.3)
+                        -0.018 (-2.2)                -0.041 (-2.1)
+                        -0.037 (-1.1)                -0.124 (-2.5)
+ high-tax side | per 10 mi closer low-tax side | near < 10 mi
+                    -0.010 (-0.4)               -0.012 (-0.5)
+                    -0.027 (-0.8)               -0.007 (-0.4)
+                    -0.039 (-0.5)               -0.033 (-1.0)
+                      0.208 (1.2)                 0.035 (0.2)
+                    -0.042 (-3.3)               -0.005 (-0.5)
+                    -0.045 (-3.2)                 0.004 (0.3)
+                      0.039 (0.2)                 0.225 (1.2)
+                    -0.018 (-0.8)               -0.009 (-0.3)
+                      0.002 (0.1)                 0.010 (0.6)
+                    -0.033 (-2.7)               -0.001 (-0.1)
+                    -0.043 (-1.1)               -0.030 (-0.5)
+ low-tax side | per 10 mi closer
+                     0.000 (0.0)
+                   -0.005 (-0.3)
+                   -0.039 (-1.4)
+                     0.063 (0.3)
+                   -0.008 (-0.8)
+                   -0.009 (-0.9)
+                     0.095 (0.6)
+                   -0.006 (-0.3)
+                     0.001 (0.1)
+                   -0.003 (-0.2)
+                   -0.032 (-0.6)
+
+== balance: controls at p < .05 / Holm (of 15 raw, 14 given density), median |b|
+        sample                Z spec p05 holm05 median_abs max_abs
+  low-tax side per 10 mi closer  raw   3      0      0.022    0.05
+  low-tax side per 10 mi closer dens   3      0      0.024    0.05
+  low-tax side     near < 10 mi  raw   4      1      0.068    0.16
+  low-tax side     near < 10 mi dens   5      1      0.070    0.16
+ high-tax side per 10 mi closer  raw   3      1      0.008    0.04
+ high-tax side per 10 mi closer dens   3      1      0.009    0.04
+ high-tax side     near < 10 mi  raw   5      2      0.067    0.19
+ high-tax side     near < 10 mi dens   5      2      0.075    0.19

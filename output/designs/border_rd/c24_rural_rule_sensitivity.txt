@@ -1,0 +1,104 @@
+Metros (>= 0.5m) that straddle a ranked border: share of the metro's population within 50 mi of the line on each side
+      pair                       cbsa_name cbsa_pop  high   low
+    <char>                          <char>    <num> <num> <num>
+ 1:  NJ-NY     New York-Newark-Jersey City    18.30  0.29  0.48
+ 2:  NJ-PA  Philadelphia-Camden-Wilmington     6.03  0.21  0.56
+ 3:  MD-VA Washington-Arlington-Alexandria     5.95  0.35  0.16
+ 4:  IL-MO                       St. Louis     2.74  0.23  0.73
+ 5:  NC-SC      Charlotte-Concord-Gastonia     2.45  0.82  0.14
+ 6:  OR-WA    Portland-Vancouver-Hillsboro     2.38  0.79  0.19
+ 7:  KY-OH                      Cincinnati     2.17  0.59  0.16
+ 8:  KS-MO                     Kansas City     2.05  0.41  0.57
+ 9:  MA-RI              Providence-Warwick     1.60  0.55  0.33
+10:  MS-TN                         Memphis     1.32  0.39  0.13
+11:  IN-KY     Louisville/Jefferson County     1.24  0.76  0.17
+12:  IA-NE            Omaha-Council Bluffs     0.91  0.12  0.85
+13:  NJ-PA      Allentown-Bethlehem-Easton     0.83  0.13  0.84
+14:  GA-SC         Augusta-Richmond County     0.58  0.60  0.30
+15:  OH-PA      Youngstown-Warren-Boardman     0.55  0.19  0.74
+16:  GA-TN                     Chattanooga     0.55  0.22  0.64
+
+Balance of the low side within 50 mi by rule and share cutoff c (pairs dropped when a metro >= 0.5m has >= c of its population in the window on that side).
+ 21 outcomes/controls: joint_rej = joint p < .05 (5-mi bins); gap = mean(30-50 mi) - mean(0-10 mi) in SD units; rate_slope10 = effective-rate slope per 10 mi (SD).
+
+== rule: low side
+  cut pairs tracts joint_rej gap_gt_0.1 median_abs_gap max_abs_gap
+  10%    33   3366        14         12          0.118        0.24
+  20%    39   4343        14          7          0.054        0.24
+  30%    40   4526         8          6          0.044        0.24
+  40%    42   5742        15          6          0.069        0.20
+  50%    44   8132        16          7          0.075        0.19
+  60%    47   9489        19          7          0.063        0.18
+  70%    49  10030        18          6          0.050        0.15
+  80%    52  11310        19         11          0.116        0.30
+  90%    57  14223        15          9          0.085        0.34
+ none    59  15440         8          9          0.078        0.34
+ median_abs_slope10 slope_rej rate_slope10 rate_gap
+              0.035        10       -0.048    -0.16
+              0.016         5       -0.045    -0.14
+              0.014         5       -0.038    -0.12
+              0.021         1       -0.032    -0.07
+              0.023         1        0.011     0.11
+              0.023         0        0.013     0.10
+              0.022         0        0.009     0.08
+              0.028         1        0.013     0.09
+              0.023         3        0.052     0.21
+              0.022         2        0.062     0.24
+
+== rule: high side
+  cut pairs tracts joint_rej gap_gt_0.1 median_abs_gap max_abs_gap
+  10%    24   4021        14         15          0.189        0.51
+  20%    27   4729        14         15          0.251        0.58
+  30%    34   9532        17         15          0.160        0.52
+  40%    37   9827        16         15          0.152        0.50
+  50%    40  10679        12         15          0.155        0.43
+  60%    43  11444        13         15          0.174        0.43
+  70%    45  11910        12         15          0.162        0.43
+  80%    49  12509        11         13          0.168        0.37
+  90%    53  13869        13         13          0.146        0.39
+ none    59  15440         8          9          0.078        0.34
+ median_abs_slope10 slope_rej rate_slope10 rate_gap
+              0.057         9       -0.042    -0.11
+              0.072        12       -0.011    -0.02
+              0.057         6        0.084     0.32
+              0.054         5        0.081     0.30
+              0.057         3        0.096     0.34
+              0.056         3        0.082     0.30
+              0.052         5        0.068     0.25
+              0.046         6        0.062     0.23
+              0.044         6        0.054     0.20
+              0.022         2        0.062     0.24
+
+== rule: either side
+  cut pairs tracts joint_rej gap_gt_0.1 median_abs_gap max_abs_gap
+  10%    19   1802         9         14          0.164        0.37
+  20%    21   2058         9         14          0.140        0.36
+  30%    23   2291        10         14          0.127        0.33
+  40%    26   2586        10         13          0.131        0.32
+  50%    29   5092        12         16          0.135        0.25
+  60%    34   6759        15         17          0.172        0.47
+  70%    37   7332        12         15          0.152        0.39
+  80%    44   9211        18         16          0.227        0.42
+  90%    51  12652        15         15          0.137        0.40
+ none    59  15440         8          9          0.078        0.34
+ median_abs_slope10 slope_rej rate_slope10 rate_gap
+              0.043         9       -0.037    -0.11
+              0.037         7       -0.027    -0.08
+              0.037         7       -0.025    -0.08
+              0.032         6       -0.029    -0.08
+              0.042         3        0.055     0.20
+              0.040         0        0.001     0.05
+              0.037         4       -0.017    -0.03
+              0.064         8       -0.006     0.02
+              0.049         6        0.041     0.17
+              0.022         2        0.062     0.24
+
+== residualised on distance to the nearest metro centre (>= 0.5m; bins 0-10 ... 150+ mi), bin coefficients and slopes net of it
+                              rule  cut pairs tracts joint_rej gap_gt_0.1
+            metro-distance control none    59  15440        10          9
+  low 30% + metro-distance control  30%    40   4526         9          6
+ high 30% + metro-distance control  30%    34   9532        15         16
+ median_abs_gap max_abs_gap median_abs_slope10 slope_rej rate_slope10 rate_gap
+          0.097        0.35              0.036         4        0.069     0.25
+          0.056        0.16              0.020         3       -0.037    -0.12
+          0.141        0.46              0.055         6        0.081     0.29

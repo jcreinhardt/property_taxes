@@ -1,0 +1,178 @@
+A. BOTH SIDES. Tracts within 50 mi on either side, pair-sides with a metro core dropped: 91 pair-sides, 14195 tracts (low 5742 , high 8453 ), near: 5366 
+    tract (unit) FE + pair x side x year FE, SE by county. post - pre in SD units of the outcome (per SD of exposure for the interaction). Cells: estimate (t).
+                              outcome near x year (both sides)
+                log median sale price              0.017 (0.9)
+              log tax bill per parcel              0.004 (0.3)
+                   effective tax rate            -0.053 (-1.5)
+                sales per 100 parcels              0.054 (1.3)
+          log median home value (ACS)            -0.012 (-1.2)
+                 log population (ACS)            -0.015 (-2.2)
+            move-out rate (Data Axle)            -0.055 (-1.7)
+  log district property tax per pupil            -0.021 (-2.2)
+      log district spending per pupil            -0.005 (-0.3)
+               log district enrolment            -0.002 (-0.4)
+ log county school property tax (CoG)            -0.020 (-1.6)
+ near x high-side x year (+ near x year) near x exposure x year
+                             0.037 (1.1)          -0.018 (-0.7)
+                             0.022 (1.0)          -0.008 (-0.8)
+                           -0.052 (-1.0)            0.006 (0.1)
+                             0.033 (0.4)          -0.040 (-1.0)
+                             0.008 (0.5)            0.012 (1.2)
+                           -0.011 (-0.8)            0.004 (0.5)
+                           -0.113 (-2.2)            0.006 (0.2)
+                             0.027 (1.1)            0.014 (1.7)
+                           -0.021 (-0.6)            0.017 (0.9)
+                           -0.009 (-0.9)            0.000 (0.0)
+                           -0.013 (-0.5)            0.020 (0.6)
+
+   balance of near vs far within pair-side, by side (near coefficient, SD units, pair-side FE; SE):
+      covariate         high          low
+    log density  0.31 (0.06)  0.15 (0.08)
+ log home value -0.14 (0.07) -0.02 (0.05)
+     log income -0.19 (0.08) -0.00 (0.05)
+     median age -0.09 (0.06)  0.08 (0.06)
+    owner share -0.30 (0.09)  0.02 (0.06)
+      share BA+ -0.11 (0.09) -0.04 (0.08)
+    share white -0.30 (0.09) -0.01 (0.07)
+     year built -0.31 (0.07) -0.05 (0.06)
+
+B. LOW SIDE, CONTINUOUS DISTANCE (z = -distance / 10 mi, closer = +), density x year control. Tract FE + pair x year FE. post - pre in SD units per 10 mi closer (per SD of exposure for z x exposure).
+                              outcome all pairs, no control
+                log median sale price         -0.003 (-0.5)
+              log tax bill per parcel           0.000 (0.0)
+                   effective tax rate           0.010 (0.7)
+                sales per 100 parcels           0.010 (0.5)
+          log median home value (ACS)         -0.003 (-0.9)
+                 log population (ACS)         -0.006 (-2.1)
+            move-out rate (Data Axle)         -0.002 (-0.2)
+  log district property tax per pupil         -0.003 (-0.6)
+      log district spending per pupil           0.001 (0.1)
+               log district enrolment         -0.001 (-0.7)
+ log county school property tax (CoG)         -0.004 (-0.8)
+ all pairs, + density x year all pairs, z x exposure, + density
+               -0.004 (-0.6)                        0.022 (2.3)
+               -0.000 (-0.1)                      -0.011 (-2.0)
+                 0.011 (0.7)                      -0.071 (-3.1)
+                 0.009 (0.4)                        0.075 (3.2)
+               -0.004 (-1.1)                      -0.011 (-2.9)
+               -0.005 (-1.8)                      -0.016 (-3.3)
+               -0.001 (-0.1)                      -0.006 (-0.4)
+               -0.002 (-0.3)                        0.014 (1.6)
+                 0.001 (0.2)                        0.018 (1.9)
+               -0.002 (-1.1)                      -0.007 (-2.6)
+               -0.004 (-0.8)                      -0.008 (-0.5)
+ rural 45%, no control rural 45%, + density x year
+         -0.004 (-0.4)               -0.006 (-0.6)
+           0.002 (0.2)                 0.002 (0.3)
+           0.020 (0.9)                 0.023 (1.0)
+           0.008 (0.3)                 0.007 (0.3)
+         -0.005 (-1.1)               -0.005 (-1.1)
+         -0.004 (-0.9)               -0.003 (-0.8)
+           0.017 (1.4)                 0.019 (1.5)
+         -0.018 (-1.9)               -0.016 (-1.6)
+         -0.011 (-0.9)               -0.011 (-0.9)
+           0.002 (0.7)                 0.001 (0.5)
+         -0.006 (-0.9)               -0.006 (-0.8)
+ rural 45%, z x exposure, + density
+                        0.065 (2.4)
+                      -0.028 (-2.0)
+                      -0.239 (-3.6)
+                        0.100 (2.7)
+                      -0.031 (-2.8)
+                      -0.031 (-3.6)
+                      -0.063 (-2.2)
+                      -0.012 (-0.5)
+                        0.052 (1.1)
+                      -0.010 (-1.1)
+                      -0.056 (-1.3)
+
+Extended local-government outcomes (18's set): cells with |t| > 1.96 and median |estimate| by design x spec x source
+    design                                    spec
+    <char>                                  <char>
+ 1:      A                  near x exposure x year
+ 2:      A                  near x exposure x year
+ 3:      A                  near x exposure x year
+ 4:      A                  near x exposure x year
+ 5:      A near x high-side x year (+ near x year)
+ 6:      A near x high-side x year (+ near x year)
+ 7:      A near x high-side x year (+ near x year)
+ 8:      A near x high-side x year (+ near x year)
+ 9:      A                near x year (both sides)
+10:      A                near x year (both sides)
+11:      A                near x year (both sides)
+12:      A                near x year (both sides)
+13:      B                   all pairs, no control
+14:      B                   all pairs, no control
+15:      B                   all pairs, no control
+16:      B                   all pairs, no control
+17:      B      all pairs, z x exposure, + density
+18:      B      all pairs, z x exposure, + density
+19:      B      all pairs, z x exposure, + density
+20:      B      all pairs, z x exposure, + density
+21:      B             rural 45%, + density x year
+22:      B             rural 45%, + density x year
+23:      B             rural 45%, + density x year
+24:      B             rural 45%, + density x year
+25:      B      rural 45%, z x exposure, + density
+26:      B      rural 45%, z x exposure, + density
+27:      B      rural 45%, z x exposure, + density
+28:      B      rural 45%, z x exposure, + density
+    design                                    spec
+    <char>                                  <char>
+                                               source     k   sig median_abs
+                                               <char> <int> <int>      <num>
+ 1: CoG all local govts, census years, log per capita    26     0      0.097
+ 2:    CoG school districts by county, log per capita     7     0      0.083
+ 3:                      F-33 district, log per pupil    40     2      0.023
+ 4:                                     SEDA district     2     1      0.027
+ 5: CoG all local govts, census years, log per capita    26     1      0.089
+ 6:    CoG school districts by county, log per capita     7     0      0.165
+ 7:                      F-33 district, log per pupil    40     0      0.042
+ 8:                                     SEDA district     2     0      0.012
+ 9: CoG all local govts, census years, log per capita    26     0      0.050
+10:    CoG school districts by county, log per capita     7     0      0.049
+11:                      F-33 district, log per pupil    40     0      0.019
+12:                                     SEDA district     2     1      0.020
+13: CoG all local govts, census years, log per capita    26     2      0.012
+14:    CoG school districts by county, log per capita     7     0      0.010
+15:                      F-33 district, log per pupil    40     0      0.006
+16:                                     SEDA district     2     1      0.006
+17: CoG all local govts, census years, log per capita    26     4      0.061
+18:    CoG school districts by county, log per capita     7     0      0.036
+19:                      F-33 district, log per pupil    40     2      0.016
+20:                                     SEDA district     2     1      0.015
+21: CoG all local govts, census years, log per capita    26     1      0.021
+22:    CoG school districts by county, log per capita     7     0      0.023
+23:                      F-33 district, log per pupil    39     0      0.010
+24:                                     SEDA district     2     1      0.011
+25: CoG all local govts, census years, log per capita    26     3      0.071
+26:    CoG school districts by county, log per capita     7     0      0.078
+27:                      F-33 district, log per pupil    39     0      0.038
+28:                                     SEDA district     2     0      0.023
+                                               source     k   sig median_abs
+                                               <char> <int> <int>      <num>
+
+extended cells with |t| > 2.5:
+   design                               spec               source
+   <char>                             <char>               <char>
+1:      A             near x exposure x year        SEDA district
+2:      B all pairs, z x exposure, + density        SEDA district
+3:      B all pairs, z x exposure, + density CoG all local govts,
+                           outcome   b_sd     t
+                            <char>  <num> <num>
+1: district test scores (SEDA, SD)  0.051   2.8
+2: district test scores (SEDA, SD) -0.024  -3.1
+3:  all local govts: state revenue -0.169  -3.0
+
+core outcomes: cells with |t| > 1.96 (of 11):
+   design                                    spec   sig median_abs
+   <char>                                  <char> <int>      <num>
+1:      A                near x year (both sides)     2      0.017
+2:      A near x high-side x year (+ near x year)     1      0.022
+3:      A                  near x exposure x year     0      0.012
+4:      B                   all pairs, no control     1      0.003
+5:      B             all pairs, + density x year     0      0.004
+6:      B      all pairs, z x exposure, + density     7      0.014
+7:      B                   rural 45%, no control     0      0.006
+8:      B             rural 45%, + density x year     0      0.006
+9:      B      rural 45%, z x exposure, + density     7      0.052

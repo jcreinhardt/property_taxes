@@ -1,0 +1,276 @@
+Pair-level rural rule: pairs kept when the pw density (population / land area of all tracts within 50 mi, both sides) is below D; all their tracts used.
+
+Pairs by window density (per sq mi), with by-side densities and the population-weighted mean tract density:
+  pair tracts pop_m dens_window dens_low dens_high dens_pw
+ IA-MN    125  0.46          47       55        39     966
+ NH-VT     77  0.26          85       77       112     366
+ MI-WI     90  0.35          87       NA        87    1573
+ KY-VA     38  0.13          87       87        88     209
+ IL-KY     38  0.14          96       NA        96     569
+ AR-OK    122  0.63         102      159        63     964
+ AR-MS     28  0.09         108       NA       108     872
+ NM-TX    250  1.29         111       35       305    3389
+ IA-IL    267  1.02         123      139       102    1917
+ AL-MS    273  1.13         139      198       100    1142
+ NY-PA    444  1.65         139      135       143    2026
+ MA-VT     29  0.11         142       NA       142    2520
+ OK-TX    437  2.28         143       53       217    2370
+ AL-TN    217  1.00         150      259        85     802
+ CA-NV    228  0.95         151      426        31    3681
+ LA-TX    313  1.34         153      163       144    1351
+ IA-NE    375  1.41         166      214        78    3168
+ MD-WV     65  0.29         166      146       195     772
+ TN-VA     98  0.42         168       87       227     615
+ VA-WV    288  1.38         171      131       186    1109
+ KY-TN    583  2.62         175      222        98    1366
+ AR-MO    195  1.00         179      163       198    1177
+ OH-WV    387  1.46         181      187       177    1391
+ GA-SC    492  2.36         183      161       201    1020
+ MN-ND     48  0.23         187       NA       187    3025
+ CA-OR     58  0.30         192       NA       192    2103
+ AL-FL    226  1.12         197      128       281    1224
+ FL-GA    448  2.31         198       93       276    1849
+ ID-WA    154  0.75         199      156       226    2341
+ NY-VT    240  0.96         200      132       259    2093
+ NC-TN    371  1.68         217      167       261     906
+ IN-KY    550  2.34         220      178       251    1940
+ AZ-CA     64  0.27         229       NA       229    2587
+ ME-NH    208  0.91         235      247       219    1395
+ AL-GA    496  2.75         249      123       361    1241
+ GA-TN    165  0.83         253      316       194    1045
+ IN-MI    317  1.35         256      276       228    1273
+ IN-OH    650  2.56         259      210       307    1769
+ DE-MD    172  0.82         276      417       182    1166
+ KS-MO    630  2.60         290      232       428    2359
+ IL-MO    711  3.18         292      416       168    2587
+ MS-TN    171  0.87         296      169       425    2176
+ LA-MS    639  2.60         298      156       396    2804
+ MA-NY    141  0.55         298      212       322    2710
+ NC-VA   1081  4.72         312      274       392    2204
+ NC-SC   1224  5.60         324      264       372    1375
+ AR-TN    154  0.56         329       NA       329    2480
+ MN-WI    949  4.21         335      570        93    3254
+ CT-RI    128  0.58         365      343       373    1162
+ OH-PA    500  1.99         372      505       242    1568
+ KY-OH    485  2.04         386      242       480    2467
+ OR-WA    650  3.24         409      269       540    4115
+ MD-PA    913  3.88         441      846       317    3837
+ IA-SD     37  0.16         505       NA       505    3168
+ PA-WV    637  2.09         551      222       687    3201
+ MI-OH    862  2.94         587      818       344    3474
+ IL-IN   2014  8.24         588      187       926    9426
+ MD-VA    678  3.33         637      579       670    3558
+ IL-WI   1129  4.99         668      582       786    3936
+ CT-MA    521  2.23         759      669       849    3505
+ MA-NH    691  3.28         985     1385       457    8212
+ NJ-PA   1867  7.99         989     1153       821    6827
+ DE-PA    267  1.14        1074     2305       924    3993
+ CT-NY   1064  4.91        1240     1091      1343    4456
+ MA-RI    775  3.63        1342     1224      1922    5800
+ AZ-NV    427  1.83        2231       NA      2231    6943
+ DE-NJ     24  0.10        2326       NA      2326    3452
+ DC-MD    667  2.92        2329    10312      2055    6685
+ NJ-NY   3338 14.34        4861     7151      3129   36523
+ DC-VA    191  0.79        9328    16929      7884   17446
+
+Controls: 14 (+ log density in the raw spec). Cells: controls at p < .05 / Holm, median |b|, max |b| (SD units), three worst; rate and price = coefficient on the rate and 2016 price.
+
+== per 10 mi closer | low side
+                     series  cut tracts pairs p05 holm05 gt_0.1 median_abs
+                 Z, pair FE  Inf  15440    59   2      0      0      0.022
+                 Z, pair FE 4000   9919    50   7      1      0      0.040
+                 Z, pair FE 2000   4069    28   7      4      0      0.040
+                 Z, pair FE 1000    547     8   1      0      0      0.029
+                 Z, pair FE  500     75     2   1      0      2      0.055
+   Z, pair FE + log density  Inf  15440    59   2      0      0      0.026
+   Z, pair FE + log density 4000   9919    50   8      3      0      0.050
+   Z, pair FE + log density 2000   4069    28   7      4      0      0.044
+   Z, pair FE + log density 1000    547     8   1      0      0      0.024
+   Z, pair FE + log density  500     75     2   1      0      3      0.062
+ Z x E, given E and density  Inf  15440    59   9      6      6      0.088
+ Z x E, given E and density 4000   9919    50   0      0      0      0.024
+ Z x E, given E and density 2000   4069    28   2      1      6      0.070
+ Z x E, given E and density 1000    547     8   2      0      4      0.067
+ Z x E, given E and density  500     75     2   1      0     10      0.199
+ max_abs   rate  price
+    0.10 -0.062 -0.006
+    0.10 -0.015 -0.046
+    0.09 -0.004 -0.078
+    0.09 -0.008 -0.027
+    0.15  0.057  0.004
+    0.09 -0.062 -0.006
+    0.09 -0.008 -0.050
+    0.09 -0.003 -0.078
+    0.09  0.000 -0.023
+    0.14  0.074  0.004
+    0.25  0.017 -0.137
+    0.10  0.012 -0.013
+    0.18 -0.077  0.167
+    0.28  0.008 -0.136
+    0.47 -0.107  0.112
+                                                           worst
+          district SES -0.10, test scores -0.07, share BA+ -0.06
+       share BA+ -0.10, district SES -0.09, itemiser share -0.07
+       share BA+ -0.09, district SES -0.08, itemiser share -0.08
+       log population -0.09, median age +0.07, log density -0.06
+         median age +0.15, share BA+ +0.12, log population +0.09
+          district SES -0.09, test scores -0.06, share BA+ -0.06
+          district SES -0.09, share BA+ -0.09, test scores -0.07
+       share BA+ -0.09, district SES -0.08, itemiser share -0.08
+       log population -0.09, year built -0.06, share white -0.06
+         median age +0.14, share BA+ +0.13, log population +0.10
+  share AGI >= 100k -0.25, itemiser share -0.23, share BA+ -0.22
+          test scores -0.10, district SES -0.05, share BA+ -0.05
+ itemiser share +0.18, share AGI >= 100k +0.17, year built +0.15
+           year built -0.28, median age +0.28, test scores -0.24
+    median age -0.47, log population +0.45, share under 18 +0.45
+
+== per 10 mi closer | high side
+                     series  cut tracts pairs p05 holm05 gt_0.1 median_abs
+                 Z, pair FE  Inf  17751    70   8      5      2      0.058
+                 Z, pair FE 4000  11588    60   3      2      0      0.018
+                 Z, pair FE 2000   5082    31   4      2      0      0.031
+                 Z, pair FE 1000    632    10   6      1      0      0.064
+                 Z, pair FE  500     40     2   2      0      4      0.057
+   Z, pair FE + log density  Inf  17751    70   4      2      0      0.035
+   Z, pair FE + log density 4000  11588    60   2      1      0      0.019
+   Z, pair FE + log density 2000   5082    31   5      2      0      0.035
+   Z, pair FE + log density 1000    632    10   6      3      0      0.056
+   Z, pair FE + log density  500     40     2   2      0      4      0.067
+ Z x E, given E and density  Inf  17751    70   0      0      1      0.027
+ Z x E, given E and density 4000  11588    60  10      4      6      0.073
+ Z x E, given E and density 2000   5082    31  11      9      9      0.104
+ Z x E, given E and density 1000    632    10   3      0      6      0.090
+ Z x E, given E and density  500     40     2   3      0      7      0.114
+ max_abs   rate  price
+    0.10  0.034 -0.039
+    0.06  0.025 -0.026
+    0.08 -0.008 -0.062
+    0.09  0.014 -0.063
+    0.17  0.131 -0.069
+    0.08  0.025 -0.036
+    0.06  0.019 -0.025
+    0.08 -0.010 -0.062
+    0.10  0.026 -0.058
+    0.18  0.131 -0.085
+    0.10 -0.020  0.079
+    0.23 -0.015  0.166
+    0.33 -0.023  0.238
+    0.20 -0.246 -0.036
+    0.23  0.089  0.041
+                                                             worst
+           share white -0.10, year built -0.10, district SES -0.09
+        log population -0.06, year built -0.06, district SES -0.05
+        log population -0.08, year built -0.08, district SES -0.06
+         median age +0.09, log density -0.09, log population -0.09
+          year built -0.17, median age +0.17, log population -0.12
+         share white -0.08, log population -0.08, year built -0.07
+        log population -0.06, district SES -0.05, year built -0.04
+        log population -0.08, year built -0.07, district SES -0.06
+        log income -0.10, district SES -0.09, share under 18 -0.08
+          median age +0.18, year built -0.17, log population -0.12
+        share AGI >= 100k +0.10, share BA+ +0.10, log income +0.07
+    share AGI >= 100k +0.23, share BA+ +0.20, itemiser share +0.20
+    share AGI >= 100k +0.33, itemiser share +0.30, share BA+ +0.28
+    household size +0.20, share BA+ -0.17, share AGI >= 100k -0.15
+ share HHs with kids +0.23, median age -0.23, household size +0.22
+
+== near < 10 mi | low side
+                     series  cut tracts pairs p05 holm05 gt_0.1 median_abs
+                 Z, pair FE  Inf  15440    59   7      0     10      0.151
+                 Z, pair FE 4000   9919    50   8      1      8      0.140
+                 Z, pair FE 2000   4069    28   2      1      7      0.080
+                 Z, pair FE 1000    547     8   0      0      0      0.030
+                 Z, pair FE  500     75     2   1      0      8      0.100
+   Z, pair FE + log density  Inf  15440    59   3      0      8      0.102
+   Z, pair FE + log density 4000   9919    50   8      1      8      0.153
+   Z, pair FE + log density 2000   4069    28   2      1      7      0.096
+   Z, pair FE + log density 1000    547     8   0      0      0      0.017
+   Z, pair FE + log density  500     75     2   1      0      7      0.096
+ Z x E, given E and density  Inf  15440    59   8      3     10      0.199
+ Z x E, given E and density 4000   9919    50   0      0      5      0.093
+ Z x E, given E and density 2000   4069    28   0      0     13      0.263
+ Z x E, given E and density 1000    547     8   0      0     10      0.194
+ Z x E, given E and density  500     75     2   1      0     13      0.400
+ max_abs   rate  price
+    0.34 -0.197 -0.002
+    0.26 -0.012 -0.143
+    0.22  0.039 -0.176
+    0.09 -0.040 -0.033
+    0.30  0.156 -0.018
+    0.28 -0.199  0.005
+    0.27 -0.011 -0.146
+    0.22  0.039 -0.176
+    0.07 -0.032 -0.030
+    0.31  0.144 -0.018
+    0.59  0.021 -0.266
+    0.21  0.012 -0.023
+    0.50 -0.077  0.375
+    0.51  0.132 -0.414
+    1.04 -0.299  0.198
+                                                             worst
+          district SES -0.34, test scores -0.27, owner share -0.21
+            district SES -0.26, test scores -0.22, share BA+ -0.20
+            district SES -0.22, share BA+ -0.19, test scores -0.16
+  share BA+ -0.09, share HHs with kids +0.08, household size +0.06
+           median age +0.30, log population +0.22, share BA+ +0.21
+           district SES -0.28, test scores -0.21, log income -0.15
+            district SES -0.27, test scores -0.22, share BA+ -0.20
+            district SES -0.22, share BA+ -0.19, test scores -0.16
+  share BA+ -0.07, share HHs with kids +0.07, household size +0.05
+           median age +0.31, log population +0.22, share BA+ +0.21
+ share AGI >= 100k -0.59, itemiser share -0.53, district SES -0.50
+              share BA+ -0.21, test scores -0.20, year built -0.19
+   itemiser share +0.50, share AGI >= 100k +0.39, year built +0.39
+          district SES -0.51, share white -0.48, test scores -0.37
+         log population +1.04, median age -0.83, test scores +0.61
+
+== near < 10 mi | high side
+                     series  cut tracts pairs p05 holm05 gt_0.1 median_abs
+                 Z, pair FE  Inf  17751    70  12      9     12      0.198
+                 Z, pair FE 4000  11588    60   9      3     10      0.109
+                 Z, pair FE 2000   5082    31   6      2      8      0.110
+                 Z, pair FE 1000    632    10   8      1     14      0.147
+                 Z, pair FE  500     40     2   3      0     10      0.203
+   Z, pair FE + log density  Inf  17751    70  11      7     11      0.164
+   Z, pair FE + log density 4000  11588    60   7      3      6      0.084
+   Z, pair FE + log density 2000   5082    31   6      3      6      0.091
+   Z, pair FE + log density 1000    632    10   7      2     10      0.138
+   Z, pair FE + log density  500     40     2   2      1      9      0.208
+ Z x E, given E and density  Inf  17751    70   1      0      0      0.032
+ Z x E, given E and density 4000  11588    60   0      0      8      0.150
+ Z x E, given E and density 2000   5082    31   8      6     11      0.227
+ Z x E, given E and density 1000    632    10   0      0      9      0.134
+ Z x E, given E and density  500     40     2   3      0     11      0.269
+ max_abs   rate  price
+    0.34  0.129 -0.200
+    0.28  0.085 -0.086
+    0.30  0.017 -0.132
+    0.48  0.079 -0.225
+    0.54  0.432 -0.010
+    0.27  0.105 -0.193
+    0.24  0.055 -0.080
+    0.29 -0.003 -0.131
+    0.43  0.099 -0.215
+    0.57  0.421 -0.058
+    0.08 -0.024  0.102
+    0.46  0.018  0.338
+    0.85 -0.067  0.658
+    0.43 -0.548  0.003
+    0.91  0.156 -0.083
+                                                             worst
+           share white -0.34, year built -0.32, district SES -0.29
+         year built -0.28, log population -0.24, log density +0.18
+ year built -0.30, log population -0.28, share HHs with kids -0.15
+        log population -0.48, median age +0.29, district SES -0.21
+      year built -0.54, itemiser share -0.45, log population -0.43
+           share white -0.27, district SES -0.25, year built -0.24
+        log population -0.24, year built -0.21, district SES -0.14
+          log population -0.29, year built -0.25, median age +0.19
+        log population -0.43, median age +0.25, district SES -0.21
+      year built -0.57, itemiser share -0.42, log population -0.36
+          share BA+ +0.08, log population +0.08, share white +0.07
+    share AGI >= 100k +0.46, share BA+ +0.41, itemiser share +0.37
+    share AGI >= 100k +0.85, share BA+ +0.77, itemiser share +0.76
+      log population +0.43, household size +0.35, median age -0.29
+ median age -0.91, share HHs with kids +0.57, household size +0.48

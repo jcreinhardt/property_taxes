@@ -1,0 +1,89 @@
+var,sample,instrument,b,se,p,n,pairs,p_holm,label,group
+med,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.157172920382797,0.142872182803064,0.2719021152868,8132,44,,"effective tax rate, % (CoreLogic)",first stage: rate
+lp50,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.162647389513659,0.0845551795956284,0.0551330216822291,7749,44,,log median sale price 2016 (CoreLogic),outcomes
+lhval,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.0946230583505021,0.0645030730455042,0.143114403895837,8025,44,,log median home value (ACS),outcomes
+moveout,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.0961626787393159,0.0793896902500489,0.226458719148448,7653,44,,move-out rate 2014-17 (Data Axle),outcomes
+sh_moved,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.0205606222942059,0.0663521020187992,0.756807787390046,8127,44,,moved in the last year (ACS),outcomes
+turnover,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.0603785575421844,0.0591625680962377,0.308095515225344,7749,44,,sales per 100 parcels 2016 (CoreLogic),outcomes
+linc,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.14488950218633,0.084818520799507,0.088310452481153,8113,44,1,log median HH income (ACS),controls
+sh_agi100,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.051577679160697,0.130445468748465,0.692745030148484,8113,44,1,share of returns AGI >= $100k (SOI ZIP),controls
+sh_item,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.126851669993109,0.108649814555695,0.243639828789119,8113,44,1,itemiser share (SOI ZIP),controls
+exz,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.156501608116961,0.172668008667265,0.365242588873984,8113,44,1,SALT above $10k per return (SOI ZIP),controls
+age,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.0499003763680046,0.0686090478300929,0.467426185566411,8124,44,1,median age (ACS),controls
+hhsize,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.262788448599123,0.158788606392495,0.0986576440094911,8122,44,1,household size (ACS),controls
+sh_u18,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.0250312789481696,0.0692353097537507,0.717872751851238,8127,44,1,share under 18 (ACS),controls
+sh_hh_kids,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.138414446517688,0.0945303200860292,0.143855816753271,8125,44,1,share of HHs with children (ACS),controls
+sh_own,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.349038111189428,0.136964544828717,0.0111666243282307,8125,44,0.167499364923461,owner share (ACS),controls
+sh_ba,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.0383488639086076,0.0965792154717244,0.691510302854322,8127,44,1,share BA+ (ACS),controls
+sh_white,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.056775799366527,0.173470494327664,0.743603930531848,8127,44,1,share white (ACS),controls
+yrbuilt,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.095149368299426,0.061768480632008,0.124190285627083,8097,44,1,median year built (ACS),controls
+lpop,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.0470800635485568,0.0925224765815665,0.611116538605985,8132,44,1,log population (ACS),controls
+ldens,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,0.246454938682841,0.0752346985137757,0.00113827774596104,8132,44,0.0182124439353767,"log population density (ACS, TIGER)",controls
+ach,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.131342990110701,0.0689272095917062,0.0573745510436757,7890,44,0.80324371461146,district test scores (SEDA),controls
+ses,"rural 50% (44 pairs, NJ-NY in)",near the border: < 10 mi vs 10-50 mi,-0.18722690134614,0.128875584013996,0.147014572212839,7875,44,1,district SES (SEDA),controls
+med,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0108180815711933,0.0342146361714096,0.752016074297215,8132,44,,"effective tax rate, % (CoreLogic)",first stage: rate
+lp50,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0445986196001492,0.0327762843022578,0.174391005757921,7749,44,,log median sale price 2016 (CoreLogic),outcomes
+lhval,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0288178378802968,0.0272591405352389,0.291018558935124,8025,44,,log median home value (ACS),outcomes
+moveout,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0114935635467182,0.0316280517252388,0.716487185051086,7653,44,,move-out rate 2014-17 (Data Axle),outcomes
+sh_moved,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0155800991927749,0.0255340939178444,0.542070301046903,8127,44,,moved in the last year (ACS),outcomes
+turnover,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0229932161118805,0.0542902328293581,0.672145277980961,7749,44,,sales per 100 parcels 2016 (CoreLogic),outcomes
+linc,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.00514544656870904,0.0338986179471484,0.879423839151292,8113,44,1,log median HH income (ACS),controls
+sh_agi100,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0158846200010845,0.0397089002525482,0.689334124894951,8113,44,1,share of returns AGI >= $100k (SOI ZIP),controls
+sh_item,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.00252608502636715,0.035684956515853,0.943598755998089,8113,44,1,itemiser share (SOI ZIP),controls
+exz,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0697657700604344,0.0608204427635809,0.251982959168713,8113,44,1,SALT above $10k per return (SOI ZIP),controls
+age,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.00627631356942168,0.0288046513147176,0.827615622148725,8124,44,1,median age (ACS),controls
+hhsize,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0518355066732735,0.0403720397140419,0.199847558406097,8122,44,1,household size (ACS),controls
+sh_u18,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.00612634512558244,0.0265045226666102,0.817312590776757,8127,44,1,share under 18 (ACS),controls
+sh_hh_kids,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0260492071158654,0.0326205968740938,0.424988632156144,8125,44,1,share of HHs with children (ACS),controls
+sh_own,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0534845935693168,0.0406913498196487,0.189408406652267,8125,44,1,owner share (ACS),controls
+sh_ba,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0036735226831961,0.0364684715889295,0.919810254720574,8127,44,1,share BA+ (ACS),controls
+sh_white,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0286076309032764,0.0461308331911794,0.535491043398567,8127,44,1,share white (ACS),controls
+yrbuilt,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0232510652514618,0.0269121020210532,0.388087555187073,8097,44,1,median year built (ACS),controls
+lpop,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.00366158441987256,0.0264031185575751,0.889767497543605,8132,44,1,log population (ACS),controls
+ldens,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,-0.0611535026602267,0.0307358436783511,0.0472583348501516,8132,44,0.756133357602425,"log population density (ACS, TIGER)",controls
+ach,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0434173130886084,0.0234771503310303,0.0650911352252456,7890,44,0.976367028378684,district test scores (SEDA),controls
+ses,"rural 50% (44 pairs, NJ-NY in)",linear: per 10 miles from the border,0.0587392738118533,0.0354990252593823,0.0987188630157845,7875,44,1,district SES (SEDA),controls
+med,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0806795006611225,0.0330094166488847,0.014927441098466,5937,43,,"effective tax rate, % (CoreLogic)",first stage: rate
+lp50,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0252772164329722,0.0474999464223018,0.594929723537641,5600,43,,log median sale price 2016 (CoreLogic),outcomes
+lhval,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0112725723162103,0.0459319510437898,0.806251062777917,5896,43,,log median home value (ACS),outcomes
+moveout,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0642273172126591,0.0558225963766492,0.250570546558216,5812,43,,move-out rate 2014-17 (Data Axle),outcomes
+sh_moved,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.107353935105707,0.0585505035783549,0.0674266956813974,5937,43,,moved in the last year (ACS),outcomes
+turnover,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0450717249673441,0.073649164107993,0.540915869846019,5600,43,,sales per 100 parcels 2016 (CoreLogic),outcomes
+linc,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.00545934596223943,0.0476365939914293,0.908813358208402,5925,43,1,log median HH income (ACS),controls
+sh_agi100,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.00480947482001114,0.0584425816218814,0.934451837788098,5929,43,1,share of returns AGI >= $100k (SOI ZIP),controls
+sh_item,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0426659764369927,0.0594607516178001,0.473431751628712,5929,43,1,itemiser share (SOI ZIP),controls
+exz,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0272480170086998,0.0489888356322904,0.578362285091573,5929,43,1,SALT above $10k per return (SOI ZIP),controls
+age,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0864673058780024,0.0575523326952863,0.133736923313973,5936,43,1,median age (ACS),controls
+hhsize,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0302544342953459,0.0452297853071315,0.50392089791081,5933,43,1,household size (ACS),controls
+sh_u18,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.000223077311551419,0.0447875930443274,0.996028274135741,5937,43,1,share under 18 (ACS),controls
+sh_hh_kids,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0116404019826918,0.0461076452410753,0.800807053395359,5935,43,1,share of HHs with children (ACS),controls
+sh_own,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.0259451580959558,0.0506831965878149,0.608982206726088,5935,43,1,owner share (ACS),controls
+sh_ba,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0406343668966308,0.0693769057552947,0.558386452496593,5937,43,1,share BA+ (ACS),controls
+sh_white,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.00416760302900216,0.0613602910513221,0.9458812540768,5937,43,1,share white (ACS),controls
+yrbuilt,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0422352738365308,0.0513919759864976,0.411639873209236,5909,43,1,median year built (ACS),controls
+lpop,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.0704233342774881,0.0461301687685907,0.127602361395441,5937,43,1,log population (ACS),controls
+ldens,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,0.111113247491479,0.0686990073666476,0.106539052462969,5937,43,1,"log population density (ACS, TIGER)",controls
+ach,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.104281447866718,0.0557093380845569,0.0619140605235934,5699,43,0.990624968377495,district test scores (SEDA),controls
+ses,rural 50% without NJ-NY,near the border: < 10 mi vs 10-50 mi,-0.076325759805862,0.0610688199876777,0.212055285469119,5684,43,1,district SES (SEDA),controls
+med,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0305892645485906,0.0174181377636568,0.0797825039461076,5937,43,,"effective tax rate, % (CoreLogic)",first stage: rate
+lp50,rural 50% without NJ-NY,linear: per 10 miles from the border,-7.95626608762906e-05,0.0240813352397211,0.997365587484039,5600,43,,log median sale price 2016 (CoreLogic),outcomes
+lhval,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.00576187162042506,0.0241923254484482,0.81186503832439,5896,43,,log median home value (ACS),outcomes
+moveout,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0435568386556592,0.0275772416936551,0.11498957220161,5812,43,,move-out rate 2014-17 (Data Axle),outcomes
+sh_moved,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0472373568189184,0.0209468028464539,0.024636880663061,5937,43,,moved in the last year (ACS),outcomes
+turnover,rural 50% without NJ-NY,linear: per 10 miles from the border,0.026364954095145,0.0574322375142799,0.646450790410612,5600,43,,sales per 100 parcels 2016 (CoreLogic),outcomes
+linc,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0150893837431686,0.0285203421590781,0.597031337769157,5925,43,1,log median HH income (ACS),controls
+sh_agi100,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.00803234368184975,0.0264125371668668,0.761192852618162,5929,43,1,share of returns AGI >= $100k (SOI ZIP),controls
+sh_item,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0173973671795679,0.0267447854998431,0.5157252508965,5929,43,1,itemiser share (SOI ZIP),controls
+exz,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.00621324312404975,0.0130247307224712,0.633584062564684,5929,43,1,SALT above $10k per return (SOI ZIP),controls
+age,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0328239098788073,0.0268721998808521,0.222583878193984,5936,43,1,median age (ACS),controls
+hhsize,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.010598135206355,0.0171819940261636,0.537687689766825,5933,43,1,household size (ACS),controls
+sh_u18,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0228908312721406,0.0178489987334608,0.200379654988355,5937,43,1,share under 18 (ACS),controls
+sh_hh_kids,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0128030116093197,0.0183962255044572,0.486836948183471,5935,43,1,share of HHs with children (ACS),controls
+sh_own,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0232875681503089,0.0241358970375879,0.335170228114213,5935,43,1,owner share (ACS),controls
+sh_ba,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0250892739453751,0.025810460780336,0.331577034396735,5937,43,1,share BA+ (ACS),controls
+sh_white,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.024703286746701,0.0407300831831472,0.544500134914257,5937,43,1,share white (ACS),controls
+yrbuilt,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0136446169195326,0.0271004021950975,0.614886784159932,5909,43,1,median year built (ACS),controls
+lpop,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0131064114764356,0.0226930287363623,0.563873688028314,5937,43,1,log population (ACS),controls
+ldens,rural 50% without NJ-NY,linear: per 10 miles from the border,-0.0281576695351061,0.0275018656509459,0.306493271765646,5937,43,1,"log population density (ACS, TIGER)",controls
+ach,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0338370657702633,0.0224563089920211,0.132611260882124,5699,43,1,district test scores (SEDA),controls
+ses,rural 50% without NJ-NY,linear: per 10 miles from the border,0.0327266236036397,0.0271772359287675,0.229191759582117,5684,43,1,district SES (SEDA),controls

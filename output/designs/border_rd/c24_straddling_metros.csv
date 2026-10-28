@@ -1,0 +1,17 @@
+pair,cbsa_name,cbsa_pop,high,low
+NJ-NY,New York-Newark-Jersey City,18.3,0.29,0.48
+NJ-PA,Philadelphia-Camden-Wilmington,6.03,0.21,0.56
+MD-VA,Washington-Arlington-Alexandria,5.95,0.35,0.16
+IL-MO,St. Louis,2.74,0.23,0.73
+NC-SC,Charlotte-Concord-Gastonia,2.45,0.82,0.14
+OR-WA,Portland-Vancouver-Hillsboro,2.38,0.79,0.19
+KY-OH,Cincinnati,2.17,0.59,0.16
+KS-MO,Kansas City,2.05,0.41,0.57
+MA-RI,Providence-Warwick,1.6,0.55,0.33
+MS-TN,Memphis,1.32,0.39,0.13
+IN-KY,Louisville/Jefferson County,1.24,0.76,0.17
+IA-NE,Omaha-Council Bluffs,0.91,0.12,0.85
+NJ-PA,Allentown-Bethlehem-Easton,0.83,0.13,0.84
+GA-SC,Augusta-Richmond County,0.58,0.6,0.3
+OH-PA,Youngstown-Warren-Boardman,0.55,0.19,0.74
+GA-TN,Chattanooga,0.55,0.22,0.64

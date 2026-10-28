@@ -1,0 +1,159 @@
+near x exposure x year: post - pre change (mean 2018+ minus 2013-16) in SD units of the outcome, per SD of exposure (continuous) or high vs low (binary, cut at the
+ median lost subsidy per owner HH, $ 658 ). Unit FE + pair x year FE, near x year and exposure x year included, SE by county. Cells: estimate (t).
+
+== continuous (per SD) | all 59 pairs 
+                              outcome        near<5       near<10       near<20
+                log median sale price   0.036 (2.2)   0.032 (1.7)   0.037 (1.5)
+              log tax bill per parcel -0.008 (-0.8) -0.017 (-1.4) -0.029 (-2.2)
+                   effective tax rate -0.083 (-2.4) -0.091 (-2.5) -0.115 (-2.4)
+                sales per 100 parcels   0.114 (2.5)   0.141 (2.6)   0.175 (2.9)
+          log median home value (ACS) -0.005 (-0.6) -0.007 (-0.7) -0.017 (-1.6)
+                 log population (ACS) -0.026 (-2.4) -0.025 (-2.0) -0.017 (-1.2)
+            move-out rate (Data Axle) -0.027 (-0.7)   0.011 (0.3)   0.027 (0.7)
+  log district property tax per pupil   0.049 (1.9)   0.045 (1.9)   0.059 (1.9)
+      log district spending per pupil   0.052 (1.8)   0.038 (1.5)   0.020 (0.8)
+               log district enrolment -0.024 (-2.5) -0.021 (-2.0) -0.012 (-1.1)
+ log county school property tax (CoG) -0.080 (-0.7) -0.015 (-0.4)   0.003 (0.1)
+
+== continuous (per SD) | rural 30% 
+                              outcome        near<5       near<10       near<20
+                log median sale price   0.075 (1.4)   0.044 (0.8)   0.035 (0.5)
+              log tax bill per parcel -0.091 (-2.8) -0.070 (-2.0) -0.096 (-2.3)
+                   effective tax rate -0.235 (-3.0) -0.197 (-2.3) -0.241 (-2.2)
+                sales per 100 parcels   0.329 (2.3)   0.317 (2.2)   0.383 (2.0)
+          log median home value (ACS) -0.090 (-3.4) -0.080 (-3.0) -0.067 (-1.9)
+                 log population (ACS) -0.179 (-6.4) -0.151 (-5.0) -0.126 (-3.4)
+            move-out rate (Data Axle) -0.070 (-1.0) -0.127 (-1.7) -0.067 (-0.6)
+  log district property tax per pupil   0.095 (0.7)   0.151 (1.4)   0.057 (0.6)
+      log district spending per pupil   0.739 (1.5)   0.508 (1.4)   0.502 (1.8)
+               log district enrolment -0.186 (-2.1) -0.153 (-2.4) -0.132 (-2.5)
+ log county school property tax (CoG) -0.161 (-1.7) -0.095 (-1.2) -0.104 (-1.2)
+
+== continuous (per SD) | rural 45% 
+                              outcome        near<5       near<10       near<20
+                log median sale price   0.120 (2.2)   0.105 (2.0)   0.111 (1.9)
+              log tax bill per parcel -0.051 (-1.6) -0.042 (-1.4) -0.057 (-1.7)
+                   effective tax rate -0.387 (-3.0) -0.372 (-2.9) -0.442 (-3.1)
+                sales per 100 parcels   0.160 (1.5)   0.188 (1.7)   0.252 (2.3)
+          log median home value (ACS) -0.051 (-2.4) -0.050 (-2.4) -0.053 (-2.4)
+                 log population (ACS) -0.075 (-3.3) -0.057 (-2.5) -0.020 (-0.8)
+            move-out rate (Data Axle) -0.084 (-1.4) -0.082 (-1.2) -0.029 (-0.5)
+  log district property tax per pupil   0.074 (0.5)   0.122 (1.1)   0.057 (0.6)
+      log district spending per pupil   0.485 (1.4)   0.298 (1.5)   0.016 (0.2)
+               log district enrolment -0.058 (-0.8) -0.035 (-0.8)   0.005 (0.3)
+ log county school property tax (CoG) -0.168 (-1.9) -0.102 (-1.3) -0.110 (-1.3)
+
+== continuous (per SD) | rural 70% 
+                              outcome        near<5       near<10       near<20
+                log median sale price   0.036 (1.6)   0.033 (1.3)   0.045 (1.5)
+              log tax bill per parcel -0.001 (-0.0) -0.015 (-1.0) -0.040 (-2.5)
+                   effective tax rate -0.075 (-1.3) -0.114 (-1.7) -0.214 (-2.4)
+                sales per 100 parcels   0.065 (1.0)   0.116 (1.6)   0.179 (2.7)
+          log median home value (ACS)   0.004 (0.5) -0.003 (-0.3) -0.016 (-1.7)
+                 log population (ACS) -0.013 (-1.1) -0.010 (-0.8) -0.001 (-0.1)
+            move-out rate (Data Axle) -0.041 (-0.9)   0.026 (0.5)   0.053 (1.2)
+  log district property tax per pupil   0.038 (1.5)   0.053 (2.1)   0.069 (1.9)
+      log district spending per pupil   0.073 (1.1)   0.049 (1.2)   0.028 (0.9)
+               log district enrolment -0.030 (-1.5) -0.022 (-1.8) -0.014 (-1.2)
+ log county school property tax (CoG) -0.165 (-0.9) -0.078 (-0.9) -0.092 (-0.9)
+
+== binary (above median) | all 59 pairs 
+                              outcome        near<5       near<10       near<20
+                log median sale price -0.041 (-1.0) -0.010 (-0.3)   0.011 (0.4)
+              log tax bill per parcel -0.060 (-1.2) -0.039 (-1.2) -0.038 (-1.3)
+                   effective tax rate -0.069 (-1.0) -0.063 (-1.0) -0.133 (-2.2)
+                sales per 100 parcels   0.015 (0.1)   0.106 (1.1)   0.116 (1.3)
+          log median home value (ACS) -0.027 (-1.1) -0.021 (-1.2) -0.037 (-2.0)
+                 log population (ACS)   0.007 (0.4) -0.008 (-0.6) -0.008 (-0.6)
+            move-out rate (Data Axle) -0.007 (-0.1)   0.068 (1.4)   0.066 (1.4)
+  log district property tax per pupil   0.038 (0.9)   0.049 (1.6)   0.051 (1.7)
+      log district spending per pupil   0.170 (2.3)   0.091 (1.8)   0.080 (2.1)
+               log district enrolment -0.047 (-2.3) -0.032 (-2.2) -0.020 (-1.8)
+ log county school property tax (CoG) -0.097 (-0.8) -0.042 (-0.9) -0.024 (-0.7)
+
+== binary (above median) | rural 30% 
+                              outcome        near<5       near<10       near<20
+                log median sale price -0.027 (-0.6) -0.040 (-0.9) -0.027 (-0.6)
+              log tax bill per parcel -0.016 (-0.5) -0.003 (-0.1)   0.010 (0.3)
+                   effective tax rate -0.027 (-0.5)   0.013 (0.2) -0.009 (-0.1)
+                sales per 100 parcels   0.059 (0.5)   0.110 (1.0)   0.141 (1.0)
+          log median home value (ACS) -0.020 (-0.8) -0.008 (-0.4)   0.003 (0.1)
+                 log population (ACS) -0.043 (-1.9) -0.019 (-0.9) -0.012 (-0.5)
+            move-out rate (Data Axle) -0.065 (-1.0) -0.082 (-1.3) -0.052 (-0.6)
+  log district property tax per pupil   0.032 (0.4)   0.070 (1.0)   0.024 (0.3)
+      log district spending per pupil   0.333 (1.3)   0.253 (1.3)   0.374 (2.4)
+               log district enrolment -0.060 (-1.3) -0.068 (-2.0) -0.096 (-3.2)
+ log county school property tax (CoG) -0.131 (-2.1) -0.104 (-1.9) -0.119 (-1.9)
+
+== binary (above median) | rural 45% 
+                              outcome        near<5       near<10       near<20
+                log median sale price   0.059 (1.3)   0.060 (1.3)   0.105 (2.1)
+              log tax bill per parcel   0.009 (0.2)   0.016 (0.5)   0.009 (0.2)
+                   effective tax rate -0.259 (-2.7) -0.258 (-2.5) -0.400 (-3.2)
+                sales per 100 parcels   0.016 (0.2)   0.103 (0.9)   0.146 (1.2)
+          log median home value (ACS) -0.010 (-0.4) -0.008 (-0.3) -0.010 (-0.3)
+                 log population (ACS) -0.029 (-1.4) -0.017 (-1.0) -0.008 (-0.5)
+            move-out rate (Data Axle) -0.109 (-1.7) -0.090 (-1.3) -0.082 (-1.2)
+  log district property tax per pupil -0.016 (-0.2)   0.018 (0.2)   0.004 (0.1)
+      log district spending per pupil   0.246 (1.4)   0.191 (1.7)   0.156 (2.0)
+               log district enrolment -0.052 (-1.3) -0.059 (-2.3) -0.041 (-2.0)
+ log county school property tax (CoG) -0.136 (-2.3) -0.109 (-2.2) -0.123 (-2.2)
+
+== binary (above median) | rural 70% 
+                              outcome        near<5       near<10       near<20
+                log median sale price -0.027 (-0.6)   0.010 (0.3)   0.036 (1.1)
+              log tax bill per parcel -0.043 (-0.7) -0.030 (-0.7) -0.038 (-1.1)
+                   effective tax rate -0.066 (-0.7) -0.115 (-1.3) -0.259 (-2.9)
+                sales per 100 parcels -0.038 (-0.3)   0.106 (0.9)   0.176 (1.7)
+          log median home value (ACS) -0.001 (-0.1) -0.008 (-0.4) -0.034 (-1.7)
+                 log population (ACS)   0.015 (0.7)   0.001 (0.0) -0.005 (-0.3)
+            move-out rate (Data Axle) -0.045 (-0.6)   0.043 (0.7)   0.052 (0.9)
+  log district property tax per pupil   0.020 (0.4)   0.043 (1.1)   0.040 (1.0)
+      log district spending per pupil   0.144 (1.5)   0.107 (1.8)   0.128 (2.8)
+               log district enrolment -0.036 (-1.3) -0.039 (-2.1) -0.037 (-2.4)
+ log county school property tax (CoG) -0.153 (-0.7) -0.097 (-0.9) -0.111 (-1.0)
+
+cells with |t| > 1.96 (of 11 outcomes) and median |estimate|:
+                     form       sample cutoff   sig median_abs
+                   <char>       <char>  <num> <int>      <num>
+ 1: binary (above median) all 59 pairs      5     2      0.041
+ 2: binary (above median) all 59 pairs     10     1      0.042
+ 3: binary (above median) all 59 pairs     20     3      0.038
+ 4: binary (above median)    rural 30%      5     1      0.043
+ 5: binary (above median)    rural 30%     10     1      0.068
+ 6: binary (above median)    rural 30%     20     2      0.027
+ 7: binary (above median)    rural 45%      5     2      0.052
+ 8: binary (above median)    rural 45%     10     3      0.060
+ 9: binary (above median)    rural 45%     20     3      0.082
+10: binary (above median)    rural 70%      5     0      0.038
+11: binary (above median)    rural 70%     10     1      0.043
+12: binary (above median)    rural 70%     20     3      0.040
+13:   continuous (per SD) all 59 pairs      5     5      0.036
+14:   continuous (per SD) all 59 pairs     10     4      0.025
+15:   continuous (per SD) all 59 pairs     20     3      0.027
+16:   continuous (per SD)    rural 30%      5     6      0.161
+17:   continuous (per SD)    rural 30%     10     6      0.151
+18:   continuous (per SD)    rural 30%     20     5      0.104
+19:   continuous (per SD)    rural 45%      5     4      0.084
+20:   continuous (per SD)    rural 45%     10     4      0.102
+21:   continuous (per SD)    rural 45%     20     3      0.057
+22:   continuous (per SD)    rural 70%      5     0      0.038
+23:   continuous (per SD)    rural 70%     10     1      0.033
+24:   continuous (per SD)    rural 70%     20     3      0.045
+                     form       sample cutoff   sig median_abs
+                   <char>       <char>  <num> <int>      <num>
+
+by outcome: sign consistency across the 24 cells (share positive) and cells with |t| > 1.96
+                                 outcome share_pos   sig median_b
+                                  <char>     <num> <int>    <num>
+ 1:                log median sale price      0.75     4    0.036
+ 2:              log tax bill per parcel      0.17     5   -0.034
+ 3:                   effective tax rate      0.04    15   -0.124
+ 4:                sales per 100 parcels      0.96     8    0.128
+ 5:          log median home value (ACS)      0.08     6   -0.017
+ 6:                 log population (ACS)      0.12     7   -0.017
+ 7:            move-out rate (Data Axle)      0.33     0   -0.043
+ 8:  log district property tax per pupil      0.96     1    0.049
+ 9:      log district spending per pupil      1.00     4    0.150
+10:               log district enrolment      0.04    12   -0.038
+11: log county school property tax (CoG)      0.04     4   -0.104

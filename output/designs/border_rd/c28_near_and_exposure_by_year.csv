@@ -1,0 +1,1041 @@
+term,b,se,y,coef,version,n,exposure,outcome,unit
+near,-0.107889612379136,0.0641807759410384,2012,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.550995588590516,0.164018255669991,2012,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.178590836091246,0.0597494952805021,2013,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.648252239376156,0.154409445086547,2013,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0187912826874086,0.0435802948898941,2014,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.112038092940978,0.142074017929058,2014,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0504987266607297,0.0458707489964637,2015,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.133492226986192,0.151763034738005,2015,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0342826708726075,0.0454900567804408,2016,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.123632835520488,0.137718092488606,2016,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0483086234917973,0.0451406255741038,2017,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.153753878479503,0.144172441733566,2017,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0572937300626635,0.0448574744259565,2018,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.096105601143516,0.131241082850279,2018,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0746287515407783,0.0450234506494586,2019,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.0944437039142133,0.128603508737949,2019,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0669583252692983,0.0429871021085211,2020,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.0823297414181318,0.121105347099137,2020,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0544925380333348,0.0395407841712813,2021,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.0808899938645237,0.121050764681447,2021,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0804101493449518,0.0460206767188895,2022,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.0983758142349253,0.126867019146576,2022,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0603333263422462,0.0414592416705032,2023,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.0849093668721448,0.119163378910564,2023,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near,-0.0599495141295506,0.0425423653585752,2024,near x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+near_xo,-0.064640755613051,0.120302794251773,2024,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,log median sale price,tract
+y::2012:near,-0.0457014985057714,0.0306830989433104,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2013:near,-0.0265151622385796,0.0261752013939261,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2014:near,0.00344667432289355,0.0186840278214968,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2015:near,-0.00174737687075728,0.0168378052120866,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2016:near,0.00723638536641324,0.0162921754966199,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2018:near,-0.0186532276721771,0.0151368814355334,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2019:near,-0.0404352009074368,0.018540694972907,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2020:near,-0.0155118336287753,0.017296931694475,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2021:near,-0.0181455864005596,0.0218399020741065,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2022:near,-0.0371036684331847,0.0243717827290459,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2023:near,-0.0163032244542411,0.0225961174612711,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2024:near,-0.0176951875948623,0.0247470862251914,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2012:near_xo,-0.108537482976049,0.0523478202290639,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2013:near_xo,-0.0983259706210504,0.0464065149390185,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2014:near_xo,0.0247024640699734,0.0129824558157313,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2015:near_xo,-0.0101628490298569,0.0177908154066733,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2016:near_xo,0.00121986234269003,0.00928698808316795,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2018:near_xo,0.029371766995955,0.0141419323938009,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2019:near_xo,0.0366016314582643,0.0212401749699176,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2020:near_xo,0.0404233300943675,0.0259462513797963,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2021:near_xo,0.0300160301525414,0.0237127104399268,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2022:near_xo,0.0199964282699847,0.0231687248163376,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2023:near_xo,0.0296578482932314,0.0277642789737717,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+y::2024:near_xo,0.0506549951362621,0.0263766754850461,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,log median sale price,tract
+near,-0.0143684207410941,0.0522792416825573,2012,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.340778519501286,0.113249520172968,2012,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.0743249240377848,0.0501406897752494,2013,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.373049911742341,0.119206671229717,2013,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.0280261700650992,0.0450616118810853,2014,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.050144572020265,0.108184986208467,2014,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.0135851622675025,0.0413705664268093,2015,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0639296256842282,0.107506051205171,2015,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.00201193417017865,0.0429510476492384,2016,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0650349530261321,0.110136282397962,2016,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.00364919969183052,0.0434962563696332,2017,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.106638144019168,0.125617817622468,2017,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.0170070903341844,0.0413762241730323,2018,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0788262253201961,0.116327508801194,2018,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.0119183681746667,0.0436377896820786,2019,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0540551944507973,0.10879295540947,2019,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.00880813814063003,0.0418337555721065,2020,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0765637589970129,0.116465481167524,2020,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.00451435493684611,0.0438341327038304,2021,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0607845592075743,0.110880447522279,2021,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,-0.00677618164114904,0.0446827302108232,2022,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0710716176788307,0.115152431273942,2022,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.0207187130391887,0.0465575236382978,2023,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0800819022374187,0.115556571674171,2023,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near,0.00638782299386939,0.0470085102303552,2024,near x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+near_xo,-0.0622752267792466,0.109624550085717,2024,near x exposure x year,"levels: cross-section per year, pair FE",54542,own tract,log tax bill per parcel,tract
+y::2012:near,0.0140508536564988,0.0247615103748858,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2013:near,0.0167193838401382,0.018956982322687,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2014:near,-0.0174440095615719,0.0125131685754622,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2015:near,-0.00926538256698905,0.00938077785424899,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2016:near,-8.07946220465435e-05,0.00703972667003126,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2018:near,0.00991071576034008,0.00788425114979873,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2019:near,0.0044489824111515,0.0100607908941195,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2020:near,-0.0155336178674121,0.00990950521360499,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2021:near,-0.0201135083505045,0.0112285799436599,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2022:near,-0.0137642441477682,0.0133169808537504,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2023:near,0.00663863920254241,0.0159944074705604,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2024:near,-0.0113688633375212,0.0168594915215097,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2012:near_xo,0.0298143173527129,0.0414365596178456,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2013:near_xo,0.0676833726597975,0.0297742412800648,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2014:near_xo,0.0269259275329678,0.0135362319589964,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2015:near_xo,0.0167542895554957,0.0103626508455355,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2016:near_xo,0.0115874746580317,0.00873325481849726,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2018:near_xo,0.00138976851599598,0.00407711435148236,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2019:near_xo,0.0285977812190078,0.0253702775690887,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2020:near_xo,0.00289132217095092,0.00654544979574797,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2021:near_xo,0.0110877051811166,0.00877062049063476,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2022:near_xo,0.00795882772001385,0.0102782985025576,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2023:near_xo,-0.003933139868405,0.0110390962946988,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+y::2024:near_xo,0.0143684698045055,0.0165416761596745,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",54542,own tract,log tax bill per parcel,tract
+near,0.197168630860536,0.102571970925984,2012,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.556769247343078,0.319524396136673,2012,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.193385895878658,0.0985224099452946,2013,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.574075728261751,0.286972571590871,2013,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0193503569191355,0.0536956817730089,2014,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.145586166056822,0.115869491404846,2014,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0309308017697741,0.0461994786898425,2015,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.105614578021856,0.105794420004719,2015,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0373354748213816,0.0431972141050787,2016,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.0854317354740701,0.0831605662439751,2016,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0515571472691918,0.0391156601187194,2017,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.0485742160899244,0.0558339911030252,2017,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0859996068320133,0.0401188906193434,2018,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.0241442717583955,0.0479689151210158,2018,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0857065720571785,0.0350938573721638,2019,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,-0.00754574876819628,0.0306661557637358,2019,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0655627592768955,0.0336176897696533,2020,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,-0.018992097416413,0.0285059255615892,2020,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0388689352156845,0.029385479959918,2021,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,-0.0193497327236608,0.0239210662361029,2021,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0604111914011272,0.0339177025566444,2022,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,-0.0107076556264693,0.0226653917831272,2022,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0725180589744892,0.0305425949692306,2023,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,-0.021140707518966,0.0221192210012438,2023,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near,0.0326200054748938,0.0327348061841363,2024,near x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+near_xo,0.00310390141867773,0.029370542775538,2024,near x exposure x year,"levels: cross-section per year, pair FE",53343,own tract,effective tax rate,tract
+y::2012:near,0.129935829514643,0.0631427110209661,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2013:near,0.109690705592432,0.0551130802437578,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2014:near,-0.00463700004896052,0.0228914666494845,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2015:near,-0.0177906367008711,0.0198004037257517,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2016:near,-0.00696551485995744,0.014901367247195,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2018:near,0.0307992761464987,0.0201660049073084,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2019:near,0.0383561075968061,0.0167389576143146,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2020:near,0.0103978592681044,0.0175943219348071,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2021:near,-0.0153156698382835,0.0248942941488504,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2022:near,0.0134980924869366,0.0312239585328764,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2023:near,0.0206200358292683,0.032273432348986,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2024:near,-0.0193896325209136,0.0305043722128676,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2012:near_xo,0.392309578038905,0.211411837775852,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2013:near_xo,0.388991055579963,0.172887696121699,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2014:near_xo,0.0731969930410104,0.0610533667558691,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2015:near_xo,0.0631422084977584,0.0536823323277228,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2016:near_xo,0.0390358981102433,0.0322474498401976,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2018:near_xo,-0.0244779504854979,0.0156573594816013,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2019:near_xo,-0.0564708655000909,0.0421204299185557,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2020:near_xo,-0.0689850129281633,0.0506778973879129,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2021:near_xo,-0.0584538762310011,0.0512219591840908,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2022:near_xo,-0.0509805945190944,0.048425652525038,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2023:near_xo,-0.061073093613406,0.0528122211721615,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+y::2024:near_xo,-0.0382846008938329,0.0417526420178918,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53343,own tract,effective tax rate,tract
+near,-0.109076218086953,0.0433000239362793,2012,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.196301277110518,0.05002969206164,2012,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.123650395794777,0.0470717455832764,2013,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.350134170649895,0.0691139446063226,2013,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0202847561033775,0.0411248582001926,2014,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.0990324910386574,0.0495505337100882,2014,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0351008681269979,0.0409586078197816,2015,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.132646623231285,0.0584365291984088,2015,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0708858453791997,0.0590428234209744,2016,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.2101950385466,0.0772012237540241,2016,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0599230124300086,0.0409287444492372,2017,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.11655993943503,0.0729236211199482,2017,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,0.0194092473115638,0.0679673045396235,2018,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.0389669896646328,0.0646540756121117,2018,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0027809524038988,0.069859299286339,2019,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.0335763245542387,0.0778242611093383,2019,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-6.97541016329849e-05,0.0412614498282202,2020,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.11462995752867,0.060534487599137,2020,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0728183072193529,0.0514610332709641,2021,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.117033289608778,0.0560475189210859,2021,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0846748867294742,0.0464472879929859,2022,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.0613089107689563,0.0475884686259892,2022,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,0.0186530130425253,0.0712581121395305,2023,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,0.0219874085409095,0.0693915650189775,2023,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near,-0.0380059615694409,0.0573954242552823,2024,near x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+near_xo,-0.0786178018723675,0.03686261640309,2024,near x exposure x year,"levels: cross-section per year, pair FE",53454,own tract,sales per 100 parcels,tract
+y::2012:near,-0.0194345144070708,0.042947169137245,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2013:near,-0.0193866697764704,0.0405452265685928,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2014:near,0.0212660268846764,0.0351612378836539,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2015:near,0.0361235947022243,0.0360503349869597,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2016:near,0.00071423626178809,0.0514433060090965,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2018:near,0.0735852707771456,0.0688094261440519,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2019:near,0.065755353422955,0.066862381120916,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2020:near,0.0606603738656143,0.0356092758382156,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2021:near,-0.0191621223317023,0.0446621160875205,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2022:near,-0.0265737354072763,0.040100706396708,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2023:near,0.0682224653774109,0.0630694121173846,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2024:near,0.00751010070140664,0.0549614652043429,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2012:near_xo,0.036318323063299,0.0422407848884273,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2013:near_xo,-0.101156532631159,0.0430887065097074,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2014:near_xo,0.00669398049130748,0.0309829286680369,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2015:near_xo,-0.0253013525604563,0.0277373661727905,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2016:near_xo,-0.109525786164049,0.102853809455073,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2018:near_xo,0.066029797634387,0.045651825095929,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2019:near_xo,0.067693440443016,0.0439129319989346,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2020:near_xo,-0.0121278877788925,0.0293809135942501,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2021:near_xo,-0.0238865360823356,0.0327426508428901,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2022:near_xo,0.0384399815708826,0.0532271131137908,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2023:near_xo,0.11983487598176,0.0428013521222117,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+y::2024:near_xo,0.0228306006208272,0.079526437940377,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",53454,own tract,sales per 100 parcels,tract
+near,-0.0103944416724721,0.0372572696263064,2013,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.0990018668253978,0.136271297806805,2013,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0160244372840932,0.0380550540697367,2014,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.109004860534858,0.140072457513242,2014,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0259568990212662,0.0391708797511847,2015,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.117626077795709,0.144911249016861,2015,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.02656829992541,0.0400206959999364,2016,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.120227892327271,0.144567553051003,2016,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0274563064623696,0.0411636720199326,2017,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.12982242275632,0.148161853225391,2017,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0301522024844842,0.0422318002010997,2018,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.138766842622946,0.151081495331916,2018,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0291705365706833,0.0435996466413705,2019,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.146833156756095,0.152474467568582,2019,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0391524699488126,0.0402866865403454,2020,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,0.000458972759883951,0.101658210385614,2020,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0359937372296709,0.0402033317813767,2021,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,0.00298370838132118,0.0996983064460139,2021,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0420546882905851,0.0427157923878413,2022,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.138795606761328,0.148511741458853,2022,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near,-0.0599016907356262,0.0422520569468747,2023,near x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+near_xo,-0.124233785541924,0.145157664034287,2023,near x exposure x year,"levels: cross-section per year, pair FE",51709,own tract,log median home value (ACS),tract
+y::2013:near,0.0140979802001277,0.0130252001447303,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2014:near,0.0103332106919657,0.0115868912545888,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2015:near,0.00110341601659448,0.00890623367074368,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2016:near,-0.00169589900957893,0.00568886156285536,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2018:near,-0.00389863266949821,0.00442532745142872,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2019:near,-0.00260753858267409,0.00696668472005337,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2020:near,-0.0128614532574206,0.00949736576771628,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2021:near,-0.00708228437216208,0.0103911645894072,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2022:near,-0.0126673340702167,0.010960728409041,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2023:near,-0.030646600393411,0.0124687241899861,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2013:near_xo,0.0318576229836461,0.0163482196299381,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2014:near_xo,0.0224422966470602,0.0126797654746996,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2015:near_xo,0.0149130063302641,0.00863258844266421,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2016:near_xo,0.0103871649726699,0.00450943668261813,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2018:near_xo,-0.00584665182933402,0.00347792032184873,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2019:near_xo,-0.0103800518637591,0.00573667908965728,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2020:near_xo,-0.00863092136500571,0.00863131104187292,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2021:near_xo,-0.00951974651106717,0.00909501204770465,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2022:near_xo,-0.00444129227018244,0.0104031999322663,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+y::2023:near_xo,0.00383369626625895,0.0138848666325629,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51709,own tract,log median home value (ACS),tract
+near,-0.0516386717245897,0.05739855622998,2013,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,0.00550629934545993,0.0558957122988718,2013,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0601479587595849,0.0580160841421319,2014,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,0.00163103005593827,0.0570955100606442,2014,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0638179768911041,0.0579756730253554,2015,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.00114231751227071,0.0588775326621662,2015,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.066930356391754,0.0586700532163588,2016,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.00420016014790816,0.0609915763227733,2016,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.070534622917672,0.0591373832537006,2017,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.00898313793589621,0.0650784354470867,2017,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0748885134298569,0.0602122365274749,2018,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0157111897330584,0.0679224453966289,2018,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.078383376364546,0.0609986233189345,2019,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0197340633566143,0.0694599743045344,2019,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0792337439658351,0.0618342562829807,2020,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0274109531877721,0.0710886024731233,2020,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0797894191398589,0.0627321121834211,2021,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0293809564076062,0.0733800771302066,2021,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.082808614055029,0.064148184270937,2022,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0463114667829659,0.0751846977155146,2022,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near,-0.0814363460741581,0.0647471005627943,2023,near x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+near_xo,-0.0502599734166805,0.0757026414720941,2023,near x exposure x year,"levels: cross-section per year, pair FE",51993,own tract,log population (ACS),tract
+y::2013:near,0.0190630207149233,0.00786785758179034,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2014:near,0.0105537336799281,0.00658785124794042,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2015:near,0.00688371554840905,0.00481569594483974,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2016:near,0.0037713360477591,0.00294692178801899,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2018:near,-0.00435389051217779,0.00302926389292569,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2019:near,-0.00784875344686656,0.00509006862059621,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2020:near,-0.00869912104815556,0.00834286982623423,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2021:near,-0.00925479622217951,0.0108776539365111,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2022:near,-0.0122739911373493,0.0126899560935266,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2023:near,-0.0109017231564787,0.0138820502772173,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2013:near_xo,0.0119953244906049,0.0143123028757336,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2014:near_xo,0.008120055201087,0.0110761573141536,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2015:near_xo,0.0053467076328812,0.00710166608334212,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2016:near_xo,0.0022888649972472,0.00393228930543613,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2018:near_xo,-0.00672805179714803,0.00385889851068847,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2019:near_xo,-0.0107509254207017,0.00600724393606915,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2020:near_xo,-0.0184278152518577,0.00810560325688326,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2021:near_xo,-0.0203978184716906,0.0112396878372068,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2022:near_xo,-0.0373283288470447,0.0153507534531827,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+y::2023:near_xo,-0.0412768354807575,0.0154073074720757,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",51993,own tract,log population (ACS),tract
+near,-0.103115980808699,0.0781374671010952,2013,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.0170780594434994,0.0933093119322126,2013,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.0965675487692971,0.0698878798975633,2014,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.0415358688794117,0.082078460817397,2014,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.109052076419301,0.0604467632062591,2015,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.054899402397844,0.0654419239861742,2015,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.0813405905128827,0.0673645516343334,2016,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.0775804265900406,0.0616494004958924,2016,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.106886305979719,0.0691755760160555,2017,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.03745651993873,0.0733224374237237,2017,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.0973501626761791,0.061048048376898,2018,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.0507851887918488,0.0519367819749745,2018,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.0468973819539653,0.0631543074606563,2019,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.103159872136923,0.0680618283335487,2019,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.0930481104480062,0.0602839333293083,2020,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.0929788446047057,0.0581695813729972,2020,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near,-0.114495590688004,0.068739361695344,2021,near x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+near_xo,-0.117673720269888,0.0649999853108243,2021,near x exposure x year,"levels: cross-section per year, pair FE",41590,own tract,move-out rate (Data Axle),tract
+y::2013:near,-0.000365814701135314,0.0296021514534738,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2014:near,0.0101906095158055,0.0256766207176261,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2015:near,-0.00233390770266716,0.0267901588832348,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2016:near,0.0228004764684555,0.0240398637135887,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2018:near,0.00293900530313397,0.0247030522054524,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2019:near,0.0567659445746705,0.0381460763378956,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2020:near,0.0119509059518369,0.0297381550176674,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2021:near,-0.0107159533740744,0.0298230713559351,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2013:near_xo,0.0200615132346411,0.0292720693730743,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2014:near_xo,-0.0033018447319909,0.0234967143598681,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2015:near_xo,-0.0166842142703854,0.0219202829547981,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2016:near_xo,-0.0408950511283697,0.028008885463722,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2018:near_xo,-0.011786464247519,0.0315444026932415,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2019:near_xo,-0.0650053028892578,0.0349047270613301,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2020:near_xo,-0.0561803539983613,0.0351252818196457,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+y::2021:near_xo,-0.0785933297260596,0.0331176651549211,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",41590,own tract,move-out rate (Data Axle),tract
+near,0.0726773561465237,0.0789820855379505,2012,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.212602865091522,0.137015481988215,2012,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.048663189658329,0.0782796386787365,2013,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.210131438687004,0.130672081146306,2013,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0340546400627488,0.0784153239729814,2014,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.158228663532084,0.133109350318412,2014,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0406333409146042,0.0794741791006927,2015,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.164846153518314,0.131041455206527,2015,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0108222774795029,0.0829609329801323,2016,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.188503803972143,0.136001372735534,2016,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,-0.00427552706341568,0.0853916166555816,2017,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.200401403015568,0.139407226696939,2017,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0110238670139701,0.0862646087247898,2018,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.15837579629167,0.139598659936255,2018,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0357756935734138,0.0910362340764007,2019,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.154283767569821,0.145518487855091,2019,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0200089776237235,0.0954629178852158,2020,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.108931597048309,0.153848971241864,2020,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0370191602960673,0.0945383960032163,2021,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.0973583621982027,0.157258476038486,2021,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.0177082365584964,0.0939085496414544,2022,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.0503529664979241,0.162252635357357,2022,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near,0.00817050445580223,0.0959654901614118,2023,near x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+near_xo,-0.0353945079934137,0.171180024985735,2023,near x exposure x year,"levels: cross-section per year, pair FE",6450,own tract,log district property tax per pupil,leaid
+y::2012:near,0.0660544575281244,0.0314449888468495,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2013:near,0.0499921628622833,0.0375685448352788,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2014:near,0.036258020823988,0.033096984181295,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2015:near,0.0428367216758432,0.025729564682947,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2016:near,0.0117399524481271,0.0158751859888108,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2018:near,0.0152993940774181,0.0215580597811318,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2019:near,0.040051220636862,0.0257767824788821,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2020:near,0.0224883003485677,0.0318869873160797,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2021:near,0.0394984830209119,0.0360640432592725,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2022:near,0.02006872690628,0.0369267729662928,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2023:near,0.0188089513360711,0.0394321693189464,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2012:near_xo,-0.0235460130004402,0.0599702282205194,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2013:near_xo,-0.0160218927217178,0.06082555448055,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2014:near_xo,0.0357716818354257,0.0476604803515011,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2015:near_xo,0.0291541918491951,0.0440556634821409,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2016:near_xo,0.0132369150933704,0.0299694207508868,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2018:near_xo,0.0420256067239392,0.0294057628687553,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2019:near_xo,0.0461176354457879,0.0357974198555453,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2020:near_xo,0.0906795740202485,0.0455481518605948,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2021:near_xo,0.102252808870355,0.0560245308270973,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2022:near_xo,0.139373460819002,0.0660790935965625,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+y::2023:near_xo,0.14610707757242,0.0732914810595802,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",6450,own tract,log district property tax per pupil,leaid
+near,-0.0626140518724252,0.053600057329416,2012,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.273592101048212,0.0713476231212391,2012,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.126098393330551,0.0638600119742176,2013,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.313791501826021,0.104965519167021,2013,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0889616197275625,0.05424315961197,2014,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.358960175131163,0.100803712263382,2014,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0755646283143787,0.05030626128441,2015,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.318711147010153,0.0958392143274943,2015,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0579175964277723,0.0521726770904682,2016,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.316031954701146,0.098126693768339,2016,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0788485489412109,0.051241502687417,2017,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.287006527784525,0.0977725846592375,2017,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0788741672130083,0.0517297907904203,2018,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.195856241668476,0.0656266317909719,2018,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0414890967629754,0.0552477548701716,2019,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.185418987100122,0.0695578059514689,2019,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0719406796653013,0.0558881699654831,2020,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.171439843229477,0.0741478987157119,2020,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0648758400829081,0.0587968902673969,2021,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.117184326179624,0.0868283981475006,2021,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0849730675322181,0.0564706723909295,2022,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.161606444106102,0.0809240396135521,2022,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near,-0.0780329172983644,0.0554995350693115,2023,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+near_xo,-0.156210166157188,0.0842662973330895,2023,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district spending per pupil,leaid
+y::2012:near,0.0152950071075911,0.0346944379519374,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2013:near,-0.0462988312958215,0.0457330489210982,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2014:near,-0.00771649972585796,0.0265707803742552,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2015:near,0.00568049168732552,0.0239176262274654,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2016:near,0.0216418611222626,0.0194988539294585,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2018:near,0.000235042009155171,0.020634633511047,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2019:near,0.0370802418554231,0.0289914560913471,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2020:near,0.00360515721686999,0.0318931141118081,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2021:near,0.0106699967992632,0.0384218013463443,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2022:near,-0.00942723065004581,0.0386125435394732,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2023:near,0.000867744817719799,0.0411333649489095,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2012:near_xo,0.0158019195057654,0.0850415765959484,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2013:near_xo,-0.0254727906488169,0.0516653954675575,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2014:near_xo,-0.0709182400223231,0.0347919785618915,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2015:near_xo,-0.0306692119013123,0.0266133099999114,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2016:near_xo,-0.0293851705070452,0.0223114902719564,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2018:near_xo,0.0914811834704685,0.0635757064057912,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2019:near_xo,0.101614253882477,0.0796510798669733,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2020:near_xo,0.115328589887541,0.0534647422947667,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2021:near_xo,0.169584106937396,0.128358870464278,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2022:near_xo,0.125161989010917,0.121269610735782,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+y::2023:near_xo,0.127231134017911,0.133260477269467,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district spending per pupil,leaid
+near,0.19804151043524,0.099857643846068,2012,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0490277739428033,0.105341440195754,2012,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.191103952250054,0.100844099644189,2013,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.050104375665933,0.107953548147248,2013,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.192691216306187,0.10169332912137,2014,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0524107795813237,0.109243882223007,2014,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.192546299458626,0.101458968354517,2015,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0470304918559427,0.110532091831755,2015,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.190286288563373,0.102448225141732,2016,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0487718805854946,0.112195837793623,2016,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.194336205186934,0.102619707477276,2017,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0453950358190165,0.112743984138006,2017,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.195212569926469,0.102488453490387,2018,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0239939242563974,0.115678190239848,2018,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.193115300836272,0.103702973036989,2019,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0303982235599245,0.117414723433451,2019,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.190123314710776,0.103891097627309,2020,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0276131072536884,0.117814120477773,2020,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.19587911469992,0.104778432546275,2021,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0209076458442483,0.119506263803604,2021,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.199279217108127,0.104549382812701,2022,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0288123673525742,0.11897687195075,2022,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near,0.203021085010319,0.104820243569237,2023,near x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+near_xo,0.0219780160195327,0.119563242249179,2023,near x exposure x year,"levels: cross-section per year, pair FE",8373,own tract,log district enrolment,leaid
+y::2012:near,0.00694575606514347,0.0119272440077801,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2013:near,0.000627992459302577,0.0102941356610975,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2014:near,-0.000480719660852066,0.00931002355572986,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2015:near,-0.000625636508412866,0.00528736635301898,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2016:near,-0.00254590393974041,0.00400361107478076,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2018:near,0.00138307936092602,0.00550488251326931,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2019:near,-0.00230968216437497,0.00814282479774345,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2020:near,-0.00438283142880691,0.00933181327991785,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2021:near,0.00137296856033721,0.011624052779437,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2022:near,0.00477307096854306,0.0122349804693554,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2023:near,0.0051341269497595,0.0131780772050485,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2012:near_xo,0.00255938607042222,0.0153115400306506,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2013:near_xo,0.00315087843906014,0.0122500915582913,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2014:near_xo,0.00597347174534533,0.0106639263356047,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2015:near_xo,0.00059318401996408,0.00689967043663903,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2016:near_xo,0.00261576392394344,0.00458344037623084,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2018:near_xo,-0.0207578584861128,0.0181338239383779,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2019:near_xo,-0.0152525218542808,0.0185775572218649,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2020:near_xo,-0.0153085368217414,0.0177840467103655,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2021:near_xo,-0.0220139982311818,0.0226893363280178,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2022:near_xo,-0.0141092767228556,0.0215181107276016,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+y::2023:near_xo,-0.0171562626410766,0.0225172600008492,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8373,own tract,log district enrolment,leaid
+near,-0.1247493859418,0.23188299810665,2012,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.390929306690225,0.340210354291507,2012,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0529269517304717,0.188332578561658,2013,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.307763102843289,0.294309418876892,2013,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,0.0473306790725718,0.18878038930753,2014,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.12035457665644,0.304016691276525,2014,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0347989050023454,0.181873348137439,2015,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.230715710837455,0.292854160146003,2015,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0676029028637683,0.186003044622168,2016,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.267749339804773,0.298142293701476,2016,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0610687549857243,0.236398423912496,2017,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.213438697314191,0.365874475620399,2017,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0675404934861061,0.18281167005217,2018,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.299603514601529,0.297971763290447,2018,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0747261977582652,0.185214866330501,2019,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.325535659800115,0.299869417334753,2019,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0615829345535212,0.183583447715672,2020,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.287332158279702,0.297269549548663,2020,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.0700050133104917,0.180481433766766,2021,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.303944602294747,0.293543813346395,2021,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near,-0.139593776180143,0.196677686482328,2022,near x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+near_xo,-0.382564714303682,0.319204047689178,2022,near x exposure x year,"levels: cross-section per year, pair FE",2973,own tract,log county school property tax (CoG),cty
+y::2012:near,0.0255120347000384,0.077918667481721,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2013:near,0.0973344689113667,0.0492211379609062,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2014:near,0.0756565979399115,0.0416517246534521,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2015:near,0.109350360297124,0.0510658047107171,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2016:near,0.0744976471415384,0.0496218112659965,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2018:near,0.0745600565192014,0.0440219556950007,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2019:near,0.0673743522470422,0.0524903818865681,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2020:near,0.0583131088778239,0.0399377119098507,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2021:near,0.072095536694815,0.0563612323463565,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2022:near,0.00429507117564208,0.0496405260678281,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2012:near_xo,0.028973528570071,0.10262607948566,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2013:near_xo,0.112139732417005,0.0704274683911013,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2014:near_xo,0.0753604455399088,0.0621555363679979,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2015:near_xo,0.172043411196336,0.0728957582942089,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2016:near_xo,0.130954010333223,0.0736722183666441,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2018:near_xo,0.0990998355364696,0.0619402574740844,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2019:near_xo,0.0731676903378833,0.0795613749454769,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2020:near_xo,0.0780165873753391,0.0607112201673087,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2021:near_xo,0.0947587478432498,0.0838957920802405,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+y::2022:near_xo,0.0362448333364613,0.0775468281450484,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",2973,own tract,log county school property tax (CoG),cty
+near,0.0253420864994888,0.0488257445308087,2012,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.240882189962826,0.0585235257558465,2012,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0198324455823079,0.0500331021662944,2013,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.149647025730173,0.0590227316393901,2013,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,0.051503063451434,0.0483480144568638,2014,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.196879836362764,0.055382307396674,2014,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0473777490244979,0.0571556649244307,2015,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.149196717644109,0.0703708537815588,2015,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0269396902133631,0.0560668215646689,2016,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.138544052367666,0.0712266850784436,2016,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0314130617703065,0.0547147087862991,2017,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.142936421487772,0.0703426972479147,2017,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0296769571942318,0.0534585789417591,2018,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.14760848157709,0.0689713188286421,2018,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0381880457565648,0.0512078202909381,2019,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.131705101063245,0.0673937536466181,2019,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0315728782496565,0.0502976889002053,2020,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.123556756393336,0.0621754549457922,2020,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0255623192366233,0.0471244847773791,2021,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.103893184079387,0.0542318872599466,2021,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0371275740333336,0.0504356826673071,2022,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.120109077519913,0.0610141675149681,2022,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0279729803982954,0.0473075755464538,2023,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.104672881025909,0.0605648237795271,2023,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near,-0.0209626183935469,0.04897179038788,2024,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+near_xh,0.107500326324571,0.0598612186898333,2024,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,log median sale price,tract
+y::2012:near,-0.00460621950208009,0.0238497101955617,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2013:near,-0.00475694514608825,0.0216476655451352,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2014:near,0.0185815326365134,0.0168154177783803,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2015:near,-0.00166112604734873,0.0134396597337111,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2016:near,0.00400526222413642,0.0127880929788034,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2018:near,-0.00869933040341935,0.0138448696610938,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2019:near,-0.0269908941701307,0.0151691235135308,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2020:near,-0.00307007828940906,0.0146563514994782,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2021:near,0.00409420849824359,0.0205651940589388,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2022:near,-0.00872905348471793,0.0212034917253603,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2023:near,0.00536609834687453,0.0209983475876423,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2024:near,0.0104938069238435,0.0227769978583072,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2012:near_xh,0.0103535228905993,0.0276114498808841,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2013:near_xh,-0.00191844694758154,0.025372987912668,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2014:near_xh,0.0333950299263155,0.0187068716511813,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2015:near_xh,-0.00571148093477084,0.0155451095392787,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2016:near_xh,-0.00734599107437732,0.0151190487391111,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2018:near_xh,0.00739051904246291,0.0151181609718648,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2019:near_xh,0.00323190181982171,0.0162471970224976,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2020:near_xh,-0.0181561774997053,0.0179692824075953,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2021:near_xh,-0.0269947371392146,0.0289423130345875,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2022:near_xh,-0.00528470269875805,0.0269037653291216,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2023:near_xh,-0.0272147770728159,0.0253876917186258,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+y::2024:near_xh,-0.023084770741575,0.0285870144797482,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,log median sale price,tract
+near,0.151235701274946,0.0494800075817534,2012,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.194632786538117,0.0583090083281071,2012,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0976262340775223,0.0496519559927897,2013,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.142021421995574,0.065961720224936,2013,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0796372427709978,0.0493381332708262,2014,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.23857645556216,0.0559604877407776,2014,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0376878304492536,0.0574453851254256,2015,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.173902538084068,0.0716114369909903,2015,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0498120238446707,0.0577805579710658,2016,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.177674038235148,0.0725252224190389,2016,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0557703505184883,0.0571299638348168,2017,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.163080988147142,0.0723255169692119,2017,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0677820019706116,0.0556452760616597,2018,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.163609726633987,0.0713709282079782,2018,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0534195839684463,0.0567111727333375,2019,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.166864719180117,0.0722041595600645,2019,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0383741746497672,0.0545469884704446,2020,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.151292045785754,0.0692563536310401,2020,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.050626050517423,0.0561735246140527,2021,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.136347962486462,0.0704489019402158,2021,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0405986394119256,0.0562100603991184,2022,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.111005599807331,0.0705223155639338,2022,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0618759820307167,0.0574484133263102,2023,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.123551176830677,0.0720581717214219,2023,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near,0.0524419754462494,0.0562335390907582,2024,near x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+near_xh,0.116455560819778,0.0708521607687398,2024,near x exposure x year,"levels: cross-section per year, pair FE",66358,high side of the pair,log tax bill per parcel,tract
+y::2012:near,0.034387820689154,0.0228633723177691,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2013:near,0.0137569181179622,0.0177369764520826,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2014:near,-0.00853383221888897,0.0110074897403396,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2015:near,-0.00426203269473859,0.00800763526635008,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2016:near,-0.0007444974722049,0.00568571876318923,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2018:near,0.00970509482712978,0.00871864805037787,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2019:near,-0.000294852136015779,0.00881257325481536,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2020:near,-0.0184040341331474,0.00961797819119245,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2021:near,-0.0194937060522746,0.0104414507488191,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2022:near,-0.0183618151515015,0.0122261328992412,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2023:near,-0.000362064745475885,0.0146621339820646,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2024:near,-0.0127207996574335,0.0166297856217388,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2012:near_xh,-0.0515097401486292,0.0212293416250333,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2013:near_xh,-0.052031172007883,0.0217163657922503,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2014:near_xh,-0.0173146165530506,0.0128020862598988,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2015:near_xh,0.00591570519530186,0.010955111499219,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2016:near_xh,0.00887842664639645,0.00663075046481742,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2018:near_xh,-0.00152365842021422,0.0090079392173902,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2019:near_xh,0.00644605034957889,0.0101645370448738,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2020:near_xh,-0.00308200623682142,0.0116096788350813,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2021:near_xh,0.0184591127031953,0.0116218200683037,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2022:near_xh,0.000900656201272782,0.0144930990761055,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2023:near_xh,0.00943376249824624,0.0164900223812782,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+y::2024:near_xh,0.00825446665860859,0.0184530306165559,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",66358,high side of the pair,log tax bill per parcel,tract
+near,0.149059961503624,0.0786313494387185,2012,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0798300608693484,0.0807809337721284,2012,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0974103992122114,0.0689954246533933,2013,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.049417243044456,0.0752652800578687,2013,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0152837661474331,0.047594874903401,2014,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,0.0358815341222986,0.0432908367887058,2014,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.080003524281737,0.0438586567785259,2015,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0366127208526058,0.0474656986631222,2015,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0691749995846195,0.0406769944443333,2016,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0160044155465365,0.0438912946553249,2016,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0898276547720326,0.0383087133088142,2017,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0291135373569693,0.0421306134808709,2017,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.10047251637973,0.0334680566263393,2018,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0465909441527117,0.0403955725668859,2018,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0785609195702883,0.0283124631593528,2019,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,0.00488940181954619,0.0348161156176152,2019,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0624375130170204,0.0271251591448719,2020,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0176931032594603,0.0321490358297334,2020,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.057486754961378,0.0242049927314827,2021,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.011678262163234,0.0267262211770378,2021,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0614849555891164,0.026307371298857,2022,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0469948081937375,0.0301278598325036,2022,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.0699853076895014,0.0246440788901717,2023,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.0164751355153527,0.0272551480390044,2023,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near,0.034001137462031,0.0247130509899699,2024,near x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+near_xh,-0.00667363255419135,0.0263079583395493,2024,near x exposure x year,"levels: cross-section per year, pair FE",64490,high side of the pair,effective tax rate,tract
+y::2012:near,0.0591912184568943,0.0443691045285494,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2013:near,0.0155193263436936,0.0322339176434039,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2014:near,-0.0206161774372835,0.0178882997186994,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2015:near,-0.00876410486874883,0.0141616067969001,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2016:near,-0.0147359170756665,0.0111747109921807,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2018:near,0.0116487463638608,0.020437664501459,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2019:near,0.00179391759050541,0.0156715582731151,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2020:near,-0.0268474678760957,0.0195733163136122,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2021:near,-0.0454271699508172,0.0233705790568769,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2022:near,-0.0349452101159571,0.0268617116550666,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2023:near,-0.0307619194519598,0.0276304640808437,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2024:near,-0.068362924870006,0.0289544376452632,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2012:near_xh,-0.0313226494897069,0.0468420792106323,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2013:near_xh,-0.0377581593356868,0.0355569883832922,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2014:near_xh,-0.0055761989813973,0.0179093573089193,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2015:near_xh,-0.00147782677497949,0.0171675892370263,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2016:near_xh,0.0114578157698332,0.011854611867065,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2018:near_xh,-0.0158757540682603,0.0244440366104299,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2019:near_xh,0.0315385036965695,0.0169752883490485,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2020:near_xh,0.0159272605641323,0.0216198309296789,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2021:near_xh,0.0440120831148008,0.0243930405255272,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2022:near_xh,0.0139824977052282,0.0324278048764396,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2023:near_xh,0.041894849962486,0.0309199931958161,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+y::2024:near_xh,0.0579373499229571,0.0323320513936268,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64490,high side of the pair,effective tax rate,tract
+near,-0.0454567683151568,0.0401734483426386,2012,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0911696265970099,0.0434140870585868,2012,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0150638550186075,0.0508866394363783,2013,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.103944422739165,0.0731359751366819,2013,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0137982835926087,0.0429051693970574,2014,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.079174500616597,0.0514065747044891,2014,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0234912671628989,0.0495455795409065,2015,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0911395718700368,0.066088895886656,2015,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0382188444024728,0.0689542262560861,2016,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0552728285763,0.0833434303437398,2016,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0309232130834359,0.0423997308793558,2017,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0694764828017379,0.0577758460896747,2017,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0277337550674141,0.0561734068398217,2018,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.171338387623629,0.0752653166165058,2018,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0148224782714736,0.064305856456684,2019,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0674861768543431,0.0842919674478689,2019,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0465439841947035,0.0431808252263208,2020,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,9.84982604883847e-05,0.0629250199183459,2020,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0223327476570539,0.0511292978619513,2021,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.039780927390887,0.0679586302095489,2021,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.0346164168444885,0.0456592660588972,2022,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,0.0232761880155032,0.062344824247799,2022,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0298813230726732,0.0622543733197581,2023,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,-0.00857557709659781,0.0780879809922452,2023,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near,-0.00855926996541768,0.0514429121909519,2024,near x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+near_xh,-0.0605254941100266,0.0616956415792078,2024,near x exposure x year,"levels: cross-section per year, pair FE",64684,high side of the pair,sales per 100 parcels,tract
+y::2012:near,-0.0151283126100483,0.0421155339776523,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2013:near,-0.000499172228288759,0.0391023501354797,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2014:near,0.0180273076198183,0.0308559542323951,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2015:near,0.0259977307595706,0.034048446847418,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2016:near,0.00337709567115851,0.0526186451446626,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2018:near,0.0541235908613912,0.0581967360430755,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2019:near,0.0510734265332507,0.0559709615611332,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2020:near,0.0779572985733857,0.0317199250122812,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2021:near,0.00760971760850117,0.0411309029456071,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2022:near,-0.00363533495960319,0.0378949706032597,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2023:near,0.0559827937898938,0.0568854197280218,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2024:near,0.0148957068449234,0.0463669313042459,2024,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2012:near_xh,-0.010501153569417,0.0547685196154535,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2013:near_xh,-0.0308474443570954,0.0489473778158541,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2014:near_xh,0.0192941510152915,0.0360070705544128,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2015:near_xh,0.000589041549541003,0.0366794175809049,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2016:near_xh,-0.0337820455455722,0.0618050009049945,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2018:near_xh,0.090348387058737,0.0687407283503911,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2019:near_xh,-0.0183757909656328,0.0675027224710357,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2020:near_xh,-0.072194291592228,0.042218137436522,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2021:near_xh,-0.0100700114721043,0.0473731646056604,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2022:near_xh,-0.0268145874060777,0.0459053782010205,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2023:near_xh,-0.0590439009710605,0.0644064664523259,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+y::2024:near_xh,-0.103385666626985,0.0544983368083147,2024,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",64684,high side of the pair,sales per 100 parcels,tract
+near,0.0130643900008634,0.0480745530767944,2013,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.136187480393234,0.0569315726293216,2013,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,0.0113458154968307,0.0491634238169005,2014,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.128574008167494,0.0588233901805891,2014,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.000301442784746392,0.0502863691915106,2015,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.144891273220163,0.0620579975945068,2015,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.00243755016192012,0.0525480368049018,2016,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.144731377488517,0.0648212667876229,2016,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.00348362535485352,0.0535775070534905,2017,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.149358294971791,0.0673193228451868,2017,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.00466355114624624,0.0552518834639233,2018,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.147814641975173,0.0690350717478358,2018,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.00642078140992475,0.0565417833151643,2019,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.148510334996386,0.0702901749389963,2019,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.0131120987045389,0.0570350020215186,2020,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.144736508386274,0.0717792846036786,2020,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.0103478229200626,0.0564090526905112,2021,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.140913297778766,0.0710260915891535,2021,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.013353762934378,0.0547556731716943,2022,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.144240504846442,0.0688339528505499,2022,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near,-0.0254588307644213,0.0540855284460456,2023,near x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+near_xh,0.144300974573918,0.0688512977796801,2023,near x exposure x year,"levels: cross-section per year, pair FE",62586,high side of the pair,log median home value (ACS),tract
+y::2013:near,0.0135643379650342,0.0126200518249906,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2014:near,0.0136736423975568,0.0110997139563445,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2015:near,0.00335912557869028,0.00849736032075572,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2016:near,-0.00120288705936935,0.00530051168316682,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2018:near,-0.00315010177824335,0.00411945507313706,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2019:near,-0.0046923594546035,0.00634219814690365,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2020:near,-0.0101503674594803,0.0088185565036138,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2021:near,-0.00599838196418738,0.00906440803793345,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2022:near,-0.0110971715813561,0.00932925529138328,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2023:near,-0.0215804386832517,0.0109522646880381,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2013:near_xh,-0.0100698233850692,0.0171031805109011,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2014:near_xh,-0.0194869560900053,0.0146968249676056,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2015:near_xh,-0.00312829455532073,0.0110872479879809,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2016:near_xh,-0.00336868196179828,0.00667462326724377,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2018:near_xh,-0.00252963356774139,0.00583739391316837,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2019:near_xh,-0.00235415260116931,0.00869112473676928,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2020:near_xh,-0.00645120337967879,0.0113081416464027,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2021:near_xh,-0.0103254344985081,0.0117480974347399,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2022:near_xh,-0.0079549702968941,0.0115421837695075,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+y::2023:near_xh,-0.00826260299248069,0.0132613850933942,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62586,high side of the pair,log median home value (ACS),tract
+near,-0.0648623669659543,0.0482448743343233,2013,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0246272646760391,0.0670246115349532,2013,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0692456095271422,0.0487777909759935,2014,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0249692994829881,0.0677465419709813,2014,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0708700691592874,0.0488987918152303,2015,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0285141574761456,0.0680604603991693,2015,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0745989418214522,0.049319374381953,2016,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0300113479397092,0.0688871744212566,2016,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0761316538924799,0.0497595050095177,2017,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0323442046950044,0.0695285532576148,2017,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0783300993264214,0.0506245759664821,2018,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0333160728050624,0.0707199529360975,2018,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0799408876482984,0.0512734181511155,2019,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0331291788074271,0.0716335533380427,2019,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0762234876792451,0.0519509565780294,2020,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0355885966195201,0.0728180364320984,2020,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0737543902290443,0.0522407504006316,2021,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.045488009254118,0.0730809427193632,2021,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0749693747615895,0.0532265152878692,2022,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0467206692299578,0.0744883808045562,2022,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near,-0.0748102832121086,0.0535512691010922,2023,near x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+near_xh,0.0458891296918431,0.0747742299360914,2023,near x exposure x year,"levels: cross-section per year, pair FE",62980,high side of the pair,log population (ACS),tract
+y::2013:near,0.0117277702257027,0.00678313434465818,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2014:near,0.00734452766451541,0.0054835261474751,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2015:near,0.00555323165474066,0.00395818212461234,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2016:near,0.00182435899257708,0.00248428632602366,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2018:near,-0.00219844543394036,0.00254440943116203,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2019:near,-0.00380923375581747,0.0042118753072413,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2020:near,-9.18337867643771e-05,0.00817281872012277,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2021:near,0.00237726366343624,0.0102241706069261,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2022:near,0.00116227913089149,0.0116045182674688,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2023:near,0.00132137068037212,0.0125214075707126,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2013:near_xh,-0.00747758024054151,0.00879282501973543,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2014:near_xh,-0.00713554543359268,0.00726988507282585,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2015:near_xh,-0.00367778749064683,0.00530152527722221,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2016:near_xh,-0.0021805970270825,0.00344084487713314,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2018:near_xh,0.000971868110080303,0.00337063720052321,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2019:near_xh,0.000784974112444788,0.00573599640997261,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2020:near_xh,0.00324439192453861,0.0146066417737882,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2021:near_xh,0.0131438045591395,0.0177920561463892,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2022:near_xh,0.0143764645349798,0.0202519213725477,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+y::2023:near_xh,0.013544924996865,0.0212229227140704,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",62980,high side of the pair,log population (ACS),tract
+near,-0.0499947235471627,0.0748466024927209,2013,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.0662485325584465,0.0896276375452405,2013,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0615725237624183,0.065331649668519,2014,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.101143342819939,0.0740028347219232,2014,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0802679885440985,0.0533406698897775,2015,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.135967861628295,0.0606557847283051,2015,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0318438513837533,0.0657681375193362,2016,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.101945014201184,0.074354862544036,2016,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0478176702957858,0.065583672008945,2017,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.133435101829844,0.073773801196267,2017,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0523884733766159,0.0582714888047105,2018,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.0986003615252473,0.0654571783899022,2018,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.0114908893731889,0.0615230393548403,2019,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.0489512894822805,0.0647717372112431,2019,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.047477440446618,0.0579691823217036,2020,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.034779351411165,0.0625491076326079,2020,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near,-0.045243380673237,0.064672880662469,2021,near x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+near_xh,0.0200394366989307,0.0690813714009163,2021,near x exposure x year,"levels: cross-section per year, pair FE",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2013:near,-0.00575576448574539,0.0264412863245303,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2014:near,-0.0143916203538041,0.0225009610018589,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2015:near,-0.0326566237208064,0.0250359902494809,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2016:near,0.0138128700912922,0.021370895709187,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2018:near,-0.00786586937454222,0.0225279346064178,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2019:near,0.0362020553614157,0.0329967560227574,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2020:near,-0.000145826405466297,0.0272857850970209,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2021:near,0.00102153207250164,0.0273852477123442,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2013:near_xh,-0.0594117563350879,0.0383920296170494,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2014:near_xh,-0.0321953236210096,0.0274975131785846,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2015:near_xh,0.00322337540819844,0.0308216640401361,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2016:near_xh,-0.0287261807235856,0.0348068512766874,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2018:near_xh,-0.0262065058359978,0.0282605960662702,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2019:near_xh,-0.0776760300959006,0.0433297235289585,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2020:near_xh,-0.09003060058301,0.0358277907846014,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+y::2021:near_xh,-0.104952461585432,0.0398128492616865,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",50391,high side of the pair,move-out rate (Data Axle),tract
+near,0.271425249043292,0.108088086631282,2012,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.371946925808376,0.1854731571026,2012,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.275307710920105,0.10350331758396,2013,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.423399198783963,0.177538364986302,2013,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.252918772880377,0.109639036425856,2014,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.43439106199384,0.185060063160306,2014,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.258349570763495,0.109117485920573,2015,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.434123172449866,0.185812464141802,2015,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.237170988682975,0.109682827174878,2016,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.432547304577914,0.188100644965618,2016,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.20807463575916,0.105005084720827,2017,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.385268651367286,0.179224811253646,2017,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.199930768919484,0.104010328270749,2018,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.384392740424257,0.174797299312405,2018,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.192981460545979,0.104388200605117,2019,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.418353174396814,0.173138370214829,2019,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.208235984039932,0.101599992386677,2020,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.487136088743171,0.165624131609057,2020,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.201876705941815,0.106281475697014,2021,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.463421104411685,0.173024718851,2021,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.194837226316834,0.106743174924773,2022,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.478606734164704,0.172992860848546,2022,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near,0.211134804884436,0.106752503481178,2023,near x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+near_xh,0.522104610209224,0.170595965080159,2023,near x exposure x year,"levels: cross-section per year, pair FE",8594,high side of the pair,log district property tax per pupil,leaid
+y::2012:near,0.0526885787539279,0.0358894822293817,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2013:near,0.0676214543670831,0.0238991400248642,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2014:near,0.0453417507983935,0.0321691452805192,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2015:near,0.0507725486815107,0.0238819838008056,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2016:near,0.0256017778014698,0.0164556293794266,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2018:near,-0.00814386683968904,0.0197246129833788,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2019:near,-0.0150931752131944,0.026720424862424,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2020:near,-9.40278802327171e-05,0.0379685280015721,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2021:near,-0.0064533059783495,0.0447902647930729,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2022:near,-0.0126437273208529,0.0438418205695453,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2023:near,0.0110775403978909,0.0438921285364244,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2012:near_xh,-0.0329420386659854,0.0644464142859711,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2013:near_xh,0.0388549593704754,0.0454296726658706,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2014:near_xh,0.0496672694534741,0.0541579678737813,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2015:near_xh,0.0493993799095,0.0422122157983335,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2016:near_xh,0.0440129110302534,0.0275499365432662,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2018:near_xh,-0.000875910943036694,0.0337248246074213,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2019:near_xh,0.0330845230295202,0.0430056827704959,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2020:near_xh,0.101907744372673,0.0647595095436207,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2021:near_xh,0.0781927600411892,0.0750208667761274,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2022:near_xh,0.0880662564183544,0.0730774194817765,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+y::2023:near_xh,0.130536484518911,0.0710994481332099,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",8594,high side of the pair,log district property tax per pupil,leaid
+near,-0.0514208170587873,0.0594231264602443,2012,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.238646753463435,0.0896463851705291,2012,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0854022940927699,0.0647600473474133,2013,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.181450187873895,0.0869581701510258,2013,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0622787978913583,0.061000181964331,2014,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.200153885033689,0.0872291871863709,2014,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0364268260521947,0.0564748155270518,2015,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.225213802693773,0.0803213029800857,2015,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0147845926219281,0.0555415557337991,2016,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.178951300182203,0.0797418173546309,2016,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0277983709664596,0.0561176165402547,2017,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.219833075600072,0.0797756731788104,2017,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0280320288420766,0.0562302321938129,2018,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.174455547021639,0.0804344683684334,2018,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0122143833331457,0.0593021924626948,2019,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.163212122402344,0.0853425062357349,2019,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0276367251834534,0.0589005434562511,2020,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.126536355124218,0.0862449992894991,2020,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0407706843885922,0.0629437480321371,2021,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.14683794101973,0.0939644637844875,2021,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0454702797903536,0.0627889999704286,2022,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.219006646734097,0.0947762238551441,2022,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near,-0.0215356701920011,0.0631452402114215,2023,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+near_xh,-0.155988919295518,0.0911304985594923,2023,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district spending per pupil,leaid
+y::2012:near,-0.024193900698142,0.0429079789672886,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2013:near,-0.0560881135198606,0.0413507630559891,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2014:near,-0.0321463160166887,0.0311494204212247,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2015:near,-0.00629434417752699,0.0224378806518718,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2016:near,0.0137970287049937,0.0174270909920753,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2018:near,-1.24088667093839e-05,0.0213145943697494,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2019:near,0.0161061479138566,0.0285663205490506,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2020:near,-0.00105904522743136,0.0343340379595988,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2021:near,-0.0141930044325695,0.0372607412818965,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2022:near,-0.018892599834331,0.039449058787758,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2023:near,0.0043204664235262,0.0440865642686773,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2012:near_xh,-0.0161348148412943,0.0617218381149346,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2013:near_xh,0.04237388183709,0.0484718044011,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2014:near_xh,0.0224117424496473,0.0441875464545386,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2015:near_xh,-0.00264817521043753,0.0347940036980742,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2016:near_xh,0.0415017632185456,0.025749234446193,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2018:near_xh,0.0455503943176168,0.0301057423291955,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2019:near_xh,0.0575752444184611,0.0399261034394104,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2020:near_xh,0.0935826151441408,0.046486330622937,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2021:near_xh,0.0732810292486283,0.0538640779904188,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2022:near_xh,0.00111232353425752,0.059984164441521,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+y::2023:near_xh,0.0644794290821455,0.0602201202676031,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district spending per pupil,leaid
+near,0.189621876362208,0.0885134715545684,2012,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0823618773586684,0.143786888168718,2012,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.181615936118301,0.089251405160089,2013,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0920424541604326,0.145692867328354,2013,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.182158100269407,0.090311941375208,2014,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0935070352195983,0.147098429451255,2014,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.182623555237773,0.0902688368553785,2015,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0866604222702459,0.14750867160467,2015,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.18125161151036,0.0912281367358415,2016,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0875881727788966,0.148949387175466,2016,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.183533194930568,0.0918361836912421,2017,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0871036960974469,0.150106842491414,2017,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.184443275730118,0.0926142889140124,2018,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0997004634481571,0.151510870325966,2018,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.187031068273158,0.0946437285796769,2019,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0943437369162271,0.157526373302617,2019,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.184741052930947,0.0947931004401966,2020,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0995686926223356,0.157666485191282,2020,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.187779836707371,0.0956219594614382,2021,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0970425284675716,0.159070592217146,2021,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.186557386898512,0.0954697774748076,2022,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0896176191654705,0.159279976006112,2022,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near,0.18049124904538,0.0957685342649214,2023,near x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+near_xh,-0.0926568078671477,0.158965904553748,2023,near x exposure x year,"levels: cross-section per year, pair FE",10577,high side of the pair,log district enrolment,leaid
+y::2012:near,0.00753302984209668,0.0115341403223382,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2013:near,0.000166960221725833,0.00972817383722827,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2014:near,-0.000213113451685373,0.0090039599298781,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2015:near,0.00025234151668073,0.00466735743265354,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2016:near,-0.000653655141844149,0.00334986865772778,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2018:near,0.00182969485774584,0.00506444214256479,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2019:near,0.00387677034580838,0.00692040997474313,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2020:near,0.00223310864810789,0.00806490735595154,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2021:near,0.00527189242453098,0.0105162210256984,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2022:near,0.00404944261567204,0.0107287624163687,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2023:near,0.00307682902555507,0.0120213593029619,2023,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2012:near_xh,0.00426688878965388,0.0178902967352931,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2013:near_xh,-0.00570314989316593,0.0151069360051993,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2014:near_xh,-0.00574944771141836,0.0134219997426418,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2015:near_xh,0.00109716523793472,0.00737756729583658,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2016:near_xh,0.000804122371794048,0.00526586082050003,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2018:near_xh,-0.0118782567245643,0.00778630581641315,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2019:near_xh,-0.00792569854688001,0.0099584495396407,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2020:near_xh,-0.0106395885291467,0.0116213306056349,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2021:near_xh,-0.00811342437438304,0.0155386600987992,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2022:near_xh,-0.000688515072281483,0.0165494710913198,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+y::2023:near_xh,-0.0061940363930054,0.0180150561651149,2023,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",10577,high side of the pair,log district enrolment,leaid
+near,0.182972031069045,0.183917820553653,2012,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,-0.0153525346198081,0.322241726207437,2012,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.261582118978626,0.145209887017743,2013,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.130427833887978,0.254213067126145,2013,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.259302492687096,0.141925498236808,2014,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.123905734219276,0.245229458969298,2014,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.249876177005159,0.139469058287813,2015,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.0991026899226139,0.241612348391752,2015,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.243270832967744,0.141890014863431,2016,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.112890452289262,0.245964248441788,2016,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.141616637974828,0.180284466526272,2017,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,-0.171208590732635,0.32752050974417,2017,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.237123206811797,0.138435974882612,2018,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.0686105619406255,0.240439433138724,2018,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.248007229878239,0.139236422637963,2019,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.107390993658491,0.242233006527104,2019,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.233139730350936,0.145690767583769,2020,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.107989437851922,0.255661662846356,2020,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.243470056253763,0.137943724308025,2021,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,0.128987193258019,0.23870337724065,2021,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near,0.167396567642243,0.155882185257423,2022,near x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+near_xh,-0.0473869636368566,0.277560355447513,2022,near x exposure x year,"levels: cross-section per year, pair FE",3501,high side of the pair,log county school property tax (CoG),cty
+y::2012:near,0.00345937590073825,0.0767417029218256,2012,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2013:near,0.0820694638103185,0.0510553131348181,2013,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2014:near,0.0779124073890275,0.0449025653025109,2014,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2015:near,0.0719349900324963,0.047548114047426,2015,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2016:near,0.0644040885080684,0.0493472786810582,2016,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2018:near,0.058256462352122,0.0405144277401304,2018,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2019:near,0.0691404854185633,0.0465921091729556,2019,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2020:near,0.0517656810555985,0.037943329220631,2020,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2021:near,0.064603311794087,0.0514913807699926,2021,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2022:near,-0.0239387017618769,0.0477874005239612,2022,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2012:near_xh,0.0124482182276884,0.144541954253422,2012,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2013:near_xh,0.158228586735473,0.104385367159881,2013,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2014:near_xh,0.147886656176948,0.087705348822075,2014,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2015:near_xh,0.129533714638881,0.0946831136492519,2015,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2016:near_xh,0.141438353508041,0.0991580555992793,2016,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2018:near_xh,0.0971584631594055,0.0805222532073467,2018,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2019:near_xh,0.135938894877271,0.0910660262574535,2019,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2020:near_xh,0.131436019360528,0.0741356057780744,2020,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2021:near_xh,0.157535094476798,0.102921879473601,2021,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+y::2022:near_xh,-0.0224386332463659,0.0937442054207019,2022,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+"",0,0,2017,near x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty
+"",0,0,2017,near x exposure x year,"DiD: unit FE + pair x year FE, 2017 = 0",3501,high side of the pair,log county school property tax (CoG),cty

@@ -1,0 +1,419 @@
+y,b,se,z,n,outcome,unit
+2012,-0.00490831635439578,0.0187515731353104,near,64874,log median sale price (CoreLogic),tract
+2013,-0.00395259871267603,0.0164942454582619,near,64874,log median sale price (CoreLogic),tract
+2014,0.0129326549930342,0.0135636226417719,near,64874,log median sale price (CoreLogic),tract
+2015,-0.000546156510046472,0.0111362667535084,near,64874,log median sale price (CoreLogic),tract
+2016,0.00390882224760422,0.0106488161919535,near,64874,log median sale price (CoreLogic),tract
+2018,-0.00803334987478432,0.0115114791906751,near,64874,log median sale price (CoreLogic),tract
+2019,-0.0230433438363721,0.0125214527126651,near,64874,log median sale price (CoreLogic),tract
+2020,-0.00212616168724107,0.0120423332241783,near,64874,log median sale price (CoreLogic),tract
+2021,0.00358539496051455,0.0166211220857849,near,64874,log median sale price (CoreLogic),tract
+2022,-0.00697039509535155,0.0173374304804218,near,64874,log median sale price (CoreLogic),tract
+2023,0.00542011605870642,0.016950474644767,near,64874,log median sale price (CoreLogic),tract
+2024,0.00952466451807139,0.0184905973181383,near,64874,log median sale price (CoreLogic),tract
+2017,0,0,near,64874,log median sale price (CoreLogic),tract
+2012,0.00292785555095278,0.00894589387987786,d10,64874,log median sale price (CoreLogic),tract
+2013,0.00740420164886791,0.00795519379327505,d10,64874,log median sale price (CoreLogic),tract
+2014,-0.00368483749448225,0.0103897639931875,d10,64874,log median sale price (CoreLogic),tract
+2015,0.00669604792400456,0.00560002994479918,d10,64874,log median sale price (CoreLogic),tract
+2016,0.00346138890239262,0.00475616356806204,d10,64874,log median sale price (CoreLogic),tract
+2018,0.00761975613620633,0.00568339774496217,d10,64874,log median sale price (CoreLogic),tract
+2019,0.0158180013789229,0.007410461831162,d10,64874,log median sale price (CoreLogic),tract
+2020,0.0104092192812252,0.00810684342880775,d10,64874,log median sale price (CoreLogic),tract
+2021,0.00364285528953203,0.00796586416986955,d10,64874,log median sale price (CoreLogic),tract
+2022,0.00957670720178146,0.00824575207906487,d10,64874,log median sale price (CoreLogic),tract
+2023,0.00127529913530146,0.00832285960698045,d10,64874,log median sale price (CoreLogic),tract
+2024,0.000587953543415132,0.00900356283428497,d10,64874,log median sale price (CoreLogic),tract
+2017,0,0,d10,64874,log median sale price (CoreLogic),tract
+2012,0.0365557824763916,0.0207820236872677,near,66550,log tax bill per parcel (CoreLogic),tract
+2013,0.0230890675297245,0.0165187195018923,near,66550,log tax bill per parcel (CoreLogic),tract
+2014,-0.00533941699102913,0.00965390927394887,near,66550,log tax bill per parcel (CoreLogic),tract
+2015,-0.00411111520070072,0.00689376269779682,near,66550,log tax bill per parcel (CoreLogic),tract
+2016,-0.00108900257191284,0.00504142466711659,near,66550,log tax bill per parcel (CoreLogic),tract
+2018,0.00855733592598945,0.00802875104984956,near,66550,log tax bill per parcel (CoreLogic),tract
+2019,-0.00058279342104358,0.00794578250115542,near,66550,log tax bill per parcel (CoreLogic),tract
+2020,-0.0158408560161982,0.00849568576944346,near,66550,log tax bill per parcel (CoreLogic),tract
+2021,-0.0170984243896061,0.00951155876803835,near,66550,log tax bill per parcel (CoreLogic),tract
+2022,-0.0159759414233949,0.010697503270256,near,66550,log tax bill per parcel (CoreLogic),tract
+2023,-8.80266860036338e-05,0.0129974372254527,near,66550,log tax bill per parcel (CoreLogic),tract
+2024,-0.0103938011782877,0.0145838356289962,near,66550,log tax bill per parcel (CoreLogic),tract
+2017,0,0,near,66550,log tax bill per parcel (CoreLogic),tract
+2012,-0.00800893311431527,0.0108154672807066,d10,66550,log tax bill per parcel (CoreLogic),tract
+2013,-0.00191884800004409,0.00941246470226423,d10,66550,log tax bill per parcel (CoreLogic),tract
+2014,0.000661513881856181,0.00410725673736226,d10,66550,log tax bill per parcel (CoreLogic),tract
+2015,0.00243328258617909,0.00337126135678942,d10,66550,log tax bill per parcel (CoreLogic),tract
+2016,-0.00390339830444695,0.00252861513999283,d10,66550,log tax bill per parcel (CoreLogic),tract
+2018,-0.00533742503814786,0.00275774216848102,d10,66550,log tax bill per parcel (CoreLogic),tract
+2019,-0.00273268616075837,0.00679834252348295,d10,66550,log tax bill per parcel (CoreLogic),tract
+2020,0.000660733705589903,0.0034907465086241,d10,66550,log tax bill per parcel (CoreLogic),tract
+2021,-0.0010308400830536,0.0045989823131081,d10,66550,log tax bill per parcel (CoreLogic),tract
+2022,-0.00262099001920783,0.00510089624073038,d10,66550,log tax bill per parcel (CoreLogic),tract
+2023,-0.00711020253039366,0.00654557129572836,d10,66550,log tax bill per parcel (CoreLogic),tract
+2024,0.0025712081749172,0.00844637715582461,d10,66550,log tax bill per parcel (CoreLogic),tract
+2017,0,0,d10,66550,log tax bill per parcel (CoreLogic),tract
+2012,0.0175995971465325,0.0261110777851941,near,66208,log assessed value per parcel (CoreLogic),tract
+2013,0.0079827920412203,0.0190773968089945,near,66208,log assessed value per parcel (CoreLogic),tract
+2014,0.0377620429387782,0.044728554732522,near,66208,log assessed value per parcel (CoreLogic),tract
+2015,0.0540896273207859,0.0342097318414288,near,66208,log assessed value per parcel (CoreLogic),tract
+2016,0.000840140902875812,0.00392851525318836,near,66208,log assessed value per parcel (CoreLogic),tract
+2018,0.00176582685017856,0.00334172831280226,near,66208,log assessed value per parcel (CoreLogic),tract
+2019,-0.00091044518936222,0.00649194021846724,near,66208,log assessed value per parcel (CoreLogic),tract
+2020,-0.00174854106874982,0.0070155483786226,near,66208,log assessed value per parcel (CoreLogic),tract
+2021,0.00265692181695638,0.0115132889259223,near,66208,log assessed value per parcel (CoreLogic),tract
+2022,0.00250568586274379,0.0107294483571312,near,66208,log assessed value per parcel (CoreLogic),tract
+2023,0.0103456855983562,0.0127543703688123,near,66208,log assessed value per parcel (CoreLogic),tract
+2024,0.00412947992360038,0.0175754544438613,near,66208,log assessed value per parcel (CoreLogic),tract
+2017,0,0,near,66208,log assessed value per parcel (CoreLogic),tract
+2012,-0.00721245319978088,0.0154974239156587,d10,66208,log assessed value per parcel (CoreLogic),tract
+2013,-0.00197519575435736,0.013377102426531,d10,66208,log assessed value per parcel (CoreLogic),tract
+2014,-0.0372000057346738,0.0280213079308805,d10,66208,log assessed value per parcel (CoreLogic),tract
+2015,-0.0370539193460069,0.0225085406367245,d10,66208,log assessed value per parcel (CoreLogic),tract
+2016,-0.00374879760267991,0.00309213884092239,d10,66208,log assessed value per parcel (CoreLogic),tract
+2018,0.00178399900978823,0.00256021788149469,d10,66208,log assessed value per parcel (CoreLogic),tract
+2019,0.00696246219797854,0.00555684696328927,d10,66208,log assessed value per parcel (CoreLogic),tract
+2020,0.00752811094201648,0.00646419830394868,d10,66208,log assessed value per parcel (CoreLogic),tract
+2021,-0.000283891677927747,0.00681837432137626,d10,66208,log assessed value per parcel (CoreLogic),tract
+2022,0.00130448907827912,0.00828125807932211,d10,66208,log assessed value per parcel (CoreLogic),tract
+2023,-0.000309197033956165,0.00902578845640459,d10,66208,log assessed value per parcel (CoreLogic),tract
+2024,0.00672834881856338,0.0104996120757235,d10,66208,log assessed value per parcel (CoreLogic),tract
+2017,0,0,d10,66208,log assessed value per parcel (CoreLogic),tract
+2012,0.0505227644685984,0.0371019848019973,near,64680,"effective tax rate, % (CoreLogic)",tract
+2013,0.0204767673769761,0.025034241503137,near,64680,"effective tax rate, % (CoreLogic)",tract
+2014,-0.0160867220631201,0.0144515249455695,near,64680,"effective tax rate, % (CoreLogic)",tract
+2015,-0.0075257920610814,0.0115447596298571,near,64680,"effective tax rate, % (CoreLogic)",tract
+2016,-0.0127191986316307,0.00914087604036417,near,64680,"effective tax rate, % (CoreLogic)",tract
+2018,0.0103315106654159,0.0173159478004766,near,64680,"effective tax rate, % (CoreLogic)",tract
+2019,6.97351597276838e-06,0.0132344565419885,near,64680,"effective tax rate, % (CoreLogic)",tract
+2020,-0.0222224954394105,0.0164629527540109,near,64680,"effective tax rate, % (CoreLogic)",tract
+2021,-0.0368917842468024,0.0195246310441726,near,64680,"effective tax rate, % (CoreLogic)",tract
+2022,-0.028347926164479,0.0221937440782959,near,64680,"effective tax rate, % (CoreLogic)",tract
+2023,-0.0262644575171567,0.022995617354243,near,64680,"effective tax rate, % (CoreLogic)",tract
+2024,-0.0562980769826272,0.0244458221178706,near,64680,"effective tax rate, % (CoreLogic)",tract
+2017,0,0,near,64680,"effective tax rate, % (CoreLogic)",tract
+2012,-0.00397108397201859,0.015336244135864,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2013,0.0101228824959221,0.0195943599743928,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2014,0.00701593829442865,0.00763087800554601,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2015,0.00354373577506939,0.00598616943141029,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2016,0.00014898986859789,0.00506360454371239,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2018,-0.0191066931949493,0.0144335860554795,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2019,-0.0221766321357137,0.0185829610084113,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2020,-0.015418434804617,0.0195813788313362,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2021,-0.00824637427671832,0.0190370666643472,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2022,-0.00714251394663019,0.0171660041358478,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2023,-0.00801905010981001,0.0160070064931906,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2024,0.00684315353171039,0.01541623698181,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2017,0,0,d10,64680,"effective tax rate, % (CoreLogic)",tract
+2012,-0.0353954420530529,0.097000208908439,near,64874,sales per 100 parcels (CoreLogic),tract
+2013,0.00733087600155955,0.0908683692387318,near,64874,sales per 100 parcels (CoreLogic),tract
+2014,0.0420602342599835,0.0746110463670568,near,64874,sales per 100 parcels (CoreLogic),tract
+2015,0.0631251685016754,0.0818642303192522,near,64874,sales per 100 parcels (CoreLogic),tract
+2016,0.0134131057399063,0.121882058632488,near,64874,sales per 100 parcels (CoreLogic),tract
+2018,0.113604777816565,0.139197458058913,near,64874,sales per 100 parcels (CoreLogic),tract
+2019,0.125692884991879,0.129888434644409,near,64874,sales per 100 parcels (CoreLogic),tract
+2020,0.201871593575806,0.0771591981597668,near,64874,sales per 100 parcels (CoreLogic),tract
+2021,0.0154314743903734,0.099678277096813,near,64874,sales per 100 parcels (CoreLogic),tract
+2022,-0.00882393140265476,0.0901192805362059,near,64874,sales per 100 parcels (CoreLogic),tract
+2023,0.142234918021896,0.134075186636951,near,64874,sales per 100 parcels (CoreLogic),tract
+2024,0.044909782243213,0.111873394837722,near,64874,sales per 100 parcels (CoreLogic),tract
+2017,0,0,near,64874,sales per 100 parcels (CoreLogic),tract
+2012,0.104051125245242,0.0474026945935708,d10,64874,sales per 100 parcels (CoreLogic),tract
+2013,0.0740900952030833,0.0422467114333545,d10,64874,sales per 100 parcels (CoreLogic),tract
+2014,0.0229502444075473,0.0351398202729884,d10,64874,sales per 100 parcels (CoreLogic),tract
+2015,-0.0150917788942045,0.0390165763412493,d10,64874,sales per 100 parcels (CoreLogic),tract
+2016,0.0922170871015912,0.117137144320452,d10,64874,sales per 100 parcels (CoreLogic),tract
+2018,0.00282711665162416,0.0342523634470582,d10,64874,sales per 100 parcels (CoreLogic),tract
+2019,0.00657202113044977,0.0611149431430337,d10,64874,sales per 100 parcels (CoreLogic),tract
+2020,-0.0522491460755995,0.0326894874807598,d10,64874,sales per 100 parcels (CoreLogic),tract
+2021,0.00458829243372481,0.0407156458556425,d10,64874,sales per 100 parcels (CoreLogic),tract
+2022,0.078632059406558,0.0581985459429502,d10,64874,sales per 100 parcels (CoreLogic),tract
+2023,0.0706100056279037,0.0790928348173852,d10,64874,sales per 100 parcels (CoreLogic),tract
+2024,0.0523834281988283,0.0562687166579256,d10,64874,sales per 100 parcels (CoreLogic),tract
+2017,0,0,d10,64874,sales per 100 parcels (CoreLogic),tract
+2013,-0.00285883503593114,0.00500470232162548,near,63051,log median HH income (ACS 5-yr),tract
+2014,-0.00121427586390604,0.00460289136309229,near,63051,log median HH income (ACS 5-yr),tract
+2015,-7.71082457642863e-05,0.00379641367502632,near,63051,log median HH income (ACS 5-yr),tract
+2016,0.00103578173129759,0.00265508757625363,near,63051,log median HH income (ACS 5-yr),tract
+2018,0.00272626365025099,0.00274552398981349,near,63051,log median HH income (ACS 5-yr),tract
+2019,0.00200545600896145,0.00424887609578013,near,63051,log median HH income (ACS 5-yr),tract
+2020,0.000481266433441656,0.00566636125186567,near,63051,log median HH income (ACS 5-yr),tract
+2021,-0.00128027367703326,0.00592616258007425,near,63051,log median HH income (ACS 5-yr),tract
+2022,-0.00102080513738329,0.00643486447113793,near,63051,log median HH income (ACS 5-yr),tract
+2023,-0.00149730488250411,0.00696620302878356,near,63051,log median HH income (ACS 5-yr),tract
+2017,0,0,near,63051,log median HH income (ACS 5-yr),tract
+2013,0.00028524210972258,0.00189054380473491,d10,63051,log median HH income (ACS 5-yr),tract
+2014,4.33639737360218e-05,0.0016375035921395,d10,63051,log median HH income (ACS 5-yr),tract
+2015,-0.000353346006057252,0.00136439894347573,d10,63051,log median HH income (ACS 5-yr),tract
+2016,-0.000660534442909874,0.000968190343962602,d10,63051,log median HH income (ACS 5-yr),tract
+2018,0.000664296050942955,0.000964906422259619,d10,63051,log median HH income (ACS 5-yr),tract
+2019,4.26476670154349e-05,0.00145896735020766,d10,63051,log median HH income (ACS 5-yr),tract
+2020,0.000611872489456208,0.00212802151376543,d10,63051,log median HH income (ACS 5-yr),tract
+2021,0.00250307370152312,0.00246975729504589,d10,63051,log median HH income (ACS 5-yr),tract
+2022,0.00317985062525405,0.00272619118602358,d10,63051,log median HH income (ACS 5-yr),tract
+2023,0.00326360793713053,0.00321383130568955,d10,63051,log median HH income (ACS 5-yr),tract
+2017,0,0,d10,63051,log median HH income (ACS 5-yr),tract
+2013,0.00987939574110745,0.00792544634345842,near,62762,log median home value (ACS 5-yr),tract
+2014,0.0104006978505716,0.00700223184405803,near,62762,log median home value (ACS 5-yr),tract
+2015,0.00257849593459514,0.00531703190572439,near,62762,log median home value (ACS 5-yr),tract
+2016,-0.000557326960982389,0.00338955578451118,near,62762,log median home value (ACS 5-yr),tract
+2018,-0.00201151341324383,0.00274586850420242,near,62762,log median home value (ACS 5-yr),tract
+2019,-0.00295040362298312,0.00421941125657342,near,62762,log median home value (ACS 5-yr),tract
+2020,-0.00652080637596559,0.00598821711890621,near,62762,log median home value (ACS 5-yr),tract
+2021,-0.00343645364571328,0.0062515527117081,near,62762,log median home value (ACS 5-yr),tract
+2022,-0.0070868690853463,0.00644915541439769,near,62762,log median home value (ACS 5-yr),tract
+2023,-0.0140970191758626,0.00760448121643462,near,62762,log median home value (ACS 5-yr),tract
+2017,0,0,near,62762,log median home value (ACS 5-yr),tract
+2013,-0.00165208236484177,0.00391024113231847,d10,62762,log median home value (ACS 5-yr),tract
+2014,-0.00284332557836325,0.00318485492024064,d10,62762,log median home value (ACS 5-yr),tract
+2015,-0.000876524230828551,0.00225498661986608,d10,62762,log median home value (ACS 5-yr),tract
+2016,0.000650147580294618,0.00129258680152681,d10,62762,log median home value (ACS 5-yr),tract
+2018,0.00103488476273769,0.00100329828219642,d10,62762,log median home value (ACS 5-yr),tract
+2019,0.000796849744267671,0.00166199040868122,d10,62762,log median home value (ACS 5-yr),tract
+2020,0.00232419041691127,0.00247893440976417,d10,62762,log median home value (ACS 5-yr),tract
+2021,0.00157528866350417,0.0029822014668896,d10,62762,log median home value (ACS 5-yr),tract
+2022,0.00329934719852359,0.00324923289939874,d10,62762,log median home value (ACS 5-yr),tract
+2023,0.0051762249189725,0.00396624527209711,d10,62762,log median home value (ACS 5-yr),tract
+2017,0,0,d10,62762,log median home value (ACS 5-yr),tract
+2013,0.00611933158526578,0.00331645142951556,near,63156,log population (ACS 5-yr),tract
+2014,0.00389248966331973,0.00266578615192935,near,63156,log population (ACS 5-yr),tract
+2015,0.00295389896294204,0.00196538636093535,near,63156,log population (ACS 5-yr),tract
+2016,0.00100472423815689,0.00122802760861903,near,63156,log population (ACS 5-yr),tract
+2018,-0.000998771007423896,0.00126481290750109,near,63156,log population (ACS 5-yr),tract
+2019,-0.00171746585382867,0.00209371587591069,near,63156,log population (ACS 5-yr),tract
+2020,1.76801201978202e-05,0.00371768235289422,near,63156,log population (ACS 5-yr),tract
+2021,0.0006848969960792,0.0046472098459073,near,63156,log population (ACS 5-yr),tract
+2022,0.000122775189429476,0.00528571079977677,near,63156,log population (ACS 5-yr),tract
+2023,0.000162414848578292,0.00577096465074057,near,63156,log population (ACS 5-yr),tract
+2017,0,0,near,63156,log population (ACS 5-yr),tract
+2013,-0.00207995677052996,0.00144938812244724,d10,63156,log population (ACS 5-yr),tract
+2014,-0.00133063970975433,0.00112704742087651,d10,63156,log population (ACS 5-yr),tract
+2015,-0.00129700762436956,0.000761250121972697,d10,63156,log population (ACS 5-yr),tract
+2016,-0.000334560463227383,0.000443973258264588,d10,63156,log population (ACS 5-yr),tract
+2018,0.000450407055326947,0.00052391592714306,d10,63156,log population (ACS 5-yr),tract
+2019,0.000805938076826284,0.00102836678211989,d10,63156,log population (ACS 5-yr),tract
+2020,0.000581404066284492,0.00127486330625538,d10,63156,log population (ACS 5-yr),tract
+2021,-0.000185177522735954,0.00216497635457181,d10,63156,log population (ACS 5-yr),tract
+2022,0.000400828188882168,0.00244718942020547,d10,63156,log population (ACS 5-yr),tract
+2023,0.00078466058386207,0.00264209257338105,d10,63156,log population (ACS 5-yr),tract
+2017,0,0,d10,63156,log population (ACS 5-yr),tract
+2013,-0.000354728953501621,0.00194614552276728,near,63139,owner share (ACS 5-yr),tract
+2014,-0.000547842463599091,0.00169574828314123,near,63139,owner share (ACS 5-yr),tract
+2015,5.40778956104278e-05,0.00129175616173994,near,63139,owner share (ACS 5-yr),tract
+2016,0.000289371953836217,0.000976171593499431,near,63139,owner share (ACS 5-yr),tract
+2018,0.000587039337194937,0.00101388543262407,near,63139,owner share (ACS 5-yr),tract
+2019,0.00176929109683449,0.00124569182852609,near,63139,owner share (ACS 5-yr),tract
+2020,0.00179019540768688,0.00189738462323627,near,63139,owner share (ACS 5-yr),tract
+2021,0.00177985297145434,0.00225556777297325,near,63139,owner share (ACS 5-yr),tract
+2022,0.00209107004206553,0.00246318175866154,near,63139,owner share (ACS 5-yr),tract
+2023,0.00138543706344178,0.00265662397076278,near,63139,owner share (ACS 5-yr),tract
+2017,0,0,near,63139,owner share (ACS 5-yr),tract
+2013,0.000922271041063259,0.000755687386382358,d10,63139,owner share (ACS 5-yr),tract
+2014,0.000830773686914587,0.000662892952426512,d10,63139,owner share (ACS 5-yr),tract
+2015,0.00080663031481822,0.000464420831846329,d10,63139,owner share (ACS 5-yr),tract
+2016,-7.34013092859061e-06,0.000324582385004773,d10,63139,owner share (ACS 5-yr),tract
+2018,-0.000143266252317743,0.000357756980363727,d10,63139,owner share (ACS 5-yr),tract
+2019,-0.000559296617394967,0.000487490395457131,d10,63139,owner share (ACS 5-yr),tract
+2020,3.78717860519081e-05,0.000658827208248466,d10,63139,owner share (ACS 5-yr),tract
+2021,0.000844672759048107,0.000821967624253194,d10,63139,owner share (ACS 5-yr),tract
+2022,0.000555294309144925,0.000903403534632333,d10,63139,owner share (ACS 5-yr),tract
+2023,0.000714450617746357,0.000956107036804276,d10,63139,owner share (ACS 5-yr),tract
+2017,0,0,d10,63139,owner share (ACS 5-yr),tract
+2013,-0.00208436569699522,0.106906000032897,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2014,-0.0391337484404413,0.0893461839322584,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2015,-0.118708787933684,0.0970589069087259,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2016,0.0639778556781786,0.0813569257628955,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2018,-0.0208537814823754,0.0859399585111733,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2019,0.167121752632603,0.118466751185519,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2020,0.0320518379143174,0.109228233558048,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2021,0.0411827425410225,0.106669216279338,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2017,0,0,near,50533,"move-out rate, %/yr (Data Axle)",tract
+2013,0.017299911360703,0.0481753077622035,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2014,0.119769802288862,0.06040806089764,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2015,0.0705931060318379,0.0470168970593589,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2016,-0.0184885072786634,0.0391211013241152,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2018,0.00877517476509073,0.0424661141749073,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2019,-0.0664554302325349,0.0398275027602304,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2020,-0.0193325843479758,0.0510598866963959,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2021,-0.00723026192516999,0.0425665343592356,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2017,0,0,d10,50533,"move-out rate, %/yr (Data Axle)",tract
+2012,0.0388535548960729,0.0229562058171045,near,8593,log property tax per pupil (F-33 district),district
+2013,0.036262533464823,0.0154087259919819,near,8593,log property tax per pupil (F-33 district),district
+2014,0.0204371090712128,0.0167423659407358,near,8593,log property tax per pupil (F-33 district),district
+2015,0.023906616263223,0.0126915318563595,near,8593,log property tax per pupil (F-33 district),district
+2016,0.00891712351564992,0.00862242571541223,near,8593,log property tax per pupil (F-33 district),district
+2018,-0.00499280651791088,0.0109993611859728,near,8593,log property tax per pupil (F-33 district),district
+2019,-0.0149572655595008,0.0143924277051568,near,8593,log property tax per pupil (F-33 district),district
+2020,-0.0168209016179713,0.0185979875253729,near,8593,log property tax per pupil (F-33 district),district
+2021,-0.0169305246034971,0.0208714608483673,near,8593,log property tax per pupil (F-33 district),district
+2022,-0.0224558146750471,0.0221320102630429,near,8593,log property tax per pupil (F-33 district),district
+2023,-0.0144610095497145,0.0221309771945524,near,8593,log property tax per pupil (F-33 district),district
+2017,0,0,near,8593,log property tax per pupil (F-33 district),district
+2012,-0.0107212453726307,0.00747124617177608,d10,8593,log property tax per pupil (F-33 district),district
+2013,-0.0108524747851938,0.00450586360376393,d10,8593,log property tax per pupil (F-33 district),district
+2014,-0.00877336285055584,0.00471056921753912,d10,8593,log property tax per pupil (F-33 district),district
+2015,-0.010898725764436,0.00433840095611679,d10,8593,log property tax per pupil (F-33 district),district
+2016,-0.00431914224791639,0.00251706806667037,d10,8593,log property tax per pupil (F-33 district),district
+2018,-0.0014807746894591,0.00400061640589261,d10,8593,log property tax per pupil (F-33 district),district
+2019,0.000564843154242462,0.00401387111968462,d10,8593,log property tax per pupil (F-33 district),district
+2020,0.00442336132946046,0.00597487449752375,d10,8593,log property tax per pupil (F-33 district),district
+2021,0.00254689704728735,0.00635335734026984,d10,8593,log property tax per pupil (F-33 district),district
+2022,0.00341587520714554,0.00661198240729448,d10,8593,log property tax per pupil (F-33 district),district
+2023,0.0079439792860787,0.00647817083856255,d10,8593,log property tax per pupil (F-33 district),district
+2017,0,0,d10,8593,log property tax per pupil (F-33 district),district
+2012,0.011193307195429,0.0237146160345674,near,10612,log local revenue per pupil (F-33 district),district
+2013,0.00925207456920051,0.0168901841286315,near,10612,log local revenue per pupil (F-33 district),district
+2014,-0.00212865151778169,0.0154755680709093,near,10612,log local revenue per pupil (F-33 district),district
+2015,-0.00721597289080907,0.0141149299314116,near,10612,log local revenue per pupil (F-33 district),district
+2016,0.000877191971649095,0.00967256421369477,near,10612,log local revenue per pupil (F-33 district),district
+2018,-0.00423576466537662,0.012966484621265,near,10612,log local revenue per pupil (F-33 district),district
+2019,-0.00562038174479073,0.0162651355950946,near,10612,log local revenue per pupil (F-33 district),district
+2020,0.00969095685383783,0.0376481761776232,near,10612,log local revenue per pupil (F-33 district),district
+2021,-0.0231918907377182,0.0403687751983032,near,10612,log local revenue per pupil (F-33 district),district
+2022,-0.0132958720240387,0.046987262423596,near,10612,log local revenue per pupil (F-33 district),district
+2023,-0.00908356618563326,0.0500824574016786,near,10612,log local revenue per pupil (F-33 district),district
+2017,0,0,near,10612,log local revenue per pupil (F-33 district),district
+2012,-0.00184994770297653,0.00993699121392122,d10,10612,log local revenue per pupil (F-33 district),district
+2013,-0.00215196273669759,0.00696920450045605,d10,10612,log local revenue per pupil (F-33 district),district
+2014,-0.00184745043305514,0.00658851556896875,d10,10612,log local revenue per pupil (F-33 district),district
+2015,0.000860408112561653,0.00608536411790789,d10,10612,log local revenue per pupil (F-33 district),district
+2016,-0.0036842017275347,0.00330987540057698,d10,10612,log local revenue per pupil (F-33 district),district
+2018,0.00198138949664009,0.00562395983338833,d10,10612,log local revenue per pupil (F-33 district),district
+2019,0.00502100827118714,0.00616206374390752,d10,10612,log local revenue per pupil (F-33 district),district
+2020,0.00638294488334159,0.0133471370175111,d10,10612,log local revenue per pupil (F-33 district),district
+2021,0.0130091944441251,0.0122537933005415,d10,10612,log local revenue per pupil (F-33 district),district
+2022,0.01173238077541,0.0126000397440663,d10,10612,log local revenue per pupil (F-33 district),district
+2023,0.018248852752319,0.0119378178684668,d10,10612,log local revenue per pupil (F-33 district),district
+2017,0,0,d10,10612,log local revenue per pupil (F-33 district),district
+2012,0.00867268183048201,0.0190624754440713,near,10612,log state revenue per pupil (F-33 district),district
+2013,0.0174481228604845,0.015715364506276,near,10612,log state revenue per pupil (F-33 district),district
+2014,0.0108510850355336,0.015107725547099,near,10612,log state revenue per pupil (F-33 district),district
+2015,0.0142657665676522,0.0104386681631051,near,10612,log state revenue per pupil (F-33 district),district
+2016,0.0105313362539955,0.00734583195142832,near,10612,log state revenue per pupil (F-33 district),district
+2018,0.00228651156978632,0.00626430286657184,near,10612,log state revenue per pupil (F-33 district),district
+2019,0.018447111405802,0.00988977709995268,near,10612,log state revenue per pupil (F-33 district),district
+2020,0.0198905081657759,0.0122796886760281,near,10612,log state revenue per pupil (F-33 district),district
+2021,0.023185671815229,0.0151985958513382,near,10612,log state revenue per pupil (F-33 district),district
+2022,0.00314940305703566,0.012164995169595,near,10612,log state revenue per pupil (F-33 district),district
+2023,-0.00475114064972178,0.0131626940894804,near,10612,log state revenue per pupil (F-33 district),district
+2017,0,0,near,10612,log state revenue per pupil (F-33 district),district
+2012,-0.00213911725838247,0.00518707983767156,d10,10612,log state revenue per pupil (F-33 district),district
+2013,-0.00415645705491382,0.00383862980313031,d10,10612,log state revenue per pupil (F-33 district),district
+2014,-0.000933635248456699,0.00339635074504911,d10,10612,log state revenue per pupil (F-33 district),district
+2015,-0.00234724283278619,0.00254932563702171,d10,10612,log state revenue per pupil (F-33 district),district
+2016,-0.00355522385700616,0.00294708765141203,d10,10612,log state revenue per pupil (F-33 district),district
+2018,-0.000764065014970369,0.00197533060627969,d10,10612,log state revenue per pupil (F-33 district),district
+2019,-0.00315688327933636,0.00316012150636285,d10,10612,log state revenue per pupil (F-33 district),district
+2020,-0.00461432790174037,0.00351025153272334,d10,10612,log state revenue per pupil (F-33 district),district
+2021,-0.00338121204338747,0.00421022639645865,d10,10612,log state revenue per pupil (F-33 district),district
+2022,0.000784235361817749,0.00427711118382889,d10,10612,log state revenue per pupil (F-33 district),district
+2023,0.00106800497314885,0.00449460398055017,d10,10612,log state revenue per pupil (F-33 district),district
+2017,0,0,d10,10612,log state revenue per pupil (F-33 district),district
+2012,-0.00564136787959926,0.0098452120257895,near,10612,log current spending per pupil (F-33 district),district
+2013,-0.0150592296527833,0.0102507458674843,near,10612,log current spending per pupil (F-33 district),district
+2014,-0.00862888924013286,0.00751251654870342,near,10612,log current spending per pupil (F-33 district),district
+2015,-0.00159921971792211,0.00560035603708334,near,10612,log current spending per pupil (F-33 district),district
+2016,0.00204496011971934,0.00425798627249964,near,10612,log current spending per pupil (F-33 district),district
+2018,-0.00139481829037393,0.00507759435707775,near,10612,log current spending per pupil (F-33 district),district
+2019,0.00202547023951308,0.00708280984234302,near,10612,log current spending per pupil (F-33 district),district
+2020,-0.00339077934962921,0.00822503831594952,near,10612,log current spending per pupil (F-33 district),district
+2021,-0.00590196910487903,0.00892812448727266,near,10612,log current spending per pupil (F-33 district),district
+2022,-0.00450856551715833,0.00901285069479665,near,10612,log current spending per pupil (F-33 district),district
+2023,-0.00118314714732111,0.0100948663110512,near,10612,log current spending per pupil (F-33 district),district
+2017,0,0,near,10612,log current spending per pupil (F-33 district),district
+2012,0.000173400467590882,0.00412395374471019,d10,10612,log current spending per pupil (F-33 district),district
+2013,0.00208669045688659,0.00263846017363618,d10,10612,log current spending per pupil (F-33 district),district
+2014,0.000521677223101494,0.00225456687017644,d10,10612,log current spending per pupil (F-33 district),district
+2015,-0.000282132569998213,0.00162740689921545,d10,10612,log current spending per pupil (F-33 district),district
+2016,-0.000734011849685494,0.00133193734685821,d10,10612,log current spending per pupil (F-33 district),district
+2018,0.000653752467227215,0.00178069913331241,d10,10612,log current spending per pupil (F-33 district),district
+2019,0.00138485158271088,0.00219884797603395,d10,10612,log current spending per pupil (F-33 district),district
+2020,0.00133080647098817,0.0024341624787173,d10,10612,log current spending per pupil (F-33 district),district
+2021,0.00278117784964704,0.00266477384959759,d10,10612,log current spending per pupil (F-33 district),district
+2022,0.00519245253462882,0.00280932193952673,d10,10612,log current spending per pupil (F-33 district),district
+2023,0.00649553064215601,0.0032556034418627,d10,10612,log current spending per pupil (F-33 district),district
+2017,0,0,d10,10612,log current spending per pupil (F-33 district),district
+2012,0.00678675864753354,0.00977486192275457,near,10612,log enrolment (F-33 district),district
+2013,0.000951942848363069,0.00822002351154964,near,10612,log enrolment (F-33 district),district
+2014,0.000513153615433284,0.00763797265637001,near,10612,log enrolment (F-33 district),district
+2015,0.000123469861306358,0.0042450308859718,near,10612,log enrolment (F-33 district),district
+2016,-0.000683574572113518,0.00319820658104214,near,10612,log enrolment (F-33 district),district
+2018,0.00320159722033612,0.00472841932665057,near,10612,log enrolment (F-33 district),district
+2019,0.00475206851353972,0.00686127455762062,near,10612,log enrolment (F-33 district),district
+2020,0.00355345317622855,0.00789852893175758,near,10612,log enrolment (F-33 district),district
+2021,0.00612508779713695,0.00974306440162946,near,10612,log enrolment (F-33 district),district
+2022,0.00386082811947296,0.0101343460732489,near,10612,log enrolment (F-33 district),district
+2023,0.00358186241764825,0.0110290231090887,near,10612,log enrolment (F-33 district),district
+2017,0,0,near,10612,log enrolment (F-33 district),district
+2012,-0.00424619723355258,0.00391064232756915,d10,10612,log enrolment (F-33 district),district
+2013,-0.00144698674701264,0.00243884501193366,d10,10612,log enrolment (F-33 district),district
+2014,-0.000161009894993151,0.00219245699278807,d10,10612,log enrolment (F-33 district),district
+2015,-0.000134558198486808,0.00141293872318536,d10,10612,log enrolment (F-33 district),district
+2016,3.04429972022979e-05,0.000976467920721466,d10,10612,log enrolment (F-33 district),district
+2018,-0.000393906901510882,0.00148486277680856,d10,10612,log enrolment (F-33 district),district
+2019,-0.00157601002538292,0.00210737968044697,d10,10612,log enrolment (F-33 district),district
+2020,-0.00165228612290107,0.00247689352492414,d10,10612,log enrolment (F-33 district),district
+2021,-0.00330736978523868,0.00297300867930722,d10,10612,log enrolment (F-33 district),district
+2022,-0.00433100632764891,0.00328840420436129,d10,10612,log enrolment (F-33 district),district
+2023,-0.00414926135162326,0.00362184672099272,d10,10612,log enrolment (F-33 district),district
+2017,0,0,d10,10612,log enrolment (F-33 district),district
+2012,-0.000682739073020473,0.0474878697257851,near,3470,"log property tax, school districts in county (CoG)",county
+2013,0.0405439889264343,0.0332690955037564,near,3470,"log property tax, school districts in county (CoG)",county
+2014,0.0394535355097532,0.0296332084161754,near,3470,"log property tax, school districts in county (CoG)",county
+2015,0.0393144362515594,0.0298890444177004,near,3470,"log property tax, school districts in county (CoG)",county
+2016,0.0246691457777577,0.0255840087303312,near,3470,"log property tax, school districts in county (CoG)",county
+2018,0.0350540171467777,0.0259260435334747,near,3470,"log property tax, school districts in county (CoG)",county
+2019,0.0330648493408958,0.0267135217776812,near,3470,"log property tax, school districts in county (CoG)",county
+2020,0.0120849738532484,0.0257925863162588,near,3470,"log property tax, school districts in county (CoG)",county
+2021,0.0182640315307783,0.0307506014361027,near,3470,"log property tax, school districts in county (CoG)",county
+2022,-0.0214918201677379,0.0304875228497633,near,3470,"log property tax, school districts in county (CoG)",county
+2017,0,0,near,3470,"log property tax, school districts in county (CoG)",county
+2012,-0.00434486808508521,0.0118126341289188,d10,3470,"log property tax, school districts in county (CoG)",county
+2013,-0.0125095166837865,0.00931910240045037,d10,3470,"log property tax, school districts in county (CoG)",county
+2014,-0.0128198467669376,0.00804964352002176,d10,3470,"log property tax, school districts in county (CoG)",county
+2015,-0.0149296171536128,0.00872264017284597,d10,3470,"log property tax, school districts in county (CoG)",county
+2016,-0.00969024543458005,0.00717774056722049,d10,3470,"log property tax, school districts in county (CoG)",county
+2018,-0.00717234104412743,0.00933382284992527,d10,3470,"log property tax, school districts in county (CoG)",county
+2019,-0.00736040471012369,0.00686260035568286,d10,3470,"log property tax, school districts in county (CoG)",county
+2020,-0.00514870707160961,0.0066983149746804,d10,3470,"log property tax, school districts in county (CoG)",county
+2021,-0.00945682565859134,0.00805336293303151,d10,3470,"log property tax, school districts in county (CoG)",county
+2022,0.005974312369763,0.00895915364414211,d10,3470,"log property tax, school districts in county (CoG)",county
+2017,0,0,d10,3470,"log property tax, school districts in county (CoG)",county
+2012,0.0114865103019744,0.0474109004736827,near,3493,"log total tax, school districts in county (CoG)",county
+2013,0.0446579075478931,0.0330264793605006,near,3493,"log total tax, school districts in county (CoG)",county
+2014,0.0428652398585994,0.0296616743767724,near,3493,"log total tax, school districts in county (CoG)",county
+2015,0.0333896876459602,0.0277138918254723,near,3493,"log total tax, school districts in county (CoG)",county
+2016,0.0050155969218005,0.0295403909368805,near,3493,"log total tax, school districts in county (CoG)",county
+2018,0.00975633226229334,0.023477468681295,near,3493,"log total tax, school districts in county (CoG)",county
+2019,0.0388176250398206,0.0267407272348573,near,3493,"log total tax, school districts in county (CoG)",county
+2020,0.0268833719911465,0.0279508642845842,near,3493,"log total tax, school districts in county (CoG)",county
+2021,0.00620488699030273,0.032006879264366,near,3493,"log total tax, school districts in county (CoG)",county
+2022,-0.0112498162176463,0.0311480552108913,near,3493,"log total tax, school districts in county (CoG)",county
+2017,0,0,near,3493,"log total tax, school districts in county (CoG)",county
+2012,-0.0041519213908421,0.0119560497391086,d10,3493,"log total tax, school districts in county (CoG)",county
+2013,-0.0111816130751112,0.00948348789740664,d10,3493,"log total tax, school districts in county (CoG)",county
+2014,-0.011738586950898,0.00823709724345072,d10,3493,"log total tax, school districts in county (CoG)",county
+2015,-0.0091489022035949,0.00749419772108082,d10,3493,"log total tax, school districts in county (CoG)",county
+2016,-0.00700057373522789,0.00744460376039498,d10,3493,"log total tax, school districts in county (CoG)",county
+2018,-0.00188388321281491,0.00694759842804908,d10,3493,"log total tax, school districts in county (CoG)",county
+2019,-0.00794400496206606,0.00686329552872712,d10,3493,"log total tax, school districts in county (CoG)",county
+2020,-0.007860810696907,0.00683827583124861,d10,3493,"log total tax, school districts in county (CoG)",county
+2021,-0.00859205066165933,0.00810758807664841,d10,3493,"log total tax, school districts in county (CoG)",county
+2022,0.00469516469650751,0.00900333369846716,d10,3493,"log total tax, school districts in county (CoG)",county
+2017,0,0,d10,3493,"log total tax, school districts in county (CoG)",county
+2012,0.011924882044754,0.0371422733162345,near,1071,"log property tax, all local govts in county (CoG, census years)",county
+2022,0.0216640577817693,0.0306399797527399,near,1071,"log property tax, all local govts in county (CoG, census years)",county
+2017,0,0,near,1071,"log property tax, all local govts in county (CoG, census years)",county
+2012,-0.00161875466311195,0.00966971416827304,d10,1071,"log property tax, all local govts in county (CoG, census years)",county
+2022,-0.00645130461298058,0.00822760077422612,d10,1071,"log property tax, all local govts in county (CoG, census years)",county
+2017,0,0,d10,1071,"log property tax, all local govts in county (CoG, census years)",county
+2012,-0.00838717924811657,0.0369696834469068,near,1071,"log total tax, all local govts (CoG, census years)",county
+2022,0.0114995744420506,0.0323313931558222,near,1071,"log total tax, all local govts (CoG, census years)",county
+2017,0,0,near,1071,"log total tax, all local govts (CoG, census years)",county
+2012,0.00573335502484471,0.00973151842354454,d10,1071,"log total tax, all local govts (CoG, census years)",county
+2022,-0.00135719035193091,0.00870924038375369,d10,1071,"log total tax, all local govts (CoG, census years)",county
+2017,0,0,d10,1071,"log total tax, all local govts (CoG, census years)",county
+2012,0.0300585673617001,0.0269989720130629,near,1071,"log expenditure, all local govts (CoG, census years)",county
+2022,-0.0183786843620756,0.027386696216271,near,1071,"log expenditure, all local govts (CoG, census years)",county
+2017,0,0,near,1071,"log expenditure, all local govts (CoG, census years)",county
+2012,-0.0020577097055332,0.00845417164701886,d10,1071,"log expenditure, all local govts (CoG, census years)",county
+2022,0.0122871705817234,0.00838221829280226,d10,1071,"log expenditure, all local govts (CoG, census years)",county
+2017,0,0,d10,1071,"log expenditure, all local govts (CoG, census years)",county

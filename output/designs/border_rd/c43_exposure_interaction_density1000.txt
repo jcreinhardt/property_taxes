@@ -1,0 +1,557 @@
+Z x year + Z x exposure x year + exposure x year + log density x year | unit FE + pair x year FE; density-selected sample. post - pre in SD units: interaction per 10 mi closer per SD of exposure, main per 10 mi closer at mean exposure. Cells: estimate (t).
+
+== interaction 
+                                               src
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                                     SEDA district
+                                     SEDA district
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                   outcome both sides pooled high-tax side
+           all local govts: LT debt issued       0.026 (0.2) -0.077 (-0.5)
+      all local govts: LT debt outstanding       0.025 (0.4)   0.021 (0.3)
+           all local govts: capital outlay       0.013 (0.1)   0.020 (0.2)
+       all local govts: enterprise revenue       0.025 (0.5) -0.003 (-0.1)
+          all local govts: federal revenue     -0.096 (-1.1)   0.019 (0.2)
+        all local govts: general sales tax     -0.063 (-1.2) -0.056 (-1.1)
+    all local govts: individual income tax       0.030 (0.2)   0.152 (0.9)
+         all local govts: interest on debt       0.086 (1.2)   0.086 (0.9)
+ all local govts: other own-source revenue     -0.095 (-1.0) -0.043 (-0.4)
+            all local govts: state revenue       0.019 (0.5) -0.011 (-0.2)
+               number of local governments     -0.003 (-0.6) -0.003 (-0.5)
+                  number of municipalities     -0.003 (-0.6)   0.000 (0.0)
+               number of special districts     -0.005 (-0.5) -0.010 (-0.8)
+                 spending: education (E12)     -0.028 (-0.8) -0.003 (-0.1)
+                      spending: fire (E24)     -0.038 (-0.4) -0.020 (-0.2)
+        spending: general government (E89)       0.030 (0.3)   0.023 (0.2)
+                    spending: health (E32)       0.080 (1.1)   0.121 (1.2)
+                  spending: highways (E44)     -0.029 (-0.5) -0.029 (-0.6)
+                 spending: hospitals (E36)       0.247 (2.0)   0.004 (0.0)
+      spending: housing & comm. dev. (E50)       0.007 (0.1) -0.004 (-0.0)
+                 spending: libraries (E52)     -0.015 (-0.2) -0.071 (-0.7)
+                     spending: parks (E61)     -0.012 (-0.2)   0.010 (0.1)
+                    spending: police (E62)       0.039 (0.5)   0.058 (0.8)
+         spending: public welfare (E74-79)       0.015 (0.3)   0.060 (0.8)
+                  spending: sewerage (E80)     -0.132 (-1.7) -0.120 (-1.1)
+               spending: solid waste (E81)       0.042 (0.7)   0.020 (0.3)
+          school districts: LT debt issued     -0.004 (-0.0) -0.003 (-0.0)
+     school districts: LT debt outstanding       0.056 (1.1)   0.058 (1.0)
+          school districts: capital outlay       0.076 (0.8)   0.060 (0.5)
+       school districts: cash & securities       0.002 (0.0) -0.003 (-0.0)
+         school districts: federal revenue       0.032 (0.5)   0.036 (0.4)
+        school districts: interest on debt       0.066 (1.4)   0.108 (1.9)
+           school districts: state revenue     -0.021 (-1.0) -0.035 (-1.2)
+                     IDEA special ed (C15)       0.008 (0.5) -0.001 (-0.0)
+                             Title I (C14)     -0.001 (-0.0) -0.002 (-0.1)
+                            capital outlay       0.011 (0.4)   0.013 (0.3)
+           cash & securities (W01+W31+W61)       0.014 (0.7) -0.011 (-0.5)
+                     child nutrition (C25)     -0.017 (-0.7) -0.025 (-0.7)
+                        construction (F12)       0.001 (0.0) -0.010 (-0.3)
+          district activity receipts (A13)     -0.004 (-0.3) -0.008 (-0.4)
+                   employee benefits (Z33)       0.005 (0.8) -0.004 (-0.4)
+                       equipment (K09+K10)       0.011 (0.4)   0.010 (0.3)
+                           federal revenue       0.001 (0.0) -0.002 (-0.1)
+                       food services (E11)       0.019 (0.8)   0.031 (0.8)
+                from cities/counties (D23)       0.001 (0.0)   0.004 (0.1)
+              general administration (E08)     -0.004 (-0.4) -0.006 (-0.4)
+                instr. staff support (E07)     -0.002 (-0.2)   0.002 (0.1)
+                               instruction       0.004 (0.7) -0.009 (-1.1)
+                instruction salaries (V11)     -0.001 (-0.1) -0.001 (-0.0)
+                    interest on debt (I86)       0.020 (1.3)   0.016 (0.8)
+              long-term debt issued (_21F)       0.035 (0.5)   0.035 (0.3)
+         long-term debt outstanding (_41F)       0.011 (0.7)   0.014 (0.7)
+            operations & maintenance (V40)       0.012 (1.0)   0.007 (0.4)
+                   other local taxes (T99)     -0.022 (-0.9) -0.016 (-0.4)
+           parent govt contributions (T02)     -0.015 (-1.4)   0.001 (0.1)
+         payments to charter schools (V92)       0.001 (0.0) -0.001 (-0.0)
+    payments to other school systems (Q11)       0.006 (0.6)   0.013 (1.1)
+         payments to private schools (V91)       0.010 (0.6)   0.004 (0.1)
+               private contributions (U50)       0.020 (0.9) -0.012 (-0.3)
+                       pupil support (E17)       0.002 (0.2) -0.005 (-0.5)
+                pupil transportation (V45)       0.012 (1.3)   0.027 (2.0)
+                    salaries & wages (Z32)       0.003 (0.6) -0.003 (-0.4)
+               school administration (E09)       0.008 (0.6)   0.011 (0.6)
+                school lunch charges (A09)     -0.017 (-0.8) -0.024 (-0.8)
+                  state compensatory (C07)     -0.027 (-0.5) -0.020 (-0.2)
+                   state formula aid (C01)     -0.014 (-1.4) -0.011 (-0.8)
+                    state special ed (C05)       0.001 (0.2) -0.003 (-0.3)
+                state transportation (C06)     -0.014 (-0.6) -0.052 (-1.4)
+                        student fees (A15)     -0.247 (-1.2) -0.302 (-1.2)
+                          support services       0.011 (1.6)   0.006 (0.6)
+                         total expenditure       0.005 (0.4) -0.007 (-0.5)
+                             total revenue       0.013 (1.3)   0.003 (0.3)
+                 tuition from pupils (A07)     -0.018 (-1.1) -0.039 (-1.5)
+                       district SES (SEDA)       0.011 (3.7)   0.014 (3.0)
+           district test scores (SEDA, SD)       0.006 (0.8)   0.033 (2.6)
+                        effective tax rate     -0.017 (-2.3) -0.019 (-1.7)
+      log county school property tax (CoG)     -0.009 (-0.6) -0.005 (-0.3)
+                    log district enrolment     -0.007 (-3.3) -0.009 (-2.9)
+       log district property tax per pupil       0.008 (1.8)   0.004 (0.8)
+           log district spending per pupil       0.008 (1.4) -0.003 (-0.4)
+               log median home value (ACS)     -0.004 (-1.2) -0.006 (-1.3)
+                     log median sale price       0.012 (2.5)   0.012 (1.9)
+                      log population (ACS)     -0.016 (-3.9) -0.016 (-2.8)
+                   log tax bill per parcel     -0.001 (-0.3) -0.000 (-0.1)
+                 move-out rate (Data Axle)       0.002 (0.2)   0.005 (0.4)
+                     sales per 100 parcels       0.039 (2.5)   0.042 (1.8)
+  low-tax side
+   0.214 (1.0)
+   0.040 (0.4)
+ -0.005 (-0.0)
+   0.090 (1.3)
+ -0.234 (-1.7)
+ -0.051 (-0.5)
+ -0.047 (-0.2)
+   0.092 (0.9)
+ -0.173 (-1.2)
+   0.055 (0.8)
+ -0.007 (-0.6)
+ -0.005 (-0.4)
+ -0.001 (-0.1)
+ -0.043 (-0.8)
+ -0.075 (-0.7)
+   0.069 (0.5)
+   0.068 (0.6)
+ -0.024 (-0.2)
+   0.575 (2.9)
+ -0.017 (-0.1)
+   0.074 (0.9)
+ -0.051 (-0.6)
+   0.002 (0.0)
+ -0.048 (-0.6)
+ -0.156 (-1.4)
+   0.070 (0.7)
+ -0.016 (-0.1)
+   0.060 (0.7)
+   0.102 (0.6)
+   0.014 (0.1)
+   0.026 (0.2)
+ -0.002 (-0.0)
+   0.001 (0.0)
+   0.029 (1.2)
+   0.007 (0.4)
+   0.007 (0.2)
+   0.097 (2.1)
+ -0.020 (-0.8)
+   0.029 (0.6)
+   0.001 (0.1)
+   0.014 (1.6)
+ -0.001 (-0.0)
+   0.005 (0.3)
+   0.018 (0.7)
+ -0.048 (-1.2)
+ -0.004 (-0.3)
+ -0.009 (-0.6)
+   0.019 (1.9)
+   0.006 (0.3)
+   0.023 (1.0)
+   0.021 (0.2)
+   0.000 (0.0)
+   0.024 (1.3)
+ -0.021 (-0.7)
+ -0.024 (-1.8)
+ -0.004 (-0.1)
+ -0.013 (-0.7)
+   0.015 (0.7)
+   0.017 (0.5)
+   0.011 (0.7)
+ -0.004 (-0.2)
+   0.012 (1.3)
+ -0.002 (-0.1)
+ -0.034 (-1.0)
+   0.002 (0.0)
+ -0.018 (-1.2)
+   0.006 (0.5)
+   0.010 (0.3)
+ -0.263 (-0.7)
+   0.021 (1.7)
+   0.016 (0.8)
+   0.020 (0.8)
+   0.001 (0.1)
+   0.007 (1.9)
+ -0.013 (-1.7)
+ -0.012 (-1.6)
+ -0.015 (-0.4)
+ -0.007 (-2.0)
+   0.023 (1.9)
+   0.022 (2.0)
+ -0.002 (-0.4)
+   0.010 (1.4)
+ -0.013 (-2.6)
+   0.000 (0.1)
+ -0.001 (-0.1)
+   0.035 (2.1)
+
+== main 
+                                               src
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+ CoG all local govts, census years, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+    CoG school districts by county, log per capita
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                      F-33 district, log per pupil
+                                     SEDA district
+                                     SEDA district
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                              core
+                                   outcome both sides pooled high-tax side
+           all local govts: LT debt issued       0.029 (0.5)   0.004 (0.1)
+      all local govts: LT debt outstanding     -0.037 (-1.2) -0.017 (-0.4)
+           all local govts: capital outlay     -0.020 (-0.4) -0.012 (-0.2)
+       all local govts: enterprise revenue       0.016 (0.9)   0.001 (0.0)
+          all local govts: federal revenue     -0.007 (-0.2)   0.011 (0.2)
+        all local govts: general sales tax     -0.025 (-1.0) -0.028 (-1.7)
+    all local govts: individual income tax       0.007 (0.1)   0.081 (1.7)
+         all local govts: interest on debt     -0.011 (-0.3)   0.013 (0.2)
+ all local govts: other own-source revenue     -0.046 (-1.0) -0.031 (-0.5)
+            all local govts: state revenue     -0.009 (-0.4) -0.018 (-0.6)
+               number of local governments     -0.005 (-1.6) -0.007 (-2.0)
+                  number of municipalities       0.000 (0.0) -0.001 (-0.6)
+               number of special districts     -0.009 (-1.6) -0.018 (-2.4)
+                 spending: education (E12)     -0.014 (-0.8) -0.019 (-0.8)
+                      spending: fire (E24)     -0.021 (-0.5) -0.033 (-0.5)
+        spending: general government (E89)       0.023 (0.5) -0.015 (-0.3)
+                    spending: health (E32)       0.067 (1.9)   0.068 (1.6)
+                  spending: highways (E44)     -0.010 (-0.5) -0.015 (-0.5)
+                 spending: hospitals (E36)       0.131 (2.3)   0.077 (1.2)
+      spending: housing & comm. dev. (E50)     -0.012 (-0.2) -0.006 (-0.1)
+                 spending: libraries (E52)       0.007 (0.2) -0.010 (-0.2)
+                     spending: parks (E61)       0.014 (0.6)   0.006 (0.2)
+                    spending: police (E62)       0.023 (0.8)   0.056 (1.6)
+         spending: public welfare (E74-79)       0.021 (0.8)   0.014 (0.4)
+                  spending: sewerage (E80)     -0.045 (-1.2) -0.066 (-1.2)
+               spending: solid waste (E81)       0.014 (0.6)   0.032 (1.0)
+          school districts: LT debt issued     -0.017 (-0.2) -0.044 (-0.5)
+     school districts: LT debt outstanding     -0.002 (-0.1) -0.017 (-0.6)
+          school districts: capital outlay       0.026 (0.5)   0.035 (0.6)
+       school districts: cash & securities     -0.001 (-0.0) -0.017 (-0.5)
+         school districts: federal revenue       0.009 (0.3) -0.001 (-0.0)
+        school districts: interest on debt     -0.005 (-0.2) -0.010 (-0.3)
+           school districts: state revenue     -0.011 (-1.2) -0.025 (-1.9)
+                     IDEA special ed (C15)     -0.002 (-0.1) -0.003 (-0.1)
+                             Title I (C14)       0.002 (0.3)   0.001 (0.1)
+                            capital outlay       0.003 (0.2)   0.021 (0.7)
+           cash & securities (W01+W31+W61)       0.016 (1.0)   0.014 (0.8)
+                     child nutrition (C25)     -0.007 (-0.7) -0.007 (-0.5)
+                        construction (F12)     -0.001 (-0.1)   0.008 (0.3)
+          district activity receipts (A13)       0.004 (0.6)   0.008 (0.7)
+                   employee benefits (Z33)     -0.002 (-0.4) -0.001 (-0.2)
+                       equipment (K09+K10)       0.008 (0.5)   0.023 (1.0)
+                           federal revenue     -0.000 (-0.1)   0.003 (0.3)
+                       food services (E11)       0.003 (0.3)   0.009 (0.7)
+                from cities/counties (D23)     -0.010 (-0.7) -0.005 (-0.2)
+              general administration (E08)       0.001 (0.1)   0.010 (1.1)
+                instr. staff support (E07)     -0.002 (-0.2) -0.009 (-0.8)
+                               instruction     -0.002 (-0.4) -0.002 (-0.4)
+                instruction salaries (V11)       0.000 (0.0) -0.003 (-0.3)
+                    interest on debt (I86)     -0.013 (-1.0) -0.016 (-1.0)
+              long-term debt issued (_21F)     -0.006 (-0.1) -0.009 (-0.1)
+         long-term debt outstanding (_41F)     -0.013 (-1.0) -0.004 (-0.2)
+            operations & maintenance (V40)       0.012 (1.3)   0.013 (1.1)
+                   other local taxes (T99)     -0.015 (-1.3) -0.013 (-0.7)
+           parent govt contributions (T02)       0.001 (0.1) -0.002 (-0.1)
+         payments to charter schools (V92)     -0.004 (-0.3) -0.008 (-0.3)
+    payments to other school systems (Q11)     -0.004 (-0.5) -0.011 (-1.0)
+         payments to private schools (V91)       0.005 (0.2)   0.013 (0.4)
+               private contributions (U50)       0.000 (0.0) -0.013 (-0.5)
+                       pupil support (E17)       0.003 (0.5)   0.002 (0.3)
+                pupil transportation (V45)     -0.003 (-0.4)   0.006 (0.7)
+                    salaries & wages (Z32)     -0.000 (-0.1)   0.001 (0.1)
+               school administration (E09)     -0.004 (-0.4) -0.006 (-0.4)
+                school lunch charges (A09)     -0.001 (-0.0) -0.001 (-0.1)
+                  state compensatory (C07)     -0.007 (-0.3)   0.001 (0.0)
+                   state formula aid (C01)       0.006 (1.2)   0.011 (1.4)
+                    state special ed (C05)     -0.012 (-1.3) -0.015 (-1.0)
+                state transportation (C06)     -0.011 (-0.8) -0.030 (-1.5)
+                        student fees (A15)     -0.114 (-1.2) -0.191 (-1.4)
+                          support services       0.004 (0.8)   0.005 (0.8)
+                         total expenditure       0.002 (0.2)   0.003 (0.2)
+                             total revenue       0.005 (0.8)   0.005 (0.7)
+                 tuition from pupils (A07)       0.002 (0.1)   0.001 (0.1)
+                       district SES (SEDA)       0.009 (3.1)   0.012 (2.9)
+           district test scores (SEDA, SD)       0.006 (1.2)   0.005 (0.6)
+                        effective tax rate     -0.011 (-1.5) -0.010 (-0.9)
+      log county school property tax (CoG)     -0.007 (-0.8) -0.008 (-1.5)
+                    log district enrolment     -0.004 (-2.5) -0.007 (-3.2)
+       log district property tax per pupil     -0.002 (-0.5) -0.004 (-0.8)
+           log district spending per pupil       0.001 (0.3)   0.001 (0.2)
+               log median home value (ACS)     -0.007 (-3.1) -0.011 (-3.5)
+                     log median sale price       0.003 (0.6)   0.002 (0.4)
+                      log population (ACS)     -0.010 (-3.9) -0.015 (-4.2)
+                   log tax bill per parcel     -0.003 (-1.1) -0.004 (-0.9)
+                 move-out rate (Data Axle)       0.006 (0.8)   0.004 (0.5)
+                     sales per 100 parcels       0.017 (1.5)   0.024 (1.5)
+  low-tax side
+   0.074 (0.9)
+ -0.064 (-1.4)
+ -0.033 (-0.4)
+   0.049 (1.5)
+ -0.042 (-0.7)
+ -0.012 (-0.2)
+ -0.042 (-0.4)
+ -0.043 (-0.8)
+ -0.077 (-1.1)
+   0.006 (0.2)
+ -0.003 (-0.5)
+   0.003 (0.5)
+   0.001 (0.2)
+   0.000 (0.0)
+ -0.018 (-0.5)
+   0.086 (1.3)
+   0.073 (1.1)
+ -0.004 (-0.1)
+   0.214 (2.1)
+ -0.034 (-0.4)
+   0.035 (0.9)
+   0.016 (0.4)
+ -0.020 (-0.4)
+   0.032 (0.9)
+ -0.024 (-0.5)
+ -0.011 (-0.3)
+   0.001 (0.0)
+   0.017 (0.4)
+   0.014 (0.2)
+   0.020 (0.3)
+   0.033 (0.5)
+ -0.005 (-0.1)
+   0.011 (0.9)
+ -0.001 (-0.0)
+   0.006 (0.4)
+ -0.021 (-0.7)
+   0.028 (1.0)
+ -0.013 (-0.8)
+ -0.012 (-0.3)
+ -0.000 (-0.0)
+ -0.005 (-0.6)
+ -0.015 (-0.6)
+ -0.005 (-0.4)
+ -0.002 (-0.1)
+ -0.027 (-1.3)
+ -0.014 (-1.1)
+   0.010 (0.6)
+ -0.004 (-0.5)
+   0.006 (0.5)
+ -0.010 (-0.5)
+ -0.008 (-0.1)
+ -0.029 (-1.4)
+   0.013 (0.8)
+ -0.015 (-1.0)
+   0.010 (0.4)
+   0.002 (0.1)
+   0.005 (0.4)
+ -0.015 (-0.5)
+   0.004 (0.1)
+   0.003 (0.3)
+ -0.014 (-1.3)
+ -0.003 (-0.4)
+ -0.004 (-0.3)
+ -0.006 (-0.3)
+   0.008 (0.4)
+ -0.001 (-0.1)
+ -0.011 (-0.8)
+   0.001 (0.0)
+   0.010 (0.1)
+   0.003 (0.3)
+ -0.003 (-0.2)
+   0.002 (0.2)
+ -0.003 (-0.2)
+   0.005 (1.3)
+   0.012 (1.8)
+ -0.014 (-1.8)
+ -0.007 (-0.3)
+ -0.000 (-0.1)
+   0.003 (0.3)
+ -0.000 (-0.0)
+ -0.002 (-0.6)
+   0.003 (0.4)
+ -0.003 (-0.9)
+ -0.002 (-0.6)
+   0.008 (0.7)
+   0.010 (0.6)
+
+summary: cells with |t| > 1.96 and share positive, by coefficient, source and sample
+           coef                   src            sample     k   sig share_pos
+         <char>                <char>            <char> <int> <int>     <num>
+ 1: interaction                  core both sides pooled    11     5      0.45
+ 2: interaction                  core     high-tax side    11     2      0.36
+ 3: interaction                  core      low-tax side    11     4      0.45
+ 4: interaction district / local govt both sides pooled    75     2      0.63
+ 5: interaction district / local govt     high-tax side    75     3      0.47
+ 6: interaction district / local govt      low-tax side    75     2      0.57
+ 7:        main                  core both sides pooled    11     3      0.36
+ 8:        main                  core     high-tax side    11     3      0.36
+ 9:        main                  core      low-tax side    11     0      0.36
+10:        main district / local govt both sides pooled    75     2      0.45
+11:        main district / local govt     high-tax side    75     3      0.45
+12:        main district / local govt      low-tax side    75     1      0.47
+    median_abs
+         <num>
+ 1:      0.008
+ 2:      0.006
+ 3:      0.012
+ 4:      0.014
+ 5:      0.013
+ 6:      0.019
+ 7:      0.006
+ 8:      0.007
+ 9:      0.003
+10:      0.007
+11:      0.011
+12:      0.011

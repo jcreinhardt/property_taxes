@@ -1,0 +1,139 @@
+Low-tax side within 50 mi, 5-mi bins, pair FE, SE by county, SD units of the all-pairs sample.
+Rural subset drops pairs where a metro CBSA >= 0.5 m has >= 30 % of its population on the high side within 50 mi:
+      pair                                                              metros
+    <char>                                                              <char>
+ 1:  AR-TN                                            Memphis (1.3m, 35% high)
+ 2:  AZ-NV                       Las Vegas-Henderson-Paradise (2.1m, 87% high)
+ 3:  CT-MA                  Hartford-East Hartford-Middletown (1.2m, 89% high)
+ 4:  CT-NY                   Poughkeepsie-Newburgh-Middletown (0.7m, 48% high)
+ 5:  DC-MD                          Baltimore-Columbia-Towson (2.8m, 40% high)
+ 6:  FL-GA                                       Jacksonville (1.4m, 85% high)
+ 7:  GA-SC                            Augusta-Richmond County (0.6m, 60% high)
+ 8:  ID-WA                             Spokane-Spokane Valley (0.5m, 93% high)
+ 9:  IL-IN                           Chicago-Naperville-Elgin (9.5m, 68% high)
+10:  IN-KY                        Louisville/Jefferson County (1.2m, 76% high)
+11:  IN-OH                                   Dayton-Kettering (0.8m, 96% high)
+12:  KS-MO                                        Kansas City (2.0m, 41% high)
+13:  KY-OH                                         Cincinnati (2.2m, 59% high)
+14:  LA-MS New Orleans-Metairie (1.2m, 95% high); Baton Rouge (0.8m, 74% high)
+15:  MA-NY                            Albany-Schenectady-Troy (0.9m, 39% high)
+16:  MA-RI                                 Providence-Warwick (1.6m, 55% high)
+17:  MD-PA    Harrisburg-Carlisle (0.6m, 90% high); Lancaster (0.5m, 91% high)
+18:  MD-VA                    Washington-Arlington-Alexandria (6.0m, 35% high)
+19:  MI-OH                                             Toledo (0.6m, 95% high)
+20:  MS-TN                                            Memphis (1.3m, 39% high)
+21:  NC-SC                         Charlotte-Concord-Gastonia (2.5m, 82% high)
+22:  NC-TN                                          Knoxville (0.8m, 74% high)
+23:  NC-VA                Virginia Beach-Norfolk-Newport News (1.7m, 90% high)
+24:  NM-TX                                            El Paso (0.8m, 98% high)
+25:  NY-VT                            Albany-Schenectady-Troy (0.9m, 53% high)
+26:  OR-WA                       Portland-Vancouver-Hillsboro (2.4m, 79% high)
+27:  PA-WV                                         Pittsburgh (2.3m, 78% high)
+      pair                                                              metros
+    <char>                                                              <char>
+all pairs: 15440 tracts, 59 pairs; by bin: 3417 2764 1790 1489 1325 1192 995 892 834 742
+rural pairs: 9532 tracts, 34 pairs; by bin: 2349 2022 1177 893 739 562 486 488 482 334
+
+slope: per 10 mi in SD units (SE) within 0-50; p_joint: bins jointly 0; d: mean of the 30-50 mi bins minus mean of the 0-10 mi bins (SD)
+
+== all pairs 
+                                           variable          slope p_slope
+           [rate] effective tax rate, % (CoreLogic)  0.062 (0.034)   0.067
+   [outcome] log median sale price 2016 (CoreLogic)  0.006 (0.026)   0.806
+              [outcome] log median home value (ACS)  0.019 (0.025)   0.458
+  [outcome] move-out rate 2014-17, %/yr (Data Axle) -0.001 (0.030)   0.976
+             [outcome] moved in the last year (ACS)  0.028 (0.020)   0.159
+   [outcome] sales per 100 parcels 2016 (CoreLogic)  0.039 (0.029)   0.180
+               [control] log median HH income (ACS)  0.045 (0.028)   0.117
+  [control] share of returns AGI >= $100k (SOI ZIP)  0.036 (0.032)   0.254
+                 [control] itemiser share (SOI ZIP)  0.035 (0.033)   0.290
+ [control] SALT above $10k per return, $k (SOI ZIP) -0.037 (0.035)   0.293
+                         [control] median age (ACS) -0.006 (0.023)   0.775
+                     [control] household size (ACS)  0.011 (0.023)   0.619
+                     [control] share under 18 (ACS) -0.015 (0.018)   0.383
+         [control] share of HHs with children (ACS)  0.003 (0.022)   0.897
+                        [control] owner share (ACS)  0.021 (0.026)   0.412
+                          [control] share BA+ (ACS)  0.061 (0.028)   0.027
+                        [control] share white (ACS)  0.005 (0.033)   0.883
+                  [control] median year built (ACS)  0.042 (0.024)   0.087
+                     [control] log population (ACS)  0.022 (0.020)   0.278
+      [control] log population density (ACS, TIGER) -0.019 (0.025)   0.451
+              [control] district test scores (SEDA)  0.072 (0.039)   0.062
+                      [control] district SES (SEDA)  0.100 (0.041)   0.015
+ p_joint d30_50_vs_0_10     n pairs
+   0.369           0.24 15440    59
+   0.414           0.04 14890    59
+   0.643           0.07 15281    59
+   0.051           0.00 14786    59
+   0.001           0.14 15432    59
+   0.053           0.19 14890    59
+   0.247           0.17 15411    59
+   0.095           0.19 15421    59
+   0.054           0.17 15421    59
+   0.378          -0.03 15421    59
+   0.174          -0.01 15429    59
+   0.001           0.00 15424    59
+   0.000          -0.08 15432    59
+   0.000          -0.02 15427    59
+   0.001           0.06 15427    59
+   0.057           0.25 15432    59
+   0.496           0.06 15432    59
+   0.066           0.14 15370    59
+   0.761           0.09 15440    59
+   0.002          -0.06 15440    59
+   0.000           0.25 15195    59
+   0.000           0.34 15180    59
+
+== rural pairs 
+                                           variable          slope p_slope
+           [rate] effective tax rate, % (CoreLogic)  0.084 (0.051)   0.099
+   [outcome] log median sale price 2016 (CoreLogic)  0.037 (0.037)   0.320
+              [outcome] log median home value (ACS)  0.058 (0.036)   0.107
+  [outcome] move-out rate 2014-17, %/yr (Data Axle) -0.061 (0.040)   0.133
+             [outcome] moved in the last year (ACS)  0.009 (0.027)   0.738
+   [outcome] sales per 100 parcels 2016 (CoreLogic)  0.031 (0.023)   0.190
+               [control] log median HH income (ACS)  0.098 (0.039)   0.011
+  [control] share of returns AGI >= $100k (SOI ZIP)  0.089 (0.045)   0.048
+                 [control] itemiser share (SOI ZIP)  0.078 (0.049)   0.112
+ [control] SALT above $10k per return, $k (SOI ZIP) -0.016 (0.048)   0.736
+                         [control] median age (ACS)  0.018 (0.031)   0.549
+                     [control] household size (ACS)  0.023 (0.036)   0.518
+                     [control] share under 18 (ACS) -0.020 (0.025)   0.411
+         [control] share of HHs with children (ACS)  0.013 (0.031)   0.669
+                        [control] owner share (ACS)  0.066 (0.037)   0.073
+                          [control] share BA+ (ACS)  0.086 (0.039)   0.027
+                        [control] share white (ACS)  0.057 (0.042)   0.172
+                  [control] median year built (ACS)  0.078 (0.033)   0.019
+                     [control] log population (ACS)  0.033 (0.028)   0.245
+      [control] log population density (ACS, TIGER) -0.041 (0.033)   0.218
+              [control] district test scores (SEDA)  0.130 (0.055)   0.020
+                      [control] district SES (SEDA)  0.161 (0.059)   0.006
+ p_joint d30_50_vs_0_10    n pairs
+   0.220           0.32 9532    34
+   0.010           0.14 9162    34
+   0.002           0.20 9423    34
+   0.016          -0.18 9012    34
+   0.007           0.09 9524    34
+   0.237           0.13 9162    34
+   0.007           0.33 9515    34
+   0.002           0.37 9513    34
+   0.011           0.31 9513    34
+   0.014           0.08 9513    34
+   0.039           0.03 9522    34
+   0.107           0.02 9519    34
+   0.014          -0.09 9524    34
+   0.006           0.01 9520    34
+   0.000           0.16 9520    34
+   0.001           0.33 9524    34
+   0.296           0.20 9524    34
+   0.024           0.26 9485    34
+   0.849           0.14 9532    34
+   0.031          -0.11 9532    34
+   0.002           0.42 9506    34
+   0.000           0.52 9493    34
+
+Covariates ([control] + [outcome]) with p_joint < .05 / slope p < .05, by sample:
+        sample     k joint_rej slope_rej median_abs_slope10 median_abs_d
+        <char> <int>     <int>     <int>              <num>        <num>
+1:   all pairs    21         8         2              0.022         0.08
+2: rural pairs    21        17         6              0.057         0.16
