@@ -21,7 +21,10 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
 | `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
 | `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
-| `16_diop_green_table7.R` | Diop & Green (2026) Table 7 / Table 6 without their controls: state-to-state dyads in levels (thousands of returns) on ΔSALT × year, year + origin FE, White and clustered SEs, files 1112–2122; ΔSALT time-varying (theirs) and fixed at 2017 (`build/soi/10-11`) |
+
+`16_diop_green_table7.R` (Diop & Green Table 7 / Table 6 on state-to-state dyads without their controls) was removed on
+2026-10-28 together with `build/soi/10-11`; results and figures in
+`notebook/2026-10-27-diop-green-table7-replication`, code in commit 73f3a8e.
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
 `notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`,

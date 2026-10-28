@@ -3,7 +3,7 @@ date: 2026-10-27
 title: Diop & Green Table 7 on our SOI files, without their controls
 question: Does their dyad-level ΔSALT × year regression (thousands of households per state pair, year + origin FE, White SEs) reproduce on the 2011–2019 SOI state files without the income / population / HPI / unemployment / GDP controls, and what drives the post-2017 jump?
 status: current
-code: property_taxes 1be2d61 (local main; this entry's scripts committed on top)
+code: property_taxes 73f3a8e (scripts removed from the tree on 2026-10-28; `git show 73f3a8e:<path>` to recover them)
 tags: migration, SOI, Diop-Green, replication, SALT, state
 ---
 
@@ -84,6 +84,19 @@ dyad per unit ΔSALT, White SE (clustered-by-origin SE in brackets where there a
 
 ![by dyad subset](c16_diop_green_subsamples.png)
 
+### Why their time-varying ΔSALT also moves with sorting (discussion, no new estimates)
+Their SALT_it = itemized income-tax deductions / AGI of all returns = itemizer share × deduction ratio among
+itemizers, so ΔSALT_ijt moves with (i) the itemizer-pool collapse in 2018 (the mechanical halving above, the largest
+time variation in the regressor), (ii) reverse feedback from the flows themselves: high-income itemizers leaving NY
+lower NY's SALT/AGI in the same year while FL's does not move, so big flows coincide with a compressed regressor; a
+negative covariance that attenuates rather than inflates (annual out-migrants carry 2–3% of a state's AGI, so the
+ratio moves by well under a percent of itself per year), and (iii) slow Tiebout sorting: with origin + year FE, β_t
+is the cross-sectional gradient of flows on ΔSALT in year t, which steepens whenever something moves flows and SALT
+differences together (the CA/NY income booms of the 2010s raised both their SALT/AGI and their out-migration to FL/TX,
+the pre-trend in the fixed-2017 series). Fixing ΔSALT at 2017 removes (i) and (ii) but not (iii), since the 2017
+cross-section of tax burdens is itself the product of past sorting; it makes the post-2017 coefficients a comparison
+of flows along a predetermined gradient.
+
 ## How
 - **Outline:** `SOI stateoutflow csv -> dyads (build/soi/10) + Historic Table 2 state files -> SALT = A18425 / A00100
   (build/soi/11) -> emig_ijt = n1 / 1000, net = emig_ij - emig_ji, dSALT = SALT_i - SALT_j -> feols(y ~ dSALT +
@@ -92,13 +105,15 @@ dyad per unit ΔSALT, White SE (clustered-by-origin SE in brackets where there a
   real estate taxes gives the same picture, in the csv); no weights (their levels regression); reference 2011 and
   2017; samples 2011–19 (theirs) and 2011–21; Post = years ≥ 2018 for the Table 6 form; ΔSALT fixed at TY2017.
 - **Inputs:** `data/built/soi/state_dyads.csv`, `data/built/exposure/soi_state_salt_panel.csv`.
-- **Scripts:** `code/build/soi/10_state_dyads_panel.R`, `code/build/soi/11_state_salt_panel.R`,
-  `code/designs/exposure_did/16_diop_green_table7.R` → `output/designs/exposure_did/c16_diop_green_table7.{csv,txt}`,
-  `figures/c16_diop_green_table7.png`.
+- **Scripts (removed from the tree 2026-10-28, last in commit 73f3a8e):** `code/build/soi/10_state_dyads_panel.R`,
+  `code/build/soi/11_state_salt_panel.R`, `code/designs/exposure_did/16_diop_green_table7.R` →
+  `output/designs/exposure_did/c16_diop_green_{table7,subsamples}.{csv,txt}`, `figures/c16_diop_green_*.png` (also
+  removed; the two figures live only here). The built csv panels stay on disk (`data/built/MANIFEST.md`).
 - Pre-2011 files (per-state xls, Excel 4 state tables) were not used; the sample starts with their 2011.
 
 ## Open
-- Add destination FE (not in their specification) to see whether the gross result appears without their controls.
+- Add destination FE (not in their specification) to see whether the gross result appears without their controls
+  (needs the scripts restored from 73f3a8e).
 - Their controls are state-year aggregates; the net result with the fixed-2017 ΔSALT is the number to carry
   (+9 per unit ΔSALT in 2019 relative to 2017 ≈ 9.5k households per SD of ΔSALT per origin state per year, about 2% of
   a state's gross out-migration), and it dates from the 2020 moves, as the state-level simulated-instrument result.
