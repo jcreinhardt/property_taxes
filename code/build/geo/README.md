@@ -11,5 +11,6 @@ Run in order (all read the 1% parcel panel `data/built/corelogic/parcel_1pct/` a
 | `05_iv_tract_data.R` | `iv_tract.parquet`: tract medians, SEDA district scores, ACS 2017 covariates |
 | `06_tract_border_side.R` | `iv_tract_side.rds`: nearest ranked border pair, high/low side (median of tract medians within 20 mi), near (< 10 mi). Reads `iv_tract_nb.rds`, which `designs/border_iv/01` writes |
 | `07_tract_side_ownstate.R` | `iv_tract_side_ownstate.rds`: the own-state nearest-line assignment (60,982 tracts, 90 pairs), plus school-district coverage checks |
+| `08_zcta_school_district.R` | `zcta_district_area.csv`: ZCTA (cb 2020) × school district (unified + elementary, cb 2019) area shares, for carrying SOI ZIP measures to districts (68,689 pieces; 33,316 ZCTAs, 12,762 districts) |
 
 `iv_tract_side.rds` is the input of every border design (`designs/border_rd`, `border_iv`, `district_border`).

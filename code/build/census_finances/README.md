@@ -5,7 +5,7 @@
 | `01_download.sh` | downloads the Annual Survey of Local Government Finances individual-unit files to `data/census_gov_finances/raw/` |
 | `02_import_cog.R` | loads them into `data/census_finances_test.db` |
 | `03_clean_cog.R` | county aggregates: `govt_finances_sd_by_county`, `govt_finances_county`, `govt_finances_county_area` |
-| `04_f33_district_panel.R` | F-33 district files `data/external/elsec/elsecYY.*` FY2012–2023 → `data/built/census_finances/district_finance.rds` |
+| `04_f33_district_panel.R` | F-33 district files `data/external/elsec/elsecYY.*` FY2012–2023 → `data/built/census_finances/district_finance.rds`; since 2026-10-28 also the F-33 CBSA code and ~50 revenue-by-source, spending-by-function/-object, capital outlay, payments, debt and cash items (F-33 item codes listed in the script) |
 
 Notes on the data: dependent school systems report `T06 = 0` and get property tax through the parent government; field
 fill rates and the F-33 vs CoreLogic comparison are in `validation/coverage/02`. Connecticut's 2017 CoG uses planning
