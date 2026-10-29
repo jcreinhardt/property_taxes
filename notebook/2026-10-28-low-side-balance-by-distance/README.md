@@ -879,6 +879,22 @@ both sides, so none of these survive in the contrast. District spending and prop
 single-filer share rises on both (+0.019 / +0.032), joint filers fall on both; contrasts all within ±0.01. The balance
 caveat of 23/36 applies to every interaction cell.
 
+### Without the pair × year effects (34, 2026-10-29)
+`34_density1000_fe_variants.R` re-estimates the core 11 outcomes on the density-selected sample with unit FE + year FE
+in place of unit FE + pair × year FE, reduced form and interaction model, by side. Main term: little changes. The high-side
+drifts get somewhat larger (enrolment −0.012 vs −0.005 SD per 10 mi, t −4.0; home value −0.016 vs −0.010; population
+−0.015 vs −0.012), the low side stays within ±0.01, and the contrast is the same to within 0.005 everywhere; the count of
+significant cells is 3 on the high side under both FE sets. Interaction term: the one post-2017 pattern of 31 inverts.
+With pair × year FE the effective-rate interaction on the high side falls to −0.020 by 2021-24; with year FE only it rises
+to +0.022 by 2024, and on the low side to +0.031, so the post − pre goes from −0.019 / −0.012 to +0.003 / +0.016 and the
+contrast from −0.006 to −0.013 (t −0.9). District spending per pupil keeps its low-side rise (+0.031 vs +0.022, t 2.1)
+and the contrast widens to −0.040 (t −2.4); home value on the high side turns positive (+0.009 vs −0.006); population,
+enrolment, sales and prices keep sign and size. Without pair × year effects the near-vs-inland comparison is pooled across
+all 68 borders, so shocks that differ across border regions load on Z × E wherever exposed near tracts sit on different
+borders than exposed inland tracts. The effective-rate interaction is therefore not robust to the choice, in either
+direction, and nothing else in the core set depends on it. Outputs `c46_fe_variants_{series,post_pre}.csv`,
+`c46_fe_variants.txt`, `figures/c46_fe_variants_{rf_main,int_main,int_interaction}.png`.
+
 ## Open
 - The near × own-exposure interaction (16) is the one sign-consistent post-2017 pattern: lower effective rate, more sales,
   slightly higher prices, fewer people near the border in high-exposure tracts. Worth a cleaner test: detrend the
