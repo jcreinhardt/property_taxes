@@ -1,0 +1,118 @@
+Household composition outcomes. post - pre (mean 2018+ minus 2013-16) in SD units of the outcome's 2016 cross-section: per SD of exposure (exposure DiD; Z x exposure: per 10 mi closer per SD of exposure) or per 10 mi closer (Z x year). Cells: estimate (t), SE by county.
+
+== exposure DiD, state x year 
+       src                                     outcome     all units
+ ACS tract                        household size (ACS)   0.018 (1.9)
+ ACS tract       households with children, share (ACS)   0.031 (2.4)
+ ACS tract                            median age (ACS) -0.006 (-1.7)
+ ACS tract          one-person households, share (ACS) -0.026 (-3.0)
+ ACS tract                             share 65+ (ACS)   0.014 (2.5)
+ ACS tract                        share under 18 (ACS)   0.020 (3.5)
+   SOI ZIP        dependents per return (SOI, to 2018)   0.044 (2.9)
+   SOI ZIP elderly (60+) returns, share (SOI, 2015-18)   0.007 (1.3)
+   SOI ZIP       head-of-household filers, share (SOI)   0.033 (1.8)
+   SOI ZIP                individuals per return (SOI)   0.084 (2.1)
+   SOI ZIP                   joint filers, share (SOI)   0.025 (2.6)
+   SOI ZIP                       log individuals (SOI)   0.005 (1.7)
+   SOI ZIP                           log returns (SOI) -0.001 (-0.3)
+   SOI ZIP                  single filers, share (SOI) -0.074 (-2.2)
+
+== exposure DiD, county x year 
+       src                                     outcome     all units
+ ACS tract                        household size (ACS)   0.017 (1.5)
+ ACS tract       households with children, share (ACS)   0.029 (2.2)
+ ACS tract                            median age (ACS) -0.007 (-1.5)
+ ACS tract          one-person households, share (ACS) -0.018 (-3.0)
+ ACS tract                             share 65+ (ACS)   0.011 (2.6)
+ ACS tract                        share under 18 (ACS)   0.023 (2.6)
+   SOI ZIP        dependents per return (SOI, to 2018)   0.044 (2.5)
+   SOI ZIP elderly (60+) returns, share (SOI, 2015-18)   0.003 (0.8)
+   SOI ZIP       head-of-household filers, share (SOI)   0.033 (1.8)
+   SOI ZIP                individuals per return (SOI)   0.073 (1.9)
+   SOI ZIP                   joint filers, share (SOI)   0.013 (2.3)
+   SOI ZIP                       log individuals (SOI)   0.005 (1.7)
+   SOI ZIP                           log returns (SOI)   0.000 (0.2)
+   SOI ZIP                  single filers, share (SOI) -0.058 (-2.0)
+
+== border: Z x year 
+       src                                     outcome both sides pooled
+ ACS tract                        household size (ACS)     -0.006 (-1.1)
+ ACS tract       households with children, share (ACS)     -0.005 (-0.9)
+ ACS tract                            median age (ACS)       0.002 (0.6)
+ ACS tract          one-person households, share (ACS)       0.009 (1.5)
+ ACS tract                             share 65+ (ACS)       0.005 (1.4)
+ ACS tract                        share under 18 (ACS)       0.002 (0.5)
+   SOI ZIP        dependents per return (SOI, to 2018)       0.001 (0.5)
+   SOI ZIP elderly (60+) returns, share (SOI, 2015-18)       0.000 (0.1)
+   SOI ZIP       head-of-household filers, share (SOI)     -0.002 (-0.6)
+   SOI ZIP                individuals per return (SOI)       0.001 (0.3)
+   SOI ZIP                   joint filers, share (SOI)     -0.004 (-1.2)
+   SOI ZIP                       log individuals (SOI)     -0.002 (-1.9)
+   SOI ZIP                           log returns (SOI)     -0.002 (-2.0)
+   SOI ZIP                  single filers, share (SOI)       0.008 (1.7)
+ high-tax side  low-tax side
+ -0.002 (-0.3) -0.011 (-1.4)
+ -0.003 (-0.4) -0.008 (-0.9)
+   0.002 (0.3)   0.003 (0.4)
+   0.011 (1.3)   0.006 (0.8)
+   0.005 (1.1)   0.005 (0.9)
+   0.005 (0.7) -0.001 (-0.1)
+   0.004 (1.2) -0.002 (-0.6)
+ -0.001 (-0.3)   0.003 (0.6)
+ -0.002 (-0.5) -0.001 (-0.3)
+   0.002 (0.4)   0.001 (0.1)
+ -0.007 (-1.6) -0.000 (-0.0)
+ -0.004 (-3.7)   0.002 (1.6)
+ -0.004 (-3.9)   0.002 (1.7)
+   0.014 (2.0)   0.002 (0.2)
+
+== border: Z x exposure x year 
+       src                                     outcome both sides pooled
+ ACS tract                        household size (ACS)     -0.001 (-0.2)
+ ACS tract       households with children, share (ACS)       0.002 (0.3)
+ ACS tract                            median age (ACS)     -0.001 (-0.2)
+ ACS tract          one-person households, share (ACS)       0.005 (1.0)
+ ACS tract                             share 65+ (ACS)     -0.021 (-4.6)
+ ACS tract                        share under 18 (ACS)       0.004 (0.7)
+   SOI ZIP        dependents per return (SOI, to 2018)     -0.010 (-3.6)
+   SOI ZIP elderly (60+) returns, share (SOI, 2015-18)     -0.009 (-2.3)
+   SOI ZIP       head-of-household filers, share (SOI)     -0.004 (-1.3)
+   SOI ZIP                individuals per return (SOI)     -0.024 (-4.0)
+   SOI ZIP                   joint filers, share (SOI)     -0.020 (-3.8)
+   SOI ZIP                       log individuals (SOI)     -0.005 (-3.5)
+   SOI ZIP                           log returns (SOI)     -0.003 (-2.4)
+   SOI ZIP                  single filers, share (SOI)       0.031 (4.0)
+ high-tax side  low-tax side
+   0.002 (0.2) -0.005 (-0.6)
+   0.009 (1.3) -0.005 (-0.5)
+ -0.001 (-0.1) -0.005 (-0.7)
+   0.006 (0.7)   0.004 (0.5)
+ -0.019 (-3.2) -0.023 (-3.0)
+   0.012 (1.6) -0.004 (-0.4)
+ -0.006 (-1.9) -0.012 (-3.2)
+ -0.011 (-2.2) -0.004 (-0.5)
+ -0.003 (-0.9) -0.003 (-0.7)
+ -0.019 (-2.5) -0.021 (-3.0)
+ -0.020 (-2.9) -0.011 (-1.5)
+ -0.005 (-2.6) -0.004 (-2.1)
+ -0.003 (-1.9) -0.002 (-1.0)
+   0.031 (2.9)   0.018 (1.9)
+
+units:                          design            sample       src      n
+                         <char>            <char>    <char>  <int>
+ 1: border: Z x exposure x year both sides pooled ACS tract 114054
+ 2: border: Z x exposure x year     high-tax side ACS tract  61329
+ 3: border: Z x exposure x year      low-tax side ACS tract  52725
+ 4: border: Z x exposure x year both sides pooled   SOI ZIP  48387
+ 5: border: Z x exposure x year     high-tax side   SOI ZIP  26249
+ 6: border: Z x exposure x year      low-tax side   SOI ZIP  22138
+ 7:            border: Z x year both sides pooled ACS tract 114653
+ 8:            border: Z x year     high-tax side ACS tract  61653
+ 9:            border: Z x year      low-tax side ACS tract  53000
+10:            border: Z x year both sides pooled   SOI ZIP  48387
+11:            border: Z x year     high-tax side   SOI ZIP  26249
+12:            border: Z x year      low-tax side   SOI ZIP  22138
+13: exposure DiD, county x year         all units ACS tract 697802
+14: exposure DiD, county x year         all units   SOI ZIP 275220
+15:  exposure DiD, state x year         all units ACS tract 699419
+16:  exposure DiD, state x year         all units   SOI ZIP 277407
