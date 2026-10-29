@@ -45,6 +45,30 @@ deviations from the 2012-17 linear pre-trend.
 
 ![state DiDs](c17_state_did_big_four.png)
 
+### The same DiD on Data Axle moves (1% family sample, same day)
+Same specification on state-year rates of same-`family_id` moves (strict: state changed and LOR reset; pp of linked
+families, 2012-2021, weights = 2016 linked families). Data Axle net rates run at about a quarter to a third of the SOI
+rates (CA 2021: 0.39 vs 1.05 pp; NY 0.55 vs 1.78; FL −0.34 vs −1.54), so coefficients are smaller by construction.
+
+| net out-migration rate, pp per SD | 2018-19 | 2020-21 | vs trend 2020-21 |
+|---|---|---|---|
+| all 50 states | +0.01 (0.02) | +0.06 (0.03) | −0.03 |
+| big four (hetero SE) | −0.01 (0.03) | **+0.09 (0.04)** | −0.01 |
+| other 46 states | +0.01 (0.02) | +0.03 (0.03) | −0.05 |
+| CA/NY vs FL/TX dummy, big four | +0.02 (0.09) | **+0.28 (0.07)** | 0.00 |
+
+- The shape is the SOI shape: nothing in 2018-19 in any sample, a rise in the big four in the 2020-21 files (2021 carries it:
+  +0.16 pp per SD, 2020 +0.04), the other 46 flat and below their own pre-trend. The big four's extra outflow again goes
+  to both the other three big states (+0.05) and the 46 (+0.04); the 46's flows to the big four do not move (+0.01).
+- Scaled by the rate gap between the sources (×3 to ×4), the Data Axle big-four estimate (+0.09) matches the SOI +0.42 for
+  2020-22 (SOI 2020-21 alone: +0.20). Data Axle's pre-trend is also a quarter of the SOI one (+0.02 vs +0.06 per year).
+- Data Axle 2021 (June 2021 file) covers moves to mid-2021, SOI 2021 (file 2021) addresses to spring 2021: both are the
+  pandemic year, and in both sources that is where the CA/NY → everywhere acceleration sits.
+- Script `code/designs/exposure_did/18_state_did_big_four_dataaxle.R`; input `output/validation/dataaxle/soi_vs_dataaxle/da_state_pairs_1pct.{sql,csv}`
+  (Bouchet, `q.sh`, < 1 s); outputs `c18_state_did_big_four_dataaxle{,_series}.csv`, `.txt`, `figures/c18_state_did_big_four_dataaxle.png`.
+
+![Data Axle version](c18_state_did_big_four_dataaxle.png)
+
 ## How
 - **Outline:** `SOI state{out,in}flow 1112-2122 -> state-year out, in, non-migrants (base = non-migrants + out) +
   dyads (build/soi/10) -> net to big four / other 46 -> feols(y ~ i(y, E, ref = 2017) | s + y, weights 2016 base,

@@ -23,6 +23,7 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
 | `16_diop_green_table7.R` | Diop & Green (2026) Table 7 / Table 6 without their controls: state-to-state dyads in levels (thousands of returns) on ΔSALT × year, year + origin FE, White and clustered SEs, files 1112–2122; ΔSALT time-varying (theirs) and fixed at 2017 (`build/soi/10-11`) |
 | `17_state_did_big_four.R` | state-level exposure × year event studies (net, out, in rates; net to the big four / to the other 46 from the dyads) for all 50 states, CA NY FL TX only, the other 46, and all 50 with big-four × year FE; exposure per return, per owner, SALT/AGI 2017, CA/NY dummy |
+| `18_state_did_big_four_dataaxle.R` | the same on Data Axle same-family_id moves (1% family sample, `output/validation/dataaxle/soi_vs_dataaxle/da_state_pairs_1pct.csv`), pp of linked families, 2012-2021 |
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
 `notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`, `notebook/2026-10-29-state-did-big-four`,
