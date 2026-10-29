@@ -1,0 +1,129 @@
+model,coef,outcome,post_min_pre,se,t
+"pooled, saturated (pair x side x year FE)",main,log median sale price,-0.000470537489862514,0.00932172277460004,-0.050477524513456
+"pooled, saturated (pair x side x year FE)",interaction,log median sale price,0.00212221777371175,0.00966092304118912,0.219670290785231
+"pooled, common pair x year FE + H x year",main,log median sale price,0.000667992664309054,0.00921495959136458,0.072490026427792
+"pooled, common pair x year FE + H x year",interaction,log median sale price,0.0131169571318903,0.00961467696132729,1.36426394611593
+"pooled, common E and density slopes",main,log median sale price,0.000380395100691155,0.00923355188566581,0.0411970502144123
+"pooled, common E and density slopes",interaction,log median sale price,0.008045232619205,0.00640270559711557,1.25653639655545
+"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,-0.00158662895294388,0.00586016527622666,-0.270748157800338
+"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,-0.000796358174311334,0.0055195310504518,-0.144280042458706
+"pooled, common pair x year FE + H x year",main,log tax bill per parcel,-0.00202907726382269,0.00568343402820788,-0.357016067003157
+"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,0.000180522950947995,0.00557061731698808,0.0324062739685017
+"pooled, common E and density slopes",main,log tax bill per parcel,-0.00191706796691448,0.00569668728411837,-0.336523293504108
+"pooled, common E and density slopes",interaction,log tax bill per parcel,0.00276821078383109,0.00442757385982941,0.62522069003672
+"pooled, saturated (pair x side x year FE)",main,effective tax rate,0.00130388097689494,0.0140666967490346,0.0926927622140164
+"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,-0.00962290572690657,0.013111564468524,-0.733925059058175
+"pooled, common pair x year FE + H x year",main,effective tax rate,-0.00213371642333391,0.0131539256802701,-0.162211378959995
+"pooled, common pair x year FE + H x year",interaction,effective tax rate,-0.0167542066578683,0.012812977557708,-1.30759665990278
+"pooled, common E and density slopes",main,effective tax rate,-0.00220273458567621,0.0131886989212826,-0.167016822419204
+"pooled, common E and density slopes",interaction,effective tax rate,-0.00654705580941467,0.00922279513813826,-0.709877614253967
+"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,0.00886348051998551,0.022380706909311,0.396032196654971
+"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,-0.00596509594710504,0.0278923684798435,-0.213861219832075
+"pooled, common pair x year FE + H x year",main,sales per 100 parcels,-0.000787903418737619,0.0234229779579556,-0.0336380549113742
+"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,-0.00698088984030666,0.0278962538621063,-0.250244705787875
+"pooled, common E and density slopes",main,sales per 100 parcels,-0.000829548721274439,0.0233271518287715,-0.0355615090673556
+"pooled, common E and density slopes",interaction,sales per 100 parcels,0.00149847343566864,0.0236294341234159,0.0634155446906665
+"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),-0.0087587320967919,0.00446947165536484,-1.95967952638843
+"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),-0.00460571649761448,0.00615617485056532,-0.748145822594941
+"pooled, common pair x year FE + H x year",main,log median home value (ACS),-0.00891751937339257,0.00468628970763232,-1.90289545242349
+"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),0.00225296236788218,0.00612786399602138,0.367658676717524
+"pooled, common E and density slopes",main,log median home value (ACS),-0.00875592374340112,0.00470041580465546,-1.8627976986055
+"pooled, common E and density slopes",interaction,log median home value (ACS),0.00724005631178195,0.00399568050534138,1.8119707774692
+"pooled, saturated (pair x side x year FE)",main,log population (ACS),-0.0113537281729289,0.00493962380640062,-2.29850057776
+"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),-0.00310621289028843,0.00739600073832835,-0.419985475960147
+"pooled, common pair x year FE + H x year",main,log population (ACS),-0.0165811906029954,0.0070553301396566,-2.35016509146692
+"pooled, common pair x year FE + H x year",interaction,log population (ACS),-0.00494085665698255,0.00871049197837864,-0.567230492749072
+"pooled, common E and density slopes",main,log population (ACS),-0.0156415072126019,0.00669975248272326,-2.33463956361625
+"pooled, common E and density slopes",interaction,log population (ACS),0.00869293781128789,0.00580775136334155,1.49678201896824
+"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),-0.00336013638765874,0.0143015328102072,-0.234949388450206
+"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),0.00546233897066883,0.0151519875830158,0.360503131403808
+"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),0.000467702881306707,0.0147311099018525,0.0317493307987534
+"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),-0.000806461002684139,0.016955767045845,-0.0475626375677154
+"pooled, common E and density slopes",main,move-out rate (Data Axle),0.000343504879378627,0.0147549323867696,0.0232806813595865
+"pooled, common E and density slopes",interaction,move-out rate (Data Axle),-0.00688988012931367,0.0116396161100168,-0.591933622568909
+"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,-0.00630671780648655,0.00821892544573854,-0.767340919214268
+"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,-0.0175197711899719,0.0119747992423787,-1.46305343708558
+"pooled, common pair x year FE + H x year",main,log district property tax per pupil,-0.00479816517304398,0.00841764916090127,-0.570012491769168
+"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,-0.0128585151734181,0.0117718826329632,-1.0923074561933
+"pooled, common E and density slopes",main,log district property tax per pupil,-0.00352441433682356,0.00832955170411032,-0.42312173115924
+"pooled, common E and density slopes",interaction,log district property tax per pupil,-0.00753209449580957,0.00669005955523761,-1.1258635941309
+"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,0.00127481662008816,0.00977325929444069,0.130439250784363
+"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,-0.0226125239518165,0.0128787059526864,-1.75580714668772
+"pooled, common pair x year FE + H x year",main,log district spending per pupil,-0.00470373184137052,0.0109289670616076,-0.430391254256249
+"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,-0.0298320661412204,0.0133826215493844,-2.22916459463002
+"pooled, common E and density slopes",main,log district spending per pupil,-0.00362347031541512,0.0108907802316972,-0.33270989206716
+"pooled, common E and density slopes",interaction,log district spending per pupil,-0.0113021732445566,0.00949723505106562,-1.19004880723559
+"pooled, saturated (pair x side x year FE)",main,log district enrolment,-0.00681344038445328,0.00332561008492318,-2.0487790842776
+"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,-0.0026193843424667,0.00430374736995328,-0.608628740793196
+"pooled, common pair x year FE + H x year",main,log district enrolment,-0.00738284482463588,0.00361518183592641,-2.04217800368097
+"pooled, common pair x year FE + H x year",interaction,log district enrolment,-0.000784519435509146,0.00450895839493284,-0.173991278427139
+"pooled, common E and density slopes",main,log district enrolment,-0.00727710317596386,0.00360364046522641,-2.01937547493564
+"pooled, common E and density slopes",interaction,log district enrolment,0.00457812468763637,0.00323760392485336,1.41404717621342
+"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),7.37089834774146e-05,0.0215169102392944,0.0034256304765731
+"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),0.0137691328571349,0.0390545223524863,0.352561804055921
+"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),0.00437896122818235,0.0189333633621705,0.23128279663885
+"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),0.0114184295803535,0.0331288957027293,0.344666773164214
+"pooled, common E and density slopes",main,log county school property tax (CoG),0.00115325162934149,0.0107066977617583,0.10771310211638
+"pooled, common E and density slopes",interaction,log county school property tax (CoG),0.00194774520055447,0.0130720361170452,0.149000904152546
+"pooled, saturated (pair x side x year FE)",main,total revenue,0.00177049581142784,0.0152088596175777,0.116412134502286
+"pooled, saturated (pair x side x year FE)",interaction,total revenue,-0.015381649857208,0.0244784285017804,-0.628375708681186
+"pooled, common pair x year FE + H x year",main,total revenue,0.0111987079775989,0.0141776096019315,0.789886891516127
+"pooled, common pair x year FE + H x year",interaction,total revenue,-0.020121682982818,0.0266495981490508,-0.755046393956028
+"pooled, common E and density slopes",main,total revenue,0.0106120773426436,0.0138267299916561,0.767504489423572
+"pooled, common E and density slopes",interaction,total revenue,-0.0348692588387015,0.015697272044082,-2.22135787293357
+"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),0.0117216246241884,0.0116954332744065,1.00223945100343
+"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),0.00333081082167753,0.0221585482353832,0.150317195255546
+"pooled, common pair x year FE + H x year",main,state formula aid (C01),0.00768350043176385,0.0128893003882916,0.596114622229099
+"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),0.00475801824055272,0.0247762902346693,0.192039171138497
+"pooled, common E and density slopes",main,state formula aid (C01),0.00581143135890776,0.0128805722422358,0.451178041597555
+"pooled, common E and density slopes",interaction,state formula aid (C01),-0.0254554172065172,0.017459878003797,-1.45793786193589
+"pooled, saturated (pair x side x year FE)",main,instruction,0.00113924134619489,0.00975845587129935,0.116744017826173
+"pooled, saturated (pair x side x year FE)",interaction,instruction,-0.0271101091605218,0.0129050753230506,-2.10073234614126
+"pooled, common pair x year FE + H x year",main,instruction,-0.00559640778274183,0.0111243432601961,-0.503077588657864
+"pooled, common pair x year FE + H x year",interaction,instruction,-0.0346573592982889,0.0136579370091903,-2.53752519688503
+"pooled, common E and density slopes",main,instruction,-0.00439071751425097,0.0110726657032468,-0.396536627396191
+"pooled, common E and density slopes",interaction,instruction,-0.00822348047900712,0.00935102753653939,-0.879419983191542
+"pooled, saturated (pair x side x year FE)",main,capital outlay,0.0397876816293243,0.0420504914395287,0.946188267182122
+"pooled, saturated (pair x side x year FE)",interaction,capital outlay,0.00542449592714164,0.0552998979523799,0.0980923315954905
+"pooled, common pair x year FE + H x year",main,capital outlay,0.0581774652431434,0.0413214436475036,1.40792431502229
+"pooled, common pair x year FE + H x year",interaction,capital outlay,0.0106006794746386,0.0550666527482912,0.192506334515994
+"pooled, common E and density slopes",main,capital outlay,0.0575921734480198,0.0411422846313795,1.39982925022335
+"pooled, common E and density slopes",interaction,capital outlay,-0.0114450590226285,0.0346776275555032,-0.330041580967732
+"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",-0.00888692160897065,0.0102644584809766,-0.865795465531967
+"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",0.0426037276753729,0.0144612449540479,2.94606223812338
+"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",-0.00880454434430622,0.0107028530636236,-0.822635262949716
+"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",0.0340098235714026,0.0146066554050992,2.32837858004988
+"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",-0.0114877644785823,0.0106338078200719,-1.080305820169
+"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",0.00187910118149763,0.00973875256170383,0.192950911278608
+split: high minus low by hand,interaction,capital outlay,0.00542449592714072,0.0558189899574482,0.0971801161446294
+split: high minus low by hand,interaction,"district test scores (SEDA, SD)",0.0426037276753718,0.0145420470059765,2.92969261190413
+split: high minus low by hand,interaction,effective tax rate,-0.00962290572690653,0.0131109311399176,-0.733960511592389
+split: high minus low by hand,interaction,instruction,-0.0271101091605236,0.0128017935598756,-2.11768054481791
+split: high minus low by hand,interaction,log county school property tax (CoG),0.013769132857133,0.0391582401118878,0.351627979648475
+split: high minus low by hand,interaction,log district enrolment,-0.00261938434246598,0.00428589798516465,-0.611163483482995
+split: high minus low by hand,interaction,log district property tax per pupil,-0.0175197711899687,0.0120200783993508,-1.45754217301236
+split: high minus low by hand,interaction,log district spending per pupil,-0.0226125239518182,0.0128281678647499,-1.76272435707319
+split: high minus low by hand,interaction,log median home value (ACS),-0.00460571649761471,0.00615526564823676,-0.74825633219162
+split: high minus low by hand,interaction,log median sale price,0.00212221777371307,0.00966341424846473,0.219613660259906
+split: high minus low by hand,interaction,log population (ACS),-0.00310621289029247,0.00742334621339807,-0.418438370109453
+split: high minus low by hand,interaction,log tax bill per parcel,-0.000796358174311711,0.00551220964902694,-0.144471677424731
+split: high minus low by hand,interaction,move-out rate (Data Axle),0.00546233897066953,0.0151637423447904,0.360223673448668
+split: high minus low by hand,interaction,sales per 100 parcels,-0.00596509594709754,0.0283468896738858,-0.210432114977073
+split: high minus low by hand,interaction,state formula aid (C01),0.00333081082167947,0.0211144755722741,0.157750108937265
+split: high minus low by hand,interaction,total revenue,-0.015381649857211,0.0245708537065145,-0.626012023877414
+split: high minus low by hand,main,capital outlay,0.0397876816293243,0.0421057837189662,0.944945756024541
+split: high minus low by hand,main,"district test scores (SEDA, SD)",-0.00888692160897083,0.0102861097389963,-0.863973050499264
+split: high minus low by hand,main,effective tax rate,0.00130388097689492,0.0140902705047786,0.0925376823995475
+split: high minus low by hand,main,instruction,0.00113924134619462,0.00978267574882999,0.116454983835162
+split: high minus low by hand,main,log county school property tax (CoG),7.3708983476516e-05,0.0215838323113699,0.00341500908704187
+split: high minus low by hand,main,log district enrolment,-0.00681344038445317,0.00333118790670271,-2.04534855891611
+split: high minus low by hand,main,log district property tax per pupil,-0.00630671780648596,0.00824228125895796,-0.765166536828821
+split: high minus low by hand,main,log district spending per pupil,0.00127481662008789,0.00981093918733197,0.129938285799789
+split: high minus low by hand,main,log median home value (ACS),-0.00875873209679186,0.0044804559945998,-1.95487515274083
+split: high minus low by hand,main,log median sale price,-0.000470537489862772,0.00933228241580841,-0.0504204083093012
+split: high minus low by hand,main,log population (ACS),-0.0113537281729293,0.00497084609920743,-2.28406350676187
+split: high minus low by hand,main,log tax bill per parcel,-0.00158662895294392,0.00588822176743261,-0.269458083545607
+split: high minus low by hand,main,move-out rate (Data Axle),-0.00336013638765834,0.0143799592515585,-0.233668004816784
+split: high minus low by hand,main,sales per 100 parcels,0.0088634805199853,0.0227393050331326,0.389786781393303
+split: high minus low by hand,main,state formula aid (C01),0.0117216246241891,0.0114100622762001,1.02730592878873
+split: high minus low by hand,main,total revenue,0.00177049581142764,0.01524152271909,0.116162659339155

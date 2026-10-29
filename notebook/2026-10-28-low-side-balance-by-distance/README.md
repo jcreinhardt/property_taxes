@@ -895,6 +895,20 @@ borders than exposed inland tracts. The effective-rate interaction is therefore 
 direction, and nothing else in the core set depends on it. Outputs `c46_fe_variants_{series,post_pre}.csv`,
 `c46_fe_variants.txt`, `figures/c46_fe_variants_{rf_main,int_main,int_interaction}.png`.
 
+### The side difference in one regression (35, 2026-10-29)
+`35_density1000_pooled_side_interaction.R` pools both sides and interacts every term of 31 with H = 1(high-tax side).
+Saturated (pair × side × year FE): the H × Z × E × year coefficients equal the split-sample difference to 6e-14 and their
+SEs are the same to within the small-sample correction (ratio median 0.998, range 0.94-1.12), because counties never cross a
+state line and the covariance across sides is zero. With common pair × year FE + H × year (side-year shocks assumed common
+across borders) the differences move a little and gain some precision: instruction −0.035 (t −2.5) vs −0.027, district
+spending −0.030 (t −2.2) vs −0.023, effective rate −0.017 (t −1.3) vs −0.010, SEDA scores +0.034 (t 2.3). Imposing common
+E × year and density × year slopes as well shrinks all of them towards zero (instruction −0.008, spending −0.011, rate −0.007)
+and only total revenue −0.035 (t −2.2) remains. The main term (H × Z × year) is the same under every model: population
+−0.011 to −0.017 (t −2.3), home value −0.009, enrolment −0.007, nothing else. All in SD units of the pooled 2016 SD, high
+minus low; the figure plots low minus high to match the earlier difference figure. Outputs
+`c47_pooled_side_interaction_{series,post_pre}.csv`, `c47_pooled_side_interaction.txt`,
+`figures/c47_pooled_side_interaction{,_main}.png`.
+
 ## Open
 - The near × own-exposure interaction (16) is the one sign-consistent post-2017 pattern: lower effective rate, more sales,
   slightly higher prices, fewer people near the border in high-exposure tracts. Worth a cleaner test: detrend the
