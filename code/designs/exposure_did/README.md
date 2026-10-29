@@ -20,7 +20,7 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `12_revenue_outside_option.R` | county revenue × share of tracts with a cheaper cross-border option |
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
 | `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
-| `17_rents_altos.R` | **asking rents** (Altos listings, `build/altos`): log rent at a fixed type x bedroom mix on the lost subsidy per owner (total, and the three components), ZIP and county, with / without the 2012 rent level x year |
+| `17_rents_altos.R` (`ALTOS_INDEX=repeat` → `_repeat` outputs on the repeat-listing index of `build/altos/03`, ZIP specs 1, 2, 6) | **asking rents** (Altos listings, `build/altos`): log rent at a fixed type x bedroom mix on the lost subsidy per owner (total, and the three components), ZIP and county, with / without the 2012 rent level x year |
 | `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
 
 `16_diop_green_table7.R` (Diop & Green Table 7 / Table 6 on state-to-state dyads without their controls) was removed on

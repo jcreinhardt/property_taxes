@@ -8,8 +8,11 @@
 # the line, where a differently exposed market is within reach. Also the plain exposure event study (tract + pair x side x
 # year FE) separately for near (< 10 mi) and far (10-50 mi) tracts and by distance bin. Ref 2017; weighted by 2016 returns
 # (ZIP returns split across its tracts by parcel count); SE by county.
+# ALTOS_INDEX=repeat: the repeat-listing (same-unit) tract index of build/altos/03 (lr_rep, tract-years with >= MIN linked
+# pairs) as the outcome instead; outputs with the suffix _repeat.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2)})
 source("code/R/paths.R"); OUT <- out_dir("designs/border_iv"); invisible(out_dir("designs/border_iv/figures")); L <- file.path(DATA, "built")
+REP <- identical(Sys.getenv("ALTOS_INDEX"), "repeat"); P <- paste0("d17_rent_exposure_near_far", if (REP) "_repeat" else ""); IDX <- if (REP) "repeat-listing rent index" else "rent index"
 MIN <- 5; YRS <- 2013:2024; MX <- 50
 wins <- \(x) { q <- quantile(x, c(.01, .99), na.rm = TRUE); pmin(pmax(x, q[1]), q[2]) / 100 }
 pad <- \(x, w) { x <- as.character(x); paste0(strrep("0", pmax(0, w - nchar(x))), x) }
@@ -21,7 +24,8 @@ tz[, sh := np / sum(np), by = zip]
 s <- merge(s, tz, by = "tract", all.x = TRUE); s <- merge(s, ez, by = "zip", all.x = TRUE); s <- merge(s, ec, by = "cty", all.x = TRUE)
 s[, nt_c := .N, by = cty][, `:=`(E = fcoalesce(ez, ecty), w = fcoalesce(ret_z * sh, ret_c / nt_c), src = fifelse(!is.na(ez), "zip", "county"))]
 s <- s[!is.na(E)][, E_near := E * near]
-tr <- readRDS(file.path(L, "altos/tract_year.rds"))[n >= MIN & y %in% YRS, .(tract, y, lr = lr_adj, n)]
+tr <- if (REP) readRDS(file.path(L, "altos/tract_year_repeat.rds"))[n_rep >= MIN & !is.na(lr_rep) & y %in% YRS, .(tract, y, lr = lr_rep, n = n_rep)] else
+  readRDS(file.path(L, "altos/tract_year.rds"))[n >= MIN & y %in% YRS, .(tract, y, lr = lr_adj, n)]
 d <- merge(tr, s, by = "tract"); d[, nY := uniqueN(y), by = tract]; d <- d[nY >= 6]   # tracts seen in at least 6 of the 12 years
 d[, dbin := factor(as.character(dbin), c("[0,5)", "[5,10)", "[10,20)", "[20,30)", "[30,50)"))]
 ct <- function(m, pat) { x <- as.data.table(coeftable(m), keep.rownames = "term")[grepl(pat, term)]
@@ -36,8 +40,8 @@ es <- function(x, lab) { m <- feols(lr ~ i(y, E, ref = 2017) | tract + pair^high
   rbind(ct(m, ":E$"), z0())[, `:=`(term = lab, spec = "by distance", n = nobs(m), tracts = uniqueN(x$tract))] }
 res2 <- rbind(es(d[near == 1], "near: < 10 mi"), es(d[near == 0], "far: 10-50 mi"), es(d, "all within 50 mi"),
               rbindlist(lapply(levels(d$dbin), \(b) es(d[dbin == b], paste("bin", b)))))
-fwrite(rbind(res, res2, fill = TRUE), file.path(OUT, "d17_rent_exposure_near_far.csv"))
-sink(file.path(OUT, "d17_rent_exposure_near_far.txt"), split = TRUE)
+fwrite(rbind(res, res2, fill = TRUE), file.path(OUT, paste0(P, ".csv")))
+sink(file.path(OUT, paste0(P, ".txt")), split = TRUE)
 cat(sprintf("Tracts: %d (%d near) in %d pairs; tract-years %d; exposure from ZIP for %.0f%% of tracts; weighted by 2016 returns; SE by county\n",
             uniqueN(d$tract), uniqueN(d[near == 1, tract]), uniqueN(d$pair), nrow(d), 100 * mean(unique(d[, .(tract, src)])$src == "zip")))
 cat("\n== DDD: log rent on exposure x year and near x exposure x year; tract + pair x side x year + pair x distance-bin x year FE (% per $100/yr)\n")
@@ -51,6 +55,6 @@ g <- ggplot(pd, aes(y, 100 * b, colour = term)) + geom_hline(yintercept = 0, col
   facet_wrap(~ spec, ncol = 1, scales = "free_y") + scale_x_continuous(breaks = seq(2013, 2024, 2)) +
   labs(x = NULL, y = "% change in asking rent per $100/yr lost subsidy per owner (vs 2017)", colour = NULL,
        title = "Asking rents and SALT-cap exposure near and away from state borders",
-       subtitle = "Tract rent index (Altos); tracts within 50 mi of a ranked border pair; weighted by 2016 returns; 95% CI, SE by county") +
+       subtitle = sprintf("Tract %s (Altos); tracts within 50 mi of a ranked border pair; weighted by 2016 returns; 95%% CI, SE by county", IDX)) +
   theme_minimal(base_size = 9) + theme(legend.position = "bottom", legend.direction = "vertical")
-ggsave(file.path(OUT, "figures/d17_rent_exposure_near_far.png"), g, width = 8, height = 9, dpi = 150)
+ggsave(file.path(OUT, "figures", paste0(P, ".png")), g, width = 8, height = 9, dpi = 150)

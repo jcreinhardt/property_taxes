@@ -1,4 +1,4 @@
-Tracts with rents (>= 5 listings) within 100 mi of a ranked pair: 39727 in 59 pairs; exposure from ZIP for 87% of tracts
+Tracts with rents (>= 5 listings / linked pairs) within 100 mi of a ranked pair: 39727 in 59 pairs; exposure from ZIP for 87% of tracts
 Exposure gap between sides (dE, $100/yr per owner, 20-mi means): median 1.86, IQR 0.87-2.69, max 5.57; high-exposure side = high-tax side in 54% of pairs
 RD of exposure at the line (pair-demeaned, h = 15): -1.094 [-9.780, 3.864] $100/yr
 Exposure profile across the line (pair-demeaned, return-weighted mean E by signed distance bin; positive = high-exposure side):
