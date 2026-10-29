@@ -1116,15 +1116,16 @@ lost 35%.
 - `wealth_finder_score` bins are not usable here (85% ≥ $1m: the field is mis-scaled in the sample); ignore the wealth rows.
 
 ### 4.5d Data Axle vs SOI interstate moves between CA, TX, NY and FL (2026-10-29)
-Same-`family_id` moves between the four states (`output/validation/dataaxle/soi_vs_dataaxle/`, 1% family sample x100; full job queued)
-against the SOI state-to-state files (returns that changed state between consecutive filings; Data Axle pair t->t+1 matched to the SOI
-file labelled t+1). Pooled over the 12 directed pairs, strict (state change + LOR reset) capture = DA families / SOI returns:
-2012 13%, 2013 15%, 2014 19%, 2015 29%, 2016 25%, 2017 15%, 2018 29%, 2019 21%, 2020 20%, 2021 25%; annualised by the file
-cut-offs 15, 19, 27, 22, 16, 25, 23, 20, 25% (2013-21). Loose (no LOR condition) is 5 pp higher, primary families 5-8 pp lower;
-DA persons / SOI exemptions tracks the family share (11-27%). The 2017 trough combines the 1617 SOI over-count with the 11-month
-2016->17 interval; the 2015 and 2018 peaks are the 13-14-month intervals. Relative move rates (DA strict moves per same-state family
-over SOI movers per in-state return) are 16-27%, so coverage of the stock is not the problem: **Data Axle records about one in four
-to one in five interstate moves among these states, with no change after 2018.** Notebook `2026-10-29-dataaxle-vs-soi-interstate-moves`.
+Same-`family_id` moves between the four states (`output/validation/dataaxle/soi_vs_dataaxle/`, full table, 2022 from the quarterly
+replacement; the 1% family sample gave the same within 1-3 pp) against the SOI state-to-state files (returns that changed state between
+consecutive filings; Data Axle pair t->t+1 matched to the SOI file labelled t+1). Pooled over the 12 directed pairs, strict (state change +
+LOR reset) capture = DA families / SOI returns: 2012 14%, 2013 16%, 2014 20%, 2015 27%, 2016 25%, 2017 15%, 2018 28%, 2019 21%, 2020 21%,
+2021 25%, 2022 26%; annualised by the file cut-offs 16, 20, 25, 22, 17, 24, 23, 21, 25, 24% (2013-22). Loose (no LOR condition) is 5 pp
+higher, primary families 5-8 pp lower; DA persons / SOI exemptions tracks the family share (12-26%). The 2017 trough combines the 1617 SOI
+over-count with the 11-month 2016->17 interval; the 2015 and 2018 peaks are the 13-14-month intervals. Relative move rates (DA strict moves
+per same-state family over SOI movers per in-state return) are 16-25%, so coverage of the stock is not the problem: **Data Axle records
+about one in four to one in five interstate moves among these states, with no change after 2018.** By pair, moves into NY are caught least
+(15-18%), CA>TX / FL>CA / CA>FL most (24-26%). Notebook `2026-10-29-dataaxle-vs-soi-interstate-moves`.
 
 ### 4.5b [full] Household counts under building × unit de-duplication, 2006–2013
 

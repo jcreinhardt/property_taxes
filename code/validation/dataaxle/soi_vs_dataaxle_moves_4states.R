@@ -56,7 +56,7 @@ cat("\nBy origin state (strict, annualised capture):\n"); print(dcast(pooled[grp
 cat("\nBy directed pair (strict, annualised capture):\n"); print(dcast(p, y ~ pair, value.var = "cap_strict_ann", fun.aggregate = function(v) round(v, 3)))
 cat("\nBy directed pair (strict, raw capture):\n"); print(dcast(p, y ~ pair, value.var = "cap_strict", fun.aggregate = function(v) round(v, 3)))
 cat("\nMean over 2013-2022 by pair: SOI returns, DA strict, capture raw / annualised, persons per DA strict family vs exemptions per SOI return\n")
-print(p[y >= 2013 & is.finite(fam_strict), .(soi = round(mean(soi_n1)), da_strict = round(mean(fam_strict)), cap = round(sum(fam_strict) / sum(soi_n1), 3), cap_ann = round(sum(fam_strict * ann) / sum(soi_n1), 3), da_pp = round(sum(persons_strict) / sum(fam_strict), 2), soi_pp = round(sum(soi_n2) / sum(soi_n1), 2)), by = pair][order(pair)])
+print(p[y >= 2013 & is.finite(fam_strict) & is.finite(soi_n1), .(soi = round(mean(soi_n1)), da_strict = round(mean(fam_strict)), cap = round(sum(fam_strict) / sum(soi_n1), 3), cap_ann = round(sum(fam_strict * ann) / sum(soi_n1), 3), da_pp = round(sum(persons_strict) / sum(fam_strict), 2), soi_pp = round(sum(soi_n2) / sum(soi_n1), 2)), by = pair][order(pair)])
 sink()
 # ---- figures
 pl <- melt(pooled[grp == "all 12 pairs"], id.vars = "y", measure.vars = c("cap_loose", "cap_strict", "cap_prim_strict", "cap_persons", "cap_strict_ann", "rel_rate_ann"))
