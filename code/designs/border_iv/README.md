@@ -15,5 +15,6 @@ set, not the rate. First stage +0.33; no reduced-form effect of the cap on price
 | `09_moveout_1pct_ddd.R`, `10_moveout_full.R`, `11_family_move_direction.R` | Data Axle move-outs and direction of cross-border moves |
 | `12_figure.R` | summary figure of the directional IV |
 | `13_signed_distance_validity.R`, `14_predicted_balance.R` (+ `_np`), `15_pair_gap_vs_school_finance.R`, `16_covariate_coverage.R` | validity checks: one-sided selection, predicted-endogenous balance, pair gaps vs school-finance regimes, covariate coverage |
+| `17_rent_exposure_near_far.R` | border-region design for asking rents (Altos tract index): exposure x year gradient within side x distance bin and the extra gradient within 10 mi of the line (DDD); exposure event studies for near / far tracts and by distance bin |
 
 Open: rerun with the own-state assignment (`data/built/geo/iv_tract_side_ownstate.rds`).
