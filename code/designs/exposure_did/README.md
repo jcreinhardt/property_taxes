@@ -24,8 +24,9 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `16_diop_green_table7.R` | Diop & Green (2026) Table 7 / Table 6 without their controls: state-to-state dyads in levels (thousands of returns) on ΔSALT × year, year + origin FE, White and clustered SEs, files 1112–2122; ΔSALT time-varying (theirs) and fixed at 2017 (`build/soi/10-11`) |
 | `17_state_did_big_four.R` | state-level exposure × year event studies (net, out, in rates; net to the big four / to the other 46 from the dyads) for all 50 states, CA NY FL TX only, the other 46, and all 50 with big-four × year FE; exposure per return, per owner, SALT/AGI 2017, CA/NY dummy |
 | `18_state_did_big_four_dataaxle.R` | the same on Data Axle same-family_id moves (1% family sample, `output/validation/dataaxle/soi_vs_dataaxle/da_state_pairs_1pct.csv`), pp of linked families, 2012-2021 |
+| `19_net_rate_change_dyads.R` | treatment = 2016→18 change in the net-of-federal-deduction state income tax rate (STC collections / AGI minus m × deducted income taxes / AGI; also TAXSIM cap burden): state-to-state dyads with dyad + year FE and the state event studies, all / big four / mixed / other 46 |
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
-`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`, `notebook/2026-10-29-state-did-big-four`,
+`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`, `notebook/2026-10-29-state-did-big-four`, `notebook/2026-10-29-net-rate-change-treatment`,
 `notebook/2026-10-27-simulated-instrument-outcomes`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.
