@@ -55,3 +55,13 @@ for (tm in c("main", "interaction")) { sfx <- ifelse(tm == "main", "", "_interac
   plot_es(S[grepl("^core", src)], paste("Core outcomes:", tl, "by side and the high-minus-low contrast"), paste0("c45_side_contrast", sfx, "_core.png"), 7.5, unit = unit)
   plot_es(S[grepl("^composition", src)], paste("Household composition and age:", tl, "by side and the high-minus-low contrast"), paste0("c45_side_contrast", sfx, "_composition.png"), 8.5, unit = unit)
   plot_es(S[grepl("^(F-33|SEDA|CoG)", src)][, outcome := paste0(outcome, "\n", sub(" \\(31.*", "", src))], paste("District and local-government outcomes (31):", tl, "by side and the high-minus-low contrast"), paste0("c45_side_contrast", sfx, "_district.png"), 26, ncol = 6, unit = unit) }
+# ---- the c43 key outcomes, difference only: low-tax side minus high-tax side, both terms (c45_side_contrast_low_minus_high.png)
+key <- c("effective tax rate", "sales per 100 parcels", "log median sale price", "log population (ACS)", "log district property tax per pupil", "log district spending per pupil", "log district enrolment", "total revenue", "state formula aid (C01)", "instruction", "capital outlay", "district test scores (SEDA, SD)")
+kd <- ser[series == "high minus low" & outcome %in% key][, `:=`(b = -b, outcome = factor(outcome, key), term = factor(term, c("interaction", "main"), c("Z x exposure x year (per 10 mi per SD of E)", "Z x year at mean exposure (per 10 mi)")))]
+g <- ggplot(kd, aes(y, b, colour = term)) + geom_hline(yintercept = 0, colour = "grey50") + geom_vline(xintercept = REF + .5, linetype = 3, colour = "grey50") +
+  geom_pointrange(aes(ymin = b - 1.96 * se, ymax = b + 1.96 * se), position = position_dodge(width = .5), size = .25, linewidth = .35) + geom_line(position = position_dodge(width = .5), linewidth = .35) +
+  facet_wrap(~outcome, scales = "free_y", ncol = 4) + scale_colour_manual(NULL, values = c("#c0392b", "grey40")) +
+  labs(x = NULL, y = "low-tax side minus high-tax side, SD units of the outcome; 2017 = 0; 95% CI", title = "Difference between the sides: low-tax side minus high-tax side, key outcomes of c43",
+       subtitle = "density-selected sample; each side estimated separately (unit FE + pair x year FE, Z x year + Z x E x year + E x year + log density x year); SE of the difference = sqrt(se_low^2 + se_high^2)") +
+  theme_minimal(base_size = 8) + theme(legend.position = "bottom")
+ggsave(file.path(OUT, "figures/c45_side_contrast_low_minus_high.png"), g, width = 11, height = 7.5, dpi = 150)
