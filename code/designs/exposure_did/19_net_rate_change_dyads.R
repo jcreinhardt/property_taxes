@@ -8,9 +8,9 @@
 #   the bracket cut), D_net(s) = r_net(s,2018) - r_net(s,2016) (adds the state's own rate change), D_z1 = TAXSIM cap burden of 2016 owner
 #   households / income (build/exposure/06, z1_cap_inc, pp). For a state pair, D_ij = D_i - D_j.
 # Regressions: dyads (build/soi/10; y = second file year, 2012-2022): net_ijt (thousands of returns, Diop & Green's outcome) and
-#   net per 1,000 origin returns ~ i(y, D_ij, ref 2017) | dyad + year, SE by origin (two-way origin + destination in the csv); samples
-#   all 2,450 dyads, among CA NY FL TX, big four <-> other 46, among the other 46. States: net out-migration rate ~ i(y, D_s) | s + y
-#   as in 17 (2016-return weights, SE by state). Post-period summaries: mean 2018-19 and 2020-22 coefficients.
+#   net per 1,000 origin returns (weighted by 2016 origin returns) ~ i(y, D_ij, ref 2017) | dyad + year, SE by origin (two-way origin + destination in the csv); samples
+#   all 2,450 dyads, among CA NY FL TX, big four <-> other 46, among the other 46. States: net out-migration in thousands of returns
+#   (unweighted) and the rate (2016-return weights) ~ i(y, D_s) | s + y as in 17, SE by state. Post-period summaries: mean 2018-19 and 2020-22 coefficients.
 # Outputs: output/designs/exposure_did/c19_net_rate_change_{rates,treat,dyads,states}.csv, c19_net_rate_change.txt,
 #   figures/c19_net_rate_change_{rates,dyads}.png.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(ggplot2); library(patchwork)})
@@ -45,9 +45,9 @@ dy[, `:=`(dyad = paste(o, d), net_k = (n1 - n1_rev) / 1e3, net_r = 1e3 * (n1 - n
 dy[, grp := fcase(big_o & big_d, "among CA NY FL TX", big_o | big_d, "big four <-> other 46", default = "among the other 46")]
 stopifnot(dy[, .N] == 2450 * 11)
 smp <- list("all 2,450 dyads" = quote(TRUE), "among CA NY FL TX" = quote(grp == "among CA NY FL TX"), "big four <-> other 46" = quote(grp == "big four <-> other 46"), "among the other 46" = quote(grp == "among the other 46"))
-ys <- c(net_k = "net out-migration, thousands of returns per dyad", net_r = "net out-migration per 1,000 origin returns (2016)")
+ys <- c(net_k = "net out-migration, thousands of returns per dyad", net_r = "net out-migration per 1,000 origin returns (weighted by 2016 origin returns)")
 run_d <- \(k, x, sname) { d <- dy[eval(smp[[sname]])]
-  m <- feols(as.formula(sprintf("%s ~ i(y, %s, ref = 2017) | dyad + y", k, x)), d, cluster = ~o); m2 <- summary(m, vcov = ~o + d)
+  m <- feols(as.formula(sprintf("%s ~ i(y, %s, ref = 2017) | dyad + y", k, x)), d, weights = if (k == "net_r") ~ret_o else NULL, cluster = ~o); m2 <- summary(m, vcov = ~o + d)
   ct <- as.data.table(coeftable(m), keep.rownames = "t")[, .(outcome = k, treat = x, sample = sname, y = as.integer(sub("y::(\\d+):.*", "\\1", t)), b = Estimate, se = `Std. Error`, se_od = coeftable(m2)[, 2], dyads = uniqueN(d$dyad))]
   rbind(ct, ct[1, .(outcome, treat, sample, y = 2017L, b = 0, se = 0, se_od = 0, dyads)])[order(y)] }
 g <- CJ(k = names(ys), x = Ds, s = names(smp), sorted = FALSE); dser <- rbindlist(Map(run_d, g$k, g$x, g$s))
@@ -57,13 +57,14 @@ M <- file.path(DATA, "SOI/migration_state"); rd <- \(kind, yy) { x <- fread(file
 p <- rbindlist(lapply(12:22, \(yy) { o <- rd("outflow", yy); i <- rd("inflow", yy)
   o[, `:=`(s = as.integer(y1_statefips), d = as.integer(y2_statefips))]; i[, `:=`(s = as.integer(y2_statefips), d = as.integer(y1_statefips))]
   Reduce(\(a, b) merge(a, b, by = "s"), list(o[d == s & grepl("Non-migrants", y2_state_name), .(s, y, nonmig = as.numeric(n1))], o[d == 97 & grepl("Migration.US$", y2_state_name), .(s, out = as.numeric(n1))], i[d == 97 & grepl("Migration.US$", y1_state_name), .(s, inn = as.numeric(n1))])) }))[s <= 56 & s != 11]
-p[, base := nonmig + out][, r_net_out := 100 * (out - inn) / base]; p <- merge(p, p[y == 2016, .(s, w = base)], by = "s"); p <- merge(p, tr[, c("s", Ds), with = FALSE], by = "s"); p[, big4 := s %in% B4]
+p[, base := nonmig + out][, `:=`(r_net_out = 100 * (out - inn) / base, net_k = (out - inn) / 1e3)]; p <- merge(p, p[y == 2016, .(s, w = base)], by = "s"); p <- merge(p, tr[, c("s", Ds), with = FALSE], by = "s"); p[, big4 := s %in% B4]
 ssmp <- list("all 50 states" = quote(TRUE), "big four (CA NY FL TX)" = quote(big4 == TRUE), "other 46 states" = quote(big4 == FALSE))
-run_s <- \(x, sname) { d <- p[eval(ssmp[[sname]])]; few <- uniqueN(d$s) < 10
-  m <- feols(as.formula(sprintf("r_net_out ~ i(y, %s, ref = 2017) | s + y", x)), d, weights = ~w, vcov = if (few) "hetero" else ~s)
-  ct <- as.data.table(coeftable(m), keep.rownames = "t")[, .(treat = x, sample = sname, y = as.integer(sub("y::(\\d+):.*", "\\1", t)), b = Estimate, se = `Std. Error`)]
-  rbind(ct, ct[1, .(treat, sample, y = 2017L, b = 0, se = 0)])[order(y)] }
-g <- CJ(x = Ds, s = names(ssmp), sorted = FALSE); sser <- rbindlist(Map(run_s, g$x, g$s)); fwrite(sser, file.path(OUT, "c19_net_rate_change_states.csv"))
+sys <- c(net_k = "net out-migration, thousands of returns (unweighted)", r_net_out = "net out-migration rate, pp of returns (2016-return weights)")
+run_s <- \(k, x, sname) { d <- p[eval(ssmp[[sname]])]; few <- uniqueN(d$s) < 10
+  m <- feols(as.formula(sprintf("%s ~ i(y, %s, ref = 2017) | s + y", k, x)), d, weights = if (k == "r_net_out") ~w else NULL, vcov = if (few) "hetero" else ~s)
+  ct <- as.data.table(coeftable(m), keep.rownames = "t")[, .(outcome = k, treat = x, sample = sname, y = as.integer(sub("y::(\\d+):.*", "\\1", t)), b = Estimate, se = `Std. Error`)]
+  rbind(ct, ct[1, .(outcome, treat, sample, y = 2017L, b = 0, se = 0)])[order(y)] }
+g <- CJ(k = names(sys), x = Ds, s = names(ssmp), sorted = FALSE); sser <- rbindlist(Map(run_s, g$k, g$x, g$s)); fwrite(sser, file.path(OUT, "c19_net_rate_change_states.csv"))
 # ---- 4. text
 summ <- \(z, by) z[, .(pre = mean(b[y %in% 2013:2016]), p1819 = mean(b[y %in% 2018:2019]), p2022 = mean(b[y %in% 2020:2022]), se1819 = sqrt(mean(se[y %in% 2018:2019]^2)), se2022 = sqrt(mean(se[y %in% 2020:2022]^2)),
                         slope = coef(lm(b ~ y, data.frame(b = b[y <= 2017], y = y[y <= 2017])))[2]), by = by][, `:=`(d1819 = p1819 - pre, d2022 = p2022 - pre)]
@@ -77,9 +78,9 @@ cat(sprintf("\nAcross the 50 states: SD of D_sub %.3f pp, D_net %.3f, D_z1 %.3f;
 cat("\n== Dyads: net_ijt ~ i(year, D_ij, ref 2017) | dyad + year, SE by origin. Cells: mean 2018-19 minus mean 2013-16 (SE) | mean 2020-22 minus mean 2013-16 (SE) | pre slope per year. Per pp of D_ij.\n")
 ds <- summ(dser, c("outcome", "treat", "sample"))[, cell := sprintf("%s | %s | %+.3f", f(d1819, se1819), f(d2022, se2022), slope)]
 for (k in names(ys)) for (x in Ds) { cat(sprintf("\n-- %s on %s\n", ys[k], x)); print(as.data.frame(ds[outcome == k & treat == x, .(sample, cell)]), row.names = FALSE) }
-cat("\n== States: net out-migration rate (pp of returns) ~ i(year, D_s, ref 2017) | state + year, 2016-return weights, SE by state (hetero for the big four). Per pp of D_s.\n")
-ss <- summ(sser, c("treat", "sample"))[, cell := sprintf("%s | %s | %+.3f", f(d1819, se1819), f(d2022, se2022), slope)]
-for (x in Ds) { cat(sprintf("\n-- %s\n", x)); print(as.data.frame(ss[treat == x, .(sample, cell)]), row.names = FALSE) }
+cat("\n== States: y ~ i(year, D_s, ref 2017) | state + year, SE by state (hetero for the big four). Per pp of D_s.\n")
+ss <- summ(sser, c("outcome", "treat", "sample"))[, cell := sprintf("%s | %s | %+.3f", f(d1819, se1819), f(d2022, se2022), slope)]
+for (k in names(sys)) for (x in Ds) { cat(sprintf("\n-- %s on %s\n", sys[k], x)); print(as.data.frame(ss[outcome == k & treat == x, .(sample, cell)]), row.names = FALSE) }
 cat("\nYear by year, net_k on D_sub (thousands per dyad per pp):\n"); print(as.data.frame(dcast(dser[outcome == "net_k" & treat == "D_sub"], y ~ sample, value.var = "b", fun.aggregate = \(v) round(v, 2))), row.names = FALSE)
 sink()
 # ---- 5. figures

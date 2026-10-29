@@ -45,55 +45,79 @@ Across the 50 states: SD of D_sub 0.264 pp, D_net 0.434, D_z1 0.225; corr(D_sub,
  big four <-> other 46   0.834 ( 0.128) |   2.165 ( 0.253) | +0.311
     among the other 46   0.118 ( 0.041) |   0.205 ( 0.051) | +0.051
 
--- net out-migration per 1,000 origin returns (2016) on D_sub
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_sub
                 sample                                         cell
-       all 2,450 dyads   0.032 ( 0.028) |   0.156 ( 0.032) | +0.011
-     among CA NY FL TX   0.160 ( 0.116) |   0.959 ( 0.113) | +0.107
- big four <-> other 46   0.104 ( 0.029) |   0.407 ( 0.061) | +0.051
-    among the other 46  -0.008 ( 0.032) |   0.006 ( 0.040) | -0.012
+       all 2,450 dyads   0.048 ( 0.018) |   0.200 ( 0.025) | +0.026
+     among CA NY FL TX   0.168 ( 0.121) |   0.953 ( 0.119) | +0.095
+ big four <-> other 46   0.055 ( 0.024) |   0.220 ( 0.032) | +0.031
+    among the other 46   0.011 ( 0.015) |   0.012 ( 0.026) | +0.005
 
--- net out-migration per 1,000 origin returns (2016) on D_sub25
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_sub25
                 sample                                         cell
-       all 2,450 dyads   0.031 ( 0.035) |   0.172 ( 0.040) | +0.011
-     among CA NY FL TX   0.195 ( 0.141) |   1.178 ( 0.146) | +0.137
- big four <-> other 46   0.113 ( 0.036) |   0.473 ( 0.075) | +0.060
-    among the other 46  -0.014 ( 0.040) |  -0.003 ( 0.049) | -0.016
+       all 2,450 dyads   0.053 ( 0.022) |   0.235 ( 0.031) | +0.032
+     among CA NY FL TX   0.204 ( 0.149) |   1.172 ( 0.160) | +0.122
+ big four <-> other 46   0.062 ( 0.030) |   0.263 ( 0.040) | +0.037
+    among the other 46   0.010 ( 0.019) |   0.006 ( 0.032) | +0.005
 
--- net out-migration per 1,000 origin returns (2016) on D_net
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_net
                 sample                                         cell
-       all 2,450 dyads   0.020 ( 0.012) |   0.067 ( 0.017) | +0.010
-     among CA NY FL TX   0.185 ( 0.129) |   1.055 ( 0.068) | +0.095
- big four <-> other 46   0.097 ( 0.023) |   0.320 ( 0.060) | +0.046
-    among the other 46   0.003 ( 0.012) |   0.008 ( 0.015) | +0.002
+       all 2,450 dyads   0.031 ( 0.010) |   0.109 ( 0.018) | +0.018
+     among CA NY FL TX   0.190 ( 0.118) |   1.029 ( 0.058) | +0.081
+ big four <-> other 46   0.045 ( 0.020) |   0.162 ( 0.021) | +0.026
+    among the other 46   0.013 ( 0.007) |   0.018 ( 0.009) | +0.009
 
--- net out-migration per 1,000 origin returns (2016) on D_z1
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_z1
                 sample                                         cell
-       all 2,450 dyads   0.116 ( 0.024) |   0.309 ( 0.035) | +0.036
-     among CA NY FL TX   0.254 ( 0.169) |   1.398 ( 0.078) | +0.150
- big four <-> other 46   0.249 ( 0.036) |   0.649 ( 0.071) | +0.082
-    among the other 46   0.041 ( 0.027) |   0.099 ( 0.034) | +0.009
+       all 2,450 dyads   0.102 ( 0.023) |   0.286 ( 0.029) | +0.041
+     among CA NY FL TX   0.258 ( 0.157) |   1.360 ( 0.070) | +0.129
+ big four <-> other 46   0.131 ( 0.029) |   0.341 ( 0.037) | +0.049
+    among the other 46   0.051 ( 0.014) |   0.090 ( 0.021) | +0.022
 
-== States: net out-migration rate (pp of returns) ~ i(year, D_s, ref 2017) | state + year, 2016-return weights, SE by state (hetero for the big four). Per pp of D_s.
+== States: y ~ i(year, D_s, ref 2017) | state + year, SE by state (hetero for the big four). Per pp of D_s.
 
--- D_sub
+-- net out-migration, thousands of returns (unweighted) on D_sub
+                 sample                                          cell
+          all 50 states    8.608 ( 7.481) |  36.626 (11.460) | +4.804
+ big four (CA NY FL TX)  22.036 (23.269) | 122.244 (42.684) | +13.966
+        other 46 states    1.893 ( 3.991) |   0.661 ( 7.305) | +0.937
+
+-- net out-migration, thousands of returns (unweighted) on D_sub25
+                 sample                                          cell
+          all 50 states    9.420 ( 9.299) |  42.325 (13.339) | +5.678
+ big four (CA NY FL TX)  25.716 (28.301) | 148.412 (54.044) | +17.287
+        other 46 states    2.182 ( 4.932) |   0.205 ( 8.913) | +1.059
+
+-- net out-migration, thousands of returns (unweighted) on D_net
+                 sample                                          cell
+          all 50 states    4.530 ( 3.168) |  15.816 ( 5.783) | +2.644
+ big four (CA NY FL TX)  30.646 (26.864) | 142.832 (36.096) | +14.871
+        other 46 states    2.618 ( 2.062) |   3.462 ( 2.874) | +1.485
+
+-- net out-migration, thousands of returns (unweighted) on D_z1
+                 sample                                          cell
+          all 50 states   20.661 ( 8.104) |  57.894 (19.019) | +8.249
+ big four (CA NY FL TX)  40.610 (33.663) | 187.218 (42.439) | +22.075
+        other 46 states    5.202 ( 4.904) |   7.643 ( 7.472) | +2.963
+
+-- net out-migration rate, pp of returns (2016-return weights) on D_sub
                  sample                                         cell
           all 50 states   0.178 ( 0.187) |   0.887 ( 0.247) | +0.127
  big four (CA NY FL TX)   0.147 ( 0.311) |   1.157 ( 0.400) | +0.143
         other 46 states   0.150 ( 0.303) |   0.069 ( 0.535) | +0.072
 
--- D_sub25
+-- net out-migration rate, pp of returns (2016-return weights) on D_sub25
                  sample                                         cell
           all 50 states   0.192 ( 0.235) |   1.051 ( 0.305) | +0.155
  big four (CA NY FL TX)   0.175 ( 0.382) |   1.438 ( 0.509) | +0.181
         other 46 states   0.168 ( 0.381) |   0.032 ( 0.657) | +0.081
 
--- D_net
+-- net out-migration rate, pp of returns (2016-return weights) on D_net
                  sample                                         cell
           all 50 states   0.155 ( 0.131) |   0.586 ( 0.201) | +0.110
  big four (CA NY FL TX)   0.182 ( 0.323) |   1.175 ( 0.381) | +0.131
         other 46 states   0.169 ( 0.133) |   0.214 ( 0.195) | +0.101
 
--- D_z1
+-- net out-migration rate, pp of returns (2016-return weights) on D_z1
                  sample                                         cell
           all 50 states   0.437 ( 0.203) |   1.244 ( 0.271) | +0.193
  big four (CA NY FL TX)   0.247 ( 0.417) |   1.568 ( 0.456) | +0.204

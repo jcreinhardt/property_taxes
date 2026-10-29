@@ -34,11 +34,14 @@ cells: mean 2018-19 and mean 2020-22 minus mean 2013-16, per pp of D_ij):
   below 2017 on a +0.10/yr slope; the two post-cap pre-COVID files are on that line.
 - **2020-22 is the big four.** Per pp of D_ij the CA/NY ↔ FL/TX dyads add 11k returns a year (D_ij ≈ 1.1 pp for
   NY→FL, so about 12k returns on a 2017 flow of 45k); the mixed pairs 1.5k; the other 46 among themselves 0.02k (SE
-  0.05) on flows of under 1k. Per 1,000 origin returns: big four +0.96 (0.11), mixed +0.41 (0.06), other 46 +0.01 (0.04).
+  0.05) on flows of under 1k. Per 1,000 origin returns, weighted by 2016 origin returns: all dyads +0.05 (0.02) in 2018-19 and
+  +0.20 (0.03) in 2020-22; big four +0.17 (0.12) / +0.95 (0.12), mixed +0.06 (0.02) / +0.22 (0.03), other 46 +0.01 (0.02) / +0.01 (0.03).
 - The TAXSIM-based D_z1 and the constant-m variant give the same shape with larger coefficients (D_z1 2020-22: all
   +1.16, other 46 +0.21 (0.05), still a tenth of the mixed pairs); D_net (adds own-rate changes) the same.
-- **States** (net out-migration rate on D_s, state + year FE, 2016-return weights): all 50 +0.18 (0.19) in 2018-19 and
-  +0.89 (0.25) in 2020-22 per pp; big four +0.15 (0.31) / +1.16 (0.40); other 46 +0.15 (0.30) / +0.07 (0.54).
+- **States** (state + year FE, SE by state). Totals, net out-migration in thousands of returns per pp of D_s: all 50 +8.6k
+  (7.5) in 2018-19 and +36.6k (11.5) in 2020-22; big four +22k (23) / +122k (43); other 46 +1.9k (4.0) / +0.7k (7.3). Rate
+  (pp of returns, 2016-return weights): all 50 +0.18 (0.19) / +0.89 (0.25); big four +0.15 (0.31) / +1.16 (0.40); other 46
+  +0.15 (0.30) / +0.07 (0.54).
 
 So fixing the treatment at the policy change removes the mechanical doubling in Diop & Green's regressor but not the
 timing or the geography: the response is a 2020+ acceleration of CA/NY → FL/TX and CA/NY → everywhere, and states with
@@ -53,6 +56,7 @@ the same lost subsidy outside the four (CT, MD, MN, OR at 0.84-0.90 pp) show no 
   feols(net ~ i(y, D_ij, ref 2017) | dyad + y, cluster ~o)`; states as in 17.
 - **Choices:** income taxes only (the cap also hits property taxes; D_z1 covers both); m statutory, not estimated;
   2016 → 2018 change (TY2017 is the last pre-cap year, but the 2016 value avoids the 1617 file); reference 2017;
-  samples all / among big four / mixed / among other 46; also net per 1,000 origin returns; two-way SEs in the csv.
+  samples all / among big four / mixed / among other 46; outcomes are totals (thousands of returns) or rates weighted by 2016 returns
+  (dyads: origin returns), never unweighted rates; two-way SEs in the csv.
 - **Script:** `code/designs/exposure_did/19_net_rate_change_dyads.R` → `output/designs/exposure_did/c19_net_rate_change_{rates,treat,dyads,states}.csv`,
   `c19_net_rate_change.txt`, `figures/c19_net_rate_change_{rates,dyads}.png`.
