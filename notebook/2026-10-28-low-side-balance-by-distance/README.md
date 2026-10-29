@@ -860,11 +860,11 @@ in children, families, singles, elderly or median age, in the exposure DiD or at
 `33_density1000_side_contrast.R` collects the Z × year series of 29 (core 11), the main term of 31 (75 district /
 local-government outcomes) and 32 (14 composition outcomes) and shows each on the low-tax side, the high-tax side and
 as high minus low (difference of the side coefficients, SE = sqrt of the summed variances; sides are disjoint samples).
-Post − pre (mean 2018+ minus mean 2012-16, SD units per 10 mi closer): on the low-tax side 0 of 100 cells have |t| > 1.96
-(median |post − pre| 0.003-0.014 by source); on the high-tax side 7 of 100 and in the contrast 3 of 100. Every high-side
+Post − pre (mean 2018+ minus mean 2012-16, SD units per 10 mi closer): on the low-tax side 1 of 100 cells has |t| > 1.96
+(hospital spending, 3 census points); on the high-tax side 9 of 100 and in the contrast 3 of 100. Every high-side
 cell that clears 1.96 is a straight line from 2012-13, not a 2017 break: ACS population and home value −0.010 / −0.011
 (t −3), SOI returns and individuals −0.005 (t −4), district enrolment −0.005 (t −2.7), and in the contrast SOI returns and
-individuals −0.006 / −0.007 (t −4); the yearly coefficients run +0.004 to +0.007 in 2013 down to −0.010 to −0.012 by 2022-23
+individuals −0.006 / −0.007 (t −4), plus counts of local governments and special districts on the high side in the census years (−0.007 / −0.018, t −2); the yearly coefficients run +0.004 to +0.007 in 2013 down to −0.010 to −0.012 by 2022-23
 with no change of slope at 2017. Sales per 100 parcels on the high side sit +0.02 to +0.05 above the low side in every year,
 pre and post alike. Move-out rate, prices, bills, the effective rate, district finance and the composition shares show
 nothing on either side or in the contrast. Outputs `c45_side_contrast_{series,post_pre}.csv`, `c45_side_contrast.txt`,

@@ -29,6 +29,62 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
   -0.006 (-0.4)
    +0.009 (0.4)
 
+== CoG all local govts, census years, log per capita (31, main term) 
+                                   outcome     years           low
+           all local govts: LT debt issued 2012-2022  +0.074 (0.9)
+      all local govts: LT debt outstanding 2012-2022 -0.064 (-1.4)
+           all local govts: capital outlay 2012-2022 -0.033 (-0.4)
+       all local govts: enterprise revenue 2012-2022  +0.049 (1.5)
+          all local govts: federal revenue 2012-2022 -0.042 (-0.7)
+        all local govts: general sales tax 2012-2022 -0.012 (-0.2)
+    all local govts: individual income tax 2012-2022 -0.042 (-0.4)
+         all local govts: interest on debt 2012-2022 -0.043 (-0.8)
+ all local govts: other own-source revenue 2012-2022 -0.077 (-1.1)
+            all local govts: state revenue 2012-2022  +0.006 (0.2)
+               number of local governments 2012-2022 -0.003 (-0.5)
+                  number of municipalities 2012-2022  +0.003 (0.5)
+               number of special districts 2012-2022  +0.001 (0.2)
+                 spending: education (E12) 2012-2022  +0.000 (0.0)
+                      spending: fire (E24) 2012-2022 -0.018 (-0.5)
+        spending: general government (E89) 2012-2022  +0.086 (1.3)
+                    spending: health (E32) 2012-2022  +0.073 (1.1)
+                  spending: highways (E44) 2012-2022 -0.004 (-0.1)
+                 spending: hospitals (E36) 2012-2022  +0.214 (2.1)
+      spending: housing & comm. dev. (E50) 2012-2022 -0.034 (-0.4)
+                 spending: libraries (E52) 2012-2022  +0.035 (0.9)
+                     spending: parks (E61) 2012-2022  +0.016 (0.4)
+                    spending: police (E62) 2012-2022 -0.020 (-0.4)
+         spending: public welfare (E74-79) 2012-2022  +0.032 (0.9)
+                  spending: sewerage (E80) 2012-2022 -0.024 (-0.5)
+               spending: solid waste (E81) 2012-2022 -0.011 (-0.3)
+          high high_minus_low
+  +0.004 (0.1)  -0.070 (-0.6)
+ -0.017 (-0.4)   +0.047 (0.8)
+ -0.012 (-0.2)   +0.020 (0.2)
+  +0.001 (0.0)  -0.048 (-1.2)
+  +0.011 (0.2)   +0.053 (0.6)
+ -0.028 (-1.7)  -0.016 (-0.3)
+  +0.081 (1.7)   +0.123 (1.0)
+  +0.013 (0.2)   +0.056 (0.7)
+ -0.031 (-0.5)   +0.046 (0.5)
+ -0.018 (-0.6)  -0.023 (-0.5)
+ -0.007 (-2.0)  -0.004 (-0.6)
+ -0.001 (-0.6)  -0.004 (-0.7)
+ -0.018 (-2.4)  -0.019 (-1.8)
+ -0.019 (-0.8)  -0.019 (-0.6)
+ -0.033 (-0.5)  -0.014 (-0.2)
+ -0.015 (-0.3)  -0.101 (-1.2)
+  +0.068 (1.6)  -0.005 (-0.1)
+ -0.015 (-0.5)  -0.011 (-0.2)
+  +0.077 (1.2)  -0.137 (-1.2)
+ -0.006 (-0.1)   +0.028 (0.3)
+ -0.010 (-0.2)  -0.045 (-0.7)
+  +0.006 (0.2)  -0.011 (-0.2)
+  +0.056 (1.6)   +0.076 (1.2)
+  +0.014 (0.4)  -0.018 (-0.4)
+ -0.066 (-1.2)  -0.043 (-0.6)
+  +0.032 (1.0)   +0.042 (0.8)
+
 == CoG school districts by county, log per capita (31, main term) 
                                outcome     years           low          high
       school districts: LT debt issued 2012-2022  +0.001 (0.0) -0.044 (-0.5)
@@ -176,41 +232,47 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
   +0.014 (2.0)   +0.013 (1.4)
 
 Counts of |t| > 1.96 by series and source:
-                                                            src         series
- CoG school districts by county, log per capita (31, main term)   low-tax side
- CoG school districts by county, log per capita (31, main term)  high-tax side
- CoG school districts by county, log per capita (31, main term) high minus low
-                   F-33 district, log per pupil (31, main term)   low-tax side
-                   F-33 district, log per pupil (31, main term)  high-tax side
-                   F-33 district, log per pupil (31, main term) high minus low
-                                  SEDA district (31, main term)   low-tax side
-                                  SEDA district (31, main term)  high-tax side
-                                  SEDA district (31, main term) high minus low
-                                    composition: ACS tract (32)   low-tax side
-                                    composition: ACS tract (32)  high-tax side
-                                    composition: ACS tract (32) high minus low
-                                      composition: SOI ZIP (32)   low-tax side
-                                      composition: SOI ZIP (32)  high-tax side
-                                      composition: SOI ZIP (32) high minus low
-                                                      core (29)   low-tax side
-                                                      core (29)  high-tax side
-                                                      core (29) high minus low
-  k sig median_abs
-  7   0      0.014
-  7   0      0.017
-  7   1      0.034
- 40   0      0.006
- 40   0      0.007
- 40   0      0.008
-  2   0      0.009
-  2   1      0.008
-  2   0      0.007
-  6   0      0.006
-  6   0      0.004
-  6   0      0.004
-  8   0      0.001
-  8   3      0.004
-  8   2      0.006
- 11   0      0.003
- 11   3      0.005
- 11   0      0.005
+                                                               src
+ CoG all local govts, census years, log per capita (31, main term)
+ CoG all local govts, census years, log per capita (31, main term)
+ CoG all local govts, census years, log per capita (31, main term)
+    CoG school districts by county, log per capita (31, main term)
+    CoG school districts by county, log per capita (31, main term)
+    CoG school districts by county, log per capita (31, main term)
+                      F-33 district, log per pupil (31, main term)
+                      F-33 district, log per pupil (31, main term)
+                      F-33 district, log per pupil (31, main term)
+                                     SEDA district (31, main term)
+                                     SEDA district (31, main term)
+                                     SEDA district (31, main term)
+                                       composition: ACS tract (32)
+                                       composition: ACS tract (32)
+                                       composition: ACS tract (32)
+                                         composition: SOI ZIP (32)
+                                         composition: SOI ZIP (32)
+                                         composition: SOI ZIP (32)
+                                                         core (29)
+                                                         core (29)
+                                                         core (29)
+         series  k sig median_abs
+   low-tax side 26   1      0.032
+  high-tax side 26   2      0.016
+ high minus low 26   0      0.035
+   low-tax side  7   0      0.014
+  high-tax side  7   0      0.017
+ high minus low  7   1      0.034
+   low-tax side 40   0      0.006
+  high-tax side 40   0      0.007
+ high minus low 40   0      0.008
+   low-tax side  2   0      0.009
+  high-tax side  2   1      0.008
+ high minus low  2   0      0.007
+   low-tax side  6   0      0.006
+  high-tax side  6   0      0.004
+ high minus low  6   0      0.004
+   low-tax side  8   0      0.001
+  high-tax side  8   3      0.004
+ high minus low  8   2      0.006
+   low-tax side 11   0      0.003
+  high-tax side 11   3      0.005
+ high minus low 11   0      0.005

@@ -9,7 +9,9 @@ suppressPackageStartupMessages({library(data.table); library(ggplot2)})
 source("code/R/paths.R"); OUT <- out_dir("designs/border_rd"); invisible(out_dir("designs/border_rd/figures")); REF <- 2017
 a <- fread(file.path(OUT, "c41_density1000_series.csv"))[design == "near x year" & Z == "per 10 mi closer" & density == TRUE & sample != "both sides pooled",
        .(y, sample, src = "core (29)", outcome, b = b_sd, se = se_sd, n)]
-b <- fread(file.path(OUT, "c43_exposure_interaction_density1000_series.csv"))[, y := suppressWarnings(as.integer(y))][coef == "main" & src != "core" & sample != "both sides pooled" & is.finite(y),
+b <- fread(file.path(OUT, "c43_exposure_interaction_density1000_series.csv"), colClasses = list(character = c("y", "coef")))
+b[!grepl("^\\d+$", y), c("y", "coef") := .(coef, y)]   # census-year rows of 31 have y and coef swapped
+b <- unique(b)[, y := as.integer(y)][coef == "main" & src != "core" & sample != "both sides pooled" & is.finite(y),
        .(y, sample, src = paste0(src, " (31, main term)"), outcome, b = b_sd, se = se_sd, n)]
 d <- fread(file.path(OUT, "c44_composition_series.csv"))[design == "border: Z x year" & sample != "both sides pooled",
        .(y, sample, src = paste0("composition: ", src, " (32)"), outcome, b = b_sd, se = se_sd, n)]

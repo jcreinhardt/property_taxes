@@ -1,4 +1,82 @@
 src,outcome,y,series,b,se
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2012,low-tax side,-0.0907920798647064,0.0610816997869669
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2022,low-tax side,-0.0163034094197082,0.0590190320892309
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2012,low-tax side,0.0139973650474499,0.0277726096873
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2022,low-tax side,-0.0500036969549369,0.0359676926109109
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2012,low-tax side,0.0566705509009099,0.0563169909826485
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2022,low-tax side,0.0241059292837847,0.0536585448802753
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2012,low-tax side,-0.0269241000397168,0.0232833611341611
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2022,low-tax side,0.0221541777176968,0.0237160852553274
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2012,low-tax side,-9.83229591634435e-05,0.0391441938030804
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2022,low-tax side,-0.0419741238364702,0.0486707941216522
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2012,low-tax side,-0.0975754015994909,0.0369251912576492
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2022,low-tax side,-0.109131604286729,0.0449207895324312
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2012,low-tax side,0.0530876819846243,0.0566628639832169
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2022,low-tax side,0.0109718649250927,0.0941463390309401
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2012,low-tax side,0.0100897535884446,0.0375075595404567
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2022,low-tax side,-0.0328519128694501,0.0368008860444781
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2012,low-tax side,0.0658093801794364,0.0543916601317627
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2022,low-tax side,-0.0108605406480419,0.0461336328227828
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2012,low-tax side,0.00513428454747496,0.0232346280012564
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2022,low-tax side,0.0110729356095456,0.0250337195505656
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2012,low-tax side,-0.00242021632357009,0.00384616626663728
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2022,low-tax side,-0.00536700503458192,0.00493387655355638
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2012,low-tax side,-0.00481881983847389,0.00409651611984736
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2022,low-tax side,-0.00186406652740806,0.00399293219829023
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2012,low-tax side,-0.00316864976466994,0.00556017999696123
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2022,low-tax side,-0.00178655808403805,0.00536312292066734
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2012,low-tax side,0.0288826988642139,0.01610479953762
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2022,low-tax side,0.0292538606851317,0.0182731493750786
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2012,low-tax side,0.0361873309404474,0.0305817035857162
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2022,low-tax side,0.017781413136142,0.0262696299194401
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2012,low-tax side,-0.0680620030704525,0.0403788013110806
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2022,low-tax side,0.017706377982308,0.0511470807942725
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2012,low-tax side,-0.0459333603776119,0.0342127637966383
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2022,low-tax side,0.0269339685754951,0.0535368274007027
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2012,low-tax side,0.0377377620818901,0.0245773907496274
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2022,low-tax side,0.0334691500697316,0.0275417138860268
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2012,low-tax side,-0.209581025868146,0.0852590016402803
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2022,low-tax side,0.0045470474383073,0.0541983496954162
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2012,low-tax side,0.0180160630132098,0.0553407151734078
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2022,low-tax side,-0.0158239795744296,0.0576577714074686
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2012,low-tax side,-0.00356586305359001,0.0292372245950229
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2022,low-tax side,0.0312264499242757,0.0256823852425647
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2012,low-tax side,-0.0122464109038342,0.0257806442676911
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2022,low-tax side,0.00398950047906443,0.0271387249612196
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2012,low-tax side,-0.0138239752522204,0.0338195065877531
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2022,low-tax side,-0.0334240547096803,0.0385161621010661
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2012,low-tax side,-0.0144070643042477,0.024296880163096
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2022,low-tax side,0.0173744447549616,0.0234268232735681
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2012,low-tax side,0.0017137104895001,0.037972782828308
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2022,low-tax side,-0.0221379478247931,0.031006416509806
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2012,low-tax side,0.0223655651501164,0.0229843006526608
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2017,low-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2022,low-tax side,0.0116693158839148,0.0338252815742785
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2012,low-tax side,0.0189222205391368,0.0877985994919904
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2013,low-tax side,-0.00932974034459511,0.0773093353743765
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2014,low-tax side,0.062880957021118,0.0836187388230052
@@ -846,6 +924,84 @@ core (29),sales per 100 parcels,2021,low-tax side,-0.000542973659746486,0.013217
 core (29),sales per 100 parcels,2022,low-tax side,-0.0149848352469476,0.0148932890871673
 core (29),sales per 100 parcels,2023,low-tax side,0.000910939850823232,0.017125360299604
 core (29),sales per 100 parcels,2024,low-tax side,-0.0114115421889991,0.0185779758682414
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2012,high-tax side,0.0195621213122079,0.0506664238052758
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2022,high-tax side,0.0236642910010797,0.0557488413786767
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2012,high-tax side,-0.0330045186902301,0.0222544879269247
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2022,high-tax side,-0.0504140758465826,0.0354371077533755
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2012,high-tax side,-0.00850354240661409,0.0443236690317894
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2022,high-tax side,-0.0207298473714755,0.0429296669775707
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2012,high-tax side,-0.00568428511827386,0.0180753096620929
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2022,high-tax side,-0.00489085698774712,0.0136022776722982
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2012,high-tax side,0.0106357355964965,0.041856485753389
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2022,high-tax side,0.0212894753555117,0.0433472000716451
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2012,high-tax side,0.0145260662579931,0.0118844790146452
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2022,high-tax side,-0.0130351008179214,0.0114793833048211
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2012,high-tax side,-0.0174288822413769,0.038878945063206
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2022,high-tax side,0.0636662097462549,0.0258857453854795
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2012,high-tax side,0.00162481627186681,0.0402359678261305
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2022,high-tax side,0.0147127650761265,0.0354132760076966
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2012,high-tax side,-0.0150021007010465,0.0414810458920583
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2022,high-tax side,-0.045752588239473,0.0455046966223994
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2012,high-tax side,0.0143586593802282,0.0210836889327658
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2022,high-tax side,-0.00316145870274414,0.0185260477251573
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2012,high-tax side,0.00188240618190164,0.00202523040262906
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2022,high-tax side,-0.00536505472166969,0.00294438524758144
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2012,high-tax side,0.00114068093368983,0.00103551671167906
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2022,high-tax side,0.000139898219542856,0.00116246291160875
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2012,high-tax side,0.00407089236973598,0.00390196422430314
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2022,high-tax side,-0.0139166461836133,0.0064409486957532
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2012,high-tax side,0.0278764135223261,0.0131181936188006
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2022,high-tax side,0.00892926601136232,0.0185794382687553
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2012,high-tax side,0.0545466421489875,0.0430233450710205
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2022,high-tax side,0.0217960848462073,0.0460663457478567
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2012,high-tax side,-0.0207095288460875,0.0414459729305171
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2022,high-tax side,-0.0360709619775661,0.0355655868034168
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2012,high-tax side,-0.04775754279013,0.0371081439111674
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2022,high-tax side,0.0198240799785157,0.0220375284554614
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2012,high-tax side,0.0154402215704028,0.0191766875783316
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2022,high-tax side,0.000666336026394406,0.0195466617878411
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2012,high-tax side,-0.0387410058471621,0.0515159376324052
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2022,high-tax side,0.0382022637828612,0.0362718934091903
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2012,high-tax side,-0.0138141130416394,0.0457931803197438
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2022,high-tax side,-0.0199045790086654,0.0506769457346938
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2012,high-tax side,0.0595792177673725,0.0345366810573326
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2022,high-tax side,0.0493782624474424,0.0361934838041184
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2012,high-tax side,0.0155736898132265,0.018076461404146
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2022,high-tax side,0.0211752224198904,0.0206365952827828
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2012,high-tax side,-0.00430860979263447,0.0208100160348377
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2022,high-tax side,0.0521723564312446,0.0275525673685155
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2012,high-tax side,-0.0217808260356961,0.0248708781334797
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2022,high-tax side,-0.00768064966877028,0.0236955014291006
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2012,high-tax side,0.048520695738554,0.0450737011750356
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2022,high-tax side,-0.0179685475936131,0.0323276615588974
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2012,high-tax side,-0.03296569462337,0.0222714387897654
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2017,high-tax side,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2022,high-tax side,-0.00120194849445011,0.0205185875133553
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2012,high-tax side,-0.0501409292003672,0.0703303156645164
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2013,high-tax side,0.00443924812889823,0.0826491330150275
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2014,high-tax side,-0.0986054444290481,0.0805110944216515
@@ -1693,6 +1849,84 @@ core (29),sales per 100 parcels,2021,high-tax side,0.0177669262672751,0.01616873
 core (29),sales per 100 parcels,2022,high-tax side,0.0487119492094789,0.0162843687217652
 core (29),sales per 100 parcels,2023,high-tax side,0.0482806559033076,0.0142363189461551
 core (29),sales per 100 parcels,2024,high-tax side,0.0272860011779791,0.0166574056654177
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2012,high minus low,0.110354201176914,0.0793603210054053
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt issued,2022,high minus low,0.0399677004207879,0.081186079248936
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2012,high minus low,-0.04700188373768,0.0355890444060071
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: LT debt outstanding,2022,high minus low,-0.000410378891645698,0.0504922124458547
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2012,high minus low,-0.065174093307524,0.0716672247947367
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: capital outlay,2022,high minus low,-0.0448357766552602,0.0687182344467147
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2012,high minus low,0.0212398149214429,0.0294759516400118
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: enterprise revenue,2022,high minus low,-0.0270450347054439,0.0273399827672268
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2012,high minus low,0.0107340585556599,0.0573082307187787
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: federal revenue,2022,high minus low,0.0632635991919819,0.0651753477511512
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2012,high minus low,0.112101467857484,0.0387905992588864
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: general sales tax,2022,high minus low,0.0960965034688076,0.0463643567115514
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2012,high minus low,-0.0705165642260012,0.068718647571153
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: individual income tax,2022,high minus low,0.0526943448211622,0.0976401811094725
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2012,high minus low,-0.00846493731657779,0.0550068189371674
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: interest on debt,2022,high minus low,0.0475646779455766,0.0510725496843066
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2012,high minus low,-0.0808114808804829,0.0684041655178121
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: other own-source revenue,2022,high minus low,-0.0348920475914311,0.0647996102775622
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2012,high minus low,0.00922437483275324,0.0313746693587422
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",all local govts: state revenue,2022,high minus low,-0.0142343943122897,0.0311432425872961
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2012,high minus low,0.00430262250547173,0.00434678652965057
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of local governments,2022,high minus low,1.95031291222968e-06,0.00574565421269925
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2012,high minus low,0.00595950077216372,0.00422536852597923
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of municipalities,2022,high minus low,0.00200396474695092,0.00415870503414329
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2012,high minus low,0.00723954213440592,0.00679271127064513
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",number of special districts,2022,high minus low,-0.0121300880995753,0.00838146213756957
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2012,high minus low,-0.0010062853418878,0.020771412372953
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: education (E12),2022,high minus low,-0.0203245946737694,0.0260596146262071
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2012,high minus low,0.0183593112085401,0.0527849298124447
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: fire (E24),2022,high minus low,0.0040146717100653,0.0530301958007456
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2012,high minus low,0.047352474224365,0.0578637733601679
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: general government (E89),2022,high minus low,-0.0537773399598741,0.0622971495210432
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2012,high minus low,-0.0018241824125181,0.0504730378631649
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: health (E32),2022,high minus low,-0.0071098885969794,0.057895116793715
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2012,high minus low,-0.0222975405114873,0.0311736023349373
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: highways (E44),2022,high minus low,-0.0328028140433372,0.0337730364466687
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2012,high minus low,0.170840020020984,0.0996142017527781
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: hospitals (E36),2022,high minus low,0.0336552163445539,0.0652158827372158
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2012,high minus low,-0.0318301760548492,0.0718304261417181
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: housing & comm. dev. (E50),2022,high minus low,-0.0040805994342358,0.0767630863936111
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2012,high minus low,0.0631450808209625,0.0452503882908835
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: libraries (E52),2022,high minus low,0.0181518125231667,0.0443796482819151
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2012,high minus low,0.0278201007170607,0.0314865062487538
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: parks (E61),2022,high minus low,0.017185721940826,0.0340936864739807
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2012,high minus low,0.00951536545958593,0.0397091399202914
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: police (E62),2022,high minus low,0.0855964111409249,0.0473565065391461
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2012,high minus low,-0.0073737617314484,0.0347692243915542
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: public welfare (E74-79),2022,high minus low,-0.0250550944237319,0.0333210569560376
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2012,high minus low,0.0468069852490539,0.0589370068237457
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: sewerage (E80),2022,high minus low,0.00416940023118,0.0447937000776469
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2012,high minus low,-0.0553312597734864,0.0320046100157176
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2017,high minus low,0,0
+"CoG all local govts, census years, log per capita (31, main term)",spending: solid waste (E81),2022,high minus low,-0.0128712643783649,0.0395621297091353
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2012,high minus low,-0.069063149739504,0.112494210403138
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2013,high minus low,0.0137689884734933,0.113170722910846
 "CoG school districts by county, log per capita (31, main term)",school districts: LT debt issued,2014,high minus low,-0.161486401450166,0.116078119416719
