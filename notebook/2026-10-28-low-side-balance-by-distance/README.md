@@ -854,6 +854,20 @@ in children, families, singles, elderly or median age, in the exposure DiD or at
 - **Check:** 20,473 tracts, 59 pairs; within 50 mi 15,440 tracts, rural subset 4,526 tracts in 40 pairs, rural rate slope −0.038 SD/10 mi (SE 0.014); high-side rule at 30%: 34 pairs, 9,532 tracts, 17 of 21 joint rejections; low-side rule median gap 0.044 SD at 30%, 0.116 at 80%; 50% cutoff near-dummy owner share −0.349 SD (SE 0.137) with NJ-NY, +0.026 (0.051) without; 45% event study: 890 districts, 332 counties, district log property tax per pupil post − pre −0.037 (0.019), tract log sale price −0.006 (0.015); robustness grid 12 of 220 cells |t| > 1.96; CT-NY high-side exposure 15.44 (lost subsidy $3,100 per owner); interaction grid: rural 45%, near < 10 mi, continuous: effective rate −0.372 (t −2.9), 66 of 264 cells significant; owner share 10-20 vs 0-10 = +0.36 SD (SE 0.10), main spec; rejections within 0-30 mi
   12 / 21 (main), 5 / 21 (equal pairs), 7 / 21 (density); 100+ bin log income +0.41 SD; balance given density (23): Z × E on share AGI ≥ $100k −0.248 SD (SE 0.075), all pairs, continuous Z; Holm rejections 6 / 14.
 
+### Side contrast across every outcome of the density-selected design (33, 2026-10-29)
+`33_density1000_side_contrast.R` collects the Z × year series of 29 (core 11), the main term of 31 (75 district /
+local-government outcomes) and 32 (14 composition outcomes) and shows each on the low-tax side, the high-tax side and
+as high minus low (difference of the side coefficients, SE = sqrt of the summed variances; sides are disjoint samples).
+Post − pre (mean 2018+ minus mean 2012-16, SD units per 10 mi closer): on the low-tax side 0 of 100 cells have |t| > 1.96
+(median |post − pre| 0.003-0.014 by source); on the high-tax side 7 of 100 and in the contrast 3 of 100. Every high-side
+cell that clears 1.96 is a straight line from 2012-13, not a 2017 break: ACS population and home value −0.010 / −0.011
+(t −3), SOI returns and individuals −0.005 (t −4), district enrolment −0.005 (t −2.7), and in the contrast SOI returns and
+individuals −0.006 / −0.007 (t −4); the yearly coefficients run +0.004 to +0.007 in 2013 down to −0.010 to −0.012 by 2022-23
+with no change of slope at 2017. Sales per 100 parcels on the high side sit +0.02 to +0.05 above the low side in every year,
+pre and post alike. Move-out rate, prices, bills, the effective rate, district finance and the composition shares show
+nothing on either side or in the contrast. Outputs `c45_side_contrast_{series,post_pre}.csv`, `c45_side_contrast.txt`,
+`figures/c45_side_contrast_{core,composition,district}.png`.
+
 ## Open
 - The near × own-exposure interaction (16) is the one sign-consistent post-2017 pattern: lower effective rate, more sales,
   slightly higher prices, fewer people near the border in high-exposure tracts. Worth a cleaner test: detrend the
