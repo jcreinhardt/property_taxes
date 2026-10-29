@@ -26,7 +26,7 @@ vars <- list(cl = c(lp50 = "log median sale price", lbill = "log tax bill per pa
              ac = c(lhval = "log median home value (ACS)", lpop = "log population (ACS)"), mv = c(moveout = "move-out rate (Data Axle)"),
              f = c(lptax = "log district property tax per pupil", lspend = "log district spending per pupil", lenr = "log district enrolment"), sd = c(lptax = "log county school property tax (CoG)"))
 units <- c(cl = "tract", ac = "tract", mv = "tract", f = "leaid", sd = "cty"); Zs <- c(z = "per 10 mi closer", near10 = "near < 10 mi")
-pp <- function(r) r[, .(post_min_pre = mean(b[y > REF]) - mean(b[y < REF & y >= 2013]), se = sqrt(mean(se[y > REF]^2) + mean(se[y < REF & y >= 2013]^2) / sum(y < REF & y >= 2013)))]
+pp <- function(r) r[, .(post_min_pre = mean(b_sd[y > REF]) - mean(b_sd[y < REF & y >= 2012]), se = sqrt(mean(se_sd[y > REF]^2) + mean(se_sd[y < REF & y >= 2012]^2) / sum(y < REF & y >= 2012)))]   # SD units of the outcome; pre = 2012-16 (as 31, 32)
 iv <- function(p, zz, fe_unit, dens) { x <- p[is.finite(yv) & is.finite(comp)]
   m <- feols(as.formula(sprintf("yv ~ %s | %s + pair^y | i(y, comp, ref = %d) ~ i(y, %s, ref = %d)", ifelse(dens, sprintf("i(y, ldens, ref = %d)", REF), "1"), fe_unit, REF, zz, REF)), x, cluster = ~cty)
   ct <- as.data.table(coeftable(m), keep.rownames = "term")[grepl("^fit_y::\\d+:comp$", term)]
@@ -59,7 +59,7 @@ bal <- rbindlist(bal); bal[grp[var] == "controls", p_holm := p.adjust(p, "holm")
 sink(file.path(OUT, "c41_density1000_overview_iv.txt"), split = TRUE)
 cat(sprintf("Sample: tracts below %s per sq mi within %d mi of a ranked border; %d tracts (%d low, %d high), %d pairs. Unit FE + pair x year FE (pair x side x year pooled), SE by county.\n", format(DCUT, big.mark = ","), MX, nrow(d), sum(d$side == "low"), sum(d$side == "high"), uniqueN(d$pair)))
 cat("\nFirst stage (cross-section): competition (SD units) on Z, pair FE, with / without log density: b (t)\n"); print(as.data.frame(fs[, .(sample, Z, dens = sprintf("%.3f (%.1f)", b_dens, t_dens), raw = sprintf("%.3f (%.1f)", b_raw, t_raw), n)]), row.names = FALSE)
-for (dd in c("near x year", "IV: competition x year")) for (dens in c(TRUE, FALSE)) { cat("\n==", dd, ifelse(dens, "| with log density x year", "| without density"), "\n  post - pre (mean 2018+ minus 2013-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)\n")
+for (dd in c("near x year", "IV: competition x year")) for (dens in c(TRUE, FALSE)) { cat("\n==", dd, ifelse(dens, "| with log density x year", "| without density"), "\n  post - pre (mean 2018+ minus 2012-16), SD units of the outcome per 10 mi closer / near / per SD of competition; cells: estimate (t)\n")
   w <- dcast(res[design == dd & density == dens, .(outcome, col = paste(sample, "|", Z), cell = sprintf("%.3f (%.1f)", post_min_pre, t))], outcome ~ col, value.var = "cell"); print(as.data.frame(w[match(unlist(vars), outcome)]), row.names = FALSE) }
 cat("\n== balance: controls at p < .05 / Holm (of 15 raw, 14 given density), median |b|\n"); print(as.data.frame(bal[grp[var] == "controls", .(p05 = sum(p < .05), holm05 = sum(p_holm < .05), median_abs = round(median(abs(b)), 3), max_abs = round(max(abs(b)), 2)), by = .(sample, Z, spec)]), row.names = FALSE)
 sink()

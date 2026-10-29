@@ -1,265 +1,265 @@
 design,sample,Z,density,outcome,post_min_pre,se,t
-near x year,low-tax side,per 10 mi closer,TRUE,log median sale price,0.000473693331883401,0.00447848937621831,0.105770783871635
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log median sale price,0.000586510146942481,0.0241369356361095,0.0242992795682417
-near x year,low-tax side,per 10 mi closer,FALSE,log median sale price,0.00045448064768288,0.00448437598638143,0.101347578584643
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log median sale price,0.000454851192866627,0.0241970503506035,0.018797795031876
-near x year,low-tax side,near < 10 mi,TRUE,log median sale price,-0.00589189361654273,0.0118924173657805,-0.49543279850707
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log median sale price,-0.0124860481755496,0.0266039883079362,-0.469329937715576
-near x year,low-tax side,near < 10 mi,FALSE,log median sale price,-0.00589960458015292,0.0119158300515736,-0.495106472198623
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log median sale price,-0.012493809294689,0.0266756665663983,-0.468359778886527
-near x year,low-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.000838650342536667,0.00333949394783313,-0.251130966439042
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.00475815542852032,0.0178699763612829,-0.266265345422019
-near x year,low-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.000848766709864353,0.00334187978404081,-0.253978827699802
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.00517384272958902,0.0179213917023717,-0.28869648158543
-near x year,low-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.00346350162552228,0.00813438023121035,-0.425785557974456
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.00720088122286761,0.017922436328494,-0.401780265299049
-near x year,low-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.00351545742349634,0.00813250689466867,-0.432272295496107
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.00746236199773015,0.0179230745306728,-0.416355016822552
-near x year,low-tax side,per 10 mi closer,TRUE,effective tax rate,-0.00740167356620163,0.00526869221994733,-1.40484075691095
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,effective tax rate,-0.0390731945017584,0.0281189526211794,-1.38956791983526
-near x year,low-tax side,per 10 mi closer,FALSE,effective tax rate,-0.00734066203402823,0.0052694495341889,-1.39306050592211
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,effective tax rate,-0.0385438288390745,0.0281383089402797,-1.36979904943397
-near x year,low-tax side,near < 10 mi,TRUE,effective tax rate,-0.0150431591268632,0.0148575097597677,-1.01249532190099
-IV: competition x year,low-tax side,near < 10 mi,TRUE,effective tax rate,-0.0336670051117944,0.0321873580825277,-1.04596981912815
-near x year,low-tax side,near < 10 mi,FALSE,effective tax rate,-0.0149061215406899,0.0149008353121545,-1.00035476055031
-IV: competition x year,low-tax side,near < 10 mi,FALSE,effective tax rate,-0.0332754684531357,0.0322579748254636,-1.03154239015863
-near x year,low-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.0122679135908842,0.0340037929209862,0.360780740530648
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.066808325713881,0.183697574985503,0.363686486983584
-near x year,low-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.0118171438110806,0.0341895674223181,0.34563595570287
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.0634020772527977,0.184817561381539,0.343052233666852
-near x year,low-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.0162623856269389,0.09686875279563,0.167880613279378
-IV: competition x year,low-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.0389583801241352,0.214744520859192,0.18141734172431
-near x year,low-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.0146890154548375,0.0974188680525138,0.150782037899674
-IV: competition x year,low-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.0350592273356366,0.215967257800967,0.162335845223107
-near x year,low-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.00132436232841659,0.00188420217454956,-0.702876976953491
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.00790539339212636,0.010174789964657,-0.776958877734715
-near x year,low-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.00133051666094014,0.00189198855652164,-0.703237160898189
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.00788934652545564,0.010223673152698,-0.77167436865621
-near x year,low-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.00215874901741445,0.00500043972387044,-0.431711836682942
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.00502412250462235,0.0111294296076922,-0.451426774032504
-near x year,low-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.002176805657155,0.00500654390865563,-0.434792083495283
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.00502751133416428,0.011134915662459,-0.451508703484333
-near x year,low-tax side,per 10 mi closer,TRUE,log population (ACS),-0.00155216703638712,0.00187037111922633,-0.829871152538523
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log population (ACS),-0.00915194627169404,0.0101363400696572,-0.902884691003024
-near x year,low-tax side,per 10 mi closer,FALSE,log population (ACS),-0.00149734429021515,0.00187123887091207,-0.800188748476199
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log population (ACS),-0.00926913030128907,0.0102475665450251,-0.904520137591978
-near x year,low-tax side,near < 10 mi,TRUE,log population (ACS),0.00184463403369682,0.0057347584181432,0.321658542382693
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log population (ACS),0.00399305653469939,0.0126792644398452,0.314928090161998
-near x year,low-tax side,near < 10 mi,FALSE,log population (ACS),0.00199443485728562,0.00571239757168654,0.34914146507782
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log population (ACS),0.0041134514098693,0.0126855757919642,0.324262097150925
-near x year,low-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0208181868612854,0.0297640531840136,0.699440588033453
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0949697775986317,0.162687470113678,0.583755943418823
-near x year,low-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0209698018900932,0.029800580471877,0.703670920433331
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0949950808169014,0.16288101007663,0.583217655466464
-near x year,low-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),0.106040992189192,0.0812695145468367,1.30480651669304
-IV: competition x year,low-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),0.224762533234615,0.184108933996275,1.22081274577997
-near x year,low-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),0.106396223120501,0.0814024311747829,1.30703987073865
-IV: competition x year,low-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),0.225005044053691,0.184424451153376,1.22003911437192
-near x year,low-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.000789737796260597,0.00530671870001437,-0.148818477274565
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.00490239933815487,0.0224133420742201,-0.218726833415603
-near x year,low-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.00126973517290089,0.00532006635942961,-0.238669047924625
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.00581670532352198,0.0223667175251255,-0.260060749503713
-near x year,low-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.00481046744439604,0.0189468437283403,-0.253892812616628
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.00570147600532725,0.03005327563202,-0.189712298756967
-near x year,low-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.00747332575453959,0.0189840236392055,-0.393663951150262
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.00934164912889647,0.0298285046323052,-0.313178593565135
-near x year,low-tax side,per 10 mi closer,TRUE,log district spending per pupil,-0.000141755561485413,0.00235956426001976,-0.0600770082372013
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.000845210184287546,0.0106496845780431,0.0793648091728603
-near x year,low-tax side,per 10 mi closer,FALSE,log district spending per pupil,-0.00010890737421344,0.00236565806389236,-0.0460368198919873
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00149123666337717,0.0106510210961369,0.140008798209783
-near x year,low-tax side,near < 10 mi,TRUE,log district spending per pupil,0.00602078685915283,0.00900594275081876,0.668534880327267
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log district spending per pupil,0.0102687409953431,0.0161564656324825,0.635580901722578
-near x year,low-tax side,near < 10 mi,FALSE,log district spending per pupil,0.00558191040420213,0.00902809322148994,0.618282318010993
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log district spending per pupil,0.0097602118235002,0.0161624679285375,0.603881280176708
-near x year,low-tax side,per 10 mi closer,TRUE,log district enrolment,-4.02255672680818e-05,0.00236224762973244,-0.0170285141836031
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district enrolment,-0.0010152370849217,0.0108258150798143,-0.093779274579953
-near x year,low-tax side,per 10 mi closer,FALSE,log district enrolment,-0.000116516946498186,0.00238644339157256,-0.048824517233324
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district enrolment,-0.00258708832497554,0.0108867248206811,-0.237636972329909
-near x year,low-tax side,near < 10 mi,TRUE,log district enrolment,-0.00198758211940438,0.00823475212567668,-0.241365142395352
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log district enrolment,-0.00244694531753223,0.0147019218456082,-0.166437105517819
-near x year,low-tax side,near < 10 mi,FALSE,log district enrolment,-0.00095605857874532,0.00833370693074856,-0.114721886273417
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log district enrolment,-0.00122231010395617,0.0148352390980909,-0.0823923427100995
-near x year,low-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00485544228367561,0.0106119426985818,-0.457545090619882
-IV: competition x year,low-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.0322201767872741,0.0509480940729726,-0.632411817822378
-near x year,low-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0048432486695318,0.0104874702207517,-0.461812865027105
-IV: competition x year,low-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0321532878418922,0.0508604312958496,-0.632186692536286
-near x year,low-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.0188117408793563,0.0404050068877399,-0.465579449884077
-IV: competition x year,low-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.0301991525415265,0.0612791318566337,-0.492812995656976
-near x year,low-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.0187401131171452,0.0401149579354841,-0.467160233528961
-IV: competition x year,low-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.0303967594273429,0.0614250790383754,-0.494859101578892
-near x year,high-tax side,per 10 mi closer,TRUE,log median sale price,-0.000750766231516994,0.00389730756154172,-0.19263715261415
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log median sale price,-0.00953379293870313,0.0275934193642572,-0.345509659852183
-near x year,high-tax side,per 10 mi closer,FALSE,log median sale price,-0.000751149163094487,0.00390182730987541,-0.192512149677499
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log median sale price,-0.0102472314862859,0.0276426944971892,-0.37070306179189
-near x year,high-tax side,near < 10 mi,TRUE,log median sale price,-0.00423455960015975,0.0105221110878683,-0.402443916890603
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log median sale price,-0.0197775460184806,0.035833888279767,-0.551922969231549
-near x year,high-tax side,near < 10 mi,FALSE,log median sale price,-0.00422592561894095,0.0105462470612282,-0.400704212067719
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log median sale price,-0.0204519187342089,0.0359799748701101,-0.56842504220866
-near x year,high-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.00315045767546391,0.00428369958232743,-0.735452525303419
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.0252855795988093,0.0314837632762017,-0.803130787669289
-near x year,high-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.00312835241789624,0.00429908985482026,-0.727677839621948
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.0265054995545795,0.0315632863057525,-0.839757283123868
-near x year,high-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.0134866955139615,0.00899657508922985,-1.49909219677463
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.0465579536066412,0.0308875141115344,-1.50733896675922
-near x year,high-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.01335985542956,0.00904687482379069,-1.47673707106319
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.0474475843545513,0.0310236767492041,-1.52939913402652
-near x year,high-tax side,per 10 mi closer,TRUE,effective tax rate,-0.00567436611736413,0.0100169265386192,-0.566477760966621
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,effective tax rate,-0.0396639620607032,0.0738101103160203,-0.537378441664438
-near x year,high-tax side,per 10 mi closer,FALSE,effective tax rate,-0.00567117246836471,0.0100172502720557,-0.566140638832305
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,effective tax rate,-0.0387180617787935,0.0737341028487512,-0.525103856735259
-near x year,high-tax side,near < 10 mi,TRUE,effective tax rate,-0.0297971015692953,0.01852222840871,-1.60872120307529
-IV: competition x year,high-tax side,near < 10 mi,TRUE,effective tax rate,-0.0975318228502574,0.0642191738200847,-1.51873369040064
-near x year,high-tax side,near < 10 mi,FALSE,effective tax rate,-0.029849548672947,0.0185040070256013,-1.61313971788103
-IV: competition x year,high-tax side,near < 10 mi,FALSE,effective tax rate,-0.0969069405958237,0.0642186860732538,-1.50901468904678
-near x year,high-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.0296603501677883,0.0230612805879951,1.28615364851978
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.210104469279903,0.169349612170406,1.24065515466601
-near x year,high-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.0296900225088959,0.0230962385900455,1.28549167835893
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.207666320442555,0.170150107030478,1.22048892044104
-near x year,high-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.13319351930183,0.0673653805935791,1.97718053588085
-IV: competition x year,high-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.469258432293108,0.23798930754075,1.97176266926512
-near x year,high-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.132687982756647,0.0672120062312905,1.97417083935926
-IV: competition x year,high-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.465665913457426,0.238313201689163,1.95400804553331
-near x year,high-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.00548126882719826,0.00173145965751269,-3.16569248576794
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.0421514459077019,0.0127576843087296,-3.30400446410632
-near x year,high-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.00547904706112473,0.00173398693197221,-3.15979720498409
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.0421427494287734,0.0128011550013651,-3.29210523771327
-near x year,high-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.0145851372427172,0.00485161761179201,-3.0062421257742
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.0501879720486811,0.0170917394514502,-2.93638761527124
-near x year,high-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.014575435209845,0.00485427093420342,-3.00260026838342
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.0501299849973519,0.0171276643837205,-2.92684302274158
-near x year,high-tax side,per 10 mi closer,TRUE,log population (ACS),-0.00556824481812319,0.00182076485538995,-3.05818996980291
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log population (ACS),-0.0444510740959708,0.013792371170145,-3.22287397486733
-near x year,high-tax side,per 10 mi closer,FALSE,log population (ACS),-0.00554115621929613,0.0018262856487855,-3.0341125568068
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log population (ACS),-0.0448629475861188,0.0138432081346953,-3.24079123492182
-near x year,high-tax side,near < 10 mi,TRUE,log population (ACS),-0.0132614723550626,0.00585305351663067,-2.26573570827294
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log population (ACS),-0.0500718733986864,0.0209369998219293,-2.39154959280466
-near x year,high-tax side,near < 10 mi,FALSE,log population (ACS),-0.0131367894578811,0.00588285532096764,-2.23306349402458
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log population (ACS),-0.0502063118384131,0.0212098584222557,-2.36712149788473
-near x year,high-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.00661956756990633,0.0241351095405075,0.274271287594377
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0401858782255819,0.173141335546333,0.232098696124635
-near x year,high-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.00663595324484424,0.0243646164876502,0.272360258500593
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0393892376419253,0.174903090248753,0.225206070321025
-near x year,high-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),-0.022177257388324,0.0701667794642075,-0.316064917866678
-IV: competition x year,high-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),-0.0853474191146263,0.240388764370689,-0.35503913561874
-near x year,high-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),-0.0221217276288516,0.0708213902920912,-0.312359409178699
-IV: competition x year,high-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),-0.0860269943591552,0.242895767111093,-0.354172472342052
-near x year,high-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.00266229163098118,0.00376898139175243,-0.706369003786277
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.019371937844717,0.0234965683611128,-0.824458173933937
-near x year,high-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.00261173666918257,0.00376274656094858,-0.694103795426541
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.0181234858537597,0.0236798156572154,-0.765355867465862
-near x year,high-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.0137326310107339,0.0106161873085087,-1.29355583239639
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.046333368713997,0.0351483692662207,-1.31822242912776
-near x year,high-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.0142913943937519,0.0105484962250112,-1.35482765399925
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.0475035768119041,0.0347925528998857,-1.36533748899064
-near x year,high-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.0010258656780743,0.00197288764792239,0.519981803907904
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.00110891960946403,0.0125433684198193,0.0884068435486488
-near x year,high-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00105826962161773,0.00197193791060859,0.536664778299799
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00186910975864179,0.0126801197278489,0.147404740551205
-near x year,high-tax side,near < 10 mi,TRUE,log district spending per pupil,-0.00102899279780801,0.00626930338654222,-0.164131919347987
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log district spending per pupil,-0.00674904730465563,0.020686260765827,-0.326257479834384
-near x year,high-tax side,near < 10 mi,FALSE,log district spending per pupil,-0.00108786836627854,0.00627309603025337,-0.173418095471847
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log district spending per pupil,-0.00687097867019877,0.0206425556059342,-0.332855039916838
-near x year,high-tax side,per 10 mi closer,TRUE,log district enrolment,-0.00478259448123628,0.001871903780974,-2.55493606554273
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district enrolment,-0.0297930283260742,0.0120890399712854,-2.4644660284721
-near x year,high-tax side,per 10 mi closer,FALSE,log district enrolment,-0.00506431384036862,0.00189102387367127,-2.6780803303856
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district enrolment,-0.0334393774280143,0.0123570557730875,-2.70609585665561
-near x year,high-tax side,near < 10 mi,TRUE,log district enrolment,-0.01234968366095,0.00584226942325037,-2.11385041775072
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log district enrolment,-0.041818552775392,0.0192692789802319,-2.17021886591051
-near x year,high-tax side,near < 10 mi,FALSE,log district enrolment,-0.0118905981065692,0.00591018502195424,-2.01188254892188
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log district enrolment,-0.0411946703012033,0.0195336180641589,-2.10891142469858
-near x year,high-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00715666521830532,0.00550259630351497,-1.30059790389016
-IV: competition x year,high-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.0393528062040984,0.0371477635962116,-1.05935869065646
-near x year,high-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0075894675748395,0.00572937765481873,-1.32465828438737
-IV: competition x year,high-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0432041209626617,0.0385996540196347,-1.11928777757139
-near x year,high-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.0510188738668867,0.0187082281653651,-2.72708208473419
-IV: competition x year,high-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.120727845336533,0.0488962509598424,-2.4690613895058
-near x year,high-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.0521744181501956,0.0191366355858727,-2.72641540965082
-IV: competition x year,high-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.123743183842057,0.0496768496998461,-2.49096278426932
-near x year,both sides pooled,per 10 mi closer,TRUE,log median sale price,-0.000211832961396281,0.0029409811809726,-0.0720279894229812
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log median sale price,-0.00411700975199944,0.018195907659513,-0.226260202515758
-near x year,both sides pooled,per 10 mi closer,FALSE,log median sale price,-0.00022252274535822,0.0029435006276356,-0.0755979948735272
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log median sale price,-0.00452198463593675,0.0182225678018539,-0.248152987279691
-near x year,both sides pooled,near < 10 mi,TRUE,log median sale price,-0.00495641696158105,0.00791508460810139,-0.626198860402322
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log median sale price,-0.0155151049846087,0.0215197791040293,-0.720969528060987
-near x year,both sides pooled,near < 10 mi,FALSE,log median sale price,-0.0049660697936708,0.00792359266288927,-0.626744711010922
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log median sale price,-0.0158082761385089,0.0215514149494354,-0.733514536080288
-near x year,both sides pooled,per 10 mi closer,TRUE,log tax bill per parcel,-0.0021126699497778,0.0028066395344452,-0.752740037988323
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log tax bill per parcel,-0.0146459305694924,0.0177016032196484,-0.827378762689454
-near x year,both sides pooled,per 10 mi closer,FALSE,log tax bill per parcel,-0.00210174627107725,0.00281427070752765,-0.746817378106329
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log tax bill per parcel,-0.0153626224921188,0.0177506092379581,-0.8654701529493
-near x year,both sides pooled,near < 10 mi,TRUE,log tax bill per parcel,-0.00882417731242535,0.00612959627178452,-1.43960171619204
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log tax bill per parcel,-0.024308037155799,0.0165880577236428,-1.46539381287255
-near x year,both sides pooled,near < 10 mi,FALSE,log tax bill per parcel,-0.00877916401505458,0.00614639523814094,-1.42834355340122
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log tax bill per parcel,-0.0247485304181596,0.0166292621969332,-1.48825186139188
-near x year,both sides pooled,per 10 mi closer,TRUE,effective tax rate,-0.00640862080258443,0.00604821436433377,-1.0595888995562
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,effective tax rate,-0.0391609042787671,0.0383327449983905,-1.02160448672307
-near x year,both sides pooled,per 10 mi closer,FALSE,effective tax rate,-0.00637731903038276,0.00604791543829176,-1.05446564117041
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,effective tax rate,-0.0384067164681265,0.0382997545795835,-1.0027927564998
-near x year,both sides pooled,near < 10 mi,TRUE,effective tax rate,-0.0229915330035189,0.0120463103560198,-1.90859543910303
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,effective tax rate,-0.0618303589217028,0.0327666837815788,-1.88698860506791
-near x year,both sides pooled,near < 10 mi,FALSE,effective tax rate,-0.0229549242561934,0.0120504317888498,-1.90490470867885
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,effective tax rate,-0.0613226841049131,0.0327729453791698,-1.8711374090865
-near x year,both sides pooled,per 10 mi closer,TRUE,sales per 100 parcels,0.0220594418376759,0.0202463811804892,1.0895498628137
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,sales per 100 parcels,0.137010754393687,0.127099301793356,1.07798195946383
-near x year,both sides pooled,per 10 mi closer,FALSE,sales per 100 parcels,0.0218902296531252,0.0203059446012428,1.07802075121319
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,sales per 100 parcels,0.134372344858626,0.127770385448319,1.05167049772247
-near x year,both sides pooled,near < 10 mi,TRUE,sales per 100 parcels,0.0795611087872848,0.0588148721290302,1.35273793697521
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,sales per 100 parcels,0.225811519529018,0.160850066778574,1.40386338688855
-near x year,both sides pooled,near < 10 mi,FALSE,sales per 100 parcels,0.0785972670575699,0.0588982399185832,1.33445867255486
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,sales per 100 parcels,0.222217750276987,0.16132824606727,1.37742618353594
-near x year,both sides pooled,per 10 mi closer,TRUE,log median home value (ACS),-0.00360513870694281,0.00127867144920443,-2.8194409980655
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log median home value (ACS),-0.0241020561115212,0.00806444370100315,-2.98868179940584
-near x year,both sides pooled,per 10 mi closer,FALSE,log median home value (ACS),-0.00360605729646832,0.00128197381623128,-2.81289465573434
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log median home value (ACS),-0.0240784148251884,0.00809745954306008,-2.97357642815577
-near x year,both sides pooled,near < 10 mi,TRUE,log median home value (ACS),-0.00863911634425083,0.00351435443215917,-2.45823707056862
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log median home value (ACS),-0.0235997935665274,0.00963128311609839,-2.4503270521745
-near x year,both sides pooled,near < 10 mi,FALSE,log median home value (ACS),-0.00864209847001281,0.00351758996498727,-2.4568237219326
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log median home value (ACS),-0.0235660098077788,0.00964397071342344,-2.44360030821924
-near x year,both sides pooled,per 10 mi closer,TRUE,log population (ACS),-0.00375619380110701,0.00131384700439673,-2.85892785730536
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log population (ACS),-0.0257959699688741,0.0084610310274289,-3.04879746750117
-near x year,both sides pooled,per 10 mi closer,FALSE,log population (ACS),-0.00371745224669694,0.00131759528955643,-2.8213915730895
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log population (ACS),-0.0260627949872995,0.00853198419484744,-3.05471674490901
-near x year,both sides pooled,near < 10 mi,TRUE,log population (ACS),-0.00603283381010763,0.00412118038570876,-1.46386065289159
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log population (ACS),-0.0181664084918847,0.0113763424985147,-1.59685843620271
-near x year,both sides pooled,near < 10 mi,FALSE,log population (ACS),-0.00589613526163287,0.00412402532559514,-1.42970394120507
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log population (ACS),-0.0181557687721282,0.0114592657629737,-1.58437452692578
-near x year,both sides pooled,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0130470501000538,0.0190297132634175,0.685614644816287
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0688629325933462,0.119435631015385,0.576569420765868
-near x year,both sides pooled,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0131177423097866,0.0190938207028478,0.687015056542883
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0684303317664491,0.119918969986767,0.570638088152361
-near x year,both sides pooled,near < 10 mi,TRUE,move-out rate (Data Axle),0.0393036785184736,0.053868309509058,0.729625244910733
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,move-out rate (Data Axle),0.0966271072314399,0.147623504968232,0.654550962275509
-near x year,both sides pooled,near < 10 mi,FALSE,move-out rate (Data Axle),0.0394886518551109,0.0541251903792997,0.729579916086789
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,move-out rate (Data Axle),0.0965143472724353,0.148432464835178,0.650223974786153
-near x year,both sides pooled,per 10 mi closer,TRUE,log district property tax per pupil,-0.00191244684263731,0.00309947124400837,-0.617023579855529
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district property tax per pupil,-0.012148896027649,0.0161986345028241,-0.749995070604933
-near x year,both sides pooled,per 10 mi closer,FALSE,log district property tax per pupil,-0.00201324640309622,0.00309161741751437,-0.651195193716708
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district property tax per pupil,-0.0116740519627425,0.0162063292679439,-0.720339058261251
-near x year,both sides pooled,near < 10 mi,TRUE,log district property tax per pupil,-0.010534558154177,0.00964164488971917,-1.0926100550965
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district property tax per pupil,-0.0244360161351312,0.0228150810613672,-1.07104664977539
-near x year,both sides pooled,near < 10 mi,FALSE,log district property tax per pupil,-0.0117021424537427,0.00960709634774542,-1.21807276935335
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district property tax per pupil,-0.0265690886120777,0.0225768707869355,-1.17682777488598
-near x year,both sides pooled,per 10 mi closer,TRUE,log district spending per pupil,0.000564119618618495,0.00151532294495623,0.372276827521272
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district spending per pupil,0.00112620481670216,0.00824617169357525,0.136573049719496
-near x year,both sides pooled,per 10 mi closer,FALSE,log district spending per pupil,0.000624959022667624,0.00151469835281503,0.412596357225946
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district spending per pupil,0.00195729591958299,0.0082865911656983,0.236200372438436
-near x year,both sides pooled,near < 10 mi,TRUE,log district spending per pupil,0.00173040553541898,0.00528871253152988,0.32718842725952
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district spending per pupil,0.00253471213268395,0.0130332018727474,0.194481153398235
-near x year,both sides pooled,near < 10 mi,FALSE,log district spending per pupil,0.00158295304687976,0.00528197914168015,0.29968937862489
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district spending per pupil,0.00233493568126438,0.0129928743675925,0.179708940085521
-near x year,both sides pooled,per 10 mi closer,TRUE,log district enrolment,-0.00282468366864523,0.00146457755948082,-1.92866786081753
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district enrolment,-0.0154893726553397,0.00807636498303178,-1.91786437189038
-near x year,both sides pooled,per 10 mi closer,FALSE,log district enrolment,-0.00306512914623759,0.00147876249464959,-2.07276635519749
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district enrolment,-0.018289066905865,0.00818325605731865,-2.23493763090894
-near x year,both sides pooled,near < 10 mi,TRUE,log district enrolment,-0.0080828236417115,0.00479914230327004,-1.68422254039102
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district enrolment,-0.0197264326404342,0.0117934575832492,-1.67265897224683
-near x year,both sides pooled,near < 10 mi,FALSE,log district enrolment,-0.00752336546860145,0.00485180185480724,-1.55063328918661
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district enrolment,-0.0190757283850573,0.0119108720541579,-1.60153919027266
-near x year,both sides pooled,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00622638617770016,0.00568177627326726,-1.0958520501758
-IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log county school property tax (CoG),-0.0358765413504456,0.03236389857432,-1.10853583563362
-near x year,both sides pooled,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0062736978861484,0.00569766241619805,-1.10110031586159
-IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0369750038233003,0.0325890675296956,-1.13458305579342
-near x year,both sides pooled,near < 10 mi,TRUE,log county school property tax (CoG),-0.0363349635204238,0.0213265313178852,-1.70374464458512
-IV: competition x year,both sides pooled,near < 10 mi,TRUE,log county school property tax (CoG),-0.0674289938318351,0.04137447758943,-1.62972435569945
-near x year,both sides pooled,near < 10 mi,FALSE,log county school property tax (CoG),-0.0363246710393572,0.0213012606879698,-1.70528268591503
-IV: competition x year,both sides pooled,near < 10 mi,FALSE,log county school property tax (CoG),-0.0677266049708101,0.0413385972111125,-1.63833824899613
+near x year,low-tax side,per 10 mi closer,TRUE,log median sale price,0.00309990136416494,0.00709576815706962,0.436866213149378
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log median sale price,0.0143576947441202,0.0380201904207605,0.377633425430726
+near x year,low-tax side,per 10 mi closer,FALSE,log median sale price,0.00308524272383223,0.00710537877120182,0.434212281030921
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log median sale price,0.0143088246222238,0.0381196748342034,0.37536586249642
+near x year,low-tax side,near < 10 mi,TRUE,log median sale price,-0.0039359026822993,0.0189956240156938,-0.207200494126833
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log median sale price,-0.00888485192648927,0.0422723317993284,-0.210181259190212
+near x year,low-tax side,near < 10 mi,FALSE,log median sale price,-0.00391056542740292,0.0190330177705971,-0.205462185478758
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log median sale price,-0.00878158080876051,0.0423880078302008,-0.207171350065284
+near x year,low-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.0025362700439883,0.00371255079773738,-0.683161034600263
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.0134629252128135,0.0197258395145056,-0.682502014827475
+near x year,low-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.00253895194291268,0.00371397291961491,-0.683621555101681
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.0138622479656712,0.0197660431139957,-0.701316287014258
+near x year,low-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.0045002268415648,0.00926938424309863,-0.485493612471117
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.00914135906940172,0.0202035256775911,-0.452463555880295
+near x year,low-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.00452383182371314,0.00926656025327608,-0.488188896426135
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.00934975061746702,0.0201921628948326,-0.46303858908843
+near x year,low-tax side,per 10 mi closer,TRUE,effective tax rate,-0.0145749929759906,0.0083421939113939,-1.7471414751081
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,effective tax rate,-0.0760498535811911,0.0439852761374436,-1.72898433883996
+near x year,low-tax side,per 10 mi closer,FALSE,effective tax rate,-0.0144585531451387,0.00834842568249096,-1.73188978317941
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,effective tax rate,-0.0750371100282284,0.0440310121146347,-1.70418771734952
+near x year,low-tax side,near < 10 mi,TRUE,effective tax rate,-0.027876859946456,0.0236339048198572,-1.17952831573706
+IV: competition x year,low-tax side,near < 10 mi,TRUE,effective tax rate,-0.0608040880357241,0.0505679427824977,-1.20242360456019
+near x year,low-tax side,near < 10 mi,FALSE,effective tax rate,-0.0276485815281383,0.0237199273156289,-1.1656267390803
+IV: competition x year,low-tax side,near < 10 mi,FALSE,effective tax rate,-0.0600713719770062,0.0507084676832763,-1.18464183047712
+near x year,low-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.00893533995496285,0.0159181406672001,0.561330631621723
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.0470853455377238,0.0858344065570956,0.548560273512271
+near x year,low-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.00864399002988226,0.0160157806453116,0.5397170591502
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.0447148780453227,0.0864028811915033,0.517516053037823
+near x year,low-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.0148746160092864,0.0460224546764258,0.323203447401201
+IV: competition x year,low-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.032083689195547,0.101834766750046,0.315056342931452
+near x year,low-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.0140062401502982,0.0463075604246614,0.302461196872705
+IV: competition x year,low-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.0296946532516084,0.102457353475181,0.289824519611485
+near x year,low-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.00233950057340905,0.00332846379966697,-0.70287697695349
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.0139649641016413,0.0179738780285995,-0.776958877734715
+near x year,low-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.0023503722692878,0.00334221852879028,-0.703237160898189
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.0139366171357302,0.0180602307162273,-0.77167436865621
+near x year,low-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.00381345380770956,0.00883333159685923,-0.431711836682942
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.00887516748871463,0.0196602594246561,-0.451426774032504
+near x year,low-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.00384535105978359,0.00884411470620834,-0.434792083495283
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.00888115389325546,0.0196699506005505,-0.451508703484334
+near x year,low-tax side,per 10 mi closer,TRUE,log population (ACS),-0.00300045800545278,0.00361557091878006,-0.829871152538523
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log population (ACS),-0.0176914145273276,0.0195943232880314,-0.902884691003023
+near x year,low-tax side,per 10 mi closer,FALSE,log population (ACS),-0.00289448142962272,0.00361724834938592,-0.800188748476199
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log population (ACS),-0.017917940250054,0.0198093326012125,-0.904520137591977
+near x year,low-tax side,near < 10 mi,TRUE,log population (ACS),0.0035658191572082,0.0110857281476012,0.321658542382693
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log population (ACS),0.00771888473656272,0.0245099912573443,0.314928090161998
+near x year,low-tax side,near < 10 mi,FALSE,log population (ACS),0.00385539564596462,0.0110425029152733,0.34914146507782
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log population (ACS),0.00795161727020798,0.0245221915853674,0.324262097150925
+near x year,low-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.00796625687124168,0.0113894689663916,0.699440588033453
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0363409958992308,0.0622537488636024,0.583755943418824
+near x year,low-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.00802427365594398,0.0114034464448275,0.703670920433331
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.036350678391647,0.0623278085821551,0.583217655466464
+near x year,low-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),0.0405774906474385,0.0310984733202283,1.30480651669304
+IV: competition x year,low-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),0.0860073015343941,0.0704508548355994,1.22081274577997
+near x year,low-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),0.040713422794953,0.0311493350022631,1.30703987073865
+IV: competition x year,low-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),0.0861001003689751,0.070571590168484,1.22003911437192
+near x year,low-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.000961155373462698,0.00718343907247108,-0.133801562700811
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.00496796072028876,0.0303156253068183,-0.163874591733109
+near x year,low-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.0016772931746406,0.00720458648573777,-0.23280908320845
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.00632012234371832,0.0302594995092018,-0.208864073967793
+near x year,low-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.006242123510648,0.0255412873180798,-0.244393457264366
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.00664099688983774,0.040505661158136,-0.163952314317522
+near x year,low-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.0102820592024267,0.025600743930691,-0.401631266273489
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.012171902035002,0.0402155483108559,-0.302666569181559
+near x year,low-tax side,per 10 mi closer,TRUE,log district spending per pupil,-0.000607310881955776,0.00861430690831586,-0.0705002606036135
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.00394217114619307,0.0389188618407291,0.101292046060492
+near x year,low-tax side,per 10 mi closer,FALSE,log district spending per pupil,-0.000490705387803309,0.00863397740456445,-0.0568342219130539
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00612062267709648,0.0388976443317063,0.157352014042337
+near x year,low-tax side,near < 10 mi,TRUE,log district spending per pupil,0.0227571704705417,0.0321898019866751,0.706968327421273
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log district spending per pupil,0.0394633923831857,0.0577176819826524,0.68373141518481
+near x year,low-tax side,near < 10 mi,FALSE,log district spending per pupil,0.0212588934949398,0.0322695141736203,0.658791867164786
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log district spending per pupil,0.0377444651787859,0.0577355497770974,0.653747393495133
+near x year,low-tax side,per 10 mi closer,TRUE,log district enrolment,-0.000739583719709641,0.00259834351748861,-0.284636621267259
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log district enrolment,-0.00430360653664694,0.0119338431852505,-0.360622011689069
+near x year,low-tax side,per 10 mi closer,FALSE,log district enrolment,-0.000835885934827549,0.00262339744496915,-0.31862725811162
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log district enrolment,-0.00612306004175141,0.0119874141236331,-0.510790732563399
+near x year,low-tax side,near < 10 mi,TRUE,log district enrolment,-0.00368172383299443,0.00889828108026953,-0.413756746924757
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log district enrolment,-0.00525882874047745,0.0159005525267928,-0.330732452951947
+near x year,low-tax side,near < 10 mi,FALSE,log district enrolment,-0.00252403679230493,0.0090081195594885,-0.280195747362866
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log district enrolment,-0.00388690617329058,0.016048040928413,-0.242204403056377
+near x year,low-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00154130165022664,0.00891066137152209,-0.172972755440191
+IV: competition x year,low-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.015441812672661,0.0427883768364113,-0.360888021803168
+near x year,low-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.00166148958695595,0.00880760592708746,-0.188642589224627
+IV: competition x year,low-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0152294014411892,0.0427122266138598,-0.356558359246188
+near x year,low-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.00544411306385778,0.0339896173269026,-0.160169883982447
+IV: competition x year,low-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.0101818334396547,0.0515627424713126,-0.197464932074151
+near x year,low-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.00598839302108528,0.0337551644994693,-0.177406720123655
+IV: competition x year,low-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.0107923388163839,0.0516992054360481,-0.208752508386885
+near x year,high-tax side,per 10 mi closer,TRUE,log median sale price,-0.000241114213672644,0.00634304883979994,-0.0380123533275914
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log median sale price,-0.0108543845441794,0.0448861098963849,-0.241820566969062
+near x year,high-tax side,per 10 mi closer,FALSE,log median sale price,-0.0002528213515488,0.00635089465557427,-0.0398087773864891
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log median sale price,-0.0120666496785934,0.0449693729708238,-0.268330396477226
+near x year,high-tax side,near < 10 mi,TRUE,log median sale price,-0.00679280409969338,0.0171093287624451,-0.397023413016855
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log median sale price,-0.0341523778033127,0.0582350256372055,-0.586457676108471
+near x year,high-tax side,near < 10 mi,FALSE,log median sale price,-0.00676610011340322,0.0171499384303368,-0.394526204329373
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log median sale price,-0.0352285948010748,0.058472972657872,-0.602476549417094
+near x year,high-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.00414342928644902,0.00476416964586486,-0.86970649545307
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log tax bill per parcel,-0.0317644824115606,0.0349501065087908,-0.908852234930132
+near x year,high-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.00411999279349867,0.00477996792058463,-0.861928963112112
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log tax bill per parcel,-0.0331391359508566,0.0350364203883967,-0.945848222606427
+near x year,high-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.0155506161452121,0.0101043826791482,-1.5389971499499
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log tax bill per parcel,-0.0533459354701571,0.0345892013879755,-1.54227138325033
+near x year,high-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.0153770010592883,0.0101554851204384,-1.51415721424684
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log tax bill per parcel,-0.0542524592521926,0.0347296607887598,-1.56213616891275
+near x year,high-tax side,per 10 mi closer,TRUE,effective tax rate,-0.00677576700126771,0.0121155917531087,-0.55926009553179
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,effective tax rate,-0.0460538643666032,0.0892623266245565,-0.515938426748711
+near x year,high-tax side,per 10 mi closer,FALSE,effective tax rate,-0.006736756881837,0.0121181299566049,-0.555923802266636
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,effective tax rate,-0.0442131240342147,0.0891956693867388,-0.495686890834501
+near x year,high-tax side,near < 10 mi,TRUE,effective tax rate,-0.0316298548413096,0.0225309206828689,-1.40384209267396
+IV: competition x year,high-tax side,near < 10 mi,TRUE,effective tax rate,-0.102780521429376,0.0781471228360686,-1.31521824091952
+near x year,high-tax side,near < 10 mi,FALSE,effective tax rate,-0.031725748034069,0.0225208603780703,-1.40872717567052
+IV: competition x year,high-tax side,near < 10 mi,FALSE,effective tax rate,-0.101582866026282,0.0782068697397987,-1.29889952588894
+near x year,high-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.017438824070001,0.0152979190729601,1.13994746519643
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,sales per 100 parcels,0.121890391038265,0.112368380174576,1.0847392375764
+near x year,high-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.0173982021777735,0.0153255757091595,1.13523971353163
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,sales per 100 parcels,0.118732918694404,0.112929771372995,1.05138722279213
+near x year,high-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.0813738105513478,0.0446330348720271,1.82317448913489
+IV: competition x year,high-tax side,near < 10 mi,TRUE,sales per 100 parcels,0.285958765603267,0.157766340136623,1.81254610682882
+near x year,high-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.0811694821709453,0.0445248411961092,1.82301564678098
+IV: competition x year,high-tax side,near < 10 mi,FALSE,sales per 100 parcels,0.282741734678093,0.157939629207456,1.7901886695372
+near x year,high-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.00962540218372902,0.00304053606817533,-3.16569248576794
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log median home value (ACS),-0.0740202008473127,0.0224031782194743,-3.30400446410632
+near x year,high-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.00962150064328462,0.00304497409773899,-3.15979720498409
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log median home value (ACS),-0.0740049293636638,0.0224795150883659,-3.29210523771327
+near x year,high-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.0256122836321086,0.00851970086258858,-3.0062421257742
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log median home value (ACS),-0.0881327719883484,0.0300140116141334,-2.93638761527124
+near x year,high-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.0255952463417771,0.00852436023911947,-3.00260026838342
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log median home value (ACS),-0.0880309436146473,0.0300770977229207,-2.92684302274158
+near x year,high-tax side,per 10 mi closer,TRUE,log population (ACS),-0.0110328617156815,0.00360764433361625,-3.05818996980291
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log population (ACS),-0.0880748906761717,0.0273280591679969,-3.22287397486733
+near x year,high-tax side,per 10 mi closer,FALSE,log population (ACS),-0.0109791886508842,0.00361858317558234,-3.0341125568068
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log population (ACS),-0.0888909724774547,0.0274287869948522,-3.24079123492182
+near x year,high-tax side,near < 10 mi,TRUE,log population (ACS),-0.0262761418398006,0.0115971786752788,-2.26573570827294
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log population (ACS),-0.0992118832948552,0.0414843512312474,-2.39154959280466
+near x year,high-tax side,near < 10 mi,FALSE,log population (ACS),-0.0260290964587431,0.0116562276569359,-2.23306349402458
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log population (ACS),-0.0994782582053027,0.0420249903920001,-2.36712149788473
+near x year,high-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.00245333193373722,0.00894490981996439,0.274271287594377
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0148936161305006,0.0641693227027126,0.232098696124636
+near x year,high-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.00245940476238599,0.0090299692617623,0.272360258500593
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0145983666654931,0.0648222609838336,0.225206070321025
+near x year,high-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),-0.00821929426339475,0.0260050824965706,-0.316064917866678
+IV: competition x year,high-tax side,near < 10 mi,TRUE,move-out rate (Data Axle),-0.0316313031878199,0.0890924408451335,-0.355039135618739
+near x year,high-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),-0.00819871392627338,0.0262476931552363,-0.312359409178699
+IV: competition x year,high-tax side,near < 10 mi,FALSE,move-out rate (Data Axle),-0.0318831661125764,0.0900215815806948,-0.354172472342052
+near x year,high-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.00380009496540902,0.00462338811036478,-0.821928610511827
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district property tax per pupil,-0.0251529011765771,0.0287821868305331,-0.873905145730416
+near x year,high-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.00373004599318389,0.00461569593137997,-0.808122122565536
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district property tax per pupil,-0.0232587514263101,0.0290005434181759,-0.802010882724798
+near x year,high-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.0178277995288186,0.0130025418260318,-1.37110110987118
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log district property tax per pupil,-0.059303971211095,0.043037075333932,-1.37797400847863
+near x year,high-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.0186017816705342,0.0129231157944068,-1.43941925201856
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log district property tax per pupil,-0.0611239586373773,0.0426077685655594,-1.43457310005164
+near x year,high-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.00226153575589444,0.00594442354758156,0.380446604753547
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district spending per pupil,0.000261536993590285,0.0376597642583073,0.00694473262754407
+near x year,high-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00234981491935707,0.00594457604723647,0.395287216562645
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district spending per pupil,0.00288587010550424,0.0380715403325399,0.0758012436664579
+near x year,high-tax side,near < 10 mi,TRUE,log district spending per pupil,-0.00233058321959869,0.018828548463622,-0.123779229402709
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log district spending per pupil,-0.0196909125447043,0.0620927421135637,-0.317121001174193
+near x year,high-tax side,near < 10 mi,FALSE,log district spending per pupil,-0.00249047640687466,0.0188407396637614,-0.132185702436348
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log district spending per pupil,-0.0201069483529055,0.0619500021341242,-0.324567355290371
+near x year,high-tax side,per 10 mi closer,TRUE,log district enrolment,-0.00541063824483382,0.0019682271781721,-2.74899071857077
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log district enrolment,-0.0346808118427,0.0126792172978672,-2.73524863782671
+near x year,high-tax side,per 10 mi closer,FALSE,log district enrolment,-0.00572406455717237,0.00198853358017573,-2.87853552700203
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log district enrolment,-0.0389097939116432,0.0129588723797916,-3.00256015888543
+near x year,high-tax side,near < 10 mi,TRUE,log district enrolment,-0.0151032634740879,0.00609973215500367,-2.47605355289224
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log district enrolment,-0.0505741232871984,0.0201321962074232,-2.51210164882809
+near x year,high-tax side,near < 10 mi,FALSE,log district enrolment,-0.0146037984239967,0.00617247083629527,-2.36595665031315
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log district enrolment,-0.0498643629131974,0.0204157090742017,-2.44245069970204
+near x year,high-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00592647348333267,0.00448787196345211,-1.32055315561498
+IV: competition x year,high-tax side,per 10 mi closer,TRUE,log county school property tax (CoG),-0.0324625036005406,0.0302867711289319,-1.07183771628697
+near x year,high-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.00623076208660438,0.00466894245191137,-1.3345125048722
+IV: competition x year,high-tax side,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0352666354302262,0.0314373237894534,-1.12180781247218
+near x year,high-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.0435359009634951,0.0152429805130445,-2.85612783708792
+IV: competition x year,high-tax side,near < 10 mi,TRUE,log county school property tax (CoG),-0.102334392183001,0.0397863365982754,-2.57209888953276
+near x year,high-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.0443384335299694,0.0155859402913831,-2.84477116561793
+IV: competition x year,high-tax side,near < 10 mi,FALSE,log county school property tax (CoG),-0.104424132410753,0.0403903569846712,-2.58537285150473
+near x year,both sides pooled,per 10 mi closer,TRUE,log median sale price,0.00122518691714416,0.00472552608345385,0.259269951219628
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log median sale price,0.00249169370665161,0.0291636381850234,0.085438369892107
+near x year,both sides pooled,per 10 mi closer,FALSE,log median sale price,0.00120808328254673,0.00472987702528212,0.255415368325494
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log median sale price,0.00192316533330316,0.0292079550420325,0.0658438884384606
+near x year,both sides pooled,near < 10 mi,TRUE,log median sale price,-0.00545514263229026,0.0127541100525161,-0.427716446684895
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log median sale price,-0.019408165063633,0.0345761849026245,-0.561315978564187
+near x year,both sides pooled,near < 10 mi,FALSE,log median sale price,-0.00545538971831657,0.0127683108598424,-0.427260095575703
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log median sale price,-0.0197988910125668,0.034625966358742,-0.571793168382381
+near x year,both sides pooled,per 10 mi closer,TRUE,log tax bill per parcel,-0.00338441798317462,0.00308869227198145,-1.09574463402385
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log tax bill per parcel,-0.0220625217354009,0.0194076116689224,-1.13679736135332
+near x year,both sides pooled,per 10 mi closer,FALSE,log tax bill per parcel,-0.00336837251848991,0.00309608673848592,-1.08794513946245
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log tax bill per parcel,-0.0228255704752867,0.0194551185164022,-1.17324242748986
+near x year,both sides pooled,near < 10 mi,TRUE,log tax bill per parcel,-0.0102844850084079,0.00685868448871828,-1.49948361458011
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log tax bill per parcel,-0.0278814747010173,0.0184555970989326,-1.51073273606682
+near x year,both sides pooled,near < 10 mi,FALSE,log tax bill per parcel,-0.0102039137606923,0.00687569995430849,-1.48405454404657
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log tax bill per parcel,-0.0282877778565255,0.0184928530908966,-1.52966001068005
+near x year,both sides pooled,per 10 mi closer,TRUE,effective tax rate,-0.00931101990348712,0.0078043837374849,-1.19304998532629
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,effective tax rate,-0.0560802965668726,0.0493589329687385,-1.13617319487824
+near x year,both sides pooled,per 10 mi closer,FALSE,effective tax rate,-0.00924149765020367,0.00780618080300731,-1.18386928043524
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,effective tax rate,-0.0546995912398846,0.0493315970771886,-1.10881452214687
+near x year,both sides pooled,near < 10 mi,TRUE,effective tax rate,-0.0287042304905543,0.0156943779038367,-1.82894987405249
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,effective tax rate,-0.0765228459824899,0.0425227756707479,-1.79957316462601
+near x year,both sides pooled,near < 10 mi,FALSE,effective tax rate,-0.0286614136147579,0.0157110177320505,-1.82428752252558
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,effective tax rate,-0.0756183325419868,0.0425617633822759,-1.77667292266083
+near x year,both sides pooled,per 10 mi closer,TRUE,sales per 100 parcels,0.0127067747157685,0.0111314394877925,1.14152124976322
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,sales per 100 parcels,0.0779437966261443,0.0697759992474664,1.1170574046487
+near x year,both sides pooled,per 10 mi closer,FALSE,sales per 100 parcels,0.0125480338734758,0.011168309173206,1.12353926443762
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,sales per 100 parcels,0.0753864455588406,0.0701687608585065,1.07435908282399
+near x year,both sides pooled,near < 10 mi,TRUE,sales per 100 parcels,0.0446344134812421,0.0325846452052549,1.3697989712665
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,sales per 100 parcels,0.124859752895802,0.0890076440366245,1.40279808826785
+near x year,both sides pooled,near < 10 mi,FALSE,sales per 100 parcels,0.0441129811281692,0.0326361657516752,1.35165942788193
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,sales per 100 parcels,0.122219408332467,0.0892825992166557,1.36890513274469
+near x year,both sides pooled,per 10 mi closer,TRUE,log median home value (ACS),-0.00634647796490757,0.00225097030555421,-2.8194409980655
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log median home value (ACS),-0.042429204658938,0.0141966283153238,-2.98868179940584
+near x year,both sides pooled,per 10 mi closer,FALSE,log median home value (ACS),-0.00634809504781515,0.00225678378494338,-2.81289465573434
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log median home value (ACS),-0.0423875865923476,0.0142547493284498,-2.97357642815577
+near x year,both sides pooled,near < 10 mi,TRUE,log median home value (ACS),-0.0152082807270279,0.00618666153444267,-2.45823707056862
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log median home value (ACS),-0.0415450228192037,0.0169548888514027,-2.4503270521745
+near x year,both sides pooled,near < 10 mi,FALSE,log median home value (ACS),-0.0152135304544242,0.00619235735906066,-2.4568237219326
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log median home value (ACS),-0.0414855499672836,0.0169772240688233,-2.44360030821924
+near x year,both sides pooled,per 10 mi closer,TRUE,log population (ACS),-0.00735663180511427,0.00257321351649921,-2.85892785730536
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log population (ACS),-0.0505222741864019,0.0165712136424104,-3.04879746750118
+near x year,both sides pooled,per 10 mi closer,FALSE,log population (ACS),-0.00728075516869878,0.00258055465896432,-2.8213915730895
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log population (ACS),-0.051044859952975,0.0167101778055351,-3.05471674490901
+near x year,both sides pooled,near < 10 mi,TRUE,log population (ACS),-0.011815507780596,0.00807147029825323,-1.46386065289159
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log population (ACS),-0.0355795216042127,0.0222809491421293,-1.59685843620271
+near x year,both sides pooled,near < 10 mi,FALSE,log population (ACS),-0.011547779078971,0.00807704220863911,-1.42970394120506
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log population (ACS),-0.0355586833554687,0.0224433571426224,-1.58437452692578
+near x year,both sides pooled,per 10 mi closer,TRUE,move-out rate (Data Axle),0.00490584033544421,0.00715539023638965,0.685614644816287
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,move-out rate (Data Axle),0.0258932517115131,0.0449091657984889,0.576569420765869
+near x year,both sides pooled,per 10 mi closer,FALSE,move-out rate (Data Axle),0.00493242141632072,0.0071794953681817,0.687015056542883
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,move-out rate (Data Axle),0.0257305888437029,0.0450909067900017,0.570638088152361
+near x year,both sides pooled,near < 10 mi,TRUE,move-out rate (Data Axle),0.0147786334787252,0.0202551016180003,0.729625244910733
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,move-out rate (Data Axle),0.0363328995074019,0.0555081293916255,0.654550962275509
+near x year,both sides pooled,near < 10 mi,FALSE,move-out rate (Data Axle),0.0148481855727924,0.0203516917686452,0.729579916086789
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,move-out rate (Data Axle),0.0362905004707718,0.0558123075709521,0.650223974786153
+near x year,both sides pooled,per 10 mi closer,TRUE,log district property tax per pupil,-0.00265139779357791,0.00383082652049588,-0.692121603364775
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district property tax per pupil,-0.0149362515358691,0.0199964697394655,-0.746944422214219
+near x year,both sides pooled,per 10 mi closer,FALSE,log district property tax per pupil,-0.00278869556304251,0.00382150055648533,-0.729738363719434
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district property tax per pupil,-0.0142316744944191,0.0200056660931018,-0.711382186835876
+near x year,both sides pooled,near < 10 mi,TRUE,log district property tax per pupil,-0.0135536403933574,0.0118848316881063,-1.1404150053653
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district property tax per pupil,-0.0307045791666501,0.0281161331097757,-1.09206266191614
+near x year,both sides pooled,near < 10 mi,FALSE,log district property tax per pupil,-0.015176815916902,0.0118469616068258,-1.28107243195231
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district property tax per pupil,-0.0338424228797301,0.0278322299075242,-1.21594363772416
+near x year,both sides pooled,per 10 mi closer,TRUE,log district spending per pupil,0.00123983549330103,0.00485085466631237,0.255591143950631
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district spending per pupil,0.0023398175141427,0.0263550800323603,0.0887805125717599
+near x year,both sides pooled,per 10 mi closer,FALSE,log district spending per pupil,0.0014226897893191,0.00484929623106188,0.293380672479059
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district spending per pupil,0.0050570832016904,0.0264746055651618,0.191016375645084
+near x year,both sides pooled,near < 10 mi,TRUE,log district spending per pupil,0.00634990983843104,0.0167484713907535,0.379133694668797
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district spending per pupil,0.00954668775837978,0.0412557535084767,0.231402578949824
+near x year,both sides pooled,near < 10 mi,FALSE,log district spending per pupil,0.00591053811019514,0.016727668983386,0.353339016695363
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district spending per pupil,0.00890613198450434,0.0411268060688025,0.216552969603449
+near x year,both sides pooled,per 10 mi closer,TRUE,log district enrolment,-0.00348707358551927,0.00155311569817432,-2.2452117312434
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log district enrolment,-0.0196021130044818,0.00856280772308179,-2.28921559824853
+near x year,both sides pooled,per 10 mi closer,FALSE,log district enrolment,-0.00375759571806718,0.00156751445798455,-2.39716814025344
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log district enrolment,-0.0228092732403776,0.00866935996055913,-2.63102159146088
+near x year,both sides pooled,near < 10 mi,TRUE,log district enrolment,-0.0104009941250011,0.00502881608562525,-2.06827888471246
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log district enrolment,-0.025168370459908,0.012368953892312,-2.03480186594856
+near x year,both sides pooled,near < 10 mi,FALSE,log district enrolment,-0.00979185563865479,0.00508529101758452,-1.92552512821692
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log district enrolment,-0.024446712783821,0.012495340294285,-1.95646634729925
+near x year,both sides pooled,per 10 mi closer,TRUE,log county school property tax (CoG),-0.00406042664520996,0.00467210860713864,-0.869077965997178
+IV: competition x year,both sides pooled,per 10 mi closer,TRUE,log county school property tax (CoG),-0.0235110361791468,0.0265997842795928,-0.883880708656133
+near x year,both sides pooled,per 10 mi closer,FALSE,log county school property tax (CoG),-0.00408129501589128,0.00468419251647152,-0.871291049960007
+IV: competition x year,both sides pooled,per 10 mi closer,FALSE,log county school property tax (CoG),-0.0240791975705283,0.026772646370089,-0.89939549634623
+near x year,both sides pooled,near < 10 mi,TRUE,log county school property tax (CoG),-0.0262470355762539,0.0175676735434914,-1.4940530122714
+IV: competition x year,both sides pooled,near < 10 mi,TRUE,log county school property tax (CoG),-0.0482586361050358,0.0340308481179228,-1.41808502502821
+near x year,both sides pooled,near < 10 mi,FALSE,log county school property tax (CoG),-0.0262416871988656,0.0175499345519521,-1.49525840801194
+IV: competition x year,both sides pooled,near < 10 mi,FALSE,log county school property tax (CoG),-0.0483971486510994,0.0340038559144608,-1.42328413497711

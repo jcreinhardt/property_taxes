@@ -693,15 +693,17 @@ the two are indistinguishable (density is orthogonal to distance within pairs in
   neighbours): median 0.27 pp, IQR 0.17-0.42. **First stage** (cross-section, pair FE + density): +0.19 SD per 10 mi
   closer on the low side (t 10.2), +0.14 on the high side (t 9.9); near < 10 mi +0.46 / +0.29 SD (t 9.6 / 8.7). Strong,
   and unchanged without density.
-- *Near × year (A):* nothing on the low side (all 11 post − pre within ±0.02 SD per 10 mi, |t| < 1.5; near dummy within
-  ±0.02 except move-outs +0.11, t 1.3). On the high side a slow decline in ACS home value and population (−0.005 and
-  −0.006 SD per 10 mi, t −3; near −0.015 / −0.013), district enrolment (−0.005, t −2.6) and county school property tax
-  (near −0.05, t −2.7), all trending from 2013 rather than breaking in 2018. Prices, bills, rates, sales, district taxes
-  and spending: zero on both sides.
+- *Near × year (A):* nothing on the low side (all 11 post − pre within ±0.015 SD per 10 mi, |t| ≤ 1.7; near dummy within
+  ±0.05, move-outs +0.04, t 1.3). On the high side a slow decline in ACS home value and population (−0.010 and
+  −0.011 SD per 10 mi, t −3.2 / −3.1; near −0.026 / −0.026), district enrolment (−0.005, t −2.7) and county school property tax
+  (near −0.044, t −2.9), all trending from 2013 rather than breaking in 2018. Prices, bills, rates, sales, district taxes
+  and spending: zero on both sides. (Numbers corrected 2026-10-29: the post − pre table of 29 had been computed on the raw
+  coefficients while labelled SD units, and over 2013-16; it now uses the SD-unit series and 2012-16 like 31-33. The
+  figures, which always plotted SD units, and every t are unchanged.)
 - *IV (B):* exactly identified, so each series is the reduced form divided by the first stage. Per SD of competition:
-  low side all within ±0.04 SD and insignificant (sales +0.07, rate −0.04, t ≤ 1.4); high side home value −0.04 and
-  population −0.04 (t −3.2), enrolment −0.03 (t −2.5), sales +0.21 (t 1.2; near-dummy version +0.47, t 2.0), the rest
-  zero. Pooled: home value −0.024 (t −3), population −0.026 (t −3), nothing else beyond |t| 1.9.
+  low side all within ±0.08 SD and insignificant (rate −0.076, t −1.7; sales +0.05, t 0.5); high side home value −0.074
+  (t −3.3) and population −0.088 (t −3.2), enrolment −0.035 (t −2.7), sales +0.12 (t 1.1; near-dummy version +0.29, t 1.8),
+  the rest zero. Pooled: home value −0.042 (t −3.0), population −0.051 (t −3.0), enrolment −0.020 (t −2.3), nothing else.
 - *Balance (C):* continuous distance: low side 3 of 15 controls at 5% raw and given density (none after Holm), median
   0.02 SD, worst share BA+ −0.06, district SES −0.05; high side 3 (1 Holm), median 0.008, worst population −0.04. Near
   dummy: 4-5 rejections, median 0.07, with population −0.13 / −0.15, year built −0.19 (high side) and district SES

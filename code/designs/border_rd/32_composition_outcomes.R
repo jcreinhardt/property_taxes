@@ -27,7 +27,7 @@ tp <- fread(file.path(DATA, "external/acs/acs5_tract_2017.csv"), colClasses = c(
 zipx <- merge(cz, hud, by = "zip")[, ex := (d_salt_own - mean(d_salt_own)) / sd(d_salt_own)][, `:=`(st = substr(cty, 1, 2), w = returns16)]
 trx <- merge(merge(tz, zipx[, .(zip, ex, returns16)], by = "zip"), tp, by = "tract")[is.finite(pop)][, w := as.numeric(returns16) * pop / sum(pop), by = zip][, `:=`(cty = NA_character_)]
 trx[, `:=`(cty = substr(tract, 1, 5), st = substr(tract, 1, 2))]
-pp <- function(r) { pre <- r[y < REF & y >= 2013]; post <- r[y > REF]; if (!nrow(pre) || !nrow(post)) return(NULL); data.table(post_min_pre = mean(post$b) - mean(pre$b), se = sqrt(mean(post$se^2) + mean(pre$se^2) / nrow(pre))) }
+pp <- function(r) { pre <- r[y < REF & y >= 2012]; post <- r[y > REF]; if (!nrow(pre) || !nrow(post)) return(NULL); data.table(post_min_pre = mean(post$b) - mean(pre$b), se = sqrt(mean(post$se^2) + mean(pre$se^2) / nrow(pre))) }
 getc <- function(m, pat, nm) { ct <- as.data.table(coeftable(m), keep.rownames = "term")[grepl(pat, term)]; rbind(ct[, .(y = as.integer(sub(".*y::(\\d+):.*", "\\1", term)), b = Estimate, se = `Std. Error`)], data.table(y = REF, b = 0, se = 0))[, `:=`(coef = nm, n = nobs(m))] }
 res <- list(); ser <- list()
 # ---- design 1: exposure DiD
@@ -58,7 +58,7 @@ if (HAVE_ACS) d2(merge(ac, bd[, .(tract, side, pair, ps, cty, z, zx, ex, ldens)]
 res <- rbindlist(res)[, t := b_sd / se_sd]; ser <- rbindlist(ser)
 fwrite(res, file.path(OUT, "c44_composition_post_pre.csv")); fwrite(ser, file.path(OUT, "c44_composition_series.csv"))
 sink(file.path(OUT, "c44_composition_outcomes.txt"), split = TRUE)
-cat("Household composition outcomes. post - pre (mean 2018+ minus 2013-16) in SD units of the outcome's 2016 cross-section: per SD of exposure (exposure DiD; Z x exposure: per 10 mi closer per SD of exposure) or per 10 mi closer (Z x year). Cells: estimate (t), SE by county.\n")
+cat("Household composition outcomes. post - pre (mean 2018+ minus 2012-16) in SD units of the outcome's 2016 cross-section: per SD of exposure (exposure DiD; Z x exposure: per 10 mi closer per SD of exposure) or per 10 mi closer (Z x year). Cells: estimate (t), SE by county.\n")
 for (dd in unique(res$design)) { cat("\n==", dd, "\n"); w <- dcast(res[design == dd, .(src, outcome, sample, cell = sprintf("%.3f (%.1f)", b_sd, t))], src + outcome ~ sample, value.var = "cell"); print(as.data.frame(w), row.names = FALSE) }
 cat("\nunits: "); print(res[, .(n = n[1]), by = .(design, sample, src)][order(design, src, sample)], nrows = 40)
 sink()
