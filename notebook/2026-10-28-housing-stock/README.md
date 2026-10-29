@@ -32,6 +32,8 @@ Small and mostly late. Per SD of county SALT exposure (county + state × year FE
 
 So: the effects that are precisely estimated are tiny (tenths of a percent of the mean) and the larger ones (vacancy, new construction) arrive with COVID or sit on pre-trends. Nothing here looks like a supply or tenure response to the cap in 2018–19.
 
+Longer write-up: `output/reports/housing_stock_2026-10-28.md`.
+
 ## How
 - **Outline:** `county_year.rds` (CoreLogic roll + sales, `build/corelogic/10`, now with new-construction sale counts) and `acs_county_year.rds` (`build/acs/07`: ACS 1-year and 5-year county tables B25001/2/3/4/35) → `designs/exposure_did/17_housing_stock.R`: `y ~ i(year, ex_z, ref = 2017) | county + state × year`, SE by county, weighted by 2016 returns. Border: `build/acs/06` now adds tract log units and vacancy share (B25002) → `designs/border_rd/04` (rdrobust, h = 15 mi, pair-demeaned, within-tract change since 2017).
 - **Choices:** exposure = 2016 SALT above $10k per return, SD units (`build/exposure/01`); weighted only. Roll outcomes: counties with residential parcels ≥ 80% of their max in every year 2013–24; new-construction sales = arm's-length residential sales with the CoreLogic new-construction flag, price > 10k, per 1,000 residential parcels (county-years with ≥ 50 sales) and as a share of all such sales. ACS 1-year: counties ≥ 65k, no 2020 release; ACS 5-year: release year = last survey year, so 2018–2021 windows straddle the cap. Vacancy = vacant / all units × 100; "for rent / for sale / seasonal" from B25004. Owner share = owner-occupied / occupied. Median year built recoded 0 → 1939, outside 1900–2025 → NA. Tract vacancy from 2020 releases mapped to 2010 tracts by land-area shares, like the other ACS counts.
