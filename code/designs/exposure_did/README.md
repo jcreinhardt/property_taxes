@@ -21,6 +21,7 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
 | `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
 | `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
+| `17_housing_stock.R` | housing stock: log residential parcels and new-construction sales (roll, `build/corelogic/10`); log units, vacancy (all, for rent, for sale, seasonal), owner share, median year built (ACS 1-year and 5-year county panels, `build/acs/07`) |
 
 `16_diop_green_table7.R` (Diop & Green Table 7 / Table 6 on state-to-state dyads without their controls) was removed on
 2026-10-28 together with `build/soi/10-11`; results and figures in
@@ -28,5 +29,5 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
 `notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`,
-`notebook/2026-10-27-simulated-instrument-outcomes`. Superseded versions
+`notebook/2026-10-27-simulated-instrument-outcomes`, `notebook/2026-10-28-housing-stock`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.

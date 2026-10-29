@@ -13,23 +13,25 @@ t10 <- unique(readRDS(file.path(DATA, "built/geo/iv_tract_side.rds"))$tract)
 rel <- fread(file.path(X, "tract_rel/tab20_tract20_tract10_natl.txt"), sep = "|", colClasses = "character", encoding = "UTF-8")
 setnames(rel, 1, "OID_TRACT_20")
 rel <- rel[, .(t20 = GEOID_TRACT_20, t10 = GEOID_TRACT_10, a = as.numeric(AREALAND_PART) / as.numeric(AREALAND_TRACT_20))][is.finite(a) & a > 0]
-cnt <- c("pop", "white", "ed_tot", "ba", "ma", "prof", "phd", "ten_tot", "own", "hu")
+cnt <- c("pop", "white", "ed_tot", "ba", "ma", "prof", "phd", "ten_tot", "own", "hu"); cnt2 <- c(cnt, "occ", "vac")
 med <- c(inc = "ten_tot", hval = "own", yrbuilt = "hu", age = "pop")
 acs <- rbindlist(lapply(2013:2023, \(yy) {
   a <- fread(file.path(X, sprintf("acs/acs5_tract_%d.csv", yy)), colClasses = c(GEOID = "character"))
   a <- a[, c("GEOID", paste0(c(cnt, names(med)), "E")), with = FALSE]; setnames(a, sub("E$", "", names(a)))
+  hs <- file.path(X, sprintf("acs/acs5_tract_hs_%d.csv", yy))   # occupied / vacant units (07_housing_stock.R)
+  if (file.exists(hs)) a <- merge(a, fread(hs, colClasses = c(GEOID = "character"))[, .(GEOID, occ = occE, vac = vacE)], by = "GEOID", all.x = TRUE) else a[, `:=`(occ = NA_real_, vac = NA_real_)]
   a[yrbuilt == 0, yrbuilt := 1939]   # from the 2018 release "1939 or earlier" is coded 0 (1939 before)
   on2010 <- mean(a$GEOID %in% rel$t10) > mean(a$GEOID %in% rel$t20)   # vs the full 2010 and 2020 tract lists
   if (!on2010) {
     m <- merge(rel, a, by.x = "t20", by.y = "GEOID")
     for (k in names(med)) m[, (paste0("w_", k)) := a * fcoalesce(as.numeric(get(med[k])), 0) * is.finite(get(k))]
-    a <- m[, c(lapply(.SD[, cnt, with = FALSE] * a, sum, na.rm = TRUE),
+    a <- m[, c(lapply(.SD[, cnt2, with = FALSE] * a, sum, na.rm = TRUE),
                lapply(setNames(names(med), names(med)), \(k) sum(get(paste0("w_", k)) * fcoalesce(as.numeric(get(k)), 0)) / sum(get(paste0("w_", k))))),
            by = .(GEOID = t10)]
   }
   a[, .(tract = GEOID, y = yy, on2010 = on2010, linc = log(inc), lhval = log(hval), lpop = log(pop), sh_white = white / pop,
-        sh_ba = (ba + ma + prof + phd) / ed_tot, sh_own = own / ten_tot, yrbuilt, age)] }))
-for (k in c("linc", "lhval", "lpop", "sh_white", "sh_ba", "sh_own", "yrbuilt", "age")) set(acs, which(!is.finite(acs[[k]])), k, NA)
+        sh_ba = (ba + ma + prof + phd) / ed_tot, sh_own = own / ten_tot, yrbuilt, age, lhu = log(hu), sh_vac = vac / (occ + vac))] }))
+for (k in c("linc", "lhval", "lpop", "sh_white", "sh_ba", "sh_own", "yrbuilt", "age", "lhu", "sh_vac")) set(acs, which(!is.finite(acs[[k]])), k, NA)
 acs[!between(yrbuilt, 1900, 2025), yrbuilt := NA]   # ACS jam / special values (e.g. 0 in some releases)
 cat("ACS panel: release years on 2010 tracts:", paste(unique(acs[on2010 == TRUE, y]), collapse = " "), "| mapped from 2020 tracts:",
     paste(unique(acs[on2010 == FALSE, y]), collapse = " "), "\n")
