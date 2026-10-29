@@ -869,6 +869,15 @@ with no change of slope at 2017. Sales per 100 parcels on the high side sit +0.0
 pre and post alike. Move-out rate, prices, bills, the effective rate, district finance and the composition shares show
 nothing on either side or in the contrast. Outputs `c45_side_contrast_{series,post_pre}.csv`, `c45_side_contrast.txt`,
 `figures/c45_side_contrast_{core,composition,district}.png`.
+The same contrast for the Z × exposure × year term (the coefficient c43 plots; `c45_side_contrast_interaction*`): low side
+11 of 100, high side 13, contrast 4 significant. The effective-rate interaction is the one place the sides differ after 2017:
+high side −0.019 per 10 mi per SD of E (t −1.7), falling from 0 in 2017 to −0.02 by 2021-24, low side back to 0 after 2018,
+contrast −0.023 by 2022 (post − pre −0.006, t −0.5, because the contrast was −0.02 in 2012-13 too). Sales +0.035 / +0.042 on
+both sides (t 2.1 / 1.8), prices +0.010 / +0.012, population −0.013 / −0.016 (t −2.6 / −2.8) and enrolment −0.007 / −0.009 on
+both sides, so none of these survive in the contrast. District spending and property tax per pupil rise on the low side only
+(+0.022 / +0.023, t 2.0 / 1.9), contrast −0.03 by 2023. Composition: share 65+ falls on both sides (−0.023 / −0.019, t −3),
+single-filer share rises on both (+0.019 / +0.032), joint filers fall on both; contrasts all within ±0.01. The balance
+caveat of 23/36 applies to every interaction cell.
 
 ## Open
 - The near × own-exposure interaction (16) is the one sign-consistent post-2017 pattern: lower effective rate, more sales,

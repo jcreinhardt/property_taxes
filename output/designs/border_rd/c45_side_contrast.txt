@@ -1,7 +1,8 @@
 Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year event studies by side and the contrast high minus low.
- Post - pre = mean of 2018+ coefficients minus mean of 2012-16, SD units of the outcome per 10 mi closer to the border; t in brackets.
+ Post - pre = mean of 2018+ coefficients minus mean of 2012-16, SD units of the outcome per 10 mi closer to the border ; t in brackets.
  Core 11 from 29 (reduced form with density x year); 75 district / local-government outcomes from the main term of 31 (E x year also in the model);
- 14 composition outcomes from 32. Sides are separate regressions on disjoint samples; SE of the contrast = sqrt(se_h^2 + se_l^2).
+14 composition outcomes from 32. 
+Sides are separate regressions on disjoint samples; SE of the contrast = sqrt(se_h^2 + se_l^2).
 
 == core (29) 
                               outcome     years           low          high
@@ -29,7 +30,7 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
   -0.006 (-0.4)
    +0.009 (0.4)
 
-== CoG all local govts, census years, log per capita (31, main term) 
+== CoG all local govts, census years, log per capita (31) 
                                    outcome     years           low
            all local govts: LT debt issued 2012-2022  +0.074 (0.9)
       all local govts: LT debt outstanding 2012-2022 -0.064 (-1.4)
@@ -85,7 +86,7 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
  -0.066 (-1.2)  -0.043 (-0.6)
   +0.032 (1.0)   +0.042 (0.8)
 
-== CoG school districts by county, log per capita (31, main term) 
+== CoG school districts by county, log per capita (31) 
                                outcome     years           low          high
       school districts: LT debt issued 2012-2022  +0.001 (0.0) -0.044 (-0.5)
  school districts: LT debt outstanding 2012-2022  +0.017 (0.4) -0.017 (-0.6)
@@ -103,7 +104,7 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
   -0.005 (-0.1)
   -0.036 (-2.1)
 
-== F-33 district, log per pupil (31, main term) 
+== F-33 district, log per pupil (31) 
                                 outcome     years           low          high
                   IDEA special ed (C15) 2012-2023 -0.001 (-0.0) -0.003 (-0.1)
                           Title I (C14) 2012-2023  +0.006 (0.4)  +0.001 (0.1)
@@ -187,7 +188,7 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
    +0.003 (0.2)
    +0.005 (0.2)
 
-== SEDA district (31, main term) 
+== SEDA district (31) 
                          outcome     years          low         high
              district SES (SEDA) 2012-2018 +0.005 (1.3) +0.012 (2.9)
  district test scores (SEDA, SD) 2012-2018 +0.012 (1.8) +0.005 (0.6)
@@ -232,47 +233,53 @@ Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year
   +0.014 (2.0)   +0.013 (1.4)
 
 Counts of |t| > 1.96 by series and source:
-                                                               src
- CoG all local govts, census years, log per capita (31, main term)
- CoG all local govts, census years, log per capita (31, main term)
- CoG all local govts, census years, log per capita (31, main term)
-    CoG school districts by county, log per capita (31, main term)
-    CoG school districts by county, log per capita (31, main term)
-    CoG school districts by county, log per capita (31, main term)
-                      F-33 district, log per pupil (31, main term)
-                      F-33 district, log per pupil (31, main term)
-                      F-33 district, log per pupil (31, main term)
-                                     SEDA district (31, main term)
-                                     SEDA district (31, main term)
-                                     SEDA district (31, main term)
-                                       composition: ACS tract (32)
-                                       composition: ACS tract (32)
-                                       composition: ACS tract (32)
-                                         composition: SOI ZIP (32)
-                                         composition: SOI ZIP (32)
-                                         composition: SOI ZIP (32)
-                                                         core (29)
-                                                         core (29)
-                                                         core (29)
-         series  k sig median_abs
-   low-tax side 26   1      0.032
-  high-tax side 26   2      0.016
- high minus low 26   0      0.035
-   low-tax side  7   0      0.014
-  high-tax side  7   0      0.017
- high minus low  7   1      0.034
-   low-tax side 40   0      0.006
-  high-tax side 40   0      0.007
- high minus low 40   0      0.008
-   low-tax side  2   0      0.009
-  high-tax side  2   1      0.008
- high minus low  2   0      0.007
-   low-tax side  6   0      0.006
-  high-tax side  6   0      0.004
- high minus low  6   0      0.004
-   low-tax side  8   0      0.001
-  high-tax side  8   3      0.004
- high minus low  8   2      0.006
-   low-tax side 11   0      0.003
-  high-tax side 11   3      0.005
- high minus low 11   0      0.005
+                                                    src         series  k sig
+ CoG all local govts, census years, log per capita (31)   low-tax side 26   1
+ CoG all local govts, census years, log per capita (31)  high-tax side 26   2
+ CoG all local govts, census years, log per capita (31) high minus low 26   0
+    CoG school districts by county, log per capita (31)   low-tax side  7   0
+    CoG school districts by county, log per capita (31)  high-tax side  7   0
+    CoG school districts by county, log per capita (31) high minus low  7   1
+                      F-33 district, log per pupil (31)   low-tax side 40   0
+                      F-33 district, log per pupil (31)  high-tax side 40   0
+                      F-33 district, log per pupil (31) high minus low 40   0
+                                     SEDA district (31)   low-tax side  2   0
+                                     SEDA district (31)  high-tax side  2   1
+                                     SEDA district (31) high minus low  2   0
+                            composition: ACS tract (32)   low-tax side  6   0
+                            composition: ACS tract (32)  high-tax side  6   0
+                            composition: ACS tract (32) high minus low  6   0
+                              composition: SOI ZIP (32)   low-tax side  8   0
+                              composition: SOI ZIP (32)  high-tax side  8   3
+                              composition: SOI ZIP (32) high minus low  8   2
+                                              core (29)   low-tax side 11   0
+                                              core (29)  high-tax side 11   3
+                                              core (29) high minus low 11   0
+ median_abs
+      0.032
+      0.016
+      0.035
+      0.014
+      0.017
+      0.034
+      0.006
+      0.007
+      0.008
+      0.009
+      0.008
+      0.007
+      0.006
+      0.004
+      0.004
+      0.001
+      0.004
+      0.006
+      0.003
+      0.005
+      0.005
+
+All outcomes:
+         series   k sig median_abs
+   low-tax side 100   1      0.007
+  high-tax side 100   9      0.008
+ high minus low 100   3      0.009
