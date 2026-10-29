@@ -65,3 +65,12 @@ g <- ggplot(kd, aes(y, b, colour = term)) + geom_hline(yintercept = 0, colour = 
        subtitle = "density-selected sample; each side estimated separately (unit FE + pair x year FE, Z x year + Z x E x year + E x year + log density x year); SE of the difference = sqrt(se_low^2 + se_high^2)") +
   theme_minimal(base_size = 8) + theme(legend.position = "bottom")
 ggsave(file.path(OUT, "figures/c45_side_contrast_low_minus_high.png"), g, width = 11, height = 7.5, dpi = 150)
+# ---- c43's event-study figure redrawn without the pooled series: low-tax side and high-tax side only (c43_exposure_interaction_es_sides.png)
+pl <- ser[term == "interaction" & series != "high minus low" & outcome %in% key][, `:=`(outcome = factor(outcome, key), series = factor(series, c("low-tax side", "high-tax side")))]
+g <- ggplot(pl, aes(y, b, colour = series)) + geom_hline(yintercept = 0, colour = "grey70") + geom_vline(xintercept = REF + .5, linetype = "22", colour = "grey50") +
+  geom_pointrange(aes(ymin = b - 1.96 * se, ymax = b + 1.96 * se), position = position_dodge(width = .6), size = .18, linewidth = .3) + geom_line(position = position_dodge(width = .6), linewidth = .35) +
+  facet_wrap(~ outcome, scales = "free_y", ncol = 4, labeller = label_wrap_gen(30)) + scale_x_continuous(breaks = seq(2012, 2024, 2)) + scale_colour_manual(NULL, values = c("#2a64a8", "#c0392b")) +
+  labs(x = NULL, y = "Z x exposure x year, SD units of the outcome per 10 mi closer per SD of exposure, 2017 = 0; 95% CI, SE by county", title = "Distance x SALT exposure x year, density-selected sample: event studies for key outcomes, by side",
+       subtitle = "as c43 (exposure x year and log density x year included; unit FE + pair x year FE), pooled series omitted") +
+  theme_minimal(base_size = 8) + theme(legend.position = "bottom", strip.text = element_text(size = 6.5))
+ggsave(file.path(OUT, "figures/c43_exposure_interaction_es_sides.png"), g, width = 11, height = 7.5, dpi = 150)
