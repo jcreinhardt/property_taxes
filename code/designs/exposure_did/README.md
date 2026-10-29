@@ -22,8 +22,9 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
 | `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
 | `16_diop_green_table7.R` | Diop & Green (2026) Table 7 / Table 6 without their controls: state-to-state dyads in levels (thousands of returns) on ΔSALT × year, year + origin FE, White and clustered SEs, files 1112–2122; ΔSALT time-varying (theirs) and fixed at 2017 (`build/soi/10-11`) |
+| `17_state_did_big_four.R` | state-level exposure × year event studies (net, out, in rates; net to the big four / to the other 46 from the dyads) for all 50 states, CA NY FL TX only, the other 46, and all 50 with big-four × year FE; exposure per return, per owner, SALT/AGI 2017, CA/NY dummy |
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
-`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`,
+`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`, `notebook/2026-10-29-state-did-big-four`,
 `notebook/2026-10-27-simulated-instrument-outcomes`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.
