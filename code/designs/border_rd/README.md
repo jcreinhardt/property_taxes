@@ -13,5 +13,6 @@ distances from `data/built/geo/iv_tract_side.rds`. This design varies the tax ra
 | `05_enrolment_rd.R` | pupils per district by year, district as the unit |
 | `06_gap_range_signed_distance.R` | own minus neighbour rate differences by signed distance |
 | `07_tract_diff_by_distance.R` | local rate differentials by distance to the border |
+| `08_pair_exposure_split.R` | ranks each pair's sides by SALT-cap exposure as well as by rate ("agree" / "disagree" pairs) and reruns the difference in discontinuities by group; `c21_*` outputs |
 
 Notebook: `notebook/2026-10-21-border-rate-gaps-over-time`. Check numbers: rate RD +0.747 pp; diff-in-disc 2023 −0.331 pp.

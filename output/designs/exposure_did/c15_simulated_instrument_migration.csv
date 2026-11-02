@@ -1,0 +1,793 @@
+y,b,se,outcome,spec,sample,n_cty,scale
+2012,-0.0134637215971785,0.00266553812670765,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2013,-0.0104220017042138,0.00215677762815354,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2014,-0.00828755488980729,0.00178852000608349,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2015,-0.00695271391055655,0.00307603697932147,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2016,-0.00290762755829763,0.0014800917682509,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2018,-0.0030482527218968,0.000962432772265994,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2019,-0.00386797715718652,0.00129900303748569,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2020,0.00246878548603627,0.0021441130913792,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2021,0.00142418889807122,0.00195646824126252,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2022,-0.00419081464450117,0.00227216294499596,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2017,0,0,log out-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2012,0.013641817184282,0.00570799545957089,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2013,0.00953909621650325,0.00414504558071211,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2014,0.00590883166853551,0.00308901088454877,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2015,-0.0068949617479346,0.00545402563225975,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2016,-0.000784386162726292,0.00220849510329646,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2018,-0.00652668391426859,0.00293677614026515,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2019,-0.00685140051468263,0.00295249799713203,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2020,-0.024160094457103,0.00427475455504739,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2021,-0.0265233818659024,0.00395027502568783,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2022,-0.0090329358060707,0.00675933826002144,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2017,0,0,log out-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2012,-0.0164612227839609,0.0027853842143669,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2013,-0.0127336733634363,0.00221553096222938,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2014,-0.00986792757553142,0.0018898150979004,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2015,-0.00998731213298283,0.00354477285344557,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2016,-0.00389809369411456,0.00179955868702824,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2018,-0.00332797819227256,0.000900709303207493,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2019,-0.00327831942904188,0.00122760330260973,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2020,0.000911212422489312,0.00213912347889418,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2021,-0.000507093961346584,0.00200090713461445,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2022,-0.00283388314394471,0.00220761812698701,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2017,0,0,log out-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2012,-0.0173268745439166,0.0033131562013495,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2013,-0.013412392310848,0.00270481293382271,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2014,-0.0106655075132868,0.00226624936512321,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2015,-0.00894765988723344,0.00394446928491652,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2016,-0.00374191471202209,0.00190865361822844,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2018,-0.00392288953015196,0.00121692032670859,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2019,-0.00497781794265158,0.00165405856430151,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2020,0.00317715544573983,0.00277583549556387,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2021,0.00183283219172461,0.00253346520259303,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2022,-0.00539328736545563,0.00289901216262563,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2017,0,0,log out-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2012,-0.0167085930360975,0.00214357457256213,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2013,-0.0126629752896372,0.00168349302246003,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2014,-0.0100533297254572,0.00140339507016673,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2015,-0.0101869424296296,0.00224364578644146,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2016,-0.00424686647470227,0.00107621404812696,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2018,-0.00317372650757483,0.000697565917437222,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2019,-0.00398676760701499,0.000951972683367598,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2020,0.00224488138709755,0.00159505115741887,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2021,0.00269281707823966,0.00148035772677546,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2022,-0.0021581812989011,0.00165401456534828,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2012,-0.00387087523764912,0.00583864254639367,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2013,-0.004027847139432,0.00421096511019084,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2014,-0.00378554891367425,0.0029744411355205,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2015,-0.0175688502550048,0.00403951139418581,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2016,-0.00467517338618512,0.00166961707682496,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2018,-0.0101554383481985,0.00223711149359169,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2019,-0.0116783289770566,0.00244911224147091,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2020,-0.0247133114739928,0.00362277548163064,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2021,-0.0253999389073067,0.00347215759433702,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2022,-0.0121010156740038,0.00537298707005632,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2012,-0.0228513336600662,0.00171072182736211,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2013,-0.0176061158164458,0.00136187620249217,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2014,-0.0136573424673258,0.00116170310414191,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2015,-0.0157404842887276,0.00207835111512556,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2016,-0.00635962612873143,0.00104920315293485,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2018,-0.0037256790577039,0.000523964672629944,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2019,-0.00412098917837558,0.000715366610267002,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2020,0.000592700885690137,0.00118055258982824,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2021,0.00140965936624849,0.00111549332113368,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2022,-0.000420071057535702,0.00123592923273367,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2012,-0.0191579314383008,0.00234483498576238,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2013,-0.0145192603518216,0.00186520630328885,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2014,-0.0115270628227514,0.00157098815234576,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2015,-0.0116802620191345,0.00256361590598397,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2016,-0.00486942117592317,0.0012360460946481,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2018,-0.00363896796723467,0.000793402770137192,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2019,-0.00457119401439202,0.00108057658852529,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2020,0.00257396200915199,0.00184163812068641,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2021,0.00308756128355733,0.00171236777267882,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2022,-0.00247455242139889,0.001895614234867,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2012,-0.0153447914992321,0.00290221735151469,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2013,-0.0110693125087493,0.00256731254184979,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2014,-0.00841567162647231,0.00210733968387206,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2015,-0.00542281716463452,0.00355850745278307,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2016,-0.00186410636362747,0.00163762882755318,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2018,-0.00248258416764595,0.00108992250534673,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2019,-0.00366739859305344,0.00146378851347635,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2020,0.00221001040508801,0.00216687191372918,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2021,0.00449134336041468,0.00186782967704239,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2022,-0.00141292998995587,0.00219458745168229,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2017,0,0,log out-migrant people (exemptions),"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2012,0.012304285170059,0.00574941414837108,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2013,0.00756224595113619,0.00485996011338183,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2014,0.00425601377048314,0.00363827146304597,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2015,-0.0143615193446455,0.00613338119922014,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2016,-0.00290064981835651,0.00250551528472355,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2018,-0.00791685324490916,0.00317241814347028,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2019,-0.00850754707721166,0.0031974572156421,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2020,-0.0228411865961702,0.00437569043248339,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2021,-0.0254608785785953,0.0038582877472096,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2022,-0.0123392511018468,0.00678947205098186,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2017,0,0,log out-migrant people (exemptions),Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2012,-0.017511698593638,0.00298384004090439,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2013,-0.0131916810759778,0.00255889093807828,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2014,-0.0101946914293624,0.00214187039573213,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2015,-0.00982115637384095,0.00400389193761042,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2016,-0.00354346720614364,0.00195669948256493,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2018,-0.00329479043500908,0.000982375111771187,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2019,-0.003773054898968,0.0013816137245471,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2020,0.000343009151117324,0.00215874616204968,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2021,0.00279224424025127,0.001994511793276,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2022,-0.00024073055159851,0.00216531905474991,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2017,0,0,log out-migrant people (exemptions),SOI observed (OLS),A: ACS-identified counties,417,100
+2012,-0.0197476808541161,0.00363026994181811,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2013,-0.0142454363559253,0.0032350191576032,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2014,-0.0108303848547521,0.00267074745078333,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2015,-0.00697878903749063,0.00455708702103859,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2016,-0.00239897541448365,0.00210699496590858,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2018,-0.00319491339055345,0.00138189293114071,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2019,-0.00471968726222658,0.00185926826683725,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2020,0.0028441298903375,0.0028046425138019,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2021,0.00578004694897097,0.00245271889405527,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2022,-0.00181834275899074,0.00281462118850285,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2017,0,0,log out-migrant people (exemptions),SOI instrumented by Z1,A: ACS-identified counties,417,100
+2012,-0.0196034992733788,0.00223906317148776,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2013,-0.0137459154668548,0.00191968440622565,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2014,-0.0105050998047763,0.00157901701219302,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2015,-0.00888074837078915,0.00253128603925287,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2016,-0.0033283630055364,0.00117353166143153,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2018,-0.00309567969430797,0.000795093701521794,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2019,-0.00440937155374924,0.00108778301628502,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2020,0.00158771166129548,0.00162635497284754,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2021,0.00524346159537311,0.00144204803912316,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2022,-5.93394457293747e-05,0.00162387792674492,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant people (exemptions),"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2012,-0.00524258921759986,0.00582699300647357,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2013,-0.00591461922903027,0.00462118517832286,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2014,-0.00539173186584477,0.0032897235375282,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2015,-0.0245226085793931,0.0041507268122391,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2016,-0.0064014802652083,0.00176814324630917,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2018,-0.0120741262380486,0.0023820472288803,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2019,-0.0138931324932205,0.0025927583997827,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2020,-0.0241338959870281,0.00358102784169315,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2021,-0.0241340269952881,0.00324350558739524,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2022,-0.0149480455609427,0.00525657168150735,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant people (exemptions),Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2012,-0.0250799378499232,0.00175636358559002,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2013,-0.0186498152886481,0.00150873916498645,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2014,-0.0143861890719081,0.00127807337891032,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2015,-0.0160347157095629,0.00230973241311197,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2016,-0.00612174111961769,0.00113874752560618,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2018,-0.0042881944849733,0.000575370641613461,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2019,-0.00532424455167164,0.00080842880546778,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2020,-0.000481398090323699,0.00120464537493015,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2021,0.0039703777703975,0.00110867662695914,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2022,0.00142054376498541,0.00121597035251639,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant people (exemptions),SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2012,-0.0224772064421479,0.0024437142303452,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2013,-0.0157609503985002,0.00213268228697038,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2014,-0.0120450585742056,0.00176814888992808,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2015,-0.0101825909602769,0.00288471088837873,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2016,-0.00381627286773755,0.00134509014593032,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2018,-0.00354948015133574,0.000899017022554683,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2019,-0.00505574812493882,0.00122755542518,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2020,0.00182045676050249,0.00187463321349121,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2021,0.00601210871116988,0.00168319402679492,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2022,-6.80381065161651e-05,0.00186184637993253,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2017,0,0,log out-migrant people (exemptions),SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2012,0.00355712841719818,0.00354184634454425,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2013,0.00462382131273384,0.00277316072238696,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2014,0.00573080442041842,0.00325430250297225,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2015,0.00694679055125197,0.00401510337258898,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2016,0.00379930628415967,0.00199346066306299,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2018,0.00136593559931842,0.00109835815403499,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2019,0.00190051662352714,0.0013410013330652,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2020,-0.00281182317837814,0.00174757084297647,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2021,-0.0049436459187892,0.00259089998744778,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2022,0.000742606449026023,0.00226829163340473,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2017,0,0,log in-migrant returns,"Z1 (ACS, own location)",A: ACS-identified counties,417,100
+2012,-0.00927881703265313,0.00789265783520105,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2013,-0.00968505878277667,0.00576444737504412,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2014,-0.0142953454565722,0.00555020469205406,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2015,-0.0251730649359443,0.0080434364216853,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2016,-0.0141388346791528,0.00399802210425907,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2018,-0.00777402386085564,0.00300818236838903,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2019,-0.0140872441075438,0.00332532311555107,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2020,0.00429826770657324,0.00462603597043257,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2021,0.011687444536032,0.00548323090608572,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2022,-0.00289719171297375,0.00575288839336281,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2017,0,0,log in-migrant returns,Z2 (national sample at county rate),A: ACS-identified counties,417,100
+2012,-0.00584349161955263,0.00360237507547896,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2013,-0.00165605186491192,0.00298600352583029,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2014,0.000366405549414817,0.00376066137063262,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2015,-0.00252003995559349,0.00430509101143236,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2016,-0.00092798364140014,0.00201617705394331,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2018,-0.00155372688885566,0.00112942989577767,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2019,-0.000917031292854044,0.0014951777530884,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2020,-0.00362223826068059,0.00168010492349419,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2021,-0.00444445705836583,0.0024294041070435,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2022,-0.00190875073053321,0.00233294417524227,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2017,0,0,log in-migrant returns,SOI observed (OLS),A: ACS-identified counties,417,100
+2012,0.00457777720495264,0.00461296874987404,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2013,0.00595053687206482,0.00362934516560297,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2014,0.00737514724376961,0.00423279053835271,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2015,0.00894003693522837,0.00525244270565154,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2016,0.00488944329874908,0.00261754838480271,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2018,0.00175786424233679,0.00142965955148136,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2019,0.00244583289002216,0.00173970997785375,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2020,-0.0036186211293651,0.00224408105508297,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2021,-0.00636212892595468,0.00334300292094583,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2022,0.000955682920573123,0.00291943142444722,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2017,0,0,log in-migrant returns,SOI instrumented by Z1,A: ACS-identified counties,417,100
+2012,0.00153503699426896,0.00258066428019139,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2013,0.00297260481426136,0.00196641379598849,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2014,0.00475143844543489,0.0022901954486582,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2015,0.00710630350929514,0.00283300477619202,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2016,0.00458031585296461,0.0013838575574761,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2018,0.00193212713612593,0.000832516650600585,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2019,0.00339063198020237,0.00104957088868368,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2020,-0.00336348206725614,0.00127423984036951,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2021,-0.00676462555992702,0.00185487049000256,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2022,-0.00097862316623948,0.00171838300465767,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2017,0,0,log in-migrant returns,"Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,100
+2012,-0.0157393161435618,0.00726971211732422,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2013,-0.0136293269643701,0.00518801125947663,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2014,-0.0148895638908194,0.00458772626179817,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2015,-0.0235135830711203,0.00705736694064582,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2016,-0.0112700177019765,0.00363758870243403,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2018,-0.00746679586480834,0.00250244333339638,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2019,-0.0118357905423569,0.00315184112632611,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2020,-0.0018366875484973,0.00321646706990015,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2021,0.00152327001764614,0.00406797846119995,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2022,-0.00709298717598099,0.00457020073727053,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log in-migrant returns,Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,100
+2012,-0.0100800117637034,0.00203490314510328,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2013,-0.00529326391462491,0.0016378135008789,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2014,-0.00150344304999461,0.00207747790299827,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2015,-0.00156585548671323,0.00234351108101248,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2016,0.00100968124895023,0.00106391258295299,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2018,-8.05884671899525e-05,0.000632400031402526,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2019,0.00182558128064181,0.000816566828661608,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2020,-0.00437574234937686,0.000925783971020658,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2021,-0.0079827710119248,0.00132883105372689,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2022,-0.00398324008887755,0.00129992251194597,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2017,0,0,log in-migrant returns,SOI observed (OLS),B: all counties (PUMA fill-in),2964,100
+2012,0.0017600604328504,0.00297442403570109,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2013,0.00340836353496287,0.00228062072351797,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2014,0.00544795912943082,0.00264670514050177,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2015,0.00814802749200572,0.00329476351455743,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2016,0.00525175141241904,0.00161954545235849,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2018,0.00221536063054445,0.000966726661481852,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2019,0.00388766994736681,0.0012216653843905,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2020,-0.00385654008684652,0.00145436644914502,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2021,-0.00775626244549589,0.00211837063198243,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2022,-0.00112208104430407,0.00196417394250613,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2017,0,0,log in-migrant returns,SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,100
+2012,-0.0883750945340628,0.0217591101291795,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2013,-0.0643068224532755,0.0186743668197434,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2014,-0.0514688839300974,0.0195461441921137,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2015,-0.0374566325464748,0.0361691740696762,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2016,-0.0151111407893303,0.0196531632192388,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2018,-0.0266000183051308,0.0182423402976367,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2019,-0.03559427380949,0.0220050154637707,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2020,0.0263367840691698,0.0178109946824343,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2021,0.0504134294502723,0.0159252540266014,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2022,0.00585387932096988,0.0193985243442675,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2017,0,0,"out-migration rate, people (%)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2012,0.0970842030063632,0.0402782276781535,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2013,0.071263830299046,0.0334227277416742,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2014,0.078347917445514,0.0349803703640802,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2015,0.0704329386286178,0.0685706224995129,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2016,0.0480021205882414,0.0373624338132656,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2018,0.043653839709978,0.0393498370494002,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2019,0.0576233332975081,0.0436124840766178,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2020,-0.089346562615814,0.0366207084403132,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2021,-0.147899331662363,0.0337583696798971,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2022,-0.0445968949502937,0.0466138712521219,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2017,0,0,"out-migration rate, people (%)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2012,-0.091283696881074,0.0226412634799242,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2013,-0.0697850073592321,0.0191999134889764,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2014,-0.0555246369294156,0.0192617299469352,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2015,-0.0476897933088527,0.0377796810709441,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2016,-0.0193619680263741,0.021044406485638,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2018,-0.0366236893359741,0.0167827303388489,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2019,-0.0450336167816316,0.0199205083977996,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2020,0.000931220071960483,0.0184225268555832,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2021,0.0203068963404686,0.0171410124700546,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2022,-0.00844436241190259,0.0182112011167462,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2017,0,0,"out-migration rate, people (%)",SOI observed (OLS),A: ACS-identified counties,417,1
+2012,-0.113732608383656,0.0276093684944481,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2013,-0.0827584139291263,0.0237387811531308,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2014,-0.0662368787363425,0.025044257049053,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2015,-0.0482040844565844,0.0465769906184935,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2016,-0.0194469886191816,0.0253241869905521,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2018,-0.0342323759973952,0.02339741805502,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2019,-0.0458073581162044,0.0282155105108531,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2020,0.0338936118192164,0.0231120121971634,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2021,0.0648785821296668,0.02102785902406,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2022,0.00753353609235125,0.0250080164617538,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2017,0,0,"out-migration rate, people (%)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2012,-0.114295402385478,0.0166562591051387,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2013,-0.0786727731780759,0.0147455475726505,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2014,-0.065137975981775,0.0150597199395538,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2015,-0.0674443416590327,0.0268877013232214,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2016,-0.0318072064090066,0.0145965192562482,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2018,-0.0405762692678123,0.0135430778630407,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2019,-0.052373079680511,0.0162287454305375,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2020,0.00605059206160419,0.01422099555618,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2021,0.0407166828985001,0.0125786993121045,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2022,-0.00102537609583137,0.0142539121061598,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2017,0,0,"out-migration rate, people (%)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2012,-0.0123039364404479,0.0391138791515071,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2013,-0.0185876861984952,0.0316905382910362,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2014,0.0027620955593774,0.0309393086249033,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2015,-0.0195313690673614,0.055524071470339,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2016,0.0027125636522076,0.0300116604730712,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2018,-0.0117724939110599,0.0329143011873017,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2019,-0.00743975233750185,0.0365372748791481,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2020,-0.118929294152809,0.0303928798821411,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2021,-0.154477063425312,0.0295913793067327,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2022,-0.0763004951668719,0.0380200816497068,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"out-migration rate, people (%)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2012,-0.137605554756135,0.0129055619413223,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2013,-0.102580391438693,0.0117131994359771,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2014,-0.0853515989032919,0.0114322684517978,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2015,-0.101381463130395,0.0218283690767979,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2016,-0.0494756230612857,0.0122373781834855,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2018,-0.0568152769864772,0.00956679757836816,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2019,-0.0704969228963862,0.0113848780672902,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2020,-0.0262895674635627,0.0110151349040914,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2021,0.0066150242763477,0.0100745442373683,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2022,-0.0196105293290477,0.010270579743164,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"out-migration rate, people (%)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2012,-0.131050141557908,0.0183554586843663,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2013,-0.0902055362381559,0.0165443294001431,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2014,-0.0746866522628287,0.0170055339134922,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2015,-0.0773311116389779,0.0307132589996359,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2016,-0.0364698738134605,0.0166992756193708,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2018,-0.0465244071104465,0.015331313500138,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2019,-0.0600505301412104,0.0183253853248623,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2020,0.00693755767633642,0.0163587619243749,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2021,0.0466854041917581,0.0147465669955273,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2022,-0.0011756875578339,0.0163379638025079,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2017,0,0,"out-migration rate, people (%)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2012,0.139443669671914,0.0252995087645969,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2013,0.12676726339123,0.0256561484222389,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2014,0.135182538247554,0.041129452597015,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2015,0.114230435127852,0.0263633340233045,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2016,0.0632872691574552,0.0200027057770456,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2018,0.0533066297707177,0.0138187678949248,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2019,0.06780238097209,0.0180276718945024,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2020,-0.029561592555684,0.0277703415132553,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2021,-0.0367707152105425,0.0232554900137864,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2022,0.0562406901346689,0.0273891273432611,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2012,-0.139969558909199,0.0501112058079637,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2013,-0.122553778726061,0.0445379357234759,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2014,-0.134986744891899,0.0563179830087289,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2015,-0.0846532128222735,0.0623243052712331,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2016,-0.0542626406401706,0.0408866146918176,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2018,-0.0189154790069878,0.0386498683011857,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2019,-0.0566033206380062,0.0423173447577483,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2020,0.205931797093558,0.0627104330039242,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2021,0.262217259200079,0.0396516706522769,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2022,0.0172334836187346,0.0812218360959126,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2012,0.0828318184957913,0.0285323390708252,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2013,0.0903468625926393,0.030183252990394,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2014,0.0979250976389113,0.0513612411712748,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2015,0.0419272922345712,0.0289375353176264,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2016,0.0169044914470139,0.0228596350489278,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2018,0.0172513735375896,0.0149238559177491,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2019,0.0257043299381051,0.0192194898378125,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2020,-0.0344327803683734,0.0265961196281092,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2021,-0.029393482990992,0.0233022005280859,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2022,0.0126033314853415,0.0270063427453809,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2012,0.179454317508682,0.0336704644561579,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2013,0.163140663092419,0.0335773834119567,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2014,0.173970537331549,0.0530150980063647,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2015,0.147006635889739,0.0352859772001287,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2016,0.081446319652661,0.0265498623530074,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2018,0.0686019299886384,0.0181287424215259,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2019,0.0872569549513239,0.0235186990752996,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2020,-0.0380437163553771,0.035762672424071,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2021,-0.047321356487109,0.0301037340691023,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2022,0.0723778618855901,0.0352368043228671,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2012,0.146084339320537,0.0193355583060964,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2013,0.131820248736407,0.019029361862383,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2014,0.136150337889313,0.030250577655833,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2015,0.134460279607994,0.0199901807932959,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2016,0.0805565487293681,0.0148746954160924,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2018,0.0600149666610622,0.0101815689524999,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2019,0.0781897266405497,0.0131567908421867,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2020,-0.0276068131055536,0.0200411687095067,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2021,-0.054916307418013,0.0171673455254544,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2022,0.0311245259609256,0.0201658959644651,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2012,-0.0403501432624013,0.0526514723987786,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2013,-0.0385143877838437,0.0432069792984174,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2014,-0.0498828420864461,0.0446079426171499,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2015,-0.00680555899213199,0.0623547520903941,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2016,-0.00803100939028275,0.039468014488313,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2018,0.0185293289672305,0.0357967135697055,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2019,0.00127781086375333,0.0414569604053505,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2020,0.176345349981248,0.0527574458461288,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2021,0.196928673969076,0.0368227911282108,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2022,0.0210455416556927,0.0686615320893022,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2012,0.0899052081510189,0.019070459775342,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2013,0.0987951995595325,0.0174168093816962,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2014,0.102008532996364,0.0295620381703287,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2015,0.0818650619408886,0.0166133026547081,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2016,0.0511185758230416,0.0130983297638903,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2018,0.0309668299246344,0.00845394639775041,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2019,0.0467431546745141,0.010823327352611,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2020,-0.0323738351967925,0.0145110044387096,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2021,-0.0622467065881318,0.0129624012932784,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2022,-0.0169731819110919,0.0153534141927873,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2012,0.167499067747092,0.0226418686745062,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2013,0.151143982142323,0.0219813434723512,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2014,0.15610882573711,0.0345406026246634,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2015,0.15417101920784,0.0237618807420591,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2016,0.092365457350489,0.0175612982938353,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2018,0.0688126531108495,0.0119625356079779,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2019,0.0896516791642413,0.0153835281898796,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2020,-0.0316537383827298,0.022994461968016,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2021,-0.0629665735521981,0.0196466310782301,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2022,0.0356871181863937,0.0233056655082275,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2012,0.138561263849354,0.0273359779642838,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2013,0.123133863366266,0.0262706607893014,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2014,0.133284860677126,0.0421529960866946,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2015,0.109066161317183,0.0283080111932392,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2016,0.0567344002658976,0.0200915265965352,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2018,0.0516686761292851,0.0149855270715988,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2019,0.0661101454692337,0.0189533619262421,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2020,-0.0209115178865516,0.0239392536815757,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2021,-0.0327341425947511,0.0198607195490888,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2022,0.0478632019064044,0.0236517009999594,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, people (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2012,-0.172427441813564,0.0583578533982986,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2013,-0.146036114559749,0.0516710167092666,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2014,-0.162102868263481,0.0615134743578716,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2015,-0.113058129942575,0.067468155893582,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2016,-0.0681210418196662,0.0430922013251044,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2018,-0.0334963585070809,0.0422366578004212,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2019,-0.0633661998857054,0.0463133850083538,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2020,0.163235214346245,0.0576049680067527,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2021,0.219619945991623,0.0358667098804846,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2022,0.0495612503985542,0.0705880210699623,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, people (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2012,0.0694437202006348,0.0312076862231816,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2013,0.0726687679785701,0.0308154892783781,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2014,0.0865902378517995,0.0526588951294928,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2015,0.0264796490513927,0.031588646530866,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2016,0.00831571585612009,0.022930730339569,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2018,0.00768185889812429,0.0164748129433791,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2019,0.0179889109624617,0.0206008299730737,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2020,-0.0362284870060572,0.0224981820933861,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2021,-0.0360363588561301,0.0196364842056355,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2022,0.00190284479934285,0.0244939599063615,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, people (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2012,0.178318722504435,0.0363348751885886,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2013,0.15846472962588,0.0345410156547719,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2014,0.171528358105672,0.0543945306999815,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2015,0.140360574191119,0.037718869112413,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2016,0.0730132325327856,0.0265779697520353,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2018,0.0664939974196968,0.0196911871679536,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2019,0.0850791653969931,0.0247602534793361,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2020,-0.0269116710656871,0.0308030090985407,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2021,-0.0421265678993913,0.0256734283111273,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2022,0.0615966164122211,0.0304549461180704,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2017,0,0,"net migration rate, people (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2012,0.15220322182294,0.0206329734331459,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2013,0.135922026939113,0.0192812266464093,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2014,0.141173728205475,0.0308750430094975,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2015,0.13488805971846,0.0211138951132583,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2016,0.0780397636458292,0.0147459766173134,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2018,0.0630120242956165,0.0111091548132247,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2019,0.0805750828650904,0.0139057197488212,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2020,-0.0188755077111626,0.017233305850469,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2021,-0.0467418791775088,0.014526563976824,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2022,0.0265689675357225,0.0174454350765688,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, people (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2012,-0.0570753728258921,0.0611492560916343,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2013,-0.0527190902975326,0.0513716874658374,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2014,-0.0624702010276804,0.0518141233717758,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2015,-0.0190847327515938,0.0680930058437283,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2016,-0.0139754071383201,0.0420057527862898,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2018,0.0131964210119153,0.0397915721688058,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2019,0.00173520135532222,0.0456181604565058,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2020,0.139017627515167,0.0473679024345092,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2021,0.164248454924564,0.0297780133047256,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2022,0.0455266833536705,0.0592186376945913,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, people (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2012,0.0880666950167583,0.020056928359626,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2013,0.094581704079484,0.0172548166319068,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2014,0.10068451143682,0.0300407781380335,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2015,0.075648496320489,0.0175883771719788,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2016,0.046947297770619,0.0129377899691004,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2018,0.0299440663665517,0.00917660356062489,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2019,0.0459208563172996,0.0114188660486379,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2020,-0.031586027029742,0.0123425691821294,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2021,-0.060411724873325,0.0109469184128814,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2022,-0.0235461963892911,0.0138907306693465,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, people (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2012,0.174514926665112,0.0241802470072019,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2013,0.155847046332863,0.0223489482907455,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2014,0.161868602581081,0.0352751252044373,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2015,0.154661508263923,0.0250328175689807,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2016,0.0894797328630092,0.0173893008633394,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2018,0.0722490540427055,0.0130579593041454,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2019,0.0923867084337171,0.0162767725532527,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2020,-0.0216424974750681,0.0197495024846429,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2021,-0.0535938432785939,0.0165598199252734,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2022,0.0304637534312089,0.0201857057514767,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net migration rate, people (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2012,0.0292646658435424,0.0118919721362331,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2013,0.0300072156792123,0.0157484177948749,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2014,0.0424916476779913,0.0333819206748188,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2015,0.00863814679693224,0.0122314432168033,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2016,0.00115010048727673,0.013992741779092,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2018,0.00870797787684097,0.00561606056786813,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2019,0.015295685320059,0.0075861047443484,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2020,-0.0308466633479813,0.0211066255253338,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2021,-0.0356039375488258,0.016718179515409,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2022,0.0186710471123349,0.0184228550212713,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2017,0,0,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",A: ACS-identified counties,417,1
+2012,-0.0258886551515171,0.0279560307221345,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2013,-0.0340067192120774,0.0282257777844449,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2014,-0.0544736246045307,0.042848627022333,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2015,-0.00723687433695609,0.0324530269009979,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2016,0.00284283401771067,0.0263554413291586,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2018,0.00407121309979522,0.0171581156664689,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2019,-0.0156591894439157,0.0194036851781711,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2020,0.152392339462139,0.0542907343943528,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2021,0.150990410861858,0.0405018565045947,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2022,-0.0164686704798031,0.0527831844792938,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2017,0,0,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),A: ACS-identified counties,417,1
+2012,0.0157118547643826,0.0135756960603062,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2013,0.0255872241262106,0.0189028468153674,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2014,0.0440325364063415,0.0421380039046248,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2015,-0.00814971681852079,0.0137876851530208,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2016,-0.0142199182843201,0.0170017486799468,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2018,-0.00131013409973994,0.00611599073052598,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2019,0.0035903332226551,0.00800550347703198,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2020,-0.0236644482119461,0.0194053302973166,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2021,-0.0227007181670997,0.0161416764962572,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2022,0.00508190000682645,0.0167755723864563,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2017,0,0,"net interstate migration rate, returns (pp)",SOI observed (OLS),A: ACS-identified counties,417,1
+2012,0.0376615923005241,0.0153534873528293,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2013,0.0386172023636403,0.020188614347537,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2014,0.0546837992130759,0.0427775768564527,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2015,0.0111166949466435,0.0158105703178837,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2016,0.0014800994444288,0.0180171759586,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2018,0.0112065626962187,0.0072623178021212,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2019,0.0196844846122948,0.00979335836866829,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2020,-0.0396975132077107,0.0271965198944388,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2021,-0.0458197946775176,0.0216003155959683,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2022,0.0240283407959635,0.0237055080015403,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2017,0,0,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,A: ACS-identified counties,417,1
+2012,0.0321934849072199,0.00879638168002512,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2013,0.0294893387553688,0.0115080166162185,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2014,0.0381050131844044,0.0242041090266482,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2015,0.0207394606976565,0.00955048075516871,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2016,0.0122940135884025,0.010505473478998,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2018,0.011649480951929,0.00442843985348956,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2019,0.0188645168148217,0.00574881535472255,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2020,-0.0280037467610225,0.015011658943886,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2021,-0.0395823003728781,0.0119946860831683,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2022,0.00302539349691817,0.0134649495266834,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net interstate migration rate, returns (pp)","Z1 (ACS, own location)",B: all counties (PUMA fill-in),2964,1
+2012,-0.00967742462956704,0.0225655863767153,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2013,-0.0184042631757969,0.0205379888542691,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2014,-0.0307926100072087,0.0239268817926339,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2015,0.0041372325817448,0.0279386157286448,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2016,0.00328714514006534,0.0203317938599133,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2018,0.00899994374840627,0.0146904896968797,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2019,8.25422945817805e-05,0.0179806347213688,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2020,0.127561404275889,0.0464563235689953,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2021,0.123127346089207,0.035848161350885,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2022,-0.0131385755454889,0.0444564165706221,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net interstate migration rate, returns (pp)",Z2 (national sample at county rate),B: all counties (PUMA fill-in),2964,1
+2012,0.0185317006860726,0.00800466218142275,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2013,0.0228922496840744,0.0109276547486355,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2014,0.0348056354721781,0.0241897563096854,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2015,0.0113433692947146,0.00842665928940708,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2016,0.00510280568595915,0.0100321186976232,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2018,0.00528642041901601,0.00382000334308356,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2019,0.0117598638629775,0.00484526454421546,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2020,-0.0186924947888733,0.0104979025514691,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2021,-0.0291092830587173,0.00873320369241739,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2022,-0.0126553561943839,0.00947255751852932,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net interstate migration rate, returns (pp)",SOI observed (OLS),B: all counties (PUMA fill-in),2964,1
+2012,0.0369127774720504,0.00998826503500143,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2013,0.0338122263685306,0.0130674307424797,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2014,0.0436908857894444,0.0275751342916287,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2015,0.0237796902021956,0.0109913216061773,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2016,0.0140962119862015,0.0120820813274581,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2018,0.0133571963172799,0.00508742237425732,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2019,0.0216298954061628,0.00661374672285042,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2020,-0.0321088591543678,0.0172678731225679,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2021,-0.0453847307835053,0.0137835914546792,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2022,0.00346889059194806,0.0154519224930239,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2017,0,0,"net interstate migration rate, returns (pp)",SOI instrumented by Z1,B: all counties (PUMA fill-in),2964,1
+2012,-0.0363626034680891,0.0187531334049092,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2013,-0.0310387405906802,0.0158151035759655,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2014,-0.0146751778427842,0.0143172104046932,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2015,0.00187011456678537,0.0271854790081782,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2016,0.00281401266126122,0.0145271628303384,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2018,0.012969170366479,0.0146903005933118,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2019,0.0251390140838664,0.0171006058849559,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2020,0.0540006710852796,0.0125642081625745,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2021,0.0640547079658151,0.0132455839753357,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2022,0.0515031695017802,0.0140724923241564,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2017,0,0,state: out-of-state rate (% of returns),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2012,-0.0677390760557388,0.0378470332993545,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2013,-0.0583064107237211,0.0248732237692223,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2014,-0.0128456483889475,0.0161592933959462,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2015,0.0211000670141851,0.032173822326925,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2016,0.0230656666542157,0.0197804757902974,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2018,0.0207405888736039,0.0165567627706372,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2019,0.0399478615078486,0.0188997246807596,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2020,0.0713763506269147,0.0252578182419575,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2021,0.0832803740485122,0.0284353626316539,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2022,0.0688158420384571,0.0249950232668244,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2017,0,0,state: out-of-state rate (% of returns),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2012,-0.0476359478867205,0.0200648548402186,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2013,-0.0410524299929314,0.0141220149595494,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2014,-0.0186809349854067,0.0101117831977664,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2015,-0.0038959538740462,0.0250050005815812,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2016,0.00254417556147061,0.0140103028699348,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2018,0.0111884407308185,0.0128863318274263,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2019,0.0261369123367684,0.0151927050726127,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2020,0.0556166397019293,0.0154889645858314,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2021,0.0681029827510979,0.0163037100084291,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2022,0.0583557764327725,0.0141050635346213,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2017,0,0,state: out-of-state rate (% of returns),SOI observed (OLS),"S: states, state + year FE",50,1
+2012,-0.0441799342569799,0.0199644614739139,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2013,-0.0374942906919178,0.0160987390220724,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2014,-0.0180645539507296,0.0157070448961759,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2015,0.00101744871971167,0.032362433006415,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2016,0.00251517331175313,0.0174023924829867,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2018,0.0148779099346879,0.0185938168012915,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2019,0.0292416911305962,0.0226876110391102,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2020,0.0639401216188912,0.0190152583744358,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2021,0.0757836588904474,0.0203938532445065,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2022,0.0607271026937815,0.0202029861242158,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2017,0,0,state: out-of-state rate (% of returns),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2012,0.0563392342664214,0.017419950271403,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2013,0.0462467464866597,0.0167576023717866,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2014,0.0483303150548084,0.0214316735937202,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2015,0.0857210813713525,0.0252900963186917,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2016,0.049711150655558,0.013286282830475,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2018,0.0454420359602669,0.0111056712430134,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2019,0.0553162232284302,0.0128392528766734,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2020,0.0270424336955469,0.0117987367707476,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2021,0.00658449448381273,0.0141131486719615,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2022,0.024940834277956,0.0169748715328215,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2017,0,0,state: in-from-other-state rate (%),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2012,0.0951949764988712,0.0397233687346583,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2013,0.081237400307478,0.0363666674116627,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2014,0.0842352250504492,0.0424935695016732,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2015,0.159511494073747,0.0472294696928136,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2016,0.0886356808772339,0.0249362719786801,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2018,0.0935556995237639,0.0197128843348368,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2019,0.106484738583476,0.0237719485556165,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2020,0.0705300496092026,0.0213179109364596,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2021,0.0354685462315165,0.0308357170989734,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2022,0.0609948567877307,0.0360366454761099,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2017,0,0,state: in-from-other-state rate (%),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2012,0.0498998518352762,0.0249687406539615,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2013,0.0394201060285054,0.0244457861387406,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2014,0.0396499822772477,0.0317529252752296,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2015,0.0839706205549554,0.0340058647611053,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2016,0.0476883018197129,0.0179778968909727,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2018,0.0506818291312757,0.0127793443380366,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2019,0.061239529701677,0.0151933523672214,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2020,0.0324012090132493,0.0118617166327313,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2021,0.00678864787915058,0.0158183633507187,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2022,0.0233763987705393,0.0203617784438572,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2017,0,0,state: in-from-other-state rate (%),SOI observed (OLS),"S: states, state + year FE",50,1
+2012,0.0684185728725803,0.0225292746186309,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2013,0.0560654022039815,0.022158796571618,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2014,0.0583148600703672,0.0285002849810854,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2015,0.102991523989252,0.0349433042023905,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2016,0.0598049369374601,0.0196588261592671,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2018,0.0544295415779007,0.0137570437625471,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2019,0.0662662318393522,0.015774354926275,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2020,0.0322563314683008,0.0136548320887593,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2021,0.00770813546337784,0.0166785180441473,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2022,0.0296821910337367,0.0190119594455835,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2017,0,0,state: in-from-other-state rate (%),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2012,0.0927018377345104,0.0220011142426897,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2013,0.07728548707734,0.019220555172609,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2014,0.0630054928975925,0.0191550164305961,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2015,0.0838509668045671,0.0184138481687663,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2016,0.0468971379942968,0.00928371070820145,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2018,0.0324728655937878,0.0142974843369985,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2019,0.0301772091445638,0.017242971416078,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2020,-0.0269582373897327,0.0145206389666348,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2021,-0.0574702134820025,0.0191414795758674,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2022,-0.0265623352238241,0.021621056883327,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2017,0,0,state: net interstate rate (pp),"Z1 (ACS, own location)","S: states, state + year FE",50,1
+2012,0.162934052554609,0.0452139918976238,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2013,0.139543811031198,0.0376037720845306,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2014,0.0970808734393958,0.0388774927465109,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2015,0.13841142705956,0.0330156726016352,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2016,0.0655700142230173,0.0227404856257072,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2018,0.0728151106501589,0.0198781338803788,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2019,0.0665368770756264,0.0237864988075756,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2020,-0.000846301017713262,0.0311485751097201,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2021,-0.047811827816997,0.0446571495954355,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2022,-0.00782098525072749,0.0418716839347104,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2017,0,0,state: net interstate rate (pp),Z2 (national sample at county rate),"S: states, state + year FE",50,1
+2012,0.0975357997219961,0.0279838483795146,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2013,0.0804725360214363,0.0246640419666982,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2014,0.0583309172626539,0.0284729830784066,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2015,0.087866574429001,0.0187608171704971,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2016,0.0451441262582418,0.0119877798490946,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2018,0.0394933884004567,0.0125540348142458,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2019,0.0351026173649082,0.0158030501159719,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2020,-0.0232154306886805,0.0173019176067713,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2021,-0.0613143348719478,0.0230958763243406,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2022,-0.0349793776622337,0.0228885059513931,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2017,0,0,state: net interstate rate (pp),SOI observed (OLS),"S: states, state + year FE",50,1
+2012,0.112598507129561,0.0238258976226251,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2013,0.0935596928958997,0.0210895344310033,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2014,0.0763794140210972,0.0236137538088031,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2015,0.101974075269541,0.0182587053402059,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2016,0.0572897636257074,0.0119755512571005,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2018,0.0395516316432133,0.0136933896524621,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2019,0.0370245407087565,0.0174556587043922,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2020,-0.0316837901505898,0.0196885994596953,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2021,-0.068075523427069,0.0276679972570737,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2022,-0.0310449116600442,0.0283353798326878,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2017,0,0,state: net interstate rate (pp),SOI instrumented by Z1,"S: states, state + year FE",50,1
+2012,-0.0180372378367374,0.0052803419772918,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2013,-0.0150830664755187,0.00322755769941924,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2014,-0.0107018221135446,0.00264757585695117,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2015,-0.00821329582919049,0.00397487712183147,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2016,-0.00357323457131112,0.00254924169069298,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2018,0.00223333726339279,0.00157282331719818,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2019,0.00633687461691285,0.00238108927604581,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2020,0.0154836809672272,0.00300667566480119,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2021,0.0185073363373808,0.00418418339960175,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2022,0.0139800466925822,0.00379130294537822,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2017,0,0,state: log out-of-state returns,"Z1 (ACS, own location)","S: states, state + year FE",50,100
+2012,-0.0278528216141633,0.0125379608454251,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2013,-0.0234974108640314,0.00771186894444779,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2014,-0.0118027683134321,0.0049467618409879,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2015,-0.0111125261846938,0.0080013300034354,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2016,-0.00127718084300936,0.00498781968058941,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2018,-0.00192946874822883,0.00344013171348329,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2019,0.00237656410048792,0.0048965769016937,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2020,0.0121460340663694,0.00866107692479873,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2021,0.0139459627645394,0.0100567340139819,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2022,0.00731080682735772,0.00866463411172452,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2017,0,0,state: log out-of-state returns,Z2 (national sample at county rate),"S: states, state + year FE",50,100
+2012,-0.0205628124175257,0.0076489267085414,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2013,-0.01737573722063,0.00476315780223517,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2014,-0.0111934476982006,0.00369884093023318,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2015,-0.0111017972558491,0.0056193961905439,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2016,-0.00364231964188134,0.00337686917106432,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2018,0.00116079489164853,0.001998589596302,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2019,0.00600964537098973,0.00306039506449468,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2020,0.0150924053076393,0.00443534092449838,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2021,0.017891972429471,0.00560289998645643,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2022,0.0138992375945742,0.00462453250071665,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2017,0,0,state: log out-of-state returns,SOI observed (OLS),"S: states, state + year FE",50,100
+2012,-0.0216527573570797,0.00760429765323592,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2013,-0.0180680996087247,0.00489167859014541,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2014,-0.0128181269024406,0.00432807836538133,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2015,-0.00989139628640279,0.00523725355216321,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2016,-0.00432648493954902,0.00338936741099857,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2018,0.00265027761326021,0.00209924709933692,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2019,0.00754716096836463,0.00352487759963982,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2020,0.0185293781955896,0.00484203038113984,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2021,0.0221188865411289,0.00682100765636344,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2022,0.016673108286638,0.00593848974963091,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100
+2017,0,0,state: log out-of-state returns,SOI instrumented by Z1,"S: states, state + year FE",50,100

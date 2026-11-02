@@ -1,0 +1,56 @@
+var,label,y,b,se
+l_out,log out-of-state returns,2012,-0.136297129206831,0.0406398537414507
+l_out,log out-of-state returns,2013,-0.112088839766572,0.0268851490128417
+l_out,log out-of-state returns,2014,-0.0808153581730438,0.0228627779204441
+l_out,log out-of-state returns,2015,-0.0726853567582363,0.0284162800015942
+l_out,log out-of-state returns,2016,-0.0259395129322593,0.0194432840193578
+l_out,log out-of-state returns,2017,0,0
+l_out,log out-of-state returns,2018,0.00910648533650848,0.015108609643046
+l_out,log out-of-state returns,2019,0.0244739087710745,0.0219327250905609
+l_out,log out-of-state returns,2020,0.0899552395040877,0.0361880664328683
+l_out,log out-of-state returns,2021,0.115833278704408,0.0454509605712169
+l_out,log out-of-state returns,2022,0.0877064532336356,0.0392572973418312
+net_agi,net AGI outflow (% of stayers' AGI),2012,-0.973005672464433,0.183406472998884
+net_agi,net AGI outflow (% of stayers' AGI),2013,-0.651005015601935,0.195764430189527
+net_agi,net AGI outflow (% of stayers' AGI),2014,-0.768969446546228,0.150967275107551
+net_agi,net AGI outflow (% of stayers' AGI),2015,-0.866963979241555,0.178189667056699
+net_agi,net AGI outflow (% of stayers' AGI),2016,-0.441084063324874,0.125340128898321
+net_agi,net AGI outflow (% of stayers' AGI),2017,0,0
+net_agi,net AGI outflow (% of stayers' AGI),2018,-0.271503961175703,0.111051574033221
+net_agi,net AGI outflow (% of stayers' AGI),2019,-0.323893248800915,0.13853945992181
+net_agi,net AGI outflow (% of stayers' AGI),2020,0.591682381367147,0.199683946487905
+net_agi,net AGI outflow (% of stayers' AGI),2021,1.40698914913711,0.362828851504034
+net_agi,net AGI outflow (% of stayers' AGI),2022,0.344325432772627,0.24800251936672
+r_net,net out-migration rate (pp),2012,-0.783012535065057,0.170008252746724
+r_net,net out-migration rate (pp),2013,-0.646963531544967,0.152416664720893
+r_net,net out-migration rate (pp),2014,-0.53589738883511,0.15830800456163
+r_net,net out-migration rate (pp),2015,-0.726043519066311,0.144526569791834
+r_net,net out-migration rate (pp),2016,-0.382277343118405,0.0823062553186053
+r_net,net out-migration rate (pp),2017,0,0
+r_net,net out-migration rate (pp),2018,-0.302141017861071,0.107638504838611
+r_net,net out-migration rate (pp),2019,-0.29508271286458,0.13262468353471
+r_net,net out-migration rate (pp),2020,0.104940155610257,0.14611401070245
+r_net,net out-migration rate (pp),2021,0.324715417957275,0.191751503775635
+r_net,net out-migration rate (pp),2022,0.115807301120444,0.19335166185117
+r_nit,rate to no-income-tax states (pp),2012,-0.11288642674416,0.0514804009635347
+r_nit,rate to no-income-tax states (pp),2013,-0.0894888987566882,0.0376804629387196
+r_nit,rate to no-income-tax states (pp),2014,-0.0616794766517364,0.0313725272406886
+r_nit,rate to no-income-tax states (pp),2015,-0.0104841090034176,0.0505074925606407
+r_nit,rate to no-income-tax states (pp),2016,-0.000582990570325251,0.0326536386689525
+r_nit,rate to no-income-tax states (pp),2017,0,0
+r_nit,rate to no-income-tax states (pp),2018,0.0282205422395165,0.0224895723418459
+r_nit,rate to no-income-tax states (pp),2019,0.0396127528564882,0.023972512001065
+r_nit,rate to no-income-tax states (pp),2020,0.0949680109449529,0.0240483786773912
+r_nit,rate to no-income-tax states (pp),2021,0.150330043699464,0.0294799204013196
+r_nit,rate to no-income-tax states (pp),2022,0.146058038204726,0.0288979249771005
+r_out,out-of-state rate (pp of returns),2012,-0.184226434211166,0.130623321654879
+r_out,out-of-state rate (pp of returns),2013,-0.142936270858444,0.104883040281089
+r_out,out-of-state rate (pp of returns),2014,0.0045468759419528,0.0901297884486686
+r_out,out-of-state rate (pp of returns),2015,0.218435262961465,0.174124421654192
+r_out,out-of-state rate (pp of returns),2016,0.150727238987695,0.0948418626960394
+r_out,out-of-state rate (pp of returns),2017,0,0
+r_out,out-of-state rate (pp of returns),2018,0.207470407122019,0.095529614379459
+r_out,out-of-state rate (pp of returns),2019,0.275531251870469,0.111438342153251
+r_out,out-of-state rate (pp of returns),2020,0.455329005349216,0.111858078140397
+r_out,out-of-state rate (pp of returns),2021,0.535985359083338,0.12141109950158
+r_out,out-of-state rate (pp of returns),2022,0.477097202545225,0.105708917423302

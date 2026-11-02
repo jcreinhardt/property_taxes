@@ -42,3 +42,5 @@ No detectable migration response before COVID, in five independent sources:
 
 ## Open
 Nothing pressing. County is the finest public SOI flow level; ZIP files have return counts only.
+State-level (six high-SALT states vs rest, the variation the designs above absorb): see
+[2026-10-27-diop-green-reconciliation](../2026-10-27-diop-green-reconciliation/README.md).
