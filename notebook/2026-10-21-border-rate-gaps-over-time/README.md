@@ -42,4 +42,5 @@ tags: border, RD, difference in discontinuities, balance, instrument
   - Difference in discontinuities 2023: −0.331 pp.
 
 ## Open
-Switch the instrument to the own-state nearest-border assignment (60,982 tracts vs 57,350; c9) and rerun.
+- Update 2026-10-28: the narrowing is a relative price gain on the high-rate side (opposite to capitalisation) and is larger in pairs where the high-rate side is also the high-exposure side; see [2026-10-28-border-sides-by-exposure](../2026-10-28-border-sides-by-exposure/README.md).
+- Switch the instrument to the own-state nearest-border assignment (60,982 tracts vs 57,350; c9) and rerun.
