@@ -1,0 +1,91 @@
+Net interstate migration (pp of SOI filing population per year) on effective state income tax rates (% of income), 51 states x 2012-2022.
+Coefficients = pp of net migration per 1 pp of effective rate; weights = 2016 filing population; SE clustered by state.
+
+Variation in the tax measures: SD of within-state year-to-year changes (pp) and share of state-years with |change| > 0.1 pp
+   sd_law big_law sd_law_top big_law_top sd_stc big_stc sd_acs
+    <num>   <num>      <num>       <num>  <num>   <num>  <num>
+1:  0.159    0.14      0.201        0.11  0.206    0.44   0.33
+
+Levels 2012-22, cross-section of state means: net rate vs effective rate (law only) -- the familiar correlation
+  corr(net, eff_law) = -0.21, weighted slope -0.192 (0.042) pp per pp | corr(net AGI, eff_law_top) = -0.30, slope -0.263 (0.089)
+
+(a)-(c) Panel, 2012-2022:
+Key: <outcome, measure>
+                          outcome                      measure first differences | year levels + lag: current levels + lag: lag levels | state + year
+                           <char>                       <char>                   <char>                <char>            <char>                <char>
+ 1:                  in-rate (pp)         ACS households x law           -0.031 (0.047)        -0.073 (0.052)    -0.031 (0.102)        -0.104 (0.063)
+ 2:                  in-rate (pp)            collections / AGI           -0.052 (0.065)        -0.075 (0.081)    -0.082 (0.070)        -0.133 (0.087)
+ 3:                  in-rate (pp)      law only (fixed sample)           -0.041 (0.070)        -0.095 (0.123)    +0.118 (0.118)        -0.006 (0.109)
+ 4:                  in-rate (pp) law only, top 10% households           -0.016 (0.049)        -0.041 (0.091)    +0.070 (0.100)        +0.000 (0.077)
+ 5:     net AGI inflow (% of AGI)         ACS households x law           -0.037 (0.067)        -0.265 (0.105)    -0.211 (0.211)        -0.406 (0.192)
+ 6:     net AGI inflow (% of AGI)            collections / AGI           -0.275 (0.327)        -0.428 (0.281)    -0.311 (0.189)        -0.621 (0.298)
+ 7:     net AGI inflow (% of AGI)      law only (fixed sample)           -0.033 (0.092)        +0.023 (0.328)    +0.239 (0.214)        +0.225 (0.369)
+ 8:     net AGI inflow (% of AGI) law only, top 10% households           -0.002 (0.068)        +0.051 (0.243)    +0.129 (0.169)        +0.137 (0.245)
+ 9: net in-migration (pp of pop.)         ACS households x law           -0.009 (0.052)        -0.144 (0.076)    -0.177 (0.158)        -0.262 (0.139)
+10: net in-migration (pp of pop.)            collections / AGI           -0.060 (0.101)        -0.146 (0.121)    -0.228 (0.129)        -0.309 (0.175)
+11: net in-migration (pp of pop.)      law only (fixed sample)           -0.017 (0.077)        -0.012 (0.198)    +0.153 (0.184)        +0.105 (0.216)
+12: net in-migration (pp of pop.) law only, top 10% households           +0.007 (0.057)        +0.020 (0.143)    +0.092 (0.154)        +0.069 (0.148)
+13:                 out-rate (pp)         ACS households x law           -0.022 (0.030)        +0.072 (0.054)    +0.147 (0.064)        +0.159 (0.090)
+14:                 out-rate (pp)            collections / AGI           +0.008 (0.039)        +0.072 (0.062)    +0.146 (0.072)        +0.176 (0.097)
+15:                 out-rate (pp)      law only (fixed sample)           -0.023 (0.035)        -0.083 (0.085)    -0.036 (0.095)        -0.111 (0.115)
+16:                 out-rate (pp) law only, top 10% households           -0.023 (0.028)        -0.061 (0.059)    -0.022 (0.072)        -0.069 (0.078)
+
+(a)-(c) Panel without 2017 (file 1617):
+Key: <outcome, measure>
+                          outcome                      measure first differences | year levels + lag: current levels + lag: lag levels | state + year
+                           <char>                       <char>                   <char>                <char>            <char>                <char>
+ 1:                  in-rate (pp)         ACS households x law           -0.002 (0.041)        -0.080 (0.051)    -0.073 (0.079)        -0.121 (0.060)
+ 2:                  in-rate (pp)            collections / AGI           -0.045 (0.064)        -0.102 (0.082)    -0.115 (0.048)        -0.166 (0.082)
+ 3:                  in-rate (pp)      law only (fixed sample)           +0.003 (0.045)        -0.073 (0.112)    +0.064 (0.109)        -0.020 (0.110)
+ 4:                  in-rate (pp) law only, top 10% households           +0.013 (0.030)        -0.040 (0.084)    +0.040 (0.088)        -0.014 (0.074)
+ 5:     net AGI inflow (% of AGI)         ACS households x law           -0.017 (0.064)        -0.284 (0.102)    -0.281 (0.223)        -0.452 (0.198)
+ 6:     net AGI inflow (% of AGI)            collections / AGI           -0.267 (0.344)        -0.419 (0.298)    -0.392 (0.182)        -0.658 (0.295)
+ 7:     net AGI inflow (% of AGI)      law only (fixed sample)           +0.070 (0.076)        +0.037 (0.329)    +0.201 (0.269)        +0.215 (0.376)
+ 8:     net AGI inflow (% of AGI) law only, top 10% households           +0.072 (0.053)        +0.059 (0.246)    +0.087 (0.191)        +0.122 (0.246)
+ 9: net in-migration (pp of pop.)         ACS households x law           +0.001 (0.043)        -0.173 (0.071)    -0.234 (0.138)        -0.310 (0.138)
+10: net in-migration (pp of pop.)            collections / AGI           -0.050 (0.107)        -0.157 (0.130)    -0.295 (0.102)        -0.350 (0.168)
+11: net in-migration (pp of pop.)      law only (fixed sample)           +0.059 (0.058)        +0.044 (0.202)    +0.053 (0.196)        +0.089 (0.220)
+12: net in-migration (pp of pop.) law only, top 10% households           +0.062 (0.040)        +0.049 (0.143)    +0.017 (0.150)        +0.048 (0.147)
+13:                 out-rate (pp)         ACS households x law           -0.003 (0.022)        +0.093 (0.048)    +0.160 (0.071)        +0.189 (0.092)
+14:                 out-rate (pp)            collections / AGI           +0.005 (0.046)        +0.055 (0.064)    +0.179 (0.064)        +0.184 (0.096)
+15:                 out-rate (pp)      law only (fixed sample)           -0.056 (0.043)        -0.117 (0.099)    +0.011 (0.099)        -0.109 (0.119)
+16:                 out-rate (pp) law only, top 10% households           -0.049 (0.032)        -0.088 (0.068)    +0.024 (0.069)        -0.062 (0.081)
+
+(d) Long differences across states (period means), net rate / net AGI on effective rate, SE robust:
+     outcome           x             period     n       weighted     unweighted
+      <char>      <char>             <char> <int>         <char>         <char>
+ 1: net rate     eff_law 2018-19 vs 2012-16    51 -0.133 (0.199) -0.167 (0.212)
+ 2: net rate     eff_law 2020-22 vs 2012-16    51 +0.142 (0.378) +0.083 (0.352)
+ 3: net rate eff_law_top 2018-19 vs 2012-16    51 -0.137 (0.133) -0.150 (0.144)
+ 4: net rate eff_law_top 2020-22 vs 2012-16    51 +0.081 (0.276) +0.040 (0.222)
+ 5: net rate     eff_stc 2018-19 vs 2012-16    50 -0.175 (0.184) -0.043 (0.217)
+ 6: net rate     eff_stc 2020-22 vs 2012-16    50 -0.780 (0.228) -0.120 (0.269)
+ 7:  net AGI     eff_law 2018-19 vs 2012-16    51 -0.157 (0.269) -0.358 (0.224)
+ 8:  net AGI     eff_law 2020-22 vs 2012-16    51 +0.387 (0.662) +0.096 (0.495)
+ 9:  net AGI eff_law_top 2018-19 vs 2012-16    51 -0.171 (0.182) -0.287 (0.176)
+10:  net AGI eff_law_top 2020-22 vs 2012-16    51 +0.235 (0.481) +0.069 (0.345)
+11:  net AGI     eff_stc 2018-19 vs 2012-16    50 -0.298 (0.206) -0.172 (0.270)
+12:  net AGI     eff_stc 2020-22 vs 2012-16    50 -1.362 (0.379) -0.231 (0.395)
+
+The largest law changes and the state's net migration around them (eff_law change > 0.3 pp; net rate pp, years y-2..y+2):
+  KS 2013: eff_law -2.03 pp (4.72 -> 2.69), top -2.51 | net rate: 2012 -0.32, 2013 -0.43, 2014 -0.48, 2015 -0.24
+  KS 2017: eff_law +1.26 pp (2.49 -> 3.74), top +1.56 | net rate: 2015 -0.24, 2016 -0.64, 2017 -0.78, 2018 -0.43, 2019 -0.46
+  NC 2014: eff_law -1.19 pp (6.05 -> 4.87), top -1.64 | net rate: 2012 +0.35, 2013 +0.34, 2014 +0.26, 2015 +0.25, 2016 +0.64
+  IL 2015: eff_law -1.17 pp (4.64 -> 3.46), top -1.22 | net rate: 2013 -0.62, 2014 -0.75, 2015 -0.46, 2016 -0.80, 2017 -1.27
+  ME 2016: eff_law -0.60 pp (5.11 -> 4.51), top -0.49 | net rate: 2014 +0.15, 2015 -0.11, 2016 +0.29, 2017 +0.96, 2018 +0.57
+  IL 2017: eff_law +0.55 pp (3.46 -> 4.01), top +0.59 | net rate: 2015 -0.46, 2016 -0.80, 2017 -1.27, 2018 -0.84, 2019 -0.79
+  WI 2021: eff_law -0.55 pp (4.75 -> 4.20), top -0.71 | net rate: 2019 -0.03, 2020 +0.01, 2021 -0.01, 2022 +0.02
+  ID 2018: eff_law -0.54 pp (4.93 -> 4.39), top -0.55 | net rate: 2016 +1.18, 2017 +2.41, 2018 +1.64, 2019 +1.65, 2020 +2.47
+  DC 2018: eff_law -0.53 pp (5.31 -> 4.78), top -0.34 | net rate: 2016 -1.05, 2017 -2.57, 2018 -1.38, 2019 -1.34, 2020 -3.08
+  IL 2018: eff_law +0.53 pp (4.01 -> 4.54), top +0.58 | net rate: 2016 -0.80, 2017 -1.27, 2018 -0.84, 2019 -0.79, 2020 -0.97
+  ME 2013: eff_law -0.49 pp (5.73 -> 5.24), top -0.52 | net rate: 2012 +0.06, 2013 +0.12, 2014 +0.15, 2015 -0.11
+  ND 2021: eff_law -0.43 pp (1.22 -> 0.79), top -0.24 | net rate: 2019 -0.43, 2020 -0.86, 2021 -1.02, 2022 -0.44
+  MI 2013: eff_law -0.41 pp (3.82 -> 3.41), top -0.18 | net rate: 2012 -0.20, 2013 -0.16, 2014 -0.30, 2015 -0.20
+  DC 2015: eff_law -0.40 pp (5.87 -> 5.48), top -0.18 | net rate: 2013 -0.68, 2014 -0.91, 2015 -0.20, 2016 -1.05, 2017 -2.57
+  IA 2019: eff_law -0.37 pp (4.93 -> 4.56), top -0.37 | net rate: 2017 -0.17, 2018 -0.10, 2019 -0.21, 2020 -0.12, 2021 -0.05
+  KY 2018: eff_law -0.35 pp (4.96 -> 4.61), top -0.70 | net rate: 2016 -0.11, 2017 +0.01, 2018 +0.00, 2019 -0.04, 2020 +0.16
+  ND 2013: eff_law -0.35 pp (1.77 -> 1.43), top -0.48 | net rate: 2012 +1.73, 2013 +1.45, 2014 +0.93, 2015 +0.90
+  KS 2018: eff_law +0.33 pp (3.74 -> 4.07), top +0.43 | net rate: 2016 -0.64, 2017 -0.78, 2018 -0.43, 2019 -0.46, 2020 -0.27
+  AZ 2019: eff_law -0.32 pp (2.72 -> 2.40), top -0.17 | net rate: 2017 +1.48, 2018 +1.26, 2019 +1.26, 2020 +1.46, 2021 +1.07
+  NC 2019: eff_law -0.32 pp (4.48 -> 4.16), top -0.28 | net rate: 2017 +1.01, 2018 +0.73, 2019 +0.62, 2020 +0.87, 2021 +1.01
+  MN 2019: eff_law -0.30 pp (5.01 -> 4.71), top -0.25 | net rate: 2017 +0.22, 2018 +0.08, 2019 -0.10, 2020 -0.24, 2021 -0.36

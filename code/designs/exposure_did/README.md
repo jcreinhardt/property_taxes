@@ -19,7 +19,9 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `11_parcel_panel_outcomes.R` | parcel-level bills, AV, rates on the 1% panel (also the border DDD) |
 | `12_revenue_outside_option.R` | county revenue × share of tracts with a cheaper cross-border option |
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
+| `20_soi_state_net_migration.R` | SOI state files: states ranked by net interstate migration as a share of the filing population, 2012–22, by period (pre-cap, 2018–19, COVID); descriptive, no regression |
+| `21_soi_state_migration_taxes.R` | net migration rates (from `20`) on effective state income tax rates (`build/exposure/07`): state + year FE, lags, first and long differences, reform case studies |
 
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
-`notebook/2026-10-27-diop-green-reconciliation`. Superseded versions
+`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-soi-state-net-migration-ranking`, `notebook/2026-10-27-state-tax-changes-and-migration`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.
