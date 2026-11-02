@@ -1,4 +1,5 @@
 #!/bin/bash
+#SBATCH --account=pi_johng
 #SBATCH --partition=day
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=64G

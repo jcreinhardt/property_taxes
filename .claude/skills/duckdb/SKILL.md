@@ -82,9 +82,9 @@ CREATE OR REPLACE MACRO hn(x) AS CASE WHEN coalesce(trim(x), '') <> '' THEN hash
 
 ## 6. Sizing (measured)
 
-- Queries on the 1% parquet samples: `srun -p day -c 4 --mem=32G -t 00:15:00 ~/bin/duckdb < file.sql` — seconds to minutes.
+- Queries on the 1% parquet samples: `srun -A pi_johng -p day -c 4 --mem=32G -t 00:15:00 ~/bin/duckdb < file.sql` — seconds to minutes.
   Not `devel` (its 4-CPU/user cap makes a second job queue).
-- Full-table pulls: `sbatch -p day -c 8 --mem=96G --time=01:30:00 run_sql.sbatch file.sql` with a narrow column list and
+- Full-table pulls: `sbatch -A pi_johng -p day -c 8 --mem=96G --time=01:30:00 run_sql.sbatch file.sql` with a narrow column list and
   a `WHERE` on the hashed key; all-years panel joins: `MAXC=40 MAXG=1000 jobsize.sh`, `SET memory_limit='300GB'`.
 - Spill: a 300G job writes hundreds of GB to `temp_directory`; home filled once. Always point it at scratch.
 
