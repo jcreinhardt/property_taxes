@@ -14,7 +14,7 @@
 # pairs) as the outcome instead; outputs with the suffix _repeat.
 suppressPackageStartupMessages({library(data.table); library(fixest); library(rdrobust); library(ggplot2)})
 source("code/R/paths.R"); OUT <- out_dir("designs/border_rd"); invisible(out_dir("designs/border_rd/figures")); L <- file.path(DATA, "built")
-REP <- identical(Sys.getenv("ALTOS_INDEX"), "repeat"); P <- paste0("d08_rent_diff_in_disc", if (REP) "_repeat" else ""); IDX <- if (REP) "repeat-listing rent index" else "rent index"
+REP <- identical(Sys.getenv("ALTOS_INDEX"), "repeat"); P <- paste0("d09_rent_diff_in_disc", if (REP) "_repeat" else ""); IDX <- if (REP) "repeat-listing rent index" else "rent index"
 H <- 15; MX <- 100; MIN <- 5; YRS <- 2013:2024; SIDE_MI <- 20
 wins <- \(x) { q <- quantile(x, c(.01, .99), na.rm = TRUE); pmin(pmax(x, q[1]), q[2]) / 100 }
 pad <- \(x, w) { x <- as.character(x); paste0(strrep("0", pmax(0, w - nchar(x))), x) }

@@ -1683,7 +1683,7 @@ level actually assesses has to come from outside, e.g. the Lincoln Institute's *
   change). `wealth_finder_score` range shifts by vintage (2006–09, 2010–13, 2014–17, 2018+).
 
 ### 4.41 Altos rental listings: location, structure, rent designs (2026-10-29)
-Notebook: `notebook/2026-10-29-altos-rents-salt-cap/`; build `code/build/altos/`; designs `exposure_did/17`, `border_rd/08`, `border_iv/17`.
+Notebook: `notebook/2026-10-29-altos-rents-salt-cap/`; build `code/build/altos/`; designs `exposure_did/18`, `border_rd/09`, `border_iv/17`.
 - **Where:** Bouchet only, `/nfs/roberts/pi/pi_csl53/corelogic/raw_data/altos/` (read only), 782 weekly gz CSVs `us_national_rentals_classic_YYYY-MM-DD.csv.gz`, 2011-01-07 to 2025-12-26, ~50 GB; codebook `.../docs/codebooks/altos/Rental Intel- Data Field Description.xlsx`. Not on SOM; not in `corelogic.db`.
 - **Rows:** one per unit listing seen that week (`unit_id` = hash of address + unit; `property_id`; price = monthly asking rent; type apartment/house (+ rare co-op, mobile, pre-2017 codes TIME/COMM/MH); beds, baths, floor_size, built_in; lat/lon; 5-digit ZIP for 99.3%). 0.27m rows/week in 2011, 0.9–1.2m in 2015–17, 0.7m in 2018–19, 1.2–1.5m from 2021. 86% of units persist week to week.
 - **Processing (job 31309924, 16c/320G, 7 min, peak 320G; `01b` for the cells):** unit × month median rent (237.4m unit-months, 58.2m units), 21.6m distinct coordinates, 99.99% inside a 2019 cartographic tract via the DuckDB spatial extension (installed under `~/.duckdb`; `LOAD spatial` works on compute nodes; a `CREATE MACRO` fails in the read-only attached catalog — create it in `memory.main`). Exports in `~/ptax_explore/altos/`, copies in laptop `data/altos/`.

@@ -3,7 +3,7 @@ date: 2026-10-29
 title: Asking rents and the SALT cap: exposure event studies, border diff-in-disc, near vs far from the border (Altos listings)
 question: Compute the average SALT subsidy lost at ZIP / county level and run (a) exposure difference-in-differences on rents, (b) border differences-in-discontinuities of the rent jump on the cross-border difference in subsidy lost, (c) a border-region design comparing differently exposed areas near a state border with those further away.
 status: current
-code: property_taxes 9d83b5f + uncommitted scripts on branch claude/altos-data-hpc-location-77c629 (worktree; see Scripts)
+code: property_taxes 9d83b5f; scripts committed in 5e89424 on branch claude/pensive-bell-8a123e (merged into main 2026-11-02; exposure_did/17 and border_rd/08 renumbered to 18 and 09 there)
 tags: rents, Altos, exposure, border RD, DDD, SALT
 ---
 
@@ -78,9 +78,9 @@ in 2019–20. State × year FE absorb a national break but not one that differs 
   `data/built/exposure/exposure_components_{zip,county}.csv`, `salt_exposure_tract_zip2016.csv`;
   `data/built/geo/iv_tract_side.rds`; `data/hud_zip_to_county_crosswalk.xlsx`.
 - **Scripts:** `code/build/altos/01_altos_unit_month.sql`, `01b_altos_cells.sql`, `02_rent_panels.R`;
-  `code/designs/exposure_did/17_rents_altos.R`, `code/designs/border_rd/08_rent_diff_in_disc.R`,
-  `code/designs/border_iv/17_rent_exposure_near_far.R`; outputs `output/designs/exposure_did/d17_*`,
-  `output/designs/border_rd/d08_*`, `output/designs/border_iv/d17_*`, `output/build/altos/02_rent_panels.txt`.
+  `code/designs/exposure_did/18_rents_altos.R`, `code/designs/border_rd/09_rent_diff_in_disc.R`,
+  `code/designs/border_iv/17_rent_exposure_near_far.R`; outputs `output/designs/exposure_did/d18_*`,
+  `output/designs/border_rd/d09_*`, `output/designs/border_iv/d17_*`, `output/build/altos/02_rent_panels.txt`.
 - **Check:** 237,392,005 unit-months, 58,174,731 units, 21,643,196 of 21,645,482 coordinates in a tract; ZIP spec 1:
   2024 −0.66 (0.08), 2013 −0.29 (0.07); (b) post-2018 series slope −0.011 (0.006), 42 pairs; (c) c_2024 −0.39 (0.04),
   b_2024 +0.15 (0.07).

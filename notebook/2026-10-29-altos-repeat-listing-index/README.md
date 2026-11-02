@@ -3,7 +3,7 @@ date: 2026-10-29
 title: Asking rents and the SALT cap on a repeat-listing (same-unit) rent index: does the ZIP gradient survive?
 question: Build a same-unit rent index from the Altos repeat listings and rerun the three rent designs on it; do the 2013–14 pre-trend, the post-2018 ZIP gradient (−0.4 to −0.7% per $100 by 2021–24) and its disappearance with the 2012 rent-level control survive when composition is held fixed?
 status: current
-code: property_taxes 9d83b5f + branch claude/pensive-bell-8a123e (worktree; includes the uncommitted Altos scripts of claude/altos-data-hpc-location-77c629)
+code: property_taxes 5a14153 + branch claude/pensive-bell-8a123e (5e89424 the Altos scripts copied from claude/altos-data-hpc-location-77c629, 96bff2c this entry, then the renumbering of exposure_did/17 → 18 and border_rd/08 → 09; merged into main 2026-11-02)
 tags: rents, Altos, repeat listings, exposure, border RD, DDD, SALT
 ---
 
@@ -69,10 +69,10 @@ kept, +24.5 on pairs ≥ 2 years apart pooled nationally); 2013: −14.9 vs −1
 - **Inputs:** `data/altos/altos_repeat_unit.parquet` (Bouchet job 31311040, `01b_altos_cells.sql`; not in git);
   `data/built/altos/{zip,tract}_year_repeat.rds` (this entry), `zip_year.rds` (02); exposure, tract-ZIP and border-side
   files as in the previous entry; `data/hud_zip_to_county_crosswalk.xlsx`.
-- **Scripts:** `code/build/altos/03_repeat_index.R`; `ALTOS_INDEX=repeat Rscript code/designs/exposure_did/17_rents_altos.R`,
-  `.../border_rd/08_rent_diff_in_disc.R`, `.../border_iv/17_rent_exposure_near_far.R`; outputs
-  `output/build/altos/03_repeat_index.{txt,png}`, `output/designs/exposure_did/d17_rents_altos_repeat.*`,
-  `output/designs/border_rd/d08_rent_diff_in_disc_repeat*`, `output/designs/border_iv/d17_rent_exposure_near_far_repeat.*`.
+- **Scripts:** `code/build/altos/03_repeat_index.R`; `ALTOS_INDEX=repeat Rscript code/designs/exposure_did/18_rents_altos.R`,
+  `.../border_rd/09_rent_diff_in_disc.R`, `.../border_iv/17_rent_exposure_near_far.R`; outputs
+  `output/build/altos/03_repeat_index.{txt,png}`, `output/designs/exposure_did/d18_rents_altos_repeat.*`,
+  `output/designs/border_rd/d09_rent_diff_in_disc_repeat*`, `output/designs/border_iv/d17_rent_exposure_near_far_repeat.*`.
   The default runs of the three scripts reproduce their fixed-mix outputs unchanged.
 - **Check:** ZIP spec 1 on the repeat index: 2024 −0.45 (0.07), 2015 +0.22 (0.02), 6,300 ZIPs; balanced-ZIP mean change
   2017 → 2024 +21.1 (repeat) vs +40.5 (fixed-mix) log points; (b) post-2018 series slope −0.006 (0.004), 19 pairs;

@@ -54,8 +54,8 @@ res <- if (REP) rbind(
   est(cy, "fips + st^y", ~fips, "3. County", dep = "lp2"))
 res[, comp := factor(comp, names(X), c("total lost subsidy", "(a) property tax (SALT, real-estate part)", "(b) state/local income or sales tax (SALT, rest)", "(c) mortgage interest"))]
 res[, dep := factor(dep, c("lr", "lr_raw", "lp2"), c(paste0("log rent, ", if (REP) "repeat-listing index" else "fixed type x bedroom mix"), "log rent, raw mean", "log median rent, 2-bed apartments"))]
-fwrite(res, file.path(OUT, paste0("d17_rents_altos", SFX, ".csv")))
-sink(file.path(OUT, paste0("d17_rents_altos", SFX, ".txt")), split = TRUE)
+fwrite(res, file.path(OUT, paste0("d18_rents_altos", SFX, ".csv")))
+sink(file.path(OUT, paste0("d18_rents_altos", SFX, ".txt")), split = TRUE)
 cat("% change in asking rent per $100/yr of lost federal subsidy per owner household (TY2016 -> TY2018); ref 2017; weighted by 2016 returns; SE by county\n")
 if (REP) cat(sprintf("Repeat-listing index (build/altos/03): ZIP panel %d ZIPs, %d counties (>= %d linked pairs every year 2013-2024, 2012 level from the fixed-mix index)\n", uniqueN(zp$zip), uniqueN(zp$fips), MIN)) else
 cat(sprintf("ZIP panel: %d ZIPs, %d counties | county panel: %d counties (>= %d listings every year 2012-2024)\n", uniqueN(zp$zip), uniqueN(zp$fips), uniqueN(cy$fips), MIN))
@@ -71,5 +71,5 @@ pl <- function(r, ttl, file, h) {
          subtitle = paste0("Altos listings; ", IDX, ". Weighted by 2016 returns; 95% CI, SE by county.")) +
     theme_minimal(base_size = 8) + theme(legend.position = "bottom")
   ggsave(file.path(OUT, "figures", file), g, width = 11, height = h, dpi = 150) }
-pl(res[dep == levels(dep)[1]], paste0("Asking rents and the SALT cap: exposure x year event studies", if (REP) " (repeat-listing index)" else ""), paste0("d17_rents_altos", SFX, ".png"), if (REP) 6 else 12)
-if (!REP) pl(res[spec %in% c("1. ZIP (uncensored SOI ZIPs)", "3. County")][, spec := paste(spec, "|", dep)], "Asking rents: rent index variants", "d17_rents_altos_variants.png", 9)
+pl(res[dep == levels(dep)[1]], paste0("Asking rents and the SALT cap: exposure x year event studies", if (REP) " (repeat-listing index)" else ""), paste0("d18_rents_altos", SFX, ".png"), if (REP) 6 else 12)
+if (!REP) pl(res[spec %in% c("1. ZIP (uncensored SOI ZIPs)", "3. County")][, spec := paste(spec, "|", dep)], "Asking rents: rent index variants", "d18_rents_altos_variants.png", 9)
