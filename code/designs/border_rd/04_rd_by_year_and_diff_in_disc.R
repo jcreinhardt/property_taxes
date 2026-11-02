@@ -5,18 +5,18 @@
 # c15), so year-to-year changes are not driven by bandwidth choice; robust bias-corrected CI, SE clustered by county.
 # Tract-year outcomes (CoreLogic full roll, data/built/corelogic/tract_year.rds): median effective rate of arm's-length sales,
 # log median nominal rate on the residential roll (bill / AV; levels not comparable across fractional-assessment states, hence logs and pair demeaning), log mean bill per residential parcel, log median sale price, log median
-# assessment ratio, sales per parcel. District-year (F-33, fiscal year = y): log current spending per pupil, log property
+# assessment ratio, sales per parcel, log residential parcels, new-construction sales per 1,000 parcels. District-year (F-33, fiscal year = y): log current spending per pupil, log property
 # tax per pupil (> 0), state share of state + local revenue. Covariates (c18): SEDA 4.1 district-year achievement (grades 3-8,
 # cohort scale), SES and FRL share (2009-2019 only); ACS 5-year tract estimates by release year (year y = survey years y-4..y;
-# releases from 2020 mapped from 2020 to 2010 tracts by land-area shares).
+# releases from 2020 mapped from 2020 to 2010 tracts by land-area shares), incl. log housing units and vacancy share (build/acs/07).
 suppressPackageStartupMessages({library(data.table); library(rdrobust); library(ggplot2)})
 source("code/R/paths.R"); OUT <- out_dir("designs/border_rd"); invisible(out_dir("designs/border_rd/figures")); H <- 15; MX <- 100; YRS <- 2013:2024
 s <- unique(readRDS(file.path(DATA, "built/geo/iv_tract_side.rds"))[T == 30, .(tract, leaid, pair, high, dist_mi, cty)])
 s[, sd_mi := ifelse(high == 1, dist_mi, -dist_mi)]; s <- s[abs(sd_mi) <= MX]
 ty <- readRDS(file.path(DATA, "built/corelogic/tract_year.rds"))[y %in% YRS & tract %in% s$tract]
 ty <- ty[, .(tract, y, eff = 100 * eff50, lnom = log(med_nom_res), lbill = log(bill / n_bill), lp50 = log(p50), lratio = log(ratio50),
-             turn = n_sales / n)]
-ty[!is.finite(lnom), lnom := NA][!is.finite(lbill), lbill := NA][!is.finite(lratio), lratio := NA][!is.finite(lp50), lp50 := NA]
+             turn = n_sales / n, lnres = log(n), newcon_pk = 1000 * fcoalesce(n_newcon, 0) / n)]
+ty[!is.finite(lnom), lnom := NA][!is.finite(lbill), lbill := NA][!is.finite(lratio), lratio := NA][!is.finite(lp50), lp50 := NA][!is.finite(lnres), lnres := NA]
 fin <- readRDS(file.path(DATA, "built/census_finances/district_finance.rds"))[enr > 0]
 fin[, lenr_g := log(enr) - log(enr[y == 2017][1]), by = leaid]   # enrolment growth relative to FY2017 (NA if no 2017 record)
 fin <- fin[y %in% YRS, .(leaid, y, lspend = log(spend / enr), lptax = fifelse(ptax > 0, log(ptax / enr), NA_real_), aid_sh = strev / (strev + loc), lenr_g)]
@@ -32,7 +32,9 @@ v <- c(eff = "effective tax rate, sales (pp)", lnom = "log nominal rate (bill / 
        ach = "district test scores (SEDA, SD)", ses = "district SES (SEDA)", perfrl = "district share free/reduced lunch (SEDA)",
        linc = "tract log median HH income (ACS 5-yr)", lhval = "tract log median home value (ACS 5-yr)", sh_ba = "tract share BA+ (ACS 5-yr)",
        sh_white = "tract share white (ACS 5-yr)", sh_own = "tract owner share (ACS 5-yr)", yrbuilt = "tract median year built (ACS 5-yr)",
-       age = "tract median age (ACS 5-yr)", lpop = "tract log population (ACS 5-yr)")
+       age = "tract median age (ACS 5-yr)", lpop = "tract log population (ACS 5-yr)",
+       lnres = "tract log residential parcels (roll)", newcon_pk = "new-construction sales per 1,000 parcels (roll)",
+       lhu = "tract log housing units (ACS 5-yr)", sh_vac = "tract vacancy share (ACS 5-yr)")
 run <- function(k, yy) {
   x <- d[y == yy & is.finite(get(k))]
   if (nrow(x) < 500) return(NULL)

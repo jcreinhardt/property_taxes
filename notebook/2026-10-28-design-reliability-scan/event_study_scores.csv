@@ -1,0 +1,375 @@
+file,grp,n_pre,n_post,pre_slope_t,pre_max_t,pre_mean,post_mean,post_min_t,post_sig,post_sign,post_same_sign,last_y,flat_pre,post_effect,verdict
+border_iv/a3_district_border_ddd.csv,DDD near x high x exposure: lpt,5,5,0.7,1.3,0.0019,0.0043,1.5,2,1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/a3_district_border_ddd.csv,DDD near x high: lpt,5,5,-0.8,1.2,-0.0049,-0.028,1.5,4,-1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/a3_district_border_ddd_robust.csv,near < 10 mi | all,5,5,-0.8,1.3,-0.005,-0.028,1.6,4,-1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/a3_district_border_ddd_robust.csv,near < 20 mi | all,5,5,-1,1.3,0.0043,-0.023,1.7,3,-1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/a3_district_border_ddd_robust.csv,near < 20 mi | high exposure,5,5,-0.9,1.6,0.0083,-0.029,1.6,3,-1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b3_tract_iv_ddd.csv,l_av_pp | low exposure,4,6,-0.5,1.6,-0.047,-0.035,1,3,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b3_tract_iv_ddd.csv,l_tax_pp | all,4,6,-0.7,2.2,-0.013,-0.026,0.1,2,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b3_tract_iv_ddd.csv,l_tax_pp | high exposure,4,6,-0.8,2.1,-0.019,-0.028,0.2,2,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b6_repeat_sales.csv,near x high (no exposure terms),5,6,1.9,2.2,0.0088,0.032,1.1,2,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b6_repeat_sales_30pct.csv,near x high (no exposure terms),5,6,1.9,2.2,0.0088,0.032,1.1,2,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/b6_repeat_sales_rep2.csv,nhx,5,6,-0.5,1.7,-0.013,-0.021,1.6,3,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_rd/c16_border_diff_in_disc.csv,"eff | effective tax rate, sales (pp)",4,6,-0.2,1.3,0.046,-0.25,2,6,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_twfe/border_sample_twfe.csv,full | gap_pp,4,3,1.5,0.5,0.0041,-0.054,0.2,2,-1,TRUE,2021,TRUE,TRUE,PASS: flat pre + post effect
+border_twfe/border_sample_twfe_2013_2024.csv,full | gap_pp,4,6,1.8,0.5,0.0051,-0.08,0.2,5,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_twfe/border_vacancy_twfe.csv,lower minus higher side (pair x year FE) | balanced,4,6,0.7,1.3,0.076,0.5,1.6,4,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/a1_revenue_event_study.csv,county_govt | ttax | FALSE,5,4,-1.4,1,-0.0034,0.012,0.6,2,1,TRUE,2022,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/a4_cbsa_dispersion.csv,sd,5,5,-1.1,2.1,0.0034,0.0078,1.8,3,1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/a4_cbsa_dispersion.csv,wsd,5,5,-0.8,0.9,0.0014,0.0058,0.9,4,1,TRUE,2023,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/b2_county_event_studies.csv,eff_pct | FALSE,4,6,0.6,1.2,-0.0018,0.025,5.1,6,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/b2_county_event_studies.csv,eff_pct | TRUE,4,6,-0.3,2.1,-0.0043,0.019,3.8,6,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,-1.8,0.7,-0.00089,-0.016,0.8,3,-1,TRUE,2022,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),5,4,1.2,0.3,-0.00037,-0.099,0.1,2,-1,TRUE,2022,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),5,4,1,0.5,-0.0039,-0.082,0.7,3,-1,TRUE,2022,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,1.4,0.6,-0.009,-0.089,0.2,3,-1,TRUE,2022,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 6. ZIP (uncensored)",4,6,-1.5,1.8,0.002,-0.0065,1.4,5,-1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c29_three_components.csv,(c) mortgage interest | 1. County,4,6,0.5,1.7,-0.002,0.019,1.9,5,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+exposure_did/c29_three_components.csv,"(c) mortgage interest | 2. County, + 2012 price level x year",4,6,0.3,1.7,-0.0016,0.017,1.5,5,1,TRUE,2024,TRUE,TRUE,PASS: flat pre + post effect
+border_iv/a3_district_border_ddd.csv,DDD near x high: lptpp,5,5,-0.3,1.7,-0.015,-0.023,1.3,1,-1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 10 mi | high exposure,5,5,0.7,1.3,-0.0052,-0.017,0.7,1,-1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 10 mi | low exposure,5,5,-1.7,0.9,-0.0087,-0.034,0.8,0,-1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 20 mi | low exposure,5,5,-0.8,0.9,0.0023,-0.02,0.7,0,-1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 5 mi | high exposure,5,5,0.6,2.1,-0.012,-0.005,0.1,0,-1,FALSE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_event_studies.csv,(a) log property tax per pupil,5,5,-0.5,1.1,-0.00094,0.00012,0.1,0,1,FALSE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/a3_district_event_studies.csv,log current spending per pupil,5,5,1.8,1.2,0.00013,-0.00031,0,0,-1,FALSE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,eff | all,4,6,-0.5,1.5,-0.048,-0.11,0.8,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,eff | high exposure,4,6,-0.8,1.3,-0.043,-0.13,0.8,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,eff | low exposure,4,6,-0.9,1.2,-0.038,-0.048,0.2,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_av_pp | all,4,6,0.9,1.6,0.057,-0.059,1,1,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_av_pp | high exposure,4,6,0.8,1.6,0.069,-0.067,0.9,1,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_nom | all,4,6,0.2,1.5,-0.069,0.034,0.5,0,1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_nom | high exposure,4,6,0.4,1.6,-0.088,0.039,0.5,0,1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_nom | low exposure,4,6,0.3,1.4,0.062,0.0058,0,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_p50 | all,4,6,-1.6,1.5,0.012,0.014,0,0,1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_p50 | low exposure,4,6,-0.4,1,-0.02,0.0023,0.2,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_ratio | all,4,6,0.6,1.5,0.046,-0.078,1.2,1,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_ratio | high exposure,4,6,0.5,1.5,0.057,-0.095,1.3,1,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_ratio | low exposure,4,6,-0.4,1.6,-0.021,-0.044,0.4,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_tax_pp | low exposure,4,6,-0.8,1.6,0.014,-0.029,0.8,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd.csv,turnover | low exposure,4,6,0.1,2.4,-0.23,0.041,0.1,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd_zipexposure.csv,eff,8,12,1.7,2.2,-0.02,0.028,0.2,6,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd_zipexposure.csv,l_nom,8,12,1.2,2.3,-0.014,0.014,0.1,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd_zipexposure.csv,l_tax_pp,8,12,0.7,1.4,-0.0036,-0.0067,0,2,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b3_tract_iv_ddd_zipexposure.csv,turnover,8,12,1,1.9,0.02,-0.062,0.2,1,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b6_repeat_sales.csv,nhx,5,6,-0.5,1.1,0.00061,-0.0099,0.3,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b6_repeat_sales.csv,nlx,5,6,-1.1,1.8,0.0089,0.0012,0,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b6_repeat_sales_30pct.csv,nhx,5,6,-0.5,1.1,0.00061,-0.0099,0.3,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b6_repeat_sales_30pct.csv,nlx,5,6,-1.1,1.8,0.0089,0.0012,0,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/d1_moveout_ddd.csv,border DDD near x high,4,3,-0.4,1.2,-0.23,-0.23,0.4,0,-1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/d2_moveout_full.csv,border DDD near x high,4,3,-1,0.9,0.0055,-0.033,0.1,0,-1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lbill | log mean bill per parcel,4,6,-0.6,1.4,0.034,-0.02,0.1,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,"lenr_g | district log enrolment, change since FY2017",4,5,1.7,1.2,-0.0026,0.028,1.4,0,1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,"lnom | log nominal rate (bill / AV), roll",4,6,0.6,1.5,-0.058,-0.0052,0,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lratio | log median assessment ratio,4,6,-0.3,1.9,0.089,-0.079,0.8,0,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,perfrl | district share free/reduced lunch (SEDA),4,0,-0.2,1,-0.0013,,Inf,0,,FALSE,2018,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,sh_white | tract share white (ACS 5-yr),4,5,-0.2,0.6,0.0013,-0.012,0.1,0,-1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,turn | sales per parcel,4,6,0.2,1.2,-0.0023,0.00012,0.2,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_rd/c16_border_diff_in_disc.csv,yrbuilt | tract median year built (ACS 5-yr),4,5,-0.6,1.9,0.29,0.11,0,0,1,TRUE,2023,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | effective rate | full",4,6,0.6,0.6,3e-04,0.0073,0.3,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | tax bill | balanced",4,6,0,1.3,0.02,0.046,0.2,2,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | tax bill | full",4,6,1.4,1.4,0.0041,0.015,0.3,1,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_gap_twfe.csv,CoreLogic-reported rate | full | gap_pp,4,3,-0.2,0.7,-0.032,0.021,0.1,0,1,FALSE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_gap_twfe.csv,CoreLogic-reported rate | full | rel,4,3,-1,1,-0.0068,0.0035,0.1,0,1,FALSE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log mean bill | balanced,4,3,0.2,1,0.0075,0.021,0.5,0,1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log mean bill | full,4,3,0.2,1,0.0075,0.021,0.5,0,1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log revenue | balanced,4,3,0.4,1.2,0.0085,0.022,0.5,0,1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log revenue | full,4,3,0.4,1.2,0.0085,0.022,0.5,0,1,TRUE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,lower minus higher side (pair x year FE) | full,4,6,-0.6,1,0.063,0.22,1.1,1,1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_sample_twfe.csv,balanced | gap_pp,4,3,1.9,1.1,0.017,-0.053,0.3,2,-1,FALSE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_sample_twfe.csv,balanced | rel,4,3,0,1.3,0.02,-0.00083,0.3,0,-1,FALSE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_sample_twfe.csv,full | rel,4,3,-1.1,0.7,0.0076,0.0021,0.1,0,1,FALSE,2021,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_sample_twfe_2013_2024.csv,full | rel,4,6,-1.2,0.6,0.008,0.014,0.1,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+border_twfe/border_vacancy_twfe.csv,lower minus higher side (pair x year FE) | full,4,6,1.7,1.9,0.036,0.22,0.5,1,1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/a1_revenue_event_study.csv,county_govt | ptax | TRUE,5,4,1.7,1.8,-0.0043,0.006,0.5,2,1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/a2_revenue_outside_option.csv,event study: ex_z x border-high county | county_govt | FALSE | 1073,5,4,-0.1,1,-0.0054,-0.016,0.8,1,-1,TRUE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/a2_revenue_outside_option.csv,event study: ex_z x border-high county | county_govt | TRUE | 1073,5,4,-1.9,1.3,-0.003,-0.0094,0.9,1,-1,TRUE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/a2_revenue_outside_option.csv,event study: ex_z x border-high county | school | FALSE | 2345,5,4,-1.7,1.7,0.0054,-0.00098,0.1,0,-1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/b2_county_event_studies.csv,prd | FALSE,4,6,0.7,1.3,-0.0057,-0.00037,0.1,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/b2_county_event_studies.csv,regr_slope_ratio | TRUE,4,6,1.8,1.4,-0.0032,-0.0027,0.8,1,-1,TRUE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/b2_county_event_studies.csv,sd_eff_tract | FALSE,4,6,-0.4,1.4,0.0021,0.00038,0,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/b2_county_event_studies.csv,sd_log_nom_area | FALSE,4,6,0.9,2.1,0.00069,-9.5e-05,0.2,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/b2_county_event_studies.csv,sd_log_nom_area | TRUE,4,6,1.6,1.7,-0.00069,-0.00049,0,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,1.9,2.2,-0.005,0.0058,0.5,2,1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,1.9,2.2,-0.004,0.0046,0.5,2,1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | SOI instrumented by Z1 | A: ACS-identified counties,5,4,-0.1,1.9,0.0063,-0.0016,0.3,0,-1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | SOI observed (OLS) | A: ACS-identified counties,5,4,1.4,1.6,-0.0021,-0.0027,0.6,1,-1,TRUE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log in-migrant returns | Z1 (ACS, own location) | A: ACS-identified counties",5,4,-0.1,1.9,0.0049,-0.0013,0.3,0,-1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,1.8,1.3,-0.024,0.068,0.3,2,1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,1.1,1.3,-0.01,0.059,0,2,1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c22_soi_migration.csv,"(1) cross-border dyads: log returns, high->low vs low->high",5,4,-1.1,1,0.006,-0.04,0.2,3,-1,FALSE,2022,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(5) ZIP, + 2012 price level x year",4,6,-0.7,2.2,-0.00027,-6e-05,0.1,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(7) ZIP, county x year FE + 2012 price x year",4,6,-1.4,1.8,0.0014,-0.00033,0.1,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 7. ZIP (uncensored), + 2012 price level x year",4,6,-1.4,2.1,0.0033,-0.0034,0.1,2,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 2. County, + 2012 price level x year",4,6,-0.3,1.8,0.0034,-0.0026,0.2,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 3. County, no-income-tax states",4,6,-1.3,1.5,0.014,-0.0071,0.4,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 4. County, no-income-tax states, + 2012 price level x year",4,6,0.7,1.5,0.0088,0.0037,0,0,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 7. ZIP (uncensored), + 2012 price level x year",4,6,-0.1,1.4,-0.0015,-0.0019,0.1,0,-1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(c) mortgage interest | 3. County, no-income-tax states",4,6,1.5,0.9,-0.0017,0.0083,0.3,1,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,(c) mortgage interest | 6. ZIP (uncensored),4,6,-1.2,2.1,0.0042,0.0034,0.3,1,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c29_three_components.csv,"(c) mortgage interest | 7. ZIP (uncensored), + 2012 price level x year",4,6,-1,1.9,0.0035,0.0044,0,2,1,FALSE,2024,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log AV | border DDD (near x high),4,7,0.3,1.8,0.017,-0.0043,0.1,0,-1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log assessment ratio (| log price) | border DDD (near x high),4,7,-0.1,2.1,0.043,0.034,0.1,0,1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log effective rate (| log price) | border DDD (near x high),4,7,-0.4,2.3,0.031,0.0058,0.1,0,1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log effective rate (| log price) | county exposure,4,7,0.3,2.2,-0.0038,0.015,0.2,6,1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log nominal rate | border DDD (near x high),4,7,-0.3,1.7,3e-04,-0.019,0.3,1,-1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log nominal rate | county exposure,4,7,1.1,1.6,-0.0024,-0.0031,0.2,1,-1,TRUE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+exposure_did/c2_parcel_panel.csv,log sale price | border DDD (near x high),4,7,0.8,2,-0.012,-0.0098,0,0,-1,FALSE,2025,TRUE,FALSE,"null: flat pre, no post effect"
+border_iv/b4_hpi_border_ddd_robust.csv,10 | nhx,5,7,-2.8,0.7,0.0021,-0.0099,3.8,7,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b4_hpi_border_ddd_robust.csv,10 | nlx,5,7,-0.3,2.8,0.0045,-0.0088,1.4,5,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b4_hpi_border_ddd_robust.csv,20 | nhx,5,7,6.7,1.1,-0.0022,-0.012,4.8,7,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b4_hpi_border_ddd_robust.csv,20 | nlx,5,7,4.2,2.7,0.00033,-0.0086,1.9,6,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b4_hpi_border_ddd_robust.csv,5 | nhx,5,7,-6.9,1.4,0.006,-0.01,2.5,7,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b4_hpi_border_ddd_robust.csv,5 | nlx,5,7,-2.6,1.7,0.0054,-0.0086,0.9,4,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/b6_repeat_sales_rep2.csv,near x high (no exposure terms),5,6,3.9,1.7,0.0059,0.035,1.3,3,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_iv/d2_moveout_full.csv,county exposure (per SD),4,3,-1.8,5.9,-0.096,-0.081,1.9,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_rd/c16_border_diff_in_disc.csv,lptax | district log property tax per pupil,4,5,-5.7,1.2,0.015,-0.063,1,2,-1,TRUE,2023,FALSE,TRUE,pre-trend + post effect
+border_rd/c20_enrolment_rd.csv,levels: log enrolment,5,5,0.7,4,-0.45,-0.46,3.9,5,-1,TRUE,2023,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | effective rate | balanced",4,6,-2.8,1.8,0.013,-0.22,4.2,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | effective rate | full",4,6,-1.5,3,0.017,-0.21,5.3,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | sale price | balanced",4,6,71.7,10.4,-0.12,0.33,9,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | sale price | full",4,6,120.2,12.9,-0.11,0.32,11.8,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | tax bill | balanced",4,6,14.1,13.9,-0.11,0.11,3.2,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_bill_price_twfe_2013_2024.csv,"side level (mean log), side FE | tax bill | full",4,6,7.8,13.1,-0.096,0.11,5.3,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_gap_twfe.csv,effective (bill / price) | full | gap_pp,4,3,-9.8,1.2,0.024,-0.06,0.2,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log mean bill | balanced,4,3,9.8,9.9,-0.073,0.1,4.3,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log mean bill | full,4,3,9.8,9.9,-0.073,0.1,4.3,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log parcels | balanced,4,3,6.5,6.8,-0.007,-0.0055,1.9,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log parcels | full,4,3,6.5,6.8,-0.007,-0.0055,1.9,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log revenue | balanced,4,3,17,10.5,-0.08,0.096,4.2,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,higher-tax side (side FE) | log revenue | full,4,3,17,10.5,-0.08,0.096,4.2,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log mean bill | balanced,4,3,4.9,5.8,-0.066,0.12,4.5,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log mean bill | full,4,3,4.9,5.8,-0.066,0.12,4.5,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log parcels | balanced,4,3,10,6.7,-0.006,-0.0045,1.7,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log parcels | full,4,3,10,6.7,-0.006,-0.0045,1.7,2,-1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log revenue | balanced,4,3,6.6,6.2,-0.072,0.12,4.3,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_revenue_twfe.csv,lower-tax side (side FE) | log revenue | full,4,3,6.6,6.2,-0.072,0.12,4.3,3,1,TRUE,2021,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_vacancy_twfe.csv,higher-tax side (side FE) | balanced,4,6,-2.5,2.8,0.076,-0.84,2.5,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_vacancy_twfe.csv,higher-tax side (side FE) | full,4,6,-2.9,3.6,0.065,-0.55,1.6,5,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+border_twfe/border_vacancy_twfe.csv,lower-tax side (side FE) | full,4,6,-2.2,3,0.1,-0.33,1.1,5,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/13_soi_state_six.csv,l_out | log out-of-state returns,5,4,9.1,4.2,-0.086,0.079,1.1,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/13_soi_state_six.csv,r_nit | rate to no-income-tax states (pp),5,4,10.4,2.4,-0.055,0.11,1.7,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/13_soi_state_six.csv,r_out | out-of-state rate (pp of returns),5,4,5,1.6,0.0093,0.44,2.5,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/a1_revenue_event_study.csv,county_govt | ptax | FALSE,5,4,2.4,1.6,-0.0034,0.015,1.5,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/a1_revenue_event_study.csv,school | exp | FALSE,5,4,21.7,4.9,-0.0082,0.0038,1,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/a1_revenue_event_study.csv,school | ptax | FALSE,5,4,2.8,3.6,-0.0096,0.01,1.4,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/a1_revenue_event_study.csv,school | ttax | FALSE,5,4,4.3,3.9,-0.01,0.0097,1.6,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_av_pp | FALSE,4,6,8.3,3.8,-0.013,0.014,2.9,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_levy | FALSE,4,6,7.8,4.1,-0.01,0.013,3.5,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_levy | TRUE,4,6,5.8,2.6,-0.0013,0.0024,0.3,2,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_levy_pp | FALSE,4,6,11.7,5.2,-0.01,0.0099,2.6,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_levy_pp | TRUE,4,6,6.5,4.3,-0.0022,0.0031,0.9,3,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_nom | FALSE,4,6,1.6,2.9,0.0045,-0.0038,0.2,2,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_p50 | FALSE,4,6,2.1,1.8,-0.0028,-0.012,3.8,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_p50 | TRUE,4,6,2.7,1.6,3e-04,-0.011,2.8,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_ratio | FALSE,4,6,-1.2,3.7,-0.0048,0.028,5.6,6,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b2_county_event_studies.csv,l_ratio | TRUE,4,6,-0.7,4,-0.0044,0.013,1,5,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b8_repeat_sales_exposure.csv,county x year FE (within-county ZIP variation),5,6,-9.4,6.6,0.021,-0.031,5.3,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/b8_repeat_sales_exposure.csv,state x year FE,5,6,-2.2,4.6,0.012,-0.042,8.4,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | SOI instrumented by Z1 | A: ACS-identified counties,4,6,-6,1.9,0.0022,-0.01,3.4,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | SOI instrumented by Z1 | B: all counties (PUMA fill-in),4,6,-3.1,1.5,0.0012,-0.009,5.1,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | SOI observed (OLS) | A: ACS-identified counties,4,6,-5.6,1.5,0.0015,-0.0067,2.1,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | SOI observed (OLS) | B: all counties (PUMA fill-in),4,6,-4.8,1.4,0.00035,-0.0055,3.8,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,"log median sale price | Z1 (ACS, own location) | A: ACS-identified counties",4,6,-6,1.9,0.0017,-0.0078,3.5,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,"log median sale price | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",4,6,-3.1,1.5,0.0011,-0.0078,5.1,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | Z2 (national sample at county rate) | A: ACS-identified counties,4,6,-4.5,2.5,0.01,0.015,1.3,4,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,log median sale price | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),4,6,-9,2.2,0.0064,0.0099,1.4,2,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,-2.1,0.9,-0.0039,-0.027,2.1,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,3.5,6.3,-0.0066,0.0042,1.3,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | SOI observed (OLS) | B: all counties (PUMA fill-in),5,4,3.2,11.3,-0.12,-0.046,1.5,3,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | SOI instrumented by Z1 | B: all counties (PUMA fill-in),5,4,3.7,6.4,-0.056,-0.022,0.1,2,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | SOI observed (OLS) | B: all counties (PUMA fill-in),5,4,3.7,10.2,-0.063,-0.032,2.5,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c14_simulated_instrument.csv,"out-of-state migration rate (%) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,3.7,6.1,-0.049,-0.019,0.1,2,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | Z2 (national sample at county rate) | A: ACS-identified counties,5,4,-2.3,2.3,0.0014,-0.017,1.8,3,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),5,4,-0.1,5.9,-0.0095,-0.019,2.8,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | Z2 (national sample at county rate) | A: ACS-identified counties,5,4,-3.3,2.4,0.0043,-0.017,1.3,3,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),5,4,-0.1,4.3,-0.0068,-0.018,2.3,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,2.9,1.2,-0.041,0.088,0,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,2.2,1.1,-0.029,0.099,0,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: in-from-other-state rate (%) | SOI instrumented by Z1 | S: states, state + year FE",5,4,0.1,3,0.069,0.034,0.5,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: in-from-other-state rate (%) | SOI observed (OLS) | S: states, state + year FE",5,4,0.4,2.7,0.052,0.031,0.4,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: in-from-other-state rate (%) | Z1 (ACS, own location) | S: states, state + year FE",5,4,0.1,3.7,0.057,0.028,0.5,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: in-from-other-state rate (%) | Z2 (national sample at county rate) | S: states, state + year FE",5,4,0.2,3.6,0.1,0.068,1.2,2,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: log out-of-state returns | SOI instrumented by Z1 | S: states, state + year FE",5,4,20.1,3.7,-0.013,0.016,2.1,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: log out-of-state returns | SOI observed (OLS) | S: states, state + year FE",5,4,7.4,3.6,-0.013,0.013,2,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: log out-of-state returns | Z1 (ACS, own location) | S: states, state + year FE",5,4,20.4,4.7,-0.011,0.014,2.7,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: out-of-state rate (% of returns) | SOI instrumented by Z1 | S: states, state + year FE",5,4,8.3,2.3,-0.019,0.057,1.3,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: out-of-state rate (% of returns) | SOI observed (OLS) | S: states, state + year FE",5,4,7.8,2.9,-0.022,0.052,1.7,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: out-of-state rate (% of returns) | Z1 (ACS, own location) | S: states, state + year FE",5,4,8.1,2,-0.015,0.049,1.5,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c15_simulated_instrument_migration.csv,"state: out-of-state rate (% of returns) | Z2 (national sample at county rate) | S: states, state + year FE",5,4,5.6,2.3,-0.019,0.066,2.1,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c19_enrolment.csv,"(1) exposure x year, enrolment-weighted",5,5,7.4,3.4,-0.001,-0.0019,0.5,2,-1,TRUE,2023,FALSE,TRUE,pre-trend + post effect
+exposure_did/c22_soi_migration.csv,"(2) county out-migration rate (%), x exposure",5,4,2.1,5,-0.27,-0.095,0.7,2,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c22_soi_migration.csv,"(2) county out-of-state rate (%), x exposure",5,4,1.6,5.2,-0.15,-0.037,0.3,2,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c22_soi_migration.csv,"(2) log AGI per out-migrant return, x exposure",5,4,2.7,3.9,-0.0032,0.024,2.8,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c22_soi_migration.csv,"(3) ZIP log returns, border near x high",5,4,-3.6,3,0.0057,-0.0069,2.2,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c22_soi_migration.csv,"(3) ZIP log returns, x ZIP exposure",5,4,5.1,1.8,-0.00085,-0.005,2.6,4,-1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c23_soi_agi_in_out.csv,"l_in | log AGI per return, in-movers",5,4,2.3,4.1,0.0028,0.02,2.1,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c23_soi_agi_in_out.csv,"l_out | log AGI per return, out-movers",5,4,2.5,4,-0.0029,0.024,2.7,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c23_soi_agi_in_out.csv,"l_st | log AGI per return, stayers",5,4,2.1,4.8,-0.0086,0.013,2.8,4,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c23_soi_agi_in_out.csv,rel_out | out-movers relative to stayers (log),5,4,3.2,2.7,0.0057,0.011,0.5,3,1,TRUE,2022,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(1) ZIP price, ZIP exposure",4,6,-11.8,7.6,0.0047,-0.0073,8.3,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(2) ZIP price, county exposure",4,6,2.5,0.9,-0.00044,-0.0055,3.3,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(3) county price built from ZIP sample, county exposure",4,6,-2.7,1.6,0.0019,-0.0045,1.7,5,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(4) county design, counties in ZIP sample",4,6,-7.4,1.5,0.00049,-0.0058,3.5,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(4b) county design, all balanced counties",4,6,-8.4,1.6,5e-04,-0.0058,3.5,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c28_zip_pretrend_diagnostics.csv,"(6) ZIP, county x year FE",4,6,-17.5,8.4,0.0071,-0.0074,6.7,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 1. County",4,6,2.5,1.2,-0.006,-0.0078,1,2,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 3. County, no-income-tax states",4,6,2.9,1.7,-0.017,-0.014,0.5,2,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 5. State, state + year FE",4,6,-2.6,1.4,0.0081,-0.023,1.1,3,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 6. ZIP (uncensored)",4,6,-2.7,3.8,0.009,-0.011,1.6,5,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 1. County",4,6,-6.9,2.1,0.0053,-0.012,2.6,6,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(b) state/local income or sales tax (SALT, rest) | 5. State, state + year FE",4,6,2.1,1.4,-0.0046,-0.012,1,2,-1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(c) mortgage interest | 4. County, no-income-tax states, + 2012 price level x year",4,6,2.9,1.1,-0.005,0.015,0.4,4,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c29_three_components.csv,"(c) mortgage interest | 5. State, state + year FE",4,6,-3,1,0.013,0.046,1.3,2,1,TRUE,2024,FALSE,TRUE,pre-trend + post effect
+exposure_did/c2_parcel_panel.csv,log AV | county exposure,4,7,2.1,4.1,-0.0048,0.0062,1.1,5,1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+exposure_did/c2_parcel_panel.csv,log assessment ratio (| log price) | county exposure,4,7,-2.1,2.5,-0.0041,0.016,0.6,6,1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+exposure_did/c2_parcel_panel.csv,log sale price | county exposure,4,7,3.1,0.6,-0.00069,-0.014,0.2,6,-1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+exposure_did/c2_parcel_panel.csv,regressivity: d slope of log ratio on log price | county exposure,4,7,-1.9,3.6,0.00084,0.0021,3.3,7,1,TRUE,2025,FALSE,TRUE,pre-trend + post effect
+border_iv/a3_district_border_ddd.csv,DDD near x high x exposure: lptpp,5,5,-2.4,2.5,0.0055,0.0036,1.3,0,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 5 mi | all,5,5,-2.1,1.7,0.0089,-0.011,0.5,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_border_ddd_robust.csv,near < 5 mi | low exposure,5,5,-4.2,2.5,0.036,0.0027,0,0,1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_event_studies.csv,"(a) log property tax, district, enrollment-weighted",5,5,4.3,3.7,-0.008,-0.0022,0.1,0,-1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_event_studies.csv,"(a) log property tax, district, unweighted",5,5,3.3,2.2,-0.004,0.00028,0.1,0,1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_event_studies.csv,(b) within-county SD of log property tax per pupil,5,5,-2.2,1.3,0.0013,0.0041,0.4,0,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/a3_district_event_studies.csv,log state revenue per pupil,5,5,3.4,2.9,-0.0052,-7.9e-05,0,0,-1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b3_tract_iv_ddd.csv,l_p50 | high exposure,4,6,-2.4,1.3,0.015,0.025,0.3,0,1,TRUE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b3_tract_iv_ddd.csv,turnover | all,4,6,2,1.1,-0.08,0.048,0,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b3_tract_iv_ddd.csv,turnover | high exposure,4,6,3.1,1.3,-0.14,0.026,0,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b3_tract_iv_ddd_zipexposure.csv,l_p50,8,12,-0.6,3.6,0.01,0.0022,0.6,1,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd.csv,all,5,7,5.9,1.8,0.00086,-0.0043,0.2,0,-1,TRUE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd.csv,high exposure,5,7,7.1,1.3,-0.0041,-0.01,0.6,0,-1,TRUE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd.csv,low exposure,5,7,0.6,2.7,0.019,0.011,0,1,1,TRUE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd_robust.csv,10 | nhs,5,7,-8.7,1.7,0.0071,0.0083,0.2,0,1,FALSE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd_robust.csv,20 | nhs,5,7,-8.6,2.6,0.0087,-0.002,0,0,-1,FALSE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b4_hpi_border_ddd_robust.csv,5 | nhs,5,7,-6.1,1.6,0.01,0.012,0.3,3,1,FALSE,2025,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/b6_repeat_sales_rep2.csv,nlx,5,6,-3.2,1.6,0.0036,-0.002,0.1,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/d1_moveout_ddd.csv,border DDD x exposure,4,3,-4.6,1.7,-0.1,-0.17,1,1,-1,TRUE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/d1_moveout_ddd.csv,county exposure (per SD),4,3,-1.5,2.8,-0.091,-0.05,0.3,1,-1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/d1_moveout_ddd.csv,"county exposure, owner-occ. SFR",4,3,-14.8,1.9,-0.061,-0.065,0.1,1,-1,TRUE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_iv/d2_moveout_full.csv,border DDD x exposure,4,3,-7.4,0.7,-0.0058,-0.038,0.6,0,-1,TRUE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,"ach | district test scores (SEDA, SD)",4,0,-3.4,1.3,0.015,,Inf,0,,FALSE,2018,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,age | tract median age (ACS 5-yr),4,5,2.8,0.3,-0.016,0.073,0,0,1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,aid_sh | district state-aid share,4,5,4.4,3.1,-0.011,0.0086,0.2,0,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lhval | tract log median home value (ACS 5-yr),4,5,-4.3,2.2,0.033,-0.017,0.4,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,linc | tract log median HH income (ACS 5-yr),4,5,-3.4,1.3,0.0084,-0.018,0.8,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lp50 | log median sale price,4,6,-3.7,0.7,-0.0031,0.038,0,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lpop | tract log population (ACS 5-yr),4,5,-10.2,1.1,0.0062,-0.0098,0.3,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,lspend | district log spending per pupil,4,5,-2.5,1.4,0.0015,-0.035,1.4,1,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,ses | district SES (SEDA),4,0,-4.6,1.8,0.045,,Inf,0,,FALSE,2018,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,sh_ba | tract share BA+ (ACS 5-yr),4,5,-6.1,1.4,0.0033,-0.0035,0.3,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c16_border_diff_in_disc.csv,sh_own | tract owner share (ACS 5-yr),4,5,-5.1,1.3,0.0032,-0.0031,0.5,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_rd/c20_enrolment_rd.csv,difference in discontinuities: change in log enrolment since FY2017,5,5,0.9,2.5,0.0084,-0.003,0,0,-1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | effective rate | balanced",4,6,-3.1,1.3,0.023,0.025,0.1,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | sale price | balanced",4,6,-3.8,2.1,0.02,-0.0081,0.1,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_bill_price_twfe_2013_2024.csv,"cross-border gap (abs. log difference), pair FE | sale price | full",4,6,-2.8,1.7,0.0051,-0.014,0.1,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_gap_twfe.csv,CoreLogic-reported rate | balanced | gap_pp,4,3,1.3,4.1,-0.087,0.04,0.1,0,1,TRUE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_gap_twfe.csv,CoreLogic-reported rate | balanced | rel,4,3,0.8,45.1,-0.026,0.016,0.1,0,1,TRUE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_gap_twfe.csv,effective (bill / price) | balanced | gap_pp,4,3,-2.5,1.9,-0.023,-0.068,0.9,2,-1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_gap_twfe.csv,effective (bill / price) | balanced | rel,4,3,-3.2,2,-0.0038,0.014,0.5,0,1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_gap_twfe.csv,effective (bill / price) | full | rel,4,3,-2.7,1.1,0.0051,-0.0037,0.3,0,-1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log parcels | balanced,4,3,2.2,1.6,0.001,0.0011,0.5,0,1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_revenue_twfe.csv,lower minus higher side (pair x year FE) | log parcels | full,4,3,2.2,1.6,0.001,0.0011,0.5,0,1,FALSE,2021,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,higher-tax side (side FE) | balanced,4,6,5.2,7.8,-0.52,-0.086,0.1,4,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,higher-tax side (side FE) | full,4,6,5.2,8.9,-0.44,-0.094,0.1,4,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,lower minus higher side (pair x year FE) | balanced,4,6,3.1,0.9,0.054,0.1,0.3,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,lower-tax side (side FE) | balanced,4,6,5.7,7.2,-0.46,0.013,0.6,5,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sales_turnover_twfe.csv,lower-tax side (side FE) | full,4,6,5.3,7.7,-0.38,0.13,1.7,5,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sample_twfe_2013_2024.csv,balanced | gap_pp,4,6,-2.9,0.9,0.024,-0.08,0.5,5,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_sample_twfe_2013_2024.csv,balanced | rel,4,6,-2.7,1.6,0.029,0.026,0.4,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+border_twfe/border_vacancy_twfe.csv,lower-tax side (side FE) | balanced,4,6,-2.7,3.2,0.15,-0.34,1,5,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/13_soi_state_six.csv,net_agi | net AGI outflow (% of stayers' AGI),5,4,2,5.3,-0.74,0.5,1.4,3,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/13_soi_state_six.csv,r_net | net out-migration rate (pp),5,4,2.4,5,-0.61,0.063,0.6,1,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a1_revenue_event_study.csv,county_area | ptax | FALSE,1,1,,2.6,-0.0069,0.016,4.1,1,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a1_revenue_event_study.csv,county_area | ptax | TRUE,1,1,,7,-0.011,0.0016,1.1,0,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a1_revenue_event_study.csv,county_area | ttax | FALSE,1,1,,3.2,-0.0084,0.015,3.7,1,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a1_revenue_event_study.csv,school | ptax | TRUE,5,4,8,3.1,-0.0074,-0.0046,0.1,0,-1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a2_revenue_outside_option.csv,event study: ex_z x border-high county | school | TRUE | 2345,5,4,-4.2,2.1,0.0036,0.0079,0.9,0,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/a4_cbsa_dispersion.csv,p9010,5,5,0.3,2.6,0.011,0.0092,0,1,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/b2_county_event_studies.csv,l_av_pp | TRUE,4,6,2.7,3.8,-0.0042,0.0034,0.5,0,1,TRUE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/b2_county_event_studies.csv,l_nom | TRUE,4,6,0.4,2.8,0.0017,-0.00076,0.1,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/b2_county_event_studies.csv,prd | TRUE,4,6,-2.7,2.1,-0.0045,-0.0017,0.1,2,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/b2_county_event_studies.csv,regr_slope_ratio | FALSE,4,6,2.9,1,-0.0028,-0.0032,0.1,1,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/b2_county_event_studies.csv,sd_eff_tract | TRUE,4,6,2.4,1.3,-0.0012,0.00073,0.1,0,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | SOI instrumented by Z1 | A: ACS-identified counties",5,4,2.2,2.8,-0.009,0.0064,0.8,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | SOI observed (OLS) | A: ACS-identified counties",5,4,1.2,3,-0.0076,0.0057,0.5,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,1.7,2.5,-0.0047,0.0049,0.2,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, county governments | Z1 (ACS, own location) | A: ACS-identified counties",5,4,2.2,2.8,-0.0067,0.0048,0.8,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | SOI instrumented by Z1 | A: ACS-identified counties",5,4,2.7,4.4,-0.0078,0.0017,0.5,0,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,3.1,4.8,-0.0067,0.0037,0.3,1,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | SOI observed (OLS) | A: ACS-identified counties",5,4,4.7,6.5,-0.0095,-0.00045,0,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | Z1 (ACS, own location) | A: ACS-identified counties",5,4,2.7,4.3,-0.006,0.0013,0.5,0,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,3.1,4.9,-0.006,0.0033,0.3,1,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,-1.3,3.7,0.014,-0.0063,0.3,0,-1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"log property-tax revenue, school districts | Z2 (national sample at county rate) | B: all counties (PUMA fill-in)",5,4,-5.6,2.7,0.0088,-0.00099,0,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | SOI instrumented by Z1 | A: ACS-identified counties,5,4,7.9,4.3,-0.092,-0.00027,0.4,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | SOI instrumented by Z1 | B: all counties (PUMA fill-in),5,4,3.7,7.1,-0.1,-0.018,0.2,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | SOI observed (OLS) | A: ACS-identified counties,5,4,5.9,4.8,-0.085,-0.025,0,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"out-migration rate (% of returns) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,7.8,4.3,-0.072,-0.00021,0.4,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"out-migration rate (% of returns) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,3.7,6.8,-0.09,-0.016,0.2,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-migration rate (% of returns) | Z2 (national sample at county rate) | A: ACS-identified counties,5,4,-3.3,2.5,0.091,-0.056,0.4,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | SOI instrumented by Z1 | A: ACS-identified counties,5,4,6.7,4,-0.046,-0.015,0.1,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | SOI observed (OLS) | A: ACS-identified counties,5,4,9.2,4.5,-0.034,-0.015,0.1,1,-1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,"out-of-state migration rate (%) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,6.6,4,-0.036,-0.012,0.1,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c14_simulated_instrument.csv,out-of-state migration rate (%) | Z2 (national sample at county rate) | A: ACS-identified counties,5,4,-2,2.4,0.044,-0.057,1.1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | SOI instrumented by Z1 | B: all counties (PUMA fill-in),5,4,1.7,3.2,0.0048,-0.0022,0.6,3,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | SOI observed (OLS) | B: all counties (PUMA fill-in),5,4,6.3,5,-0.0035,-0.0036,2.2,4,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log in-migrant returns | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,1.7,3.3,0.0042,-0.0019,0.6,3,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | Z2 (national sample at county rate) | A: ACS-identified counties,5,4,-1,3.5,-0.015,-0.00025,0.5,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log in-migrant returns | Z2 (national sample at county rate) | B: all counties (PUMA fill-in),5,4,0.5,3.3,-0.016,-0.0048,0.4,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | SOI instrumented by Z1 | A: ACS-identified counties,5,4,27.9,5.4,-0.011,0.00052,0.6,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | SOI instrumented by Z1 | B: all counties (PUMA fill-in),5,4,12.2,9.2,-0.013,0.00068,0,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | SOI observed (OLS) | A: ACS-identified counties,5,4,9.9,5.9,-0.011,-0.00022,0.1,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant people (exemptions) | SOI observed (OLS) | B: all counties (PUMA fill-in),5,4,6.6,14.3,-0.016,-1e-04,0.4,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log out-migrant people (exemptions) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,28.1,5.3,-0.0084,0.00041,0.6,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log out-migrant people (exemptions) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,12.2,8.8,-0.011,0.00059,0,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | SOI instrumented by Z1 | A: ACS-identified counties,5,4,14.9,5.2,-0.011,-0.0013,0.7,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | SOI instrumented by Z1 | B: all counties (PUMA fill-in),5,4,7.9,8.2,-0.012,-0.00035,1.3,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | SOI observed (OLS) | A: ACS-identified counties,5,4,8.5,5.9,-0.011,-0.0014,0.3,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,log out-migrant returns | SOI observed (OLS) | B: all counties (PUMA fill-in),5,4,5.8,13.4,-0.015,-0.00063,0.3,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log out-migrant returns | Z1 (ACS, own location) | A: ACS-identified counties",5,4,14.8,5.1,-0.0084,-0.001,0.7,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"log out-migrant returns | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,7.8,7.8,-0.011,-3e-04,1.3,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | SOI instrumented by Z1 | A: ACS-identified counties",5,4,-3.6,2.5,0.029,-0.01,1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,-4,3.7,0.03,-0.013,0.2,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | SOI observed (OLS) | A: ACS-identified counties",5,4,-2.5,1.4,0.013,-0.0094,0.3,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,-2,2.3,0.019,-0.012,1.3,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,-3.6,2.5,0.022,-0.0081,1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net interstate migration rate, returns (pp) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,-4,3.7,0.027,-0.011,0.2,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | SOI instrumented by Z1 | A: ACS-identified counties",5,4,-3.8,4.9,0.14,0.019,0.9,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,-3.1,7.2,0.15,0.012,1.1,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | SOI observed (OLS) | A: ACS-identified counties",5,4,-3.8,2.4,0.053,-0.013,0.1,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,-3.1,5.5,0.081,-0.017,1.7,3,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,-3.8,5.1,0.11,0.015,0.9,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,-3.1,7.4,0.13,0.01,1.1,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, people (pp) | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,4.3,3,-0.13,0.092,0.7,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | SOI instrumented by Z1 | A: ACS-identified counties",5,4,-3.6,5.3,0.15,0.019,1.1,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,-2.8,7.4,0.14,0.0077,1.4,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | SOI observed (OLS) | A: ACS-identified counties",5,4,-3.8,3,0.066,-0.0064,0.5,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,-2.7,5.7,0.085,-0.016,1.1,3,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,-3.6,5.5,0.12,0.014,1.1,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,-2.7,7.6,0.13,0.0067,1.4,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"net migration rate, returns (pp) | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,4.3,2.8,-0.11,0.11,0.2,2,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | SOI instrumented by Z1 | A: ACS-identified counties",5,4,16.5,4.1,-0.066,0.015,0.3,1,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | SOI instrumented by Z1 | B: all counties (PUMA fill-in)",5,4,6.1,7.1,-0.082,-0.0019,0.1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | SOI observed (OLS) | A: ACS-identified counties",5,4,13.7,4,-0.057,-0.0081,0.1,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | SOI observed (OLS) | B: all counties (PUMA fill-in)",5,4,4.8,10.7,-0.095,-0.027,0.7,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | Z1 (ACS, own location) | A: ACS-identified counties",5,4,16.6,4.1,-0.051,0.012,0.3,1,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | Z1 (ACS, own location) | B: all counties (PUMA fill-in)",5,4,6.1,6.9,-0.071,-0.0017,0.1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"out-migration rate, people (%) | Z2 (national sample at county rate) | A: ACS-identified counties",5,4,-3.3,2.4,0.073,-0.056,1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"state: log out-of-state returns | Z2 (national sample at county rate) | S: states, state + year FE",5,4,6.5,3,-0.015,0.0089,0.5,0,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"state: net interstate rate (pp) | SOI instrumented by Z1 | S: states, state + year FE",5,4,-2.3,5.6,0.088,-0.023,1.1,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"state: net interstate rate (pp) | SOI observed (OLS) | S: states, state + year FE",5,4,-2.1,4.7,0.074,-0.021,1.3,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"state: net interstate rate (pp) | Z1 (ACS, own location) | S: states, state + year FE",5,4,-2.7,5.1,0.073,-0.02,1.2,1,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c15_simulated_instrument_migration.csv,"state: net interstate rate (pp) | Z2 (national sample at county rate) | S: states, state + year FE",5,4,-2.6,4.2,0.12,0.0025,0,1,1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c19_enrolment.csv,"(1) exposure x year, unweighted",5,5,3.9,3.4,-0.0027,0.00091,0.4,0,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c19_enrolment.csv,(2) border DDD: near x high,5,5,-2.5,2.2,0.009,0.00011,0.1,0,1,FALSE,2023,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c19_enrolment.csv,(2) border DDD: near x high x exposure,5,5,3.5,1.6,-0.0026,0.00042,0,0,1,TRUE,2023,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c22_soi_migration.csv,(1) cross-border dyads: high->low x origin exposure,5,4,0.2,2.9,0.023,-0.013,0.9,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c22_soi_migration.csv,"(2) county out-of-state rate (%), border near x high",5,4,2.4,0.7,-0.034,-0.00082,0.1,0,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c23_soi_agi_in_out.csv,net_agi | net AGI flow (% of stayers' AGI),5,4,0.3,3.2,0.13,-0.053,0,2,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c23_soi_agi_in_out.csv,"net_ret | net migration, returns (% of stayers)",5,4,-1,5.2,0.15,-0.063,0.8,3,-1,FALSE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c23_soi_agi_in_out.csv,rel_in | in-movers relative to stayers (log),5,4,2.8,3.6,0.011,0.0066,0.4,1,1,TRUE,2022,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c28_zip_pretrend_diagnostics.csv,(8) county design + 2012 price level x year,4,6,3.3,1.5,-0.0013,0.003,0,1,1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 2. County, + 2012 price level x year",4,6,4.3,1.6,-0.0074,-0.0011,0,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c29_three_components.csv,"(a) property tax (SALT, real-estate part) | 4. County, no-income-tax states, + 2012 price level x year",4,6,5.7,2.4,-0.022,-0.0032,0,0,-1,FALSE,2024,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c2_parcel_panel.csv,log bill | border DDD (near x high),4,7,-2.1,2.3,0.017,-0.023,0.9,1,-1,TRUE,2025,FALSE,FALSE,"pre-trend, no post effect"
+exposure_did/c2_parcel_panel.csv,log bill | county exposure,4,7,5.8,3.4,-0.0073,0.0031,0.7,1,1,TRUE,2025,FALSE,FALSE,"pre-trend, no post effect"

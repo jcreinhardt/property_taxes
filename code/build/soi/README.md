@@ -16,5 +16,9 @@ ZIP-to-county crosswalk). Run in order, from the repository root:
 | `11_state_salt_panel.R` | `data/SOI/state_returns/11in54cm.xlsx`, `12-22*.csv` | `data/built/exposure/soi_state_salt_panel.csv`: state × TY2011–22 returns, itemizers, AGI, SALT income / real estate / total deductions |
 | `12_zipcode_composition.R` | ZIP-year composition from the raw SOI ZIP files 2011-2022: returns, individuals (N2), dependents (NUMDEP, 2012-18), filing status (MARS1/2/4, 2012+), elderly returns (2015-18) and the per-return ratios → `data/built/soi/zip_composition.csv` |
 
-The exposure measures in `build/exposure/` and the SOI designs in `designs/exposure_did/08-09` read the DuckDB tables;
-`designs/exposure_did/16` (Diop & Green replication) reads the two csv panels.
+`10` and `11` were removed on main on 2026-10-28 with `designs/exposure_did/16` and restored on 2026-11-02: `designs/exposure_did/17-19` read `state_dyads.csv` and `soi_state_salt_panel.csv`.
+
+The exposure measures in `build/exposure/` and the SOI designs in `designs/exposure_did/08-09` read the DuckDB tables.
+Scripts `10` (state-to-state dyad panel) and `11` (state SALT deductions panel, Historic Table 2) fed the Diop & Green
+Table 7 replication (`notebook/2026-10-27-diop-green-table7-replication`) and were removed on 2026-10-28; recover them
+from commit 73f3a8e.

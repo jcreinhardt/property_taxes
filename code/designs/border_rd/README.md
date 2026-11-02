@@ -9,12 +9,14 @@ distances from `data/built/geo/iv_tract_side.rds`. This design varies the tax ra
 | `01_side_selection_levels.R` | levels on either side of the line, within pair |
 | `02_profiles_by_distance.R` | means by signed distance out to 100 mi (the low-side school-district dip) |
 | `03_covariate_rd.R` | RD on the rate and 11 covariates; Holm-adjusted p-values |
-| `04_rd_by_year_and_diff_in_disc.R` | yearly RDs 2013–2024 (fixed h = 15 mi) on CoreLogic, ACS and SEDA panels, and the difference in discontinuities centred on 2017 |
+| `04_rd_by_year_and_diff_in_disc.R` | yearly RDs 2013–2024 (fixed h = 15 mi) on CoreLogic, ACS and SEDA panels, and the difference in discontinuities centred on 2017; since 2026-10-28 also residential parcels, new-construction sales, ACS housing units and vacancy |
 | `05_enrolment_rd.R` | pupils per district by year, district as the unit |
 | `06_gap_range_signed_distance.R` | own minus neighbour rate differences by signed distance |
 | `07_tract_diff_by_distance.R` | local rate differentials by distance to the border |
 | `08_low_side_balance_by_distance.R` | low-tax side only: 22 household, housing, school and tax covariates by distance bin (0-10 … 100+ mi) with pair FE, local (0-30 mi) vs state-wide slopes, joint tests by window; robustness with equal pair weights and a density control (caches ACS extras to `data/external/acs17_tract_extra.csv`). Writes `c21_low_side_balance*` and `data/built/geo/low_side_balance_tracts.rds` (`SIDE=high` builds the high-side tract table only, for 23) |
 | `09_low_side_profiles_50mi.R` | low-tax side within 50 mi: rate, outcomes and controls in 5-mi bins for all pairs and a rural subset (pairs without a metro CBSA ≥ 0.5m holding ≥ 45% of its population in the window; `METRO_POP`, `METRO_SHARE` (default 0.45; 0.3 was the first choice, 0.5 lets NJ-NY back in), `METRO_SIDE` = low / high / either; non-default runs suffix their outputs, e.g. `_c30`, `_c50`, `_high_c30`). Reads 08's tract table; writes `c22_low_side_profiles_50mi*`, `c22_low_side_metro_pairs*.csv`, `c22_metro_shares_by_pair_side.csv` and `data/built/geo/tract_cbsa_2019.csv` |
+| `08_pair_exposure_split.R` | ranks each pair's sides by SALT-cap exposure as well as by rate ("agree" / "disagree" pairs) and reruns the difference in discontinuities by group; `c21_*` outputs |
+| `09_rent_diff_in_disc.R` (`ALTOS_INDEX=repeat` → `_repeat` outputs on the repeat-listing index of `build/altos/03`) | asking rents (Altos tract index): difference in discontinuities since 2017 scaled by the cross-border gap in SALT exposure — pooled local-linear by year, the per-pair series regressed on the gap, and the unscaled high-tax-side version |
 | `11_rural_rule_sensitivity.R` | balance of the low side within 50 mi as the metro-pair rule varies: share measured on the low / high / either side, cutoff 10–90% or none, plus residualising on distance to the nearest metro centre; straddling metros by side (`c24_*`) |
 | `12_balance_coefplot.R` | coefficient plot: each standardised covariate on the instrument (near < 10 mi vs 10-50; linear per 10 mi) with pair FE, rural subset at the `METRO_SHARE` cutoff (default 45%), with and without NJ-NY (`c25_balance_coefplot_c45*`, `_c50*`) |
 | `13_near_border_event_study.R` | near (< 10 mi) × year on the rural low side within 50 mi, 2017 = 0, unit FE + pair × year FE: Census of Governments county aggregates (`data/census_finances_test.db`: school districts by county yearly; all local governments in census years), F-33 districts, CoreLogic / ACS / Data Axle tract panels; also the yearly cross-sections (near coefficient per year, pair FE only, no reference year: `c26_near_border_yearly_levels*`) (`c26_*`) |
@@ -44,4 +46,10 @@ distances from `data/built/geo/iv_tract_side.rds`. This design varies the tax ra
 | `nb_panels.R` | helper sourced by 13 and 14: loads the CoreLogic / ACS / Data Axle tract panels, F-33 districts and CoG county aggregates and merges them with a tract table and its instruments (`nb_panels()`, also returning the district / county instrument tables `dis`, `cnt`; `es()`; `nb_extra_panels()` builds the extended F-33 / SEDA / CoG outcome panels of 18 for any sample) |
 | `10_low_side_sample_map.R` | map of the tracts behind 08/09: low side by window and rural/metro pair, high side in grey (`figures/c23_low_side_sample_map.png`) |
 
-Notebook: `notebook/2026-10-21-border-rate-gaps-over-time`, `notebook/2026-10-28-low-side-balance-by-distance`. Check numbers: rate RD +0.747 pp; diff-in-disc 2023 −0.331 pp.
+Numbers 08, 09 and the output prefix `c21` were taken twice by sessions running in parallel: `08_low_side_balance_by_distance` /
+`09_low_side_profiles_50mi` (`c21_low_side_*`, `c22_*`; the low-side balance work, scripts 10–36 build on them) and `08_pair_exposure_split` /
+`09_rent_diff_in_disc` (`c21_diff_in_disc_by_exposure_side*`, `c21_pair_exposure_sides*`, `d09_*`). File names are distinct; cross-references in
+this table by number mean the former.
+
+Notebook: `notebook/2026-10-21-border-rate-gaps-over-time`, `notebook/2026-10-28-low-side-balance-by-distance`, `notebook/2026-10-28-housing-stock`
+(housing-stock outcomes). Check numbers: rate RD +0.747 pp; diff-in-disc 2023 −0.331 pp.
