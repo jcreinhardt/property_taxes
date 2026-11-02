@@ -2,7 +2,8 @@
 
 ## Bouchet cluster (mandatory rules — see `.claude/skills/bouchet/SKILL.md`)
 - Access Bouchet via `ssh bouchet1` (laptop alias: login1 via `ProxyJump bouchet`, reuses the Duo-authenticated `bouchet` master; start that with `ssh -fNM bouchet` in the user's terminal) and work inside the tmux session `ptax` on **login1**; never in a bare SSH shell. (`bouchet` round-robins login1/login2, so tmux there may be on the wrong node.)
-- Compute runs in an interactive allocation: `salloc --partition=devel --time=06:00:00 --cpus-per-task=4 --mem=60G` (6h, 60G, 4 cores). No heavy work on login nodes.
+- Compute runs in an interactive allocation: `salloc --account=pi_johng --partition=devel --time=06:00:00 --cpus-per-task=4 --mem=60G` (6h, 60G, 4 cores). No heavy work on login nodes.
+- **Every Slurm job (salloc, sbatch, srun) is charged to account `pi_johng`**, never the default `pi_csl53`: pass `--account=pi_johng` explicitly (the templates, `jobsize.sh` and `~/.bashrc` on Bouchet already do; check `squeue -o "%i %a"` after submitting).
 - `/nfs/roberts/pi/pi_csl53/corelogic/database/corelogic.db` (DuckDB, group-writable!) is **read-only, always**: open with `read_only = TRUE` / `-readonly` / `mode=ro`. Never write to, modify, copy, move, or delete it.
 - **Never write anything under `/nfs/roberts/pi/pi_csl53/`** (no outputs, temp/spill files, logs, `slurm-*.out`, installs). Our files go in `~`, our project, or scratch. Use `~/bin/duckdb` (current version) for queries.
 - Bouchet login node = 1 core / 1 GB per user: nothing beyond ls/git/sbatch there. `devel` QOS: 6h max, 4 CPUs + 60G per user total, 2 jobs max — so the one 4-core job is the whole budget; run everything inside it (OK to interrupt the `ptax` pane).

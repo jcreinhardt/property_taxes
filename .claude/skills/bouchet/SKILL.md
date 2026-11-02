@@ -41,8 +41,13 @@ The login node is a shell, not a compute host. Anything heavier than `ls`/`git`/
 
 Inside tmux pane `ptax`:
 ```bash
-salloc --partition=devel --time=06:00:00 --cpus-per-task=4 --mem=60G
+salloc --account=pi_johng --partition=devel --time=06:00:00 --cpus-per-task=4 --mem=60G
 ```
+
+**Account (user instruction 2026-11-02): every job is charged to `pi_johng`.** `jr2728` has two associations, `pi_csl53` (the
+default) and `pi_johng`; always pass `--account=pi_johng` to `salloc`/`sbatch`/`srun`. Belt and braces on Bouchet (do not rely on the environment alone):
+`~/.bashrc` exports `SBATCH_ACCOUNT=SALLOC_ACCOUNT=SLURM_ACCOUNT=pi_johng` (added 2026-11-02), every `*.sbatch` template under `~/ptax_explore`
+has `#SBATCH --account=pi_johng`, and `jobsize.sh` prints `--account=pi_johng` with the size. Verify with `squeue -u jr2728 -o "%i %a"`.
 
 **Bouchet limits (verified 2026-10-08):**
 - **Login node: 1 core and 1 GB RAM per user** (hard cgroup limit). Only `ls`, `git`, editing, `squeue`/`sbatch`.
