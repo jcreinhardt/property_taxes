@@ -1,0 +1,30 @@
+Three price indices on the density-selected sample (tracts < 1,000 per sq mi within 50 mi, both sides). Log points x 100; tract FE + pair x year FE, log density x year; SE by county.
+Z x year: per 10 mi closer to the border; Z x exposure x year: per 10 mi closer per SD of own lost SALT subsidy (E x year included). post - pre = mean 2018+ minus mean 2012-16. Cells: estimate (t).
+
+coverage by side:
+ side tract_years   med   rep   hed sales_per_ty rep_sales_per_ty
+  low       59457 59457 59097 59457         60.1             25.6
+ high       70682 70682 70361 70682         58.3             24.3
+
+correlation of year-to-year changes between the indices (consecutive tract-years), and their SDs (log points):
+      d_med d_rep d_hed
+d_med 1.000 0.318 0.755
+d_rep 0.318 1.000 0.419
+d_hed 0.755 0.419 1.000
+   d_med d_rep d_hed
+   <num> <num> <num>
+1:  25.7  29.3  22.8
+
+== Z x year 
+                 index low-tax side high-tax side high minus low
+ median log sale price -0.04 (-0.1)  -0.20 (-0.6)   -0.17 (-0.3)
+   mean log sale price -0.17 (-0.4)  -0.22 (-0.6)   -0.05 (-0.1)
+    repeat-sales index   0.03 (0.1)  -0.37 (-1.0)   -0.40 (-0.7)
+         hedonic index -0.38 (-1.0)  -0.38 (-1.1)     0.00 (0.0)
+
+== Z x exposure x year 
+                 index low-tax side high-tax side high minus low
+ median log sale price   0.30 (0.8)    0.42 (1.3)     0.13 (0.3)
+   mean log sale price   0.10 (0.3)    0.31 (0.8)     0.21 (0.4)
+    repeat-sales index   0.52 (1.3)    0.55 (1.5)     0.03 (0.1)
+         hedonic index   0.12 (0.4)    0.32 (0.8)     0.21 (0.4)

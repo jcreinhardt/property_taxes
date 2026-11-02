@@ -1,0 +1,1481 @@
+y,b,se,model,coef,outcome,n
+2012,0.00869097773012514,0.0106058202646412,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2013,0.00505952991613775,0.00921061443465885,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2014,0.0028021875743573,0.00955296799705598,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2015,-0.000691214895069948,0.00765790006288507,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2016,0.00827955010894997,0.0077465535017343,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2018,0.00719018112627377,0.00725432358778524,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2019,0.00357822217142527,0.00742912877057515,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2020,0.00127192114631782,0.00734933248116821,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2021,0.00501069092138195,0.00818120270422964,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2022,0.00803408940630325,0.00882482120497248,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2023,0.00470200945280806,0.0088326909835687,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2024,0.000716565954752595,0.0104681049196752,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log median sale price,119236
+2012,-0.0203559604892382,0.016279020440304,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2013,-0.0047965727722113,0.00989485521119497,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2014,-0.0253374494314557,0.010066273901568,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2015,-0.0106016977988858,0.00681822344521735,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2016,-0.00913948517524818,0.00698062610939665,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2018,-0.0130987330755421,0.00619819140900672,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2019,-0.0082840692562468,0.00783112638619639,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2020,-0.0104147127034449,0.00721716246341477,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2021,-0.0100714892429978,0.00931655764752732,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2022,-0.0139180384090146,0.0081497007808591,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2023,-0.0131559940846834,0.0101794209584961,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2024,-0.014525070745943,0.00938172100620792,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log median sale price,119236
+2012,0.00964022273824216,0.0108356631366568,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2013,0.00616939831627576,0.00908666368966295,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2014,0.00325741809280108,0.00827509989889584,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2015,-0.00205265436816991,0.00731102933223213,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2016,0.00716961121563117,0.00754687807765065,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2018,0.00772990584761617,0.00716565296322764,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2019,0.00149145339057532,0.00727606049003384,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2020,0.00401239093021086,0.00728130551675772,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2021,0.00658099054632695,0.00809773146120515,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2022,0.0102109243739255,0.00878911954897772,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2023,0.00603355318686087,0.0087739043283747,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2024,0.00247432476734012,0.0105460154045577,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2017,0,0,"pooled, common pair x year FE + H x year",main,log median sale price,119237
+2012,-0.0249897504690162,0.016414177718947,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2013,-0.0145431674080975,0.00975643987310244,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2014,-0.029919122338664,0.0094347846657967,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2015,-0.0169548085832221,0.00644693614832313,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2016,-0.014120287479625,0.00679452401708647,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2018,-0.0102557094829974,0.00570116738155952,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2019,-0.0071628239269223,0.00725741804185333,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2020,-0.00427789854084777,0.00722954488111922,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2021,-0.00500764615793301,0.00907282715381073,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2022,-0.00716082291445135,0.00823391303779693,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2023,-0.00576862163052671,0.0104407907173833,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2024,-0.00928576821316389,0.00994739885517166,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log median sale price,119237
+2012,0.0104772602934157,0.0108069307448614,"pooled, common E and density slopes",main,log median sale price,119237
+2013,0.00629751678799645,0.00909841732868804,"pooled, common E and density slopes",main,log median sale price,119237
+2014,0.00388675359422201,0.00832458596421607,"pooled, common E and density slopes",main,log median sale price,119237
+2015,-0.0020092942687739,0.00730722612208081,"pooled, common E and density slopes",main,log median sale price,119237
+2016,0.00719048645438669,0.00756339993547049,"pooled, common E and density slopes",main,log median sale price,119237
+2018,0.00777878734747472,0.00718093975408543,"pooled, common E and density slopes",main,log median sale price,119237
+2019,0.0016117522745434,0.00735583172427567,"pooled, common E and density slopes",main,log median sale price,119237
+2020,0.00403404797789463,0.00729085995436633,"pooled, common E and density slopes",main,log median sale price,119237
+2021,0.00656662826531905,0.00811022416091096,"pooled, common E and density slopes",main,log median sale price,119237
+2022,0.0102164938803353,0.00880360861093054,"pooled, common E and density slopes",main,log median sale price,119237
+2023,0.0061163756016019,0.00877240392234081,"pooled, common E and density slopes",main,log median sale price,119237
+2024,0.00251849236341477,0.0105590040191383,"pooled, common E and density slopes",main,log median sale price,119237
+2017,0,0,"pooled, common E and density slopes",main,log median sale price,119237
+2012,-0.0111196238581587,0.011326765249288,"pooled, common E and density slopes",interaction,log median sale price,119237
+2013,-0.00916467976732061,0.00664393895085096,"pooled, common E and density slopes",interaction,log median sale price,119237
+2014,-0.013699900856472,0.00597416614468864,"pooled, common E and density slopes",interaction,log median sale price,119237
+2015,-0.0115486576736553,0.00502173560709683,"pooled, common E and density slopes",interaction,log median sale price,119237
+2016,-0.00964627816397621,0.00501017079725582,"pooled, common E and density slopes",interaction,log median sale price,119237
+2018,-0.00542919752847383,0.00461742563734959,"pooled, common E and density slopes",interaction,log median sale price,119237
+2019,-0.00111713475508429,0.00510063772162134,"pooled, common E and density slopes",interaction,log median sale price,119237
+2020,-0.00379203497264827,0.00482757188770371,"pooled, common E and density slopes",interaction,log median sale price,119237
+2021,-0.00309692755671813,0.00549076956256238,"pooled, common E and density slopes",interaction,log median sale price,119237
+2022,-0.00306196832469288,0.0059072002728164,"pooled, common E and density slopes",interaction,log median sale price,119237
+2023,-0.0015318187450674,0.00637625406070534,"pooled, common E and density slopes",interaction,log median sale price,119237
+2024,-0.0029050862302961,0.00618500785069937,"pooled, common E and density slopes",interaction,log median sale price,119237
+2017,0,0,"pooled, common E and density slopes",interaction,log median sale price,119237
+2012,-0.00238944077738478,0.00987236292073584,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2013,0.00565560737718814,0.0071679703937826,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2014,0.000732718063301053,0.00446707632686402,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2015,-0.000414589658014215,0.00451155694930939,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2016,0.00149166173666119,0.00330527260967622,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2018,-0.00306469772484914,0.00371129223072271,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2019,-0.00219672451086466,0.00516101706567543,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2020,-0.00163069070785223,0.00423142678495049,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2021,0.00100889691752581,0.00467378698886325,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2022,0.00123549017461213,0.00501440158094978,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2023,2.05850993035221e-06,0.00601262143267919,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2024,0.000645604109342549,0.00655089986250257,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log tax bill per parcel,121255
+2012,-0.0059629985038793,0.00906316742428901,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2013,-0.00600566750611435,0.00542177076404017,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2014,-0.00642168397572392,0.00481238629201861,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2015,-0.0102535454039278,0.00638103829332313,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2016,-0.00316150827572701,0.00369425894159173,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2018,-0.00371448402149902,0.00348151905511925,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2019,-0.00814485781975674,0.00605609930648224,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2020,-0.00740973706052214,0.00440757270154303,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2021,-0.00845539075203596,0.00439512242567903,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2022,-0.0089997104096471,0.00447495773418424,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2023,-0.00647756412235581,0.00485950441862195,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2024,-0.00690032816588395,0.0053979975608743,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log tax bill per parcel,121255
+2012,-0.000160219051414329,0.009770008933627,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2013,0.00808494073466197,0.00708261012212241,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2014,0.00285798908446894,0.0043735185159163,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2015,5.49238140361292e-05,0.00396531176640695,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2016,0.00212483500551535,0.00301945829570366,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2018,-0.00212088728904626,0.00345150259958452,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2019,-0.00191808918695391,0.00499560442357763,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2020,-0.00224822132210694,0.00400189022584763,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2021,0.000780070203527025,0.0044466720996024,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2022,0.00225378478037058,0.00481579721223349,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2023,0.00298415907090636,0.00594027415634644,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2024,0.00421310031871964,0.00647228430578573,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2017,0,0,"pooled, common pair x year FE + H x year",main,log tax bill per parcel,121256
+2012,-0.00690676923823927,0.00941600287906646,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2013,-0.004357271710424,0.00530629241055426,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2014,-0.0056285596903577,0.00514176144606886,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2015,-0.00810551538699868,0.00555997009715503,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2016,-0.00284893491111682,0.0038221693315661,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2018,-0.00265174586929052,0.00320064881883933,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2019,-0.00617482447376275,0.00581030614476618,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2020,-0.00367053384398944,0.00436284322728586,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2021,-0.00494798961912361,0.00437660106912564,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2022,-0.00575268581565022,0.00456401163311155,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2023,-0.0071792165979526,0.00511244894776849,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2024,-0.00734521443558595,0.00593333553999583,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log tax bill per parcel,121256
+2012,-0.00035681784979331,0.00965142712170992,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2013,0.00794974904134741,0.00711651767498605,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2014,0.0026922018046857,0.00442530815536567,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2015,5.02081385923356e-06,0.00397268645909615,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2016,0.00202641764779041,0.00304977988306811,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2018,-0.00214872977546061,0.00347002371103322,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2019,-0.00208341056688218,0.00505629743866629,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2020,-0.00222101807814344,0.00402141911330448,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2021,0.00076399405598034,0.00445372927075784,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2022,0.00229600089659536,0.00482734679987884,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2023,0.00299006254907674,0.00595071965435709,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2024,0.00422682519147763,0.0064859389037777,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2017,0,0,"pooled, common E and density slopes",main,log tax bill per parcel,121256
+2012,-0.00971136381012871,0.0068866061991379,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2013,-0.00874618347079405,0.00445969947046723,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2014,-0.00821613184340216,0.00396001890760763,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2015,-0.00847883833924366,0.00483511336960527,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2016,-0.00784433013651589,0.00300674579592299,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2018,-0.00481638023984163,0.00240243311990279,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2019,-0.00912951210153593,0.00446680864466211,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2020,-0.00469728380846626,0.00348900239098051,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2021,-0.00491123962596702,0.0036687517219105,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2022,-0.00408557556995824,0.00354472843078274,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2023,-0.00675913618166792,0.00428137259200467,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2024,-0.0064189836258636,0.00475978153355967,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2017,0,0,"pooled, common E and density slopes",interaction,log tax bill per parcel,121256
+2012,-0.015543828047053,0.0180318518753086,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2013,0.00305306256128219,0.0146066854141405,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2014,-0.0010847993061751,0.0128131587378897,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2015,-0.00995922169796426,0.0115110172892117,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2016,0.000682926650490297,0.0109065436637016,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2018,-0.00336227870322557,0.0102171417044898,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2019,-0.00782503169273263,0.0106823043063328,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2020,-0.00109616233575966,0.0118976556366477,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2021,0.00209444065483338,0.012892010164714,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2022,0.000102464005287343,0.0129805445254049,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2023,-0.010108343997046,0.0134895443843875,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2024,-0.00267052486828013,0.0155313707991145,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,effective tax rate,119105
+2012,-0.015627390531898,0.0156608431794409,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2013,-0.0144084505926604,0.0116726645094913,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2014,-0.0111450542294953,0.0116846920400599,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2015,-0.00165462148918102,0.0103144196129876,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2016,0.00577453278286398,0.00908518351011814,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2018,-0.000447533257261133,0.00839340605605969,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2019,-0.00990534503573257,0.00982651346861929,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2020,-0.0148864226766282,0.0111703401252139,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2021,-0.023028681798096,0.0126036142837052,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2022,-0.0247481142022272,0.0131278300105042,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2023,-0.0227424405257513,0.0136055822795041,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2024,-0.0234871802771687,0.0140481465454543,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,effective tax rate,119105
+2012,-0.0162375819923046,0.0171272161885268,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2013,0.00176925272237024,0.0136928467106544,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2014,-0.00147017731180626,0.012034652495515,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2015,-0.00956304868733057,0.0102154220491055,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2016,0.000180869536986577,0.00956251379333967,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2018,-0.00675033510171468,0.00908035268278148,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2019,-0.0103903641626523,0.0094697564431527,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2020,-0.00739427785528076,0.0107667148233816,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2021,-0.00457518920837299,0.0117891500498789,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2022,-0.00573776848880549,0.0120471509611446,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2023,-0.0104564021848595,0.0126266364287806,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2024,-0.00508063798657012,0.015797754367188,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2017,0,0,"pooled, common pair x year FE + H x year",main,effective tax rate,119106
+2012,-0.00390572558039927,0.016877795501534,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2013,0.00190881737182954,0.0109641210714861,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2014,-0.000912307103016095,0.0116915076748045,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2015,0.00870955238159801,0.00975007103497078,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2016,0.0139666919847593,0.00852594270058617,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2018,0.000737157536720908,0.00715240731501438,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2019,-0.0051402134418896,0.00895431372099584,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2020,-0.00974127334753214,0.0103008961237492,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2021,-0.0183919834077979,0.0116825641560389,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2022,-0.0182275042413371,0.0129126166854095,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2023,-0.0210662148180646,0.013285636462303,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2024,-0.0177755742084975,0.0152764602446868,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,effective tax rate,119106
+2012,-0.0162712812716775,0.0172485830615157,"pooled, common E and density slopes",main,effective tax rate,119106
+2013,0.00181170504231774,0.013726494559435,"pooled, common E and density slopes",main,effective tax rate,119106
+2014,-0.00165255324080988,0.0120767010182042,"pooled, common E and density slopes",main,effective tax rate,119106
+2015,-0.00952832475612364,0.0102311830552569,"pooled, common E and density slopes",main,effective tax rate,119106
+2016,0.00012176890610093,0.0097040575400808,"pooled, common E and density slopes",main,effective tax rate,119106
+2018,-0.00691792371133399,0.00911101243615753,"pooled, common E and density slopes",main,effective tax rate,119106
+2019,-0.0109441343680087,0.00951074945130482,"pooled, common E and density slopes",main,effective tax rate,119106
+2020,-0.00739592146663169,0.0107841953623708,"pooled, common E and density slopes",main,effective tax rate,119106
+2021,-0.00470166161752368,0.0117978364251678,"pooled, common E and density slopes",main,effective tax rate,119106
+2022,-0.00567646249914028,0.012078482211585,"pooled, common E and density slopes",main,effective tax rate,119106
+2023,-0.010513689378841,0.0126403628658566,"pooled, common E and density slopes",main,effective tax rate,119106
+2024,-0.00499550850652332,0.015823932608052,"pooled, common E and density slopes",main,effective tax rate,119106
+2017,0,0,"pooled, common E and density slopes",main,effective tax rate,119106
+2012,-0.00575144100734588,0.0103298325153699,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2013,-0.00318823213545743,0.00869324480684677,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2014,-0.0056111980025675,0.00861227920458551,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2015,0.00160304582347229,0.00714712521226892,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2016,-0.00674033217792861,0.0074183354298096,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2018,-0.00789827048248495,0.00472570194657274,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2019,-0.0139703872680748,0.00666981063154307,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2020,-0.0110810995613399,0.00702964061566545,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2021,-0.0140442028201744,0.00833814515434736,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2022,-0.00829970464943388,0.00908851287180374,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2023,-0.0125059419213766,0.00998969282215261,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2024,-0.00559320446277606,0.0112137418538924,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2017,0,0,"pooled, common E and density slopes",interaction,effective tax rate,119106
+2012,0.0449013208809229,0.0192214655707779,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2013,0.0271365531107375,0.0182213739866976,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2014,0.0231244060269249,0.0154108884764103,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2015,0.00589432466473559,0.0144868009966741,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2016,0.0199828006153033,0.0279560840195243,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2018,0.033920083359587,0.0166048098131948,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2019,0.0290789030149352,0.0188000346802666,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2020,0.0182129756282498,0.0172154182157292,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2021,0.0151358069708483,0.0198621714316174,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2022,0.0591864772822471,0.0220394410083136,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2023,0.038465795352904,0.0229814985530383,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2024,0.0374994894492011,0.0251364222044002,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,sales per 100 parcels,119236
+2012,-0.0467364291638768,0.0255258618931115,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2013,-0.00420544078194177,0.019343393069928,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2014,-0.0125559783143783,0.0185570903176092,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2015,-0.0149596253482898,0.0146996712422232,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2016,-0.0121329702642245,0.0215557597357921,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2018,-0.00433083566672657,0.0198842435189921,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2019,-0.0189468564223873,0.0175557531169508,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2020,-0.00959452223310394,0.0192540820911017,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2021,-0.0201291586986144,0.021650664342595,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2022,-0.0323203188856825,0.0294363645199924,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2023,-0.0658996147416287,0.0350564064437937,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2024,-0.0173609864033875,0.0351161857427612,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,sales per 100 parcels,119236
+2012,0.032838711971547,0.0201830764199399,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2013,0.00819440156334686,0.0189984225140638,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2014,0.0155915279444372,0.0160990877779309,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2015,0.00217999056924164,0.0149530396690825,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2016,0.00326052061682992,0.0257610556180091,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2018,0.0321230822254279,0.0172829595314977,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2019,0.00380239932280526,0.0209110222619128,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2020,0.00710457986796624,0.0180235409718316,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2021,0.00553099174630012,0.0205613173528412,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2022,0.0296047454086311,0.0234188797328555,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2023,-0.00291862661633425,0.0261873235385098,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2024,0.006128717845604,0.0242183267537813,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2017,0,0,"pooled, common pair x year FE + H x year",main,sales per 100 parcels,119237
+2012,-0.0447839517095782,0.0263032404856747,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2013,-0.0173875989387591,0.0205076064533595,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2014,-0.00433429660815194,0.0191883264718962,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2015,-0.0177751394201767,0.0155436873759185,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2016,-0.00327920978996647,0.0201524677211898,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2018,-0.00473247270872875,0.0176442698221293,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2019,-0.00729443203270381,0.0233478867233175,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2020,-0.0148791382234222,0.0183763267001466,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2021,-0.032642433010866,0.0214692415752133,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2022,-0.0300256989055069,0.0294577836315295,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2023,-0.0555607927068191,0.0348431610600636,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2024,-0.0263155363473854,0.0333856600810817,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,sales per 100 parcels,119237
+2012,0.0336411573902828,0.0201032826057477,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2013,0.00848162697510183,0.0190287760874482,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2014,0.0150346068051327,0.0161074275800197,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2015,0.00232901400165561,0.0149198269534606,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2016,0.00330829017122367,0.0257501133132451,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2018,0.0318229126995351,0.0172299592776373,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2019,0.00442633268865105,0.0202148892595553,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2020,0.00732254564859128,0.0180048009791535,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2021,0.00567839394782517,0.0205879383715683,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2022,0.0296202267735824,0.0233998329719582,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2023,-0.00301552780317833,0.026226289346825,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2024,0.00625084847682762,0.0241866268377498,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2017,0,0,"pooled, common E and density slopes",main,sales per 100 parcels,119237
+2012,-0.0206246202547702,0.0194006551150545,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2013,0.00953890790875326,0.0166954018234194,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2014,-0.00321995725112121,0.0150511090380568,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2015,-0.00679850640955348,0.0130306354728115,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2016,-0.00764361231838171,0.0147356567531846,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2018,-0.0143124889417055,0.0128243129391617,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2019,0.0152760775235229,0.0198009099939969,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2020,0.00312152880852857,0.0154178932468099,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2021,-0.00311797133828335,0.0221487359832099,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2022,-0.0100536918680744,0.0244215878265912,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2023,-0.0230796238995533,0.0283177392887822,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2024,0.00240858011014284,0.0294977841876016,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2017,0,0,"pooled, common E and density slopes",interaction,sales per 100 parcels,119237
+2013,0.00330657512105401,0.00389104440603352,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2014,0.00137914898153672,0.00345884354230913,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2015,0.00327017079200079,0.00249543612077917,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2016,0.00231802940585371,0.00178306974694185,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2018,-0.00167347818725089,0.0019021595709178,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2019,-0.00563677460457162,0.00268160508759489,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2020,-0.00540228099518889,0.00396150776780013,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2021,-0.00657397743110588,0.00455838572065792,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2022,-0.00885700356990025,0.00511173220736239,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2023,-0.00899799134206601,0.00572313091030314,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log median home value (ACS),113695
+2013,0.0153830959630099,0.00720810663125492,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2014,0.013155332856641,0.0065063556350914,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2015,0.00337688185414002,0.0032344495465387,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2016,0.00336981966897378,0.00281077161414182,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2018,0.00106697623999025,0.00373120564822848,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2019,0.00346599055684432,0.00368072484667226,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2020,0.00359857077400221,0.00590825739821594,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2021,0.00676270947553878,0.00573061371465399,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2022,0.00561942447442138,0.00680100394536419,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2023,0.00477972500766323,0.00660877226801079,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log median home value (ACS),113695
+2013,0.00226516952144275,0.00397170484783175,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2014,0.000332993798144741,0.00357019116150188,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2015,0.00320140671138259,0.0024786157214595,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2016,0.00243871718734109,0.00175069030024592,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2018,-0.00291570060773898,0.00182231879020778,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2019,-0.00734819124134989,0.00271355521405952,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2020,-0.00628675718952762,0.00405781785198776,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2021,-0.00843261137313827,0.00479592559043617,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2022,-0.00871179328896012,0.00545054719763443,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2023,-0.00745263171217377,0.00614491278591234,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2017,0,0,"pooled, common pair x year FE + H x year",main,log median home value (ACS),113699
+2013,0.015176487915879,0.00742973667489532,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2014,0.0128341876677533,0.00659144816732426,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2015,0.00314427793855531,0.00330544249401851,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2016,0.0031886678473715,0.00287463407094056,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2018,0.0027323728956621,0.00367838834459725,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2019,0.00767279461392562,0.00360812282607536,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2020,0.00906692951821268,0.00561948602900122,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2021,0.0143922362205998,0.0055476188105178,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2022,0.0152677423334111,0.00676358378656624,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2023,0.0159011306798204,0.00681654830353218,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log median home value (ACS),113699
+2013,0.00191515591225728,0.0039368944556492,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2014,-5.02479256684125e-06,0.00355063149927598,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2015,0.00317615098969405,0.00248029940195141,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2016,0.00239279036164886,0.0017500174591903,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2018,-0.00295552549226284,0.00181187616197862,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2019,-0.00741106768872837,0.00271156347232595,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2020,-0.00637464271788099,0.0040570417223667,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2021,-0.00853657064028369,0.00480050771689106,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2022,-0.00868000822303444,0.00547383795860485,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2023,-0.00735911899166637,0.00620204835268966,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2017,0,0,"pooled, common E and density slopes",main,log median home value (ACS),113699
+2013,0.000700487281529111,0.00463403348134167,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2014,-7.95638251899494e-05,0.00438896402673876,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2015,0.00136413764650022,0.00179742188111571,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2016,0.000688993808459696,0.00120805947560602,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2018,0.0013069358968077,0.00169557847595814,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2019,0.005245493511204,0.00200728529142664,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2020,0.00587683342340552,0.00315523694413627,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2021,0.00946774378469571,0.00391164736520274,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2022,0.0119038323044504,0.00484005433152369,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2023,0.013650581317077,0.00481359404564517,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2017,0,0,"pooled, common E and density slopes",interaction,log median home value (ACS),113699
+2013,0.0023795913856205,0.00408875493108783,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2014,0.00372557695161794,0.00338128396181242,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2015,0.00205502081808805,0.00270762854952653,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2016,0.00114661973585592,0.00173479223613795,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2018,2.13665979065005e-05,0.00149632334217396,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2019,-0.000960928982966718,0.0021950581410543,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2020,-0.00699644238204439,0.00475507782493447,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2021,-0.0133669381919796,0.00533534212406802,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2022,-0.0164500354948132,0.00589399517606846,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2023,-0.0164091772469021,0.00625234424035724,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log population (ACS),114054
+2013,-0.00750300670605577,0.00646703035628303,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2014,-0.00688746278823349,0.00555105169994506,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2015,-0.00568896715111549,0.00371311621120306,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2016,-0.00290967300829914,0.00234439074771912,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2018,-0.00289632358265992,0.00223596216292502,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2019,-0.0047036725779038,0.0035016496194923,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2020,-0.00925367573580589,0.00722129138853561,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2021,-0.00455670691140861,0.00731656378802857,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2022,-0.0159042366862035,0.00868399228705063,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2023,-0.0158063263283047,0.00976642137298759,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log population (ACS),114054
+2013,0.00360064126254464,0.00415239013706286,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2014,0.00417585095659825,0.00341765482679529,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2015,0.00191343171134086,0.00264339862662097,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2016,0.00123615648636018,0.00182320756943092,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2018,-0.000301651176603475,0.00150344673159199,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2019,-0.00146219206731913,0.00224402504521066,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2020,-0.00809054339746038,0.00497812261484537,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2021,-0.0149628188673728,0.00562574616715008,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2022,-0.0290810103453267,0.0103678246669677,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2023,-0.0291998071386238,0.0106176600684267,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2017,0,0,"pooled, common pair x year FE + H x year",main,log population (ACS),114058
+2013,-0.00952769185577903,0.00616934101785351,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2014,-0.00816766342461194,0.00504306071413111,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2015,-0.00714160224506354,0.00339932606293702,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2016,-0.00318305603431692,0.00221498888981896,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2018,-0.00217569173416114,0.00217259508981579,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2019,-0.00339498528631535,0.00332111090330817,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2020,-0.007833174718161,0.00648833242453325,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2021,-0.00470717388024621,0.00700186987359097,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2022,-0.0274301231119034,0.0122884431776433,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2023,-0.0261340115507654,0.0129372540395352,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log population (ACS),114058
+2013,0.00359008917937906,0.00415634828172915,"pooled, common E and density slopes",main,log population (ACS),114058
+2014,0.00418039621631589,0.00342268169620164,"pooled, common E and density slopes",main,log population (ACS),114058
+2015,0.00191984464724798,0.00263713329179658,"pooled, common E and density slopes",main,log population (ACS),114058
+2016,0.00120415936208667,0.00181493712561576,"pooled, common E and density slopes",main,log population (ACS),114058
+2018,-0.000263795641831397,0.00149954070977291,"pooled, common E and density slopes",main,log population (ACS),114058
+2019,-0.00133193441784887,0.00224176606877149,"pooled, common E and density slopes",main,log population (ACS),114058
+2020,-0.00801869221014654,0.00496641205230992,"pooled, common E and density slopes",main,log population (ACS),114058
+2021,-0.0147828675930272,0.00562379231786657,"pooled, common E and density slopes",main,log population (ACS),114058
+2022,-0.026548734248177,0.00965095475199699,"pooled, common E and density slopes",main,log population (ACS),114058
+2023,-0.0265612850570361,0.00989435836842465,"pooled, common E and density slopes",main,log population (ACS),114058
+2017,0,0,"pooled, common E and density slopes",main,log population (ACS),114058
+2013,-0.00863546523156523,0.00449684891581377,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2014,-0.00744143765085224,0.00389380531585416,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2015,-0.00566044944184254,0.00262663456600864,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2016,-0.00349615224756489,0.0016323983639939,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2018,-0.000455529080771782,0.00172364498115447,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2019,0.000469433837557587,0.00257637642697989,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2020,0.00152875984280394,0.00447935898943046,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2021,0.000215948763619372,0.005556991248947,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2022,0.00485413846506699,0.00739426032807075,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2023,0.00769461818171386,0.00838427424051358,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2017,0,0,"pooled, common E and density slopes",interaction,log population (ACS),114058
+2013,0.00789828570692141,0.0136491649595839,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2014,0.024489305063684,0.0129845355718972,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2015,0.0304963616497857,0.0126167865827023,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2016,0.00615418795501219,0.0105505993400332,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2018,0.00667709753276917,0.0106936920726171,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2019,0.0137293083560482,0.0128346081269292,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2020,0.0201518426068108,0.0122339972610765,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2021,0.0150393463291402,0.0152654308301837,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,move-out rate (Data Axle),91870
+2013,0.0119736175054062,0.015111258980169,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2014,0.0257698778485076,0.0131227142114546,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2015,0.0106769438896381,0.012382961118683,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2016,0.0146179047417582,0.0107192109338553,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2018,0.0177388069709688,0.0110978261689347,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2019,0.0230350674689318,0.0122659916915854,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2020,0.032191733925728,0.0129120054789507,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2021,0.0119220915023567,0.0176294067167032,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,move-out rate (Data Axle),91870
+2013,0.00787821209792494,0.014172235407174,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2014,0.0119975280402688,0.0132253133580694,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2015,0.0237470899378082,0.0134243202477252,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2016,0.00470821461958307,0.0110840672938822,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2018,0.00453317671101549,0.0109166791123516,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2019,0.00910392086259322,0.0130711501418122,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2020,0.0202493405877499,0.0126420349972646,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2021,0.0163154180594532,0.0157627718083414,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2017,0,0,"pooled, common pair x year FE + H x year",main,move-out rate (Data Axle),91870
+2013,0.0127515149478992,0.0162910419511861,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2014,0.0152151954191045,0.0127769499300431,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2015,0.00256254893885963,0.0133192043954304,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2016,0.013807835293589,0.0117220466034629,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2018,0.0124573774023408,0.0112215352719046,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2019,0.015184255813586,0.0131320711563775,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2020,0.0226225315577996,0.0152463194867202,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2021,-0.00915291418501069,0.0208159486915241,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,move-out rate (Data Axle),91870
+2013,0.00793030904921264,0.0142473929857624,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2014,0.0118011049773136,0.0132490532432807,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2015,0.0237905549102203,0.0134344117654991,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2016,0.00441119206312847,0.0110980570459906,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2018,0.00427185055442064,0.0109609138597232,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2019,0.00861637025602924,0.01312474542267,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2020,0.0199291345905998,0.0126545435258358,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2021,0.0164898251163399,0.0157400792549263,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2017,0,0,"pooled, common E and density slopes",main,move-out rate (Data Axle),91870
+2013,0.0245478065240571,0.0135397575622391,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2014,0.0166437944604747,0.00890295378436117,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2015,0.0033920243629371,0.00920798488219359,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2016,0.0138725464508216,0.00932863099251572,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2018,0.0101549496374877,0.00917635206577639,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2019,0.00440624879750917,0.00938737367980249,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2020,0.0159387156621394,0.00938076849402901,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2021,0.000396737183899468,0.0131527990442102,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2017,0,0,"pooled, common E and density slopes",interaction,move-out rate (Data Axle),91870
+2012,0.00240065548183921,0.0087294542272841,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2013,0.000164964203195267,0.00694558947949394,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2014,0.00569395203831245,0.00639034888818602,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2015,-0.00437381636375843,0.00564485868718484,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2016,-0.000861783878115941,0.00394859818786274,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2018,-0.00200564089499002,0.00469154376710234,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2019,-0.00317626310463409,0.00577200734466497,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2020,-0.00808532426512457,0.00690142086274795,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2021,-0.0128562286690682,0.00774549852556977,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2022,-0.00253379301104441,0.0106641253697999,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2023,-0.00555429111629095,0.00880766449388098,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log district property tax per pupil,27464
+2012,0.00130153736023804,0.0156075649349397,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2013,-0.000731424520369158,0.0141069249241985,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2014,0.00765790944791389,0.0121415214932364,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2015,0.0104627191323611,0.0107815809228815,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2016,-0.00502522991914869,0.00574043947738044,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2018,-0.00979087258754268,0.00677151302455094,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2019,-0.0181890419905778,0.00846448627046585,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2020,-0.0107956590281039,0.0101797557309057,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2021,-0.0117335835283005,0.0108173215829737,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2022,-0.0114862320561497,0.0124323584878789,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2023,-0.0267246241479629,0.0137933836522909,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log district property tax per pupil,27464
+2012,0.000722412650369073,0.00926918082841763,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2013,0.000685188084782925,0.00703710718809611,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2014,0.00500049111382224,0.0069256062066542,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2015,-0.00523742121155392,0.00556990839570272,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2016,-0.00215472005896168,0.00400346454422923,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2018,-0.00205268839835542,0.00485328557732432,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2019,-0.00295435233595145,0.00594681939837543,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2020,-0.00603587517438616,0.00701668994225366,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2021,-0.00982637060144116,0.00829470534915737,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2022,-0.00382884700730184,0.010466587312763,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2023,-0.00527171682667746,0.00912838020495881,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2017,0,0,"pooled, common pair x year FE + H x year",main,log district property tax per pupil,27466
+2012,0.0012535488118346,0.0162585788430706,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2013,-0.000253952240293185,0.0133099454257569,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2014,0.00391070166161445,0.0111259450798159,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2015,0.00943607470296301,0.0105189017234822,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2016,-0.00591850141526239,0.00590107110502692,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2018,-0.00805240808090329,0.00674715042860906,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2019,-0.0158840054660434,0.00835928597477752,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2020,-0.00812024235309847,0.00996969705363203,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2021,-0.00626972509372663,0.0107981804158899,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2022,-0.00658266569373217,0.0120329875299628,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2023,-0.0221285985279771,0.0135901672508462,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log district property tax per pupil,27466
+2012,0.00145434140494263,0.00894050991767145,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2013,0.00155849169424709,0.00688949471063359,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2014,0.00395197950478094,0.00687096335100208,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2015,-0.00605013135727761,0.00542442239503291,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2016,-0.000482903314594148,0.00401275085100155,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2018,-0.000170562313052344,0.00495171123192332,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2019,-0.000342871958197967,0.00592741566763327,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2020,-0.00373332615417767,0.00707102134256543,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2021,-0.010666962988639,0.00830810016862616,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2022,-0.00337820288649899,0.0101293257585593,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2023,-0.0023364262018567,0.00906506991457905,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2017,0,0,"pooled, common E and density slopes",main,log district property tax per pupil,27466
+2012,0.0115561649699669,0.00799553953292616,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2013,0.00951269499987832,0.00521129256762542,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2014,0.00148654494976173,0.00506465167435844,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2015,0.00500262334183783,0.00423477909312705,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2016,0.00656818745627191,0.00362687303791827,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2018,0.0054844045651962,0.00345352539314741,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2019,0.00195407491391125,0.00469978389616192,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2020,0.00659078352429494,0.00601217889138723,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2021,-0.0100026280742223,0.00645230276595693,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2022,-0.00524691139485848,0.00710999820318085,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2023,-0.00302083164791905,0.00840940656964867,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2017,0,0,"pooled, common E and density slopes",interaction,log district property tax per pupil,27466
+2012,0.0082007182957837,0.0122601240795372,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2013,0.00220118611239601,0.00854285889528197,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2014,0.00116945667579691,0.00750012885209937,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2015,0.00392032977740084,0.0061403079640979,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2016,-0.000403086178898339,0.00526060282935775,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2018,-0.0044503149824781,0.00667683628999306,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2019,0.00231947852718729,0.00774065575736046,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2020,0.00203632899490962,0.00876670274653931,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2021,0.00550901467447419,0.00977596736812765,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2022,0.00358119383114894,0.00979339500638849,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2023,0.0167595242942619,0.0108390777869667,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log district spending per pupil,33155
+2012,0.00482918926902646,0.0161061018963218,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2013,0.0033354398084328,0.0116128678518756,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2014,0.00608079355922889,0.00993282172177155,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2015,0.00996808030195661,0.00927872470116062,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2016,-0.00714029117902132,0.0069065222010473,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2018,-0.0112090889522319,0.0077191704053916,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2019,-0.0100485570008273,0.00968055695135624,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2020,-0.0144613037914567,0.0098517845708478,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2021,-0.0238510073699841,0.0137573616791648,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2022,-0.0268559346852633,0.0135809747323111,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2023,-0.0287613977995874,0.0148556072256796,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log district spending per pupil,33155
+2012,0.00803456230306619,0.012939966613555,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2013,0.00489689083137239,0.00933221943458873,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2014,0.00492960588191069,0.00805909319890489,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2015,0.00667906578208512,0.00662744776412638,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2016,0.00521973715424086,0.00579920594204239,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2018,-0.00405736528747822,0.00749346455374097,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2019,0.00141094312509804,0.00879460259828286,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2020,-0.00115080325716174,0.00985334924683807,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2021,-0.00233689422232408,0.0112822570701142,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2022,0.000821841823453622,0.0108845384140094,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2023,0.0128017211133996,0.0120423118106274,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2017,0,0,"pooled, common pair x year FE + H x year",main,log district spending per pupil,33167
+2012,0.0169073803672687,0.0160210240647353,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2013,0.0108759578629887,0.0124865692906558,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2014,0.00967128459469329,0.0108068677699148,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2015,0.00986959498441951,0.00990751824630745,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2016,-0.00438911693313259,0.00698688728386198,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2018,-0.0103566208817048,0.00766154040365554,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2019,-0.0117904747908543,0.0102600093285749,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2020,-0.0190849941502655,0.0107092972624357,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2021,-0.0290893490296678,0.014493812291164,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2022,-0.0286471354857151,0.0139379390122353,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2023,-0.0285017014576298,0.0151410109088525,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log district spending per pupil,33167
+2012,0.00748101087987238,0.0129720537093112,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2013,0.00445187970377432,0.0093861511701113,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2014,0.00446064346850754,0.00813072454055114,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2015,0.00618397627971583,0.00665820745499835,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2016,0.00521170434593777,0.00579656389150339,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2018,-0.0036192844722962,0.00743890638262062,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2019,0.00188766550252082,0.00875123127671938,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2020,-0.000513011698128261,0.00983933117533909,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2021,-0.00129465253421248,0.0112255982344395,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2022,0.00163279678794403,0.0108310557489083,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2023,0.0135127221350508,0.0119789577021409,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2017,0,0,"pooled, common E and density slopes",main,log district spending per pupil,33167
+2012,0.00727344144365278,0.0101649017539848,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2013,0.00287788245599113,0.00784279525692815,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2014,-0.000453465515032955,0.00621205860313459,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2015,0.00230883367777696,0.00576835694163898,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2016,-0.00381921035859827,0.0048465429750964,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2018,-0.00364314148771079,0.00526621631897931,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2019,-0.00734098075479017,0.00653401445104149,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2020,-0.0101119857307218,0.0126564552827772,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2021,-0.00702986490047828,0.00863164167723856,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2022,-0.0153445167122567,0.00910957439746983,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2023,-0.0145175718368346,0.00952040317311712,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2017,0,0,"pooled, common E and density slopes",interaction,log district spending per pupil,33167
+2012,0.00144803798817214,0.00412243151376703,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2013,0.00427243703025552,0.00275972095479441,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2014,0.00320911206580237,0.0024534639877543,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2015,0.00147913376316502,0.00163700741991176,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2016,0.00126719280627868,0.00128095479216201,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2018,-0.000250358679412502,0.00158482752973741,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2019,-0.00221667634442021,0.00236941108608232,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2020,-0.00353468603579694,0.00282163151900004,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2021,-0.00643690597607366,0.00328101448555992,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2022,-0.00630972673762285,0.00374157493627571,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2023,-0.00812119214898503,0.0041374042415025,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log district enrolment,33158
+2012,0.00454305810476538,0.00626033897316031,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2013,0.00402630772396486,0.00465605588198469,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2014,0.00231313567780807,0.00415784995672163,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2015,0.00152771819841593,0.00312929183496531,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2016,0.00413450888437502,0.00198214484385315,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2018,0.00129483718728521,0.0020763994261851,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2019,0.00099462280015858,0.00291850566257407,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2020,0.000829476130134645,0.00338453580745264,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2021,0.00124997347167645,0.00400595253699324,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2022,0.000556562365382538,0.0047161299346249,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2023,-0.000788103702242492,0.00514864749245607,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log district enrolment,33158
+2012,0.00331049953745999,0.00404804979907449,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2013,0.00508581948235467,0.00272476958551764,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2014,0.00400683863679398,0.00237181098970963,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2015,0.00158096478685235,0.00160281191736101,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2016,0.0009024382480342,0.00134445872087457,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2018,-0.000505225574072853,0.00196122854851517,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2019,-0.00233055061844744,0.00265842929699617,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2020,-0.00366229721602982,0.00308078387190361,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2021,-0.00561827782543704,0.00361421048939115,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2022,-0.00599709527527822,0.00404570274153129,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2023,-0.0083197496087557,0.00452404284925468,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2017,0,0,"pooled, common pair x year FE + H x year",main,log district enrolment,33170
+2012,0.00240523305049435,0.0057209135673557,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2013,0.00243712629662839,0.00447004918797381,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2014,0.00148551878583118,0.0038480593883966,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2015,0.00102492198104177,0.0028580986994513,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2016,0.00349396535066188,0.00202080894404585,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2018,0.00176299565007856,0.00240766978434068,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2019,0.00160020834574927,0.00321553501992499,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2020,0.00175599464753982,0.00364303586647522,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2021,0.00245179329912171,0.00434776564641659,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2022,0.00108273133976719,0.00509906364044116,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2023,-0.000344721337722343,0.00534112658384431,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log district enrolment,33170
+2012,0.00307662268859653,0.00404208829027818,"pooled, common E and density slopes",main,log district enrolment,33170
+2013,0.00488976452226703,0.00270075252117869,"pooled, common E and density slopes",main,log district enrolment,33170
+2014,0.00384348613679355,0.00234515866208628,"pooled, common E and density slopes",main,log district enrolment,33170
+2015,0.00154381843946809,0.00157626730619808,"pooled, common E and density slopes",main,log district enrolment,33170
+2016,0.000783395831907071,0.00133525589469532,"pooled, common E and density slopes",main,log district enrolment,33170
+2018,-0.000552089396650267,0.0019370904185096,"pooled, common E and density slopes",main,log district enrolment,33170
+2019,-0.00243165300663347,0.00264922085257634,"pooled, common E and density slopes",main,log district enrolment,33170
+2020,-0.00371630574777705,0.00308039968808645,"pooled, common E and density slopes",main,log district enrolment,33170
+2021,-0.00568582913967945,0.00360119512529037,"pooled, common E and density slopes",main,log district enrolment,33170
+2022,-0.00601846934660049,0.0040385493088843,"pooled, common E and density slopes",main,log district enrolment,33170
+2023,-0.0082937672756037,0.0045125765357355,"pooled, common E and density slopes",main,log district enrolment,33170
+2017,0,0,"pooled, common E and density slopes",main,log district enrolment,33170
+2012,-0.00351989617371925,0.00320238153151838,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2013,-0.00231029703557481,0.00251820699709571,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2014,-0.00185796105928799,0.00215232548201898,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2015,-0.000752003383009011,0.00153942277813343,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2016,-2.80986720678535e-05,0.00135734309767474,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2018,0.00199662441789442,0.00162802785149426,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2019,0.00202763364330964,0.00214989844202318,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2020,0.00313719983841216,0.00280098381669625,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2021,0.00370603008995336,0.00330678206499944,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2022,0.00342339112291073,0.00376848016306711,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2023,0.00301596142494721,0.00406598808812285,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2017,0,0,"pooled, common E and density slopes",interaction,log district enrolment,33170
+2012,0.00444784778636189,0.0177664027789991,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2013,-0.0135574684040196,0.0163698966133803,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2014,-0.00233752003982802,0.0140639709563114,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2015,-0.0167726732054156,0.0159120069911832,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2016,-0.018312193242201,0.0153017743098588,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2018,-0.0269304084806967,0.0137397166279813,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2019,-0.0215757319416618,0.0144088495429016,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2020,-0.0175280993488687,0.0122763810458078,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2021,-0.0200138778648209,0.0164731650232737,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2022,0.0398846554483329,0.0352514914650861,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,log county school property tax (CoG),8270
+2012,-0.0176856975738597,0.0311569543915054,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2013,-0.0349348022801645,0.0313569431039065,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2014,-0.0126978564938707,0.0266638294294078,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2015,-0.032754673812173,0.0283166887318134,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2016,-0.0367270106139754,0.027469080154612,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2018,-0.0515281778159468,0.0259159203137543,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2019,-0.0435095488012387,0.0277598120905692,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2020,-0.0296309907558526,0.0248301873957995,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2021,-0.0160974999961564,0.0316311637900747,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2022,0.0748118408808255,0.0610139001907625,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,log county school property tax (CoG),8270
+2012,0.0130695350627842,0.0181148109920837,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2013,-0.00537917964164197,0.0122804400146306,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2014,-0.00518413303416268,0.0121689110139279,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2015,-0.00818426242626834,0.0127692241326525,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2016,-0.005287870869318,0.0119877544963735,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2018,-0.0141677775711113,0.0115138435077998,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2019,-0.010349513396014,0.0124030408898593,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2020,-0.00483424526459374,0.0118478496339813,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2021,0.00112590739073767,0.0162837322244927,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2022,0.0391545240732863,0.0302269132531171,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2017,0,0,"pooled, common pair x year FE + H x year",main,log county school property tax (CoG),8288
+2012,0.00409667741295092,0.0293010035792774,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2013,-0.0147781311190042,0.0246532775624236,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2014,-0.0149755533530304,0.0227772868809951,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2015,-0.014218380606637,0.0218346156864671,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2016,-0.0112974180206733,0.0210265994173374,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2018,-0.0309848476372301,0.0206984535749131,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2019,-0.0324210378820171,0.0227643740031262,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2020,-0.0151363996887567,0.0226865648768626,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2021,0.0146504843029677,0.0292185526718196,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2022,0.0698111431204099,0.0509094362223115,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,log county school property tax (CoG),8288
+2012,0.0107923026158994,0.0114939410242891,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2013,0.00234444046109641,0.00929596271734075,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2014,-0.00380881169992123,0.00892156549922319,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2015,-0.00405862268827112,0.00897885222128275,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2016,-0.000891338838269226,0.00685446002221738,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2018,-0.00150453334603749,0.00941814652687816,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2019,-0.000794618408510297,0.00752925752105117,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2020,0.00106199626908525,0.00803871296636634,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2021,-0.00500078680599733,0.00924254848588608,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2022,0.0163821702887015,0.0138775143531977,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2017,0,0,"pooled, common E and density slopes",main,log county school property tax (CoG),8288
+2012,-0.00118124509369481,0.0139877804576306,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2013,0.00640057749287963,0.0117827232165359,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2014,-0.0103570871175565,0.0117922732089362,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2015,-0.00315125383799652,0.0100673989578557,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2016,0.000756587106970586,0.00892637438833721,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2018,0.00313031069930111,0.00941776302058231,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2019,-0.0073397345775572,0.0103000477100758,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2020,-0.000272974953670726,0.0119602052926721,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2021,-0.00202821733720205,0.0141700074967981,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2022,0.00871692072250366,0.0135960870654326,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2017,0,0,"pooled, common E and density slopes",interaction,log county school property tax (CoG),8288
+2012,0.001905129447841,0.0153931985699078,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2013,-0.0110253758836229,0.0104093567871365,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2014,-0.00728279705584209,0.0092329648113878,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2015,-0.00539032623143329,0.0081564737343372,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2016,-0.00627783413031608,0.00750880382443315,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2018,-0.00253337821130403,0.00707272598891392,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2019,-0.00816758257431995,0.0186358867584282,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2020,9.63697354662361e-05,0.0142477071586005,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2021,-0.000335749021491026,0.0143096772167514,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2022,-0.00493070154629397,0.0142424486132446,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2023,-0.00719142813753819,0.0157192311223926,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,total revenue,33158
+2012,0.000201336829615109,0.0189086768451803,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2013,-0.00227021465432312,0.0130836021110194,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2014,0.0116698111413604,0.0114858814368411,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2015,0.0123050361840002,0.0107258043910886,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2016,-0.00354139536360145,0.00852852053060179,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2018,-0.00736788894665718,0.00896887350812729,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2019,-0.0293397673316401,0.0225672762388853,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2020,-0.00271189145787537,0.0246898780817036,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2021,-0.0121361494393716,0.0265142864938551,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2022,-0.0115487065372369,0.025817834119924,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2023,-0.00714800646600545,0.0286820264888636,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,total revenue,33158
+2012,-6.91865468713794e-05,0.0162570827585214,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2013,-0.00805995396778761,0.0112308404193006,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2014,-0.00445012767270334,0.00947139735141243,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2015,-0.00488624753689523,0.00817386476517091,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2016,-0.00357989788148679,0.00768454988696776,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2018,-0.001286944996468,0.00747410293683277,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2019,0.00553753606042329,0.0119159969345981,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2020,0.0137508479482139,0.0138699244421682,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2021,0.00841745462955116,0.0143162786271101,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2022,0.00860635135804175,0.0144775394096371,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2023,0.00691250653893785,0.0159939238420177,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2017,0,0,"pooled, common pair x year FE + H x year",main,total revenue,33170
+2012,0.0104614659583597,0.01882200102366,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2013,0.00414794080753852,0.0140322986643016,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2014,0.0145839074789805,0.0120460145664571,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2015,0.0147803479893067,0.0102505802538451,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2016,-0.000673781098469371,0.00843168613643192,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2018,-0.00655988601879569,0.00900633084629987,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2019,-0.0284160692042736,0.016835992204479,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2020,-0.00146708773045052,0.027841968935346,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2021,-0.0127650557997977,0.0306249913161642,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2022,-0.0109844773481158,0.03087671063732,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2023,-0.00857766443261563,0.0319502412488554,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,total revenue,33170
+2012,-0.000537699885413141,0.0161139438875634,"pooled, common E and density slopes",main,total revenue,33170
+2013,-0.00846032740490299,0.0111161583203149,"pooled, common E and density slopes",main,total revenue,33170
+2014,-0.00497056404644041,0.00946306700571739,"pooled, common E and density slopes",main,total revenue,33170
+2015,-0.00526316500149654,0.00816573738190099,"pooled, common E and density slopes",main,total revenue,33170
+2016,-0.00339630181929259,0.00765998525094929,"pooled, common E and density slopes",main,total revenue,33170
+2018,-0.000976540984542737,0.00744393757191751,"pooled, common E and density slopes",main,total revenue,33170
+2019,0.00636469018517209,0.011758642793225,"pooled, common E and density slopes",main,total revenue,33170
+2020,0.0122016647570777,0.0134888060573464,"pooled, common E and density slopes",main,total revenue,33170
+2021,0.00676756495350256,0.0138390921020055,"pooled, common E and density slopes",main,total revenue,33170
+2022,0.00714424951667543,0.0139218207710621,"pooled, common E and density slopes",main,total revenue,33170
+2023,0.00501716583892192,0.0155741981505566,"pooled, common E and density slopes",main,total revenue,33170
+2017,0,0,"pooled, common E and density slopes",main,total revenue,33170
+2012,-0.000328796817032602,0.0116495381706461,"pooled, common E and density slopes",interaction,total revenue,33170
+2013,-0.00425347857957686,0.00817409625662695,"pooled, common E and density slopes",interaction,total revenue,33170
+2014,0.000995677663185142,0.00721932882190842,"pooled, common E and density slopes",interaction,total revenue,33170
+2015,0.00458967766659197,0.00621838254951406,"pooled, common E and density slopes",interaction,total revenue,33170
+2016,0.000156571743109603,0.00560205366765801,"pooled, common E and density slopes",interaction,total revenue,33170
+2018,-0.000478387157962868,0.00607358186984333,"pooled, common E and density slopes",interaction,total revenue,33170
+2019,-0.0183327450896357,0.0134964286725897,"pooled, common E and density slopes",interaction,total revenue,33170
+2020,-0.0348508885104951,0.0181771834734439,"pooled, common E and density slopes",interaction,total revenue,33170
+2021,-0.0473736187205119,0.0169469125213424,"pooled, common E and density slopes",interaction,total revenue,33170
+2022,-0.0502013957435898,0.0162967758851342,"pooled, common E and density slopes",interaction,total revenue,33170
+2023,-0.0565869357984811,0.017270319814861,"pooled, common E and density slopes",interaction,total revenue,33170
+2017,0,0,"pooled, common E and density slopes",interaction,total revenue,33170
+2012,-0.000351941448420135,0.0166503257366769,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2013,-0.00259610527920104,0.0153160993593587,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2014,-0.0121133988348949,0.0147519941836664,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2015,-0.007332069771483,0.0143826578384055,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2016,-0.0187840595825365,0.0125769683041132,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2018,0.00332444244472396,0.00527461493479285,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2019,0.00772589218486967,0.00744514777967185,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2020,0.000675801852467558,0.00911470764975243,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2021,0.00121367405163039,0.00985948504904857,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2022,0.00363351617522172,0.0107011655170266,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2023,0.00434333113637458,0.0134152909222435,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,state formula aid (C01),32873
+2012,-0.0237221292949611,0.035282383476951,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2013,-0.0184926113921422,0.0333587637091367,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2014,-0.0125251609407421,0.0335929348518678,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2015,-0.00575157507227365,0.0335704074538207,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2016,-0.00795973994458971,0.0292944296177592,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2018,-0.0093784929763738,0.00652933785067141,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2019,-0.00381946464117323,0.0132759980480024,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2020,-0.000396708141113129,0.0153395326319703,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2021,-0.0068581720037524,0.0167070902157417,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2022,-0.015314318310131,0.0181140982766602,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2023,-0.0263894389710417,0.0239054081911524,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,state formula aid (C01),32873
+2012,-0.00742207068725938,0.0171025608736958,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2013,-0.00365614164515711,0.016065567273615,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2014,-0.0122649340220008,0.0149124940672594,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2015,-0.00954002811207871,0.0143415965190909,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2016,-0.0196550266436594,0.0124066582572177,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2018,-0.000562708797500004,0.00578431655256483,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2019,0.00385108669676128,0.00843317163326822,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2020,-0.00297977253283839,0.00981048606912195,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2021,-0.00532774008601406,0.0105886171004806,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2022,-0.00491198765468502,0.0124992249842297,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2023,-0.00701371636732716,0.0159940999104967,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2017,0,0,"pooled, common pair x year FE + H x year",main,state formula aid (C01),32885
+2012,-0.0303598260050871,0.0356578792200596,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2013,-0.0282200758032336,0.0339860781256759,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2014,-0.0227034369708813,0.0329791866775021,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2015,-0.0193858177694088,0.03145757008236,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2016,-0.0194597393872125,0.0250372778131656,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2018,-0.0105734111237317,0.00769790801342429,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2019,-0.0130116368021038,0.0144743528173046,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2020,-0.0106873699426738,0.0175159958756118,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2021,-0.0114675346748561,0.0201109570525504,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2022,-0.0238922991245354,0.0236333194402994,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2023,-0.045974314011771,0.030220557755853,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,state formula aid (C01),32885
+2012,-0.00407830120754474,0.017039902658684,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2013,-0.000410537647439733,0.0160162653997735,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2014,-0.00920849486050554,0.0148888039497351,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2015,-0.00644995133812405,0.0143226536945488,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2016,-0.0166068094945907,0.0126396227781442,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2018,-0.000341116786344816,0.00580400810437091,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2019,0.00465910329159571,0.00844562006022685,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2020,-0.00210073599364973,0.00986406984802928,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2021,-0.00390903807114858,0.0106632827109292,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2022,-0.00305243695517454,0.0124306433805362,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2023,-0.00449210078967722,0.0159023430175618,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2017,0,0,"pooled, common E and density slopes",main,state formula aid (C01),32885
+2012,0.0249944829279096,0.02079763196421,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2013,0.0231178198146581,0.0202018194299829,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2014,0.0276829618020128,0.020408559186719,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2015,0.0294934599819224,0.0207675221071069,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2016,0.0311783087501075,0.0194637029444526,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2018,-0.012740146635164,0.00612102273466789,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2019,-0.00123256793031747,0.0122878176353246,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2020,0.00368899244821771,0.0145745662551893,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2021,0.0131580053390348,0.0155503999233666,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2022,0.00766020865238956,0.0169059269225564,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2023,0.000493444818668991,0.0201105388750134,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2017,0,0,"pooled, common E and density slopes",interaction,state formula aid (C01),32885
+2012,0.00570832697360983,0.0125033620025819,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2013,0.000259333203905653,0.00847055692254454,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2014,0.00108819704740796,0.00792919432933846,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2015,0.00606069746927009,0.00618950375301708,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2016,0.00146701183010067,0.00500741806112717,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2018,-0.0022178299608859,0.00596253518644444,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2019,0.00494111962868365,0.00726698582882801,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2020,0.00280639345031518,0.00886388495377693,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2021,0.00149987940013014,0.00993150823431809,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2022,0.00124883296638703,0.00985544542545899,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2023,0.0160573324216923,0.0111188564883687,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,instruction,33155
+2012,0.0134720434261171,0.0158133376261393,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2013,0.0121701388595005,0.0111263114868134,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2014,0.0128927181313433,0.00954546452102404,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2015,0.00904469189900156,0.00754099065305827,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2016,-0.00950711778551887,0.00636621498628282,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2018,-0.0121622489581726,0.00749633525531698,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2019,-0.0131171901738526,0.00956380057314725,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2020,-0.0138641017026515,0.00966752853454503,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2021,-0.0223048307571207,0.0145250641392097,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2022,-0.0266215782092507,0.0130736423659993,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2023,-0.0289037357255504,0.0155324676300397,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,instruction,33155
+2012,0.0081481415970691,0.0131008801839052,"pooled, common pair x year FE + H x year",main,instruction,33167
+2013,0.00480174945220936,0.00927406481610067,"pooled, common pair x year FE + H x year",main,instruction,33167
+2014,0.00672728505000429,0.00840583513241108,"pooled, common pair x year FE + H x year",main,instruction,33167
+2015,0.00831883090914832,0.00670448509155077,"pooled, common pair x year FE + H x year",main,instruction,33167
+2016,0.00620141955196735,0.005581839125921,"pooled, common pair x year FE + H x year",main,instruction,33167
+2018,-0.00163332158878673,0.00719812696358542,"pooled, common pair x year FE + H x year",main,instruction,33167
+2019,0.0038707648266977,0.00845495071723931,"pooled, common pair x year FE + H x year",main,instruction,33167
+2020,0.00072074978634626,0.0101011041596458,"pooled, common pair x year FE + H x year",main,instruction,33167
+2021,-0.00523417068197943,0.011800524041104,"pooled, common pair x year FE + H x year",main,instruction,33167
+2022,-0.00113762917069631,0.0112496888575793,"pooled, common pair x year FE + H x year",main,instruction,33167
+2023,0.0108720720044457,0.0124221227469441,"pooled, common pair x year FE + H x year",main,instruction,33167
+2017,0,0,"pooled, common pair x year FE + H x year",main,instruction,33167
+2012,0.0238005518574102,0.0163958597447002,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2013,0.0178101122646746,0.0125817263637322,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2014,0.0162678028361872,0.010856517952434,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2015,0.00979804320919023,0.00801887654077263,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2016,-0.00418964240507161,0.00628506239406792,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2018,-0.0106552079696952,0.00768677418136992,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2019,-0.0148494088728851,0.0100766169489027,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2020,-0.0191362230850164,0.0103458992862427,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2021,-0.028970940852567,0.0155154931585762,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2022,-0.0283185780998547,0.0138149955800363,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2023,-0.0298295555948463,0.0162566388957901,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,instruction,33167
+2012,0.00728725648476889,0.0131862268147596,"pooled, common E and density slopes",main,instruction,33167
+2013,0.00410773958845291,0.00937206792551704,"pooled, common E and density slopes",main,instruction,33167
+2014,0.00615862989960246,0.00850696494909582,"pooled, common E and density slopes",main,instruction,33167
+2015,0.0079563310641549,0.00675505404769231,"pooled, common E and density slopes",main,instruction,33167
+2016,0.00624132301891377,0.00558889195013737,"pooled, common E and density slopes",main,instruction,33167
+2018,-0.00107947351607164,0.0071680107171323,"pooled, common E and density slopes",main,instruction,33167
+2019,0.00444670876584034,0.00838906752619954,"pooled, common E and density slopes",main,instruction,33167
+2020,0.00123259840036159,0.0100708395212055,"pooled, common E and density slopes",main,instruction,33167
+2021,-0.00415753599749307,0.0117229855917933,"pooled, common E and density slopes",main,instruction,33167
+2022,-0.000346143237572402,0.0111473566967599,"pooled, common E and density slopes",main,instruction,33167
+2023,0.0116610765665009,0.0123339225096231,"pooled, common E and density slopes",main,instruction,33167
+2017,0,0,"pooled, common E and density slopes",main,instruction,33167
+2012,0.00752758293425989,0.00981923085667432,"pooled, common E and density slopes",interaction,instruction,33167
+2013,0.00158030757373119,0.00775768454078434,"pooled, common E and density slopes",interaction,instruction,33167
+2014,0.00263955565984737,0.00598607702390588,"pooled, common E and density slopes",interaction,instruction,33167
+2015,0.0041095991674806,0.00513098017905163,"pooled, common E and density slopes",interaction,instruction,33167
+2016,-0.00197024081977699,0.00445998005295039,"pooled, common E and density slopes",interaction,instruction,33167
+2018,0.0014067710104107,0.00539318107349163,"pooled, common E and density slopes",interaction,instruction,33167
+2019,-0.00258196037626622,0.00668432552509935,"pooled, common E and density slopes",interaction,instruction,33167
+2020,-0.00559641537825681,0.0112549750135425,"pooled, common E and density slopes",interaction,instruction,33167
+2021,-0.00173674373139055,0.00907243236002973,"pooled, common E and density slopes",interaction,instruction,33167
+2022,-0.0118791031634207,0.00921775300860817,"pooled, common E and density slopes",interaction,instruction,33167
+2023,-0.0122892658164686,0.00998284094140643,"pooled, common E and density slopes",interaction,instruction,33167
+2017,0,0,"pooled, common E and density slopes",interaction,instruction,33167
+2012,-0.0375014503835333,0.0428056061999176,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2013,-0.0343945883445653,0.0410616574437361,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2014,-0.0351958661308195,0.0398333635978611,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2015,-0.0390381563925181,0.0364538412735302,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2016,-0.0518455355773661,0.030459651402977,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2018,-0.000260940464934963,0.0263824486936925,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2019,-0.0141628472693185,0.0375525080329553,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2020,-0.0180283519275907,0.0404176552963497,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2021,0.0130536417365971,0.0428720258207679,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2022,0.0311266675176501,0.0414212868983579,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2023,-0.01057279601102,0.0393585848576585,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,capital outlay,32939
+2012,0.047922272441521,0.0600866822297385,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2013,0.0474718925181165,0.0575498387193033,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2014,0.0672341516427116,0.0574537227871606,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2015,0.0461266437888123,0.0443370007068953,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2016,0.0875135789195729,0.037774094560539,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2018,0.00760708692089037,0.0328063591541527,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2019,0.103883881466027,0.0496907915542417,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2020,0.0629898714086765,0.0513994547093625,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2021,0.0422983499546853,0.0588584657004679,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2022,0.0834080554348948,0.0564158641979818,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2023,0.0878819775505575,0.0473944463960611,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,capital outlay,32939
+2012,-0.0506520961943837,0.0410959798511722,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2013,-0.0563718256299902,0.0403522612858066,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2014,-0.0554122383104862,0.0379117697052109,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2015,-0.0581049389092024,0.0349364508671723,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2016,-0.061848056790485,0.0291817737102454,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2018,0.000867005164789153,0.0263817907569924,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2019,-0.0162954584676418,0.0363951029749722,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2020,-0.0204799149147553,0.0395901247259251,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2021,0.00537239390860312,0.0418846979274132,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2022,0.0352108365567854,0.0413222775545133,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2023,0.00552294220962289,0.0394530468307251,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2017,0,0,"pooled, common pair x year FE + H x year",main,capital outlay,32951
+2012,0.0354602121363634,0.0562390527837041,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2013,0.0241029112092269,0.0552444077636036,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2014,0.0417407258524736,0.0550540723768183,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2015,0.0223509369702014,0.0421379079434298,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2016,0.0731910533732656,0.0383489406605151,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2018,0.0101614721044759,0.0331624635721934,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2019,0.0943231184823493,0.0503893061694526,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2020,0.0506990602913058,0.050537112059151,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2021,0.0236389392587446,0.0572977430259121,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2022,0.05678317571067,0.0553597955140095,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2023,0.0642133184501233,0.0515303331656071,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,capital outlay,32951
+2012,-0.050629318530631,0.040940757259218,"pooled, common E and density slopes",main,capital outlay,32951
+2013,-0.0565138348023066,0.0401036677338993,"pooled, common E and density slopes",main,capital outlay,32951
+2014,-0.0564996007299838,0.0376108574788611,"pooled, common E and density slopes",main,capital outlay,32951
+2015,-0.0594114318964307,0.034681970395673,"pooled, common E and density slopes",main,capital outlay,32951
+2016,-0.0639540746599796,0.0289711623673264,"pooled, common E and density slopes",main,capital outlay,32951
+2018,0.00181646570060252,0.0263761748904791,"pooled, common E and density slopes",main,capital outlay,32951
+2019,-0.018825345872196,0.03622176610317,"pooled, common E and density slopes",main,capital outlay,32951
+2020,-0.0222311049742337,0.0394229438130741,"pooled, common E and density slopes",main,capital outlay,32951
+2021,0.00421543602445848,0.04163791759639,"pooled, common E and density slopes",main,capital outlay,32951
+2022,0.0331381001434021,0.0411996185048344,"pooled, common E and density slopes",main,capital outlay,32951
+2023,0.00302957692288722,0.039309373377824,"pooled, common E and density slopes",main,capital outlay,32951
+2017,0,0,"pooled, common E and density slopes",main,capital outlay,32951
+2012,0.0332846609765596,0.0376572951262709,"pooled, common E and density slopes",interaction,capital outlay,32951
+2013,0.0187888970492313,0.0325228052440259,"pooled, common E and density slopes",interaction,capital outlay,32951
+2014,0.0223484038950723,0.0330967291355846,"pooled, common E and density slopes",interaction,capital outlay,32951
+2015,-0.00986411299063781,0.0278803287564311,"pooled, common E and density slopes",interaction,capital outlay,32951
+2016,0.0378733509920539,0.0195328776045811,"pooled, common E and density slopes",interaction,capital outlay,32951
+2018,0.0126318161225304,0.021775045913942,"pooled, common E and density slopes",interaction,capital outlay,32951
+2019,0.0301480584793164,0.0287782118259599,"pooled, common E and density slopes",interaction,capital outlay,32951
+2020,0.0143815369825406,0.0318255982489365,"pooled, common E and density slopes",interaction,capital outlay,32951
+2021,0.00642254605732149,0.0376201359965656,"pooled, common E and density slopes",interaction,capital outlay,32951
+2022,6.33890227956028e-05,0.0368409399809743,"pooled, common E and density slopes",interaction,capital outlay,32951
+2023,-0.00940026089354003,0.0315004793686806,"pooled, common E and density slopes",interaction,capital outlay,32951
+2017,0,0,"pooled, common E and density slopes",interaction,capital outlay,32951
+2012,-0.00502926847661581,0.0167756958207374,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2013,-0.0025352870707277,0.0157356962330778,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2014,0.0133363768588869,0.0162060905999447,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2015,0.00640346428799102,0.0123041727785607,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2016,-0.00111669794433327,0.00897786602593054,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2018,-0.00667520407793042,0.00802573229756597,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2017,0,0,"pooled, saturated (pair x side x year FE)",main,"district test scores (SEDA, SD)",18473
+2012,-0.0231773477590188,0.0251992122824106,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2013,-0.0244754918389608,0.0245558388891437,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2014,-0.0313880032743985,0.0281688439348591,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2015,-0.0213127350202271,0.0202808666776181,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2016,-0.00807645969601397,0.0137092303270716,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2018,0.0209177201576491,0.0101930570474973,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2017,0,0,"pooled, saturated (pair x side x year FE)",interaction,"district test scores (SEDA, SD)",18473
+2012,-0.00303265544141574,0.0167970917890505,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2013,0.00319857777173095,0.015465067563593,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2014,0.0162265005118956,0.015855196719859,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2015,0.00582356847724247,0.0126727040570283,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2016,0.0052621137428438,0.00893411626843996,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2018,-0.0033089233318468,0.00860386624856806,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2017,0,0,"pooled, common pair x year FE + H x year",main,"district test scores (SEDA, SD)",18479
+2012,-0.0244313102692135,0.0251351726520885,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2013,-0.0187244274909907,0.0246687031796258,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2014,-0.02646515838117,0.0280924871749856,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2015,-0.0177787925207029,0.0203461317101618,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2016,-0.00775246980340243,0.0139283234026989,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2018,0.0149793918783067,0.0103853485800216,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2017,0,0,"pooled, common pair x year FE + H x year",interaction,"district test scores (SEDA, SD)",18479
+2012,0.000448492799205235,0.0168149115099779,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2013,0.00645227853822571,0.015318920501675,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2014,0.0202465565897344,0.0155608504047162,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2015,0.006072258446484,0.0126233524875842,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2016,0.00616644971656632,0.0089047181660533,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2018,-0.00361055726053917,0.00855278444828332,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2017,0,0,"pooled, common E and density slopes",main,"district test scores (SEDA, SD)",18479
+2012,0.0217615510013247,0.0171642521406747,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2013,0.0232361527020901,0.0167739196961095,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2014,0.00689909527267836,0.0184200528733233,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2015,-0.00501856761600516,0.0144113303654364,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2016,-0.00280885253018288,0.00946318076907719,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2018,0.0106929769474786,0.00680755469138848,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2017,0,0,"pooled, common E and density slopes",interaction,"district test scores (SEDA, SD)",18479
+2012,0.0479222724415718,0.0592487749811217,split: high minus low by hand,interaction,capital outlay,
+2013,0.0474718925181708,0.0573031583921137,split: high minus low by hand,interaction,capital outlay,
+2014,0.0672341516427662,0.0587218344468115,split: high minus low by hand,interaction,capital outlay,
+2015,0.0461266437888652,0.0448274543842477,split: high minus low by hand,interaction,capital outlay,
+2016,0.0875135789196322,0.0388500919437612,split: high minus low by hand,interaction,capital outlay,
+2017,0,0,split: high minus low by hand,interaction,capital outlay,
+2018,0.00760708692093889,0.0331101357801587,split: high minus low by hand,interaction,capital outlay,
+2019,0.103883881466081,0.0497551781340255,split: high minus low by hand,interaction,capital outlay,
+2020,0.0629898714087328,0.0511392520096646,split: high minus low by hand,interaction,capital outlay,
+2021,0.0422983499547396,0.0591129022699168,split: high minus low by hand,interaction,capital outlay,
+2022,0.0834080554349461,0.0580205891208655,split: high minus low by hand,interaction,capital outlay,
+2023,0.0878819775506129,0.0484156492872271,split: high minus low by hand,interaction,capital outlay,
+2012,-0.0231773477590219,0.0250781448395356,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2013,-0.0244754918389638,0.0244808863341521,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2014,-0.0313880032744002,0.0282027826179276,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2015,-0.0213127350202302,0.0205308003871588,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2016,-0.00807645969601741,0.013672777960555,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2017,0,0,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2018,0.0209177201576451,0.0103047475751951,split: high minus low by hand,interaction,"district test scores (SEDA, SD)",
+2012,-0.0156273905319068,0.0157328776272976,split: high minus low by hand,interaction,effective tax rate,
+2013,-0.0144084505926615,0.0116780728364077,split: high minus low by hand,interaction,effective tax rate,
+2014,-0.0111450542294928,0.0116485428534089,split: high minus low by hand,interaction,effective tax rate,
+2015,-0.00165462148918611,0.0102907490579861,split: high minus low by hand,interaction,effective tax rate,
+2016,0.00577453278286184,0.0090826513170323,split: high minus low by hand,interaction,effective tax rate,
+2017,0,0,split: high minus low by hand,interaction,effective tax rate,
+2018,-0.000447533257264345,0.00841212905812095,split: high minus low by hand,interaction,effective tax rate,
+2019,-0.00990534503573554,0.00984309156366066,split: high minus low by hand,interaction,effective tax rate,
+2020,-0.0148864226766307,0.0111510991858193,split: high minus low by hand,interaction,effective tax rate,
+2021,-0.0230286817980943,0.0125909825167473,split: high minus low by hand,interaction,effective tax rate,
+2022,-0.0247481142022286,0.0131226410150044,split: high minus low by hand,interaction,effective tax rate,
+2023,-0.0227424405257566,0.0135964281297157,split: high minus low by hand,interaction,effective tax rate,
+2024,-0.0234871802771751,0.0140514574720914,split: high minus low by hand,interaction,effective tax rate,
+2012,0.0134720434261065,0.0158127876631032,split: high minus low by hand,interaction,instruction,
+2013,0.01217013885949,0.0110695790456291,split: high minus low by hand,interaction,instruction,
+2014,0.0128927181313329,0.00944739151658455,split: high minus low by hand,interaction,instruction,
+2015,0.00904469189899047,0.0075787651091996,split: high minus low by hand,interaction,instruction,
+2016,-0.00950711778553135,0.00628688853483155,split: high minus low by hand,interaction,instruction,
+2017,0,0,split: high minus low by hand,interaction,instruction,
+2018,-0.0121622489581857,0.00727071658806227,split: high minus low by hand,interaction,instruction,
+2019,-0.013117190173866,0.00931980179974608,split: high minus low by hand,interaction,instruction,
+2020,-0.0138641017026641,0.00960534032757299,split: high minus low by hand,interaction,instruction,
+2021,-0.0223048307571325,0.0144613218547721,split: high minus low by hand,interaction,instruction,
+2022,-0.0266215782092633,0.0129684679066266,split: high minus low by hand,interaction,instruction,
+2023,-0.0289037357255638,0.0154889950334085,split: high minus low by hand,interaction,instruction,
+2012,-0.0176856975738775,0.0312217584427212,split: high minus low by hand,interaction,log county school property tax (CoG),
+2013,-0.0349348022801811,0.0314244034341904,split: high minus low by hand,interaction,log county school property tax (CoG),
+2014,-0.0126978564938883,0.0267223509537079,split: high minus low by hand,interaction,log county school property tax (CoG),
+2015,-0.0327546738121898,0.028389492638728,split: high minus low by hand,interaction,log county school property tax (CoG),
+2016,-0.0367270106139927,0.0275444151635092,split: high minus low by hand,interaction,log county school property tax (CoG),
+2017,0,0,split: high minus low by hand,interaction,log county school property tax (CoG),
+2018,-0.0515281778159649,0.0259818740582176,split: high minus low by hand,interaction,log county school property tax (CoG),
+2019,-0.0435095488012568,0.0278240274546109,split: high minus low by hand,interaction,log county school property tax (CoG),
+2020,-0.0296309907558717,0.0248727685142785,split: high minus low by hand,interaction,log county school property tax (CoG),
+2021,-0.0160974999961758,0.0317023693695361,split: high minus low by hand,interaction,log county school property tax (CoG),
+2022,0.0748118408808047,0.0612021488882241,split: high minus low by hand,interaction,log county school property tax (CoG),
+2012,0.00454305810477081,0.00624584969745214,split: high minus low by hand,interaction,log district enrolment,
+2013,0.00402630772396996,0.00463202852201138,split: high minus low by hand,interaction,log district enrolment,
+2014,0.00231313567781311,0.00413705679849484,split: high minus low by hand,interaction,log district enrolment,
+2015,0.00152771819842102,0.00313651333826165,split: high minus low by hand,interaction,log district enrolment,
+2016,0.00413450888438039,0.00196427211789258,split: high minus low by hand,interaction,log district enrolment,
+2017,0,0,split: high minus low by hand,interaction,log district enrolment,
+2018,0.00129483718729095,0.00205549369882515,split: high minus low by hand,interaction,log district enrolment,
+2019,0.000994622800164324,0.00285898855407537,split: high minus low by hand,interaction,log district enrolment,
+2020,0.000829476130140559,0.00337300897025647,split: high minus low by hand,interaction,log district enrolment,
+2021,0.00124997347168233,0.00400352987939267,split: high minus low by hand,interaction,log district enrolment,
+2022,0.00055656236538863,0.00470583154783237,split: high minus low by hand,interaction,log district enrolment,
+2023,-0.000788103702236318,0.00513397824420507,split: high minus low by hand,interaction,log district enrolment,
+2012,0.00130153736026359,0.015671876723599,split: high minus low by hand,interaction,log district property tax per pupil,
+2013,-0.000731424520341941,0.014167050588639,split: high minus low by hand,interaction,log district property tax per pupil,
+2014,0.00765790944793821,0.012193206934315,split: high minus low by hand,interaction,log district property tax per pupil,
+2015,0.0104627191323856,0.0108314763923929,split: high minus low by hand,interaction,log district property tax per pupil,
+2016,-0.00502522991911986,0.00575132528404446,split: high minus low by hand,interaction,log district property tax per pupil,
+2017,0,0,split: high minus low by hand,interaction,log district property tax per pupil,
+2018,-0.00979087258751349,0.00679880085003171,split: high minus low by hand,interaction,log district property tax per pupil,
+2019,-0.0181890419905475,0.00849923543695308,split: high minus low by hand,interaction,log district property tax per pupil,
+2020,-0.0107956590280755,0.0102216054503103,split: high minus low by hand,interaction,log district property tax per pupil,
+2021,-0.0117335835282717,0.0108543441764859,split: high minus low by hand,interaction,log district property tax per pupil,
+2022,-0.011486232056122,0.0124753466036645,split: high minus low by hand,interaction,log district property tax per pupil,
+2023,-0.0267246241479314,0.0138422578834867,split: high minus low by hand,interaction,log district property tax per pupil,
+2012,0.00482918926901064,0.0160897632919754,split: high minus low by hand,interaction,log district spending per pupil,
+2013,0.00333543980841719,0.0115168743238882,split: high minus low by hand,interaction,log district spending per pupil,
+2014,0.00608079355921381,0.00988006089394649,split: high minus low by hand,interaction,log district spending per pupil,
+2015,0.00996808030194148,0.00932891616533447,split: high minus low by hand,interaction,log district spending per pupil,
+2016,-0.00714029117903781,0.00684586772093353,split: high minus low by hand,interaction,log district spending per pupil,
+2017,0,0,split: high minus low by hand,interaction,log district spending per pupil,
+2018,-0.0112090889522494,0.00760553765213995,split: high minus low by hand,interaction,log district spending per pupil,
+2019,-0.010048557000845,0.00950498020733631,split: high minus low by hand,interaction,log district spending per pupil,
+2020,-0.0144613037914741,0.00985593548711155,split: high minus low by hand,interaction,log district spending per pupil,
+2021,-0.0238510073700002,0.0137602509442495,split: high minus low by hand,interaction,log district spending per pupil,
+2022,-0.0268559346852806,0.0134546757231509,split: high minus low by hand,interaction,log district spending per pupil,
+2023,-0.0287613977996055,0.0149044707663638,split: high minus low by hand,interaction,log district spending per pupil,
+2013,0.0153830959630145,0.00719057163488638,split: high minus low by hand,interaction,log median home value (ACS),
+2014,0.0131553328566449,0.00648168810429521,split: high minus low by hand,interaction,log median home value (ACS),
+2015,0.00337688185414172,0.00322181688204146,split: high minus low by hand,interaction,log median home value (ACS),
+2016,0.00336981966897581,0.00280728121827559,split: high minus low by hand,interaction,log median home value (ACS),
+2017,0,0,split: high minus low by hand,interaction,log median home value (ACS),
+2018,0.0010669762399916,0.00373592919316186,split: high minus low by hand,interaction,log median home value (ACS),
+2019,0.00346599055684637,0.00368172344440439,split: high minus low by hand,interaction,log median home value (ACS),
+2020,0.00359857077400449,0.00590871844297804,split: high minus low by hand,interaction,log median home value (ACS),
+2021,0.00676270947554116,0.0057252981412092,split: high minus low by hand,interaction,log median home value (ACS),
+2022,0.0056194244744247,0.00680580376837862,split: high minus low by hand,interaction,log median home value (ACS),
+2023,0.00477972500766877,0.00661883558493139,split: high minus low by hand,interaction,log median home value (ACS),
+2012,-0.0203559604892309,0.0163083937860548,split: high minus low by hand,interaction,log median sale price,
+2013,-0.00479657277219977,0.00992507335227494,split: high minus low by hand,interaction,log median sale price,
+2014,-0.0253374494314374,0.0101189690949947,split: high minus low by hand,interaction,log median sale price,
+2015,-0.010601697798872,0.00683705843748556,split: high minus low by hand,interaction,log median sale price,
+2016,-0.00913948517523637,0.00697486488967443,split: high minus low by hand,interaction,log median sale price,
+2017,0,0,split: high minus low by hand,interaction,log median sale price,
+2018,-0.0130987330755291,0.00621169587383433,split: high minus low by hand,interaction,log median sale price,
+2019,-0.00828406925623565,0.00782601039871295,split: high minus low by hand,interaction,log median sale price,
+2020,-0.010414712703431,0.00720321753101996,split: high minus low by hand,interaction,log median sale price,
+2021,-0.0100714892429829,0.00932429053230313,split: high minus low by hand,interaction,log median sale price,
+2022,-0.0139180384090009,0.00811823133744536,split: high minus low by hand,interaction,log median sale price,
+2023,-0.0131559940846694,0.0101819917869643,split: high minus low by hand,interaction,log median sale price,
+2024,-0.0145250707459266,0.00938081475488087,split: high minus low by hand,interaction,log median sale price,
+2013,-0.00750300670606041,0.00647227454106057,split: high minus low by hand,interaction,log population (ACS),
+2014,-0.00688746278823569,0.00555123476776895,split: high minus low by hand,interaction,log population (ACS),
+2015,-0.00568896715111731,0.00371557183728461,split: high minus low by hand,interaction,log population (ACS),
+2016,-0.00290967300830156,0.00234940506203376,split: high minus low by hand,interaction,log population (ACS),
+2017,0,0,split: high minus low by hand,interaction,log population (ACS),
+2018,-0.00289632358266273,0.00224308231058768,split: high minus low by hand,interaction,log population (ACS),
+2019,-0.00470367257790676,0.00350833586808534,split: high minus low by hand,interaction,log population (ACS),
+2020,-0.00925367573580956,0.00722947007191479,split: high minus low by hand,interaction,log population (ACS),
+2021,-0.0045567069114112,0.00737133986386797,split: high minus low by hand,interaction,log population (ACS),
+2022,-0.0159042366862163,0.00871759916187829,split: high minus low by hand,interaction,log population (ACS),
+2023,-0.0158063263283208,0.00980745914469906,split: high minus low by hand,interaction,log population (ACS),
+2012,-0.00596299850387329,0.00909623846451056,split: high minus low by hand,interaction,log tax bill per parcel,
+2013,-0.00600566750611176,0.0054234356079615,split: high minus low by hand,interaction,log tax bill per parcel,
+2014,-0.00642168397572301,0.00481757936404254,split: high minus low by hand,interaction,log tax bill per parcel,
+2015,-0.0102535454039253,0.00636929319640538,split: high minus low by hand,interaction,log tax bill per parcel,
+2016,-0.00316150827572467,0.00369827147111584,split: high minus low by hand,interaction,log tax bill per parcel,
+2017,0,0,split: high minus low by hand,interaction,log tax bill per parcel,
+2018,-0.00371448402149649,0.00348219671289777,split: high minus low by hand,interaction,log tax bill per parcel,
+2019,-0.008144857819755,0.00605719440274337,split: high minus low by hand,interaction,log tax bill per parcel,
+2020,-0.00740973706051976,0.00440896613205082,split: high minus low by hand,interaction,log tax bill per parcel,
+2021,-0.00845539075203357,0.00440369084510154,split: high minus low by hand,interaction,log tax bill per parcel,
+2022,-0.00899971040964447,0.00446706600255331,split: high minus low by hand,interaction,log tax bill per parcel,
+2023,-0.00647756412235287,0.00482531447513942,split: high minus low by hand,interaction,log tax bill per parcel,
+2024,-0.00690032816588101,0.00535867953901136,split: high minus low by hand,interaction,log tax bill per parcel,
+2013,0.0119736175054072,0.0151793447857479,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2014,0.0257698778485089,0.0130758464271756,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2015,0.0106769438896395,0.0123855451176795,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2016,0.014617904741757,0.0109830466543548,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2017,0,0,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2018,0.0177388069709699,0.0111471212386809,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2019,0.0230350674689314,0.0123453828746635,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2020,0.0321917339257294,0.0129736320079714,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2021,0.01192209150236,0.0174905569519739,split: high minus low by hand,interaction,move-out rate (Data Axle),
+2012,-0.0467364291638544,0.0255886236623711,split: high minus low by hand,interaction,sales per 100 parcels,
+2013,-0.00420544078190701,0.01943594947271,split: high minus low by hand,interaction,sales per 100 parcels,
+2014,-0.012555978314339,0.0185687613864382,split: high minus low by hand,interaction,sales per 100 parcels,
+2015,-0.0149596253482542,0.0146996340784528,split: high minus low by hand,interaction,sales per 100 parcels,
+2016,-0.0121329702641926,0.0215715710471448,split: high minus low by hand,interaction,sales per 100 parcels,
+2017,0,0,split: high minus low by hand,interaction,sales per 100 parcels,
+2018,-0.00433083566669366,0.0198889512533645,split: high minus low by hand,interaction,sales per 100 parcels,
+2019,-0.0189468564223522,0.0181110110485304,split: high minus low by hand,interaction,sales per 100 parcels,
+2020,-0.00959452223306886,0.0192765789545365,split: high minus low by hand,interaction,sales per 100 parcels,
+2021,-0.0201291586985618,0.0217455317039758,split: high minus low by hand,interaction,sales per 100 parcels,
+2022,-0.032320318885638,0.0293119378316609,split: high minus low by hand,interaction,sales per 100 parcels,
+2023,-0.0658996147415871,0.0351543694276125,split: high minus low by hand,interaction,sales per 100 parcels,
+2024,-0.0173609864033472,0.0372199066395444,split: high minus low by hand,interaction,sales per 100 parcels,
+2012,-0.0237221292950196,0.0325514069947788,split: high minus low by hand,interaction,state formula aid (C01),
+2013,-0.0184926113922003,0.0304315719588245,split: high minus low by hand,interaction,state formula aid (C01),
+2014,-0.0125251609408012,0.0307810449920701,split: high minus low by hand,interaction,state formula aid (C01),
+2015,-0.00575157507233472,0.0306121021398719,split: high minus low by hand,interaction,state formula aid (C01),
+2016,-0.0079597399446468,0.026077589590474,split: high minus low by hand,interaction,state formula aid (C01),
+2017,0,0,split: high minus low by hand,interaction,state formula aid (C01),
+2018,-0.00937849297642978,0.00651625506538692,split: high minus low by hand,interaction,state formula aid (C01),
+2019,-0.00381946464123031,0.0132613172904607,split: high minus low by hand,interaction,state formula aid (C01),
+2020,-0.000396708141169379,0.0152850545918665,split: high minus low by hand,interaction,state formula aid (C01),
+2021,-0.00685817200380891,0.016589357288035,split: high minus low by hand,interaction,state formula aid (C01),
+2022,-0.0153143183101877,0.0179369451585177,split: high minus low by hand,interaction,state formula aid (C01),
+2023,-0.0263894389711003,0.0231075605540581,split: high minus low by hand,interaction,state formula aid (C01),
+2012,0.000201336829608783,0.0189498784238929,split: high minus low by hand,interaction,total revenue,
+2013,-0.00227021465432921,0.0130521951429589,split: high minus low by hand,interaction,total revenue,
+2014,0.0116698111413554,0.011466708693342,split: high minus low by hand,interaction,total revenue,
+2015,0.0123050361839951,0.0106447739955079,split: high minus low by hand,interaction,total revenue,
+2016,-0.00354139536360726,0.00851724276529497,split: high minus low by hand,interaction,total revenue,
+2017,0,0,split: high minus low by hand,interaction,total revenue,
+2018,-0.0073678889466642,0.0089176807731905,split: high minus low by hand,interaction,total revenue,
+2019,-0.0293397673316501,0.0226468168896538,split: high minus low by hand,interaction,total revenue,
+2020,-0.00271189145788062,0.0246878939015699,split: high minus low by hand,interaction,total revenue,
+2021,-0.0121361494393807,0.0265646561528634,split: high minus low by hand,interaction,total revenue,
+2022,-0.0115487065372472,0.0259613390546528,split: high minus low by hand,interaction,total revenue,
+2023,-0.00714800646601594,0.0289406655340118,split: high minus low by hand,interaction,total revenue,
+2012,-0.0375014503835268,0.0425283328210184,split: high minus low by hand,main,capital outlay,
+2013,-0.0343945883445578,0.0409265380570055,split: high minus low by hand,main,capital outlay,
+2014,-0.0351958661308125,0.0399632062547101,split: high minus low by hand,main,capital outlay,
+2015,-0.0390381563925111,0.0365942681753021,split: high minus low by hand,main,capital outlay,
+2016,-0.0518455355773577,0.0304299388547863,split: high minus low by hand,main,capital outlay,
+2017,0,0,split: high minus low by hand,main,capital outlay,
+2018,-0.00026094046492859,0.0262402370559112,split: high minus low by hand,main,capital outlay,
+2019,-0.0141628472693112,0.0373738009363389,split: high minus low by hand,main,capital outlay,
+2020,-0.0180283519275828,0.040299442253787,split: high minus low by hand,main,capital outlay,
+2021,0.0130536417366048,0.0430943690442282,split: high minus low by hand,main,capital outlay,
+2022,0.0311266675176571,0.0417562439637808,split: high minus low by hand,main,capital outlay,
+2023,-0.0105727960110128,0.0395509882766252,split: high minus low by hand,main,capital outlay,
+2012,-0.00502926847661543,0.0167470180001688,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2013,-0.00253528707072735,0.0157182741401636,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2014,0.0133363768588871,0.0162447663851948,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2015,0.00640346428799109,0.0123868514720939,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2016,-0.00111669794433313,0.00896281413576151,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2017,0,0,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2018,-0.00667520407793038,0.00804963607547591,split: high minus low by hand,main,"district test scores (SEDA, SD)",
+2012,-0.0155438280470542,0.0180710175955757,split: high minus low by hand,main,effective tax rate,
+2013,0.00305306256128144,0.0146257515702011,split: high minus low by hand,main,effective tax rate,
+2014,-0.00108479930617436,0.012811579037015,split: high minus low by hand,main,effective tax rate,
+2015,-0.00995922169796414,0.0115186407565402,split: high minus low by hand,main,effective tax rate,
+2016,0.000682926650490307,0.0109077718946431,split: high minus low by hand,main,effective tax rate,
+2017,0,0,split: high minus low by hand,main,effective tax rate,
+2018,-0.00336227870322561,0.0102233873423037,split: high minus low by hand,main,effective tax rate,
+2019,-0.00782503169273312,0.0106893652873344,split: high minus low by hand,main,effective tax rate,
+2020,-0.00109616233575951,0.0118866857268981,split: high minus low by hand,main,effective tax rate,
+2021,0.0020944406548333,0.0129060710002043,split: high minus low by hand,main,effective tax rate,
+2022,0.000102464005286813,0.013007856497606,split: high minus low by hand,main,effective tax rate,
+2023,-0.0101083439970466,0.0135533432731847,split: high minus low by hand,main,effective tax rate,
+2024,-0.00267052486828013,0.0155710318877657,split: high minus low by hand,main,effective tax rate,
+2012,0.00570832697360858,0.0125656956242814,split: high minus low by hand,main,instruction,
+2013,0.000259333203904505,0.00857895080400173,split: high minus low by hand,main,instruction,
+2014,0.00108819704740687,0.00801834029450387,split: high minus low by hand,main,instruction,
+2015,0.00606069746926905,0.0062284110167312,split: high minus low by hand,main,instruction,
+2016,0.00146701183009938,0.00499926033409753,split: high minus low by hand,main,instruction,
+2017,0,0,split: high minus low by hand,main,instruction,
+2018,-0.00221782996088721,0.00594437200120091,split: high minus low by hand,main,instruction,
+2019,0.00494111962868229,0.00729378688808827,split: high minus low by hand,main,instruction,
+2020,0.00280639345031391,0.00889079537701475,split: high minus low by hand,main,instruction,
+2021,0.00149987940012896,0.00996963130720375,split: high minus low by hand,main,instruction,
+2022,0.00124883296638564,0.00983265821752004,split: high minus low by hand,main,instruction,
+2023,0.0160573324216902,0.0111467808177882,split: high minus low by hand,main,instruction,
+2012,0.00444784778635678,0.0178191826621534,split: high minus low by hand,main,log county school property tax (CoG),
+2013,-0.013557468404024,0.0164176549217611,split: high minus low by hand,main,log county school property tax (CoG),
+2014,-0.00233752003983316,0.0141037726372348,split: high minus low by hand,main,log county school property tax (CoG),
+2015,-0.0167726732054201,0.01596212443205,split: high minus low by hand,main,log county school property tax (CoG),
+2016,-0.0183121932422056,0.0153523100700932,split: high minus low by hand,main,log county school property tax (CoG),
+2017,0,0,split: high minus low by hand,main,log county school property tax (CoG),
+2018,-0.0269304084807017,0.0137843703120134,split: high minus low by hand,main,log county school property tax (CoG),
+2019,-0.0215757319416669,0.0144510982117991,split: high minus low by hand,main,log county school property tax (CoG),
+2020,-0.0175280993488744,0.0123062182874621,split: high minus low by hand,main,log county school property tax (CoG),
+2021,-0.0200138778648267,0.0165197237998996,split: high minus low by hand,main,log county school property tax (CoG),
+2022,0.0398846554483261,0.0353670654333484,split: high minus low by hand,main,log county school property tax (CoG),
+2012,0.00144803798817266,0.00412627574061047,split: high minus low by hand,main,log district enrolment,
+2013,0.00427243703025601,0.00276420888982566,split: high minus low by hand,main,log district enrolment,
+2014,0.00320911206580288,0.00245795136562244,split: high minus low by hand,main,log district enrolment,
+2015,0.00147913376316554,0.00164027253205912,split: high minus low by hand,main,log district enrolment,
+2016,0.00126719280627922,0.00127717845915315,split: high minus low by hand,main,log district enrolment,
+2017,0,0,split: high minus low by hand,main,log district enrolment,
+2018,-0.000250358679411911,0.00159249764790659,split: high minus low by hand,main,log district enrolment,
+2019,-0.00221667634441959,0.00237106809657741,split: high minus low by hand,main,log district enrolment,
+2020,-0.0035346860357963,0.00282282845670812,split: high minus low by hand,main,log district enrolment,
+2021,-0.00643690597607302,0.00328992985612583,split: high minus low by hand,main,log district enrolment,
+2022,-0.0063097267376222,0.00375116355014525,split: high minus low by hand,main,log district enrolment,
+2023,-0.00812119214898442,0.00414154417706792,split: high minus low by hand,main,log district enrolment,
+2012,0.00240065548184536,0.00875443677476411,split: high minus low by hand,main,log district property tax per pupil,
+2013,0.000164964203201752,0.00695494576685995,split: high minus low by hand,main,log district property tax per pupil,
+2014,0.00569395203831833,0.00639960085062395,split: high minus low by hand,main,log district property tax per pupil,
+2015,-0.00437381636375233,0.00565072001012458,split: high minus low by hand,main,log district property tax per pupil,
+2016,-0.000861783878109194,0.00393377454989148,split: high minus low by hand,main,log district property tax per pupil,
+2017,0,0,split: high minus low by hand,main,log district property tax per pupil,
+2018,-0.00200564089498322,0.00470430538356351,split: high minus low by hand,main,log district property tax per pupil,
+2019,-0.00317626310462705,0.00578488135299994,split: high minus low by hand,main,log district property tax per pupil,
+2020,-0.00808532426511777,0.00692080734304493,split: high minus low by hand,main,log district property tax per pupil,
+2021,-0.0128562286690613,0.00776058865664067,split: high minus low by hand,main,log district property tax per pupil,
+2022,-0.002533793011038,0.0107062485066039,split: high minus low by hand,main,log district property tax per pupil,
+2023,-0.00555429111628375,0.00883507909062229,split: high minus low by hand,main,log district property tax per pupil,
+2012,0.00820071829578264,0.0123120028388795,split: high minus low by hand,main,log district spending per pupil,
+2013,0.00220118611239497,0.00862622365098061,split: high minus low by hand,main,log district spending per pupil,
+2014,0.00116945667579589,0.00757826090844195,split: high minus low by hand,main,log district spending per pupil,
+2015,0.00392032977740002,0.00618736287487195,split: high minus low by hand,main,log district spending per pupil,
+2016,-0.000403086178899455,0.00526141493632073,split: high minus low by hand,main,log district spending per pupil,
+2017,0,0,split: high minus low by hand,main,log district spending per pupil,
+2018,-0.0044503149824792,0.00670920257987501,split: high minus low by hand,main,log district spending per pupil,
+2019,0.00231947852718602,0.00776945191538152,split: high minus low by hand,main,log district spending per pupil,
+2020,0.00203632899490845,0.00882241951939963,split: high minus low by hand,main,log district spending per pupil,
+2021,0.00550901467447316,0.00982236726172543,split: high minus low by hand,main,log district spending per pupil,
+2022,0.00358119383114757,0.00978513692432894,split: high minus low by hand,main,log district spending per pupil,
+2023,0.0167595242942602,0.0108734604745827,split: high minus low by hand,main,log district spending per pupil,
+2013,0.00330657512105492,0.0039290150055113,split: high minus low by hand,main,log median home value (ACS),
+2014,0.00137914898153762,0.00347372271435121,split: high minus low by hand,main,log median home value (ACS),
+2015,0.00327017079200145,0.00249607825429723,split: high minus low by hand,main,log median home value (ACS),
+2016,0.00231802940585425,0.00177640489873296,split: high minus low by hand,main,log median home value (ACS),
+2017,0,0,split: high minus low by hand,main,log median home value (ACS),
+2018,-0.00167347818725033,0.00190335402173218,split: high minus low by hand,main,log median home value (ACS),
+2019,-0.00563677460457105,0.00268539250339762,split: high minus low by hand,main,log median home value (ACS),
+2020,-0.00540228099518818,0.00397375565483845,split: high minus low by hand,main,log median home value (ACS),
+2021,-0.00657397743110507,0.0045669292053097,split: high minus low by hand,main,log median home value (ACS),
+2022,-0.00885700356989931,0.00512369976624236,split: high minus low by hand,main,log median home value (ACS),
+2023,-0.00899799134206486,0.0057340410608993,split: high minus low by hand,main,log median home value (ACS),
+2012,0.00869097773012538,0.0106694319747912,split: high minus low by hand,main,log median sale price,
+2013,0.00505952991613793,0.00925173353025559,split: high minus low by hand,main,log median sale price,
+2014,0.00280218757435794,0.00957871373778638,split: high minus low by hand,main,log median sale price,
+2015,-0.000691214895069371,0.00766578067572914,split: high minus low by hand,main,log median sale price,
+2016,0.00827955010895053,0.00775456590268756,split: high minus low by hand,main,log median sale price,
+2017,0,0,split: high minus low by hand,main,log median sale price,
+2018,0.00719018112627363,0.00727218825997548,split: high minus low by hand,main,log median sale price,
+2019,0.0035782221714255,0.00743161447466653,split: high minus low by hand,main,log median sale price,
+2020,0.00127192114631809,0.00735848039905288,split: high minus low by hand,main,log median sale price,
+2021,0.00501069092138209,0.00819026309078502,split: high minus low by hand,main,log median sale price,
+2022,0.00803408940630334,0.00881711523724736,split: high minus low by hand,main,log median sale price,
+2023,0.00470200945280843,0.00884470125912409,split: high minus low by hand,main,log median sale price,
+2024,0.000716565954752899,0.0104645295453056,split: high minus low by hand,main,log median sale price,
+2013,0.00237959138562139,0.00408362889227606,split: high minus low by hand,main,log population (ACS),
+2014,0.00372557695161909,0.0033765324201348,split: high minus low by hand,main,log population (ACS),
+2015,0.00205502081808923,0.00270829816847945,split: high minus low by hand,main,log population (ACS),
+2016,0.00114661973585703,0.00173923550952136,split: high minus low by hand,main,log population (ACS),
+2017,0,0,split: high minus low by hand,main,log population (ACS),
+2018,2.13665979075539e-05,0.00150246077606495,split: high minus low by hand,main,log population (ACS),
+2019,-0.00096092898296569,0.00220065125672479,split: high minus low by hand,main,log population (ACS),
+2020,-0.00699644238204347,0.0047809179370597,split: high minus low by hand,main,log population (ACS),
+2021,-0.0133669381919784,0.00537610965675037,split: high minus low by hand,main,log population (ACS),
+2022,-0.0164500354948132,0.00593696563706952,split: high minus low by hand,main,log population (ACS),
+2023,-0.0164091772469025,0.00630353180853915,split: high minus low by hand,main,log population (ACS),
+2012,-0.00238944077738323,0.00988568031520127,split: high minus low by hand,main,log tax bill per parcel,
+2013,0.005655607377189,0.0071789594002679,split: high minus low by hand,main,log tax bill per parcel,
+2014,0.000732718063301934,0.00449260265975269,split: high minus low by hand,main,log tax bill per parcel,
+2015,-0.000414589658013034,0.00451520283617186,split: high minus low by hand,main,log tax bill per parcel,
+2016,0.00149166173666235,0.00331086158063098,split: high minus low by hand,main,log tax bill per parcel,
+2017,0,0,split: high minus low by hand,main,log tax bill per parcel,
+2018,-0.00306469772484792,0.00371431620265062,split: high minus low by hand,main,log tax bill per parcel,
+2019,-0.00219672451086411,0.00516755978574997,split: high minus low by hand,main,log tax bill per parcel,
+2020,-0.00163069070785119,0.00424096723927333,split: high minus low by hand,main,log tax bill per parcel,
+2021,0.00100889691752707,0.00472566877575156,split: high minus low by hand,main,log tax bill per parcel,
+2022,0.00123549017461341,0.00502369088028143,split: high minus low by hand,main,log tax bill per parcel,
+2023,2.05850993139278e-06,0.00608383048977502,split: high minus low by hand,main,log tax bill per parcel,
+2024,0.000645604109343736,0.00658840235795295,split: high minus low by hand,main,log tax bill per parcel,
+2013,0.00789828570691372,0.0137041711317734,split: high minus low by hand,main,move-out rate (Data Axle),
+2014,0.0244893050636747,0.0130187508744238,split: high minus low by hand,main,move-out rate (Data Axle),
+2015,0.0304963616497772,0.0126389873775184,split: high minus low by hand,main,move-out rate (Data Axle),
+2016,0.0061541879550035,0.0108325587458146,split: high minus low by hand,main,move-out rate (Data Axle),
+2017,0,0,split: high minus low by hand,main,move-out rate (Data Axle),
+2018,0.00667709753276046,0.010746203834795,split: high minus low by hand,main,move-out rate (Data Axle),
+2019,0.0137293083560404,0.012975577207854,split: high minus low by hand,main,move-out rate (Data Axle),
+2020,0.0201518426068026,0.0123733763877753,split: high minus low by hand,main,move-out rate (Data Axle),
+2021,0.0150393463291324,0.0152181089634677,split: high minus low by hand,main,move-out rate (Data Axle),
+2012,0.0449013208809174,0.0193922648180869,split: high minus low by hand,main,sales per 100 parcels,
+2013,0.0271365531107315,0.0182916126740018,split: high minus low by hand,main,sales per 100 parcels,
+2014,0.0231244060269179,0.0154368326379544,split: high minus low by hand,main,sales per 100 parcels,
+2015,0.00589432466473027,0.0145105222677357,split: high minus low by hand,main,sales per 100 parcels,
+2016,0.0199828006152984,0.0279848601969529,split: high minus low by hand,main,sales per 100 parcels,
+2017,0,0,split: high minus low by hand,main,sales per 100 parcels,
+2018,0.0339200833595801,0.016631971873403,split: high minus low by hand,main,sales per 100 parcels,
+2019,0.0290789030149298,0.0191971399150079,split: high minus low by hand,main,sales per 100 parcels,
+2020,0.018212975628243,0.0172737426566543,split: high minus low by hand,main,sales per 100 parcels,
+2021,0.0151358069708432,0.0201292489252329,split: high minus low by hand,main,sales per 100 parcels,
+2022,0.059186477282241,0.0217750978786777,split: high minus low by hand,main,sales per 100 parcels,
+2023,0.0384657953528982,0.0231040207900334,split: high minus low by hand,main,sales per 100 parcels,
+2024,0.0374994894491955,0.0268126603665136,split: high minus low by hand,main,sales per 100 parcels,
+2012,-0.000351941448423378,0.0157926853529467,split: high minus low by hand,main,state formula aid (C01),
+2013,-0.0025961052792043,0.0143642174134522,split: high minus low by hand,main,state formula aid (C01),
+2014,-0.0121133988348981,0.0137946052081796,split: high minus low by hand,main,state formula aid (C01),
+2015,-0.00733206977148647,0.0133817789985916,split: high minus low by hand,main,state formula aid (C01),
+2016,-0.0187840595825403,0.0115542912506311,split: high minus low by hand,main,state formula aid (C01),
+2017,0,0,split: high minus low by hand,main,state formula aid (C01),
+2018,0.00332444244472091,0.00529484562047602,split: high minus low by hand,main,state formula aid (C01),
+2019,0.00772589218486661,0.00744939272140458,split: high minus low by hand,main,state formula aid (C01),
+2020,0.000675801852464977,0.00911218535995188,split: high minus low by hand,main,state formula aid (C01),
+2021,0.0012136740516278,0.00983946116819546,split: high minus low by hand,main,state formula aid (C01),
+2022,0.00363351617521909,0.0106736988123024,split: high minus low by hand,main,state formula aid (C01),
+2023,0.00434333113637183,0.0131821263291209,split: high minus low by hand,main,state formula aid (C01),
+2012,0.00190512944784059,0.0154489648892591,split: high minus low by hand,main,total revenue,
+2013,-0.0110253758836234,0.010460638633091,split: high minus low by hand,main,total revenue,
+2014,-0.00728279705584246,0.00927609467258063,split: high minus low by hand,main,total revenue,
+2015,-0.00539032623143363,0.00817363291023002,split: high minus low by hand,main,total revenue,
+2016,-0.00627783413031674,0.0075279904624548,split: high minus low by hand,main,total revenue,
+2017,0,0,split: high minus low by hand,main,total revenue,
+2018,-0.0025333782113045,0.00711019973494194,split: high minus low by hand,main,total revenue,
+2019,-0.00816758257432002,0.0186326412270577,split: high minus low by hand,main,total revenue,
+2020,9.63697354657775e-05,0.0142334705748146,split: high minus low by hand,main,total revenue,
+2021,-0.000335749021491846,0.0143360868515022,split: high minus low by hand,main,total revenue,
+2022,-0.0049307015462951,0.0142809737156401,split: high minus low by hand,main,total revenue,
+2023,-0.00719142813753916,0.0158178276147451,split: high minus low by hand,main,total revenue,

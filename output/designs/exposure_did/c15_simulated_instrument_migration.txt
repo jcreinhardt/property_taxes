@@ -1,0 +1,535 @@
+Migration counts and net migration on the simulated instrument. Per $100/yr cap burden per owner household; weighted by 2016 returns; ref 2017.
+County: | county + state x year, SE by county. State: | state + year, SE by state (51 states). Logs in %, rates in pp.
+Counties balanced 2012-22 with positive in- and out-flows: 3034 | mean out rate (returns) 6.77 % | people 6.09 % | mean net rate 0.12 pp
+
+== log out-migrant returns | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -1.346 (0.267) -1.042 (0.216)
+2: Z2 (national sample at county rate)  1.364 (0.571)  0.954 (0.415)
+3:                  SOI observed (OLS) -1.646 (0.279) -1.273 (0.222)
+4:              SOI instrumented by Z1 -1.733 (0.331) -1.341 (0.270)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -0.829 (0.179) -0.695 (0.308) -0.291 (0.148) 0.000 (0.000) -0.305 (0.096)
+2:  0.591 (0.309) -0.689 (0.545) -0.078 (0.221) 0.000 (0.000) -0.653 (0.294)
+3: -0.987 (0.189) -0.999 (0.354) -0.390 (0.180) 0.000 (0.000) -0.333 (0.090)
+4: -1.067 (0.227) -0.895 (0.394) -0.374 (0.191) 0.000 (0.000) -0.392 (0.122)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.387 (0.130)  0.247 (0.214)  0.142 (0.196) -0.419 (0.227)
+2: -0.685 (0.295) -2.416 (0.427) -2.652 (0.395) -0.903 (0.676)
+3: -0.328 (0.123)  0.091 (0.214) -0.051 (0.200) -0.283 (0.221)
+4: -0.498 (0.165)  0.318 (0.278)  0.183 (0.253) -0.539 (0.290)
+
+== log out-migrant returns | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -1.671 (0.214) -1.266 (0.168)
+2: Z2 (national sample at county rate) -0.387 (0.584) -0.403 (0.421)
+3:                  SOI observed (OLS) -2.285 (0.171) -1.761 (0.136)
+4:              SOI instrumented by Z1 -1.916 (0.234) -1.452 (0.187)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -1.005 (0.140) -1.019 (0.224) -0.425 (0.108) 0.000 (0.000) -0.317 (0.070)
+2: -0.379 (0.297) -1.757 (0.404) -0.468 (0.167) 0.000 (0.000) -1.016 (0.224)
+3: -1.366 (0.116) -1.574 (0.208) -0.636 (0.105) 0.000 (0.000) -0.373 (0.052)
+4: -1.153 (0.157) -1.168 (0.256) -0.487 (0.124) 0.000 (0.000) -0.364 (0.079)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.399 (0.095)  0.224 (0.160)  0.269 (0.148) -0.216 (0.165)
+2: -1.168 (0.245) -2.471 (0.362) -2.540 (0.347) -1.210 (0.537)
+3: -0.412 (0.072)  0.059 (0.118)  0.141 (0.112) -0.042 (0.124)
+4: -0.457 (0.108)  0.257 (0.184)  0.309 (0.171) -0.247 (0.190)
+
+== log out-migrant people (exemptions) | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -1.534 (0.290) -1.107 (0.257)
+2: Z2 (national sample at county rate)  1.230 (0.575)  0.756 (0.486)
+3:                  SOI observed (OLS) -1.751 (0.298) -1.319 (0.256)
+4:              SOI instrumented by Z1 -1.975 (0.363) -1.425 (0.324)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -0.842 (0.211) -0.542 (0.356) -0.186 (0.164) 0.000 (0.000) -0.248 (0.109)
+2:  0.426 (0.364) -1.436 (0.613) -0.290 (0.251) 0.000 (0.000) -0.792 (0.317)
+3: -1.019 (0.214) -0.982 (0.400) -0.354 (0.196) 0.000 (0.000) -0.329 (0.098)
+4: -1.083 (0.267) -0.698 (0.456) -0.240 (0.211) 0.000 (0.000) -0.319 (0.138)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.367 (0.146)  0.221 (0.217)  0.449 (0.187) -0.141 (0.219)
+2: -0.851 (0.320) -2.284 (0.438) -2.546 (0.386) -1.234 (0.679)
+3: -0.377 (0.138)  0.034 (0.216)  0.279 (0.199) -0.024 (0.217)
+4: -0.472 (0.186)  0.284 (0.280)  0.578 (0.245) -0.182 (0.281)
+
+== log out-migrant people (exemptions) | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -1.960 (0.224) -1.375 (0.192)
+2: Z2 (national sample at county rate) -0.524 (0.583) -0.591 (0.462)
+3:                  SOI observed (OLS) -2.508 (0.176) -1.865 (0.151)
+4:              SOI instrumented by Z1 -2.248 (0.244) -1.576 (0.213)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -1.051 (0.158) -0.888 (0.253) -0.333 (0.117) 0.000 (0.000) -0.310 (0.080)
+2: -0.539 (0.329) -2.452 (0.415) -0.640 (0.177) 0.000 (0.000) -1.207 (0.238)
+3: -1.439 (0.128) -1.603 (0.231) -0.612 (0.114) 0.000 (0.000) -0.429 (0.058)
+4: -1.205 (0.177) -1.018 (0.288) -0.382 (0.135) 0.000 (0.000) -0.355 (0.090)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.441 (0.109)  0.159 (0.163)  0.524 (0.144) -0.006 (0.162)
+2: -1.389 (0.259) -2.413 (0.358) -2.413 (0.324) -1.495 (0.526)
+3: -0.532 (0.081) -0.048 (0.120)  0.397 (0.111)  0.142 (0.122)
+4: -0.506 (0.123)  0.182 (0.187)  0.601 (0.168) -0.007 (0.186)
+
+== log in-migrant returns | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.356 (0.354)  0.462 (0.277)
+2: Z2 (national sample at county rate) -0.928 (0.789) -0.969 (0.576)
+3:                  SOI observed (OLS) -0.584 (0.360) -0.166 (0.299)
+4:              SOI instrumented by Z1  0.458 (0.461)  0.595 (0.363)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1:  0.573 (0.325)  0.695 (0.402)  0.380 (0.199) 0.000 (0.000)  0.137 (0.110)
+2: -1.430 (0.555) -2.517 (0.804) -1.414 (0.400) 0.000 (0.000) -0.777 (0.301)
+3:  0.037 (0.376) -0.252 (0.431) -0.093 (0.202) 0.000 (0.000) -0.155 (0.113)
+4:  0.738 (0.423)  0.894 (0.525)  0.489 (0.262) 0.000 (0.000)  0.176 (0.143)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1:  0.190 (0.134) -0.281 (0.175) -0.494 (0.259)  0.074 (0.227)
+2: -1.409 (0.333)  0.430 (0.463)  1.169 (0.548) -0.290 (0.575)
+3: -0.092 (0.150) -0.362 (0.168) -0.444 (0.243) -0.191 (0.233)
+4:  0.245 (0.174) -0.362 (0.224) -0.636 (0.334)  0.096 (0.292)
+
+== log in-migrant returns | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.154 (0.258)  0.297 (0.197)
+2: Z2 (national sample at county rate) -1.574 (0.727) -1.363 (0.519)
+3:                  SOI observed (OLS) -1.008 (0.203) -0.529 (0.164)
+4:              SOI instrumented by Z1  0.176 (0.297)  0.341 (0.228)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1:  0.475 (0.229)  0.711 (0.283)  0.458 (0.138) 0.000 (0.000)  0.193 (0.083)
+2: -1.489 (0.459) -2.351 (0.706) -1.127 (0.364) 0.000 (0.000) -0.747 (0.250)
+3: -0.150 (0.208) -0.157 (0.234)  0.101 (0.106) 0.000 (0.000) -0.008 (0.063)
+4:  0.545 (0.265)  0.815 (0.329)  0.525 (0.162) 0.000 (0.000)  0.222 (0.097)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1:  0.339 (0.105) -0.336 (0.127) -0.676 (0.185) -0.098 (0.172)
+2: -1.184 (0.315) -0.184 (0.322)  0.152 (0.407) -0.709 (0.457)
+3:  0.183 (0.082) -0.438 (0.093) -0.798 (0.133) -0.398 (0.130)
+4:  0.389 (0.122) -0.386 (0.145) -0.776 (0.212) -0.112 (0.196)
+
+== out-migration rate, people (%) | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -0.088 (0.022) -0.064 (0.019)
+2: Z2 (national sample at county rate)  0.097 (0.040)  0.071 (0.033)
+3:                  SOI observed (OLS) -0.091 (0.023) -0.070 (0.019)
+4:              SOI instrumented by Z1 -0.114 (0.028) -0.083 (0.024)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -0.051 (0.020) -0.037 (0.036) -0.015 (0.020) 0.000 (0.000) -0.027 (0.018)
+2:  0.078 (0.035)  0.070 (0.069)  0.048 (0.037) 0.000 (0.000)  0.044 (0.039)
+3: -0.056 (0.019) -0.048 (0.038) -0.019 (0.021) 0.000 (0.000) -0.037 (0.017)
+4: -0.066 (0.025) -0.048 (0.047) -0.019 (0.025) 0.000 (0.000) -0.034 (0.023)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.036 (0.022)  0.026 (0.018)  0.050 (0.016)  0.006 (0.019)
+2:  0.058 (0.044) -0.089 (0.037) -0.148 (0.034) -0.045 (0.047)
+3: -0.045 (0.020)  0.001 (0.018)  0.020 (0.017) -0.008 (0.018)
+4: -0.046 (0.028)  0.034 (0.023)  0.065 (0.021)  0.008 (0.025)
+
+== out-migration rate, people (%) | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -0.114 (0.017) -0.079 (0.015)
+2: Z2 (national sample at county rate) -0.012 (0.039) -0.019 (0.032)
+3:                  SOI observed (OLS) -0.138 (0.013) -0.103 (0.012)
+4:              SOI instrumented by Z1 -0.131 (0.018) -0.090 (0.017)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -0.065 (0.015) -0.067 (0.027) -0.032 (0.015) 0.000 (0.000) -0.041 (0.014)
+2:  0.003 (0.031) -0.020 (0.056)  0.003 (0.030) 0.000 (0.000) -0.012 (0.033)
+3: -0.085 (0.011) -0.101 (0.022) -0.049 (0.012) 0.000 (0.000) -0.057 (0.010)
+4: -0.075 (0.017) -0.077 (0.031) -0.036 (0.017) 0.000 (0.000) -0.047 (0.015)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1: -0.052 (0.016)  0.006 (0.014)  0.041 (0.013) -0.001 (0.014)
+2: -0.007 (0.037) -0.119 (0.030) -0.154 (0.030) -0.076 (0.038)
+3: -0.070 (0.011) -0.026 (0.011)  0.007 (0.010) -0.020 (0.010)
+4: -0.060 (0.018)  0.007 (0.016)  0.047 (0.015) -0.001 (0.016)
+
+== net migration rate, returns (pp) | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.139 (0.025)  0.127 (0.026)
+2: Z2 (national sample at county rate) -0.140 (0.050) -0.123 (0.045)
+3:                  SOI observed (OLS)  0.083 (0.029)  0.090 (0.030)
+4:              SOI instrumented by Z1  0.179 (0.034)  0.163 (0.034)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1:  0.135 (0.041)  0.114 (0.026)  0.063 (0.020) 0.000 (0.000)  0.053 (0.014)
+2: -0.135 (0.056) -0.085 (0.062) -0.054 (0.041) 0.000 (0.000) -0.019 (0.039)
+3:  0.098 (0.051)  0.042 (0.029)  0.017 (0.023) 0.000 (0.000)  0.017 (0.015)
+4:  0.174 (0.053)  0.147 (0.035)  0.081 (0.027) 0.000 (0.000)  0.069 (0.018)
+             2019           2020           2021          2022
+           <char>         <char>         <char>        <char>
+1:  0.068 (0.018) -0.030 (0.028) -0.037 (0.023) 0.056 (0.027)
+2: -0.057 (0.042)  0.206 (0.063)  0.262 (0.040) 0.017 (0.081)
+3:  0.026 (0.019) -0.034 (0.027) -0.029 (0.023) 0.013 (0.027)
+4:  0.087 (0.024) -0.038 (0.036) -0.047 (0.030) 0.072 (0.035)
+
+== net migration rate, returns (pp) | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.146 (0.019)  0.132 (0.019)
+2: Z2 (national sample at county rate) -0.040 (0.053) -0.039 (0.043)
+3:                  SOI observed (OLS)  0.090 (0.019)  0.099 (0.017)
+4:              SOI instrumented by Z1  0.167 (0.023)  0.151 (0.022)
+             2014           2015           2016          2017          2018
+           <char>         <char>         <char>        <char>        <char>
+1:  0.136 (0.030)  0.134 (0.020)  0.081 (0.015) 0.000 (0.000) 0.060 (0.010)
+2: -0.050 (0.045) -0.007 (0.062) -0.008 (0.039) 0.000 (0.000) 0.019 (0.036)
+3:  0.102 (0.030)  0.082 (0.017)  0.051 (0.013) 0.000 (0.000) 0.031 (0.008)
+4:  0.156 (0.035)  0.154 (0.024)  0.092 (0.018) 0.000 (0.000) 0.069 (0.012)
+            2019           2020           2021           2022
+          <char>         <char>         <char>         <char>
+1: 0.078 (0.013) -0.028 (0.020) -0.055 (0.017)  0.031 (0.020)
+2: 0.001 (0.041)  0.176 (0.053)  0.197 (0.037)  0.021 (0.069)
+3: 0.047 (0.011) -0.032 (0.015) -0.062 (0.013) -0.017 (0.015)
+4: 0.090 (0.015) -0.032 (0.023) -0.063 (0.020)  0.036 (0.023)
+
+== net migration rate, people (pp) | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.139 (0.027)  0.123 (0.026)
+2: Z2 (national sample at county rate) -0.172 (0.058) -0.146 (0.052)
+3:                  SOI observed (OLS)  0.069 (0.031)  0.073 (0.031)
+4:              SOI instrumented by Z1  0.178 (0.036)  0.158 (0.035)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1:  0.133 (0.042)  0.109 (0.028)  0.057 (0.020) 0.000 (0.000)  0.052 (0.015)
+2: -0.162 (0.062) -0.113 (0.067) -0.068 (0.043) 0.000 (0.000) -0.033 (0.042)
+3:  0.087 (0.053)  0.026 (0.032)  0.008 (0.023) 0.000 (0.000)  0.008 (0.016)
+4:  0.172 (0.054)  0.140 (0.038)  0.073 (0.027) 0.000 (0.000)  0.066 (0.020)
+             2019           2020           2021          2022
+           <char>         <char>         <char>        <char>
+1:  0.066 (0.019) -0.021 (0.024) -0.033 (0.020) 0.048 (0.024)
+2: -0.063 (0.046)  0.163 (0.058)  0.220 (0.036) 0.050 (0.071)
+3:  0.018 (0.021) -0.036 (0.022) -0.036 (0.020) 0.002 (0.024)
+4:  0.085 (0.025) -0.027 (0.031) -0.042 (0.026) 0.062 (0.030)
+
+== net migration rate, people (pp) | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.152 (0.021)  0.136 (0.019)
+2: Z2 (national sample at county rate) -0.057 (0.061) -0.053 (0.051)
+3:                  SOI observed (OLS)  0.088 (0.020)  0.095 (0.017)
+4:              SOI instrumented by Z1  0.175 (0.024)  0.156 (0.022)
+             2014           2015           2016          2017          2018
+           <char>         <char>         <char>        <char>        <char>
+1:  0.141 (0.031)  0.135 (0.021)  0.078 (0.015) 0.000 (0.000) 0.063 (0.011)
+2: -0.062 (0.052) -0.019 (0.068) -0.014 (0.042) 0.000 (0.000) 0.013 (0.040)
+3:  0.101 (0.030)  0.076 (0.018)  0.047 (0.013) 0.000 (0.000) 0.030 (0.009)
+4:  0.162 (0.035)  0.155 (0.025)  0.089 (0.017) 0.000 (0.000) 0.072 (0.013)
+            2019           2020           2021           2022
+          <char>         <char>         <char>         <char>
+1: 0.081 (0.014) -0.019 (0.017) -0.047 (0.015)  0.027 (0.017)
+2: 0.002 (0.046)  0.139 (0.047)  0.164 (0.030)  0.046 (0.059)
+3: 0.046 (0.011) -0.032 (0.012) -0.060 (0.011) -0.024 (0.014)
+4: 0.092 (0.016) -0.022 (0.020) -0.054 (0.017)  0.030 (0.020)
+
+== net interstate migration rate, returns (pp) | A: ACS-identified counties | units 417 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.029 (0.012)  0.030 (0.016)
+2: Z2 (national sample at county rate) -0.026 (0.028) -0.034 (0.028)
+3:                  SOI observed (OLS)  0.016 (0.014)  0.026 (0.019)
+4:              SOI instrumented by Z1  0.038 (0.015)  0.039 (0.020)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1:  0.042 (0.033)  0.009 (0.012)  0.001 (0.014) 0.000 (0.000)  0.009 (0.006)
+2: -0.054 (0.043) -0.007 (0.032)  0.003 (0.026) 0.000 (0.000)  0.004 (0.017)
+3:  0.044 (0.042) -0.008 (0.014) -0.014 (0.017) 0.000 (0.000) -0.001 (0.006)
+4:  0.055 (0.043)  0.011 (0.016)  0.001 (0.018) 0.000 (0.000)  0.011 (0.007)
+             2019           2020           2021           2022
+           <char>         <char>         <char>         <char>
+1:  0.015 (0.008) -0.031 (0.021) -0.036 (0.017)  0.019 (0.018)
+2: -0.016 (0.019)  0.152 (0.054)  0.151 (0.041) -0.016 (0.053)
+3:  0.004 (0.008) -0.024 (0.019) -0.023 (0.016)  0.005 (0.017)
+4:  0.020 (0.010) -0.040 (0.027) -0.046 (0.022)  0.024 (0.024)
+
+== net interstate migration rate, returns (pp) | B: all counties (PUMA fill-in) | units 2964 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location)  0.032 (0.009)  0.029 (0.012)
+2: Z2 (national sample at county rate) -0.010 (0.023) -0.018 (0.021)
+3:                  SOI observed (OLS)  0.019 (0.008)  0.023 (0.011)
+4:              SOI instrumented by Z1  0.037 (0.010)  0.034 (0.013)
+             2014          2015          2016          2017          2018
+           <char>        <char>        <char>        <char>        <char>
+1:  0.038 (0.024) 0.021 (0.010) 0.012 (0.011) 0.000 (0.000) 0.012 (0.004)
+2: -0.031 (0.024) 0.004 (0.028) 0.003 (0.020) 0.000 (0.000) 0.009 (0.015)
+3:  0.035 (0.024) 0.011 (0.008) 0.005 (0.010) 0.000 (0.000) 0.005 (0.004)
+4:  0.044 (0.028) 0.024 (0.011) 0.014 (0.012) 0.000 (0.000) 0.013 (0.005)
+            2019           2020           2021           2022
+          <char>         <char>         <char>         <char>
+1: 0.019 (0.006) -0.028 (0.015) -0.040 (0.012)  0.003 (0.013)
+2: 0.000 (0.018)  0.128 (0.046)  0.123 (0.036) -0.013 (0.044)
+3: 0.012 (0.005) -0.019 (0.010) -0.029 (0.009) -0.013 (0.009)
+4: 0.022 (0.007) -0.032 (0.017) -0.045 (0.014)  0.003 (0.015)
+
+== state: out-of-state rate (% of returns) | S: states, state + year FE | units 50 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -0.036 (0.019) -0.031 (0.016)
+2: Z2 (national sample at county rate) -0.068 (0.038) -0.058 (0.025)
+3:                  SOI observed (OLS) -0.048 (0.020) -0.041 (0.014)
+4:              SOI instrumented by Z1 -0.044 (0.020) -0.037 (0.016)
+             2014           2015          2016          2017          2018
+           <char>         <char>        <char>        <char>        <char>
+1: -0.015 (0.014)  0.002 (0.027) 0.003 (0.015) 0.000 (0.000) 0.013 (0.015)
+2: -0.013 (0.016)  0.021 (0.032) 0.023 (0.020) 0.000 (0.000) 0.021 (0.017)
+3: -0.019 (0.010) -0.004 (0.025) 0.003 (0.014) 0.000 (0.000) 0.011 (0.013)
+4: -0.018 (0.016)  0.001 (0.032) 0.003 (0.017) 0.000 (0.000) 0.015 (0.019)
+            2019          2020          2021          2022
+          <char>        <char>        <char>        <char>
+1: 0.025 (0.017) 0.054 (0.013) 0.064 (0.013) 0.052 (0.014)
+2: 0.040 (0.019) 0.071 (0.025) 0.083 (0.028) 0.069 (0.025)
+3: 0.026 (0.015) 0.056 (0.015) 0.068 (0.016) 0.058 (0.014)
+4: 0.029 (0.023) 0.064 (0.019) 0.076 (0.020) 0.061 (0.020)
+
+== state: in-from-other-state rate (%) | S: states, state + year FE | units 50 
+Key: <spec>
+                                  spec          2012          2013
+                                <fctr>        <char>        <char>
+1:              Z1 (ACS, own location) 0.056 (0.017) 0.046 (0.017)
+2: Z2 (national sample at county rate) 0.095 (0.040) 0.081 (0.036)
+3:                  SOI observed (OLS) 0.050 (0.025) 0.039 (0.024)
+4:              SOI instrumented by Z1 0.068 (0.023) 0.056 (0.022)
+            2014          2015          2016          2017          2018
+          <char>        <char>        <char>        <char>        <char>
+1: 0.048 (0.021) 0.086 (0.025) 0.050 (0.013) 0.000 (0.000) 0.045 (0.011)
+2: 0.084 (0.042) 0.160 (0.047) 0.089 (0.025) 0.000 (0.000) 0.094 (0.020)
+3: 0.040 (0.032) 0.084 (0.034) 0.048 (0.018) 0.000 (0.000) 0.051 (0.013)
+4: 0.058 (0.029) 0.103 (0.035) 0.060 (0.020) 0.000 (0.000) 0.054 (0.014)
+            2019          2020          2021          2022
+          <char>        <char>        <char>        <char>
+1: 0.055 (0.013) 0.027 (0.012) 0.007 (0.014) 0.025 (0.017)
+2: 0.106 (0.024) 0.071 (0.021) 0.035 (0.031) 0.061 (0.036)
+3: 0.061 (0.015) 0.032 (0.012) 0.007 (0.016) 0.023 (0.020)
+4: 0.066 (0.016) 0.032 (0.014) 0.008 (0.017) 0.030 (0.019)
+
+== state: net interstate rate (pp) | S: states, state + year FE | units 50 
+Key: <spec>
+                                  spec          2012          2013
+                                <fctr>        <char>        <char>
+1:              Z1 (ACS, own location) 0.093 (0.022) 0.077 (0.019)
+2: Z2 (national sample at county rate) 0.163 (0.045) 0.140 (0.038)
+3:                  SOI observed (OLS) 0.098 (0.028) 0.080 (0.025)
+4:              SOI instrumented by Z1 0.113 (0.024) 0.094 (0.021)
+            2014          2015          2016          2017          2018
+          <char>        <char>        <char>        <char>        <char>
+1: 0.063 (0.019) 0.084 (0.018) 0.047 (0.009) 0.000 (0.000) 0.032 (0.014)
+2: 0.097 (0.039) 0.138 (0.033) 0.066 (0.023) 0.000 (0.000) 0.073 (0.020)
+3: 0.058 (0.028) 0.088 (0.019) 0.045 (0.012) 0.000 (0.000) 0.039 (0.013)
+4: 0.076 (0.024) 0.102 (0.018) 0.057 (0.012) 0.000 (0.000) 0.040 (0.014)
+            2019           2020           2021           2022
+          <char>         <char>         <char>         <char>
+1: 0.030 (0.017) -0.027 (0.015) -0.057 (0.019) -0.027 (0.022)
+2: 0.067 (0.024) -0.001 (0.031) -0.048 (0.045) -0.008 (0.042)
+3: 0.035 (0.016) -0.023 (0.017) -0.061 (0.023) -0.035 (0.023)
+4: 0.037 (0.017) -0.032 (0.020) -0.068 (0.028) -0.031 (0.028)
+
+== state: log out-of-state returns | S: states, state + year FE | units 50 
+Key: <spec>
+                                  spec           2012           2013
+                                <fctr>         <char>         <char>
+1:              Z1 (ACS, own location) -1.804 (0.528) -1.508 (0.323)
+2: Z2 (national sample at county rate) -2.785 (1.254) -2.350 (0.771)
+3:                  SOI observed (OLS) -2.056 (0.765) -1.738 (0.476)
+4:              SOI instrumented by Z1 -2.165 (0.760) -1.807 (0.489)
+             2014           2015           2016          2017           2018
+           <char>         <char>         <char>        <char>         <char>
+1: -1.070 (0.265) -0.821 (0.397) -0.357 (0.255) 0.000 (0.000)  0.223 (0.157)
+2: -1.180 (0.495) -1.111 (0.800) -0.128 (0.499) 0.000 (0.000) -0.193 (0.344)
+3: -1.119 (0.370) -1.110 (0.562) -0.364 (0.338) 0.000 (0.000)  0.116 (0.200)
+4: -1.282 (0.433) -0.989 (0.524) -0.433 (0.339) 0.000 (0.000)  0.265 (0.210)
+            2019          2020          2021          2022
+          <char>        <char>        <char>        <char>
+1: 0.634 (0.238) 1.548 (0.301) 1.851 (0.418) 1.398 (0.379)
+2: 0.238 (0.490) 1.215 (0.866) 1.395 (1.006) 0.731 (0.866)
+3: 0.601 (0.306) 1.509 (0.444) 1.789 (0.560) 1.390 (0.462)
+4: 0.755 (0.352) 1.853 (0.484) 2.212 (0.682) 1.667 (0.594)
+
+== Summary: mean pre (2012-16) and post (2019-22) coefficients ==
+                                        outcome                         sample
+                                         <char>                         <fctr>
+ 1:                     log out-migrant returns     A: ACS-identified counties
+ 2:                     log out-migrant returns     A: ACS-identified counties
+ 3:                     log out-migrant returns     A: ACS-identified counties
+ 4:                     log out-migrant returns     A: ACS-identified counties
+ 5:                     log out-migrant returns B: all counties (PUMA fill-in)
+ 6:                     log out-migrant returns B: all counties (PUMA fill-in)
+ 7:                     log out-migrant returns B: all counties (PUMA fill-in)
+ 8:                     log out-migrant returns B: all counties (PUMA fill-in)
+ 9:         log out-migrant people (exemptions)     A: ACS-identified counties
+10:         log out-migrant people (exemptions)     A: ACS-identified counties
+11:         log out-migrant people (exemptions)     A: ACS-identified counties
+12:         log out-migrant people (exemptions)     A: ACS-identified counties
+13:         log out-migrant people (exemptions) B: all counties (PUMA fill-in)
+14:         log out-migrant people (exemptions) B: all counties (PUMA fill-in)
+15:         log out-migrant people (exemptions) B: all counties (PUMA fill-in)
+16:         log out-migrant people (exemptions) B: all counties (PUMA fill-in)
+17:                      log in-migrant returns     A: ACS-identified counties
+18:                      log in-migrant returns     A: ACS-identified counties
+19:                      log in-migrant returns     A: ACS-identified counties
+20:                      log in-migrant returns     A: ACS-identified counties
+21:                      log in-migrant returns B: all counties (PUMA fill-in)
+22:                      log in-migrant returns B: all counties (PUMA fill-in)
+23:                      log in-migrant returns B: all counties (PUMA fill-in)
+24:                      log in-migrant returns B: all counties (PUMA fill-in)
+25:              out-migration rate, people (%)     A: ACS-identified counties
+26:              out-migration rate, people (%)     A: ACS-identified counties
+27:              out-migration rate, people (%)     A: ACS-identified counties
+28:              out-migration rate, people (%)     A: ACS-identified counties
+29:              out-migration rate, people (%) B: all counties (PUMA fill-in)
+30:              out-migration rate, people (%) B: all counties (PUMA fill-in)
+31:              out-migration rate, people (%) B: all counties (PUMA fill-in)
+32:              out-migration rate, people (%) B: all counties (PUMA fill-in)
+33:            net migration rate, returns (pp)     A: ACS-identified counties
+34:            net migration rate, returns (pp)     A: ACS-identified counties
+35:            net migration rate, returns (pp)     A: ACS-identified counties
+36:            net migration rate, returns (pp)     A: ACS-identified counties
+37:            net migration rate, returns (pp) B: all counties (PUMA fill-in)
+38:            net migration rate, returns (pp) B: all counties (PUMA fill-in)
+39:            net migration rate, returns (pp) B: all counties (PUMA fill-in)
+40:            net migration rate, returns (pp) B: all counties (PUMA fill-in)
+41:             net migration rate, people (pp)     A: ACS-identified counties
+42:             net migration rate, people (pp)     A: ACS-identified counties
+43:             net migration rate, people (pp)     A: ACS-identified counties
+44:             net migration rate, people (pp)     A: ACS-identified counties
+45:             net migration rate, people (pp) B: all counties (PUMA fill-in)
+46:             net migration rate, people (pp) B: all counties (PUMA fill-in)
+47:             net migration rate, people (pp) B: all counties (PUMA fill-in)
+48:             net migration rate, people (pp) B: all counties (PUMA fill-in)
+49: net interstate migration rate, returns (pp)     A: ACS-identified counties
+50: net interstate migration rate, returns (pp)     A: ACS-identified counties
+51: net interstate migration rate, returns (pp)     A: ACS-identified counties
+52: net interstate migration rate, returns (pp)     A: ACS-identified counties
+53: net interstate migration rate, returns (pp) B: all counties (PUMA fill-in)
+54: net interstate migration rate, returns (pp) B: all counties (PUMA fill-in)
+55: net interstate migration rate, returns (pp) B: all counties (PUMA fill-in)
+56: net interstate migration rate, returns (pp) B: all counties (PUMA fill-in)
+57:     state: out-of-state rate (% of returns)     S: states, state + year FE
+58:     state: out-of-state rate (% of returns)     S: states, state + year FE
+59:     state: out-of-state rate (% of returns)     S: states, state + year FE
+60:     state: out-of-state rate (% of returns)     S: states, state + year FE
+61:         state: in-from-other-state rate (%)     S: states, state + year FE
+62:         state: in-from-other-state rate (%)     S: states, state + year FE
+63:         state: in-from-other-state rate (%)     S: states, state + year FE
+64:         state: in-from-other-state rate (%)     S: states, state + year FE
+65:             state: net interstate rate (pp)     S: states, state + year FE
+66:             state: net interstate rate (pp)     S: states, state + year FE
+67:             state: net interstate rate (pp)     S: states, state + year FE
+68:             state: net interstate rate (pp)     S: states, state + year FE
+69:             state: log out-of-state returns     S: states, state + year FE
+70:             state: log out-of-state returns     S: states, state + year FE
+71:             state: log out-of-state returns     S: states, state + year FE
+72:             state: log out-of-state returns     S: states, state + year FE
+                                        outcome                         sample
+                                         <char>                         <fctr>
+                                   spec    pre   post post_se
+                                 <fctr>  <num>  <num>   <num>
+ 1:              Z1 (ACS, own location) -0.887 -0.076   0.189
+ 2: Z2 (national sample at county rate)  0.513 -1.733   0.428
+ 3:                  SOI observed (OLS) -1.112 -0.130   0.187
+ 4:              SOI instrumented by Z1 -1.141 -0.097   0.243
+ 5:              Z1 (ACS, own location) -1.131 -0.013   0.140
+ 6: Z2 (national sample at county rate) -0.652 -1.905   0.358
+ 7:                  SOI observed (OLS) -1.593 -0.065   0.105
+ 8:              SOI instrumented by Z1 -1.297 -0.015   0.161
+ 9:              Z1 (ACS, own location) -0.905  0.057   0.190
+10: Z2 (national sample at county rate)  0.237 -1.774   0.435
+11:                  SOI observed (OLS) -1.146 -0.022   0.190
+12:              SOI instrumented by Z1 -1.165  0.073   0.245
+13:              Z1 (ACS, own location) -1.198  0.065   0.143
+14: Z2 (national sample at county rate) -0.911 -1.967   0.352
+15:                  SOI observed (OLS) -1.687 -0.024   0.107
+16:              SOI instrumented by Z1 -1.373  0.074   0.164
+17:              Z1 (ACS, own location)  0.481 -0.146   0.196
+18: Z2 (national sample at county rate) -1.404 -0.001   0.471
+19:                  SOI observed (OLS) -0.246 -0.280   0.195
+20:              SOI instrumented by Z1  0.619 -0.188   0.253
+21:              Z1 (ACS, own location)  0.395 -0.202   0.145
+22: Z2 (national sample at county rate) -1.580 -0.460   0.368
+23:                  SOI observed (OLS) -0.409 -0.360   0.107
+24:              SOI instrumented by Z1  0.453 -0.231   0.166
+25:              Z1 (ACS, own location) -0.055  0.012   0.019
+26: Z2 (national sample at county rate)  0.075 -0.057   0.040
+27:                  SOI observed (OLS) -0.060 -0.008   0.018
+28:              SOI instrumented by Z1 -0.070  0.016   0.024
+29:              Z1 (ACS, own location) -0.075 -0.002   0.014
+30: Z2 (national sample at county rate) -0.009 -0.090   0.033
+31:                  SOI observed (OLS) -0.099 -0.028   0.011
+32:              SOI instrumented by Z1 -0.086 -0.002   0.016
+33:              Z1 (ACS, own location)  0.118  0.011   0.024
+34: Z2 (national sample at county rate) -0.110  0.115   0.054
+35:                  SOI observed (OLS)  0.068 -0.008   0.024
+36:              SOI instrumented by Z1  0.152  0.014   0.031
+37:              Z1 (ACS, own location)  0.128  0.004   0.017
+38: Z2 (national sample at county rate) -0.030  0.106   0.048
+39:                  SOI observed (OLS)  0.085 -0.016   0.013
+40:              SOI instrumented by Z1  0.146  0.005   0.020
+41:              Z1 (ACS, own location)  0.115  0.012   0.021
+42: Z2 (national sample at county rate) -0.136  0.096   0.051
+43:                  SOI observed (OLS)  0.054 -0.014   0.022
+44:              SOI instrumented by Z1  0.147  0.016   0.028
+45:              Z1 (ACS, own location)  0.131  0.009   0.016
+46: Z2 (national sample at county rate) -0.043  0.091   0.044
+47:                  SOI observed (OLS)  0.082 -0.017   0.012
+48:              SOI instrumented by Z1  0.150  0.010   0.018
+49:              Z1 (ACS, own location)  0.023 -0.011   0.016
+50: Z2 (national sample at county rate) -0.024  0.075   0.041
+51:                  SOI observed (OLS)  0.013 -0.011   0.015
+52:              SOI instrumented by Z1  0.030 -0.014   0.020
+53:              Z1 (ACS, own location)  0.027 -0.013   0.011
+54: Z2 (national sample at county rate) -0.010  0.066   0.035
+55:                  SOI observed (OLS)  0.019 -0.012   0.008
+56:              SOI instrumented by Z1  0.031 -0.015   0.013
+57:              Z1 (ACS, own location) -0.017  0.048   0.014
+58: Z2 (national sample at county rate) -0.023  0.066   0.024
+59:                  SOI observed (OLS) -0.024  0.051   0.015
+60:              SOI instrumented by Z1 -0.022  0.057   0.021
+61:              Z1 (ACS, own location)  0.057  0.029   0.014
+62: Z2 (national sample at county rate)  0.101  0.069   0.027
+63:                  SOI observed (OLS)  0.052  0.032   0.015
+64:              SOI instrumented by Z1  0.069  0.034   0.016
+65:              Z1 (ACS, own location)  0.075 -0.020   0.018
+66: Z2 (national sample at county rate)  0.125  0.003   0.035
+67:                  SOI observed (OLS)  0.076 -0.020   0.019
+68:              SOI instrumented by Z1  0.091 -0.023   0.023
+69:              Z1 (ACS, own location) -1.175  1.354   0.330
+70: Z2 (national sample at county rate) -1.627  0.909   0.802
+71:                  SOI observed (OLS) -1.348  1.316   0.441
+72:              SOI instrumented by Z1 -1.411  1.618   0.522
+                                   spec    pre   post post_se
+                                 <fctr>  <num>  <num>   <num>

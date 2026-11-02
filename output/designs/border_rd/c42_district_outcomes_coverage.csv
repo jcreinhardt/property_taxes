@@ -1,0 +1,226 @@
+sample,src,outcome,units,unit_years,share,years
+low-tax side,"F-33 district, log per pupil",total revenue,1168,13952,1,2012-2023
+low-tax side,"F-33 district, log per pupil",federal revenue,1167,13947,1,2012-2023
+low-tax side,"F-33 district, log per pupil",Title I (C14),1160,13640,0.98,2012-2023
+low-tax side,"F-33 district, log per pupil",IDEA special ed (C15),1054,11273,0.81,2012-2023
+low-tax side,"F-33 district, log per pupil",child nutrition (C25),1161,13699,0.98,2012-2023
+low-tax side,"F-33 district, log per pupil",state formula aid (C01),1168,13938,1,2012-2023
+low-tax side,"F-33 district, log per pupil",state special ed (C05),701,7214,0.52,2012-2023
+low-tax side,"F-33 district, log per pupil",state transportation (C06),683,7208,0.52,2012-2023
+low-tax side,"F-33 district, log per pupil",state compensatory (C07),303,2677,0.19,2012-2023
+low-tax side,"F-33 district, log per pupil",parent govt contributions (T02),226,2628,0.19,2012-2023
+low-tax side,"F-33 district, log per pupil",other local taxes (T99),461,4548,0.33,2012-2023
+low-tax side,"F-33 district, log per pupil",from cities/counties (D23),826,7960,0.57,2012-2023
+low-tax side,"F-33 district, log per pupil",tuition from pupils (A07),856,7112,0.51,2012-2023
+low-tax side,"F-33 district, log per pupil",school lunch charges (A09),1161,13685,0.98,2012-2023
+low-tax side,"F-33 district, log per pupil",district activity receipts (A13),1043,11777,0.84,2012-2023
+low-tax side,"F-33 district, log per pupil",student fees (A15),47,476,0.03,2012-2023
+low-tax side,"F-33 district, log per pupil",private contributions (U50),1089,10200,0.73,2012-2023
+low-tax side,"F-33 district, log per pupil",total expenditure,1168,13950,1,2012-2023
+low-tax side,"F-33 district, log per pupil",instruction,1168,13949,1,2012-2023
+low-tax side,"F-33 district, log per pupil",support services,1168,13948,1,2012-2023
+low-tax side,"F-33 district, log per pupil",pupil support (E17),1167,13944,1,2012-2023
+low-tax side,"F-33 district, log per pupil",instr. staff support (E07),1167,13940,1,2012-2023
+low-tax side,"F-33 district, log per pupil",general administration (E08),1168,13948,1,2012-2023
+low-tax side,"F-33 district, log per pupil",school administration (E09),1165,13900,1,2012-2023
+low-tax side,"F-33 district, log per pupil",operations & maintenance (V40),1167,13944,1,2012-2023
+low-tax side,"F-33 district, log per pupil",pupil transportation (V45),1168,13917,1,2012-2023
+low-tax side,"F-33 district, log per pupil",food services (E11),1163,13696,0.98,2012-2023
+low-tax side,"F-33 district, log per pupil",capital outlay,1167,13861,0.99,2012-2023
+low-tax side,"F-33 district, log per pupil",construction (F12),1120,10903,0.78,2012-2023
+low-tax side,"F-33 district, log per pupil",equipment (K09+K10),1167,13664,0.98,2012-2023
+low-tax side,"F-33 district, log per pupil",payments to private schools (V91),524,4071,0.29,2012-2023
+low-tax side,"F-33 district, log per pupil",payments to charter schools (V92),319,2760,0.2,2012-2023
+low-tax side,"F-33 district, log per pupil",payments to other school systems (Q11),1104,12083,0.87,2012-2023
+low-tax side,"F-33 district, log per pupil",interest on debt (I86),1137,12687,0.91,2012-2023
+low-tax side,"F-33 district, log per pupil",salaries & wages (Z32),1168,13949,1,2012-2023
+low-tax side,"F-33 district, log per pupil",employee benefits (Z33),1167,13946,1,2012-2023
+low-tax side,"F-33 district, log per pupil",instruction salaries (V11),1167,13931,1,2012-2023
+low-tax side,"F-33 district, log per pupil",long-term debt outstanding (_41F),1125,12560,0.9,2012-2023
+low-tax side,"F-33 district, log per pupil",long-term debt issued (_21F),1037,4745,0.34,2012-2023
+low-tax side,"F-33 district, log per pupil",cash & securities (W01+W31+W61),938,10926,0.78,2012-2023
+low-tax side,SEDA district,"district test scores (SEDA, SD)",1186,8038,0.94,2012-2018
+low-tax side,SEDA district,district SES (SEDA),1183,8538,1,2012-2018
+low-tax side,"CoG school districts by county, log per capita",school districts: federal revenue,310,2842,0.72,2012-2022
+low-tax side,"CoG school districts by county, log per capita",school districts: state revenue,360,3960,1,2012-2022
+low-tax side,"CoG school districts by county, log per capita",school districts: capital outlay,360,3960,1,2012-2022
+low-tax side,"CoG school districts by county, log per capita",school districts: LT debt outstanding,340,3658,0.92,2012-2022
+low-tax side,"CoG school districts by county, log per capita",school districts: LT debt issued,332,2300,0.58,2012-2022
+low-tax side,"CoG school districts by county, log per capita",school districts: cash & securities,359,3566,0.9,2012-2021
+low-tax side,"CoG school districts by county, log per capita",school districts: interest on debt,340,3665,0.93,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: general sales tax,342,886,0.67,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: individual income tax,119,308,0.23,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: federal revenue,441,1309,0.99,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: state revenue,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: other own-source revenue,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: enterprise revenue,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: capital outlay,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: LT debt outstanding,440,1320,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: LT debt issued,431,1104,0.83,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",all local govts: interest on debt,441,1322,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: education (E12),441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: fire (E24),439,1308,0.99,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: health (E32),440,1284,0.97,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: hospitals (E36),164,365,0.28,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: highways (E44),441,1309,0.99,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: housing & comm. dev. (E50),402,1087,0.82,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: libraries (E52),429,1233,0.93,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: parks (E61),441,1312,0.99,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: police (E62),441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: public welfare (E74-79),399,1049,0.79,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: sewerage (E80),438,1292,0.98,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: solid waste (E81),438,1295,0.98,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",spending: general government (E89),441,1309,0.99,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",number of local governments,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",number of municipalities,441,1323,1,2012-2022
+low-tax side,"CoG all local govts, census years, log per capita",number of special districts,441,1323,1,2012-2022
+high-tax side,"F-33 district, log per pupil",total revenue,1647,19714,1,2012-2023
+high-tax side,"F-33 district, log per pupil",federal revenue,1647,19708,1,2012-2023
+high-tax side,"F-33 district, log per pupil",Title I (C14),1627,18987,0.96,2012-2023
+high-tax side,"F-33 district, log per pupil",IDEA special ed (C15),1486,15621,0.79,2012-2023
+high-tax side,"F-33 district, log per pupil",child nutrition (C25),1631,19320,0.98,2012-2023
+high-tax side,"F-33 district, log per pupil",state formula aid (C01),1647,19432,0.99,2012-2023
+high-tax side,"F-33 district, log per pupil",state special ed (C05),1009,11287,0.57,2012-2023
+high-tax side,"F-33 district, log per pupil",state transportation (C06),939,8567,0.43,2012-2023
+high-tax side,"F-33 district, log per pupil",state compensatory (C07),239,2142,0.11,2012-2023
+high-tax side,"F-33 district, log per pupil",parent govt contributions (T02),216,2553,0.13,2012-2023
+high-tax side,"F-33 district, log per pupil",other local taxes (T99),379,3765,0.19,2012-2023
+high-tax side,"F-33 district, log per pupil",from cities/counties (D23),915,7539,0.38,2012-2023
+high-tax side,"F-33 district, log per pupil",tuition from pupils (A07),1231,10408,0.53,2012-2023
+high-tax side,"F-33 district, log per pupil",school lunch charges (A09),1632,19152,0.97,2012-2023
+high-tax side,"F-33 district, log per pupil",district activity receipts (A13),1456,15444,0.78,2012-2023
+high-tax side,"F-33 district, log per pupil",student fees (A15),49,440,0.02,2012-2023
+high-tax side,"F-33 district, log per pupil",private contributions (U50),1370,12109,0.61,2012-2023
+high-tax side,"F-33 district, log per pupil",total expenditure,1647,19713,1,2012-2023
+high-tax side,"F-33 district, log per pupil",instruction,1647,19713,1,2012-2023
+high-tax side,"F-33 district, log per pupil",support services,1647,19713,1,2012-2023
+high-tax side,"F-33 district, log per pupil",pupil support (E17),1647,19666,1,2012-2023
+high-tax side,"F-33 district, log per pupil",instr. staff support (E07),1646,19659,1,2012-2023
+high-tax side,"F-33 district, log per pupil",general administration (E08),1647,19711,1,2012-2023
+high-tax side,"F-33 district, log per pupil",school administration (E09),1646,19669,1,2012-2023
+high-tax side,"F-33 district, log per pupil",operations & maintenance (V40),1647,19713,1,2012-2023
+high-tax side,"F-33 district, log per pupil",pupil transportation (V45),1645,19616,1,2012-2023
+high-tax side,"F-33 district, log per pupil",food services (E11),1640,19501,0.99,2012-2023
+high-tax side,"F-33 district, log per pupil",capital outlay,1647,19575,0.99,2012-2023
+high-tax side,"F-33 district, log per pupil",construction (F12),1622,15993,0.81,2012-2023
+high-tax side,"F-33 district, log per pupil",equipment (K09+K10),1645,19342,0.98,2012-2023
+high-tax side,"F-33 district, log per pupil",payments to private schools (V91),795,6467,0.33,2012-2023
+high-tax side,"F-33 district, log per pupil",payments to charter schools (V92),545,4857,0.25,2012-2023
+high-tax side,"F-33 district, log per pupil",payments to other school systems (Q11),1515,16217,0.82,2012-2023
+high-tax side,"F-33 district, log per pupil",interest on debt (I86),1591,17699,0.9,2012-2023
+high-tax side,"F-33 district, log per pupil",salaries & wages (Z32),1647,19713,1,2012-2023
+high-tax side,"F-33 district, log per pupil",employee benefits (Z33),1647,19710,1,2012-2023
+high-tax side,"F-33 district, log per pupil",instruction salaries (V11),1645,19546,0.99,2012-2023
+high-tax side,"F-33 district, log per pupil",long-term debt outstanding (_41F),1580,17435,0.88,2012-2023
+high-tax side,"F-33 district, log per pupil",long-term debt issued (_21F),1356,5451,0.28,2012-2023
+high-tax side,"F-33 district, log per pupil",cash & securities (W01+W31+W61),1425,16962,0.86,2012-2023
+high-tax side,SEDA district,"district test scores (SEDA, SD)",1640,10703,0.88,2012-2018
+high-tax side,SEDA district,district SES (SEDA),1643,12078,1,2012-2018
+high-tax side,"CoG school districts by county, log per capita",school districts: federal revenue,403,3852,0.82,2012-2022
+high-tax side,"CoG school districts by county, log per capita",school districts: state revenue,430,4700,1,2012-2022
+high-tax side,"CoG school districts by county, log per capita",school districts: capital outlay,430,4694,1,2012-2022
+high-tax side,"CoG school districts by county, log per capita",school districts: LT debt outstanding,425,4514,0.96,2012-2022
+high-tax side,"CoG school districts by county, log per capita",school districts: LT debt issued,404,2632,0.56,2012-2022
+high-tax side,"CoG school districts by county, log per capita",school districts: cash & securities,430,4255,0.91,2012-2021
+high-tax side,"CoG school districts by county, log per capita",school districts: interest on debt,427,4524,0.96,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: general sales tax,421,1204,0.73,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: individual income tax,145,421,0.26,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: federal revenue,551,1639,0.99,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: state revenue,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: other own-source revenue,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: enterprise revenue,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: capital outlay,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: LT debt outstanding,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: LT debt issued,542,1398,0.85,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",all local govts: interest on debt,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: education (E12),552,1646,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: fire (E24),552,1643,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: health (E32),551,1612,0.98,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: hospitals (E36),174,416,0.25,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: highways (E44),550,1628,0.99,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: housing & comm. dev. (E50),493,1360,0.83,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: libraries (E52),536,1548,0.94,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: parks (E61),551,1636,0.99,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: police (E62),551,1645,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: public welfare (E74-79),532,1481,0.9,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: sewerage (E80),545,1591,0.97,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: solid waste (E81),548,1612,0.98,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",spending: general government (E89),552,1639,0.99,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",number of local governments,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",number of municipalities,552,1648,1,2012-2022
+high-tax side,"CoG all local govts, census years, log per capita",number of special districts,552,1648,1,2012-2022
+both sides pooled,"F-33 district, log per pupil",total revenue,2825,33786,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",federal revenue,2824,33775,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",Title I (C14),2797,32747,0.97,2012-2023
+both sides pooled,"F-33 district, log per pupil",IDEA special ed (C15),2550,26995,0.8,2012-2023
+both sides pooled,"F-33 district, log per pupil",child nutrition (C25),2802,33136,0.98,2012-2023
+both sides pooled,"F-33 district, log per pupil",state formula aid (C01),2825,33490,0.99,2012-2023
+both sides pooled,"F-33 district, log per pupil",state special ed (C05),1719,18609,0.55,2012-2023
+both sides pooled,"F-33 district, log per pupil",state transportation (C06),1630,15868,0.47,2012-2023
+both sides pooled,"F-33 district, log per pupil",state compensatory (C07),546,4864,0.14,2012-2023
+both sides pooled,"F-33 district, log per pupil",parent govt contributions (T02),448,5253,0.16,2012-2023
+both sides pooled,"F-33 district, log per pupil",other local taxes (T99),843,8347,0.25,2012-2023
+both sides pooled,"F-33 district, log per pupil",from cities/counties (D23),1743,15502,0.46,2012-2023
+both sides pooled,"F-33 district, log per pupil",tuition from pupils (A07),2096,17622,0.52,2012-2023
+both sides pooled,"F-33 district, log per pupil",school lunch charges (A09),2803,32955,0.98,2012-2023
+both sides pooled,"F-33 district, log per pupil",district activity receipts (A13),2509,27300,0.81,2012-2023
+both sides pooled,"F-33 district, log per pupil",student fees (A15),96,916,0.03,2012-2023
+both sides pooled,"F-33 district, log per pupil",private contributions (U50),2462,22332,0.66,2012-2023
+both sides pooled,"F-33 district, log per pupil",total expenditure,2825,33783,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",instruction,2825,33782,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",support services,2825,33781,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",pupil support (E17),2824,33730,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",instr. staff support (E07),2823,33719,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",general administration (E08),2825,33779,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",school administration (E09),2821,33689,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",operations & maintenance (V40),2824,33777,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",pupil transportation (V45),2823,33653,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",food services (E11),2813,33317,0.99,2012-2023
+both sides pooled,"F-33 district, log per pupil",capital outlay,2824,33556,0.99,2012-2023
+both sides pooled,"F-33 district, log per pupil",construction (F12),2752,26996,0.8,2012-2023
+both sides pooled,"F-33 district, log per pupil",equipment (K09+K10),2822,33126,0.98,2012-2023
+both sides pooled,"F-33 district, log per pupil",payments to private schools (V91),1323,10585,0.31,2012-2023
+both sides pooled,"F-33 district, log per pupil",payments to charter schools (V92),867,7649,0.23,2012-2023
+both sides pooled,"F-33 district, log per pupil",payments to other school systems (Q11),2629,28420,0.84,2012-2023
+both sides pooled,"F-33 district, log per pupil",interest on debt (I86),2738,30493,0.9,2012-2023
+both sides pooled,"F-33 district, log per pupil",salaries & wages (Z32),2825,33782,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",employee benefits (Z33),2824,33776,1,2012-2023
+both sides pooled,"F-33 district, log per pupil",instruction salaries (V11),2822,33597,0.99,2012-2023
+both sides pooled,"F-33 district, log per pupil",long-term debt outstanding (_41F),2715,30098,0.89,2012-2023
+both sides pooled,"F-33 district, log per pupil",long-term debt issued (_21F),2402,10244,0.3,2012-2023
+both sides pooled,"F-33 district, log per pupil",cash & securities (W01+W31+W61),2367,27936,0.83,2012-2023
+both sides pooled,SEDA district,"district test scores (SEDA, SD)",2836,18806,0.91,2012-2018
+both sides pooled,SEDA district,district SES (SEDA),2836,20693,1,2012-2018
+both sides pooled,"CoG school districts by county, log per capita",school districts: federal revenue,718,6743,0.77,2012-2022
+both sides pooled,"CoG school districts by county, log per capita",school districts: state revenue,795,8709,1,2012-2022
+both sides pooled,"CoG school districts by county, log per capita",school districts: capital outlay,795,8703,1,2012-2022
+both sides pooled,"CoG school districts by county, log per capita",school districts: LT debt outstanding,770,8218,0.94,2012-2022
+both sides pooled,"CoG school districts by county, log per capita",school districts: LT debt issued,741,4958,0.57,2012-2022
+both sides pooled,"CoG school districts by county, log per capita",school districts: cash & securities,794,7866,0.9,2012-2021
+both sides pooled,"CoG school districts by county, log per capita",school districts: interest on debt,772,8238,0.95,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: general sales tax,765,2096,0.7,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: individual income tax,270,747,0.25,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: federal revenue,1004,2982,0.99,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: state revenue,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: other own-source revenue,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: enterprise revenue,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: capital outlay,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: LT debt outstanding,1004,3002,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: LT debt issued,985,2535,0.84,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",all local govts: interest on debt,1005,3004,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: education (E12),1005,3003,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: fire (E24),1003,2985,0.99,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: health (E32),1003,2930,0.98,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: hospitals (E36),338,781,0.26,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: highways (E44),1003,2971,0.99,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: housing & comm. dev. (E50),907,2481,0.83,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: libraries (E52),975,2807,0.93,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: parks (E61),1004,2982,0.99,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: police (E62),1004,3002,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: public welfare (E74-79),943,2553,0.85,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: sewerage (E80),995,2917,0.97,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: solid waste (E81),998,2941,0.98,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",spending: general government (E89),1005,2982,0.99,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",number of local governments,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",number of municipalities,1005,3005,1,2012-2022
+both sides pooled,"CoG all local govts, census years, log per capita",number of special districts,1005,3005,1,2012-2022

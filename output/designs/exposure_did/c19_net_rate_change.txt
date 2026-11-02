@@ -1,0 +1,150 @@
+Net-of-deduction effective state income tax rate, r_net = STC collections / AGI - m x deducted income taxes / AGI (pp); m = 0.28 to 2017, 0.24 from 2018.
+
+Big four and the extremes, TY2016 and TY2018 (pp of AGI):
+ st eff_stc16 sub16 sub18 r_net16 r_net18 D_sub D_net  D_z1 ex_ret
+ NY      5.92  1.83  0.65    4.09    5.07 1.183 0.980 0.804    724
+ CT      4.77  1.48  0.59    3.28    4.52 0.896 1.235 0.886    876
+ MD      3.92  1.58  0.72    2.34    3.25 0.863 0.914 0.335    560
+ MN      5.54  1.28  0.44    4.26    5.14 0.844 0.881 0.414    538
+ CA      5.83  1.63  0.79    4.20    5.23 0.841 1.025 0.830    544
+ OR      6.47  1.41  0.57    5.07    6.07 0.838 1.008 0.559    509
+ FL      0.00  0.16  0.08   -0.16   -0.08 0.086 0.086 0.055    187
+ WA      0.00  0.10  0.04   -0.10   -0.04 0.058 0.058 0.019    247
+ TX      0.00  0.05  0.03   -0.05   -0.03 0.027 0.027 0.119    212
+ AK      0.00  0.03  0.01   -0.03   -0.01 0.020 0.020 0.009    145
+
+Across the 50 states: SD of D_sub 0.264 pp, D_net 0.434, D_z1 0.225; corr(D_sub, D_net) 0.59, corr(D_sub, D_z1) 0.77, corr(D_sub, lost subsidy per return) 0.81, corr(D_sub, SALT/AGI 2017) n/a
+
+== Dyads: net_ijt ~ i(year, D_ij, ref 2017) | dyad + year, SE by origin. Cells: mean 2018-19 minus mean 2013-16 (SE) | mean 2020-22 minus mean 2013-16 (SE) | pre slope per year. Per pp of D_ij.
+
+-- net out-migration, thousands of returns per dyad on D_sub
+                sample                                         cell
+       all 2,450 dyads   0.175 ( 0.082) |   0.738 ( 0.136) | +0.097
+     among CA NY FL TX   1.956 ( 1.108) |  11.113 ( 2.255) | +1.111
+ big four <-> other 46   0.366 ( 0.111) |   1.468 ( 0.190) | +0.204
+    among the other 46   0.021 ( 0.029) |   0.024 ( 0.049) | +0.010
+
+-- net out-migration, thousands of returns per dyad on D_sub25
+                sample                                         cell
+       all 2,450 dyads   0.192 ( 0.103) |   0.852 ( 0.157) | +0.115
+     among CA NY FL TX   2.364 ( 1.340) |  13.558 ( 2.824) | +1.416
+ big four <-> other 46   0.406 ( 0.139) |   1.736 ( 0.224) | +0.245
+    among the other 46   0.019 ( 0.036) |   0.011 ( 0.060) | +0.010
+
+-- net out-migration, thousands of returns per dyad on D_net
+                sample                                         cell
+       all 2,450 dyads   0.092 ( 0.036) |   0.318 ( 0.069) | +0.053
+     among CA NY FL TX   2.336 ( 1.280) |  12.671 ( 1.866) | +0.995
+ big four <-> other 46   0.320 ( 0.099) |   1.152 ( 0.151) | +0.182
+    among the other 46   0.025 ( 0.016) |   0.036 ( 0.020) | +0.019
+
+-- net out-migration, thousands of returns per dyad on D_z1
+                sample                                         cell
+       all 2,450 dyads   0.415 ( 0.079) |   1.160 ( 0.197) | +0.166
+     among CA NY FL TX   3.143 ( 1.671) |  16.579 ( 2.379) | +1.572
+ big four <-> other 46   0.834 ( 0.128) |   2.165 ( 0.253) | +0.311
+    among the other 46   0.118 ( 0.041) |   0.205 ( 0.051) | +0.051
+
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_sub
+                sample                                         cell
+       all 2,450 dyads   0.048 ( 0.018) |   0.200 ( 0.025) | +0.026
+     among CA NY FL TX   0.168 ( 0.121) |   0.953 ( 0.119) | +0.095
+ big four <-> other 46   0.055 ( 0.024) |   0.220 ( 0.032) | +0.031
+    among the other 46   0.011 ( 0.015) |   0.012 ( 0.026) | +0.005
+
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_sub25
+                sample                                         cell
+       all 2,450 dyads   0.053 ( 0.022) |   0.235 ( 0.031) | +0.032
+     among CA NY FL TX   0.204 ( 0.149) |   1.172 ( 0.160) | +0.122
+ big four <-> other 46   0.062 ( 0.030) |   0.263 ( 0.040) | +0.037
+    among the other 46   0.010 ( 0.019) |   0.006 ( 0.032) | +0.005
+
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_net
+                sample                                         cell
+       all 2,450 dyads   0.031 ( 0.010) |   0.109 ( 0.018) | +0.018
+     among CA NY FL TX   0.190 ( 0.118) |   1.029 ( 0.058) | +0.081
+ big four <-> other 46   0.045 ( 0.020) |   0.162 ( 0.021) | +0.026
+    among the other 46   0.013 ( 0.007) |   0.018 ( 0.009) | +0.009
+
+-- net out-migration per 1,000 origin returns (weighted by 2016 origin returns) on D_z1
+                sample                                         cell
+       all 2,450 dyads   0.102 ( 0.023) |   0.286 ( 0.029) | +0.041
+     among CA NY FL TX   0.258 ( 0.157) |   1.360 ( 0.070) | +0.129
+ big four <-> other 46   0.131 ( 0.029) |   0.341 ( 0.037) | +0.049
+    among the other 46   0.051 ( 0.014) |   0.090 ( 0.021) | +0.022
+
+== States: y ~ i(year, D_s, ref 2017) | state + year, SE by state (hetero for the big four). Per pp of D_s.
+
+-- net out-migration, thousands of returns (unweighted) on D_sub
+                 sample                                          cell
+          all 50 states    8.608 ( 7.481) |  36.626 (11.460) | +4.804
+ big four (CA NY FL TX)  22.036 (23.269) | 122.244 (42.684) | +13.966
+        other 46 states    1.893 ( 3.991) |   0.661 ( 7.305) | +0.937
+
+-- net out-migration, thousands of returns (unweighted) on D_sub25
+                 sample                                          cell
+          all 50 states    9.420 ( 9.299) |  42.325 (13.339) | +5.678
+ big four (CA NY FL TX)  25.716 (28.301) | 148.412 (54.044) | +17.287
+        other 46 states    2.182 ( 4.932) |   0.205 ( 8.913) | +1.059
+
+-- net out-migration, thousands of returns (unweighted) on D_net
+                 sample                                          cell
+          all 50 states    4.530 ( 3.168) |  15.816 ( 5.783) | +2.644
+ big four (CA NY FL TX)  30.646 (26.864) | 142.832 (36.096) | +14.871
+        other 46 states    2.618 ( 2.062) |   3.462 ( 2.874) | +1.485
+
+-- net out-migration, thousands of returns (unweighted) on D_z1
+                 sample                                          cell
+          all 50 states   20.661 ( 8.104) |  57.894 (19.019) | +8.249
+ big four (CA NY FL TX)  40.610 (33.663) | 187.218 (42.439) | +22.075
+        other 46 states    5.202 ( 4.904) |   7.643 ( 7.472) | +2.963
+
+-- net out-migration rate, pp of returns (2016-return weights) on D_sub
+                 sample                                         cell
+          all 50 states   0.178 ( 0.187) |   0.887 ( 0.247) | +0.127
+ big four (CA NY FL TX)   0.147 ( 0.311) |   1.157 ( 0.400) | +0.143
+        other 46 states   0.150 ( 0.303) |   0.069 ( 0.535) | +0.072
+
+-- net out-migration rate, pp of returns (2016-return weights) on D_sub25
+                 sample                                         cell
+          all 50 states   0.192 ( 0.235) |   1.051 ( 0.305) | +0.155
+ big four (CA NY FL TX)   0.175 ( 0.382) |   1.438 ( 0.509) | +0.181
+        other 46 states   0.168 ( 0.381) |   0.032 ( 0.657) | +0.081
+
+-- net out-migration rate, pp of returns (2016-return weights) on D_net
+                 sample                                         cell
+          all 50 states   0.155 ( 0.131) |   0.586 ( 0.201) | +0.110
+ big four (CA NY FL TX)   0.182 ( 0.323) |   1.175 ( 0.381) | +0.131
+        other 46 states   0.169 ( 0.133) |   0.214 ( 0.195) | +0.101
+
+-- net out-migration rate, pp of returns (2016-return weights) on D_z1
+                 sample                                         cell
+          all 50 states   0.437 ( 0.203) |   1.244 ( 0.271) | +0.193
+ big four (CA NY FL TX)   0.247 ( 0.417) |   1.568 ( 0.456) | +0.204
+        other 46 states   0.307 ( 0.223) |   0.435 ( 0.380) | +0.163
+
+Year by year, net_k on D_sub (thousands per dyad per pp):
+    y all 2,450 dyads among CA NY FL TX among the other 46
+ 2012           -0.60             -7.10              -0.05
+ 2013           -0.49             -5.43              -0.05
+ 2014           -0.26             -3.06              -0.03
+ 2015           -0.53             -6.15              -0.03
+ 2016           -0.26             -3.26               0.00
+ 2017            0.00              0.00               0.00
+ 2018           -0.25             -2.94              -0.02
+ 2019           -0.17             -2.10               0.01
+ 2020            0.19              3.21              -0.01
+ 2021            0.49              8.68               0.00
+ 2022            0.38              8.03               0.00
+ big four <-> other 46
+                 -1.27
+                 -1.04
+                 -0.55
+                 -1.16
+                 -0.58
+                  0.00
+                 -0.55
+                 -0.39
+                  0.39
+                  0.91
+                  0.61

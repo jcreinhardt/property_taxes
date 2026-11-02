@@ -14,7 +14,8 @@ code/
 │   ├── corelogic/        cluster SQL (som/, bouchet/) and the county/tract/parcel panels
 │   ├── dataaxle/         quarterly-file conversion; move-out and family-move extracts (Bouchet)
 │   ├── geo/              state borders, tract/parcel -> border pair and side, drive-time neighbours
-│   └── exposure/         SALT exposure measures (stub, delta, components, per owner)
+│   ├── exposure/         SALT exposure measures (stub, delta, components, per owner)
+│   └── altos/            Altos rental listings (Bouchet SQL) -> ZIP / county / tract rent panels
 ├── designs/      (b) one folder per identification strategy; outcomes (prices, revenue, migration, enrolment) live inside
 │   ├── exposure_did/     exposure x year event studies at county / ZIP / state / district / parcel
 │   ├── border_rd/        RD at state borders, yearly RDs, difference in discontinuities (varies the rate)
@@ -39,7 +40,7 @@ code/
   `designs/border_rd/03_covariate_rd.R`); each renamed script says `# Formerly <old path>` on its first line.
 - **Estimation:** written out in the scripts (fixest, rdrobust); no shared wrappers. Exposure × year regressions are
   weighted by 2016 returns; year effects are centred on 2017.
-- **Clusters:** CoreLogic and Data Axle are read only on Bouchet / SOM (`CLAUDE.md`, `.claude/skills/`); the SQL in
+- **Clusters:** CoreLogic, Data Axle and the Altos rental listings are read only on Bouchet / SOM (`CLAUDE.md`, `.claude/skills/`); the SQL in
   `build/corelogic/{som,bouchet}` and `build/dataaxle` runs there and its output is copied into `data/built/`.
 - **Results worth keeping** get a notebook entry (`.claude/skills/notebook`); scripts and outputs alone are not the record.
 

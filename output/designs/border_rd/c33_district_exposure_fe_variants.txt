@@ -1,0 +1,32 @@
+District exposure = lost subsidy per owner HH, ZIP -> district by ZCTA area shares x returns; all F-33 districts, enrolment-weighted, SE by county.
+ post - pre (mean 2018+ minus mean 2013-16) in SD units of the outcome per SD of exposure, by fixed effects (district FE always). Cells: estimate (t) [2012 coefficient].
+
+                       outcome                   year         state x year
+        property tax per pupil   0.004 (1.1) [-0.010] 0.007 (1.6) [-0.007]
+       local revenue per pupil   0.005 (1.5) [-0.012] 0.012 (3.3) [-0.010]
+       state revenue per pupil   0.017 (3.1) [-0.024] 0.004 (0.8) [-0.009]
+    current spending per pupil   0.007 (2.9) [-0.014] 0.007 (3.3) [-0.008]
+         instruction per pupil   0.008 (2.7) [-0.016] 0.007 (2.6) [-0.008]
+    salaries & wages per pupil   0.004 (1.5) [-0.014] 0.009 (4.1) [-0.009]
+   employee benefits per pupil   0.005 (1.8) [-0.014] 0.010 (3.8) [-0.010]
+      capital outlay per pupil -0.002 (-0.2) [-0.027] 0.007 (0.6) [-0.035]
+ LT debt outstanding per pupil    0.007 (0.5) [0.025]  0.002 (0.2) [0.006]
+                     enrolment -0.003 (-1.1) [-0.001] 0.007 (4.0) [-0.008]
+           CBSA x year         county x year
+ -0.005 (-1.1) [0.000] -0.003 (-0.9) [0.004]
+  0.002 (0.5) [-0.001]   0.003 (0.9) [0.001]
+  0.008 (1.5) [-0.011]  0.005 (1.4) [-0.008]
+  0.004 (2.3) [-0.004]  0.002 (1.8) [-0.003]
+  0.005 (2.0) [-0.004]  0.002 (1.4) [-0.003]
+  0.007 (3.6) [-0.007]  0.004 (3.1) [-0.004]
+  0.009 (3.7) [-0.008]  0.005 (3.0) [-0.005]
+  0.008 (0.6) [-0.027]  0.010 (0.6) [-0.021]
+ -0.001 (-0.0) [0.004] -0.001 (-0.1) [0.002]
+  0.006 (3.6) [-0.004]  0.005 (2.8) [-0.002]
+
+observations by FE set (property tax):              fe      n
+          <char>  <int>
+1:          year 136883
+2:  state x year 136883
+3:   CBSA x year 135658
+4: county x year 126831

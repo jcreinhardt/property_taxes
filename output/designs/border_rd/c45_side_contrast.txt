@@ -1,0 +1,285 @@
+Density-selected border design (tracts < 1,000 per sq mi within 50 mi): Z x year event studies by side and the contrast high minus low.
+ Post - pre = mean of 2018+ coefficients minus mean of 2012-16, SD units of the outcome per 10 mi closer to the border ; t in brackets.
+ Core 11 from 29 (reduced form with density x year); 75 district / local-government outcomes from the main term of 31 (E x year also in the model);
+14 composition outcomes from 32. 
+Sides are separate regressions on disjoint samples; SE of the contrast = sqrt(se_h^2 + se_l^2).
+
+== core (29) 
+                              outcome     years           low          high
+                   effective tax rate 2012-2024 -0.015 (-1.7) -0.007 (-0.6)
+ log county school property tax (CoG) 2012-2022 -0.002 (-0.2) -0.006 (-1.3)
+               log district enrolment 2012-2023 -0.001 (-0.3) -0.005 (-2.7)
+  log district property tax per pupil 2012-2023 -0.001 (-0.1) -0.004 (-0.8)
+      log district spending per pupil 2012-2023 -0.001 (-0.1)  +0.002 (0.4)
+          log median home value (ACS) 2013-2023 -0.002 (-0.7) -0.010 (-3.2)
+                log median sale price 2012-2024  +0.003 (0.4) -0.000 (-0.0)
+                 log population (ACS) 2013-2023 -0.003 (-0.8) -0.011 (-3.1)
+              log tax bill per parcel 2012-2024 -0.003 (-0.7) -0.004 (-0.9)
+            move-out rate (Data Axle) 2013-2021  +0.008 (0.7)  +0.002 (0.3)
+                sales per 100 parcels 2012-2024  +0.009 (0.6)  +0.017 (1.1)
+ high_minus_low
+   +0.008 (0.5)
+  -0.004 (-0.4)
+  -0.005 (-1.4)
+  -0.003 (-0.3)
+   +0.003 (0.3)
+  -0.007 (-1.6)
+  -0.003 (-0.4)
+  -0.008 (-1.6)
+  -0.002 (-0.3)
+  -0.006 (-0.4)
+   +0.009 (0.4)
+
+== CoG all local govts, census years, log per capita (31) 
+                                   outcome     years           low
+           all local govts: LT debt issued 2012-2022  +0.074 (0.9)
+      all local govts: LT debt outstanding 2012-2022 -0.064 (-1.4)
+           all local govts: capital outlay 2012-2022 -0.033 (-0.4)
+       all local govts: enterprise revenue 2012-2022  +0.049 (1.5)
+          all local govts: federal revenue 2012-2022 -0.042 (-0.7)
+        all local govts: general sales tax 2012-2022 -0.012 (-0.2)
+    all local govts: individual income tax 2012-2022 -0.042 (-0.4)
+         all local govts: interest on debt 2012-2022 -0.043 (-0.8)
+ all local govts: other own-source revenue 2012-2022 -0.077 (-1.1)
+            all local govts: state revenue 2012-2022  +0.006 (0.2)
+               number of local governments 2012-2022 -0.003 (-0.5)
+                  number of municipalities 2012-2022  +0.003 (0.5)
+               number of special districts 2012-2022  +0.001 (0.2)
+                 spending: education (E12) 2012-2022  +0.000 (0.0)
+                      spending: fire (E24) 2012-2022 -0.018 (-0.5)
+        spending: general government (E89) 2012-2022  +0.086 (1.3)
+                    spending: health (E32) 2012-2022  +0.073 (1.1)
+                  spending: highways (E44) 2012-2022 -0.004 (-0.1)
+                 spending: hospitals (E36) 2012-2022  +0.214 (2.1)
+      spending: housing & comm. dev. (E50) 2012-2022 -0.034 (-0.4)
+                 spending: libraries (E52) 2012-2022  +0.035 (0.9)
+                     spending: parks (E61) 2012-2022  +0.016 (0.4)
+                    spending: police (E62) 2012-2022 -0.020 (-0.4)
+         spending: public welfare (E74-79) 2012-2022  +0.032 (0.9)
+                  spending: sewerage (E80) 2012-2022 -0.024 (-0.5)
+               spending: solid waste (E81) 2012-2022 -0.011 (-0.3)
+          high high_minus_low
+  +0.004 (0.1)  -0.070 (-0.6)
+ -0.017 (-0.4)   +0.047 (0.8)
+ -0.012 (-0.2)   +0.020 (0.2)
+  +0.001 (0.0)  -0.048 (-1.2)
+  +0.011 (0.2)   +0.053 (0.6)
+ -0.028 (-1.7)  -0.016 (-0.3)
+  +0.081 (1.7)   +0.123 (1.0)
+  +0.013 (0.2)   +0.056 (0.7)
+ -0.031 (-0.5)   +0.046 (0.5)
+ -0.018 (-0.6)  -0.023 (-0.5)
+ -0.007 (-2.0)  -0.004 (-0.6)
+ -0.001 (-0.6)  -0.004 (-0.7)
+ -0.018 (-2.4)  -0.019 (-1.8)
+ -0.019 (-0.8)  -0.019 (-0.6)
+ -0.033 (-0.5)  -0.014 (-0.2)
+ -0.015 (-0.3)  -0.101 (-1.2)
+  +0.068 (1.6)  -0.005 (-0.1)
+ -0.015 (-0.5)  -0.011 (-0.2)
+  +0.077 (1.2)  -0.137 (-1.2)
+ -0.006 (-0.1)   +0.028 (0.3)
+ -0.010 (-0.2)  -0.045 (-0.7)
+  +0.006 (0.2)  -0.011 (-0.2)
+  +0.056 (1.6)   +0.076 (1.2)
+  +0.014 (0.4)  -0.018 (-0.4)
+ -0.066 (-1.2)  -0.043 (-0.6)
+  +0.032 (1.0)   +0.042 (0.8)
+
+== CoG school districts by county, log per capita (31) 
+                               outcome     years           low          high
+      school districts: LT debt issued 2012-2022  +0.001 (0.0) -0.044 (-0.5)
+ school districts: LT debt outstanding 2012-2022  +0.017 (0.4) -0.017 (-0.6)
+      school districts: capital outlay 2012-2022  +0.014 (0.2)  +0.035 (0.6)
+   school districts: cash & securities 2012-2021  +0.020 (0.3) -0.017 (-0.5)
+     school districts: federal revenue 2012-2022  +0.033 (0.5) -0.001 (-0.0)
+    school districts: interest on debt 2012-2022 -0.005 (-0.1) -0.010 (-0.3)
+       school districts: state revenue 2012-2022  +0.011 (0.9) -0.025 (-1.9)
+ high_minus_low
+  -0.045 (-0.3)
+  -0.034 (-0.7)
+   +0.021 (0.2)
+  -0.038 (-0.5)
+  -0.033 (-0.4)
+  -0.005 (-0.1)
+  -0.036 (-2.1)
+
+== F-33 district, log per pupil (31) 
+                                outcome     years           low          high
+                  IDEA special ed (C15) 2012-2023 -0.001 (-0.0) -0.003 (-0.1)
+                          Title I (C14) 2012-2023  +0.006 (0.4)  +0.001 (0.1)
+                         capital outlay 2012-2023 -0.021 (-0.7)  +0.021 (0.7)
+        cash & securities (W01+W31+W61) 2012-2023  +0.028 (1.0)  +0.014 (0.8)
+                  child nutrition (C25) 2012-2023 -0.013 (-0.8) -0.007 (-0.5)
+                     construction (F12) 2012-2023 -0.012 (-0.3)  +0.008 (0.3)
+       district activity receipts (A13) 2012-2023 -0.000 (-0.0)  +0.008 (0.7)
+                employee benefits (Z33) 2012-2023 -0.005 (-0.6) -0.001 (-0.2)
+                    equipment (K09+K10) 2012-2023 -0.015 (-0.6)  +0.023 (1.0)
+                        federal revenue 2012-2023 -0.005 (-0.4)  +0.003 (0.3)
+                    food services (E11) 2012-2023 -0.002 (-0.1)  +0.009 (0.7)
+             from cities/counties (D23) 2012-2023 -0.027 (-1.3) -0.005 (-0.2)
+           general administration (E08) 2012-2023 -0.014 (-1.1)  +0.010 (1.1)
+             instr. staff support (E07) 2012-2023  +0.010 (0.6) -0.009 (-0.8)
+                            instruction 2012-2023 -0.004 (-0.5) -0.002 (-0.4)
+             instruction salaries (V11) 2012-2023  +0.006 (0.5) -0.003 (-0.3)
+                 interest on debt (I86) 2012-2023 -0.010 (-0.5) -0.016 (-1.0)
+           long-term debt issued (_21F) 2012-2023 -0.008 (-0.1) -0.009 (-0.1)
+      long-term debt outstanding (_41F) 2012-2023 -0.029 (-1.4) -0.004 (-0.2)
+         operations & maintenance (V40) 2012-2023  +0.013 (0.8)  +0.013 (1.1)
+                other local taxes (T99) 2012-2023 -0.015 (-1.0) -0.013 (-0.7)
+        parent govt contributions (T02) 2012-2023  +0.010 (0.4) -0.002 (-0.1)
+      payments to charter schools (V92) 2012-2023  +0.002 (0.1) -0.008 (-0.3)
+ payments to other school systems (Q11) 2012-2023  +0.005 (0.4) -0.011 (-1.0)
+      payments to private schools (V91) 2012-2023 -0.015 (-0.5)  +0.013 (0.4)
+            private contributions (U50) 2012-2023  +0.004 (0.1) -0.013 (-0.5)
+                    pupil support (E17) 2012-2023  +0.003 (0.3)  +0.002 (0.3)
+             pupil transportation (V45) 2012-2023 -0.014 (-1.3)  +0.006 (0.7)
+                 salaries & wages (Z32) 2012-2023 -0.003 (-0.4)  +0.001 (0.1)
+            school administration (E09) 2012-2023 -0.004 (-0.3) -0.006 (-0.4)
+             school lunch charges (A09) 2012-2023 -0.006 (-0.3) -0.001 (-0.1)
+               state compensatory (C07) 2012-2023  +0.008 (0.4)  +0.001 (0.0)
+                state formula aid (C01) 2012-2023 -0.001 (-0.1)  +0.011 (1.4)
+                 state special ed (C05) 2012-2023 -0.011 (-0.8) -0.015 (-1.0)
+             state transportation (C06) 2012-2023  +0.001 (0.0) -0.030 (-1.5)
+                     student fees (A15) 2012-2023  +0.010 (0.1) -0.191 (-1.4)
+                       support services 2012-2023  +0.003 (0.3)  +0.005 (0.8)
+                      total expenditure 2012-2023 -0.003 (-0.2)  +0.003 (0.2)
+                          total revenue 2012-2023  +0.002 (0.2)  +0.005 (0.7)
+              tuition from pupils (A07) 2012-2023 -0.003 (-0.2)  +0.001 (0.1)
+ high_minus_low
+  -0.002 (-0.1)
+  -0.005 (-0.3)
+   +0.042 (1.0)
+  -0.014 (-0.4)
+   +0.007 (0.3)
+   +0.020 (0.4)
+   +0.008 (0.5)
+   +0.004 (0.4)
+   +0.038 (1.1)
+   +0.008 (0.5)
+   +0.011 (0.5)
+   +0.023 (0.8)
+   +0.024 (1.5)
+  -0.019 (-1.0)
+   +0.001 (0.1)
+  -0.009 (-0.5)
+  -0.006 (-0.2)
+  -0.000 (-0.0)
+   +0.025 (1.0)
+  -0.000 (-0.0)
+   +0.002 (0.1)
+  -0.012 (-0.5)
+  -0.010 (-0.3)
+  -0.015 (-0.9)
+   +0.028 (0.7)
+  -0.016 (-0.4)
+  -0.001 (-0.1)
+   +0.019 (1.4)
+   +0.004 (0.4)
+  -0.001 (-0.1)
+   +0.005 (0.2)
+  -0.008 (-0.2)
+   +0.012 (1.1)
+  -0.004 (-0.2)
+  -0.030 (-1.1)
+  -0.201 (-1.0)
+   +0.002 (0.2)
+   +0.006 (0.3)
+   +0.003 (0.2)
+   +0.005 (0.2)
+
+== SEDA district (31) 
+                         outcome     years          low         high
+             district SES (SEDA) 2012-2018 +0.005 (1.3) +0.012 (2.9)
+ district test scores (SEDA, SD) 2012-2018 +0.012 (1.8) +0.005 (0.6)
+ high_minus_low
+   +0.006 (1.1)
+  -0.008 (-0.7)
+
+== composition: ACS tract (32) 
+                               outcome     years           low          high
+                  household size (ACS) 2013-2023 -0.011 (-1.4) -0.002 (-0.3)
+ households with children, share (ACS) 2013-2023 -0.008 (-0.9) -0.003 (-0.4)
+                      median age (ACS) 2013-2023  +0.003 (0.4)  +0.002 (0.3)
+    one-person households, share (ACS) 2013-2023  +0.006 (0.8)  +0.011 (1.3)
+                       share 65+ (ACS) 2013-2023  +0.005 (0.9)  +0.005 (1.1)
+                  share under 18 (ACS) 2013-2023 -0.001 (-0.1)  +0.005 (0.7)
+ high_minus_low
+   +0.010 (0.9)
+   +0.005 (0.4)
+  -0.001 (-0.1)
+   +0.004 (0.4)
+   +0.000 (0.0)
+   +0.006 (0.6)
+
+== composition: SOI ZIP (32) 
+                                     outcome     years           low
+        dependents per return (SOI, to 2018) 2012-2018 -0.002 (-0.7)
+ elderly (60+) returns, share (SOI, 2015-18) 2015-2022  +0.003 (0.6)
+       head-of-household filers, share (SOI) 2012-2022 -0.000 (-0.0)
+                individuals per return (SOI) 2012-2022  +0.001 (0.1)
+                   joint filers, share (SOI) 2012-2022 -0.001 (-0.2)
+                       log individuals (SOI) 2012-2022  +0.002 (1.5)
+                           log returns (SOI) 2012-2022  +0.002 (1.6)
+                  single filers, share (SOI) 2012-2022  +0.001 (0.1)
+          high high_minus_low
+  +0.003 (1.1)   +0.005 (1.3)
+ -0.001 (-0.3)  -0.004 (-0.7)
+ -0.002 (-0.4)  -0.002 (-0.3)
+  +0.001 (0.2)   +0.001 (0.1)
+ -0.008 (-1.7)  -0.007 (-1.0)
+ -0.005 (-4.1)  -0.006 (-4.0)
+ -0.005 (-4.2)  -0.007 (-4.1)
+  +0.014 (2.0)   +0.013 (1.4)
+
+Counts of |t| > 1.96 by series and source:
+                                                    src         series  k sig
+ CoG all local govts, census years, log per capita (31)   low-tax side 26   1
+ CoG all local govts, census years, log per capita (31)  high-tax side 26   2
+ CoG all local govts, census years, log per capita (31) high minus low 26   0
+    CoG school districts by county, log per capita (31)   low-tax side  7   0
+    CoG school districts by county, log per capita (31)  high-tax side  7   0
+    CoG school districts by county, log per capita (31) high minus low  7   1
+                      F-33 district, log per pupil (31)   low-tax side 40   0
+                      F-33 district, log per pupil (31)  high-tax side 40   0
+                      F-33 district, log per pupil (31) high minus low 40   0
+                                     SEDA district (31)   low-tax side  2   0
+                                     SEDA district (31)  high-tax side  2   1
+                                     SEDA district (31) high minus low  2   0
+                            composition: ACS tract (32)   low-tax side  6   0
+                            composition: ACS tract (32)  high-tax side  6   0
+                            composition: ACS tract (32) high minus low  6   0
+                              composition: SOI ZIP (32)   low-tax side  8   0
+                              composition: SOI ZIP (32)  high-tax side  8   3
+                              composition: SOI ZIP (32) high minus low  8   2
+                                              core (29)   low-tax side 11   0
+                                              core (29)  high-tax side 11   3
+                                              core (29) high minus low 11   0
+ median_abs
+      0.032
+      0.016
+      0.035
+      0.014
+      0.017
+      0.034
+      0.006
+      0.007
+      0.008
+      0.009
+      0.008
+      0.007
+      0.006
+      0.004
+      0.004
+      0.001
+      0.004
+      0.006
+      0.003
+      0.005
+      0.005
+
+All outcomes:
+         series   k sig median_abs
+   low-tax side 100   1      0.007
+  high-tax side 100   9      0.008
+ high minus low 100   3      0.009

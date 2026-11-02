@@ -17,6 +17,8 @@ tags: synthesis, SALT cap, design assessment
   ([by component](../2026-10-21-capitalisation-by-component/README.md)). Within states the decline loads on the income-tax part and tracks price level.
 - **Assessment:** ratios rose ≈ 3% per SD; regressivity flat.
 - **At borders:** the rate gap narrowed by about a third, through prices and assessment ([border](../2026-10-21-border-rate-gaps-over-time/README.md)).
+  Update 2026-10-28: the narrowing is a relative price gain on the high-rate side, the opposite sign to capitalisation, and it is
+  larger where the high-rate side is also the high-exposure side ([border sides by exposure](../2026-10-28-border-sides-by-exposure/README.md)).
 
 | Design | Main threat | Trust |
 |---|---|---|

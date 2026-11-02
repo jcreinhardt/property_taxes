@@ -5,3 +5,7 @@ Household counts, tenure, generations and surnames vs the ACS; street-address un
 `output/validation/dataaxle/<topic>/` and `output/dataaxle_exploration/full*/` (Bouchet batch jobs; the SQL sits next to
 the CSVs). `pums_mv.sh` builds the ACS PUMS tenure counts. Findings: `text/data_exploration/dataaxle.md` §4.1–4.8 and the
 `notebook/2026-10-16-dataaxle-*` entries.
+
+Data Axle vs IRS/SOI interstate moves between CA, TX, NY and FL (`soi_vs_dataaxle_moves_4states.R`; inputs
+`output/validation/dataaxle/soi_vs_dataaxle/da_mig4_{1pct,full}.csv` from the SQL next to them; `DA_FILE=1pct` for the sample):
+capture of SOI mover returns by same-`family_id` moves, by year, pair and origin; `notebook/2026-10-29-dataaxle-vs-soi-interstate-moves`.

@@ -19,9 +19,24 @@ Units (county, ZIP, state, district, parcel) with higher pre-period SALT exposur
 | `11_parcel_panel_outcomes.R` | parcel-level bills, AV, rates on the 1% panel (also the border DDD) |
 | `12_revenue_outside_option.R` | county revenue × share of tracts with a cheaper cross-border option |
 | `13_soi_state_six.R` | SOI state files: out-migration from the six Diop & Green "high-SALT" states (CA NY CT PA MA IL) vs the rest, state + year FE (the variation the other scripts absorb) |
+| `14_simulated_instrument.R` | prices, revenue (school districts, county governments) and SOI migration on the simulated instrument (`build/exposure/06`): Z1, Z2, observed SOI loss (OLS) and SOI instrumented by Z1; county variation, ACS-identified counties and all counties with PUMA fill-in |
+| `18_rents_altos.R` (`ALTOS_INDEX=repeat` → `_repeat` outputs on the repeat-listing index of `build/altos/03`, ZIP specs 1, 2, 6) | **asking rents** (Altos listings, `build/altos`): log rent at a fixed type x bedroom mix on the lost subsidy per owner (total, and the three components), ZIP and county, with / without the 2012 rent level x year |
+| `15_simulated_instrument_migration.R` | the same for SOI migration counts (returns and people), in-migration and net migration at county level, and state-level out-of-state / in-from-other-state / net interstate rates (counties summed, state + year FE, population weights) |
+| `17_housing_stock.R` | housing stock: log residential parcels and new-construction sales (roll, `build/corelogic/10`); log units, vacancy (all, for rent, for sale, seasonal), owner share, median year built (ACS 1-year and 5-year county panels, `build/acs/07`) |
+| `17_state_did_big_four.R` | state-level exposure × year event studies (net, out, in rates; net to the big four / to the other 46 from the dyads) for all 50 states, CA NY FL TX only, the other 46, and all 50 with big-four × year FE; exposure per return, per owner, SALT/AGI 2017, CA/NY dummy |
+| `18_state_did_big_four_dataaxle.R` | the same on Data Axle same-family_id moves (1% family sample, `output/validation/dataaxle/soi_vs_dataaxle/da_state_pairs_1pct.csv`), pp of linked families, 2012-2021 |
+| `19_net_rate_change_dyads.R` | treatment = 2016→18 change in the net-of-federal-deduction state income tax rate (STC collections / AGI minus m × deducted income taxes / AGI; also TAXSIM cap burden): state-to-state dyads with dyad + year FE and the state event studies, all / big four / mixed / other 46 |
 | `20_soi_state_net_migration.R` | SOI state files: states ranked by net interstate migration as a share of the filing population, 2012–22, by period (pre-cap, 2018–19, COVID); descriptive, no regression |
 | `21_soi_state_migration_taxes.R` | net migration rates (from `20`) on effective state income tax rates (`build/exposure/07`): state + year FE, lags, first and long differences, reform case studies |
 
+Numbers 17 and 18 were taken twice by sessions running in parallel: `17_housing_stock` / `18_rents_altos` (outputs `17_housing_stock*`, `d18_*`)
+and `17_state_did_big_four` / `18_state_did_big_four_dataaxle` (outputs `c17_*`, `c18_*`). File names are distinct.
+
+`16_diop_green_table7.R` (Diop & Green Table 7 / Table 6 on state-to-state dyads without their controls) was removed on
+2026-10-28; results and figures in `notebook/2026-10-27-diop-green-table7-replication`, code in commit 73f3a8e
+(`build/soi/10-11`, removed with it, are back because `17-19` read their panels).
 Notebook: `notebook/2026-10-21-capitalisation-by-component`, `notebook/2026-10-21-migration-nulls`,
-`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-soi-state-net-migration-ranking`, `notebook/2026-10-27-state-tax-changes-and-migration`. Superseded versions
+`notebook/2026-10-27-diop-green-reconciliation`, `notebook/2026-10-27-diop-green-table7-replication`, `notebook/2026-10-29-state-did-big-four`, `notebook/2026-10-29-net-rate-change-treatment`,
+`notebook/2026-10-27-simulated-instrument-outcomes`, `notebook/2026-10-28-housing-stock`, `notebook/2026-10-27-soi-state-net-migration-ranking`,
+`notebook/2026-10-27-state-tax-changes-and-migration`. Superseded versions
 (`c25`, `c27`, `b5`, `a6`) are in `code/archive/2026-10-superseded/`.

@@ -1,0 +1,687 @@
+Design B grid: Z x year + Z x E x year + E x year + log density x year | unit FE + pair x year FE (pair x side x year for both sides), SE by county.
+ post - pre in SD units of the outcome: interaction per SD of exposure (continuous) or high vs low (binary); main term per 10 mi closer or near. Cells: estimate (t).
+
+== interaction | low side, all pairs 
+                              outcome -distance / 10 mi | binary
+                log median sale price                0.008 (0.6)
+              log tax bill per parcel              -0.015 (-1.3)
+                   effective tax rate              -0.076 (-2.3)
+                sales per 100 parcels                0.055 (1.7)
+          log median home value (ACS)              -0.017 (-2.3)
+                 log population (ACS)              -0.012 (-3.2)
+            move-out rate (Data Axle)                0.018 (1.1)
+  log district property tax per pupil                0.014 (1.3)
+      log district spending per pupil                0.031 (2.2)
+               log district enrolment              -0.007 (-1.8)
+ log county school property tax (CoG)              -0.010 (-1.0)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.020 (2.3)         -0.001 (-0.0)           0.033 (1.8)
+              -0.010 (-2.0)         -0.026 (-0.9)         -0.018 (-1.6)
+              -0.064 (-3.1)         -0.093 (-1.4)         -0.108 (-2.6)
+                0.067 (3.2)           0.108 (1.1)           0.135 (2.4)
+              -0.010 (-2.9)         -0.021 (-1.3)         -0.013 (-1.7)
+              -0.015 (-3.3)         -0.017 (-1.5)         -0.028 (-2.4)
+              -0.005 (-0.4)           0.069 (1.6)           0.001 (0.0)
+                0.013 (1.6)           0.056 (1.9)           0.035 (1.8)
+                0.017 (1.9)           0.070 (1.5)           0.031 (1.4)
+              -0.007 (-2.6)         -0.028 (-2.3)         -0.015 (-1.8)
+              -0.007 (-0.5)         -0.029 (-0.7)         -0.030 (-0.6)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.020 (0.7)           0.039 (1.6)        -0.014 (-0.3)
+         -0.028 (-1.1)         -0.026 (-2.1)        -0.053 (-1.1)
+         -0.154 (-2.1)         -0.133 (-2.4)        -0.143 (-1.8)
+           0.133 (1.4)           0.170 (2.6)        -0.014 (-0.1)
+         -0.034 (-2.0)         -0.021 (-2.2)        -0.021 (-1.0)
+         -0.018 (-1.5)         -0.023 (-1.6)        -0.005 (-0.4)
+           0.063 (1.4)           0.013 (0.4)          0.041 (0.8)
+           0.042 (1.4)           0.042 (1.7)          0.056 (1.5)
+           0.050 (1.4)           0.014 (0.6)          0.168 (2.7)
+         -0.015 (-1.5)         -0.007 (-0.8)        -0.046 (-2.9)
+         -0.028 (-0.9)         -0.027 (-0.6)        -0.075 (-0.9)
+ near < 5 mi | contin
+          0.037 (2.4)
+        -0.014 (-1.5)
+        -0.108 (-3.1)
+          0.113 (2.5)
+        -0.011 (-1.8)
+        -0.030 (-3.0)
+        -0.023 (-0.6)
+          0.043 (2.0)
+          0.051 (2.0)
+        -0.020 (-2.7)
+        -0.103 (-0.9)
+
+== interaction | both sides, all pair-sides 
+                              outcome -distance / 10 mi | binary
+                log median sale price              -0.011 (-1.3)
+              log tax bill per parcel              -0.010 (-1.2)
+                   effective tax rate              -0.012 (-0.7)
+                sales per 100 parcels                0.013 (0.6)
+          log median home value (ACS)              -0.007 (-1.5)
+                 log population (ACS)              -0.006 (-1.9)
+            move-out rate (Data Axle)                0.016 (1.5)
+  log district property tax per pupil                0.000 (0.0)
+      log district spending per pupil                0.009 (1.0)
+               log district enrolment              -0.001 (-0.5)
+ log county school property tax (CoG)              -0.006 (-0.9)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.003 (0.3)         -0.013 (-0.6)           0.022 (0.9)
+              -0.005 (-2.1)         -0.022 (-0.9)         -0.015 (-1.7)
+              -0.018 (-1.1)         -0.032 (-0.7)         -0.068 (-1.9)
+                0.017 (0.9)         -0.007 (-0.1)           0.047 (1.2)
+              -0.001 (-0.4)           0.003 (0.3)           0.000 (0.0)
+              -0.004 (-1.3)         -0.008 (-0.9)         -0.013 (-1.8)
+              -0.005 (-0.7)           0.057 (1.8)           0.005 (0.2)
+                0.001 (0.4)           0.019 (1.2)           0.014 (1.9)
+                0.003 (0.4)           0.018 (0.7)           0.010 (0.7)
+              -0.001 (-0.8)         -0.001 (-0.2)         -0.002 (-0.4)
+              -0.006 (-0.8)           0.003 (0.1)           0.013 (0.5)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+         -0.034 (-1.5)           0.001 (0.0)          0.012 (0.4)
+         -0.017 (-0.8)         -0.014 (-1.6)        -0.048 (-1.4)
+         -0.004 (-0.1)         -0.036 (-0.9)        -0.112 (-2.6)
+           0.011 (0.2)           0.048 (1.0)        -0.041 (-0.6)
+         -0.006 (-0.6)           0.000 (0.0)          0.004 (0.3)
+           0.002 (0.2)         -0.006 (-0.7)        -0.004 (-0.4)
+           0.051 (1.8)           0.004 (0.2)          0.015 (0.5)
+           0.009 (0.6)           0.003 (0.4)          0.021 (1.0)
+           0.015 (0.6)         -0.009 (-0.6)          0.083 (2.2)
+           0.000 (0.0)           0.003 (0.8)        -0.014 (-1.4)
+         -0.010 (-0.6)         -0.014 (-0.7)        -0.027 (-0.6)
+ near < 5 mi | contin
+          0.035 (1.6)
+        -0.012 (-1.3)
+        -0.086 (-2.6)
+          0.069 (2.0)
+        -0.002 (-0.3)
+        -0.017 (-2.8)
+        -0.018 (-0.8)
+          0.018 (2.2)
+          0.031 (2.3)
+        -0.008 (-2.4)
+        -0.003 (-0.1)
+
+== interaction | low side, density < 5,000/sq mi 
+                              outcome -distance / 10 mi | binary
+                log median sale price                0.014 (1.0)
+              log tax bill per parcel                0.004 (0.4)
+                   effective tax rate              -0.033 (-1.0)
+                sales per 100 parcels                0.017 (0.6)
+          log median home value (ACS)              -0.001 (-0.1)
+                 log population (ACS)              -0.002 (-0.5)
+            move-out rate (Data Axle)                0.007 (0.4)
+  log district property tax per pupil                0.013 (1.2)
+      log district spending per pupil                0.034 (2.1)
+               log district enrolment              -0.007 (-1.8)
+ log county school property tax (CoG)              -0.011 (-1.0)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.023 (1.9)           0.005 (0.2)           0.028 (1.1)
+              -0.002 (-0.4)           0.006 (0.3)         -0.003 (-0.2)
+              -0.038 (-1.5)         -0.000 (-0.0)         -0.033 (-0.8)
+                0.051 (2.1)           0.018 (0.2)           0.093 (1.6)
+              -0.004 (-0.7)           0.003 (0.2)           0.004 (0.4)
+              -0.014 (-2.6)         -0.004 (-0.3)         -0.024 (-1.8)
+              -0.007 (-0.6)           0.029 (0.7)         -0.007 (-0.3)
+                0.015 (1.5)           0.059 (1.8)           0.047 (1.7)
+                0.019 (2.0)           0.081 (1.5)           0.039 (1.6)
+              -0.007 (-2.6)         -0.033 (-2.5)         -0.018 (-2.1)
+              -0.008 (-0.5)         -0.032 (-0.7)         -0.034 (-0.6)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.018 (0.6)           0.038 (1.3)          0.033 (1.0)
+           0.010 (0.4)         -0.009 (-0.6)        -0.002 (-0.1)
+         -0.023 (-0.3)         -0.051 (-0.9)        -0.080 (-1.5)
+           0.026 (0.3)           0.133 (1.8)        -0.006 (-0.1)
+           0.006 (0.3)         -0.004 (-0.4)        -0.006 (-0.3)
+           0.010 (0.7)         -0.016 (-1.1)        -0.013 (-0.8)
+           0.034 (0.8)           0.001 (0.0)          0.034 (0.7)
+           0.042 (1.3)           0.050 (1.6)          0.056 (1.3)
+           0.050 (1.2)           0.014 (0.6)          0.193 (2.6)
+         -0.015 (-1.3)         -0.006 (-0.6)        -0.051 (-2.9)
+         -0.030 (-0.9)         -0.027 (-0.6)        -0.081 (-1.0)
+ near < 5 mi | contin
+          0.044 (2.3)
+          0.003 (0.2)
+        -0.058 (-1.8)
+          0.096 (2.1)
+          0.003 (0.3)
+        -0.027 (-1.7)
+        -0.009 (-0.4)
+          0.051 (1.7)
+          0.058 (2.0)
+        -0.025 (-2.9)
+        -0.116 (-1.0)
+
+== interaction | low side, density < 1,000/sq mi 
+                              outcome -distance / 10 mi | binary
+                log median sale price                0.005 (0.4)
+              log tax bill per parcel                0.003 (0.5)
+                   effective tax rate              -0.007 (-0.5)
+                sales per 100 parcels                0.021 (0.7)
+          log median home value (ACS)              -0.004 (-0.7)
+                 log population (ACS)              -0.005 (-0.8)
+            move-out rate (Data Axle)                0.019 (0.9)
+  log district property tax per pupil                0.008 (0.5)
+      log district spending per pupil                0.041 (1.9)
+               log district enrolment              -0.011 (-1.9)
+ log county school property tax (CoG)              -0.017 (-0.7)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.013 (1.4)           0.013 (0.4)           0.019 (0.8)
+              -0.001 (-0.1)           0.004 (0.2)         -0.004 (-0.4)
+              -0.015 (-1.5)         -0.016 (-0.4)         -0.021 (-0.9)
+                0.051 (2.3)           0.078 (0.8)           0.105 (1.5)
+              -0.002 (-0.4)         -0.007 (-0.4)           0.006 (0.5)
+              -0.016 (-2.6)         -0.003 (-0.2)         -0.021 (-1.2)
+              -0.001 (-0.1)           0.046 (0.8)           0.006 (0.2)
+                0.030 (1.9)           0.063 (1.3)           0.124 (2.2)
+                0.030 (2.2)           0.122 (1.6)           0.089 (1.9)
+              -0.009 (-2.2)         -0.055 (-2.8)         -0.029 (-2.2)
+              -0.020 (-0.4)         -0.047 (-0.4)         -0.079 (-0.4)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.001 (0.0)           0.018 (0.7)          0.013 (0.3)
+           0.009 (0.5)           0.000 (0.0)          0.004 (0.2)
+         -0.012 (-0.3)         -0.022 (-0.8)        -0.030 (-0.6)
+           0.066 (0.7)           0.148 (2.0)          0.018 (0.1)
+         -0.011 (-0.7)         -0.000 (-0.0)        -0.027 (-1.2)
+         -0.012 (-0.6)         -0.020 (-0.8)        -0.021 (-0.9)
+           0.060 (1.1)           0.014 (0.4)          0.028 (0.4)
+           0.020 (0.5)           0.092 (1.8)          0.069 (1.1)
+           0.076 (1.3)           0.027 (0.7)          0.247 (2.3)
+         -0.026 (-1.7)         -0.005 (-0.4)        -0.082 (-3.0)
+         -0.039 (-0.6)         -0.065 (-0.5)        -0.114 (-0.6)
+ near < 5 mi | contin
+          0.038 (1.9)
+        -0.008 (-0.8)
+        -0.054 (-2.5)
+          0.107 (1.6)
+        -0.008 (-0.6)
+        -0.043 (-2.2)
+        -0.011 (-0.4)
+          0.148 (2.1)
+          0.121 (2.1)
+        -0.049 (-2.8)
+        -0.262 (-0.6)
+
+== interaction | low side, rural 45% 
+                              outcome -distance / 10 mi | binary
+                log median sale price                0.050 (2.0)
+              log tax bill per parcel              -0.004 (-0.3)
+                   effective tax rate              -0.192 (-3.3)
+                sales per 100 parcels                0.062 (1.5)
+          log median home value (ACS)              -0.011 (-0.9)
+                 log population (ACS)              -0.012 (-1.9)
+            move-out rate (Data Axle)              -0.050 (-2.1)
+  log district property tax per pupil              -0.001 (-0.0)
+      log district spending per pupil                0.055 (1.7)
+               log district enrolment              -0.010 (-1.4)
+ log county school property tax (CoG)              -0.037 (-2.5)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.059 (2.4)           0.068 (1.3)           0.090 (1.6)
+              -0.025 (-2.0)           0.015 (0.5)         -0.040 (-1.3)
+              -0.216 (-3.6)         -0.258 (-2.2)         -0.332 (-2.4)
+                0.090 (2.7)           0.098 (1.0)           0.170 (1.7)
+              -0.028 (-2.8)         -0.016 (-0.7)         -0.047 (-2.5)
+              -0.028 (-3.6)         -0.018 (-1.1)         -0.051 (-2.0)
+              -0.057 (-2.2)         -0.094 (-1.4)         -0.087 (-1.4)
+              -0.011 (-0.5)           0.047 (0.7)           0.087 (1.0)
+                0.047 (1.1)           0.139 (1.3)           0.193 (1.3)
+              -0.009 (-1.1)         -0.043 (-1.9)         -0.008 (-0.3)
+              -0.050 (-1.3)         -0.076 (-1.4)         -0.108 (-0.8)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.109 (1.9)           0.084 (1.4)          0.067 (1.4)
+         -0.012 (-0.3)         -0.063 (-1.8)        -0.008 (-0.2)
+         -0.413 (-2.9)         -0.400 (-2.6)        -0.282 (-2.7)
+           0.165 (1.3)           0.236 (2.3)          0.029 (0.3)
+         -0.022 (-0.7)         -0.053 (-2.5)        -0.027 (-1.0)
+         -0.009 (-0.4)         -0.018 (-0.7)        -0.037 (-1.9)
+         -0.074 (-1.1)         -0.033 (-0.6)        -0.105 (-1.7)
+         -0.007 (-0.1)         -0.053 (-0.7)          0.050 (0.7)
+           0.088 (1.2)         -0.006 (-0.1)          0.300 (2.0)
+         -0.019 (-1.1)           0.016 (1.0)        -0.062 (-2.0)
+         -0.108 (-1.9)         -0.157 (-1.2)        -0.118 (-1.4)
+ near < 5 mi | contin
+          0.113 (2.1)
+        -0.063 (-2.2)
+        -0.395 (-3.0)
+          0.160 (1.7)
+        -0.054 (-2.8)
+        -0.075 (-3.1)
+        -0.094 (-1.8)
+          0.116 (1.1)
+          0.424 (1.7)
+        -0.044 (-0.9)
+        -0.190 (-1.0)
+
+== main | low side, all pairs 
+                              outcome -distance / 10 mi | binary
+                log median sale price              -0.009 (-1.0)
+              log tax bill per parcel                0.005 (0.7)
+                   effective tax rate                0.045 (1.9)
+                sales per 100 parcels              -0.017 (-0.8)
+          log median home value (ACS)                0.003 (0.7)
+                 log population (ACS)                0.000 (0.1)
+            move-out rate (Data Axle)              -0.006 (-0.4)
+  log district property tax per pupil              -0.006 (-1.0)
+      log district spending per pupil              -0.011 (-1.4)
+               log district enrolment                0.001 (0.4)
+ log county school property tax (CoG)              -0.002 (-0.4)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+              -0.001 (-0.2)         -0.021 (-0.9)         -0.014 (-0.9)
+              -0.002 (-0.3)           0.017 (1.0)           0.004 (0.3)
+                0.003 (0.2)           0.104 (2.0)           0.044 (1.1)
+                0.017 (0.9)         -0.038 (-0.6)           0.028 (0.5)
+              -0.005 (-1.6)           0.005 (0.4)         -0.007 (-0.9)
+              -0.007 (-2.7)         -0.002 (-0.2)         -0.013 (-2.0)
+              -0.001 (-0.1)         -0.045 (-1.1)         -0.016 (-0.5)
+                0.001 (0.1)         -0.032 (-1.5)         -0.005 (-0.3)
+                0.003 (0.5)         -0.020 (-0.7)           0.015 (0.8)
+              -0.003 (-1.5)           0.007 (0.7)         -0.008 (-1.5)
+              -0.007 (-0.7)         -0.010 (-0.4)         -0.027 (-0.7)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+         -0.008 (-0.4)           0.009 (0.7)        -0.026 (-1.2)
+           0.008 (0.4)         -0.007 (-0.6)          0.026 (1.4)
+           0.072 (1.4)         -0.018 (-0.6)          0.118 (2.5)
+         -0.038 (-0.7)           0.044 (0.8)          0.038 (0.6)
+         -0.002 (-0.2)         -0.020 (-2.7)          0.001 (0.0)
+         -0.009 (-1.0)         -0.020 (-3.1)          0.003 (0.3)
+         -0.038 (-1.2)         -0.012 (-0.5)        -0.024 (-0.5)
+         -0.030 (-1.6)         -0.007 (-0.4)        -0.037 (-1.3)
+         -0.022 (-1.0)           0.000 (0.0)        -0.064 (-1.6)
+           0.006 (0.9)         -0.000 (-0.1)          0.015 (1.2)
+         -0.007 (-0.4)         -0.023 (-0.8)        -0.005 (-0.2)
+ near < 5 mi | contin
+        -0.015 (-0.9)
+          0.003 (0.1)
+          0.016 (0.3)
+          0.053 (1.0)
+        -0.012 (-1.0)
+        -0.005 (-0.6)
+        -0.016 (-0.5)
+        -0.009 (-0.5)
+          0.019 (0.8)
+        -0.008 (-1.0)
+        -0.059 (-0.9)
+
+== main | both sides, all pair-sides 
+                              outcome -distance / 10 mi | binary
+                log median sale price                0.005 (0.8)
+              log tax bill per parcel                0.004 (0.7)
+                   effective tax rate                0.002 (0.1)
+                sales per 100 parcels                0.002 (0.1)
+          log median home value (ACS)              -0.002 (-0.6)
+                 log population (ACS)              -0.002 (-0.9)
+            move-out rate (Data Axle)              -0.016 (-2.0)
+  log district property tax per pupil              -0.004 (-1.0)
+      log district spending per pupil              -0.005 (-1.1)
+               log district enrolment              -0.001 (-0.9)
+ log county school property tax (CoG)              -0.002 (-0.6)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.005 (0.9)           0.004 (0.2)           0.008 (0.4)
+              -0.001 (-0.3)           0.004 (0.3)         -0.006 (-0.5)
+              -0.012 (-1.0)         -0.004 (-0.1)         -0.035 (-0.8)
+                0.015 (1.1)           0.043 (0.9)           0.055 (1.4)
+              -0.006 (-2.1)         -0.016 (-1.6)         -0.016 (-2.4)
+              -0.006 (-3.3)         -0.009 (-1.2)         -0.016 (-3.2)
+              -0.012 (-1.7)         -0.062 (-2.5)         -0.040 (-1.9)
+              -0.003 (-1.2)         -0.020 (-1.6)         -0.011 (-1.4)
+              -0.001 (-0.3)         -0.010 (-0.6)         -0.001 (-0.1)
+              -0.002 (-1.9)         -0.007 (-1.5)         -0.009 (-2.6)
+              -0.005 (-1.3)         -0.020 (-1.7)         -0.014 (-0.9)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.027 (1.5)           0.020 (1.6)        -0.031 (-1.5)
+           0.006 (0.4)         -0.003 (-0.3)          0.021 (1.3)
+         -0.029 (-0.7)         -0.046 (-1.7)          0.067 (2.0)
+           0.013 (0.3)           0.033 (1.0)          0.051 (1.1)
+         -0.015 (-1.7)         -0.019 (-3.1)        -0.014 (-1.1)
+         -0.015 (-2.3)         -0.017 (-3.8)        -0.004 (-0.6)
+         -0.053 (-2.5)         -0.033 (-1.9)        -0.028 (-1.0)
+         -0.022 (-1.9)         -0.018 (-2.3)        -0.022 (-1.4)
+         -0.016 (-1.1)         -0.009 (-0.8)        -0.054 (-2.1)
+         -0.003 (-0.6)         -0.003 (-1.0)          0.003 (0.5)
+         -0.007 (-0.7)         -0.014 (-1.2)        -0.026 (-1.4)
+ near < 5 mi | contin
+        -0.009 (-0.6)
+        -0.003 (-0.1)
+        -0.015 (-0.5)
+          0.052 (1.3)
+        -0.014 (-1.6)
+        -0.012 (-2.0)
+        -0.029 (-1.2)
+        -0.013 (-1.2)
+        -0.012 (-0.7)
+        -0.005 (-1.1)
+        -0.031 (-1.1)
+
+== main | low side, density < 5,000/sq mi 
+                              outcome -distance / 10 mi | binary
+                log median sale price              -0.006 (-0.5)
+              log tax bill per parcel              -0.002 (-0.4)
+                   effective tax rate                0.018 (0.8)
+                sales per 100 parcels                0.000 (0.0)
+          log median home value (ACS)              -0.006 (-1.1)
+                 log population (ACS)              -0.005 (-1.6)
+            move-out rate (Data Axle)                0.001 (0.1)
+  log district property tax per pupil              -0.006 (-0.9)
+      log district spending per pupil              -0.012 (-1.4)
+               log district enrolment                0.001 (0.5)
+ log county school property tax (CoG)              -0.003 (-0.5)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.004 (0.7)         -0.005 (-0.2)           0.003 (0.2)
+              -0.002 (-0.4)         -0.007 (-0.5)         -0.005 (-0.5)
+              -0.003 (-0.3)           0.003 (0.1)         -0.009 (-0.4)
+                0.018 (1.0)           0.024 (0.5)           0.046 (0.9)
+              -0.007 (-2.3)         -0.017 (-1.5)         -0.018 (-2.7)
+              -0.009 (-3.3)         -0.011 (-1.1)         -0.016 (-2.1)
+                0.002 (0.2)         -0.001 (-0.0)           0.011 (0.4)
+                0.002 (0.3)         -0.033 (-1.4)         -0.002 (-0.1)
+                0.003 (0.5)         -0.024 (-0.7)           0.015 (0.7)
+              -0.002 (-1.3)           0.008 (0.9)         -0.008 (-1.4)
+              -0.008 (-0.7)         -0.011 (-0.5)         -0.030 (-0.8)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+         -0.007 (-0.3)           0.010 (0.6)        -0.024 (-0.9)
+         -0.008 (-0.5)         -0.006 (-0.6)          0.003 (0.2)
+           0.012 (0.3)         -0.014 (-0.6)          0.050 (1.3)
+         -0.009 (-0.2)           0.026 (0.6)          0.041 (0.8)
+         -0.021 (-1.7)         -0.022 (-2.9)        -0.016 (-1.3)
+         -0.022 (-2.3)         -0.021 (-3.4)        -0.002 (-0.2)
+         -0.011 (-0.3)           0.002 (0.1)        -0.027 (-0.8)
+         -0.031 (-1.5)         -0.005 (-0.3)        -0.038 (-1.3)
+         -0.026 (-1.0)         -0.004 (-0.2)        -0.076 (-1.7)
+           0.008 (1.0)           0.001 (0.3)          0.019 (1.5)
+         -0.008 (-0.4)         -0.024 (-0.8)        -0.008 (-0.2)
+ near < 5 mi | contin
+        -0.001 (-0.1)
+          0.002 (0.1)
+        -0.002 (-0.1)
+          0.053 (1.0)
+        -0.022 (-2.8)
+        -0.012 (-1.3)
+        -0.015 (-0.6)
+        -0.008 (-0.4)
+          0.020 (0.7)
+        -0.006 (-0.7)
+        -0.067 (-0.9)
+
+== main | low side, density < 1,000/sq mi 
+                              outcome -distance / 10 mi | binary
+                log median sale price              -0.001 (-0.1)
+              log tax bill per parcel              -0.002 (-0.4)
+                   effective tax rate              -0.008 (-0.9)
+                sales per 100 parcels              -0.003 (-0.2)
+          log median home value (ACS)              -0.001 (-0.1)
+                 log population (ACS)              -0.001 (-0.2)
+            move-out rate (Data Axle)                0.001 (0.1)
+  log district property tax per pupil              -0.003 (-0.4)
+      log district spending per pupil              -0.015 (-1.3)
+               log district enrolment                0.004 (1.1)
+ log county school property tax (CoG)              -0.001 (-0.2)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.003 (0.4)         -0.014 (-0.5)         -0.009 (-0.5)
+              -0.001 (-0.3)         -0.005 (-0.5)         -0.005 (-0.5)
+              -0.014 (-1.7)         -0.018 (-0.6)         -0.026 (-1.2)
+                0.015 (0.9)         -0.024 (-0.6)           0.021 (0.4)
+              -0.002 (-0.8)           0.000 (0.0)         -0.001 (-0.1)
+              -0.006 (-1.6)           0.006 (0.5)           0.004 (0.4)
+                0.008 (0.7)           0.023 (0.6)           0.042 (1.3)
+                0.007 (0.8)         -0.026 (-0.9)           0.029 (1.0)
+                0.005 (0.6)         -0.029 (-0.7)           0.030 (1.0)
+              -0.001 (-0.3)           0.021 (1.6)         -0.004 (-0.4)
+              -0.013 (-0.5)         -0.009 (-0.3)         -0.053 (-0.4)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+           0.004 (0.1)           0.007 (0.4)        -0.015 (-0.4)
+         -0.002 (-0.2)           0.001 (0.1)        -0.004 (-0.3)
+         -0.025 (-1.0)         -0.035 (-1.7)        -0.011 (-0.3)
+         -0.021 (-0.5)           0.031 (0.6)        -0.012 (-0.3)
+         -0.004 (-0.4)         -0.008 (-1.0)          0.009 (0.6)
+         -0.006 (-0.5)         -0.013 (-1.2)          0.023 (1.2)
+         -0.007 (-0.2)           0.017 (0.5)          0.016 (0.3)
+         -0.026 (-1.1)           0.009 (0.4)        -0.029 (-0.7)
+         -0.032 (-1.1)         -0.001 (-0.1)        -0.080 (-1.2)
+           0.014 (1.5)           0.006 (0.8)          0.032 (1.6)
+         -0.006 (-0.2)         -0.042 (-0.5)        -0.001 (-0.0)
+ near < 5 mi | contin
+        -0.005 (-0.2)
+        -0.004 (-0.5)
+        -0.033 (-1.3)
+          0.007 (0.1)
+        -0.004 (-0.4)
+          0.009 (0.6)
+          0.026 (0.8)
+          0.031 (0.8)
+          0.043 (1.1)
+        -0.007 (-0.5)
+        -0.139 (-0.6)
+
+== main | low side, rural 45% 
+                              outcome -distance / 10 mi | binary
+                log median sale price              -0.017 (-1.2)
+              log tax bill per parcel                0.003 (0.3)
+                   effective tax rate                0.067 (2.1)
+                sales per 100 parcels              -0.009 (-0.4)
+          log median home value (ACS)              -0.003 (-0.4)
+                 log population (ACS)              -0.001 (-0.2)
+            move-out rate (Data Axle)                0.031 (2.1)
+  log district property tax per pupil              -0.016 (-1.4)
+      log district spending per pupil              -0.025 (-1.6)
+               log district enrolment                0.003 (0.8)
+ log county school property tax (CoG)              -0.002 (-0.3)
+ -distance / 10 mi | contin near < 10 mi | binary near < 10 mi | contin
+                0.015 (1.7)         -0.031 (-1.1)           0.013 (0.6)
+              -0.007 (-1.1)         -0.018 (-1.0)         -0.026 (-1.7)
+              -0.054 (-3.4)           0.059 (1.2)         -0.109 (-2.5)
+                0.037 (1.3)         -0.010 (-0.2)           0.062 (1.0)
+              -0.014 (-3.1)         -0.011 (-0.8)         -0.027 (-2.6)
+              -0.013 (-3.2)         -0.001 (-0.1)         -0.018 (-1.6)
+                0.000 (0.0)           0.055 (1.7)           0.004 (0.1)
+              -0.020 (-1.8)         -0.055 (-1.5)         -0.010 (-0.2)
+                0.005 (0.3)         -0.030 (-0.5)           0.066 (1.3)
+              -0.001 (-0.3)           0.011 (0.8)         -0.001 (-0.1)
+              -0.029 (-1.3)         -0.008 (-0.3)         -0.067 (-0.9)
+ near < 20 mi | binary near < 20 mi | contin near < 5 mi | binary
+         -0.004 (-0.1)           0.052 (1.9)        -0.038 (-1.2)
+           0.006 (0.3)         -0.017 (-0.9)          0.004 (0.2)
+           0.084 (1.4)         -0.155 (-2.8)          0.128 (2.5)
+           0.002 (0.0)           0.115 (1.6)          0.005 (0.1)
+         -0.013 (-0.9)         -0.034 (-2.7)        -0.005 (-0.3)
+         -0.015 (-1.3)         -0.022 (-1.9)        -0.002 (-0.1)
+           0.037 (1.1)           0.008 (0.2)          0.049 (1.3)
+         -0.053 (-1.6)         -0.076 (-2.0)        -0.066 (-1.3)
+         -0.061 (-1.5)         -0.038 (-1.2)        -0.116 (-1.5)
+           0.014 (1.3)           0.015 (1.8)          0.029 (1.5)
+         -0.005 (-0.2)         -0.091 (-1.1)        -0.004 (-0.1)
+ near < 5 mi | contin
+          0.015 (0.6)
+        -0.014 (-1.0)
+        -0.071 (-1.8)
+          0.053 (1.0)
+        -0.025 (-2.2)
+        -0.031 (-2.7)
+        -0.009 (-0.3)
+        -0.010 (-0.2)
+          0.093 (1.2)
+          0.000 (0.0)
+        -0.103 (-0.9)
+
+summary: cells with |t| > 1.96 (of 11 outcomes) and median |estimate|
+           coef                          sample                 Z
+         <char>                          <char>            <char>
+ 1: interaction      both sides, all pair-sides -distance / 10 mi
+ 2: interaction      both sides, all pair-sides -distance / 10 mi
+ 3: interaction      both sides, all pair-sides      near < 10 mi
+ 4: interaction      both sides, all pair-sides      near < 10 mi
+ 5: interaction      both sides, all pair-sides      near < 20 mi
+ 6: interaction      both sides, all pair-sides      near < 20 mi
+ 7: interaction      both sides, all pair-sides       near < 5 mi
+ 8: interaction      both sides, all pair-sides       near < 5 mi
+ 9: interaction             low side, all pairs -distance / 10 mi
+10: interaction             low side, all pairs -distance / 10 mi
+11: interaction             low side, all pairs      near < 10 mi
+12: interaction             low side, all pairs      near < 10 mi
+13: interaction             low side, all pairs      near < 20 mi
+14: interaction             low side, all pairs      near < 20 mi
+15: interaction             low side, all pairs       near < 5 mi
+16: interaction             low side, all pairs       near < 5 mi
+17: interaction low side, density < 1,000/sq mi -distance / 10 mi
+18: interaction low side, density < 1,000/sq mi -distance / 10 mi
+19: interaction low side, density < 1,000/sq mi      near < 10 mi
+20: interaction low side, density < 1,000/sq mi      near < 10 mi
+21: interaction low side, density < 1,000/sq mi      near < 20 mi
+22: interaction low side, density < 1,000/sq mi      near < 20 mi
+23: interaction low side, density < 1,000/sq mi       near < 5 mi
+24: interaction low side, density < 1,000/sq mi       near < 5 mi
+25: interaction low side, density < 5,000/sq mi -distance / 10 mi
+26: interaction low side, density < 5,000/sq mi -distance / 10 mi
+27: interaction low side, density < 5,000/sq mi      near < 10 mi
+28: interaction low side, density < 5,000/sq mi      near < 10 mi
+29: interaction low side, density < 5,000/sq mi      near < 20 mi
+30: interaction low side, density < 5,000/sq mi      near < 20 mi
+31: interaction low side, density < 5,000/sq mi       near < 5 mi
+32: interaction low side, density < 5,000/sq mi       near < 5 mi
+33: interaction             low side, rural 45% -distance / 10 mi
+34: interaction             low side, rural 45% -distance / 10 mi
+35: interaction             low side, rural 45%      near < 10 mi
+36: interaction             low side, rural 45%      near < 10 mi
+37: interaction             low side, rural 45%      near < 20 mi
+38: interaction             low side, rural 45%      near < 20 mi
+39: interaction             low side, rural 45%       near < 5 mi
+40: interaction             low side, rural 45%       near < 5 mi
+41:        main      both sides, all pair-sides -distance / 10 mi
+42:        main      both sides, all pair-sides -distance / 10 mi
+43:        main      both sides, all pair-sides      near < 10 mi
+44:        main      both sides, all pair-sides      near < 10 mi
+45:        main      both sides, all pair-sides      near < 20 mi
+46:        main      both sides, all pair-sides      near < 20 mi
+47:        main      both sides, all pair-sides       near < 5 mi
+48:        main      both sides, all pair-sides       near < 5 mi
+49:        main             low side, all pairs -distance / 10 mi
+50:        main             low side, all pairs -distance / 10 mi
+51:        main             low side, all pairs      near < 10 mi
+52:        main             low side, all pairs      near < 10 mi
+53:        main             low side, all pairs      near < 20 mi
+54:        main             low side, all pairs      near < 20 mi
+55:        main             low side, all pairs       near < 5 mi
+56:        main             low side, all pairs       near < 5 mi
+57:        main low side, density < 1,000/sq mi -distance / 10 mi
+58:        main low side, density < 1,000/sq mi -distance / 10 mi
+59:        main low side, density < 1,000/sq mi      near < 10 mi
+60:        main low side, density < 1,000/sq mi      near < 10 mi
+61:        main low side, density < 1,000/sq mi      near < 20 mi
+62:        main low side, density < 1,000/sq mi      near < 20 mi
+63:        main low side, density < 1,000/sq mi       near < 5 mi
+64:        main low side, density < 1,000/sq mi       near < 5 mi
+65:        main low side, density < 5,000/sq mi -distance / 10 mi
+66:        main low side, density < 5,000/sq mi -distance / 10 mi
+67:        main low side, density < 5,000/sq mi      near < 10 mi
+68:        main low side, density < 5,000/sq mi      near < 10 mi
+69:        main low side, density < 5,000/sq mi      near < 20 mi
+70:        main low side, density < 5,000/sq mi      near < 20 mi
+71:        main low side, density < 5,000/sq mi       near < 5 mi
+72:        main low side, density < 5,000/sq mi       near < 5 mi
+73:        main             low side, rural 45% -distance / 10 mi
+74:        main             low side, rural 45% -distance / 10 mi
+75:        main             low side, rural 45%      near < 10 mi
+76:        main             low side, rural 45%      near < 10 mi
+77:        main             low side, rural 45%      near < 20 mi
+78:        main             low side, rural 45%      near < 20 mi
+79:        main             low side, rural 45%       near < 5 mi
+80:        main             low side, rural 45%       near < 5 mi
+           coef                          sample                 Z
+         <char>                          <char>            <char>
+                        E   sig median_abs
+                   <char> <int>      <num>
+ 1: binary (above median)     0      0.009
+ 2:   continuous (per SD)     1      0.004
+ 3: binary (above median)     0      0.013
+ 4:   continuous (per SD)     0      0.013
+ 5: binary (above median)     0      0.010
+ 6:   continuous (per SD)     0      0.006
+ 7: binary (above median)     2      0.021
+ 8:   continuous (per SD)     6      0.018
+ 9: binary (above median)     4      0.015
+10:   continuous (per SD)     7      0.013
+11: binary (above median)     1      0.029
+12:   continuous (per SD)     3      0.030
+13: binary (above median)     2      0.034
+14:   continuous (per SD)     4      0.026
+15: binary (above median)     2      0.046
+16:   continuous (per SD)     7      0.037
+17: binary (above median)     0      0.008
+18:   continuous (per SD)     4      0.015
+19: binary (above median)     1      0.046
+20:   continuous (per SD)     2      0.021
+21: binary (above median)     0      0.020
+22:   continuous (per SD)     1      0.020
+23: binary (above median)     2      0.028
+24:   continuous (per SD)     5      0.049
+25: binary (above median)     1      0.011
+26:   continuous (per SD)     4      0.014
+27: binary (above median)     1      0.018
+28:   continuous (per SD)     1      0.028
+29: binary (above median)     0      0.023
+30:   continuous (per SD)     0      0.016
+31: binary (above median)     2      0.034
+32:   continuous (per SD)     4      0.044
+33: binary (above median)     4      0.037
+34:   continuous (per SD)     7      0.047
+35: binary (above median)     1      0.068
+36:   continuous (per SD)     3      0.087
+37: binary (above median)     1      0.074
+38:   continuous (per SD)     3      0.053
+39: binary (above median)     3      0.062
+40:   continuous (per SD)     5      0.113
+41: binary (above median)     1      0.002
+42:   continuous (per SD)     2      0.005
+43: binary (above median)     1      0.010
+44:   continuous (per SD)     3      0.014
+45: binary (above median)     2      0.015
+46:   continuous (per SD)     3      0.018
+47: binary (above median)     2      0.026
+48:   continuous (per SD)     1      0.013
+49: binary (above median)     0      0.006
+50:   continuous (per SD)     1      0.003
+51: binary (above median)     1      0.020
+52:   continuous (per SD)     0      0.014
+53: binary (above median)     0      0.009
+54:   continuous (per SD)     2      0.012
+55: binary (above median)     1      0.026
+56:   continuous (per SD)     0      0.015
+57: binary (above median)     0      0.002
+58:   continuous (per SD)     0      0.006
+59: binary (above median)     0      0.018
+60:   continuous (per SD)     0      0.021
+61: binary (above median)     0      0.007
+62:   continuous (per SD)     0      0.009
+63: binary (above median)     0      0.015
+64:   continuous (per SD)     0      0.009
+65: binary (above median)     0      0.005
+66:   continuous (per SD)     2      0.003
+67: binary (above median)     0      0.011
+68:   continuous (per SD)     2      0.011
+69: binary (above median)     1      0.011
+70:   continuous (per SD)     2      0.010
+71: binary (above median)     0      0.024
+72:   continuous (per SD)     1      0.012
+73: binary (above median)     2      0.009
+74:   continuous (per SD)     3      0.014
+75: binary (above median)     0      0.018
+76:   continuous (per SD)     2      0.026
+77: binary (above median)     0      0.014
+78:   continuous (per SD)     3      0.038
+79: binary (above median)     1      0.029
+80:   continuous (per SD)     2      0.025
+                        E   sig median_abs
+                   <char> <int>      <num>
+
+sign consistency of the interaction across the 40 specs, by outcome (share positive; cells with |t| > 1.96):
+                                 outcome share_pos   sig median_b
+                                  <char>     <num> <int>    <num>
+ 1:                log median sale price      0.88     6    0.020
+ 2:              log tax bill per parcel      0.25     5   -0.009
+ 3:                   effective tax rate      0.00    17   -0.061
+ 4:                sales per 100 parcels      0.90    11    0.067
+ 5:          log median home value (ACS)      0.22     8   -0.007
+ 6:                 log population (ACS)      0.05    11   -0.015
+ 7:            move-out rate (Data Axle)      0.58     2    0.005
+ 8:  log district property tax per pupil      0.90     4    0.038
+ 9:      log district spending per pupil      0.95    13    0.048
+10:               log district enrolment      0.07    16   -0.013
+11: log county school property tax (CoG)      0.05     1   -0.031

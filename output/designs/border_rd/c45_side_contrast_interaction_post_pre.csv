@@ -1,0 +1,301 @@
+term,src,outcome,series,post_min_pre,se,years,t
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt issued,low-tax side,0.213849387614541,0.20637256050006,2012-2022,1.03622975407372
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt outstanding,low-tax side,0.04007907627288,0.0955796992831173,2012-2022,0.419326243684462
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: capital outlay,low-tax side,-0.0052588329597682,0.160535236324408,2012-2022,-0.0327581226413198
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: enterprise revenue,low-tax side,0.0896625270639927,0.0708441551512486,2012-2022,1.26563055022066
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: federal revenue,low-tax side,-0.234243893695772,0.13513855142058,2012-2022,-1.73336099309482
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: general sales tax,low-tax side,-0.050828562365287,0.108363187453205,2012-2022,-0.469057468314475
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: individual income tax,low-tax side,-0.0474561967407401,0.313204976275446,2012-2022,-0.151518016428338
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: interest on debt,low-tax side,0.0918871134511136,0.104653520233488,2012-2022,0.878012638715911
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: other own-source revenue,low-tax side,-0.173065351891925,0.148421457656998,2012-2022,-1.16603996904463
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: state revenue,low-tax side,0.0550580325040929,0.0691101835815098,2012-2022,0.796670326293613
+interaction,"CoG all local govts, census years, log per capita (31)",number of local governments,low-tax side,-0.00703292839372435,0.0119721326301218,2012-2022,-0.587441570437463
+interaction,"CoG all local govts, census years, log per capita (31)",number of municipalities,low-tax side,-0.00467935012230152,0.0104312275021444,2012-2022,-0.448590553828835
+interaction,"CoG all local govts, census years, log per capita (31)",number of special districts,low-tax side,-0.00106552189720544,0.0155821163389356,2012-2022,-0.0683810770006241
+interaction,"CoG all local govts, census years, log per capita (31)",spending: education (E12),low-tax side,-0.042540116663525,0.0525832169077802,2012-2022,-0.809005594658297
+interaction,"CoG all local govts, census years, log per capita (31)",spending: fire (E24),low-tax side,-0.0746041831691835,0.11175043056708,2012-2022,-0.66759638231909
+interaction,"CoG all local govts, census years, log per capita (31)",spending: general government (E89),low-tax side,0.0686440131123239,0.139689141282251,2012-2022,0.491405505698
+interaction,"CoG all local govts, census years, log per capita (31)",spending: health (E32),low-tax side,0.0680098353163386,0.117967329419049,2012-2022,0.57651415566721
+interaction,"CoG all local govts, census years, log per capita (31)",spending: highways (E44),low-tax side,-0.024346023883775,0.10901772074897,2012-2022,-0.223321710603686
+interaction,"CoG all local govts, census years, log per capita (31)",spending: hospitals (E36),low-tax side,0.574817725901816,0.196789174994632,2012-2022,2.92098244691303
+interaction,"CoG all local govts, census years, log per capita (31)",spending: housing & comm. dev. (E50),low-tax side,-0.0168188561162361,0.150257961115273,2012-2022,-0.111933211334694
+interaction,"CoG all local govts, census years, log per capita (31)",spending: libraries (E52),low-tax side,0.0736951052455618,0.0849841150556904,2012-2022,0.86716329513191
+interaction,"CoG all local govts, census years, log per capita (31)",spending: parks (E61),low-tax side,-0.0507262351392995,0.0868238815675551,2012-2022,-0.584242885983287
+interaction,"CoG all local govts, census years, log per capita (31)",spending: police (E62),low-tax side,0.001683050361838,0.137907312863211,2012-2022,0.0122042140253099
+interaction,"CoG all local govts, census years, log per capita (31)",spending: public welfare (E74-79),low-tax side,-0.047713128749872,0.0848714516233421,2012-2022,-0.562181132020953
+interaction,"CoG all local govts, census years, log per capita (31)",spending: sewerage (E80),low-tax side,-0.155975047970841,0.107736921564046,2012-2022,-1.44773997350685
+interaction,"CoG all local govts, census years, log per capita (31)",spending: solid waste (E81),low-tax side,0.0697117895350615,0.0935782555003634,2012-2022,0.74495713947981
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt issued,low-tax side,-0.0156493502041671,0.211046690428818,2012-2022,-0.074151128228402
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt outstanding,low-tax side,0.0604179188389982,0.0908723592340192,2012-2022,0.664865745186684
+interaction,"CoG school districts by county, log per capita (31)",school districts: capital outlay,low-tax side,0.102296757276693,0.184102757878436,2012-2022,0.555650325152871
+interaction,"CoG school districts by county, log per capita (31)",school districts: cash & securities,low-tax side,0.0138935333590609,0.123623034507755,2012-2021,0.112386283141993
+interaction,"CoG school districts by county, log per capita (31)",school districts: federal revenue,low-tax side,0.0260961190679471,0.127262026403815,2012-2022,0.205058176467672
+interaction,"CoG school districts by county, log per capita (31)",school districts: interest on debt,low-tax side,-0.00151698894431037,0.0876546177132735,2012-2022,-0.017306435004629
+interaction,"CoG school districts by county, log per capita (31)",school districts: state revenue,low-tax side,0.00129261633865278,0.0311312041655209,2012-2022,0.0415215656863157
+interaction,"F-33 district, log per pupil (31)",IDEA special ed (C15),low-tax side,0.0291294339489171,0.025143079557551,2012-2023,1.15854678350922
+interaction,"F-33 district, log per pupil (31)",Title I (C14),low-tax side,0.00710262707685577,0.0198352768385271,2012-2023,0.358080561954143
+interaction,"F-33 district, log per pupil (31)",capital outlay,low-tax side,0.00669456696305392,0.0379992624701647,2012-2023,0.176176234165339
+interaction,"F-33 district, log per pupil (31)",cash & securities (W01+W31+W61),low-tax side,0.0972218037839005,0.0459589530190559,2012-2023,2.11540510384537
+interaction,"F-33 district, log per pupil (31)",child nutrition (C25),low-tax side,-0.019864603537936,0.0252115693704569,2012-2023,-0.787916184274254
+interaction,"F-33 district, log per pupil (31)",construction (F12),low-tax side,0.0290620378336125,0.0512566172221044,2012-2023,0.566990944948265
+interaction,"F-33 district, log per pupil (31)",district activity receipts (A13),low-tax side,0.00128228375502127,0.0140018820139969,2012-2023,0.0915793858096677
+interaction,"F-33 district, log per pupil (31)",employee benefits (Z33),low-tax side,0.0135035927893968,0.00868185320723091,2012-2023,1.55538137619627
+interaction,"F-33 district, log per pupil (31)",equipment (K09+K10),low-tax side,-0.00105641871690369,0.0302470709423154,2012-2023,-0.0349263146477357
+interaction,"F-33 district, log per pupil (31)",federal revenue,low-tax side,0.004869933691451,0.0175254008513288,2012-2023,0.277878590781663
+interaction,"F-33 district, log per pupil (31)",food services (E11),low-tax side,0.0182210176477757,0.0279955461026199,2012-2023,0.650854160193381
+interaction,"F-33 district, log per pupil (31)",from cities/counties (D23),low-tax side,-0.048073305950114,0.0390024221971168,2012-2023,-1.23257231838457
+interaction,"F-33 district, log per pupil (31)",general administration (E08),low-tax side,-0.00434269904319154,0.0142830127672798,2012-2023,-0.304046430115921
+interaction,"F-33 district, log per pupil (31)",instr. staff support (E07),low-tax side,-0.00859106901510825,0.0155231982025418,2012-2023,-0.553434215231598
+interaction,"F-33 district, log per pupil (31)",instruction,low-tax side,0.0192105406397852,0.0102308894288447,2012-2023,1.87769995691905
+interaction,"F-33 district, log per pupil (31)",instruction salaries (V11),low-tax side,0.00623549944669338,0.0187392154636357,2012-2023,0.33275136084505
+interaction,"F-33 district, log per pupil (31)",interest on debt (I86),low-tax side,0.022992723776713,0.0223780127831305,2012-2023,1.02746941828749
+interaction,"F-33 district, log per pupil (31)",long-term debt issued (_21F),low-tax side,0.020569593728446,0.0973475677453683,2012-2023,0.211300540987833
+interaction,"F-33 district, log per pupil (31)",long-term debt outstanding (_41F),low-tax side,0.000332523747836883,0.0242794934162673,2012-2023,0.0136956625138683
+interaction,"F-33 district, log per pupil (31)",operations & maintenance (V40),low-tax side,0.0241084315979036,0.0186702072447836,2012-2023,1.29127819963752
+interaction,"F-33 district, log per pupil (31)",other local taxes (T99),low-tax side,-0.0206277112016238,0.0296052198224928,2012-2023,-0.696759264930427
+interaction,"F-33 district, log per pupil (31)",parent govt contributions (T02),low-tax side,-0.0244235290006494,0.0137668676197666,2012-2023,-1.77408032641949
+interaction,"F-33 district, log per pupil (31)",payments to charter schools (V92),low-tax side,-0.00351304079239677,0.0365664731152202,2012-2023,-0.0960727270942223
+interaction,"F-33 district, log per pupil (31)",payments to other school systems (Q11),low-tax side,-0.0130116425991206,0.0196356802319957,2012-2023,-0.662653009490271
+interaction,"F-33 district, log per pupil (31)",payments to private schools (V91),low-tax side,0.0150804429919305,0.0206474892388137,2012-2023,0.73037660015252
+interaction,"F-33 district, log per pupil (31)",private contributions (U50),low-tax side,0.0173487518960443,0.0378143281520379,2012-2023,0.458787786108249
+interaction,"F-33 district, log per pupil (31)",pupil support (E17),low-tax side,0.0110393981919189,0.016563857986876,2012-2023,0.66647505675705
+interaction,"F-33 district, log per pupil (31)",pupil transportation (V45),low-tax side,-0.00402985243756097,0.0217317080236992,2012-2023,-0.185436525889556
+interaction,"F-33 district, log per pupil (31)",salaries & wages (Z32),low-tax side,0.0116059354405773,0.00927893005070045,2012-2023,1.25078380558555
+interaction,"F-33 district, log per pupil (31)",school administration (E09),low-tax side,-0.00210671037681589,0.0228322317945548,2012-2023,-0.0922691393365373
+interaction,"F-33 district, log per pupil (31)",school lunch charges (A09),low-tax side,-0.0339686157791274,0.0333914483829789,2012-2023,-1.0172848865233
+interaction,"F-33 district, log per pupil (31)",state compensatory (C07),low-tax side,0.00212156563253482,0.0489051230444613,2012-2023,0.0433812553872125
+interaction,"F-33 district, log per pupil (31)",state formula aid (C01),low-tax side,-0.0184580902562033,0.0157242517946854,2012-2023,-1.17386127475025
+interaction,"F-33 district, log per pupil (31)",state special ed (C05),low-tax side,0.00620035980901093,0.0126547946358479,2012-2023,0.489961314065648
+interaction,"F-33 district, log per pupil (31)",state transportation (C06),low-tax side,0.0101435668446351,0.0322027611286551,2012-2023,0.314990593636053
+interaction,"F-33 district, log per pupil (31)",student fees (A15),low-tax side,-0.26322298635452,0.363279051478614,2012-2023,-0.724575186163784
+interaction,"F-33 district, log per pupil (31)",support services,low-tax side,0.0210911175044679,0.0126139281651234,2012-2023,1.67204991406114
+interaction,"F-33 district, log per pupil (31)",total expenditure,low-tax side,0.0155892469224719,0.0189814564720002,2012-2023,0.821288237046918
+interaction,"F-33 district, log per pupil (31)",total revenue,low-tax side,0.0196256727794381,0.024942897437475,2012-2023,0.786824098067767
+interaction,"F-33 district, log per pupil (31)",tuition from pupils (A07),low-tax side,0.0014769927316981,0.0209897354008825,2012-2023,0.0703673821269802
+interaction,SEDA district (31),district SES (SEDA),low-tax side,0.00699038640028001,0.00372025814348421,2012-2018,1.87900573849243
+interaction,SEDA district (31),"district test scores (SEDA, SD)",low-tax side,-0.0125200608035996,0.00748291372981001,2012-2018,-1.67315316675681
+interaction,composition: ACS tract (32),household size (ACS),low-tax side,-0.00505849921982137,0.00881695906063627,2013-2023,-0.57372379581587
+interaction,composition: ACS tract (32),"households with children, share (ACS)",low-tax side,-0.00515199443141366,0.0106228841082764,2013-2023,-0.484990175822375
+interaction,composition: ACS tract (32),median age (ACS),low-tax side,-0.00541317786694598,0.00809388826310257,2013-2023,-0.668798195747637
+interaction,composition: ACS tract (32),"one-person households, share (ACS)",low-tax side,0.00434826335100416,0.00889260932167433,2013-2023,0.488974967156823
+interaction,composition: ACS tract (32),share 65+ (ACS),low-tax side,-0.0230781939950192,0.00771471800694463,2013-2023,-2.99145010540174
+interaction,composition: ACS tract (32),share under 18 (ACS),low-tax side,-0.00368023268666587,0.00923700877923047,2013-2023,-0.398422560227606
+interaction,composition: SOI ZIP (32),"dependents per return (SOI, to 2018)",low-tax side,-0.0140809249071153,0.00371397961133179,2012-2018,-3.79133069663406
+interaction,composition: SOI ZIP (32),"elderly (60+) returns, share (SOI, 2015-18)",low-tax side,-0.0036165108437072,0.00691532458941251,2015-2022,-0.522970512366714
+interaction,composition: SOI ZIP (32),"head-of-household filers, share (SOI)",low-tax side,-0.0035728252250154,0.00455031333279884,2012-2022,-0.785182242124369
+interaction,composition: SOI ZIP (32),individuals per return (SOI),low-tax side,-0.0236108326172194,0.0071119300987787,2012-2022,-3.31989098448451
+interaction,composition: SOI ZIP (32),"joint filers, share (SOI)",low-tax side,-0.0117774502511534,0.0071363199602456,2012-2022,-1.65035344782216
+interaction,composition: SOI ZIP (32),log individuals (SOI),low-tax side,-0.00427387467320033,0.00189321371304135,2012-2022,-2.25747079886431
+interaction,composition: SOI ZIP (32),log returns (SOI),low-tax side,-0.00216267970109398,0.00198477438358328,2012-2022,-1.08963503307087
+interaction,composition: SOI ZIP (32),"single filers, share (SOI)",low-tax side,0.0190404509785546,0.00929221752213543,2012-2022,2.04907503867591
+interaction,core (31),effective tax rate,low-tax side,-0.0123904880526285,0.00751990494915522,2012-2024,-1.64769210999408
+interaction,core (31),log county school property tax (CoG),low-tax side,-0.01539565267682,0.0366547244098703,2012-2022,-0.420018235703181
+interaction,core (31),log district enrolment,low-tax side,-0.00655953060641063,0.00320049991137577,2012-2023,-2.04953313171346
+interaction,core (31),log district property tax per pupil,low-tax side,0.0234400217014485,0.0120355340106707,2012-2023,1.94756806641621
+interaction,core (31),log district spending per pupil,low-tax side,0.0220463948758612,0.0110082946865845,2012-2023,2.00270754949252
+interaction,core (31),log median home value (ACS),low-tax side,-0.00160739206351451,0.00364021389716355,2013-2023,-0.441565278558764
+interaction,core (31),log median sale price,low-tax side,0.0097351461535857,0.0071350644106978,2012-2024,1.36440900785556
+interaction,core (31),log population (ACS),low-tax side,-0.0125907233836264,0.00481334815960865,2013-2023,-2.61579319968619
+interaction,core (31),log tax bill per parcel,low-tax side,0.000324929814115489,0.00394122977377091,2012-2024,0.0824437631822215
+interaction,core (31),move-out rate (Data Axle),low-tax side,-0.000795381882062003,0.010581523001792,2013-2021,-0.0751670512767683
+interaction,core (31),sales per 100 parcels,low-tax side,0.0352700516721557,0.0172029320277702,2012-2024,2.05023490270265
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt issued,high-tax side,-0.0773270720536151,0.158711025370322,2012-2022,-0.487219283431552
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt outstanding,high-tax side,0.0208162186037341,0.0798662097814253,2012-2022,0.260638618768852
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: capital outlay,high-tax side,0.0201340508477719,0.131150422016129,2012-2022,0.153518765233526
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: enterprise revenue,high-tax side,-0.0033745257401852,0.0602376610087355,2012-2022,-0.0560201987207942
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: federal revenue,high-tax side,0.0189025736292217,0.121395984596736,2012-2022,0.155710040097405
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: general sales tax,high-tax side,-0.0560173757882467,0.0506893109482539,2012-2022,-1.10511219703562
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: individual income tax,high-tax side,0.151784553999817,0.166225239968219,2012-2022,0.91312579262233
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: interest on debt,high-tax side,0.0861779434972501,0.100446679665376,2012-2022,0.857947159471471
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: other own-source revenue,high-tax side,-0.0425364806350239,0.115712087610575,2012-2022,-0.367606198396307
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: state revenue,high-tax side,-0.0109820730807634,0.0558089450434693,2012-2022,-0.196779800661158
+interaction,"CoG all local govts, census years, log per capita (31)",number of local governments,high-tax side,-0.00303571475597713,0.00621325910817356,2012-2022,-0.488586537777514
+interaction,"CoG all local govts, census years, log per capita (31)",number of municipalities,high-tax side,5.985010842501e-05,0.00494590440197152,2012-2022,0.0121009432372273
+interaction,"CoG all local govts, census years, log per capita (31)",number of special districts,high-tax side,-0.00972732089054771,0.0127320531429631,2012-2022,-0.764002536065753
+interaction,"CoG all local govts, census years, log per capita (31)",spending: education (E12),high-tax side,-0.0031090564871421,0.0474535345231553,2012-2022,-0.0655179117505991
+interaction,"CoG all local govts, census years, log per capita (31)",spending: fire (E24),high-tax side,-0.020446805999777,0.133340823733679,2012-2022,-0.153342430526868
+interaction,"CoG all local govts, census years, log per capita (31)",spending: general government (E89),high-tax side,0.0226001224697201,0.112597256904821,2012-2022,0.200716456963282
+interaction,"CoG all local govts, census years, log per capita (31)",spending: health (E32),high-tax side,0.120773497041243,0.103566508972958,2012-2022,1.16614432830576
+interaction,"CoG all local govts, census years, log per capita (31)",spending: highways (E44),high-tax side,-0.0292975442667658,0.0528874539248606,2012-2022,-0.553960194574502
+interaction,"CoG all local govts, census years, log per capita (31)",spending: hospitals (E36),high-tax side,0.00449263727824047,0.133263175292633,2012-2022,0.0337125186187039
+interaction,"CoG all local govts, census years, log per capita (31)",spending: housing & comm. dev. (E50),high-tax side,-0.0035276212630768,0.123812425727176,2012-2022,-0.0284916577827981
+interaction,"CoG all local govts, census years, log per capita (31)",spending: libraries (E52),high-tax side,-0.070929873760849,0.107076324340182,2012-2022,-0.662423502094681
+interaction,"CoG all local govts, census years, log per capita (31)",spending: parks (E61),high-tax side,0.0101643206434301,0.0697285654458084,2012-2022,0.145769823005029
+interaction,"CoG all local govts, census years, log per capita (31)",spending: police (E62),high-tax side,0.0584713515727271,0.0696678753354762,2012-2022,0.839287136160909
+interaction,"CoG all local govts, census years, log per capita (31)",spending: public welfare (E74-79),high-tax side,0.0602146130812117,0.0764522537779191,2012-2022,0.78761069956322
+interaction,"CoG all local govts, census years, log per capita (31)",spending: sewerage (E80),high-tax side,-0.119839570056386,0.108724484158809,2012-2022,-1.10223167287086
+interaction,"CoG all local govts, census years, log per capita (31)",spending: solid waste (E81),high-tax side,0.0196311371159996,0.0739630235426411,2012-2022,0.26541826139222
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt issued,high-tax side,-0.00291850982933692,0.183905966879824,2012-2022,-0.0158695766040265
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt outstanding,high-tax side,0.0580170997865363,0.0574023326440347,2012-2022,1.01070979373458
+interaction,"CoG school districts by county, log per capita (31)",school districts: capital outlay,high-tax side,0.0604522737377501,0.117519486865947,2012-2022,0.514402124702153
+interaction,"CoG school districts by county, log per capita (31)",school districts: cash & securities,high-tax side,-0.0026182716178416,0.0744323830307117,2012-2021,-0.0351765120399447
+interaction,"CoG school districts by county, log per capita (31)",school districts: federal revenue,high-tax side,0.0363520023517531,0.0819126116018854,2012-2022,0.443790054313399
+interaction,"CoG school districts by county, log per capita (31)",school districts: interest on debt,high-tax side,0.107890558766506,0.0583100329801749,2012-2022,1.85029150649235
+interaction,"CoG school districts by county, log per capita (31)",school districts: state revenue,high-tax side,-0.0351284047017136,0.0284975233548961,2012-2022,-1.2326827234858
+interaction,"F-33 district, log per pupil (31)",IDEA special ed (C15),high-tax side,-0.000895738435746175,0.0250437472931382,2012-2023,-0.0357669491414969
+interaction,"F-33 district, log per pupil (31)",Title I (C14),high-tax side,-0.00241340534318637,0.0231767102308365,2012-2023,-0.104130625923577
+interaction,"F-33 district, log per pupil (31)",capital outlay,high-tax side,0.0125191038434247,0.0401142999956249,2012-2023,0.312085810915063
+interaction,"F-33 district, log per pupil (31)",cash & securities (W01+W31+W61),high-tax side,-0.0110391476224851,0.0233312153608683,2012-2023,-0.473149274555164
+interaction,"F-33 district, log per pupil (31)",child nutrition (C25),high-tax side,-0.0247562123889109,0.0346649945466264,2012-2023,-0.714155957982696
+interaction,"F-33 district, log per pupil (31)",construction (F12),high-tax side,-0.00988991899543795,0.0351862564909247,2012-2023,-0.281073350272109
+interaction,"F-33 district, log per pupil (31)",district activity receipts (A13),high-tax side,-0.00817667095241197,0.0216285405005682,2012-2023,-0.378050056229969
+interaction,"F-33 district, log per pupil (31)",employee benefits (Z33),high-tax side,-0.0035106809136009,0.00940023020624911,2012-2023,-0.37346754670615
+interaction,"F-33 district, log per pupil (31)",equipment (K09+K10),high-tax side,0.0103586873681515,0.0385163489646818,2012-2023,0.268942608699753
+interaction,"F-33 district, log per pupil (31)",federal revenue,high-tax side,-0.00175909086768895,0.0164903596604761,2012-2023,-0.106673893347828
+interaction,"F-33 district, log per pupil (31)",food services (E11),high-tax side,0.0313579066818151,0.0375903164897318,2012-2023,0.834201720285617
+interaction,"F-33 district, log per pupil (31)",from cities/counties (D23),high-tax side,0.00355416527895195,0.0320587071757352,2012-2023,0.110864273455233
+interaction,"F-33 district, log per pupil (31)",general administration (E08),high-tax side,-0.00611534033144039,0.01522166118437,2012-2023,-0.401752493198297
+interaction,"F-33 district, log per pupil (31)",instr. staff support (E07),high-tax side,0.00185534486799497,0.0139679028842337,2012-2023,0.132829164361473
+interaction,"F-33 district, log per pupil (31)",instruction,high-tax side,-0.00943777745448671,0.00827327816205157,2012-2023,-1.14075427776338
+interaction,"F-33 district, log per pupil (31)",instruction salaries (V11),high-tax side,-0.000528729226246182,0.0123041911025829,2012-2023,-0.0429714738529371
+interaction,"F-33 district, log per pupil (31)",interest on debt (I86),high-tax side,0.0156521946103374,0.0199374885368874,2012-2023,0.785063503930215
+interaction,"F-33 district, log per pupil (31)",long-term debt issued (_21F),high-tax side,0.0352522032301211,0.131956314173525,2012-2023,0.267150560023705
+interaction,"F-33 district, log per pupil (31)",long-term debt outstanding (_41F),high-tax side,0.0144261381706172,0.0218909040634927,2012-2023,0.65900147973676
+interaction,"F-33 district, log per pupil (31)",operations & maintenance (V40),high-tax side,0.0069871743572181,0.0159675583450868,2012-2023,0.437585647486802
+interaction,"F-33 district, log per pupil (31)",other local taxes (T99),high-tax side,-0.0155878111977463,0.0397615104541711,2012-2023,-0.392032672292787
+interaction,"F-33 district, log per pupil (31)",parent govt contributions (T02),high-tax side,0.00137005598606387,0.0146816406247094,2012-2023,0.0933176353436991
+interaction,"F-33 district, log per pupil (31)",payments to charter schools (V92),high-tax side,-0.00055507809870077,0.0543900584890293,2012-2023,-0.0102055065598566
+interaction,"F-33 district, log per pupil (31)",payments to other school systems (Q11),high-tax side,0.0126010147141427,0.0117534237067966,2012-2023,1.07211439223925
+interaction,"F-33 district, log per pupil (31)",payments to private schools (V91),high-tax side,0.00353017064817471,0.0274875775903883,2012-2023,0.12842785569468
+interaction,"F-33 district, log per pupil (31)",private contributions (U50),high-tax side,-0.0118833974732311,0.0405129945543534,2012-2023,-0.293323107905243
+interaction,"F-33 district, log per pupil (31)",pupil support (E17),high-tax side,-0.00472348835400359,0.0100787941259623,2012-2023,-0.468656100617849
+interaction,"F-33 district, log per pupil (31)",pupil transportation (V45),high-tax side,0.026677396475491,0.0130659215473224,2012-2023,2.04175391524206
+interaction,"F-33 district, log per pupil (31)",salaries & wages (Z32),high-tax side,-0.00297482269117523,0.00829156532804413,2012-2023,-0.358776970750462
+interaction,"F-33 district, log per pupil (31)",school administration (E09),high-tax side,0.0110112208926089,0.0177161053008304,2012-2023,0.621537335979411
+interaction,"F-33 district, log per pupil (31)",school lunch charges (A09),high-tax side,-0.0244158521055266,0.0323584165264924,2012-2023,-0.754544094750029
+interaction,"F-33 district, log per pupil (31)",state compensatory (C07),high-tax side,-0.0196351552187587,0.0995349848932476,2012-2023,-0.197268882291162
+interaction,"F-33 district, log per pupil (31)",state formula aid (C01),high-tax side,-0.0114130128478054,0.0143587120365732,2012-2023,-0.794849344337796
+interaction,"F-33 district, log per pupil (31)",state special ed (C05),high-tax side,-0.0030302648564752,0.0112846165012717,2012-2023,-0.268530601472697
+interaction,"F-33 district, log per pupil (31)",state transportation (C06),high-tax side,-0.0521697229214788,0.0378222944791524,2012-2023,-1.37933786513757
+interaction,"F-33 district, log per pupil (31)",student fees (A15),high-tax side,-0.301713079785676,0.241744680705688,2012-2023,-1.24806502010688
+interaction,"F-33 district, log per pupil (31)",support services,high-tax side,0.00568413631285701,0.00892568801324185,2012-2023,0.636828926176247
+interaction,"F-33 district, log per pupil (31)",total expenditure,high-tax side,-0.00686360777176346,0.013105708689783,2012-2023,-0.523711302778629
+interaction,"F-33 district, log per pupil (31)",total revenue,high-tax side,0.00288639473818395,0.00920826043085003,2012-2023,0.313457113844629
+interaction,"F-33 district, log per pupil (31)",tuition from pupils (A07),high-tax side,-0.0385984236724048,0.0250080339055267,2012-2023,-1.54344095254424
+interaction,SEDA district (31),district SES (SEDA),high-tax side,0.0136109955605549,0.00451401358019959,2012-2018,3.01527572275339
+interaction,SEDA district (31),"district test scores (SEDA, SD)",high-tax side,0.0331472736935223,0.0127711217517404,2012-2018,2.59548646844628
+interaction,composition: ACS tract (32),household size (ACS),high-tax side,0.00178589339536602,0.00725032559847935,2013-2023,0.246319061276446
+interaction,composition: ACS tract (32),"households with children, share (ACS)",high-tax side,0.00918586180954541,0.00726604847050553,2013-2023,1.26421697389342
+interaction,composition: ACS tract (32),median age (ACS),high-tax side,-0.000550241546654851,0.00572859606790301,2013-2023,-0.0960517271828297
+interaction,composition: ACS tract (32),"one-person households, share (ACS)",high-tax side,0.0055967159047766,0.0080894490562975,2013-2023,0.691853779636532
+interaction,composition: ACS tract (32),share 65+ (ACS),high-tax side,-0.0192628062906542,0.00609541428584075,2013-2023,-3.16021280709344
+interaction,composition: ACS tract (32),share under 18 (ACS),high-tax side,0.0120210425310627,0.00733405612181022,2013-2023,1.63907152214368
+interaction,composition: SOI ZIP (32),"dependents per return (SOI, to 2018)",high-tax side,-0.00675542205927,0.00311948078093591,2012-2018,-2.1655597625587
+interaction,composition: SOI ZIP (32),"elderly (60+) returns, share (SOI, 2015-18)",high-tax side,-0.0105368797785418,0.00468420004200315,2015-2022,-2.24945127963318
+interaction,composition: SOI ZIP (32),"head-of-household filers, share (SOI)",high-tax side,-0.00303650173090608,0.00318444204740222,2012-2022,-0.953542782599287
+interaction,composition: SOI ZIP (32),individuals per return (SOI),high-tax side,-0.0204433345591327,0.00759442007353582,2012-2022,-2.69188882905903
+interaction,composition: SOI ZIP (32),"joint filers, share (SOI)",high-tax side,-0.0204445578938939,0.00672053868129034,2012-2022,-3.042101067108
+interaction,composition: SOI ZIP (32),log individuals (SOI),high-tax side,-0.00501369939871646,0.00182490756877469,2012-2022,-2.74737169405399
+interaction,composition: SOI ZIP (32),log returns (SOI),high-tax side,-0.00329491502088974,0.00166066132692711,2012-2022,-1.98409812251524
+interaction,composition: SOI ZIP (32),"single filers, share (SOI)",high-tax side,0.032330911072074,0.0105269584864104,2012-2022,3.07124903302421
+interaction,core (31),effective tax rate,high-tax side,-0.0187200204426947,0.0108390013879951,2012-2024,-1.72709826049365
+interaction,core (31),log county school property tax (CoG),high-tax side,-0.00511393778168244,0.0146523151132716,2012-2022,-0.349019096446431
+interaction,core (31),log district enrolment,high-tax side,-0.00856517571678567,0.00298299168830677,2012-2023,-2.8713374396452
+interaction,core (31),log district property tax per pupil,high-tax side,0.00372239158660273,0.00474966624287323,2012-2023,0.783716454222041
+interaction,core (31),log district spending per pupil,high-tax side,-0.00319152625902879,0.00775150167329199,2012-2023,-0.411730061289322
+interaction,core (31),log median home value (ACS),high-tax side,-0.00620524133371577,0.00496350731152696,2013-2023,-1.25017269931387
+interaction,core (31),log median sale price,high-tax side,0.0120667855400196,0.00650906655320587,2012-2024,1.85384270407812
+interaction,core (31),log population (ACS),high-tax side,-0.0160606387900362,0.00566231014885454,2013-2023,-2.83641099971982
+interaction,core (31),log tax bill per parcel,high-tax side,-0.00047798622305037,0.00390360109547083,2012-2024,-0.122447507150501
+interaction,core (31),move-out rate (Data Axle),high-tax side,0.00462040687574884,0.0108774901182801,2013-2021,0.424767738284039
+interaction,core (31),sales per 100 parcels,high-tax side,0.0423218384631161,0.0240257241857661,2012-2024,1.7615218644768
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt issued,high minus low,-0.291176459668156,0.260343663839644,2012-2022,-1.11843113588316
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: LT debt outstanding,high minus low,-0.0192628576691459,0.124555571452672,2012-2022,-0.154652718015631
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: capital outlay,high minus low,0.0253928838075401,0.207296877199687,2012-2022,0.122495254875834
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: enterprise revenue,high minus low,-0.0930370528041779,0.0929917744905296,2012-2022,-1.00048690665273
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: federal revenue,high minus low,0.253146467324993,0.181657406004445,2012-2022,1.39353782976951
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: general sales tax,high minus low,-0.00518881342295974,0.119632715589955,2012-2022,-0.0433728633289957
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: individual income tax,high minus low,0.199240750740557,0.354581707884367,2012-2022,0.56190363549586
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: interest on debt,high minus low,-0.00570916995386349,0.145058246070534,2012-2022,-0.039357775986671
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: other own-source revenue,high minus low,0.130528871256901,0.188197280299758,2012-2022,0.693574694857422
+interaction,"CoG all local govts, census years, log per capita (31)",all local govts: state revenue,high minus low,-0.0660401055848563,0.0888304892564201,2012-2022,-0.743439624589069
+interaction,"CoG all local govts, census years, log per capita (31)",number of local governments,high minus low,0.00399721363774722,0.0134883856876399,2012-2022,0.296344850326312
+interaction,"CoG all local govts, census years, log per capita (31)",number of municipalities,high minus low,0.00473920023072653,0.0115443699505402,2012-2022,0.410520474571658
+interaction,"CoG all local govts, census years, log per capita (31)",number of special districts,high minus low,-0.00866179899334227,0.020122314152089,2012-2022,-0.430457398084259
+interaction,"CoG all local govts, census years, log per capita (31)",spending: education (E12),high minus low,0.0394310601763829,0.0708296028445096,2012-2022,0.556703109898059
+interaction,"CoG all local govts, census years, log per capita (31)",spending: fire (E24),high minus low,0.0541573771694065,0.173976820312086,2012-2022,0.311290763173261
+interaction,"CoG all local govts, census years, log per capita (31)",spending: general government (E89),high minus low,-0.0460438906426038,0.179419058225883,2012-2022,-0.256627646460143
+interaction,"CoG all local govts, census years, log per capita (31)",spending: health (E32),high minus low,0.0527636617249047,0.156978701074726,2012-2022,0.336119877178674
+interaction,"CoG all local govts, census years, log per capita (31)",spending: highways (E44),high minus low,-0.00495152038299082,0.12116908112202,2012-2022,-0.0408645533756628
+interaction,"CoG all local govts, census years, log per capita (31)",spending: hospitals (E36),high minus low,-0.570325088623576,0.237665843747356,2012-2022,-2.39969311378981
+interaction,"CoG all local govts, census years, log per capita (31)",spending: housing & comm. dev. (E50),high minus low,0.0132912348531593,0.194697127978218,2012-2022,0.0682662091176111
+interaction,"CoG all local govts, census years, log per capita (31)",spending: libraries (E52),high minus low,-0.144624979006411,0.13670273971652,2012-2022,-1.05795230809799
+interaction,"CoG all local govts, census years, log per capita (31)",spending: parks (E61),high minus low,0.0608905557827296,0.111357349329028,2012-2022,0.546803207418452
+interaction,"CoG all local govts, census years, log per capita (31)",spending: police (E62),high minus low,0.0567883012108891,0.154505792107969,2012-2022,0.36754804098998
+interaction,"CoG all local govts, census years, log per capita (31)",spending: public welfare (E74-79),high minus low,0.107927741831084,0.114228325770698,2012-2022,0.94484219306285
+interaction,"CoG all local govts, census years, log per capita (31)",spending: sewerage (E80),high minus low,0.0361354779144545,0.153062920799574,2012-2022,0.236082505976557
+interaction,"CoG all local govts, census years, log per capita (31)",spending: solid waste (E81),high minus low,-0.0500806524190619,0.119278743932272,2012-2022,-0.4198623389889
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt issued,high minus low,0.0127308403748302,0.279932331457015,2012-2022,0.045478277941557
+interaction,"CoG school districts by county, log per capita (31)",school districts: LT debt outstanding,high minus low,-0.00240081905246191,0.107484014931212,2012-2022,-0.0223365218911704
+interaction,"CoG school districts by county, log per capita (31)",school districts: capital outlay,high minus low,-0.0418444835389433,0.218413953885006,2012-2022,-0.19158338006634
+interaction,"CoG school districts by county, log per capita (31)",school districts: cash & securities,high minus low,-0.0165118049769025,0.144301193011479,2012-2021,-0.114425976891189
+interaction,"CoG school districts by county, log per capita (31)",school districts: federal revenue,high minus low,0.0102558832838059,0.151344967884125,2012-2022,0.0677649440690899
+interaction,"CoG school districts by county, log per capita (31)",school districts: interest on debt,high minus low,0.109407547710817,0.105277689719186,2012-2022,1.03922823537111
+interaction,"CoG school districts by county, log per capita (31)",school districts: state revenue,high minus low,-0.0364210210403664,0.0422049844231484,2012-2022,-0.862955443253057
+interaction,"F-33 district, log per pupil (31)",IDEA special ed (C15),high minus low,-0.0300251723846633,0.0354875151020737,2012-2023,-0.846077058320401
+interaction,"F-33 district, log per pupil (31)",Title I (C14),high minus low,-0.00951603242004214,0.0305057060955023,2012-2023,-0.311942703120881
+interaction,"F-33 district, log per pupil (31)",capital outlay,high minus low,0.00582453688037077,0.0552548732006097,2012-2023,0.105412184355651
+interaction,"F-33 district, log per pupil (31)",cash & securities (W01+W31+W61),high minus low,-0.108260951406386,0.0515419341199281,2012-2023,-2.10044409964289
+interaction,"F-33 district, log per pupil (31)",child nutrition (C25),high minus low,-0.00489160885097489,0.0428635635130701,2012-2023,-0.114120442867129
+interaction,"F-33 district, log per pupil (31)",construction (F12),high minus low,-0.0389519568290505,0.0621716451036843,2012-2023,-0.62652285883846
+interaction,"F-33 district, log per pupil (31)",district activity receipts (A13),high minus low,-0.00945895470743323,0.0257652181073362,2012-2023,-0.367121080366091
+interaction,"F-33 district, log per pupil (31)",employee benefits (Z33),high minus low,-0.0170142737029977,0.0127960502907102,2012-2023,-1.32965042465877
+interaction,"F-33 district, log per pupil (31)",equipment (K09+K10),high minus low,0.0114151060850552,0.048973405417212,2012-2023,0.233087856313201
+interaction,"F-33 district, log per pupil (31)",federal revenue,high minus low,-0.00662902455913995,0.0240639073454752,2012-2023,-0.275475817952999
+interaction,"F-33 district, log per pupil (31)",food services (E11),high minus low,0.0131368890340393,0.0468698463340997,2012-2023,0.280284448564145
+interaction,"F-33 district, log per pupil (31)",from cities/counties (D23),high minus low,0.0516274712290659,0.0504871235368157,2012-2023,1.02258690161698
+interaction,"F-33 district, log per pupil (31)",general administration (E08),high minus low,-0.00177264128824885,0.0208735100766985,2012-2023,-0.0849230091985191
+interaction,"F-33 district, log per pupil (31)",instr. staff support (E07),high minus low,0.0104464138831032,0.0208823368763838,2012-2023,0.500251190512937
+interaction,"F-33 district, log per pupil (31)",instruction,high minus low,-0.0286483180942719,0.0131574401025399,2012-2023,-2.17734740732292
+interaction,"F-33 district, log per pupil (31)",instruction salaries (V11),high minus low,-0.00676422867293956,0.0224176563199957,2012-2023,-0.301736656873722
+interaction,"F-33 district, log per pupil (31)",interest on debt (I86),high minus low,-0.00734052916637567,0.0299713013611433,2012-2023,-0.244918599894111
+interaction,"F-33 district, log per pupil (31)",long-term debt issued (_21F),high minus low,0.0146826095016751,0.163978711411576,2012-2023,0.0895397297324934
+interaction,"F-33 district, log per pupil (31)",long-term debt outstanding (_41F),high minus low,0.0140936144227803,0.0326910611829535,2012-2023,0.431115231894928
+interaction,"F-33 district, log per pupil (31)",operations & maintenance (V40),high minus low,-0.0171212572406854,0.0245670421106596,2012-2023,-0.696919766065633
+interaction,"F-33 district, log per pupil (31)",other local taxes (T99),high minus low,0.00503990000387751,0.0495726411878091,2012-2023,0.101666965550283
+interaction,"F-33 district, log per pupil (31)",parent govt contributions (T02),high minus low,0.0257935849867133,0.0201265301404215,2012-2023,1.28157137900836
+interaction,"F-33 district, log per pupil (31)",payments to charter schools (V92),high minus low,0.002957962693696,0.0655391899440796,2012-2023,0.0451327319763921
+interaction,"F-33 district, log per pupil (31)",payments to other school systems (Q11),high minus low,0.0256126573132633,0.0228845560805683,2012-2023,1.11921145523166
+interaction,"F-33 district, log per pupil (31)",payments to private schools (V91),high minus low,-0.0115502723437558,0.0343785650319286,2012-2023,-0.335973078952791
+interaction,"F-33 district, log per pupil (31)",private contributions (U50),high minus low,-0.0292321493692754,0.0554186443478283,2012-2023,-0.527478607845466
+interaction,"F-33 district, log per pupil (31)",pupil support (E17),high minus low,-0.0157628865459225,0.0193892620396684,2012-2023,-0.812969906418987
+interaction,"F-33 district, log per pupil (31)",pupil transportation (V45),high minus low,0.030707248913052,0.0253571575597127,2012-2023,1.21098939582406
+interaction,"F-33 district, log per pupil (31)",salaries & wages (Z32),high minus low,-0.0145807581317525,0.0124438176808814,2012-2023,-1.17172707810999
+interaction,"F-33 district, log per pupil (31)",school administration (E09),high minus low,0.0131179312694247,0.0288993286384025,2012-2023,0.453918201130567
+interaction,"F-33 district, log per pupil (31)",school lunch charges (A09),high minus low,0.00955276367360076,0.0464979133425912,2012-2023,0.205444997138196
+interaction,"F-33 district, log per pupil (31)",state compensatory (C07),high minus low,-0.0217567208512935,0.110900515227356,2012-2023,-0.196182324371445
+interaction,"F-33 district, log per pupil (31)",state formula aid (C01),high minus low,0.00704507740839788,0.0212937715271837,2012-2023,0.330851554380778
+interaction,"F-33 district, log per pupil (31)",state special ed (C05),high minus low,-0.00923062466548613,0.0169554238182434,2012-2023,-0.544405422384919
+interaction,"F-33 district, log per pupil (31)",state transportation (C06),high minus low,-0.0623132897661138,0.0496743775399042,2012-2023,-1.25443524110708
+interaction,"F-33 district, log per pupil (31)",student fees (A15),high minus low,-0.0384900934311561,0.436362418057166,2012-2023,-0.0882067103819964
+interaction,"F-33 district, log per pupil (31)",support services,high minus low,-0.0154069811916109,0.0154524784505471,2012-2023,-0.997055665919107
+interaction,"F-33 district, log per pupil (31)",total expenditure,high minus low,-0.0224528546942353,0.0230663237222556,2012-2023,-0.973404126491626
+interaction,"F-33 district, log per pupil (31)",total revenue,high minus low,-0.0167392780412541,0.0265883469350533,2012-2023,-0.629571973095687
+interaction,"F-33 district, log per pupil (31)",tuition from pupils (A07),high minus low,-0.0400754164041029,0.0326492075251304,2012-2023,-1.22745449099358
+interaction,SEDA district (31),district SES (SEDA),high minus low,0.0066206091602749,0.00584949906029455,2012-2018,1.13182498057219
+interaction,SEDA district (31),"district test scores (SEDA, SD)",high minus low,0.0456673344971219,0.0148018765258178,2012-2018,3.08523952469592
+interaction,composition: ACS tract (32),household size (ACS),high minus low,0.00684439261518739,0.0114151648416,2013-2023,0.599587716004287
+interaction,composition: ACS tract (32),"households with children, share (ACS)",high minus low,0.0143378562409591,0.012870164224034,2013-2023,1.11403832860067
+interaction,composition: ACS tract (32),median age (ACS),high minus low,0.00486293632029113,0.00991603953828258,2013-2023,0.490411146659604
+interaction,composition: ACS tract (32),"one-person households, share (ACS)",high minus low,0.00124845255377244,0.0120215509225042,2013-2023,0.103851205374454
+interaction,composition: ACS tract (32),share 65+ (ACS),high minus low,0.00381538770436498,0.00983213858947825,2013-2023,0.388052677415265
+interaction,composition: ACS tract (32),share under 18 (ACS),high minus low,0.0157012752177286,0.0117945203541917,2013-2023,1.33123473835444
+interaction,composition: SOI ZIP (32),"dependents per return (SOI, to 2018)",high minus low,0.00732550284784526,0.00485023761232548,2012-2018,1.51033896344163
+interaction,composition: SOI ZIP (32),"elderly (60+) returns, share (SOI, 2015-18)",high minus low,-0.00692036893483458,0.00835245138928899,2015-2022,-0.82854345536319
+interaction,composition: SOI ZIP (32),"head-of-household filers, share (SOI)",high minus low,0.00053632349410932,0.00555391956908904,2012-2022,0.0965666656561411
+interaction,composition: SOI ZIP (32),individuals per return (SOI),high minus low,0.00316749805808675,0.0104045550593592,2012-2022,0.30443378308979
+interaction,composition: SOI ZIP (32),"joint filers, share (SOI)",high minus low,-0.00866710764274049,0.00980268854660391,2012-2022,-0.884156178331624
+interaction,composition: SOI ZIP (32),log individuals (SOI),high minus low,-0.000739824725516133,0.00262955239495602,2012-2022,-0.281350060540819
+interaction,composition: SOI ZIP (32),log returns (SOI),high minus low,-0.00113223531979576,0.00258788048342262,2012-2022,-0.437514532471112
+interaction,composition: SOI ZIP (32),"single filers, share (SOI)",high minus low,0.0132904600935194,0.0140414444218994,2012-2022,0.946516590044769
+interaction,core (31),effective tax rate,high minus low,-0.0063295323900662,0.013192153786751,2012-2024,-0.479795224675367
+interaction,core (31),log county school property tax (CoG),high minus low,0.0102817148951376,0.0394747914464681,2012-2022,0.260462804701088
+interaction,core (31),log district enrolment,high minus low,-0.00200564511037505,0.00437509303846484,2012-2023,-0.45842341928317
+interaction,core (31),log district property tax per pupil,high minus low,-0.0197176301148457,0.0129388333454257,2012-2023,-1.52391097314941
+interaction,core (31),log district spending per pupil,high minus low,-0.02523792113489,0.013463592763365,2012-2023,-1.87453093527632
+interaction,core (31),log median home value (ACS),high minus low,-0.00459784927020126,0.00615528732462459,2013-2023,-0.746975572010634
+interaction,core (31),log median sale price,high minus low,0.00233163938643394,0.00965800660275554,2012-2024,0.241420355393906
+interaction,core (31),log population (ACS),high minus low,-0.00346991540640982,0.00743169406847652,2013-2023,-0.466907729844314
+interaction,core (31),log tax bill per parcel,high minus low,-0.00080291603716586,0.0055471969175629,2012-2024,-0.144742659959259
+interaction,core (31),move-out rate (Data Axle),high minus low,0.00541578875781084,0.0151752568449676,2013-2021,0.356882839818742
+interaction,core (31),sales per 100 parcels,high minus low,0.00705178679096038,0.0295495565618604,2012-2024,0.23864272806253

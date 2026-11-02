@@ -1,0 +1,77 @@
+source,outcome,units,unit_years,share_with_value,share_min,share_2016,share_2022,years,units_with_value
+"F-33 district, log per pupil",total revenue,890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",federal revenue,890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",Title I (C14),890,10625,0.979,0.97,0.98,0.98,2012-2023,882
+"F-33 district, log per pupil",IDEA special ed (C15),890,10625,0.798,0.77,0.79,0.81,2012-2023,790
+"F-33 district, log per pupil",child nutrition (C25),890,10625,0.984,0.96,0.98,0.99,2012-2023,889
+"F-33 district, log per pupil",state formula aid (C01),890,10625,0.998,1,1,1,2012-2023,889
+"F-33 district, log per pupil",state special ed (C05),890,10625,0.432,0.4,0.42,0.45,2012-2023,503
+"F-33 district, log per pupil",state transportation (C06),890,10625,0.622,0.59,0.59,0.62,2012-2023,625
+"F-33 district, log per pupil",state compensatory (C07),890,10625,0.35,0.29,0.31,0.42,2012-2023,422
+"F-33 district, log per pupil",parent govt contributions (T02),890,10625,0.164,0.16,0.16,0.16,2012-2023,150
+"F-33 district, log per pupil",other local taxes (T99),890,10625,0.244,0.23,0.24,0.23,2012-2023,296
+"F-33 district, log per pupil",from cities/counties (D23),890,10625,0.599,0.57,0.61,0.58,2012-2023,631
+"F-33 district, log per pupil",tuition from pupils (A07),890,10625,0.527,0.47,0.54,0.48,2012-2023,668
+"F-33 district, log per pupil",school lunch charges (A09),890,10625,0.985,0.94,0.99,0.97,2012-2023,889
+"F-33 district, log per pupil",district activity receipts (A13),890,10625,0.846,0.84,0.84,0.86,2012-2023,816
+"F-33 district, log per pupil",student fees (A15),890,10625,0.017,0.01,0.02,0.03,2012-2023,24
+"F-33 district, log per pupil",private contributions (U50),890,10625,0.787,0.74,0.76,0.83,2012-2023,855
+"F-33 district, log per pupil",total expenditure,890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",instruction,890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",support services,890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",pupil support (E17),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",instr. staff support (E07),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",general administration (E08),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",school administration (E09),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",operations & maintenance (V40),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",pupil transportation (V45),890,10625,0.999,1,1,1,2012-2023,890
+"F-33 district, log per pupil",food services (E11),890,10625,0.986,0.92,1,0.93,2012-2023,890
+"F-33 district, log per pupil",capital outlay,890,10625,0.995,0.98,0.99,1,2012-2023,890
+"F-33 district, log per pupil",construction (F12),890,10625,0.82,0.75,0.8,0.89,2012-2023,871
+"F-33 district, log per pupil",equipment (K09+K10),890,10625,0.98,0.97,0.98,0.97,2012-2023,890
+"F-33 district, log per pupil",payments to private schools (V91),890,10625,0.261,0.2,0.25,0.29,2012-2023,346
+"F-33 district, log per pupil",payments to charter schools (V92),890,10625,0.133,0.12,0.13,0.13,2012-2023,170
+"F-33 district, log per pupil",payments to other school systems (Q11),890,10625,0.839,0.82,0.83,0.84,2012-2023,822
+"F-33 district, log per pupil",interest on debt (I86),890,10625,0.919,0.86,0.95,0.9,2012-2023,867
+"F-33 district, log per pupil",salaries & wages (Z32),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",employee benefits (Z33),890,10625,1,1,1,1,2012-2023,890
+"F-33 district, log per pupil",instruction salaries (V11),890,10625,0.999,1,1,1,2012-2023,890
+"F-33 district, log per pupil",long-term debt outstanding (_41F),890,10625,0.918,0.81,0.93,0.91,2012-2023,863
+"F-33 district, log per pupil",long-term debt issued (_21F),890,10625,0.394,0.35,0.43,0.37,2012-2023,821
+"F-33 district, log per pupil",cash & securities (W01+W31+W61),890,10625,0.808,0.79,0.82,0.8,2012-2023,737
+SEDA district,"district test scores (SEDA, SD)",908,6377,0.943,0.83,0.96,,2012-2018,907
+SEDA district,district SES (SEDA),908,6377,0.993,0.99,0.99,,2012-2018,902
+"CoG school districts by county, log per capita",school districts: federal revenue,332,3652,0.722,0.7,0.73,0.73,2012-2022,286
+"CoG school districts by county, log per capita",school districts: state revenue,332,3652,1,1,1,1,2012-2022,332
+"CoG school districts by county, log per capita",school districts: capital outlay,332,3652,1,1,1,1,2012-2022,332
+"CoG school districts by county, log per capita",school districts: LT debt outstanding,332,3652,0.919,0.91,0.92,0.91,2012-2022,312
+"CoG school districts by county, log per capita",school districts: LT debt issued,332,3652,0.587,0.53,0.65,0.53,2012-2022,304
+"CoG school districts by county, log per capita",school districts: cash & securities,332,3652,0.9,0,1,0,2012-2021,331
+"CoG school districts by county, log per capita",school districts: interest on debt,332,3652,0.92,0.91,0.93,0.91,2012-2022,312
+"CoG all local govts, census years, log per capita",all local govts: general sales tax,361,1083,0.56,0.48,,0.66,2012-2022,242
+"CoG all local govts, census years, log per capita",all local govts: individual income tax,361,1083,0.295,0.27,,0.27,2012-2022,122
+"CoG all local govts, census years, log per capita",all local govts: federal revenue,361,1083,0.989,0.98,,0.99,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: state revenue,361,1083,0.999,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: other own-source revenue,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: enterprise revenue,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: capital outlay,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: LT debt outstanding,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",all local govts: LT debt issued,361,1083,0.862,0.83,,0.83,2012-2022,354
+"CoG all local govts, census years, log per capita",all local govts: cash & securities,361,1083,0.667,0,,0,2012-2017,361
+"CoG all local govts, census years, log per capita",all local govts: interest on debt,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",spending: education (E12),361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",spending: fire (E24),361,1083,0.987,0.98,,0.99,2012-2022,359
+"CoG all local govts, census years, log per capita",spending: health (E32),361,1083,0.982,0.97,,0.97,2012-2022,360
+"CoG all local govts, census years, log per capita",spending: hospitals (E36),361,1083,0.286,0.27,,0.27,2012-2022,138
+"CoG all local govts, census years, log per capita",spending: highways (E44),361,1083,0.999,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",spending: housing & comm. dev. (E50),361,1083,0.819,0.78,,0.83,2012-2022,330
+"CoG all local govts, census years, log per capita",spending: libraries (E52),361,1083,0.929,0.92,,0.93,2012-2022,350
+"CoG all local govts, census years, log per capita",spending: parks (E61),361,1083,0.997,0.99,,0.99,2012-2022,361
+"CoG all local govts, census years, log per capita",spending: police (E62),361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",spending: public welfare (E74-79),361,1083,0.825,0.79,,0.79,2012-2022,335
+"CoG all local govts, census years, log per capita",spending: sewerage (E80),361,1083,0.979,0.97,,0.97,2012-2022,358
+"CoG all local govts, census years, log per capita",spending: solid waste (E81),361,1083,0.983,0.97,,0.97,2012-2022,359
+"CoG all local govts, census years, log per capita",spending: general government (E89),361,1083,0.99,0.99,,0.99,2012-2022,361
+"CoG all local govts, census years, log per capita",number of local governments,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",number of municipalities,361,1083,1,1,,1,2012-2022,361
+"CoG all local govts, census years, log per capita",number of special districts,361,1083,1,1,,1,2012-2022,361

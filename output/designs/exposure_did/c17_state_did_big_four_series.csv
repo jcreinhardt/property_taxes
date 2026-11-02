@@ -1,0 +1,716 @@
+outcome,exposure,sample,y,b,se,n_states,se_type,outcome_l,exposure_l
+r_net,ex_ret,all 50 states,2012,-0.299798453431962,0.0974081949072528,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2013,-0.24644245973155,0.0863603673562141,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2014,-0.165181505154948,0.0997547821202333,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2015,-0.267823575485852,0.0637792797550818,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2016,-0.127375447576604,0.0410316365575325,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2017,0,0,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2018,-0.133469579919058,0.0381964205883786,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2019,-0.121648285756719,0.0480988990051554,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2020,0.0319701658436983,0.0599352372120893,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2021,0.137274230331746,0.0815760574800942,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,all 50 states,2022,0.075869313713034,0.0728421495727054,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2012,-0.37873122998025,0.201222943961352,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2013,-0.279362979154482,0.165039372407775,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2014,-0.122184885540383,0.168104072477579,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2015,-0.334098647157239,0.112202863530259,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2016,-0.162366252020293,0.183961330997235,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2018,-0.190939130348654,0.101177343878228,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2019,-0.153245707048291,0.104013800743218,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2020,0.104618778644522,0.100478315504781,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2021,0.297410759525192,0.141238815039282,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,big four (CA NY FL TX),2022,0.171311711719726,0.156540620727893,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2012,-0.200119313484335,0.0830785470239848,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2013,-0.187671194309146,0.0775632346742971,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2014,-0.158658871533275,0.0676676843885658,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2015,-0.17736779652672,0.0739982068333655,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2016,-0.0740996482082303,0.0422363276263799,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2017,0,0,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2018,-0.0808663330315659,0.0359006872638164,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2019,-0.088510289855639,0.0431478452004261,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2020,-0.0623334770691278,0.0617901020417735,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2021,-0.0355289418876047,0.0900537077703271,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,other 46 states,2022,-0.0147663209680141,0.0806353661589238,46,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2012,-0.288983896231183,0.103453704102078,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2013,-0.233290503263714,0.0871379030543374,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2014,-0.140512010954423,0.0864539862686721,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2015,-0.255345917573073,0.0506568135135121,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2016,-0.118014830756645,0.0330260279226392,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2018,-0.135630726120562,0.0406784309671105,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2019,-0.120718028010107,0.0493494047668632,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2020,0.0207300879700959,0.0541602163960892,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2021,0.130118167366639,0.0808133220745891,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_ret,"all 50, big four x year FE",2022,0.0778128700375802,0.0703997055688737,50,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per return (SD)
+r_net,ex_own,all 50 states,2012,-0.304269339230636,0.0885944858803091,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2013,-0.250268532999296,0.0782647327055965,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2014,-0.181796953291084,0.0892629836511657,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2015,-0.273895004073527,0.0607411365181678,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2016,-0.137662492316761,0.0389485628623919,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2017,0,0,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2018,-0.125848448366791,0.0394175877740606,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2019,-0.11615517748451,0.0487197306943751,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2020,0.046086126700697,0.0597258197325348,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2021,0.154683921984792,0.080942075139884,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,all 50 states,2022,0.0908926979505326,0.0720510916494933,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2012,-0.37746892561069,0.202455698330435,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2013,-0.275799398581779,0.168630310941701,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2014,-0.115671167040343,0.175426275407317,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2015,-0.325198720083825,0.118223025075713,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2016,-0.161073565697525,0.190428356918318,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2018,-0.181202536349641,0.108121542739686,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2019,-0.137808128019788,0.112081017130112,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2020,0.111732452881269,0.108525308620021,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2021,0.315888979111864,0.13163309557092,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,big four (CA NY FL TX),2022,0.199079280753301,0.143364913248212,4,hetero,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2012,-0.202029420393056,0.0800823965042564,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2013,-0.184509862890068,0.0744599521713181,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2014,-0.16153150678494,0.0664643753120056,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2015,-0.185749687953432,0.0725501090873693,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2016,-0.0840189109171617,0.0416281656629135,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2017,0,0,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2018,-0.0829383918274354,0.0335414625273022,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2019,-0.0945020567201433,0.0399308131495211,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2020,-0.0566397579209452,0.057419761799721,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2021,-0.0223850601583036,0.0844222406097332,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,other 46 states,2022,-0.00229688563423892,0.0733872544955615,44,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2012,-0.289411110665709,0.106229833065166,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2013,-0.229978720790983,0.0894776983805032,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2014,-0.138689707280378,0.0893626918500865,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2015,-0.255205493356686,0.0519745607596816,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2016,-0.12239775819977,0.0333219207495163,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2017,0,0,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2018,-0.131881114453648,0.0416925312721167,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2019,-0.116071643937896,0.0508434958950729,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2020,0.027221903434001,0.0540843696808788,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2021,0.146100123894833,0.0809787386606529,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,ex_own,"all 50, big four x year FE",2022,0.0980031566951159,0.0700396223374623,48,cluster state,net out-migration rate (pp of returns),lost SALT subsidy per owner HH (SD)
+r_net,salt17,all 50 states,2012,-0.218729807463536,0.0979578294127274,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2013,-0.175487812800664,0.0888355705993972,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2014,-0.102738017950167,0.107740499127494,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2015,-0.199858740991114,0.0537947079416289,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2016,-0.107357844498875,0.0287879443364771,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2017,0,0,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2018,-0.0926914213387801,0.0403837862515412,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2019,-0.0700239007299487,0.0523925257624488,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2020,0.065292423870378,0.0490344922296159,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2021,0.165929235097681,0.0608238390761781,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,all 50 states,2022,0.105298199996257,0.0680705483761976,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2012,-0.235117366230543,0.151633544352857,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2013,-0.168346685812163,0.124653279845173,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2014,-0.0572190086176997,0.123591591724733,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2015,-0.215271117615352,0.0821416658091984,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2016,-0.11440933577349,0.12941114623364,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2018,-0.113797580562215,0.0786046628695565,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2019,-0.0802289505721203,0.0820744495837485,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2020,0.0858772511165703,0.0817434755632373,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2021,0.223928430132547,0.103630410859107,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,big four (CA NY FL TX),2022,0.148875386836301,0.102183142040627,4,hetero,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2012,-0.121905958390811,0.128256520254799,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2013,-0.133675257897424,0.111097271540581,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2014,-0.109841787499571,0.0903597625037087,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2015,-0.0970160785338971,0.0988949034851433,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2016,-0.0430469348557436,0.04658518631567,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2017,0,0,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2018,-0.0447251736966504,0.0667227803736244,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2019,-0.0358301024512032,0.0784082930813496,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2020,-0.0473444030905247,0.11052411111851,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2021,-0.0295219887627807,0.158573088625665,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,other 46 states,2022,-0.00406506105454244,0.152249906403491,46,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2012,-0.206361126415803,0.108027500975147,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2013,-0.159539977063809,0.0920433060172634,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2014,-0.0705854464892917,0.09224693493013,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2015,-0.185233771308858,0.0427119700999984,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2016,-0.0962829441517955,0.0232577761946961,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2018,-0.0962528583976492,0.0425755140277154,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2019,-0.0689514305021402,0.0542835857632754,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2020,0.0520383128859015,0.0471872541436278,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2021,0.159550809838148,0.0584177411449974,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,salt17,"all 50, big four x year FE",2022,0.110027780567249,0.0632869964248821,50,cluster state,net out-migration rate (pp of returns),"SALT income tax / AGI, TY2017 (SD)"
+r_net,hi,big four (CA NY FL TX),2012,-0.928184223576451,0.567299054618236,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2013,-0.665069036365954,0.469916294308971,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2014,-0.239919588672,0.477866533668189,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2015,-0.808018856026689,0.329530118037736,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2016,-0.423352541242231,0.504383842170066,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2018,-0.426667936893055,0.302948789683639,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2019,-0.293165237187727,0.314149159972155,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2020,0.325349807354561,0.316911178482175,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2021,0.877254174919406,0.377889906170282,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net,hi,big four (CA NY FL TX),2022,0.605587525807154,0.360783802941648,4,hetero,net out-migration rate (pp of returns),CA NY vs FL TX
+r_net_b4,ex_ret,all 50 states,2012,-0.0963249861366189,0.0408275972197997,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2013,-0.0862407598516663,0.0366714719518516,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2014,-0.0664904461286885,0.0412145272270231,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2015,-0.0744222354354391,0.0298023200426663,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2016,-0.0308392357011901,0.0201426508419828,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2017,0,0,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2018,-0.0343943690868771,0.0145817835733687,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2019,-0.0348097400651546,0.0181861316169252,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2020,0.00101719298356788,0.0239076261336087,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2021,0.0425552074246545,0.0369469111227697,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,all 50 states,2022,0.0538606954635679,0.032572095008292,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2012,-0.123254679369302,0.0770979366057597,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2013,-0.0943922782636462,0.0679748223660644,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2014,-0.0564531093685529,0.0743641593283862,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2015,-0.101679156562486,0.047961120831991,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2016,-0.0503195587990046,0.0776425301638126,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2018,-0.0545897246085761,0.0418896576651859,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2019,-0.0459114857950112,0.0403099564348373,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2020,0.0374362864789035,0.040322625347673,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2021,0.117001303068143,0.056218769636943,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,big four (CA NY FL TX),2022,0.0958269310281139,0.0644395856367235,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2012,-0.0626032825428763,0.0391364811005806,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2013,-0.0698709643984027,0.0394503333907729,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2014,-0.0608861794176367,0.0362916721763492,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2015,-0.039058705569649,0.0383341614434049,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2016,-0.00526998455715973,0.0230799799608849,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2017,0,0,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2018,-0.0155370011673233,0.0145939224007735,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2019,-0.0229575320998609,0.0150365419422409,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2020,-0.0423465224527034,0.0248699645092796,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2021,-0.0355475610351294,0.0387490416961506,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,other 46 states,2022,0.0145983634780807,0.0342399470402417,46,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2012,-0.0927791027106028,0.0421498668450291,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2013,-0.0820710256697296,0.0370331461550639,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2014,-0.0586805991409786,0.0379450735541231,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2015,-0.07021418700711,0.0254441525732027,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2016,-0.0276834477597462,0.0184141338282677,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2018,-0.0349668580426023,0.0149218693740386,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2019,-0.0343777864564988,0.0178937325462603,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2020,-0.00265227267827095,0.0225448916394652,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2021,0.0403499010323197,0.0372774119807915,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_ret,"all 50, big four x year FE",2022,0.0550119198861331,0.0310788723062929,50,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per return (SD)
+r_net_b4,ex_own,all 50 states,2012,-0.0900159611107883,0.0381440326180756,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2013,-0.0802265456508217,0.0338692229817412,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2014,-0.065035950126078,0.0372582994026118,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2015,-0.0700430954866414,0.0289608887285633,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2016,-0.0310518814583367,0.0195251749958185,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2017,0,0,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2018,-0.0300607078283556,0.0150005754964193,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2019,-0.0302317032336176,0.0186154543132462,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2020,0.00719898236639878,0.0249038712730606,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2021,0.0504940564256889,0.0376447821089647,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,all 50 states,2022,0.0615987267060544,0.0317467493382932,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2012,-0.117613156017923,0.0800263961167845,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2013,-0.0900478804317135,0.0700513025077717,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2014,-0.0519090248048912,0.0771141458284299,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2015,-0.0964380250431743,0.0501689405068198,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2016,-0.0498214757274912,0.0797496454304575,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2018,-0.0499161770411792,0.0439670367152762,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2019,-0.0391330959274155,0.0429383059641034,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2020,0.0420673428571277,0.0430774025401673,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2021,0.127056232727295,0.0513009108394015,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,big four (CA NY FL TX),2022,0.108749176605598,0.0580371968040778,4,hetero,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2012,-0.052257709989689,0.0362868977683074,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2013,-0.0574181646653429,0.0365565950225529,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2014,-0.0509287457193105,0.0342004006604199,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2015,-0.0302031243697539,0.0364967595048899,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2016,-0.00142175498602223,0.0217306507948327,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2017,0,0,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2018,-0.0133007412638823,0.0133184333734824,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2019,-0.0205469238237224,0.0137161125179405,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2020,-0.0400826089357003,0.0235061326223234,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2021,-0.0305935586028877,0.0372313152355831,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,other 46 states,2022,0.0228351476364414,0.0318443169392968,44,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2012,-0.084809496631961,0.0433830700931405,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2013,-0.0736701468699479,0.0379841628358884,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2014,-0.0514169963178902,0.0389874397368724,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2015,-0.0631929436735931,0.0258577093379776,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2016,-0.0255283517406557,0.0186686848932545,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2017,0,0,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2018,-0.0315379032093685,0.0149136752009254,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2019,-0.0298041953379373,0.0182496716300835,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2020,0.000834068494330327,0.0230170734958698,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2021,0.0479275545322256,0.0382319033394953,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,ex_own,"all 50, big four x year FE",2022,0.0656266104836807,0.0305827526357474,48,cluster state,net out-migration to CA NY FL TX (pp),lost SALT subsidy per owner HH (SD)
+r_net_b4,salt17,all 50 states,2012,-0.067085909569937,0.0405337529146863,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2013,-0.0602022587091421,0.0367112902984248,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2014,-0.0422556833613243,0.0421857117687641,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2015,-0.0599774881403711,0.0218702465440244,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2016,-0.0332257669246695,0.0125160061653688,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2017,0,0,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2018,-0.0238576277811331,0.0150738045394794,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2019,-0.0196914512161936,0.0198074646811982,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2020,0.0201681426921486,0.0191177974647095,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2021,0.0611079808099059,0.0270033533618715,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,all 50 states,2022,0.0588102828995546,0.0295823997759304,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2012,-0.0700422312125369,0.0595554305411702,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2013,-0.0526556292484815,0.0511599266586254,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2014,-0.025828014263396,0.0544032826187492,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2015,-0.0636373290152025,0.0335429845640556,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2016,-0.0364633212173125,0.0535742902843479,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2018,-0.0308024013690809,0.0307326783035489,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2019,-0.0217937935950262,0.0305616627071993,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2020,0.032504741780656,0.0314291926886695,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2021,0.0908619476283579,0.0384541268578914,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,big four (CA NY FL TX),2022,0.0793017042282999,0.0411090795090369,4,hetero,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2012,-0.0419670123277551,0.0655604008580809,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2013,-0.0624884336266031,0.0591133651081774,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2014,-0.0507069420913028,0.0487564555695306,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2015,-0.02995738812029,0.0533392224592489,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2016,-0.00948258270165308,0.0266949401682708,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2017,0,0,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2018,-0.00715179328560536,0.0316973720316824,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2019,-0.011400290354792,0.0334401191367381,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2020,-0.0325838215707922,0.0426818089869641,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2021,-0.0327206918423509,0.0615861043431489,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,other 46 states,2022,0.00855802872440967,0.0659260109190855,46,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2012,-0.0629109911501837,0.0438112781845649,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2013,-0.0551532086545162,0.0387226148350277,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2014,-0.0321473810887404,0.0398588333897743,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2015,-0.0550824627185882,0.01850310009941,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2016,-0.029610084410705,0.0126682684886484,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2018,-0.0247950336418317,0.0149966345344744,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2019,-0.0191537939925607,0.0197133416701739,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2020,0.0159719349492023,0.0184269544788834,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2021,0.0594713653065722,0.0262058062843044,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,salt17,"all 50, big four x year FE",2022,0.0613324718250957,0.0273611196332859,50,cluster state,net out-migration to CA NY FL TX (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_b4,hi,big four (CA NY FL TX),2012,-0.270615997657339,0.225311539864169,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2013,-0.20513489507866,0.19339630553167,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2014,-0.104280449576772,0.208706282223709,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2015,-0.233271091765953,0.133262661824012,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2016,-0.132937604008508,0.206909754768482,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2018,-0.111870566713787,0.117184545490407,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2019,-0.0757533119187476,0.116104646808205,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2020,0.127301060944793,0.120034548216793,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2021,0.360462540184338,0.137413684226811,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_b4,hi,big four (CA NY FL TX),2022,0.321520781767992,0.14303551127871,4,hetero,net out-migration to CA NY FL TX (pp),CA NY vs FL TX
+r_net_o46,ex_ret,all 50 states,2012,-0.206432903972137,0.0601462758015204,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2013,-0.162521821652484,0.052100284790694,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2014,-0.101660666683855,0.060795529759385,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2015,-0.197276940936481,0.0377786766365005,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2016,-0.0988047494938693,0.0227747063229618,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2017,0,0,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2018,-0.101161823324726,0.0251066464857012,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2019,-0.0885885537772245,0.0308869132388414,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2020,0.0299856617753161,0.0370476695335705,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2021,0.0932419549494684,0.0454898291719435,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,all 50 states,2022,0.0202927298658817,0.0416379855006721,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2012,-0.257369546536934,0.128001751319694,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2013,-0.186339497202476,0.0989815758896655,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2014,-0.0680521228549205,0.095120449889916,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2015,-0.234859934092757,0.0672465109262501,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2016,-0.113134775106554,0.108247964816891,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2018,-0.137814880326923,0.0627089519579907,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2019,-0.108595172872121,0.0668464209780276,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2020,0.0640148964916086,0.0627587618700764,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2021,0.176023318341357,0.0865707680717158,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,big four (CA NY FL TX),2022,0.0735218217389419,0.0933120039712787,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2012,-0.14187125537116,0.0528614283911016,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2013,-0.121446728159599,0.0480624063758151,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2014,-0.101794643630415,0.0432218754712529,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2015,-0.144038169187286,0.0479022659469901,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2016,-0.0727233654759098,0.0270030299534233,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2017,0,0,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2018,-0.0681619589739346,0.0245155961903912,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2019,-0.0679316545599908,0.0310500866448355,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2020,-0.0182515957870346,0.0403101094020631,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2021,0.00209374004063938,0.0552239185133846,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,other 46 states,2022,-0.0307434341306179,0.0502817429742787,46,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2012,-0.199334988215967,0.0647331159895629,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2013,-0.153732753400331,0.0528655045766033,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2014,-0.0850067658204255,0.0515072361973475,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2015,-0.189224618115185,0.0309326861048645,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2016,-0.0928292079386721,0.01734470028797,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2018,-0.102816297354956,0.0272172461477186,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2019,-0.0881629283670138,0.0324735540985216,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2020,0.0226783581253963,0.0330886861433482,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2021,0.0886287244148897,0.0443967750901083,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_ret,"all 50, big four x year FE",2022,0.0211315394972142,0.0408150251088979,50,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per return (SD)
+r_net_o46,ex_own,all 50 states,2012,-0.216998623966356,0.0540091285837086,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2013,-0.172183694437456,0.0467003587150659,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2014,-0.119458864344546,0.0543344289315798,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2015,-0.207386804368688,0.0346360605785296,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2016,-0.108587302316238,0.0207038725187017,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2017,0,0,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2018,-0.0977991350991108,0.0256223527460771,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2019,-0.0876346258234489,0.030906885913109,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2020,0.037585312359341,0.035744475575991,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2021,0.102213964653451,0.0438846376647091,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,all 50 states,2022,0.0273561498176993,0.0413447007990464,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2012,-0.26184568702283,0.125592826095366,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2013,-0.187257973438611,0.100031469170049,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2014,-0.0660739702728468,0.0994288858923279,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2015,-0.231209367881045,0.0706207235187679,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2016,-0.112351683326388,0.112347588103222,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2018,-0.132779402944141,0.0671302324884622,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2019,-0.100019786666814,0.0716498788288796,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2020,0.0665617017879344,0.0673085212243192,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2021,0.184359711416074,0.0819322854700749,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,big four (CA NY FL TX),2022,0.0881778755506084,0.0864593121423928,4,hetero,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2012,-0.154040674700839,0.050627925463385,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2013,-0.1306959516101,0.0458573231259116,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2014,-0.114575715109099,0.0414146150781483,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2015,-0.161136973726454,0.0451852172547659,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2016,-0.0863920737337709,0.0253503354178799,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2017,0,0,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2018,-0.0725068619024358,0.0230787711914142,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2019,-0.0763855722329011,0.0285261477038154,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2020,-0.0151575568444641,0.0370722325949892,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2021,0.00985995193879647,0.0506251863191447,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,other 46 states,2022,-0.0267797106495782,0.0451960669751008,44,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2012,-0.207735446496246,0.065494183328925,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2013,-0.158867970600254,0.0536104132782636,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2014,-0.0904183029019297,0.0529287661076732,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2015,-0.196038145130719,0.0306772075160883,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2016,-0.0993218557814764,0.0168079915573387,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2017,0,0,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2018,-0.102526990531497,0.0280516913277612,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2019,-0.0881571376106081,0.0334191069419644,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2020,0.0255446039275264,0.0326237897364434,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2021,0.0967735801799381,0.0434626657432264,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,ex_own,"all 50, big four x year FE",2022,0.0304775654660543,0.0407507560065903,48,cluster state,net out-migration to the other 46 (pp),lost SALT subsidy per owner HH (SD)
+r_net_o46,salt17,all 50 states,2012,-0.154708218673734,0.0601674601465746,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2013,-0.117778508944471,0.0537849761472471,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2014,-0.0634215596067991,0.0668653018005116,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2015,-0.143686248470012,0.034645768943144,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2016,-0.0762684414772871,0.0177701197621524,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2017,0,0,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2018,-0.0707809262970581,0.0265132381582174,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2019,-0.0520033976906911,0.0332626163179938,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2020,0.0442869848264365,0.0306624096710108,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2021,0.103772025908721,0.0346039130285648,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,all 50 states,2022,0.0451802048161639,0.0392575233078407,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2012,-0.166501677934142,0.0938363152377464,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2013,-0.116803320302257,0.0743808048431568,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2014,-0.0330209626470073,0.0702521495123738,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2015,-0.153305104314667,0.0507411961126368,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2016,-0.0786730139205635,0.0771123341824675,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2018,-0.0839949276143051,0.0499674063967138,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2019,-0.0593747374233304,0.0530970008974038,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2020,0.0512954878362668,0.051422361292124,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2021,0.130085486755958,0.0659636186590605,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,big four (CA NY FL TX),2022,0.0680680482991237,0.0620020178441015,4,hetero,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2012,-0.0888965876438288,0.0755051150010257,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2013,-0.0789046111981836,0.06476877910737,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2014,-0.0671675110426022,0.0600294690990851,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2015,-0.0784884362445049,0.0639400899649719,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2016,-0.0411545696911931,0.0343119244509781,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2017,0,0,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2018,-0.0427544504216851,0.0396449980542152,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2019,-0.0287234245297381,0.0494239854397983,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2020,-0.0106279276390455,0.0716873269356234,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2021,0.00954642495075841,0.100947736226528,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,other 46 states,2022,-0.0131584395866104,0.0900422477345087,46,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2012,-0.146789613312599,0.0666709654206269,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2013,-0.107176866674823,0.0550452485772968,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2014,-0.0416943494836023,0.0539927224642313,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2015,-0.134301312292126,0.0286137255662709,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2016,-0.069143149392574,0.0126884011439186,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2017,0,0,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2018,-0.0735196488870585,0.0289482280026462,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2019,-0.051589157144597,0.0353911200109722,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2020,0.0355666437247541,0.0297784639132634,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2021,0.0994679877383558,0.0329442967071532,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,salt17,"all 50, big four x year FE",2022,0.0474361313437398,0.0369205138094738,50,cluster state,net out-migration to the other 46 (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_net_o46,hi,big four (CA NY FL TX),2012,-0.663082793292011,0.347097719184102,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2013,-0.464322029704953,0.279144090002153,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2014,-0.141713308326647,0.272547966833109,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2015,-0.581107272834706,0.203205994841282,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2016,-0.293240109397898,0.301446994519372,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2017,0,0,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2018,-0.318686638206617,0.192645642372212,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2019,-0.221129957945907,0.202969523034318,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2020,0.19024375036982,0.200102361229728,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2021,0.505159077658476,0.242910463350272,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_net_o46,hi,big four (CA NY FL TX),2022,0.277986576625643,0.220999665338013,4,hetero,net out-migration to the other 46 (pp),CA NY vs FL TX
+r_out,ex_ret,all 50 states,2012,-0.155722008927299,0.0680587149315634,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2013,-0.132876020747536,0.0434889589574695,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2014,-0.0495876417935567,0.0267463281971665,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2015,-0.000987910192803948,0.075555740073105,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2016,0.0203661786253484,0.0455327818007383,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2017,0,0,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2018,0.0392521354983737,0.0362126907582061,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2019,0.0679247974664999,0.040467179877336,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2020,0.150968424965739,0.051062817714279,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2021,0.184523924079352,0.0569254052113353,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,all 50 states,2022,0.164060731520232,0.0459573884571155,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2012,-0.225964149042666,0.175626003056055,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2013,-0.175385884364992,0.103248470835843,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2014,-0.062100341261484,0.0383466826687963,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2015,-0.0723457558293321,0.139837872178795,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2016,-0.00831676361808467,0.114171850071349,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2017,0,0,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2018,0.0123493109373594,0.0418290895288587,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2019,0.0620622583708556,0.0601212722724612,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2020,0.202920586741205,0.0378980426990539,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2021,0.26203275425584,0.0430936329417848,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,big four (CA NY FL TX),2022,0.205339584454123,0.0446545885924904,4,hetero,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2012,-0.118558885906123,0.0514782141383874,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2013,-0.115407743166662,0.0398559502628041,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2014,-0.053400353054063,0.0362667661763177,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2015,0.021117918456334,0.0514012556625195,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2016,0.0268546454349886,0.0284864881325146,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2017,0,0,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2018,0.0393892280513898,0.0282170684515108,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2019,0.049004350242235,0.0321256488073409,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2020,0.0653544493092232,0.0335330461953595,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2021,0.0742254678969553,0.0422219539704379,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,other 46 states,2022,0.0942566550210936,0.0438818685617511,46,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2012,-0.17199610376198,0.0631580617987038,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2013,-0.14524859923095,0.0373445664869329,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2014,-0.0577288482470066,0.0215861503619861,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2015,-0.0253829566270656,0.0627973268553397,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2016,0.00935585447278728,0.0448209506374575,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2017,0,0,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2018,0.025936088983243,0.0259592549175773,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2019,0.0555010363545696,0.0331843850030444,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2020,0.133797572493942,0.0300415156542157,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2021,0.16766501250585,0.0400300481076686,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_ret,"all 50, big four x year FE",2022,0.149523617987641,0.0331690262205223,50,cluster state,out-of-state rate (pp),lost SALT subsidy per return (SD)
+r_out,ex_own,all 50 states,2012,-0.149548608157349,0.0637044464401049,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2013,-0.125573049170527,0.0434887036529096,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2014,-0.0501020607405516,0.0304451410213034,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2015,0.00470984152252464,0.075076237702245,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2016,0.0184976670389715,0.0426215203991507,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2017,0,0,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2018,0.044791703771931,0.0392260814501684,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2019,0.0720896571089925,0.045050684472858,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2020,0.156499201492661,0.0508385408481462,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2021,0.192104635087649,0.0560488019575627,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,all 50 states,2022,0.170724881614536,0.044921119133575,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2012,-0.229706231846256,0.170972073835169,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2013,-0.174010348868046,0.0984726802437067,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2014,-0.0551636790112426,0.0358816294219714,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2015,-0.0584964402688574,0.145422812983575,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2016,-0.00117221258411743,0.116971437438601,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2017,0,0,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2018,0.0236088329551959,0.0400745916473391,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2019,0.0781718641186113,0.0547982675389867,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2020,0.209632100537536,0.0353072410619509,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2021,0.270438696090127,0.0345390368667263,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,big four (CA NY FL TX),2022,0.214949788062044,0.0353177106267757,4,hetero,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2012,-0.135138879731289,0.0541012362332469,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2013,-0.127391078024914,0.040448252231238,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2014,-0.0758721711182366,0.0367960037091493,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2015,-0.0200905947305923,0.0509114422432954,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2016,-0.000333610125685363,0.0263073878659341,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2017,0,0,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2018,0.0202650444338807,0.0268998546604083,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2019,0.0253860636789447,0.0290073697381604,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2020,0.0494811512618597,0.0291752358189681,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2021,0.0631364067827006,0.0361449080478083,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,other 46 states,2022,0.0833767948403406,0.0377199836054688,44,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2012,-0.182240329670765,0.0650121417146892,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2013,-0.150610880660005,0.0383022957863464,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2014,-0.0655578291970017,0.0219918252431232,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2015,-0.0392195115348258,0.0621935754062304,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2016,-0.000751295413806322,0.0450031555362137,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2017,0,0,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2018,0.0219304953968455,0.0235177401624595,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2019,0.0516772485468627,0.0308522973051082,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2020,0.129248023775084,0.0295889421847376,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2021,0.166388091257084,0.0390308878931478,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,ex_own,"all 50, big four x year FE",2022,0.148909757485683,0.0303171971554878,48,cluster state,out-of-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_out,salt17,all 50 states,2012,-0.113488514757236,0.0623672936376259,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2013,-0.0945362504353009,0.0435876746427511,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2014,-0.0276172655215869,0.0309646764223443,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2015,-0.0018078940099017,0.0903052288939426,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2016,0.0115687145629998,0.0525857203068145,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2017,0,0,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2018,0.0341866697298939,0.0432206276711939,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2019,0.0639459847035804,0.0464093504102722,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2020,0.133717916556749,0.0478291932200714,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2021,0.16314381134543,0.0508758570097334,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,all 50 states,2022,0.134097653084526,0.0468225613573841,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2012,-0.145044712058141,0.126046087923009,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2013,-0.111307349225964,0.0747828075287958,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2014,-0.034937031109467,0.0254506563419807,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2015,-0.0472296723577292,0.0950101568630777,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2016,-0.00826244146298798,0.0779648632697694,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2017,0,0,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2018,0.0190533645764588,0.0264405344743482,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2019,0.0576827815671916,0.0355101701661932,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2020,0.145096059155259,0.0264391630533761,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2021,0.186574745569937,0.0289230734852587,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,big four (CA NY FL TX),2022,0.148860301085259,0.0267495021423062,4,hetero,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2012,-0.109470937100365,0.0625650821421438,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2013,-0.112749087583908,0.0507364417053029,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2014,-0.0486351428059626,0.055615703459307,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2015,0.00441993661566075,0.0757913564728839,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2016,0.0125734932899197,0.0483287052681057,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2017,0,0,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2018,0.0110332853329658,0.0429064160659126,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2019,0.0212786687136196,0.0489742809955977,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2020,0.0178416030742067,0.0494753339984633,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2021,0.0149957777475097,0.0665119651721848,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,other 46 states,2022,0.021117464548852,0.0749967633906433,46,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2012,-0.136008802839084,0.0629530172633292,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2013,-0.111673557674055,0.0377495595749715,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2014,-0.0384164170871694,0.0201155190364813,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2015,-0.0341104243038668,0.0594819980382079,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2016,-0.00297001424251601,0.0455975750079124,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2017,0,0,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2018,0.0170162260366258,0.0220726409804636,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2019,0.0484359625457186,0.0293932233257698,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2020,0.112772817828365,0.0220699924976144,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2021,0.142992865969498,0.0300680553518063,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,salt17,"all 50, big four x year FE",2022,0.116413008783618,0.0293182406938841,50,cluster state,out-of-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_out,hi,big four (CA NY FL TX),2012,-0.579172587048977,0.465403354786068,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2013,-0.432089960197194,0.271841212484106,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2014,-0.121437345918987,0.0902994716152904,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2015,-0.134936625270288,0.381669208362849,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2016,-0.00211286293432,0.305772098050014,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2017,0,0,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2018,0.0928614163966471,0.093098644778433,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2019,0.248067844602956,0.119817982028852,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2020,0.562285202345882,0.107296876110728,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2021,0.723555279542023,0.114599250871608,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_out,hi,big four (CA NY FL TX),2022,0.582942106567555,0.0956021758812913,4,hetero,out-of-state rate (pp),CA NY vs FL TX
+r_in,ex_ret,all 50 states,2012,0.144076444504666,0.0867971601702084,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2013,0.113566438984016,0.0840733229342006,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2014,0.115593863361393,0.108943249686872,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2015,0.26683566529305,0.114371041394961,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2016,0.147741626201954,0.0594155469939554,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2017,0,0,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2018,0.172721715417434,0.0449526619240799,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2019,0.18957308322322,0.0540944482500057,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2020,0.118998259122042,0.0405965522794079,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2021,0.0472496937476073,0.0530477734989498,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,all 50 states,2022,0.0881914178072001,0.0680857598324631,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2012,0.152767080937585,0.099295804061874,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2013,0.103977094789491,0.105224959073658,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2014,0.0600845442788993,0.158250494884209,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2015,0.261752891327908,0.136635983069879,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2016,0.154049488402209,0.113951926225608,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2017,0,0,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2018,0.203288441286014,0.101614412984654,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2019,0.215307965419147,0.10143338218694,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2020,0.0983018080966834,0.0991740394007846,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2021,-0.0353780052693516,0.127347224822001,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,big four (CA NY FL TX),2022,0.0340278727343977,0.136587349007539,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2012,0.0815604275782125,0.0743936961611329,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2013,0.0722634511424842,0.0664114575440468,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2014,0.105258518479212,0.0615492065150331,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2015,0.198485714983054,0.0816740491231124,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2016,0.100954293643219,0.0460899612803847,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2017,0,0,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2018,0.120255561082956,0.0405446230942276,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2019,0.137514640097874,0.0483020982460082,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2020,0.127687926378351,0.0562459528974481,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2021,0.10975440978456,0.0722212522727803,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,other 46 states,2022,0.109022975989108,0.0695626364516734,46,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2012,0.116987792469202,0.0537318903071173,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2013,0.0880419040327622,0.058206370097858,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2014,0.0827831627074154,0.0838408194780132,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2015,0.229962960946007,0.0775028339973256,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2016,0.127370685229431,0.0343896248542136,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2017,0,0,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2018,0.161566815103804,0.0388176492585702,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2019,0.176219064364675,0.0477512055827121,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2020,0.113067484523845,0.0425985343911905,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2021,0.0375468451392094,0.050188352044728,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_ret,"all 50, big four x year FE",2022,0.0717107479500593,0.0510829729545967,50,cluster state,in-from-other-state rate (pp),lost SALT subsidy per return (SD)
+r_in,ex_own,all 50 states,2012,0.154720731073286,0.0806208424204263,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2013,0.124695483828769,0.0781100574313865,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2014,0.131694892550532,0.100013715122792,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2015,0.278604845596051,0.107803894860905,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2016,0.156160159355732,0.0585672728655653,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2017,0,0,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2018,0.170640152138721,0.0416458152154503,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2019,0.188244834593502,0.0491967452436882,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2020,0.110413074791963,0.0365865303641722,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2021,0.0374207131028563,0.0482751794247564,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,all 50 states,2022,0.0798321836640031,0.0613549611391012,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2012,0.147762693764434,0.103889879048449,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2013,0.101789049713733,0.109494802782756,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2014,0.0605074880291002,0.164415837144974,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2015,0.266702279814968,0.136952155579097,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2016,0.159901353113407,0.11652089464861,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2017,0,0,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2018,0.204811369304837,0.103959969736446,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2019,0.215979992138399,0.103947650401642,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2020,0.097899647656266,0.103384842783623,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2021,-0.045450283021737,0.126285322525788,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,big four (CA NY FL TX),2022,0.0158705073087437,0.134522813269634,4,hetero,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2012,0.0668905406617671,0.07372814513303,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2013,0.0571187848651534,0.0652325337862312,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2014,0.0856593356667032,0.060134687680058,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2015,0.165659093222839,0.0799737945946147,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2016,0.0836853007914764,0.0444408963099118,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2017,0,0,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2018,0.103203436261316,0.0399944041877013,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2019,0.119888120399088,0.047659294569723,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2020,0.106120909182805,0.0562213471545422,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2021,0.0855214669410042,0.0718390197002792,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,other 46 states,2022,0.0856736804745796,0.0678452621013267,44,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2012,0.107170780994944,0.0547580778182315,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2013,0.0793678401309784,0.0594165504814227,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2014,0.0731318780833764,0.0859030857117303,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2015,0.21598598182186,0.0786485722225019,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2016,0.121646462785964,0.0340844150470864,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2017,0,0,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2018,0.153811609850494,0.039819103697709,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2019,0.167748892484759,0.0488997494714725,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2020,0.102026120341083,0.0426228689363892,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2021,0.0202879673622508,0.0509329912564019,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,ex_own,"all 50, big four x year FE",2022,0.0509066007905673,0.0530675337624511,48,cluster state,in-from-other-state rate (pp),lost SALT subsidy per owner HH (SD)
+r_in,salt17,all 50 states,2012,0.1052412927063,0.0900592818463624,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2013,0.0809515623653624,0.0900103280894801,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2014,0.0751207524285795,0.121680292420873,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2015,0.198050846981212,0.12409151164453,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2016,0.118926559061875,0.0612894622941647,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2017,0,0,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2018,0.126878091068674,0.0471993649889302,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2019,0.133969885433529,0.0584091525200323,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2020,0.0684254926863704,0.043002470988168,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2021,-0.00278542375225133,0.0486895053497341,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,all 50 states,2022,0.028799453088269,0.0685491850984853,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2012,0.0900726541724018,0.0770783171881996,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2013,0.0570393365861994,0.0801085301971683,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2014,0.0222819775082327,0.11383573676878,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2015,0.168041445257623,0.101620156701261,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2016,0.106146894310502,0.0835178374599202,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2017,0,0,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2018,0.132850945138674,0.0761263876779399,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2019,0.137911732139312,0.0774530032405844,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2020,0.0592188080386888,0.0765487484309743,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2021,-0.0373536845626094,0.0937268333216462,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,big four (CA NY FL TX),2022,-1.50857510416002e-05,0.0956973582503244,4,hetero,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2012,0.0124350212904461,0.12791983717421,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2013,0.0209261703135158,0.112251577269879,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2014,0.0612066446936084,0.0948001749165352,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2015,0.101436015149558,0.123098510997873,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2016,0.0556204281456632,0.060045450781791,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2017,0,0,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2018,0.0557584590296163,0.0684060361487047,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2019,0.0571087711648228,0.0808808526121749,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2020,0.0651860061647313,0.100845709740272,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2021,0.0445177665102903,0.123704716109123,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,other 46 states,2022,0.0251825256033944,0.119953997479472,46,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2012,0.0703523235767191,0.0538419724452908,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2013,0.0478664193897551,0.059407043485057,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2014,0.0321690294021229,0.0876753385505958,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2015,0.151123347004992,0.07880574534609,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2016,0.0933129299092801,0.0293094809503638,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2017,0,0,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2018,0.113269084434276,0.0403284838091246,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2019,0.117387393047859,0.0507337487380964,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2020,0.0607345049424641,0.0433526718562125,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2021,-0.016557943868649,0.0398021599393321,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,salt17,"all 50, big four x year FE",2022,0.0063852282163698,0.0495060231267657,50,cluster state,in-from-other-state rate (pp),"SALT income tax / AGI, TY2017 (SD)"
+r_in,hi,big four (CA NY FL TX),2012,0.349011636527474,0.294144038838318,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2013,0.232979076168761,0.306671270503724,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2014,0.118482242753013,0.44593119435694,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2015,0.673082230756401,0.380654555134594,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2016,0.421239678307911,0.317049229251647,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2017,0,0,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2018,0.519529353289702,0.289860420710597,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2019,0.541233081790683,0.293688797267314,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2020,0.23693539499132,0.291838989266952,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2021,-0.153698895377382,0.348988379238581,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX
+r_in,hi,big four (CA NY FL TX),2022,-0.0226454192395991,0.352920788011877,4,hetero,in-from-other-state rate (pp),CA NY vs FL TX

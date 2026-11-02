@@ -1,0 +1,23 @@
+Districts within +-90 mi of the CBSA centroid; gap = own 2016 effective rate - lowest adjacent district's rate (pp); cross = cheapest neighbour in another state.
+        metro districts with_rate median_rate median_gap p90_gap sh_gap_gt_0.5
+     New York       956       951        2.44       0.57    1.76          0.55
+ Philadelphia       833       831        2.43       0.57    1.70          0.54
+   Washington       167       157        1.05       0.24    0.87          0.27
+       Boston       577       569        1.67       0.29    0.88          0.28
+      Chicago       594       565        2.39       0.34    1.26          0.35
+   Cincinnati       369       358        1.10       0.20    0.69          0.20
+    St. Louis       343       266        1.94       0.28    1.18          0.35
+  Kansas City       278       179        0.86       0.16    0.42          0.04
+   Louisville       255       238        0.86       0.18    0.60          0.16
+     Portland       161       157        1.05       0.16    0.47          0.08
+ sh_cheapest_nb_across_state sh_cross_among_gap_gt_0.5
+                        0.08                      0.12
+                        0.08                      0.12
+                        0.22                      0.40
+                        0.10                      0.21
+                        0.06                      0.15
+                        0.08                      0.21
+                        0.07                      0.19
+                        0.06                      0.38
+                        0.09                      0.36
+                        0.08                      0.23
