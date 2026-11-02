@@ -909,6 +909,25 @@ minus low; the figure plots low minus high to match the earlier difference figur
 `c47_pooled_side_interaction_{series,post_pre}.csv`, `c47_pooled_side_interaction.txt`,
 `figures/c47_pooled_side_interaction{,_main}.png`.
 
+### Three price indices: median, repeat-sales, hedonic (36, 2026-11-02)
+Build `build/corelogic/som/l_hedonic_sales.sql` + `l_price_indices.R` (SOM job 3909087, 22 min, 100 GB): 53.0m arm's-length
+residential sales 2012-2024 with parcel attributes (living area known for 89%, year built 85%, lot 96%, bedrooms 67%, baths
+79%), no new construction, no REO / foreclosure / short sale (26% of 2012 sales, < 2% after 2020), price $10k-$20m. Per
+tract / county / district × year: median and mean log price; repeat-sales index (parcel FE + unit × year FE on parcels sold
+twice or more, index set to missing outside the unit's main connected component of sale years); hedonic index (unit × year FE
+after log living area, age and age², log lot, beds, baths, missing dummies, property type; coefficients by state). Written to
+`data/built/corelogic/price_indices/price_indices_{tract,county,district}_year.parquet` (1.18m tract-years, 50 states at the
+district level). `36_price_indices.R` puts the tract series through the density-selected design in log points × 100 with
+tract-years of >= 5 sales (about 10,300 tracts; 60 sales per tract-year, 25 of them repeat sales). Year-to-year changes of the
+median and hedonic indices correlate 0.76 within tract, the repeat-sales index only 0.32 / 0.42 with them (SDs 26 / 29 / 23
+log points, so the within-tract repeat index is the noisiest of the three at this sales count). Post − pre, all four series,
+both sides, both terms: nothing. Main term Z × year between −0.4 and +0.03 log points per 10 mi (|t| <= 1.1), contrast
+between −0.4 and 0 (|t| <= 0.7). Z × E × year +0.1 to +0.55 per 10 mi per SD of exposure (t <= 1.5), contrast +0.03 to
++0.2 (|t| <= 0.4). On the high side the median and hedonic interaction terms drift to −0.6 / −0.7 by 2023-24 and the
+repeat-sales term to +0.9, but the 2012-16 values are −0.5 to −0.7 / −0.3, so neither is a 2017 break. The +0.012 SD
+price result of 31 on the pooled sample does not reappear in any index. Outputs `c48_price_indices_{series,post_pre}.csv`,
+`c48_price_indices.txt`, `figures/c48_price_indices_es.png`.
+
 ## Open
 - The near × own-exposure interaction (16) is the one sign-consistent post-2017 pattern: lower effective rate, more sales,
   slightly higher prices, fewer people near the border in high-exposure tracts. Worth a cleaner test: detrend the
