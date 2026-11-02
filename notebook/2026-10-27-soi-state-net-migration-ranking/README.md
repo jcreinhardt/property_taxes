@@ -3,7 +3,7 @@ date: 2026-10-27
 title: States ranked by net migration as a share of population (SOI state files, 2012–2022)
 question: Rank states by net migration as a share of population, as captured by the IRS SOI state-level migration statistics.
 status: current
-code: property_taxes 6863da4 + uncommitted 20_soi_state_net_migration.R (branch claude/salt-migration-discrepancy-3f765f)
+code: property_taxes 41f839e (`code/designs/exposure_did/20_soi_state_net_migration.R`)
 tags: migration, SOI, state, descriptive
 ---
 

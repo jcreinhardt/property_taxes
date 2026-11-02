@@ -3,7 +3,7 @@ date: 2026-10-27
 title: Are changes in states' net migration rates related to changes in their income tax rates?
 question: Are changes in the net migration rate (SOI state files) related to changes in effective state income tax rates?
 status: current
-code: property_taxes 6863da4 + uncommitted build/exposure/07 and designs/exposure_did/14–15 (branch claude/salt-migration-discrepancy-3f765f)
+code: property_taxes 41f839e (`code/build/exposure/07_state_income_tax_rates.R`, `code/designs/exposure_did/20-21`)
 tags: migration, SOI, state, income tax, TAXSIM
 ---
 
