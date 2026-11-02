@@ -9,10 +9,10 @@ distances from `data/built/geo/iv_tract_side.rds`. This design varies the tax ra
 | `01_side_selection_levels.R` | levels on either side of the line, within pair |
 | `02_profiles_by_distance.R` | means by signed distance out to 100 mi (the low-side school-district dip) |
 | `03_covariate_rd.R` | RD on the rate and 11 covariates; Holm-adjusted p-values |
-| `04_rd_by_year_and_diff_in_disc.R` | yearly RDs 2013–2024 (fixed h = 15 mi) on CoreLogic, ACS and SEDA panels, and the difference in discontinuities centred on 2017 |
+| `04_rd_by_year_and_diff_in_disc.R` | yearly RDs 2013–2024 (fixed h = 15 mi) on CoreLogic, ACS and SEDA panels, and the difference in discontinuities centred on 2017; since 2026-10-28 also residential parcels, new-construction sales, ACS housing units and vacancy |
 | `05_enrolment_rd.R` | pupils per district by year, district as the unit |
 | `06_gap_range_signed_distance.R` | own minus neighbour rate differences by signed distance |
 | `07_tract_diff_by_distance.R` | local rate differentials by distance to the border |
 | `08_pair_exposure_split.R` | ranks each pair's sides by SALT-cap exposure as well as by rate ("agree" / "disagree" pairs) and reruns the difference in discontinuities by group; `c21_*` outputs |
 
-Notebook: `notebook/2026-10-21-border-rate-gaps-over-time`. Check numbers: rate RD +0.747 pp; diff-in-disc 2023 −0.331 pp.
+Notebook: `notebook/2026-10-21-border-rate-gaps-over-time`, `notebook/2026-10-28-housing-stock` (housing-stock outcomes). Check numbers: rate RD +0.747 pp; diff-in-disc 2023 −0.331 pp.
