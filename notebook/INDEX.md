@@ -1,5 +1,6 @@
 # Research notebook: index (newest first)
 
+- 2026-11-04 [Budget-first vs rate-first tax areas](2026-11-04-levy-vs-rate-regimes/README.md) -- same-parcel levy growth on AV growth: national slope 0.34; levy-limit states near 0 (NY 0.07, NJ 0.08, MA 0.14), CA/OR/PA near 0.8; per area 24% of parcels budget-first, 18% rate-first, 39% undetermined
 - 2026-10-29 [Net-of-deduction rate change as treatment, dyad DiDs](2026-10-29-net-rate-change-treatment/README.md) -- lost federal subsidy 2016-18 in pp of AGI predicts net flows only from the 2020 files and only in CA NY FL TX dyads (+11k per pp among the four, +0.02k among the other 46)
 - 2026-10-29 [State-level SALT DiDs: big four vs the other 46](2026-10-29-state-did-big-four/README.md) -- net out-migration rises with exposure only from the 2020 files and only in CA NY FL TX (+0.42 pp per SD vs +0.11 in the other 46, below their trend); nothing in 2018-19 anywhere; Data Axle moves (1% sample) show the same shape at a quarter of the scale
 - 2026-10-29 [Data Axle vs SOI interstate moves, CA/TX/NY/FL](2026-10-29-dataaxle-vs-soi-interstate-moves/README.md) -- same-family_id moves capture 14-28% of SOI mover returns (21-25% annualised since 2018), no change after the cap; full data
