@@ -1,0 +1,110 @@
+% example.tex -- one frame per house layout. Copy the frame you need; delete the rest.
+% Build:  latexmk -pdf example.tex     (or -lualatex). Two passes are needed for \source and the buttons.
+% All numbers below are placeholders, not results.
+\documentclass[11pt,aspectratio=169]{beamer}
+\usepackage{ptaxslides}
+
+% Speaker notes: keep exactly one of these three lines active.
+\setbeameroption{hide notes}                       % slides only (the version you send)
+%\setbeameroption{show only notes}                 % notes only (open in Skim as the synced notes file)
+%\setbeameroption{show notes on second screen=right} % both, side by side
+
+\title{Did the SALT cap move households and tax bases?}
+\subtitle{Placeholder subtitle}
+\author{Jakob Reinhardt}
+\institute{Yale University}
+\date{Seminar, date}
+
+\begin{document}
+
+\begin{frame}[plain,noframenumbering]
+  \titlepage
+\end{frame}
+
+% 1. Headline + one figure. The title is the claim; the figure is the evidence; the source sits bottom left.
+\begin{frame}[label=main-result]{Out-migration from exposed counties rose by X pp after 2017}
+  \slidefig{example-image-16x9}
+  \source{IRS SOI county-to-county migration, filing years 2012--2022; weighted by 2016 returns.}
+  \appendixlink{robust}{Robustness}
+\end{frame}
+\note[itemize]{
+\item Say what the axes are before saying what the figure shows.
+\item The one number to remember: X pp, about Y\% of the pre-period mean.
+}
+
+% 2. Figure left, at most three short lines right.
+\begin{frame}{The effect is concentrated among high-income itemizers}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.58\textwidth}
+      \includegraphics[width=\linewidth]{example-image-a}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \begin{wideitemize}
+        \item \cred{Top-bracket itemizers}: X pp
+        \item \cblue{Non-itemizers}: none
+        \item Gap opens in 2018
+      \end{wideitemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% 3. Build a figure in steps; every step keeps the same axes.
+\begin{frame}{Exposed and unexposed counties move together until 2017}
+  \only<1>{\slidefig{example-image-a}}
+  \only<2>{\slidefig{example-image-b}}
+  \only<3>{\slidefig{example-image-c}}
+\end{frame}
+
+% 4. One estimating equation, every symbol named, the coefficient of interest coloured.
+\begin{frame}{Exposure design: compare counties by their 2016 SALT exposure}
+  \begin{equation*}
+    y_{ct} = \alpha_c + \delta_t + \sum_{k \neq 2017} \cred{\beta_k}\, \mathds{1}[t = k] \times \cblue{E_c} + \varepsilon_{ct}
+  \end{equation*}
+  \vspace{0.5em}
+  \begin{wideitemize}
+    \item \cblue{$E_c$}: share of 2016 returns deducting more than \$10{,}000 in state and local taxes
+    \item \cred{$\beta_k$}: effect in year $k$ relative to 2017
+    \item Identifying assumption: without the cap, high- and low-exposure counties trend alike
+  \end{wideitemize}
+\end{frame}
+
+% 5. Short table: coefficient of interest only, then highlight the cell that carries the claim.
+\begin{frame}{Revenue losses appear only where exposure is high}
+  \centering
+  \begin{tabular}{l d d d}
+    \toprule
+     & \multicolumn{1}{c}{Out-migration} & \multicolumn{1}{c}{AGI out} & \multicolumn{1}{c}{Own revenue} \\
+    \midrule
+    Exposure $\times$ post & 0.00 & 0.00 & \cellfrom{a}-0.00 \\
+                           & (0.00) & (0.00) & (0.00)\cellto{a} \\
+    \midrule
+    County, year FE        & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} & \multicolumn{1}{c}{yes} \\
+    Counties               & \multicolumn{1}{c}{3{,}100} & \multicolumn{1}{c}{3{,}100} & \multicolumn{1}{c}{3{,}100} \\
+    \bottomrule
+  \end{tabular}
+  \highlightcells<2->{a}
+  \source{Weighted by 2016 returns. Standard errors clustered by state.}
+\end{frame}
+
+% 6. Section break.
+\begin{transitionframe}
+  Mechanisms
+\end{transitionframe}
+
+% 7. Bottom line: the take-away sentence and its magnitude. No "Thank you" slide after it.
+\begin{frame}{The cap moved some high-income households, but local tax bases barely changed}
+  \begin{wideitemize}
+    \item Out-migration from exposed counties: \cred{+X pp}, about Y\% of the pre-2017 rate
+    \item Lost AGI equals Z\% of the exposed counties' base
+    \item Own-source revenue: no detectable change
+  \end{wideitemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}[label=robust]{Robustness: the effect survives alternative exposure measures}
+  \slidefig[0.8]{example-image-b}
+  \backlink{main-result}
+\end{frame}
+
+\end{document}
