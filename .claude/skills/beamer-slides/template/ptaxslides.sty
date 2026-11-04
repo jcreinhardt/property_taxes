@@ -1,0 +1,157 @@
+% ptaxslides.sty -- house Beamer style for the property_taxes / SALT-cap project.
+% Copy this file next to the deck (e.g. text/) and load it with \usepackage{ptaxslides}.
+% Rules and rationale: .claude/skills/beamer-slides/SKILL.md. Compiles with pdfLaTeX, LuaLaTeX or XeLaTeX.
+% Class line to use:  \documentclass[11pt,aspectratio=169]{beamer}   (canvas 160 x 90 mm)
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ptaxslides}[2026/11/04 house beamer style]
+
+% --- Packages ----------------------------------------------------------------
+\RequirePackage{iftex}
+\ifPDFTeX \RequirePackage[T1]{fontenc} \fi
+\RequirePackage[sfdefault,book,semibold,lining]{FiraSans} % Book (not Light) for projectors; SemiBold for \textbf
+\usefonttheme{professionalfonts}                          % let the packages below set the maths fonts
+\RequirePackage{amsmath}
+\RequirePackage{dsfont}                                  % \mathds{1} for indicators
+\RequirePackage[italic,defaultmathsizes]{mathastext}     % maths letters, digits, minus in Fira: tables and equations match the text
+\RequirePackage{microtype}
+\RequirePackage{booktabs}
+\RequirePackage{dcolumn}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{fit,calc,positioning,arrows.meta}
+\RequirePackage{appendixnumberbeamer}
+\RequirePackage{pgfpages} % speaker notes on a second screen
+
+\newcolumntype{d}{D{.}{.}{-1}} % align on the decimal point
+
+% --- Colours: the same red/blue as code/R/theme.R (COL_SIDE, COL_PERIOD) ------
+% Two accents only: blue = structure and the low-tax / control series, red = emphasis and the
+% high-tax / treated / post series, grey = context. Green is a reserve for a third series.
+\definecolor{ptaxblue}{HTML}{2166AC}
+\definecolor{ptaxred}{HTML}{B2182B}
+\definecolor{ptaxgrey}{HTML}{8C8C8C}  % ggplot grey55
+\definecolor{ptaxgreen}{HTML}{1B7837}
+\definecolor{ptaxtext}{HTML}{1F2328}
+\definecolor{ptaxlight}{HTML}{F2F5F9}
+
+\newcommand{\cblue}[1]{{\color{ptaxblue}#1}}
+\newcommand{\cred}[1]{{\color{ptaxred}#1}}
+\newcommand{\cgrey}[1]{{\color{ptaxgrey}#1}}
+\newcommand{\cgreen}[1]{{\color{ptaxgreen}#1}}
+
+\setbeamercolor{normal text}{fg=ptaxtext,bg=white}
+\setbeamercolor{structure}{fg=ptaxblue}
+\setbeamercolor{alerted text}{fg=ptaxred}
+\setbeamercolor{frametitle}{fg=ptaxtext}
+\setbeamercolor{framesubtitle}{fg=ptaxgrey}
+\setbeamercolor{title}{fg=ptaxtext}
+\setbeamercolor{subtitle}{fg=ptaxgrey}
+\setbeamercolor{author}{fg=ptaxtext}
+\setbeamercolor{institute}{fg=ptaxgrey}
+\setbeamercolor{date}{fg=ptaxgrey}
+\setbeamercolor{page number in head/foot}{fg=ptaxgrey}
+\setbeamercolor{itemize item}{fg=ptaxblue}
+\setbeamercolor{itemize subitem}{fg=ptaxgrey}
+\setbeamercolor{enumerate item}{fg=ptaxblue}
+\setbeamercolor{block title}{fg=ptaxblue,bg=ptaxlight}
+\setbeamercolor{block body}{bg=ptaxlight}
+\setbeamercolor{button}{bg=ptaxlight,fg=ptaxblue}
+\setbeamercolor{section in toc}{fg=ptaxtext}
+\setbeamercolor{bibliography item}{fg=ptaxgrey}
+\setbeamercolor{bibliography entry author}{fg=ptaxtext}
+\setbeamercolor{bibliography entry note}{fg=ptaxgrey}
+
+% --- Fonts and sizes ----------------------------------------------------------
+% 11pt on the 160 mm canvas projects like ~23 pt on a PowerPoint slide; \large like ~30 pt.
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize,series=\mdseries}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\setbeamerfont{button}{size=\scriptsize}
+
+% --- Layout: no chrome --------------------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=1.6em,text margin right=1.6em}
+\setbeamercovered{invisible}
+\setbeamertemplate{blocks}[default]
+
+% Frame title: the slide's claim as a sentence, left-aligned, top-left, wraps to two lines.
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  \begin{minipage}[t]{\linewidth}\raggedright
+    {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par}%
+    \ifx\insertframesubtitle\@empty\else
+      \vspace{0.2em}{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\par}%
+    \fi
+  \end{minipage}%
+  \vspace{0.5em}}
+
+% Footline: the frame number only, small and grey (people cite it in questions).
+\setbeamertemplate{footline}{%
+  \leavevmode\hfill
+  {\usebeamerfont{page number in head/foot}\usebeamercolor[fg]{page number in head/foot}\insertframenumber}%
+  \hspace*{1.2em}\par\vspace*{0.7em}}
+
+% Title page: left-aligned, no logos.
+\setbeamertemplate{title page}{%
+  \begin{minipage}{0.85\linewidth}\raggedright
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
+    \ifx\insertsubtitle\@empty\else\vspace{0.4em}{\usebeamercolor[fg]{subtitle}\large\insertsubtitle\par}\fi
+    \vspace{1.4em}{\color{ptaxblue}\rule{0.25\linewidth}{1.5pt}}\par\vspace{1.0em}
+    {\usebeamercolor[fg]{author}\insertauthor\par}\vspace{0.2em}
+    {\usebeamercolor[fg]{institute}\small\insertinstitute\par}\vspace{0.2em}
+    {\usebeamercolor[fg]{date}\small\insertdate\par}
+  \end{minipage}}
+
+% Lists: en-dash markers in blue; wideitemize spaces items so less fits (Goldsmith-Pinkham).
+\setbeamertemplate{itemize items}{\textendash}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{bibliography item}{}
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+
+% Speaker notes page (pale background so notes are never mistaken for slides).
+\setbeamertemplate{note page}{\pagecolor{yellow!5}\vspace*{1em}\insertnote}
+
+% --- Frames -------------------------------------------------------------------
+% Section break: one phrase on a blue page, unnumbered.  \begin{transitionframe}Results\end{transitionframe}
+\newenvironment{transitionframe}{%
+  \setbeamercolor{background canvas}{bg=ptaxblue}%
+  \begin{frame}[plain,noframenumbering,c]\centering\Huge\color{white}}{%
+  \end{frame}}
+
+% Figure under a (two-line) headline:  \slidefig{file}  or  \slidefig[0.8]{file}
+% Never wider than the text, never taller than what is left under a two-line title.
+\newcommand{\slidefig}[2][1]{%
+  \begin{center}\includegraphics[width=#1\linewidth,height=0.74\textheight,keepaspectratio]{#2}\end{center}}
+
+% --- Absolute-position helpers (need two compile passes; latexmk does that) ---
+% Source line at the bottom left:  \source{IRS SOI county data, 2012--2022.}
+\newcommand{\source}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south west,inner sep=0pt,font=\scriptsize,text=ptaxgrey,text width=0.75\paperwidth,align=left]
+      at ([xshift=1.6em,yshift=0.7em]current page.south west) {#1};
+  \end{tikzpicture}}
+
+% Link to a backup slide, bottom right next to the frame number:  \appendixlink{robust}{Robustness}
+\newcommand{\appendixlink}[2]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=0pt]
+      at ([xshift=-3.2em,yshift=0.55em]current page.south east) {\hyperlink{#1}{\beamergotobutton{#2}}};
+  \end{tikzpicture}}
+
+% Return button on the backup slide:  \backlink{main-result}
+\newcommand{\backlink}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=0pt]
+      at ([xshift=-3.2em,yshift=0.55em]current page.south east) {\hyperlink{#1}{\beamerreturnbutton{Back}}};
+  \end{tikzpicture}}
+
+% Highlight a block of table cells (after Goldsmith-Pinkham). Put \cellfrom{id} before the first
+% cell's number and \cellto{id} after the last one, then \highlightcells<2->{id} after the tabular.
+\newcommand{\cellfrom}[1]{\tikz[overlay,remember picture]\node (cell-#1-a) at (-0.3em,0.75em) {};}
+\newcommand{\cellto}[1]{\tikz[overlay,remember picture]\node (cell-#1-b) at (0.1em,-0.35em) {};}
+\newcommand<>{\highlightcells}[1]{%
+  \only#2{\tikz[overlay,remember picture]
+    \node[draw=ptaxred,very thick,rounded corners=2pt,inner sep=1pt,fit=(cell-#1-a)(cell-#1-b)] {};}}
+
+\endinput
