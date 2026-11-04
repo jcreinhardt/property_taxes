@@ -2390,7 +2390,7 @@ Build `code/build/corelogic/som/l_hedonic_sales.sql` + `l_price_indices.R` + `l_
 - **Agreement:** within a tract, year-to-year changes of the median and hedonic indices correlate 0.76; the repeat-sales index 0.32 / 0.42 with them (SDs 26 / 29 / 23 log points on tract-years with ≥ 5 sales, ≈ 60 sales and 25 repeat sales each). At the tract the repeat-sales index is the noisiest; it should do better at the district and county level.
 - **Density-selected border design (36, log points × 100, tract-years with ≥ 5 sales, about 10,300 tracts):** nothing for any index on either side or in the high-minus-low contrast; main term Z × year within −0.4 to +0.03 per 10 mi (|t| ≤ 1.1), Z × exposure × year +0.1 to +0.55 per 10 mi per SD (t ≤ 1.5); high-side drifts in 2023–24 match the 2012–16 levels. The +0.012 SD price result of script 31 on the pooled sample does not reappear. Outputs `c48_*`.
 
-### 4.44 Budget-first vs rate-first tax areas (2026-11-04)
+### 4.46 Budget-first vs rate-first tax areas (2026-11-04)
 Notebook `notebook/2026-11-04-levy-vs-rate-regimes`. SOM `code/build/corelogic/som/n_levy_regime.sbatch` (job 3944304, 4c/96G, 8 min) → `data/built/corelogic/levyreg/`; local `code/build/corelogic/13_levy_regime.R`.
 - **Test:** per tax area, log levy growth on log AV growth, both on the parcels present in the area in t-1 and t (no new construction, no division bias). Slope 0 = levy fixed, rate adjusts; slope 1 = rate fixed.
 - **Result:** national pooled slope 0.34 (SE 0.01; 78k areas, 741k area-years 2013–24). Levy-limit states near 0 (IA −0.01, AZ 0.02, NY 0.07, NJ 0.08, MA 0.14, WI 0.15, WA 0.23); CA 0.82, OR 0.82, PA 0.81, OK 0.94, WV 1.10; TX 0.37, IL 0.41, FL 0.68. Year FE change little.
